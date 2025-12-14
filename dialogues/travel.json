@@ -1,0 +1,47 @@
+{
+  "category": "travel",
+  "items": [
+    { "ru": "Путешествие", "ing": "Лоацам", "pron": "loatsam" },
+    { "ru": "Я путешествую", "ing": "Со лоацаш ву", "pron": "so loatsash vu" },
+    { "ru": "Ты путешествуешь?", "ing": "Хьа лоацаш ву?", "pron": "kha loatsash vu" },
+
+    { "ru": "Куда ты собираешься?", "ing": "Хьа мича вах веза?", "pron": "kha micha vakh vez" },
+    { "ru": "Я еду в Магас", "ing": "Со Магасхь вуда", "pron": "so magas vuda" },
+    { "ru": "Я еду домой", "ing": "Со ц1а вуда", "pron": "so ts1a vuda" },
+
+    { "ru": "Где ты сейчас?", "ing": "Хьа хьалха хьа?", "pron": "kha khalha kha" },
+    { "ru": "Я здесь", "ing": "Со хьокха", "pron": "so khyokha" },
+    { "ru": "Я там", "ing": "Со цугахь", "pron": "so tsugakh" },
+
+    { "ru": "Мне нужно в город", "ing": "Са шахь вах давах", "pron": "sa shah vakh davakh" },
+    { "ru": "Мне нужно в село", "ing": "Са гӀалачче вах давах", "pron": "sa ghalachche vakh davakh" },
+
+    { "ru": "Где город?", "ing": "Шахь хьа?", "pron": "shah kha" },
+    { "ru": "Где село?", "ing": "ГӀалачч хьа?", "pron": "ghalachch kha" },
+
+    { "ru": "Я заблудился", "ing": "Со йолачо хинна", "pron": "so yolacho khinna" },
+    { "ru": "Мне нужна помощь", "ing": "Са г1о давах", "pron": "sa g1o davakh" },
+
+    { "ru": "Где дорога?", "ing": "Гота хьа?", "pron": "gota kha" },
+    { "ru": "Это далеко?", "ing": "Ха долча?", "pron": "kha dolcha" },
+    { "ru": "Это близко?", "ing": "Ха гянна?", "pron": "kha gyanna" },
+
+    { "ru": "Я приеду завтра", "ing": "Со кхети хьа воаг1агва", "pron": "so kheti kha voag1agva" },
+    { "ru": "Я приеду сегодня", "ing": "Со тахана воаг1а", "pron": "so takhana voag1a" },
+
+    { "ru": "Когда уезжаешь?", "ing": "Хьа малха арвуда?", "pron": "kha malkha arvuda" },
+    { "ru": "Я уезжаю сейчас", "ing": "Со хьалха арвуда", "pron": "so khalha arvuda" },
+
+    { "ru": "Приведи меня туда", "ing": "Са цугахь вуда", "pron": "sa tsugakh vuda" },
+    { "ru": "Проводи меня", "ing": "Са догийла", "pron": "sa dogiyla" },
+
+    { "ru": "Мне нужно такси", "ing": "Са такси давах", "pron": "sa taksi davakh" },
+    { "ru": "Сколько стоит дорога?", "ing": "Гота ца йа?", "pron": "gota tsa ya" },
+
+    { "ru": "Мой багаж", "ing": "Со багажь", "pron": "so bagazh" },
+    { "ru": "Где мой багаж?", "ing": "Со багажь хьа?", "pron": "so bagazh kha" },
+
+    { "ru": "Я быстро вернусь", "ing": "Со мелда хьа виннагва", "pron": "so melda kha vinnagva" },
+    { "ru": "Я скоро приеду", "ing": "Со гянна воаг1агва", "pron": "so gyanna voag1agva" }
+  ]
+}

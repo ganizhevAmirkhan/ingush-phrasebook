@@ -1,0 +1,29 @@
+{
+  "category": "city",
+  "items": [
+    { "ru": "Город", "ing": "Магас", "pron": "magas" },
+    { "ru": "Я в городе", "ing": "Со магахь ву", "pron": "so magakh vu" },
+
+    { "ru": "Где центр?", "ing": "Цента хьа?", "pron": "tsenta kha" },
+    { "ru": "Где остановка?", "ing": "Остановк хьа?", "pron": "ostanovk kha" },
+
+    { "ru": "Мне нужно в центр", "ing": "Са цента давах", "pron": "sa tsenta davakh" },
+    { "ru": "Как пройти туда?", "ing": "Цугахь мишта вах веза?", "pron": "tsugakh mishta vakh vezza" },
+
+    { "ru": "Подскажите, пожалуйста", "ing": "Хьуна хьа хьажаца", "pron": "hyuna kha khyazhatsa" },
+
+    { "ru": "Где больница?", "ing": "Бехачча хьа?", "pron": "bekhatcha kha" },
+    { "ru": "Где аптека?", "ing": "Аптека хьа?", "pron": "apteka kha" },
+    { "ru": "Где полиция?", "ing": "Полиция хьа?", "pron": "politsiya kha" },
+
+    { "ru": "Где ресторан?", "ing": "Ресторан хьа?", "pron": "restoran kha" },
+    { "ru": "Где гостиница?", "ing": "Гостиница хьа?", "pron": "gostinitsa kha" },
+
+    { "ru": "Я жду", "ing": "Со сабар ву", "pron": "so sabar vu" },
+    { "ru": "Я опоздал", "ing": "Со к1ера хинна", "pron": "so k1era khinna" },
+
+    { "ru": "Как добраться туда?", "ing": "Цугахь мишта воаг1аг веза?", "pron": "tsugakh mishta voag1ag vezza" },
+
+    { "ru": "Мне нужна помощь", "ing": "Са г1о давах", "pron": "sa g1o davakh" }
+  ]
+}

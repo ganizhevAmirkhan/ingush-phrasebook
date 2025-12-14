@@ -1,0 +1,31 @@
+{
+  "category": "communication",
+  "items": [
+    { "ru": "Как дела?", "ing": "Миштад г1улкаж?", "pron": "mishtad g1ulkazh" },
+    { "ru": "Хорошо", "ing": "Дика", "pron": "dika" },
+    { "ru": "Плохо", "ing": "Му", "pron": "mu" },
+
+    { "ru": "Что нового?", "ing": "Фо хьаца?", "pron": "fo khatsa" },
+    { "ru": "Ничего нового", "ing": "Ца хьаца", "pron": "tsa khatsa" },
+
+    { "ru": "Я понял", "ing": "Со кхийтав", "pron": "so khittav" },
+    { "ru": "Я не понял", "ing": "Со кхитвац", "pron": "so khitvats" },
+
+    { "ru": "Повтори", "ing": "Ил ел!", "pron": "il el" },
+    { "ru": "Говори медленно", "ing": "Шортиг лоца", "pron": "shortig lotsa" },
+
+    { "ru": "Не спеши", "ing": "Му марсха", "pron": "mu marsha" },
+
+    { "ru": "Ты уверен?", "ing": "Хьа дог1ийла?", "pron": "kha dog1iyla" },
+    { "ru": "Я уверен", "ing": "Со дог1ийла", "pron": "so dog1iyla" },
+
+    { "ru": "Мне это нравится", "ing": "Сун ха хозхет", "pron": "sun kha khozkhet" },
+    { "ru": "Мне это не нравится", "ing": "Сун ха му хозхет", "pron": "sun kha mu khozkhet" },
+
+    { "ru": "Ты прав", "ing": "Хьа дика мотт", "pron": "kha dika mott" },
+    { "ru": "Я думаю так же", "ing": "Со хилахча", "pron": "so khilakhcha" },
+
+    { "ru": "Подожди", "ing": "Сабар де", "pron": "sabar de" },
+    { "ru": "Пойдём", "ing": "Тхо вудаш", "pron": "tkho vudash" }
+  ]
+}
