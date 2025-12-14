@@ -1,87 +1,175 @@
-let categories = {};
-let currentCategory = null;
+// -------------------------------
+// Настройки
+// -------------------------------
+const CATEGORY_PATH = "categories/";
+const ADMIN_PASSWORD = "ingush-secret";
 
-// Загружаем список категорий
-async function loadCategories() {
-    const catList = [
-        "greetings","basic_phrases","personal_info","family","home","food","drinks",
-        "travel","transport","hunting","danger","thermal","orientation","weather",
-        "emotions","health","help","commands","tools","animals","time","numbers",
-        "colors","money","shop","city","village","guests","communication","work","misc"
-    ];
+let isAdmin = false;
+let phrases = [];
 
-    for (let name of catList) {
-        let data = await fetch(`categories/${name}.json`).then(r => r.json());
-        categories[name] = data.items;
-    }
 
-    renderCategoryList(catList);
-}
+// -------------------------------
+// Список файлов категорий (БЕЗ цифр)
+// -------------------------------
+const categoryFiles = [
+    "greetings.json",
+    "basic_phrases.json",
+    "personal_info.json",
+    "family.json",
+    "home.json",
+    "food.json",
+    "drinks.json",
+    "travel.json",
+    "transport.json",
+    "hunting.json",
+    "danger.json",
+    "thermal.json",
+    "navigation.json",
+    "weather.json",
+    "emotions.json",
+    "health.json",
+    "help.json",
+    "commands.json",
+    "tools.json",
+    "animals.json",
+    "time.json",
+    "numbers.json",
+    "colors.json",
+    "money.json",
+    "shop.json",
+    "city.json",
+    "village.json",
+    "guests.json",
+    "communication.json",
+    "work.json",
+    "misc.json"
+];
 
-function renderCategoryList(catList) {
-    const c = document.getElementById("categories");
-    c.innerHTML = "";
 
-    catList.forEach(cat => {
-        let div = document.createElement("div");
-        div.textContent = cat;
-        div.onclick = () => loadCategory(cat);
-        c.appendChild(div);
+// -------------------------------
+// Создание списка категорий
+// -------------------------------
+function loadCategories() {
+    const list = document.getElementById("category-list");
+    list.innerHTML = "";
+
+    categoryFiles.forEach(file => {
+        const name = file.replace(".json", "").replace("_", " ");
+
+        const btn = document.createElement("button");
+        btn.className = "category-btn";
+        btn.textContent = name;
+        btn.onclick = () => loadCategory(file);
+
+        list.appendChild(btn);
     });
 }
 
-function loadCategory(cat) {
-    currentCategory = cat;
 
-    const items = categories[cat];
-    const container = document.getElementById("phrases");
+// -------------------------------
+// Загрузка фраз категории
+// -------------------------------
+async function loadCategory(file) {
+    try {
+        const res = await fetch(CATEGORY_PATH + file);
+        if (!res.ok) throw new Error("Файл не найден: " + file);
 
-    document.querySelector("main h2").textContent = cat;
+        const data = await res.json();
+        phrases = data;
 
-    container.innerHTML = "";
+        renderPhrases(data);
+    } catch (err) {
+        console.error(err);
+        alert("Ошибка загрузки: " + file);
+    }
+}
 
-    items.forEach(item => {
-        let box = document.createElement("div");
-        box.className = "phrase";
 
-        box.innerHTML = `
-            <b>${item.ru}</b><br>
-            ${item.ing}<br>
-            <i>${item.pron}</i><br>
+// -------------------------------
+// Показ фраз
+// -------------------------------
+function renderPhrases(list) {
+    const box = document.getElementById("content");
+    box.innerHTML = "";
+
+    list.forEach((ph, index) => {
+        const div = document.createElement("div");
+        div.className = "phrase-card";
+
+        div.innerHTML = `
+            <div class="ru"><b>${ph.ru}</b></div>
+            <div class="ing">${ph.ing}</div>
+
+            <div class="tools">
+                <button onclick="playAudio('${ph.ing}')">🔊</button>
+                ${isAdmin ? `<button onclick="editPhrase(${index})">✏️</button>` : ""}
+            </div>
         `;
 
-        container.appendChild(box);
+        box.appendChild(div);
     });
 }
 
-// Поиск
-document.getElementById("search").addEventListener("input", function () {
-    let q = this.value.toLowerCase();
 
-    if (q.length < 1) return;
+// -------------------------------
+// Поиск по всем категориям
+// -------------------------------
+async function globalSearch() {
+    const q = document.getElementById("search").value.trim().toLowerCase();
+    if (!q) return;
 
-    const container = document.getElementById("phrases");
-    container.innerHTML = "";
-    document.querySelector("main h2").textContent = "Результаты поиска";
+    const box = document.getElementById("content");
+    box.innerHTML = "<h3>Результаты поиска...</h3>";
 
-    for (let cat in categories) {
-        categories[cat].forEach(item => {
-            if (
-                item.ru.toLowerCase().includes(q) ||
-                item.ing.toLowerCase().includes(q)
-            ) {
-                let box = document.createElement("div");
-                box.className = "phrase";
-                box.innerHTML = `
-                    <b>${item.ru}</b><br>
-                    ${item.ing}<br>
-                    <i>${item.pron}</i><br>
-                `;
-                container.appendChild(box);
-            }
-        });
+    let results = [];
+
+    for (let file of categoryFiles) {
+        try {
+            const res = await fetch(CATEGORY_PATH + file);
+            const data = await res.json();
+
+            results.push(
+                ...data.filter(p =>
+                    p.ru.toLowerCase().includes(q) ||
+                    p.ing.toLowerCase().includes(q)
+                )
+            );
+        } catch (e) {
+            console.warn("Не удалось загрузить: " + file);
+        }
     }
-});
 
-// Запускаем
-loadCategories();
+    renderPhrases(results);
+}
+
+
+// -------------------------------
+// Проигрывание аудио
+// -------------------------------
+function playAudio(word) {
+    const audio = new Audio(`audio/${word}.mp3`);
+    audio.play().catch(() => alert("Нет аудио для: " + word));
+}
+
+
+// -------------------------------
+// Вход администратора
+// -------------------------------
+function adminLogin() {
+    const pass = prompt("Введите пароль:");
+    if (pass === ADMIN_PASSWORD) {
+        isAdmin = true;
+        document.getElementById("admin-status").textContent = "✓ Администратор";
+        alert("Админ-режим включён");
+    } else {
+        alert("Неверный пароль");
+    }
+}
+
+
+// -------------------------------
+// Запуск
+// -------------------------------
+window.onload = () => {
+    loadCategories();
+};
