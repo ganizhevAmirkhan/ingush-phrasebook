@@ -1,8 +1,6 @@
-console.log("SCRIPT VERSION 3 LOADED");
-
-// =======================
-// СПИСОК КАТЕГОРИЙ
-// =======================
+// ============================
+// Настройка категорий
+// ============================
 
 const categories = [
     "greetings", "basic_phrases", "personal_info", "family", "home",
@@ -13,9 +11,10 @@ const categories = [
     "work", "misc"
 ];
 
-// =======================
-// ЗАГРУЗКА СПИСКА КАТЕГОРИЙ
-// =======================
+
+// ============================
+// Загрузка списка категорий
+// ============================
 
 function loadCategories() {
     const list = document.getElementById("categoryList");
@@ -24,35 +23,42 @@ function loadCategories() {
     categories.forEach(cat => {
         const btn = document.createElement("button");
         btn.className = "category-item";
-        btn.textContent = cat.replace("_", " ");
+        btn.textContent = formatCategoryName(cat);
         btn.onclick = () => loadCategory(cat);
         list.appendChild(btn);
     });
 }
 
-// =======================
-// ЗАГРУЗКА ОДНОЙ КАТЕГОРИИ
-// =======================
+
+// Человеческое отображение названия категории
+function formatCategoryName(name) {
+    return name.replace(/_/g, " ");
+}
+
+
+// ============================
+// Загрузка категории
+// ============================
 
 async function loadCategory(name) {
     const container = document.getElementById("content");
     container.innerHTML = "<p>Загрузка…</p>";
 
     try {
-        // --- Защита от кэширования GitHub Pages ---
-        const url = `dialogues/${name}.json?v=${Date.now()}`;
+        // ВАЖНО!!! теперь путь правильный:
+        const response = await fetch(`categories/${name}.json`);
 
-        const response = await fetch(url);
-        if (!response.ok) throw new Error("Файл не найден");
+        if (!response.ok) {
+            throw new Error("Файл не найден");
+        }
 
         const data = await response.json();
 
-        // Проверка структуры JSON
         if (!data.items || !Array.isArray(data.items)) {
-            throw new Error("Неверный формат JSON: нет items[]");
+            throw new Error("Некорректный формат JSON: ожидается items[]");
         }
 
-        container.innerHTML = `<h2>${name.replace("_", " ")}</h2>`;
+        container.innerHTML = `<h2>${formatCategoryName(name)}</h2>`;
 
         data.items.forEach(item => {
             const block = document.createElement("div");
@@ -72,15 +78,16 @@ async function loadCategory(name) {
     }
 }
 
-// =======================
-// ГЛОБАЛЬНЫЙ ПОИСК
-// =======================
+
+// ============================
+// Глобальный поиск
+// ============================
 
 async function searchPhrases() {
-    const q = document.getElementById("search").value.trim().toLowerCase();
+    const query = document.getElementById("search").value.trim().toLowerCase();
     const container = document.getElementById("content");
 
-    if (q.length < 2) {
+    if (query.length < 2) {
         container.innerHTML = "<p>Введите минимум 2 символа…</p>";
         return;
     }
@@ -89,23 +96,22 @@ async function searchPhrases() {
 
     for (let cat of categories) {
         try {
-            const url = `dialogues/${cat}.json?v=${Date.now()}`;
-            const resp = await fetch(url);
-            if (!resp.ok) continue;
+            const response = await fetch(`categories/${cat}.json`);
+            if (!response.ok) continue;
 
-            const data = await resp.json();
+            const data = await response.json();
             if (!data.items) continue;
 
             data.items.forEach(item => {
                 if (
-                    item.ru.toLowerCase().includes(q) ||
-                    item.ing.toLowerCase().includes(q)
+                    item.ru.toLowerCase().includes(query) ||
+                    item.ing.toLowerCase().includes(query)
                 ) {
                     const block = document.createElement("div");
                     block.className = "phrase-block";
 
                     block.innerHTML = `
-                        <h4>${cat.replace("_", " ")}</h4>
+                        <h4>${formatCategoryName(cat)}</h4>
                         <p><b>RU:</b> ${item.ru}</p>
                         <p><b>ING:</b> ${item.ing}</p>
                         <p><b>PRON:</b> ${item.pron}</p>
@@ -114,11 +120,14 @@ async function searchPhrases() {
                     container.appendChild(block);
                 }
             });
-        } catch (e) {
-            console.warn("Ошибка поиска в категории:", cat);
-        }
+
+        } catch (e) {}
     }
 }
 
+
+// ============================
+// Старт
+// ============================
+
 window.onload = loadCategories;
-console.log("SCRIPT VERSION 2 LOADED");
