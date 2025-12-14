@@ -1,5 +1,6 @@
+[
 "category": "animals",
-  "items": [
+  "items": 
     { "ru": "Животные", "ing": "Додаш", "pron": "dodash" },
     { "ru": "Животное", "ing": "Дода", "pron": "doda" },
 
