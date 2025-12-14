@@ -1,0 +1,26 @@
+{
+  "category": "health",
+  "items": [
+    { "ru": "Здоровье", "ing": "Доха", "pron": "dokha" },
+    { "ru": "У меня болит голова", "ing": "Са ло ма беха", "pron": "sa lo ma bekha" },
+    { "ru": "У меня болит живот", "ing": "Са гIал беха", "pron": "sa g1al bekha" },
+
+    { "ru": "Мне плохо", "ing": "Са му ву", "pron": "sa mu vu" },
+    { "ru": "Мне хорошо", "ing": "Са дика ву", "pron": "sa dika vu" },
+
+    { "ru": "Мне нужно к врачу", "ing": "Са дохача давах", "pron": "sa dokhacha davakh" },
+    { "ru": "Где больница?", "ing": "Бехачча хьа?", "pron": "bekhatcha kha" },
+
+    { "ru": "У меня температура", "ing": "Со температура йола", "pron": "so temperatura yola" },
+    { "ru": "Мне холодно", "ing": "Са сув", "pron": "sa suv" },
+    { "ru": "Мне жарко", "ing": "Са деша", "pron": "sa desha" },
+
+    { "ru": "Я устал", "ing": "Со къяд ваннув", "pron": "so kyad vannuv" },
+    { "ru": "Я ранен", "ing": "Со беха йо", "pron": "so bekha yo" },
+
+    { "ru": "Мне нужна вода", "ing": "Са хьий давах", "pron": "sa hyii davakh" },
+    { "ru": "Мне нужна еда", "ing": "Са гIала давах", "pron": "sa g1ala davakh" },
+
+    { "ru": "Я не могу дышать", "ing": "Со му хьаца хьам", "pron": "so mu khatsa khyam" }
+  ]
+}

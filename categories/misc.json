@@ -1,0 +1,24 @@
+{{
+  "category": "misc",
+  "items": [
+    { "ru": "Пожалуйста", "Ing": "Хьуна халд", "pron": "hyuna hald" },
+    { "ru": "Спасибо", "ing": "Баркалла", "pron": "barkalla" },
+    { "ru": "Извини", "ing": "Къат1ер валл", "pron": "qat1er vall" },
+
+    { "ru": "Я не знаю", "ing": "Сун хац", "pron": "sun khats" },
+    { "ru": "Я думаю", "ing": "Со ил еж", "pron": "so il yezh" },
+
+    { "ru": "Я дома", "ing": "Со ц1га", "pron": "so ts1ga" },
+    { "ru": "Я хочу домой", "ing": "Ц1а вах безам ба са", "pron": "ts1a vakh bezam ba sa" },
+
+    { "ru": "Мне нужно идти", "ing": "Са давах вез", "pron": "sa davakh vez" },
+
+    { "ru": "Я приду позже", "ing": "Со т1ехьа хьа воаг1агва", "pron": "so t1ekhya kha voag1agva" },
+
+    { "ru": "Дай сюда", "ing": "Хьокха хий", "pron": "khyokha hiy" },
+    { "ru": "Отойди", "ing": "Яккха", "pron": "yakkha" },
+
+    { "ru": "Мне нравится", "ing": "Сун хозхет", "pron": "sun khozkhet" },
+    { "ru": "Мне не нравится", "ing": "Сун му хозхет", "pron": "sun mu khozkhet" }
+  ]
+}

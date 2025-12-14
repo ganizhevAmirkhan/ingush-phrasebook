@@ -1,0 +1,71 @@
+{
+  "category": "family",
+  "items": [
+    { "ru": "Семья", "ing": "Дошам", "pron": "dosham" },
+    { "ru": "Моя семья", "ing": "Со дошам", "pron": "so dosham" },
+    { "ru": "Твоя семья", "ing": "Хьа дошам", "pron": "kha dosham" },
+
+    { "ru": "Отец", "ing": "Да", "pron": "da" },
+    { "ru": "Мой отец", "ing": "Со да", "pron": "so da" },
+    { "ru": "Твой отец", "ing": "Хьа да", "pron": "kha da" },
+
+    { "ru": "Мать", "ing": "Нана", "pron": "nana" },
+    { "ru": "Моя мать", "ing": "Со нана", "pron": "so nana" },
+
+    { "ru": "Брат", "ing": "Ваза", "pron": "vaza" },
+    { "ru": "Старший брат", "ing": "Ваза хьокха", "pron": "vaza khyokha" },
+    { "ru": "Младший брат", "ing": "Ваза дитта", "pron": "vaza ditta" },
+
+    { "ru": "Сестра", "ing": "Йоьва", "pron": "yova" },
+    { "ru": "Старшая сестра", "ing": "Йоьва хьокха", "pron": "yova khyokha" },
+    { "ru": "Младшая сестра", "ing": "Йоьва дитта", "pron": "yova ditta" },
+
+    { "ru": "Сын", "ing": "КIант", "pron": "k1ant" },
+    { "ru": "Дочь", "ing": "Керет", "pron": "keret" },
+    { "ru": "Дети", "ing": "Из", "pron": "iz" },
+
+    { "ru": "Мой сын", "ing": "Со кIант", "pron": "so k1ant" },
+    { "ru": "Моя дочь", "ing": "Со керет", "pron": "so keret" },
+
+    { "ru": "Муж", "ing": "Солжа", "pron": "solzha" },
+    { "ru": "Жена", "ing": "ЙоагI", "pron": "yoag1" },
+
+    { "ru": "Бабушка", "ing": "Баб", "pron": "bab" },
+    { "ru": "Дедушка", "ing": "Бер", "pron": "ber" },
+
+    { "ru": "Родственники", "ing": "Къонах", "pron": "konakh" },
+
+    { "ru": "Моя семья большая", "ing": "Со дошам дола", "pron": "so dosham dola" },
+    { "ru": "Моя семья маленькая", "ing": "Со дошам ца дола", "pron": "so dosham tsa dola" },
+
+    { "ru": "У меня есть семья", "ing": "Со дошам йо", "pron": "so dosham yo" },
+    { "ru": "У меня нет семьи", "ing": "Со дошам му йо", "pron": "so dosham mu yo" },
+
+    { "ru": "Ты женат?", "ing": "Хьа йоагI?", "pron": "kha yoag1" },
+    { "ru": "Ты замужем?", "ing": "Хьа йоагI?", "pron": "kha yoag1" },
+
+    { "ru": "Я женат", "ing": "Со йоагI", "pron": "so yoag1" },
+    { "ru": "Я замужем", "ing": "Со йоагI", "pron": "so yoag1" },
+    { "ru": "Я не женат", "ing": "Со му йоагI", "pron": "so mu yoag1" },
+
+    { "ru": "У тебя есть дети?", "ing": "Хьа из йой?", "pron": "kha iz yoi" },
+    { "ru": "У меня есть дети", "ing": "Со из йо", "pron": "so iz yo" },
+    { "ru": "У меня нет детей", "ing": "Со му из йо", "pron": "so mu iz yo" },
+
+    { "ru": "Где твоя семья?", "ing": "Хьа дошам хьа?", "pron": "kha dosham kha" },
+    { "ru": "Моя семья дома", "ing": "Со дошам ц1га ву", "pron": "so dosham ts1ga vu" },
+
+    { "ru": "Это мой брат", "ing": "Ха со ваза", "pron": "kha so vaza" },
+    { "ru": "Это моя сестра", "ing": "Ха со йоьва", "pron": "kha so yova" },
+    { "ru": "Это мои родители", "ing": "Ха сий да-нана", "pron": "kha sii da-nana" },
+
+    { "ru": "У меня много родственников", "ing": "Со къонах меттиг", "pron": "so konakh mettig" },
+    { "ru": "У меня мало родственников", "ing": "Со къонах ца меттиг", "pron": "so konakh tsa mettig" },
+
+    { "ru": "Сколько у тебя братьев?", "ing": "Хьа ваза ца йа?", "pron": "kha vaza tsa ya" },
+    { "ru": "Сколько сестёр?", "ing": "Хьа йоьва ца йа?", "pron": "kha yova tsa ya" },
+
+    { "ru": "Я старший в семье", "ing": "Со хьокха дошамаш", "pron": "so khyokha doshamash" },
+    { "ru": "Я младший в семье", "ing": "Со дитта дошамаш", "pron": "so ditta doshamash" }
+  ]
+}

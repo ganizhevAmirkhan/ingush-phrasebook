@@ -1,0 +1,54 @@
+{
+  "category": "home",
+  "items": [
+    { "ru": "Дом", "ing": "Ц1а", "pron": "ts1a" },
+    { "ru": "Мой дом", "ing": "Со ц1а", "pron": "so ts1a" },
+    { "ru": "Твой дом", "ing": "Хьа ц1а", "pron": "kha ts1a" },
+
+    { "ru": "Комната", "ing": "Къам", "pron": "kam" },
+    { "ru": "Кухня", "ing": "Шуьл", "pron": "shul" },
+    { "ru": "Спальня", "ing": "Йо1ам", "pron": "yo1am" },
+    { "ru": "Гостиная", "ing": "Дошамаш къам", "pron": "doshamash kam" },
+
+    { "ru": "Дверь", "ing": "Богам", "pron": "bogam" },
+    { "ru": "Окно", "ing": "Тама", "pron": "tama" },
+
+    { "ru": "Пол", "ing": "Йолг", "pron": "yolg" },
+    { "ru": "Потолок", "ing": "Байлакх", "pron": "baylakh" },
+    { "ru": "Стена", "ing": "Баг", "pron": "bag" },
+
+    { "ru": "Стол", "ing": "Стол", "pron": "stol" },
+    { "ru": "Стул", "ing": "Стул", "pron": "stul" },
+    { "ru": "Кровать", "ing": "Къайлякх", "pron": "kaylakh" },
+
+    { "ru": "Чисто", "ing": "Чиста", "pron": "chista" },
+    { "ru": "Грязно", "ing": "Муса", "pron": "musa" },
+
+    { "ru": "Уберите здесь", "ing": "Хьокха деж де!", "pron": "khyokha dezh de" },
+    { "ru": "Принеси это", "ing": "Ха дика!", "pron": "kha dika" },
+    { "ru": "Поставь сюда", "ing": "Хьокха деж", "pron": "khyokha dezh" },
+
+    { "ru": "Закрой дверь", "ing": "Богам хетта", "pron": "bogam khetta" },
+    { "ru": "Открой дверь", "ing": "Богам теша", "pron": "bogam tesh" },
+
+    { "ru": "Вода есть?", "ing": "Мал йой?", "pron": "mal yoi" },
+    { "ru": "Принеси воды", "ing": "Мал дика", "pron": "mal dika" },
+
+    { "ru": "Где кухня?", "ing": "Шуьл хьа?", "pron": "shul kha" },
+    { "ru": "Где туалет?", "ing": "Туалет хьа?", "pron": "tualet kha" },
+
+    { "ru": "Можно войти?", "ing": "Чуда далуш?", "pron": "chuda dalush" },
+    { "ru": "Заходи", "ing": "Чуда", "pron": "chuda" },
+
+    { "ru": "Мне нужно отдохнуть", "ing": "Са т1акха вез", "pron": "sa t1akha vez" },
+    { "ru": "Я хочу спать", "ing": "Со йоаг1 безам ба", "pron": "so yoag1 bezam ba" },
+
+    { "ru": "Где ты живёшь?", "ing": "Хьа дакъош ву?", "pron": "kha dakosh vu" },
+    { "ru": "Я живу здесь", "ing": "Со хьокха дакъош ву", "pron": "so khyokha dakosh vu" },
+
+    { "ru": "Почини это", "ing": "Ха дуйле", "pron": "kha duyale" },
+    { "ru": "Сломано", "ing": "Т1аккха", "pron": "t1akkha" },
+    { "ru": "Работает", "ing": "Лоца", "pron": "lotsa" },
+    { "ru": "Не работает", "ing": "Му лоца", "pron": "mu lotsa" }
+  ]
+}

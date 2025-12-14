@@ -1,0 +1,31 @@
+{
+  "category": "time",
+  "items": [
+    { "ru": "Время", "ing": "Вай", "pron": "vai" },
+
+    { "ru": "Который час?", "ing": "Вай мотт?", "pron": "vai mott" },
+    { "ru": "Сейчас", "ing": "ТIа", "pron": "t1a" },
+    { "ru": "Сегодня", "ing": "Тахана", "pron": "takhana" },
+    { "ru": "Вчера", "ing": "Делха", "pron": "delkha" },
+    { "ru": "Завтра", "ing": "Кхаца", "pron": "khatsa" },
+
+    { "ru": "Утро", "ing": "Бера", "pron": "bera" },
+    { "ru": "День", "ing": "Ден", "pron": "den" },
+    { "ru": "Вечер", "ing": "Шовх", "pron": "shovkh" },
+    { "ru": "Ночь", "ing": "Йовх", "pron": "yovkh" },
+
+    { "ru": "Через час", "ing": "Вай юкъах", "pron": "vai yukakh" },
+    { "ru": "Через минуту", "ing": "Минут юкъах", "pron": "minut yukakh" },
+
+    { "ru": "Скоро", "ing": "Хаькха", "pron": "khaekha" },
+    { "ru": "Позже", "ing": "Т1ехьа", "pron": "t1ekhya" },
+    { "ru": "Рано", "ing": "Мадха", "pron": "madkha" },
+    { "ru": "Поздно", "ing": "К1ера", "pron": "k1era" },
+
+    { "ru": "Когда?", "ing": "Маца?", "pron": "matsa" },
+    { "ru": "Сейчас нельзя", "ing": "Т1а му дац", "pron": "t1a mu dats" },
+
+    { "ru": "Я приду позже", "ing": "Со т1ехьа хьа воаг1агва", "pron": "so t1ekhya kha voag1agva" },
+    { "ru": "Мы идём сейчас", "ing": "Тхо т1а вудаш", "pron": "tkho t1a vudash" }
+  ]
+}

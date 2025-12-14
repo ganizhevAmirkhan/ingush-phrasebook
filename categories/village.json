@@ -1,0 +1,25 @@
+{
+  "category": "village",
+  "items": [
+    { "ru": "Село", "ing": "Эль", "pron": "el" },
+    { "ru": "Я в селе", "ing": "Со эле ву", "pron": "so ele vu" },
+
+    { "ru": "Где хозяин дома?", "ing": "Ц1ан доаг1 хьа?", "pron": "ts1an doag1 kha" },
+    { "ru": "Кто живёт здесь?", "ing": "Хьокха дакъош хьа?", "pron": "khyokha dakosh kha" },
+
+    { "ru": "Гора рядом", "ing": "Хьекха хьалг1", "pron": "khyekha khalg1" },
+    { "ru": "Лес рядом", "ing": "Хьекха т1ар", "pron": "khyekha t1ar" },
+
+    { "ru": "Где вода?", "ing": "Хьий хьа?", "pron": "hyii kha" },
+    { "ru": "Где колодец?", "ing": "КIил хьа?", "pron": "k1il kha" },
+
+    { "ru": "Где дорога?", "ing": "Готта хьа?", "pron": "gotta kha" },
+    { "ru": "Где пастбище?", "ing": "Дехар хьа?", "pron": "dekhar kha" },
+
+    { "ru": "Я гость", "ing": "Со къонаха", "pron": "so qonaha" },
+    { "ru": "Мы гости", "ing": "Тхо къонаш", "pron": "tkho qonash" },
+
+    { "ru": "Мы идём в горы", "ing": "Тхо хьалг1 вудаш", "pron": "tkho khalg1 vudash" },
+    { "ru": "Мы идём к реке", "ing": "Тхо хьаьл вудаш", "pron": "tkho khyal vudash" }
+  ]
+}

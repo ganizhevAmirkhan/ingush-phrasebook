@@ -1,0 +1,10 @@
+{
+  "category": "conversation",
+  "items": [
+    {
+      "ru": "Пример фразы для conversation",
+      "ing": "Тест фраза",
+      "pron": "test fraza"
+    }
+  ]
+}
