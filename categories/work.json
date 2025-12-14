@@ -1,0 +1,21 @@
+{
+  "category": "work",
+  "items": [
+    { "ru": "Работа", "ing": "Лоамаш", "pron": "loamash" },
+    { "ru": "Где ты работаешь?", "ing": "Хьа мичахь лоца?", "pron": "kha michakh lotsa" },
+    { "ru": "Я работаю в …", "ing": "Со … лоца", "pron": "so ... lotsa" },
+
+    { "ru": "Мне нужно на работу", "ing": "Са лоамаш давах", "pron": "sa loamash davakh" },
+
+    { "ru": "Мой начальник", "ing": "Со хаьлча", "pron": "so khalcha" },
+    { "ru": "Коллега", "ing": "ДацIа", "pron": "dats1a" },
+
+    { "ru": "У меня много работы", "ing": "Со лоамаш дар йо", "pron": "so loamash dar yo" },
+    { "ru": "У меня мало работы", "ing": "Со лоамаш керча", "pron": "so loamash kercha" },
+
+    { "ru": "Я занят", "ing": "Со дӀаякха", "pron": "so d1ayakkha" },
+    { "ru": "Я свободен", "ing": "Со хьалха ву", "pron": "so khalha vu" },
+
+    { "ru": "Мне нужен отдых", "ing": "Са делахь давах", "pron": "sa delakh davakh" }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "category": "tools",
+  "items": [
+    { "ru": "Инструменты", "ing": "Дехар", "pron": "dekhar" },
+    { "ru": "Инструмент", "ing": "Дех", "pron": "dekh" },
+
+    { "ru": "Нож", "ing": "Къам", "pron": "qam" },
+    { "ru": "Дай нож", "ing": "Къам хий!", "pron": "qam hiy" },
+
+    { "ru": "Топор", "ing": "БIа", "pron": "b1a" },
+    { "ru": "Пила", "ing": "Сар", "pron": "sar" },
+    { "ru": "Молоток", "ing": "Хаьмма", "pron": "hama" },
+
+    { "ru": "Верёвка", "ing": "Декха", "pron": "dekha" },
+    { "ru": "Крепкая верёвка", "ing": "Декха йо", "pron": "dekha yo" },
+
+    { "ru": "Фонарь", "ing": "Лаппала", "pron": "lappala" },
+    { "ru": "Включи фонарь", "ing": "Лаппала хьажа", "pron": "lappala khyazha" },
+
+    { "ru": "Телефон", "ing": "Телефон", "pron": "telefon" },
+    { "ru": "Где мой телефон?", "ing": "Со телефони халха хьа?", "pron": "so telefoni khalha kha" },
+
+    { "ru": "Лопата", "ing": "Лапп", "pron": "lapp" },
+    { "ru": "Кирка", "ing": "Къар", "pron": "qar" },
+
+    { "ru": "Рюкзак", "ing": "Торба", "pron": "torba" },
+    { "ru": "Возьми рюкзак", "ing": "Торба хий", "pron": "torba hiy" },
+
+    { "ru": "Прибор", "ing": "Йолча дех", "pron": "yolcha dekh" },
+    { "ru": "Тепловизор", "ing": "Т1ан йолча", "pron": "t1an yolcha" },
+
+    { "ru": "Патроны", "ing": "Патронеш", "pron": "patronesh" },
+    { "ru": "Заряди", "ing": "Теша!", "pron": "tesha" },
+
+    { "ru": "Оружие", "ing": "Кош", "pron": "kosh" },
+    { "ru": "Держи оружие ровно", "ing": "Кош дика дог1ийла", "pron": "kosh dika dog1iyla" }
+  ]
+}

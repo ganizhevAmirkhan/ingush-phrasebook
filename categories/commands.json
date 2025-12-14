@@ -1,0 +1,27 @@
+{
+  "category": "commands",
+  "items": [
+    { "ru": "Стой!", "ing": "Тха!", "pron": "tcha" },
+    { "ru": "Иди!", "ing": "Вуда!", "pron": "vuda" },
+    { "ru": "Быстрее!", "ing": "Марсха!", "pron": "marsha" },
+    { "ru": "Медленнее!", "ing": "Шортиг!", "pron": "shortig" },
+
+    { "ru": "Сюда иди!", "ing": "Хьокха вуда!", "pron": "khyokha vuda" },
+    { "ru": "Туда иди!", "ing": "Цугахь вуда!", "pron": "tsugakh vuda" },
+
+    { "ru": "Смотри!", "ing": "Хьаьжа!", "pron": "khyazha" },
+    { "ru": "Слушай!", "Ing": "Ладувх!", "pron": "laduvkh" },
+
+    { "ru": "Сядь!", "ing": "Деча!", "pron": "decha" },
+    { "ru": "Ляг!", "ing": "Къайла!", "pron": "kayla" },
+
+    { "ru": "Не двигайся!", "ing": "Му уда!", "pron": "mu uda" },
+    { "ru": "Не шуми!", "ing": "Муса!", "pron": "musa" },
+
+    { "ru": "Дай!", "ing": "Хий!", "pron": "hiy" },
+    { "ru": "Принеси!", "ing": "Т1ехьа!", "pron": "t1ekhya" },
+
+    { "ru": "Отойди!", "ing": "Яккха!", "pron": "yakkha" },
+    { "ru": "Вернись!", "ing": "Виннаг!", "pron": "vinnag" }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "category": "guests",
+  "items": [
+    { "ru": "Добро пожаловать!", "ing": "Марша вувца!", "pron": "marsha vuvtsa" },
+    { "ru": "Заходи", "ing": "Хьокха йийла", "pron": "khyokha yiila" },
+
+    { "ru": "Чувствуй себя как дома", "ing": "Хьо ц1а я хьа", "pron": "kho ts1a ya kha" },
+    { "ru": "Присаживайся", "ing": "Деча йийла", "pron": "decha yiila" },
+
+    { "ru": "Хочешь чай?", "ing": "Чай безам ба хьа?", "pron": "chai bezam ba kha" },
+    { "ru": "Хочешь поесть?", "ing": "Хьа гIала безам ба?", "pron": "kha g1ala bezam ba" },
+
+    { "ru": "Спасибо за визит", "ing": "Баркалла хьоаг1", "pron": "barkalla khoag1" },
+    { "ru": "Приходи ещё", "ing": "Т1ехьа хьа воаг1аг!", "pron": "t1ekhya kha voag1ag" },
+
+    { "ru": "Мы рады гостям", "ing": "Тхо къонаш дог1ала", "pron": "tkho qonash dog1ala" }
+  ]
+}
