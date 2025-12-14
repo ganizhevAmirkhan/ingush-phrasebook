@@ -1,12 +1,100 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<title>Ингушский разговорник</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Ингушский разговорник</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            padding: 18px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #search-bar {
+            margin-left: 20px;
+            padding: 8px 14px;
+            width: 260px;
+        }
+
+        #container {
+            display: flex;
+            height: calc(100vh - 65px);
+        }
+
+        #sidebar {
+            width: 250px;
+            background: #f0f0f0;
+            padding: 15px;
+            border-right: 1px solid #ccc;
+            overflow-y: auto;
+        }
+
+        #sidebar h2 {
+            margin-top: 0;
+        }
+
+        .category {
+            padding: 10px;
+            margin-bottom: 5px;
+            background: #fff;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+        }
+
+        .category:hover {
+            background: #e6e6e6;
+        }
+
+        #content-area {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .phrase {
+            background: white;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            border: 1px solid #ddd;
+        }
+
+        #admin-panel {
+            position: fixed;
+            right: 20px;
+            top: 18px;
+        }
+
+        #admin-status {
+            margin-left: 8px;
+            color: #0a0;
+        }
+    </style>
 </head>
 
 <body>
+
+<header>
+    Ингушский разговорник
+    <input id="search-bar" type="text" placeholder="Поиск по фразам..." oninput="searchPhrases()">
+</header>
+
+<div id="admin-panel">
+    <button onclick="adminLogin()">Войти</button>
+    <span id="admin-status"></span>
+</div>
+
 <div id="container">
 
     <aside id="sidebar">
@@ -21,33 +109,131 @@
 
 </div>
 
-<div id="admin-panel">
-    <button onclick="adminLogin()">Войти</button>
-    <span id="admin-status"></span>
-</div>
+<script>
+// =========================
+//   СПИСОК КАТЕГОРИЙ
+// =========================
 
-<div id="app">
+const categories = [
+    "greetings", "basic_phrases", "personal_info", "family", "home",
+    "food", "drinks", "travel", "transport", "hunting",
+    "danger", "thermal", "navigation", "weather", "emotions",
+    "health", "help", "commands", "tools", "animals",
+    "time", "numbers", "colors", "money", "shop",
+    "city", "village", "guests", "communication", "work",
+    "misc"
+];
 
-    <header>
-        <h1>Ингушский разговорник</h1>
-        <input id="search" type="text" placeholder="Поиск по фразам...">
-    </header>
+let phraseData = {};
+let adminMode = false;
 
-    <div id="container">
+// =========================
+//   ЗАГРУЗКА КАТЕГОРИЙ
+// =========================
 
-        <!-- Левое меню -->
-        <aside id="categories"></aside>
+function loadCategories() {
+    const list = document.getElementById("category-list");
+    list.innerHTML = "";
 
-        <!-- Основная зона -->
-        <main id="content">
-            <h2>Выберите категорию</h2>
-            <div id="phrases"></div>
-        </main>
+    categories.forEach(cat => {
+        const div = document.createElement("div");
+        div.className = "category";
+        div.innerText = cat.replace("_", " ");
+        div.onclick = () => loadCategory(cat);
+        list.appendChild(div);
+    });
+}
 
-    </div>
+async function loadCategory(category) {
+    document.getElementById("content-title").innerText = category.replace("_", " ");
 
-</div>
+    const url = `categories/${category}.json`;
 
-<script src="script.js"></script>
+    try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error("Файл не найден");
+
+        const json = await res.json();
+        phraseData = json;
+
+        renderPhrases(json);
+
+    } catch (e) {
+        document.getElementById("content").innerHTML =
+            `<p style="color:red">Ошибка загрузки: ${e.message}</p>`;
+    }
+}
+
+// =========================
+//   ОТОБРАЖЕНИЕ ФРАЗ
+// =========================
+
+function renderPhrases(data) {
+    const content = document.getElementById("content");
+    content.innerHTML = "";
+
+    data.forEach(item => {
+        const block = document.createElement("div");
+        block.className = "phrase";
+
+        block.innerHTML = `
+            <b>${item.russian}</b><br>
+            ${item.ingush}
+        `;
+
+        content.appendChild(block);
+    });
+}
+
+// =========================
+//   ПОИСК ФРАЗ
+// =========================
+
+async function searchPhrases() {
+    const q = document.getElementById("search-bar").value.toLowerCase();
+    if (q.length < 2) return;
+
+    let results = [];
+
+    for (const cat of categories) {
+        try {
+            const res = await fetch(`categories/${cat}.json`);
+            const json = await res.json();
+
+            json.forEach(item => {
+                if (item.russian.toLowerCase().includes(q) ||
+                    item.ingush.toLowerCase().includes(q)) {
+                    results.push(item);
+                }
+            });
+
+        } catch {}
+    }
+
+    document.getElementById("content-title").innerText = "Результаты поиска";
+    renderPhrases(results);
+}
+
+// =========================
+//   АДМИН-РЕЖИМ
+// =========================
+
+function adminLogin() {
+    let pass = prompt("Введите пароль администратора:");
+
+    if (pass === "ingush-secret") {
+        adminMode = true;
+        document.getElementById("admin-status").innerText = "✓ Авторизован";
+    } else {
+        alert("Неверный пароль.");
+    }
+}
+
+// =========================
+
+window.onload = loadCategories;
+
+</script>
+
 </body>
 </html>
