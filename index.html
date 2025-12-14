@@ -5,620 +5,273 @@
 <title>Ingush Phrasebook</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- LameJS MP3 encoder -->
 <script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.0/lame.min.js"></script>
 
 <style>
 :root {
-    --bg: #ffffff;
-    --fg: #000000;
-    --card: #f4f4f4;
-    --accent: #2a7cff;
+    --bg:#fff;--fg:#000;--card:#f4f4f4;--accent:#2a7cff;
 }
 .dark {
-    --bg: #1a1a1a;
-    --fg: #f0f0f0;
-    --card: #2b2b2b;
-    --accent: #5398ff;
+    --bg:#1a1a1a;--fg:#f0f0f0;--card:#2b2b2b;--accent:#5398ff;
 }
 body {
-    margin: 0;
-    padding: 0;
-    background: var(--bg);
-    color: var(--fg);
-    font-family: Arial, sans-serif;
-    transition: background .2s, color .2s;
+    margin:0;background:var(--bg);color:var(--fg);
+    font-family:Arial,sans-serif;transition:.2s;
 }
 header {
-    padding: 15px;
-    background: var(--card);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #ccc;
+    padding:15px;background:var(--card);
+    display:flex;justify-content:space-between;
+    align-items:center;border-bottom:2px solid #ccc;
 }
-h1 { margin: 0; font-size: 22px; }
-
 button {
-    background: var(--accent);
-    color: white;
-    border: none;
-    padding: 7px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    margin: 3px;
+    background:var(--accent);color:#fff;
+    border:none;padding:7px 12px;
+    border-radius:8px;cursor:pointer;margin:3px;
 }
-button:hover { opacity: 0.9; }
-
-#content {
-    max-width: 900px;
-    margin: auto;
-    padding: 15px;
-}
-
-/* SEARCH BAR */
+#content {max-width:900px;margin:auto;padding:15px}
 #searchBar {
-    width: 100%;
-    padding: 10px;
-    font-size: 18px;
-    border-radius: 8px;
-    border: 2px solid #aaa;
-    margin-bottom: 15px;
+    width:100%;padding:10px;font-size:18px;
+    border-radius:8px;border:2px solid #aaa;margin-bottom:15px;
 }
-
-/* CATEGORY CARDS */
-.category-card {
-    background: var(--card);
-    padding: 12px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    font-size: 19px;
+.category-card,.phrase-block,.dialog-card,.dialog-step {
+    background:var(--card);padding:12px;
+    border-radius:10px;margin-bottom:10px;
 }
-.category-card:hover { background: #dcdcdc; }
-
-/* PHRASES */
-.phrase-block {
-    background: var(--card);
-    padding: 12px;
-    border-radius: 10px;
-    margin-bottom: 12px;
-}
-.phrase-top {
-    font-size: 20px;
-    font-weight: bold;
-}
-.phrase-ing {
-    font-size: 20px;
-    margin: 5px 0;
-    color: var(--accent);
-}
-.phrase-pron {
-    font-size: 15px;
-}
-.phrase-grammar {
-    font-size: 13px;
-    opacity: 0.8;
-}
-
-/* DIALOGS */
-.dialog-card {
-    background: var(--card);
-    padding: 12px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-.dialog-step {
-    background: var(--card);
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 8px;
-}
-
-/* MODAL WINDOWS */
+.category-card,.dialog-card {cursor:pointer;font-size:19px}
+.phrase-top{font-size:20px;font-weight:bold}
+.phrase-ing{font-size:20px;color:var(--accent)}
+.phrase-pron{font-size:15px}
+.phrase-grammar{font-size:13px;opacity:.8}
 .modal {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.7);
-    display: none;
-    justify-content: center;
-    align-items: center;
+    position:fixed;inset:0;background:rgba(0,0,0,.7);
+    display:none;justify-content:center;align-items:center;
 }
 .modal-content {
-    background: var(--card);
-    padding: 20px;
-    width: 90%;
-    max-width: 600px;
-    border-radius: 12px;
+    background:var(--card);padding:20px;
+    width:90%;max-width:600px;border-radius:12px;
 }
-.close-btn {
-    float: right;
-    cursor: pointer;
-    font-size: 25px;
-}
-
-/* ADMIN PANEL */
+.close-btn {float:right;font-size:25px;cursor:pointer}
 #adminPanel {
-    display: none;
-    padding: 12px;
-    background: var(--card);
-    border-radius: 10px;
-    margin-top: 20px;
-    border: 2px solid var(--accent);
+    display:none;padding:12px;background:var(--card);
+    border-radius:10px;border:2px solid var(--accent);
 }
-textarea {
-    width: 100%;
-    height: 150px;
-    border-radius: 10px;
-    padding: 10px;
-}
+textarea,input{width:100%;padding:8px;border-radius:8px}
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Ингушско–Русский разговорник</h1>
-    <div>
-        <button onclick="toggleTheme()">🌙</button>
-        <button onclick="openAdmin()">🔐 Admin</button>
-    </div>
+<h1>Ингушско–Русский разговорник</h1>
+<div>
+<button onclick="toggleTheme()">🌙</button>
+<button onclick="openAdmin()">🔐 Admin</button>
+</div>
 </header>
 
 <div id="content">
-
-<input id="searchBar" placeholder="Поиск (русский или ингушский)…" oninput="globalSearch()"/>
-
-<h2>Категории</h2>
-<div id="categories"></div>
-
-<h2>Диалоги</h2>
-<div id="dialogues"></div>
-
+<input id="searchBar" placeholder="Поиск…" oninput="globalSearch()">
+<h2>Категории</h2><div id="categories"></div>
+<h2>Диалоги</h2><div id="dialogues"></div>
 <div id="results"></div>
 
-<!-- MODAL: ADMIN LOGIN -->
+<!-- MODALS -->
 <div id="adminLoginModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeAdminLogin()">&times;</span>
-    <h3>Вход администратора</h3>
-    <input id="adminPasswordInput" type="password" placeholder="Пароль"/><br><br>
-    <button onclick="adminLogin()">Войти</button>
-  </div>
-</div>
+<div class="modal-content">
+<span class="close-btn" onclick="closeAdminLogin()">&times;</span>
+<h3>Вход администратора</h3>
+<input id="adminPasswordInput" type="password">
+<button onclick="adminLogin()">Войти</button>
+</div></div>
 
-<!-- MODAL: EDIT PHRASE -->
 <div id="editModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeEdit()">&times;</span>
-    <h3>Редактировать фразу</h3>
-    <input id="editRu" placeholder="Русский"/><br><br>
-    <input id="editIng" placeholder="Ингушский"/><br><br>
-    <input id="editPron" placeholder="Произношение"/><br><br>
-    <textarea id="editGrammar" placeholder="Грамматика"></textarea><br><br>
-    <button onclick="saveEdit()">💾 Сохранить</button>
-  </div>
-</div>
+<div class="modal-content">
+<span class="close-btn" onclick="closeEdit()">&times;</span>
+<h3>Редактировать</h3>
+<input id="editRu"><input id="editIng"><input id="editPron">
+<textarea id="editGrammar"></textarea>
+<button onclick="saveEdit()">💾</button>
+</div></div>
 
-<!-- MODAL: ADD PHRASE -->
 <div id="addModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeAdd()">&times;</span>
-    <h3>Добавить фразу</h3>
-    <input id="addRu" placeholder="Русский"/><br><br>
-    <input id="addIng" placeholder="Ингушский"/><br><br>
-    <input id="addPron" placeholder="Произношение"/><br><br>
-    <textarea id="addGrammar" placeholder="Грамматика"></textarea><br><br>
-    <button onclick="saveNewPhrase()">➕ Добавить</button>
-  </div>
-</div>
+<div class="modal-content">
+<span class="close-btn" onclick="closeAdd()">&times;</span>
+<h3>Добавить</h3>
+<input id="addRu"><input id="addIng"><input id="addPron">
+<textarea id="addGrammar"></textarea>
+<button onclick="saveNewPhrase()">➕</button>
+</div></div>
 
-<!-- ADMIN PANEL -->
 <div id="adminPanel">
-    <h3>Панель администратора</h3>
-    <button onclick="exportAll()">📤 Экспорт JSON</button>
-    <button onclick="importJSON()">📥 Импорт JSON</button>
+<h3>Панель администратора</h3>
+<button onclick="exportAll()">📤 Экспорт</button>
+<button onclick="importJSON()">📥 Импорт</button>
 </div>
+</div>
+
 <script>
-// ================================
-//          ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ
-// ================================
-let PHRASES = {};        // Все фразы по категориям
-let DIALOGUES = {};      // Все диалоги
-let currentCategory = ""; 
-let editingPhrase = null;
-let adminMode = false;
+let PHRASES={},DIALOGUES={},currentCategory="",editingPhrase=null,adminMode=false;
 
-// ================================
-//          ЗАГРУЗКА JSON ФАЙЛОВ
-// ================================
-async function loadJSON(path){
-    const res = await fetch(path);
-    return await res.json();
-}
+async function loadJSON(p){return (await fetch(p)).json();}
 
-// Категории
-const CATEGORY_FILES = [
-    "phrases/greetings.json",
-    "phrases/family.json",
-    "phrases/hunting.json",
-    "phrases/travel.json",
-    "phrases/danger.json",
-    "phrases/commands.json",
-    "phrases/home.json"
+const CATEGORY_FILES=[
+"phrases/greetings.json","phrases/family.json",
+"phrases/hunting.json","phrases/travel.json",
+"phrases/danger.json","phrases/commands.json",
+"phrases/home.json"
+];
+const DIALOGUE_FILES=[
+"dialogues/meeting.json","dialogues/store.json",
+"dialogues/hunting.json","dialogues/transport.json",
+"dialogues/conflict.json"
 ];
 
-// Диалоги
-const DIALOGUE_FILES = [
-    "dialogues/meeting.json",
-    "dialogues/store.json",
-    "dialogues/hunting.json",
-    "dialogues/transport.json",
-    "dialogues/conflict.json"
-];
+(async function init(){
+for(let f of CATEGORY_FILES){let d=await loadJSON(f);PHRASES[d.category]=d;}
+for(let f of DIALOGUE_FILES){let d=await loadJSON(f);DIALOGUES[d.id]=d;}
+renderCategories();renderDialogues();
+})();
 
-// ================================
-//            ИНИЦИАЛИЗАЦИЯ
-// ================================
-async function init(){
-    // Загружаем категории
-    for (let file of CATEGORY_FILES){
-        let data = await loadJSON(file);
-        PHRASES[data.category] = data;
-    }
+function toggleTheme(){document.body.classList.toggle("dark");}
 
-    // Загружаем диалоги
-    for (let file of DIALOGUE_FILES){
-        let data = await loadJSON(file);
-        DIALOGUES[data.id] = data;
-    }
-
-    renderCategories();
-    renderDialogues();
-}
-init();
-
-// ================================
-//         ТЁМНАЯ ТЕМА
-// ================================
-function toggleTheme(){
-    document.body.classList.toggle("dark");
-}
-
-// ================================
-//       ОТОБРАЖЕНИЕ КАТЕГОРИЙ
-// ================================
 function renderCategories(){
-    let html = "";
-    for (let key in PHRASES){
-        let cat = PHRASES[key];
-        html += `<div class="category-card" onclick="openCategory('${key}')">${cat.title}</div>`;
-    }
-    document.getElementById("categories").innerHTML = html;
+categories.innerHTML=Object.keys(PHRASES)
+.map(k=>`<div class="category-card" onclick="openCategory('${k}')">${PHRASES[k].title}</div>`).join("");
 }
 
-// ================================
-//            ОТКРЫТИЕ КАТЕГОРИИ
-// ================================
 function openCategory(cat){
-    currentCategory = cat;
-    let c = PHRASES[cat];
-    let html = `<h2>${c.title}</h2><button onclick="openAdd()">➕ Добавить фразу</button>`;
-
-    for (let p of c.phrases){
-        html += `
-        <div class="phrase-block">
-            <div class="phrase-top">${p.ru}</div>
-            <div class="phrase-ing">${p.ing}</div>
-            <div class="phrase-pron">${p.pron || ""}</div>
-            <div class="phrase-grammar">${p.grammar || ""}</div>
-            <button onclick="speak('${p.ing}')">🔊</button>
-            ${adminMode ? `<button onclick='editPhrase("${p.id}")'>✏</button>` : ""}
-        </div>`;
-    }
-    document.getElementById("results").innerHTML = html;
+currentCategory=cat;
+let c=PHRASES[cat];
+let html=`<h2>${c.title}</h2><button onclick="openAdd()">➕</button>`;
+for(let p of c.phrases){
+html+=`
+<div class="phrase-block">
+<div class="phrase-top">${p.ru}</div>
+<div class="phrase-ing">${p.ing}</div>
+${p.pron?`<div class="phrase-pron">${p.pron}</div>`:""}
+${p.grammar?`<div class="phrase-grammar">${p.grammar}</div>`:""}
+${p.audio
+? `<audio controls src="audio/${p.audio}"></audio>`
+: `<button onclick="speak(${JSON.stringify(p.ing)})">🔊</button>`}
+${adminMode?`<button onclick="editPhrase('${p.id}')">✏</button>`:""}
+</div>`;
+}
+results.innerHTML=html;
 }
 
-// ================================
-//         ОТОБРАЖЕНИЕ ДИАЛОГОВ
-// ================================
 function renderDialogues(){
-    let html = "";
-    for (let id in DIALOGUES){
-        let d = DIALOGUES[id];
-        html += `<div class="dialog-card" onclick="openDialogue('${id}')">${d.title}</div>`;
-    }
-    document.getElementById("dialogues").innerHTML = html;
+dialogues.innerHTML=Object.values(DIALOGUES)
+.map(d=>`<div class="dialog-card" onclick="openDialogue('${d.id}')">${d.title}</div>`).join("");
 }
 
 function openDialogue(id){
-    let d = DIALOGUES[id];
-    let html = `<h2>${d.title}</h2>`;
-    for (let step of d.steps){
-        html += `
-        <div class="dialog-step">
-            <b>${step.speaker}:</b> ${step.ru}<br>
-            <span style="color:var(--accent);">${step.ing}</span><br>
-            <button onclick="speak('${step.ing}')">🔊</button>
-        </div>`;
-    }
-    document.getElementById("results").innerHTML = html;
+let d=DIALOGUES[id];
+results.innerHTML=`<h2>${d.title}</h2>`+d.steps.map(s=>`
+<div class="dialog-step">
+<b>${s.speaker}:</b> ${s.ru}<br>
+<span style="color:var(--accent)">${s.ing}</span><br>
+<button onclick="speak(${JSON.stringify(s.ing)})">🔊</button>
+</div>`).join("");
 }
 
-// ================================
-//           ОЗВУЧКА TTS
-// ================================
+/* 🔊 SAFE TTS */
 function speak(text){
-    let utter = new SpeechSynthesisUtterance(text);
-    utter.lang = "ru";
-    speechSynthesis.speak(utter);
+let u=new SpeechSynthesisUtterance(text);
+u.lang="und";
+speechSynthesis.cancel();
+speechSynthesis.speak(u);
 }
 
-// ================================
-//          ГЛОБАЛЬНЫЙ ПОИСК
-// ================================
+/* 🔍 SEARCH (phrases + dialogues) */
 function globalSearch(){
-    let q = document.getElementById("searchBar").value.toLowerCase().trim();
-    if (!q){ document.getElementById("results").innerHTML = ""; return; }
+let q=searchBar.value.toLowerCase().trim();
+if(!q){results.innerHTML="";return;}
+let out="<h2>Результаты</h2>",found=0;
 
-    let out = `<h2>Результаты поиска:</h2>`;
-    let found = 0;
-
-    for (let cat in PHRASES){
-        for (let p of PHRASES[cat].phrases){
-            if (p.ru.toLowerCase().includes(q) || p.ing.toLowerCase().includes(q)){
-                found++;
-                out += `
-                <div class="phrase-block">
-                    <div class="phrase-top">${p.ru}</div>
-                    <div class="phrase-ing">${p.ing}</div>
-                    <div class="phrase-pron">${p.pron || ""}</div>
-                    <div class="phrase-grammar">${p.grammar || ""}</div>
-                    <button onclick="speak('${p.ing}')">🔊</button>
-                </div>`;
-            }
-        }
-    }
-
-    if (!found) out += "<p>Ничего не найдено.</p>";
-    document.getElementById("results").innerHTML = out;
+for(let c in PHRASES)
+for(let p of PHRASES[c].phrases)
+if(p.ru.toLowerCase().includes(q)||p.ing.toLowerCase().includes(q)){
+found++;out+=`<div class="phrase-block"><b>${p.ru}</b><br><span>${p.ing}</span></div>`;
 }
 
-// ================================
-//       ОКНА (МОДАЛКИ)
-// ================================
-function openAdmin(){
-    document.getElementById("adminLoginModal").style.display = "flex";
-}
-function closeAdminLogin(){
-    document.getElementById("adminLoginModal").style.display = "none";
-}
-function openEdit(){ document.getElementById("editModal").style.display = "flex"; }
-function closeEdit(){ document.getElementById("editModal").style.display = "none"; }
-function openAdd(){ document.getElementById("addModal").style.display = "flex"; }
-function closeAdd(){ document.getElementById("addModal").style.display = "none"; }
-
-// ================================
-//       SHA-256 ХЕШИРОВАНИЕ
-// ================================
-async function sha256(str){
-    const buf = new TextEncoder().encode(str);
-    const digest = await crypto.subtle.digest("SHA-256", buf);
-    return Array.from(new Uint8Array(digest)).map(b=>b.toString(16).padStart(2,"0")).join("");
+for(let d in DIALOGUES)
+for(let s of DIALOGUES[d].steps)
+if(s.ru.toLowerCase().includes(q)||s.ing.toLowerCase().includes(q)){
+found++;out+=`<div class="dialog-step"><b>${s.ru}</b><br>${s.ing}</div>`;
 }
 
-const ADMIN_HASH = "d3cc9d7cd837300b8eec3651fc4b68d1ce3996aa505284b2f482f3b0f436bb6e"; // SHA256("ingush-secret")
+results.innerHTML=found?out:"<p>Ничего не найдено</p>";
+}
 
-// ================================
-//        ЛОГИН АДМИНИСТРАТОРА
-// ================================
+/* MODALS */
+const openAdmin=()=>adminLoginModal.style.display="flex";
+const closeAdminLogin=()=>adminLoginModal.style.display="none";
+const openEdit=()=>editModal.style.display="flex";
+const closeEdit=()=>editModal.style.display="none";
+const openAdd=()=>addModal.style.display="flex";
+const closeAdd=()=>addModal.style.display="none";
+
+/* ADMIN */
+async function sha256(s){
+const b=new TextEncoder().encode(s);
+const h=await crypto.subtle.digest("SHA-256",b);
+return [...new Uint8Array(h)].map(x=>x.toString(16).padStart(2,"0")).join("");
+}
+const ADMIN_HASH="d3cc9d7cd837300b8eec3651fc4b68d1ce3996aa505284b2f482f3b0f436bb6e";
+
 async function adminLogin(){
-    let pass = document.getElementById("adminPasswordInput").value;
-    let hash = await sha256(pass);
-    if (hash === ADMIN_HASH){
-        adminMode = true;
-        document.getElementById("adminLoginModal").style.display = "none";
-        document.getElementById("adminPanel").style.display = "block";
-        alert("Админ-режим активирован.");
-    } else {
-        alert("Неверный пароль.");
-    }
+if(await sha256(adminPasswordInput.value)===ADMIN_HASH){
+adminMode=true;adminPanel.style.display="block";closeAdminLogin();
+alert("Админ активирован");
+}else alert("Неверный пароль");
 }
 
-// ================================
-//       РЕДАКТИРОВАНИЕ ФРАЗЫ
-// ================================
 function editPhrase(id){
-    let c = PHRASES[currentCategory];
-    let p = c.phrases.find(x => x.id === id);
-    editingPhrase = p;
-
-    document.getElementById("editRu").value = p.ru;
-    document.getElementById("editIng").value = p.ing;
-    document.getElementById("editPron").value = p.pron || "";
-    document.getElementById("editGrammar").value = p.grammar || "";
-
-    openEdit();
+let p=PHRASES[currentCategory].phrases.find(x=>x.id===id);
+editingPhrase=p;
+editRu.value=p.ru;editIng.value=p.ing;
+editPron.value=p.pron||"";editGrammar.value=p.grammar||"";
+openEdit();
 }
-
 function saveEdit(){
-    editingPhrase.ru = document.getElementById("editRu").value;
-    editingPhrase.ing = document.getElementById("editIng").value;
-    editingPhrase.pron = document.getElementById("editPron").value;
-    editingPhrase.grammar = document.getElementById("editGrammar").value;
-
-    closeEdit();
-    openCategory(currentCategory);
+Object.assign(editingPhrase,{
+ru:editRu.value,ing:editIng.value,
+pron:editPron.value,grammar:editGrammar.value
+});
+closeEdit();openCategory(currentCategory);
 }
 
-// ================================
-//        ДОБАВЛЕНИЕ НОВОЙ ФРАЗЫ
-// ================================
 function saveNewPhrase(){
-    let ru = document.getElementById("addRu").value;
-    let ing = document.getElementById("addIng").value;
-    let pron = document.getElementById("addPron").value;
-    let grammar = document.getElementById("addGrammar").value;
-
-    let id = "p" + Math.random().toString(36).substr(2,9);
-
-    PHRASES[currentCategory].phrases.push({
-        id, ru, ing, pron, grammar
-    });
-
-    closeAdd();
-    openCategory(currentCategory);
-}
-</script>
-<script>
-// ================================
-//        РЕКОРДЕР МИКРОФОНА
-// ================================
-let recorder;
-let audioChunks = [];
-
-async function startRecording(){
-    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-    recorder = new MediaRecorder(stream);
-
-    audioChunks = [];
-    recorder.ondataavailable = e => audioChunks.push(e.data);
-
-    recorder.onstop = async () => {
-        const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
-        processRecording(audioBlob);
-    };
-
-    recorder.start();
-    alert("Запись началась…");
+PHRASES[currentCategory].phrases.push({
+id:"p"+Math.random().toString(36).slice(2),
+ru:addRu.value,ing:addIng.value,
+pron:addPron.value,grammar:addGrammar.value
+});
+closeAdd();openCategory(currentCategory);
 }
 
-function stopRecording(){
-    recorder.stop();
-    alert("Запись остановлена.");
-}
-
-// ================================
-//      WAV → MP3 (через lamejs)
-// ================================
-async function processRecording(wavBlob){
-    const arrayBuffer = await wavBlob.arrayBuffer();
-    const wav = lamejs.WavHeader.readHeader(new DataView(arrayBuffer));
-
-    const samples = new Int16Array(arrayBuffer, wav.dataOffset, wav.dataLen / 2);
-    const mp3encoder = new lamejs.Mp3Encoder(wav.channels, wav.sampleRate, 128);
-    let mp3Data = [];
-    const sampleBlockSize = 1152;
-
-    for (let i = 0; i < samples.length; i += sampleBlockSize) {
-        const sampleChunk = samples.subarray(i, i + sampleBlockSize);
-        const mp3buf = mp3encoder.encodeBuffer(sampleChunk);
-        if (mp3buf.length > 0) mp3Data.push(mp3buf);
-    }
-
-    const end = mp3encoder.flush();
-    if (end.length > 0) mp3Data.push(end);
-
-    const mp3Blob = new Blob(mp3Data, { type: "audio/mp3" });
-
-    // Имя файла — ингушское слово латиницей
-    let filename = prompt("Введите ингушское слово (для имени mp3-файла):");
-    if (!filename) return alert("Файл отменён.");
-
-    filename = filename.replace(/[^a-zA-Z0-9_-]/g, "_") + ".mp3";
-
-    uploadMP3toGitHub(mp3Blob, filename);
-}
-
-// ================================
-//     ЗАГРУЗКА MP3 НА GITHUB
-// ================================
-async function uploadMP3toGitHub(fileBlob, filename){
-    let token = prompt("Введите GitHub Token для загрузки файла:");
-    if (!token){ alert("Отмена."); return; }
-
-    const owner = "ganizhevAmirkhan";
-    const repo = "ingush-phrasebook";
-    const branch = "main";
-    const path = `audio/${filename}`;
-
-    const reader = new FileReader();
-    reader.onload = async () => {
-        const contentBase64 = reader.result.split(",")[1];
-
-        const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
-        const body = {
-            message: `Добавлен mp3 файл ${filename}`,
-            content: contentBase64,
-            branch: branch
-        };
-
-        let res = await fetch(url, {
-            method: "PUT",
-            headers: {
-                "Authorization": "token " + token,
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(body)
-        });
-
-        if (res.status === 201){
-            alert("MP3 успешно загружен на GitHub!");
-        } else {
-            alert("Ошибка загрузки: " + res.status);
-        }
-    };
-    reader.readAsDataURL(fileBlob);
-}
-
-// ================================
-//          ЭКСПОРТ JSON
-// ================================
 function exportAll(){
-    const data = {
-        phrases: PHRASES,
-        dialogues: DIALOGUES
-    };
-    const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-
-    let a = document.createElement("a");
-    a.href = url;
-    a.download = "phrasebook_export.json";
-    a.click();
+let b=new Blob([JSON.stringify({PHRASES,DIALOGUES},null,2)],{type:"application/json"});
+let a=document.createElement("a");
+a.href=URL.createObjectURL(b);a.download="export.json";a.click();
 }
 
-// ================================
-//        ИМПОРТ JSON
-// ================================
 function importJSON(){
-    let input = document.createElement("input");
-    input.type = "file";
-    input.accept = ".json";
-    input.onchange = e => {
-        let file = e.target.files[0];
-        let reader = new FileReader();
-        reader.onload = () => {
-            let data = JSON.parse(reader.result);
-            PHRASES = data.phrases;
-            DIALOGUES = data.dialogues;
-            renderCategories();
-            renderDialogues();
-            alert("JSON импортирован.");
-        };
-        reader.readAsText(file);
-    };
-    input.click();
+let i=document.createElement("input");i.type="file";i.accept=".json";
+i.onchange=e=>{
+let r=new FileReader();
+r.onload=()=>{let d=JSON.parse(r.result);
+PHRASES=d.PHRASES;DIALOGUES=d.DIALOGUES;
+renderCategories();renderDialogues();};
+r.readAsText(e.target.files[0]);
+};
+i.click();
 }
 </script>
 
-<!-- FOOTER -->
-<div style="margin-top:50px; text-align:center; opacity:0.6;">
-    Ingush Phrasebook © 2025  
-</div>
+<footer style="text-align:center;opacity:.6;margin:40px">
+Ingush Phrasebook © 2025
+</footer>
 
 </body>
 </html>
-
