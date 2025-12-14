@@ -1,129 +1,147 @@
-// ==== МАППИНГ КАТЕГОРИЙ ====
-const CATEGORY_MAP = {
-    "Приветствия": "greetings",
-    "Основные фразы": "basic_phrases",
-    "Личные данные": "personal_info",
-    "Семья": "family",
-    "Дом и быт": "home",
-    "Еда": "food",
-    "Питьё": "drinks",
-    "Путешествия": "travel",
-    "Транспорт": "transport",
-    "Охота": "hunting",
-    "Опасность": "danger",
-    "Тепловизор / наблюдение": "thermal",
-    "Ориентация на местности": "navigation",
-    "Погода": "weather",
-    "Эмоции / состояния": "emotions",
-    "Здоровье": "health",
-    "Просьбы о помощи": "help",
-    "Команды": "commands",
-    "Инструменты": "tools",
-    "Животные": "animals",
-    "Время": "time",
-    "Числа": "numbers",
-    "Цвета": "colors",
-    "Деньги": "money",
-    "В магазине": "shop",
-    "В городе": "city",
-    "В селе": "village",
-    "Приём гостей": "guests",
-    "Общение": "communication",
-    "Работа": "work",
-    "Разное": "misc"
+// === ГЛАВНАЯ КОНФИГУРАЦИЯ ===
+const RAW_ROOT = "https://raw.githubusercontent.com/ganizhevAmirkhan/ingush-phrasebook/main/categories/";
+const ADMIN_PASSWORD = "ingush-secret";
+
+// === МАППИНГ: имя файла → имя категории на русском ===
+const CATEGORY_NAMES = {
+    greetings: "Приветствия",
+    basic_phrases: "Основные фразы",
+    personal_info: "Личные данные",
+    family: "Семья",
+    home: "Дом и быт",
+    food: "Еда",
+    drinks: "Питьё",
+    travel: "Путешествия",
+    transport: "Транспорт",
+    hunting: "Охота",
+    danger: "Опасность",
+    thermal: "Тепловизор / наблюдение",
+    navigation: "Ориентация на местности",
+    weather: "Погода",
+    emotions: "Эмоции / состояния",
+    health: "Здоровье",
+    help: "Просьбы о помощи",
+    commands: "Команды",
+    tools: "Инструменты",
+    animals: "Животные",
+    time: "Время",
+    numbers: "Числа",
+    colors: "Цвета",
+    money: "Деньги",
+    shop: "В магазине",
+    city: "В городе",
+    village: "В селе",
+    guests: "Приём гостей",
+    communication: "Общение",
+    work: "Работа",
+    misc: "Разное"
 };
 
-// ==== ЗАГРУЗКА СПИСКА КАТЕГОРИЙ ====
-function loadCategories() {
-    const list = document.getElementById("category-list");
-    list.innerHTML = "";
-
-    Object.keys(CATEGORY_MAP).forEach(name => {
-        const btn = document.createElement("button");
-        btn.textContent = name;
-        btn.className = "category-btn";
-        btn.onclick = () => loadCategory(CATEGORY_MAP[name]);
-        list.appendChild(btn);
-    });
-}
-
-// ==== ЗАГРУЗКА ОДНОЙ КАТЕГОРИИ ====
-async function loadCategory(fileName) {
-    const content = document.getElementById("content");
-    content.innerHTML = `<p>Загрузка...</p>`;
-
+// === Функция загрузки файла JSON ===
+async function loadCategoryJSON(filename) {
     try {
-        const response = await fetch(`categories/${fileName}.json`);
-        if (!response.ok) throw new Error("Файл не найден");
+        const response = await fetch(RAW_ROOT + filename);
+        if (!response.ok) throw new Error("404 Not Found");
 
-        const data = await response.json();
-        renderCategory(data);
-
-    } catch (err) {
-        content.innerHTML = `<p style="color:red">Ошибка загрузки: файл не найден</p>`;
+        return await response.json();
+    } catch (e) {
+        return { error: true, message: e.message };
     }
 }
 
-// ==== ОТОБРАЖЕНИЕ ФРАЗ ====
-function renderCategory(data) {
-    const content = document.getElementById("content");
-    content.innerHTML = "";
+// === Инициализация меню ===
+async function loadCategories() {
+    const menu = document.getElementById("categories");
+    if (!menu) return;
 
-    data.forEach(item => {
-        const block = document.createElement("div");
-        block.className = "phrase-block";
+    menu.innerHTML = "";
 
-        block.innerHTML = `
-            <p class="rus">${item.rus}</p>
-            <p class="ing">${item.ing}</p>
-        `;
+    // Получаем список файлов из GitHub API
+    const api = await fetch("https://api.github.com/repos/ganizhevAmirkhan/ingush-phrasebook/contents/categories");
+    const files = await api.json();
 
-        content.appendChild(block);
+    files.forEach(file => {
+        if (!file.name.endsWith(".json")) return;
+        if (file.name.includes("requests")) return; // игнор мусорного файла
+
+        const key = file.name.replace(".json", "");
+        const title = CATEGORY_NAMES[key] || key;
+
+        const btn = document.createElement("button");
+        btn.classList.add("category-btn");
+        btn.innerText = title;
+
+        btn.onclick = () => openCategory(key, file.name);
+
+        menu.appendChild(btn);
     });
 }
 
-// ==== ГЛОБАЛЬНЫЙ ПОИСК ====
-document.getElementById("search").addEventListener("input", async function () {
-    const q = this.value.trim().toLowerCase();
-    const content = document.getElementById("content");
+// === Показать содержимое категории ===
+async function openCategory(key, filename) {
+    const box = document.getElementById("content");
+    box.innerHTML = `<h2>${CATEGORY_NAMES[key] || key}</h2>`;
 
-    if (!q) {
-        content.innerHTML = "<p>Введите фразу...</p>";
+    const data = await loadCategoryJSON(filename);
+
+    if (data.error || !Array.isArray(data)) {
+        box.innerHTML += `<p style="color:red">Ошибка загрузки: файл повреждён или пустой</p>`;
         return;
     }
+
+    data.forEach(item => {
+        const div = document.createElement("div");
+        div.classList.add("phrase-item");
+
+        div.innerHTML = `
+            <div class="phrase-ru">${item.ru || ""}</div>
+            <div class="phrase-ing">${item.ing || ""}</div>
+        `;
+
+        box.appendChild(div);
+    });
+}
+
+// === Поиск по всем JSON ===
+async function globalSearch(query) {
+    const box = document.getElementById("content");
+    box.innerHTML = `<h2>Результаты поиска</h2>`;
+
+    const api = await fetch("https://api.github.com/repos/ganizhevAmirkhan/ingush-phrasebook/contents/categories");
+    const files = await api.json();
 
     let results = [];
 
-    for (const file of Object.values(CATEGORY_MAP)) {
-        try {
-            const res = await fetch(`categories/${file}.json`);
-            if (!res.ok) continue;
+    for (const file of files) {
+        if (!file.name.endsWith(".json")) continue;
+        if (file.name.includes("requests")) continue;
 
-            const data = await res.json();
-            data.forEach(item => {
-                if (item.rus.toLowerCase().includes(q) || item.ing.toLowerCase().includes(q)) {
-                    results.push(item);
-                }
-            });
-        } catch { }
+        const data = await loadCategoryJSON(file.name);
+        if (!Array.isArray(data)) continue;
+
+        const matched = data.filter(item =>
+            item.ru?.toLowerCase()?.includes(query) ||
+            item.ing?.toLowerCase()?.includes(query)
+        );
+
+        results.push(...matched);
     }
 
     if (results.length === 0) {
-        content.innerHTML = "<p>Ничего не найдено...</p>";
+        box.innerHTML += `<p>Ничего не найдено</p>`;
         return;
     }
 
-    content.innerHTML = results
-        .map(item => `
-            <div class="phrase-block">
-                <p class="rus">${item.rus}</p>
-                <p class="ing">${item.ing}</p>
-            </div>
-        `)
-        .join("");
-});
+    results.forEach(item => {
+        const div = document.createElement("div");
+        div.classList.add("phrase-item");
+        div.innerHTML = `
+            <div class="phrase-ru">${item.ru}</div>
+            <div class="phrase-ing">${item.ing}</div>
+        `;
+        box.appendChild(div);
+    });
+}
 
-// ==== СТАРТ ====
-window.onload = () => {
-    loadCategories();
-};
+// === Инициализация сайта ===
+window.onload = loadCategories;
