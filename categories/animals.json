@@ -1,5 +1,4 @@
-{
-  "category": "animals",
+"category": "animals",
   "items": [
     { "ru": "Животные", "ing": "Додаш", "pron": "dodash" },
     { "ru": "Животное", "ing": "Дода", "pron": "doda" },
@@ -30,4 +29,3 @@
 
     { "ru": "След зверя", "ing": "Аькъа лар", "pron": "akqa lar" }
   ]
-}
