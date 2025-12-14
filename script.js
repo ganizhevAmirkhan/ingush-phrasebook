@@ -1,3 +1,9 @@
+console.log("SCRIPT VERSION 3 LOADED");
+
+// =======================
+// СПИСОК КАТЕГОРИЙ
+// =======================
+
 const categories = [
     "greetings", "basic_phrases", "personal_info", "family", "home",
     "food", "drinks", "travel", "transport", "hunting", "danger",
@@ -7,7 +13,9 @@ const categories = [
     "work", "misc"
 ];
 
-// ------------------ Загрузка списка категорий ----------------------
+// =======================
+// ЗАГРУЗКА СПИСКА КАТЕГОРИЙ
+// =======================
 
 function loadCategories() {
     const list = document.getElementById("categoryList");
@@ -22,24 +30,26 @@ function loadCategories() {
     });
 }
 
-// ------------------ Загрузка одной категории ----------------------
+// =======================
+// ЗАГРУЗКА ОДНОЙ КАТЕГОРИИ
+// =======================
 
 async function loadCategory(name) {
     const container = document.getElementById("content");
     container.innerHTML = "<p>Загрузка…</p>";
 
     try {
-        // --- ВАЖНО: исправленный путь ---
-        const response = await fetch(`categories/${name}.json`);
+        // --- Защита от кэширования GitHub Pages ---
+        const url = `dialogues/${name}.json?v=${Date.now()}`;
 
-        if (!response.ok) {
-            throw new Error(`Файл не найден: categories/${name}.json`);
-        }
+        const response = await fetch(url);
+        if (!response.ok) throw new Error("Файл не найден");
 
         const data = await response.json();
 
+        // Проверка структуры JSON
         if (!data.items || !Array.isArray(data.items)) {
-            throw new Error("Неверный формат JSON: отсутствует массив items[]");
+            throw new Error("Неверный формат JSON: нет items[]");
         }
 
         container.innerHTML = `<h2>${name.replace("_", " ")}</h2>`;
@@ -62,7 +72,9 @@ async function loadCategory(name) {
     }
 }
 
-// ------------------ Поиск ----------------------
+// =======================
+// ГЛОБАЛЬНЫЙ ПОИСК
+// =======================
 
 async function searchPhrases() {
     const q = document.getElementById("search").value.trim().toLowerCase();
@@ -77,7 +89,8 @@ async function searchPhrases() {
 
     for (let cat of categories) {
         try {
-            const resp = await fetch(`categories/${cat}.json`);
+            const url = `dialogues/${cat}.json?v=${Date.now()}`;
+            const resp = await fetch(url);
             if (!resp.ok) continue;
 
             const data = await resp.json();
@@ -101,7 +114,9 @@ async function searchPhrases() {
                     container.appendChild(block);
                 }
             });
-        } catch (e) {}
+        } catch (e) {
+            console.warn("Ошибка поиска в категории:", cat);
+        }
     }
 }
 
