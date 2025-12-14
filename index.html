@@ -2,276 +2,34 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Ingush Phrasebook</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.0/lame.min.js"></script>
-
-<style>
-:root {
-    --bg:#fff;--fg:#000;--card:#f4f4f4;--accent:#2a7cff;
-}
-.dark {
-    --bg:#1a1a1a;--fg:#f0f0f0;--card:#2b2b2b;--accent:#5398ff;
-}
-body {
-    margin:0;background:var(--bg);color:var(--fg);
-    font-family:Arial,sans-serif;transition:.2s;
-}
-header {
-    padding:15px;background:var(--card);
-    display:flex;justify-content:space-between;
-    align-items:center;border-bottom:2px solid #ccc;
-}
-button {
-    background:var(--accent);color:#fff;
-    border:none;padding:7px 12px;
-    border-radius:8px;cursor:pointer;margin:3px;
-}
-#content {max-width:900px;margin:auto;padding:15px}
-#searchBar {
-    width:100%;padding:10px;font-size:18px;
-    border-radius:8px;border:2px solid #aaa;margin-bottom:15px;
-}
-.category-card,.phrase-block,.dialog-card,.dialog-step {
-    background:var(--card);padding:12px;
-    border-radius:10px;margin-bottom:10px;
-}
-.category-card,.dialog-card {cursor:pointer;font-size:19px}
-.phrase-top{font-size:20px;font-weight:bold}
-.phrase-ing{font-size:20px;color:var(--accent)}
-.phrase-pron{font-size:15px}
-.phrase-grammar{font-size:13px;opacity:.8}
-.modal {
-    position:fixed;inset:0;background:rgba(0,0,0,.7);
-    display:none;justify-content:center;align-items:center;
-}
-.modal-content {
-    background:var(--card);padding:20px;
-    width:90%;max-width:600px;border-radius:12px;
-}
-.close-btn {float:right;font-size:25px;cursor:pointer}
-#adminPanel {
-    display:none;padding:12px;background:var(--card);
-    border-radius:10px;border:2px solid var(--accent);
-}
-textarea,input{width:100%;padding:8px;border-radius:8px}
-</style>
+<title>Ингушский разговорник</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-<h1>Ингушско–Русский разговорник</h1>
-<div>
-<button onclick="toggleTheme()">🌙</button>
-<button onclick="openAdmin()">🔐 Admin</button>
-</div>
-</header>
+<div id="app">
 
-<div id="content">
-<input id="searchBar" placeholder="Поиск…" oninput="globalSearch()">
-<h2>Категории</h2><div id="categories"></div>
-<h2>Диалоги</h2><div id="dialogues"></div>
-<div id="results"></div>
+    <header>
+        <h1>Ингушский разговорник</h1>
+        <input id="search" type="text" placeholder="Поиск по фразам...">
+    </header>
 
-<!-- MODALS -->
-<div id="adminLoginModal" class="modal">
-<div class="modal-content">
-<span class="close-btn" onclick="closeAdminLogin()">&times;</span>
-<h3>Вход администратора</h3>
-<input id="adminPasswordInput" type="password">
-<button onclick="adminLogin()">Войти</button>
-</div></div>
+    <div id="container">
 
-<div id="editModal" class="modal">
-<div class="modal-content">
-<span class="close-btn" onclick="closeEdit()">&times;</span>
-<h3>Редактировать</h3>
-<input id="editRu"><input id="editIng"><input id="editPron">
-<textarea id="editGrammar"></textarea>
-<button onclick="saveEdit()">💾</button>
-</div></div>
+        <!-- Левое меню -->
+        <aside id="categories"></aside>
 
-<div id="addModal" class="modal">
-<div class="modal-content">
-<span class="close-btn" onclick="closeAdd()">&times;</span>
-<h3>Добавить</h3>
-<input id="addRu"><input id="addIng"><input id="addPron">
-<textarea id="addGrammar"></textarea>
-<button onclick="saveNewPhrase()">➕</button>
-</div></div>
+        <!-- Основная зона -->
+        <main id="content">
+            <h2>Выберите категорию</h2>
+            <div id="phrases"></div>
+        </main>
 
-<div id="adminPanel">
-<h3>Панель администратора</h3>
-<button onclick="exportAll()">📤 Экспорт</button>
-<button onclick="importJSON()">📥 Импорт</button>
-</div>
+    </div>
+
 </div>
 
-<script>
-let PHRASES={},DIALOGUES={},currentCategory="",editingPhrase=null,adminMode=false;
-
-async function loadJSON(p){return (await fetch(p)).json();}
-
-const CATEGORY_FILES=[
-"phrases/greetings.json","phrases/family.json",
-"phrases/hunting.json","phrases/travel.json",
-"phrases/danger.json","phrases/commands.json",
-"phrases/home.json"
-];
-const DIALOGUE_FILES=[
-"dialogues/meeting.json","dialogues/store.json",
-"dialogues/hunting.json","dialogues/transport.json",
-"dialogues/conflict.json"
-];
-
-(async function init(){
-for(let f of CATEGORY_FILES){let d=await loadJSON(f);PHRASES[d.category]=d;}
-for(let f of DIALOGUE_FILES){let d=await loadJSON(f);DIALOGUES[d.id]=d;}
-renderCategories();renderDialogues();
-})();
-
-function toggleTheme(){document.body.classList.toggle("dark");}
-
-function renderCategories(){
-categories.innerHTML=Object.keys(PHRASES)
-.map(k=>`<div class="category-card" onclick="openCategory('${k}')">${PHRASES[k].title}</div>`).join("");
-}
-
-function openCategory(cat){
-currentCategory=cat;
-let c=PHRASES[cat];
-let html=`<h2>${c.title}</h2><button onclick="openAdd()">➕</button>`;
-for(let p of c.phrases){
-html+=`
-<div class="phrase-block">
-<div class="phrase-top">${p.ru}</div>
-<div class="phrase-ing">${p.ing}</div>
-${p.pron?`<div class="phrase-pron">${p.pron}</div>`:""}
-${p.grammar?`<div class="phrase-grammar">${p.grammar}</div>`:""}
-${p.audio
-? `<audio controls src="audio/${p.audio}"></audio>`
-: `<button onclick="speak(${JSON.stringify(p.ing)})">🔊</button>`}
-${adminMode?`<button onclick="editPhrase('${p.id}')">✏</button>`:""}
-</div>`;
-}
-results.innerHTML=html;
-}
-
-function renderDialogues(){
-dialogues.innerHTML=Object.values(DIALOGUES)
-.map(d=>`<div class="dialog-card" onclick="openDialogue('${d.id}')">${d.title}</div>`).join("");
-}
-
-function openDialogue(id){
-let d=DIALOGUES[id];
-results.innerHTML=`<h2>${d.title}</h2>`+d.steps.map(s=>`
-<div class="dialog-step">
-<b>${s.speaker}:</b> ${s.ru}<br>
-<span style="color:var(--accent)">${s.ing}</span><br>
-<button onclick="speak(${JSON.stringify(s.ing)})">🔊</button>
-</div>`).join("");
-}
-
-/* 🔊 SAFE TTS */
-function speak(text){
-let u=new SpeechSynthesisUtterance(text);
-u.lang="und";
-speechSynthesis.cancel();
-speechSynthesis.speak(u);
-}
-
-/* 🔍 SEARCH (phrases + dialogues) */
-function globalSearch(){
-let q=searchBar.value.toLowerCase().trim();
-if(!q){results.innerHTML="";return;}
-let out="<h2>Результаты</h2>",found=0;
-
-for(let c in PHRASES)
-for(let p of PHRASES[c].phrases)
-if(p.ru.toLowerCase().includes(q)||p.ing.toLowerCase().includes(q)){
-found++;out+=`<div class="phrase-block"><b>${p.ru}</b><br><span>${p.ing}</span></div>`;
-}
-
-for(let d in DIALOGUES)
-for(let s of DIALOGUES[d].steps)
-if(s.ru.toLowerCase().includes(q)||s.ing.toLowerCase().includes(q)){
-found++;out+=`<div class="dialog-step"><b>${s.ru}</b><br>${s.ing}</div>`;
-}
-
-results.innerHTML=found?out:"<p>Ничего не найдено</p>";
-}
-
-/* MODALS */
-const openAdmin=()=>adminLoginModal.style.display="flex";
-const closeAdminLogin=()=>adminLoginModal.style.display="none";
-const openEdit=()=>editModal.style.display="flex";
-const closeEdit=()=>editModal.style.display="none";
-const openAdd=()=>addModal.style.display="flex";
-const closeAdd=()=>addModal.style.display="none";
-
-/* ADMIN */
-async function sha256(s){
-const b=new TextEncoder().encode(s);
-const h=await crypto.subtle.digest("SHA-256",b);
-return [...new Uint8Array(h)].map(x=>x.toString(16).padStart(2,"0")).join("");
-}
-const ADMIN_HASH="d3cc9d7cd837300b8eec3651fc4b68d1ce3996aa505284b2f482f3b0f436bb6e";
-
-async function adminLogin(){
-if(await sha256(adminPasswordInput.value)===ADMIN_HASH){
-adminMode=true;adminPanel.style.display="block";closeAdminLogin();
-alert("Админ активирован");
-}else alert("Неверный пароль");
-}
-
-function editPhrase(id){
-let p=PHRASES[currentCategory].phrases.find(x=>x.id===id);
-editingPhrase=p;
-editRu.value=p.ru;editIng.value=p.ing;
-editPron.value=p.pron||"";editGrammar.value=p.grammar||"";
-openEdit();
-}
-function saveEdit(){
-Object.assign(editingPhrase,{
-ru:editRu.value,ing:editIng.value,
-pron:editPron.value,grammar:editGrammar.value
-});
-closeEdit();openCategory(currentCategory);
-}
-
-function saveNewPhrase(){
-PHRASES[currentCategory].phrases.push({
-id:"p"+Math.random().toString(36).slice(2),
-ru:addRu.value,ing:addIng.value,
-pron:addPron.value,grammar:addGrammar.value
-});
-closeAdd();openCategory(currentCategory);
-}
-
-function exportAll(){
-let b=new Blob([JSON.stringify({PHRASES,DIALOGUES},null,2)],{type:"application/json"});
-let a=document.createElement("a");
-a.href=URL.createObjectURL(b);a.download="export.json";a.click();
-}
-
-function importJSON(){
-let i=document.createElement("input");i.type="file";i.accept=".json";
-i.onchange=e=>{
-let r=new FileReader();
-r.onload=()=>{let d=JSON.parse(r.result);
-PHRASES=d.PHRASES;DIALOGUES=d.DIALOGUES;
-renderCategories();renderDialogues();};
-r.readAsText(e.target.files[0]);
-};
-i.click();
-}
-</script>
-
-<footer style="text-align:center;opacity:.6;margin:40px">
-Ingush Phrasebook © 2025
-</footer>
-
+<script src="script.js"></script>
 </body>
 </html>
