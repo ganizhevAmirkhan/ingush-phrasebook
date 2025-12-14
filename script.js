@@ -121,3 +121,4 @@ async function searchPhrases() {
 }
 
 window.onload = loadCategories;
+console.log("SCRIPT VERSION 2 LOADED");
