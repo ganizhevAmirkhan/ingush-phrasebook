@@ -29,14 +29,17 @@ async function loadCategory(name) {
     container.innerHTML = "<p>Загрузка…</p>";
 
     try {
-        const response = await fetch(`dialogues/${name}.json`);
-        if (!response.ok) throw new Error("Файл не найден");
+        // --- ВАЖНО: исправленный путь ---
+        const response = await fetch(`categories/${name}.json`);
+
+        if (!response.ok) {
+            throw new Error(`Файл не найден: categories/${name}.json`);
+        }
 
         const data = await response.json();
 
-        // ---- ВАЖНО: JSON имеет вид { category: "...", items: [...] }
         if (!data.items || !Array.isArray(data.items)) {
-            throw new Error("Неверный формат JSON: ожидался items[]");
+            throw new Error("Неверный формат JSON: отсутствует массив items[]");
         }
 
         container.innerHTML = `<h2>${name.replace("_", " ")}</h2>`;
@@ -59,7 +62,7 @@ async function loadCategory(name) {
     }
 }
 
-// ------------------ Глобальный поиск ----------------------
+// ------------------ Поиск ----------------------
 
 async function searchPhrases() {
     const q = document.getElementById("search").value.trim().toLowerCase();
@@ -74,7 +77,7 @@ async function searchPhrases() {
 
     for (let cat of categories) {
         try {
-            const resp = await fetch(`dialogues/${cat}.json`);
+            const resp = await fetch(`categories/${cat}.json`);
             if (!resp.ok) continue;
 
             const data = await resp.json();
