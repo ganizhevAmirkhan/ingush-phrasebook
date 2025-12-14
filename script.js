@@ -1,175 +1,183 @@
-// -------------------------------
-// Настройки
-// -------------------------------
-const CATEGORY_PATH = "categories/";
-const ADMIN_PASSWORD = "ingush-secret";
+// ===============================
+//     НАСТРОЙКИ
+// ===============================
+const config = {
+    owner: "ganizhevAmirkhan",
+    repo: "ingush-phrasebook",
+    branch: "main",
+    admin_password: "ingush-secret"
+};
 
-let isAdmin = false;
-let phrases = [];
-
-
-// -------------------------------
-// Список файлов категорий (БЕЗ цифр)
-// -------------------------------
-const categoryFiles = [
-    "greetings.json",
-    "basic_phrases.json",
-    "personal_info.json",
-    "family.json",
-    "home.json",
-    "food.json",
-    "drinks.json",
-    "travel.json",
-    "transport.json",
-    "hunting.json",
-    "danger.json",
-    "thermal.json",
-    "navigation.json",
-    "weather.json",
-    "emotions.json",
-    "health.json",
-    "help.json",
-    "commands.json",
-    "tools.json",
-    "animals.json",
-    "time.json",
-    "numbers.json",
-    "colors.json",
-    "money.json",
-    "shop.json",
-    "city.json",
-    "village.json",
-    "guests.json",
-    "communication.json",
-    "work.json",
-    "misc.json"
+// ===============================
+//     СПИСОК КАТЕГОРИЙ (РУССКИЕ ИМЕНА + ФАЙЛЫ)
+// ===============================
+const categories = [
+    { file: "greetings",         name: "Приветствия" },
+    { file: "basic_phrases",     name: "Основные фразы" },
+    { file: "personal_info",     name: "Личные данные" },
+    { file: "family",            name: "Семья" },
+    { file: "home",              name: "Дом и быт" },
+    { file: "food",              name: "Еда" },
+    { file: "drinks",            name: "Питьё" },
+    { file: "travel",            name: "Путешествия" },
+    { file: "transport",         name: "Транспорт" },
+    { file: "hunting",           name: "Охота" },
+    { file: "danger",            name: "Опасность" },
+    { file: "thermal",           name: "Тепловизор / наблюдение" },
+    { file: "navigation",        name: "Ориентация на местности" },
+    { file: "weather",           name: "Погода" },
+    { file: "emotions",          name: "Эмоции / состояния" },
+    { file: "health",            name: "Здоровье" },
+    { file: "help",              name: "Просьбы о помощи" },
+    { file: "commands",          name: "Команды" },
+    { file: "tools",             name: "Инструменты" },
+    { file: "animals",           name: "Животные" },
+    { file: "time",              name: "Время" },
+    { file: "numbers",           name: "Числа" },
+    { file: "colors",            name: "Цвета" },
+    { file: "money",             name: "Деньги" },
+    { file: "shop",              name: "В магазине" },
+    { file: "city",              name: "В городе" },
+    { file: "village",           name: "В селе" },
+    { file: "guests",            name: "Приём гостей" },
+    { file: "communication",     name: "Общение (разговорные фразы)" },
+    { file: "work",              name: "Работа" },
+    { file: "misc",              name: "Разное" }
 ];
 
-
-// -------------------------------
-// Создание списка категорий
-// -------------------------------
+// ===============================
+//     ЗАГРУЗКА КАТЕГОРИЙ В ЛЕВОЕ МЕНЮ
+// ===============================
 function loadCategories() {
     const list = document.getElementById("category-list");
+    if (!list) return;
+
     list.innerHTML = "";
 
-    categoryFiles.forEach(file => {
-        const name = file.replace(".json", "").replace("_", " ");
-
-        const btn = document.createElement("button");
-        btn.className = "category-btn";
-        btn.textContent = name;
-        btn.onclick = () => loadCategory(file);
-
-        list.appendChild(btn);
+    categories.forEach(cat => {
+        let div = document.createElement("div");
+        div.className = "category-button";
+        div.innerText = cat.name;
+        div.onclick = () => loadCategory(cat.file);
+        list.appendChild(div);
     });
 }
 
+// ===============================
+//     ЗАГРУЗКА СОДЕРЖИМОГО КАТЕГОРИИ
+// ===============================
+async function loadCategory(categoryFile) {
+    const content = document.getElementById("content");
+    const title = document.getElementById("content-title");
 
-// -------------------------------
-// Загрузка фраз категории
-// -------------------------------
-async function loadCategory(file) {
+    const categoryObj = categories.find(c => c.file === categoryFile);
+    if (!categoryObj) return;
+
+    title.innerText = categoryObj.name;
+    content.innerHTML = "Загрузка…";
+
+    const url = `categories/${categoryFile}.json`;
+
     try {
-        const res = await fetch(CATEGORY_PATH + file);
-        if (!res.ok) throw new Error("Файл не найден: " + file);
+        const response = await fetch(url);
+        if (!response.ok) {
+            content.innerHTML = `<span style="color:red;">Ошибка загрузки: Файл не найден</span>`;
+            return;
+        }
 
-        const data = await res.json();
-        phrases = data;
+        const data = await response.json();
 
-        renderPhrases(data);
-    } catch (err) {
-        console.error(err);
-        alert("Ошибка загрузки: " + file);
+        let html = "";
+        data.forEach(item => {
+            html += `
+                <div class="phrase-card">
+                    <div class="phrase-rus">${item.rus}</div>
+                    <div class="phrase-ing">${item.ing}</div>
+                    <button class="play-btn" onclick="playAudio('${item.ing}')">🔊</button>
+                </div>
+            `;
+        });
+
+        content.innerHTML = html;
+
+    } catch (e) {
+        content.innerHTML = `<span style="color:red;">Ошибка чтения файла</span>`;
     }
 }
 
+// ===============================
+//     ПОИСК ПО ВСЕМ CATEGORIES/*.json
+// ===============================
+async function searchPhrases() {
+    const query = document.getElementById("search-box").value.trim().toLowerCase();
+    const content = document.getElementById("content");
+    const title = document.getElementById("content-title");
 
-// -------------------------------
-// Показ фраз
-// -------------------------------
-function renderPhrases(list) {
-    const box = document.getElementById("content");
-    box.innerHTML = "";
+    if (!query) return;
 
-    list.forEach((ph, index) => {
-        const div = document.createElement("div");
-        div.className = "phrase-card";
-
-        div.innerHTML = `
-            <div class="ru"><b>${ph.ru}</b></div>
-            <div class="ing">${ph.ing}</div>
-
-            <div class="tools">
-                <button onclick="playAudio('${ph.ing}')">🔊</button>
-                ${isAdmin ? `<button onclick="editPhrase(${index})">✏️</button>` : ""}
-            </div>
-        `;
-
-        box.appendChild(div);
-    });
-}
-
-
-// -------------------------------
-// Поиск по всем категориям
-// -------------------------------
-async function globalSearch() {
-    const q = document.getElementById("search").value.trim().toLowerCase();
-    if (!q) return;
-
-    const box = document.getElementById("content");
-    box.innerHTML = "<h3>Результаты поиска...</h3>";
+    title.innerText = "Результаты поиска";
+    content.innerHTML = "Поиск…";
 
     let results = [];
 
-    for (let file of categoryFiles) {
+    for (let cat of categories) {
         try {
-            const res = await fetch(CATEGORY_PATH + file);
-            const data = await res.json();
+            const response = await fetch(`categories/${cat.file}.json`);
+            if (!response.ok) continue;
 
-            results.push(
-                ...data.filter(p =>
-                    p.ru.toLowerCase().includes(q) ||
-                    p.ing.toLowerCase().includes(q)
-                )
-            );
-        } catch (e) {
-            console.warn("Не удалось загрузить: " + file);
-        }
+            const data = await response.json();
+
+            data.forEach(item => {
+                if (item.rus.toLowerCase().includes(query) || item.ing.toLowerCase().includes(query)) {
+                    results.push({ ...item, category: cat.name });
+                }
+            });
+        } catch {}
     }
 
-    renderPhrases(results);
+    if (results.length === 0) {
+        content.innerHTML = "Ничего не найдено.";
+        return;
+    }
+
+    let html = "";
+    results.forEach(r => {
+        html += `
+            <div class="phrase-card">
+                <div class="phrase-category">${r.category}</div>
+                <div class="phrase-rus">${r.rus}</div>
+                <div class="phrase-ing">${r.ing}</div>
+                <button class="play-btn" onclick="playAudio('${r.ing}')">🔊</button>
+            </div>
+        `;
+    });
+
+    content.innerHTML = html;
 }
 
-
-// -------------------------------
-// Проигрывание аудио
-// -------------------------------
-function playAudio(word) {
-    const audio = new Audio(`audio/${word}.mp3`);
-    audio.play().catch(() => alert("Нет аудио для: " + word));
+// ===============================
+//     ПРОСМОТР АУДИО
+// ===============================
+function playAudio(text) {
+    const file = text.replace(/[^a-zA-Z0-9]/g, "_") + ".mp3";
+    const audio = new Audio(`audio/${file}`);
+    audio.play().catch(() => alert("Аудио отсутствует"));
 }
 
+// ===============================
+//     АВТОРИЗАЦИЯ
+// ===============================
+function login() {
+    const pwd = prompt("Введите пароль администратора:");
 
-// -------------------------------
-// Вход администратора
-// -------------------------------
-function adminLogin() {
-    const pass = prompt("Введите пароль:");
-    if (pass === ADMIN_PASSWORD) {
-        isAdmin = true;
-        document.getElementById("admin-status").textContent = "✓ Администратор";
-        alert("Админ-режим включён");
+    if (pwd === config.admin_password) {
+        document.body.classList.add("admin");
+        alert("Авторизация успешна!");
     } else {
         alert("Неверный пароль");
     }
 }
 
-
-// -------------------------------
-// Запуск
-// -------------------------------
 window.onload = () => {
     loadCategories();
 };
