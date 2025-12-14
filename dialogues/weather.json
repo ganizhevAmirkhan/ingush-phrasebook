@@ -1,0 +1,42 @@
+{
+  "category": "weather",
+  "items": [
+    { "ru": "Погода", "ing": "Юьхад", "pron": "yukhad" },
+    { "ru": "Какая погода?", "ing": "Юьхад мотт?", "pron": "yukhad mott" },
+
+    { "ru": "Хорошая погода", "ing": "Юьхад дика", "pron": "yukhad dika" },
+    { "ru": "Плохая погода", "ing": "Юьхад му", "pron": "yukhad mu" },
+
+    { "ru": "Холодно", "ing": "Сув", "pron": "suv" },
+    { "ru": "Тепло", "ing": "Маьна", "pron": "mana" },
+    { "ru": "Жарко", "ing": "Деша", "pron": "desha" },
+
+    { "ru": "Дождь", "ing": "Ох", "pron": "okh" },
+    { "ru": "Идёт дождь", "ing": "Ох вуда", "pron": "okh vuda" },
+
+    { "ru": "Снег", "ing": "Саг", "pron": "sag" },
+    { "ru": "Идёт снег", "ing": "Саг вуда", "pron": "sag vuda" },
+
+    { "ru": "Туман", "ing": "Тха", "pron": "tcha" },
+    { "ru": "Туманно", "ing": "Тха ву", "pron": "tcha vu" },
+
+    { "ru": "Ветер", "ing": "Бац", "pron": "bats" },
+    { "ru": "Сильный ветер", "ing": "Бац йо", "pron": "bats yo" },
+    { "ru": "Слабый ветер", "ing": "Бац ца", "pron": "bats tsa" },
+
+    { "ru": "Гроза", "ing": "Малх т1ехьаш", "pron": "malkh t1ekh-yash" },
+    { "ru": "Молния", "ing": "Т1ехь", "pron": "t1ekh" },
+    { "ru": "Гром", "ing": "Т1ехь баха", "pron": "t1ekh bakha" },
+
+    { "ru": "Сегодня", "ing": "Тахана", "pron": "takhana" },
+    { "ru": "Завтра", "ing": "Кхаца", "pron": "khatsa" },
+    { "ru": "Вчера", "ing": "Делха", "pron": "delkha" },
+
+    { "ru": "Сегодня холодно", "ing": "Тахана сув", "pron": "takhana suv" },
+    { "ru": "Завтра будет тепло", "ing": "Кхаца маьна хина", "pron": "khatsa mana khina" },
+
+    { "ru": "Какая температура?", "ing": "Температура мотт?", "pron": "temperatura mott" },
+    { "ru": "Очень холодно", "ing": "Сув йо", "pron": "suv yo" },
+    { "ru": "Очень жарко", "ing": "Деша йо", "pron": "desha yo" }
+  ]
+}

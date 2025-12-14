@@ -1,0 +1,33 @@
+{
+  "category": "animals",
+  "items": [
+    { "ru": "Животные", "ing": "Додаш", "pron": "dodash" },
+    { "ru": "Животное", "ing": "Дода", "pron": "doda" },
+
+    { "ru": "Собака", "ing": "Шун", "pron": "shun" },
+    { "ru": "Кошка", "ing": "Кош", "pron": "kosh" },
+
+    { "ru": "Волк", "ing": "Мокх", "pron": "mokh" },
+    { "ru": "Лиса", "ing": "Кел", "pron": "kel" },
+    { "ru": "Кабан", "ing": "Борг", "pron": "borg" },
+    { "ru": "Олень", "ing": "Керла", "pron": "kerla" },
+
+    { "ru": "Корова", "ing": "Ц1ан", "pron": "ts1an" },
+    { "ru": "Бык", "ing": "Маъгъ", "pron": "magh" },
+
+    { "ru": "Овца", "ing": "Бокх", "pron": "bokh" },
+    { "ru": "Коза", "ing": "ГIов", "pron": "g1ov" },
+
+    { "ru": "Курица", "ing": "Курза", "pron": "kurza" },
+    { "ru": "Петух", "ing": "Курза к1онг", "pron": "kurza k1ong" },
+
+    { "ru": "Медведь", "ing": "Доьх", "pron": "dyokh" },
+    { "ru": "Барс", "ing": "Ирх", "pron": "irkh" },
+
+    { "ru": "Он опасный зверь", "ing": "Из аькъа йо", "pron": "iz akqa yo" },
+    { "ru": "Большой зверь", "ing": "Ларча аькъа", "pron": "larcha akqa" },
+    { "ru": "Маленький зверь", "ing": "Керча аькъа", "pron": "kercha akqa" },
+
+    { "ru": "След зверя", "ing": "Аькъа лар", "pron": "akqa lar" }
+  ]
+}
