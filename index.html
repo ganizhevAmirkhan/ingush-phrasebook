@@ -124,7 +124,6 @@ const categories = [
     "misc"
 ];
 
-let phraseData = {};
 let adminMode = false;
 
 // =========================
@@ -153,10 +152,9 @@ async function loadCategory(category) {
         const res = await fetch(url);
         if (!res.ok) throw new Error("Файл не найден");
 
-        const json = await res.json();
-        phraseData = json;
+        const data = await res.json(); // {category: "", items: [...]}
 
-        renderPhrases(json);
+        renderPhrases(data);
 
     } catch (e) {
         document.getElementById("content").innerHTML =
@@ -172,13 +170,22 @@ function renderPhrases(data) {
     const content = document.getElementById("content");
     content.innerHTML = "";
 
-    data.forEach(item => {
+    const items = Array.isArray(data) ? data : data.items;
+
+    if (!items || !Array.isArray(items)) {
+        content.innerHTML =
+            "<p style='color:red'>Ошибка: неверный формат JSON</p>";
+        return;
+    }
+
+    items.forEach(item => {
         const block = document.createElement("div");
         block.className = "phrase";
 
         block.innerHTML = `
-            <b>${item.russian}</b><br>
-            ${item.ingush}
+            <p><b>RU:</b> ${item.ru}</p>
+            <p><b>ING:</b> ${item.ing}</p>
+            <p><b>PRON:</b> ${item.pron}</p>
         `;
 
         content.appendChild(block);
@@ -198,11 +205,16 @@ async function searchPhrases() {
     for (const cat of categories) {
         try {
             const res = await fetch(`categories/${cat}.json`);
-            const json = await res.json();
+            if (!res.ok) continue;
 
-            json.forEach(item => {
-                if (item.russian.toLowerCase().includes(q) ||
-                    item.ingush.toLowerCase().includes(q)) {
+            const data = await res.json();
+            const items = Array.isArray(data) ? data : data.items;
+
+            items.forEach(item => {
+                if (
+                    item.ru.toLowerCase().includes(q) ||
+                    item.ing.toLowerCase().includes(q)
+                ) {
                     results.push(item);
                 }
             });
