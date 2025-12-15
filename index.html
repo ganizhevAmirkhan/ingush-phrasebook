@@ -18,6 +18,8 @@
             padding: 18px;
             font-size: 24px;
             font-weight: bold;
+            display: flex;
+            align-items: center;
         }
 
         #search-bar {
@@ -37,10 +39,6 @@
             padding: 15px;
             border-right: 1px solid #ccc;
             overflow-y: auto;
-        }
-
-        #sidebar h2 {
-            margin-top: 0;
         }
 
         .category {
@@ -70,15 +68,35 @@
             border: 1px solid #ddd;
         }
 
-        #admin-panel {
+        #admin-buttons {
             position: fixed;
             right: 20px;
-            top: 18px;
+            top: 15px;
+        }
+
+        #admin-buttons button {
+            margin-left: 10px;
         }
 
         #admin-status {
-            margin-left: 8px;
             color: #0a0;
+            margin-left: 8px;
+        }
+
+        /* Панель администратора */
+        #admin-panel {
+            display: none;
+            background: #fff;
+            border: 2px solid #333;
+            padding: 15px;
+            position: fixed;
+            right: 15px;
+            bottom: 15px;
+            width: 360px;
+            height: 480px;
+            overflow-y: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #0004;
         }
     </style>
 </head>
@@ -88,15 +106,39 @@
 <header>
     Ингушский разговорник
     <input id="search-bar" type="text" placeholder="Поиск по фразам..." oninput="searchPhrases()">
+
+    <div id="admin-buttons">
+        <button onclick="adminLogin()">Вход админ</button>
+        <span id="admin-status"></span>
+    </div>
 </header>
 
+<!-- Панель администратора -->
 <div id="admin-panel">
-    <button onclick="adminLogin()">Войти</button>
-    <span id="admin-status"></span>
+    <h3>Админ-панель</h3>
+
+    <label>Категория:</label>
+    <select id="admin-category"></select>
+
+    <h4>Добавить фразу</h4>
+
+    <label>Русский:</label>
+    <input id="admin-ru" style="width:100%">
+
+    <label>Ингушский:</label>
+    <input id="admin-ing" style="width:100%">
+
+    <label>Транскрипция:</label>
+    <input id="admin-pron" style="width:100%">
+
+    <button onclick="adminAddPhrase()">Добавить</button>
+
+    <hr>
+
+    <button onclick="adminDownloadAll()">Скачать разговорник ZIP</button>
 </div>
 
 <div id="container">
-
     <aside id="sidebar">
         <h2>Категории</h2>
         <div id="category-list"></div>
@@ -106,55 +148,88 @@
         <h2 id="content-title">Выберите категорию</h2>
         <div id="content"></div>
     </main>
-
 </div>
+
 
 <script>
 // =========================
-//   СПИСОК КАТЕГОРИЙ
+// Русские названия категорий
 // =========================
+const CATEGORY_TITLES = {
+    greetings: "Приветствия",
+    basic_phrases: "Базовые фразы",
+    personal_info: "Личная информация",
+    family: "Семья",
+    home: "Дом",
+    food: "Еда",
+    drinks: "Напитки",
+    travel: "Путешествия",
+    transport: "Транспорт",
+    hunting: "Охота",
+    danger: "Опасность",
+    thermal: "Тепловизор",
+    navigation: "Навигация",
+    weather: "Погода",
+    emotions: "Эмоции",
+    health: "Здоровье",
+    help: "Помощь",
+    commands: "Команды",
+    tools: "Инструменты",
+    animals: "Животные",
+    time: "Время",
+    numbers: "Числа",
+    colors: "Цвета",
+    money: "Деньги",
+    shop: "Магазин",
+    city: "Город",
+    village: "Село",
+    guests: "Гости",
+    communication: "Общение",
+    work: "Работа",
+    misc: "Прочее"
+};
 
-const categories = [
-    "greetings", "basic_phrases", "personal_info", "family", "home",
-    "food", "drinks", "travel", "transport", "hunting",
-    "danger", "thermal", "navigation", "weather", "emotions",
-    "health", "help", "commands", "tools", "animals",
-    "time", "numbers", "colors", "money", "shop",
-    "city", "village", "guests", "communication", "work",
-    "misc"
-];
+const categories = Object.keys(CATEGORY_TITLES);
 
 let adminMode = false;
 
 // =========================
-//   ЗАГРУЗКА КАТЕГОРИЙ
+// Загрузка категорий
 // =========================
 
 function loadCategories() {
     const list = document.getElementById("category-list");
+    const adminCat = document.getElementById("admin-category");
     list.innerHTML = "";
+    adminCat.innerHTML = "";
 
     categories.forEach(cat => {
+        // кнопка слева
         const div = document.createElement("div");
         div.className = "category";
-        div.innerText = cat.replace("_", " ");
+        div.innerText = CATEGORY_TITLES[cat];
         div.onclick = () => loadCategory(cat);
         list.appendChild(div);
+
+        // список категорий в админке
+        const opt = document.createElement("option");
+        opt.value = cat;
+        opt.innerText = CATEGORY_TITLES[cat];
+        adminCat.appendChild(opt);
     });
 }
 
 async function loadCategory(category) {
-    document.getElementById("content-title").innerText = category.replace("_", " ");
-
-    const url = `categories/${category}.json`;
+    document.getElementById("content-title").innerText = CATEGORY_TITLES[category];
 
     try {
-        const res = await fetch(url);
+        const res = await fetch(`categories/${category}.json`);
         if (!res.ok) throw new Error("Файл не найден");
 
-        const data = await res.json(); // {category: "", items: [...]}
+        const json = await res.json();
+        const items = json.items ?? json;
 
-        renderPhrases(data);
+        renderPhrases(items);
 
     } catch (e) {
         document.getElementById("content").innerHTML =
@@ -163,20 +238,12 @@ async function loadCategory(category) {
 }
 
 // =========================
-//   ОТОБРАЖЕНИЕ ФРАЗ
+// Отображение фраз
 // =========================
 
-function renderPhrases(data) {
+function renderPhrases(items) {
     const content = document.getElementById("content");
     content.innerHTML = "";
-
-    const items = Array.isArray(data) ? data : data.items;
-
-    if (!items || !Array.isArray(items)) {
-        content.innerHTML =
-            "<p style='color:red'>Ошибка: неверный формат JSON</p>";
-        return;
-    }
 
     items.forEach(item => {
         const block = document.createElement("div");
@@ -193,7 +260,7 @@ function renderPhrases(data) {
 }
 
 // =========================
-//   ПОИСК ФРАЗ
+// Поиск
 // =========================
 
 async function searchPhrases() {
@@ -207,8 +274,8 @@ async function searchPhrases() {
             const res = await fetch(`categories/${cat}.json`);
             if (!res.ok) continue;
 
-            const data = await res.json();
-            const items = Array.isArray(data) ? data : data.items;
+            const json = await res.json();
+            const items = json.items ?? json;
 
             items.forEach(item => {
                 if (
@@ -227,7 +294,7 @@ async function searchPhrases() {
 }
 
 // =========================
-//   АДМИН-РЕЖИМ
+// Админ режим
 // =========================
 
 function adminLogin() {
@@ -235,16 +302,24 @@ function adminLogin() {
 
     if (pass === "ingush-secret") {
         adminMode = true;
-        document.getElementById("admin-status").innerText = "✓ Авторизован";
+        document.getElementById("admin-status").innerText = "✓ Админ";
+        document.getElementById("admin-panel").style.display = "block";
     } else {
         alert("Неверный пароль.");
     }
 }
 
+function adminAddPhrase() {
+    alert("Функция будет активна после подключения admin.js");
+}
+
+function adminDownloadAll() {
+    alert("Экспорт ZIP будет подключён в admin.js");
+}
+
 // =========================
 
 window.onload = loadCategories;
-
 </script>
 
 </body>
