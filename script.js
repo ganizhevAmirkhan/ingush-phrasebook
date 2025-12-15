@@ -1,18 +1,51 @@
 // ======================================
 // ПЕРЕМЕННЫЕ
 // ======================================
-let categories = [
-    "greetings", "basic_phrases", "personal_info", "family", "home",
-    "food", "drinks", "travel", "transport", "hunting",
-    "danger", "thermal", "navigation", "weather", "emotions",
-    "health", "help", "commands", "tools", "animals",
-    "time", "numbers", "colors", "money", "shop",
-    "city", "village", "guests", "communication", "work",
+
+// ⚠️ Список ДОЛЖЕН 1 в 1 совпадать с файлами в categories/
+const categories = [
+    "greetings",
+    "basic_phrases",
+    "personal_info",
+    "family",
+    "home",
+    "food",
+    "drinks",
+    "travel",
+    "transport",
+    "hunting",
+    "danger",
+    "thermal",
+    "orientation",
+    "weather",
+    "emotions",
+    "health",
+    "help",
+    "commands",
+    "tools",
+    "animals",
+    "time",
+    "numbers",
+    "colors",
+    "money",
+    "shop",
+    "city",
+    "village",
+    "guests",
+    "communication",
+    "conversation",
+    "work",
     "misc"
 ];
 
+// ⚠️ Эти переменные ОБЪЯВЛЯЮТСЯ ТОЛЬКО ЗДЕСЬ
 let currentCategory = null;
 let currentData = null;
+
+// безопасная проверка админ-режима
+function isAdmin() {
+    return typeof window.adminMode !== "undefined" && window.adminMode === true;
+}
 
 // ======================================
 // ЗАГРУЗКА СПИСКА КАТЕГОРИЙ
@@ -24,13 +57,15 @@ function loadCategories() {
     categories.forEach(cat => {
         const div = document.createElement("div");
         div.className = "category";
-        div.innerText = convertCategoryName(cat);
+        div.textContent = convertCategoryName(cat);
         div.onclick = () => loadCategory(cat);
         list.appendChild(div);
     });
 }
 
-// Русские названия категорий
+// ======================================
+// НАЗВАНИЯ КАТЕГОРИЙ
+// ======================================
 function convertCategoryName(cat) {
     const map = {
         greetings: "Приветствия",
@@ -45,7 +80,7 @@ function convertCategoryName(cat) {
         hunting: "Охота",
         danger: "Опасность",
         thermal: "Тепловизор / наблюдение",
-        navigation: "Ориентация на местности",
+        orientation: "Ориентация на местности",
         weather: "Погода",
         emotions: "Эмоции",
         health: "Здоровье",
@@ -62,11 +97,12 @@ function convertCategoryName(cat) {
         village: "Село",
         guests: "Гости",
         communication: "Общение",
+        conversation: "Разговор",
         work: "Работа",
         misc: "Разное"
     };
 
-    return map[cat] ?? cat;
+    return map[cat] || cat;
 }
 
 // ======================================
@@ -75,8 +111,10 @@ function convertCategoryName(cat) {
 async function loadCategory(category) {
     currentCategory = category;
 
-    document.getElementById("content-title").innerText = convertCategoryName(category);
+    const title = document.getElementById("content-title");
     const content = document.getElementById("content");
+
+    title.textContent = convertCategoryName(category);
     content.innerHTML = "<p>Загрузка...</p>";
 
     try {
@@ -85,8 +123,8 @@ async function loadCategory(category) {
 
         const data = await res.json();
 
-        if (!data.items || !Array.isArray(data.items)) {
-            throw new Error("JSON неверного формата (нет items[])");
+        if (!Array.isArray(data.items)) {
+            throw new Error("Неверный формат JSON (нет items)");
         }
 
         currentData = data;
@@ -104,38 +142,43 @@ function renderPhrases(data) {
     const content = document.getElementById("content");
     content.innerHTML = "";
 
+    if (!data.items.length) {
+        content.innerHTML = "<p>Фразы отсутствуют.</p>";
+        return;
+    }
+
     data.items.forEach((item, index) => {
         const div = document.createElement("div");
         div.className = "phrase";
 
         div.innerHTML = `
-            <p><b>RU:</b> ${item.ru}</p>
-            <p><b>ING:</b> ${item.ing}</p>
-            <p><b>PRON:</b> ${item.pron}</p>
+            <p><b>RU:</b> ${item.ru || ""}</p>
+            <p><b>ING:</b> ${item.ing || ""}</p>
+            <p><b>PRON:</b> ${item.pron || ""}</p>
 
             <button onclick="playAudio('${currentCategory}', ${index})">🔊</button>
 
-            ${adminMode ? `
+            ${isAdmin() ? `
                 <button onclick="editPhrase(${index})">✏</button>
                 <button onclick="deletePhrase(${index})">🗑</button>
-                <button onclick="startRecording('${index}')">🎤</button>
+                <button onclick="startRecording(${index})">🎤</button>
             ` : ""}
         `;
 
         content.appendChild(div);
     });
 
-    if (adminMode) {
-        let addBtn = document.createElement("button");
-        addBtn.innerText = "➕ Добавить фразу";
+    if (isAdmin()) {
+        const addBtn = document.createElement("button");
+        addBtn.textContent = "➕ Добавить фразу";
         addBtn.onclick = addPhrase;
-        addBtn.style = "margin-top:15px; padding:8px;";
+        addBtn.style.marginTop = "15px";
         content.appendChild(addBtn);
 
-        let saveBtn = document.createElement("button");
-        saveBtn.innerText = "💾 Сохранить категорию";
+        const saveBtn = document.createElement("button");
+        saveBtn.textContent = "💾 Сохранить категорию";
         saveBtn.onclick = saveCategory;
-        saveBtn.style = "margin-left:15px; padding:8px;";
+        saveBtn.style.marginLeft = "10px";
         content.appendChild(saveBtn);
     }
 }
@@ -148,26 +191,34 @@ async function searchPhrases() {
     if (q.length < 2) return;
 
     const content = document.getElementById("content");
-    document.getElementById("content-title").innerText = "Результаты поиска";
+    const title = document.getElementById("content-title");
+
+    title.textContent = "Результаты поиска";
     content.innerHTML = "";
 
     let results = [];
 
-    for (let cat of categories) {
+    for (const cat of categories) {
         try {
             const res = await fetch(`categories/${cat}.json`);
             if (!res.ok) continue;
 
             const data = await res.json();
-            const items = data.items;
 
-            items.forEach((item, index) => {
-                if (item.ru.toLowerCase().includes(q) || item.ing.toLowerCase().includes(q)) {
+            data.items.forEach((item, index) => {
+                if (
+                    (item.ru && item.ru.toLowerCase().includes(q)) ||
+                    (item.ing && item.ing.toLowerCase().includes(q))
+                ) {
                     results.push({ ...item, cat, index });
                 }
             });
-
         } catch {}
+    }
+
+    if (!results.length) {
+        content.innerHTML = "<p>Ничего не найдено.</p>";
+        return;
     }
 
     results.forEach(r => {
@@ -187,14 +238,16 @@ async function searchPhrases() {
 }
 
 // ======================================
-// ОЗВУЧКА MP3
+// АУДИО
 // ======================================
 function playAudio(category, index) {
     const audio = new Audio(`audio/${category}/${index}.mp3`);
-    audio.play().catch(() => alert("Аудиофайл не найден"));
+    audio.play().catch(() => {
+        alert("Аудиофайл не найден");
+    });
 }
 
 // ======================================
 // СТАРТ
 // ======================================
-window.onload = loadCategories;
+window.addEventListener("load", loadCategories);
