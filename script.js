@@ -1,105 +1,182 @@
+<script>
+// =========================
+//   СПИСОК КАТЕГОРИЙ + РУССКИЕ НАЗВАНИЯ
+// =========================
+
 const categories = [
     "greetings", "basic_phrases", "personal_info", "family", "home",
-    "food", "drinks", "travel", "transport", "hunting", "danger",
-    "thermal", "navigation", "weather", "emotions", "health", "help",
-    "commands", "tools", "animals", "time", "numbers", "colors",
-    "money", "shop", "city", "village", "guests", "communication",
-    "work", "misc"
+    "food", "drinks", "travel", "transport", "hunting",
+    "danger", "thermal", "navigation", "weather", "emotions",
+    "health", "help", "commands", "tools", "animals",
+    "time", "numbers", "colors", "money", "shop",
+    "city", "village", "guests", "communication", "work",
+    "misc"
 ];
 
-// ------------------ Загрузка списка категорий ----------------------
+const categoryNames = {
+    greetings: "Приветствия",
+    basic_phrases: "Основные фразы",
+    personal_info: "Личные данные",
+    family: "Семья",
+    home: "Дом и быт",
+    food: "Еда",
+    drinks: "Питьё",
+    travel: "Путешествия",
+    transport: "Транспорт",
+    hunting: "Охота",
+    danger: "Опасность",
+    thermal: "Тепловизор / наблюдение",
+    navigation: "Ориентация на местности",
+    weather: "Погода",
+    emotions: "Эмоции / состояния",
+    health: "Здоровье",
+    help: "Просьбы о помощи",
+    commands: "Команды",
+    tools: "Инструменты",
+    animals: "Животные",
+    time: "Время",
+    numbers: "Числа",
+    colors: "Цвета",
+    money: "Деньги",
+    shop: "В магазине",
+    city: "В городе",
+    village: "В селе",
+    guests: "Приём гостей",
+    communication: "Общение",
+    work: "Работа",
+    misc: "Разное"
+};
+
+let adminMode = false;
+
+// =========================
+//   КНОПКА "АДМИНКА"
+// =========================
+
+function goToAdmin() {
+    window.location.href = "admin/admin.html";
+}
+
+// =========================
+//   ЗАГРУЗКА КАТЕГОРИЙ
+// =========================
 
 function loadCategories() {
-    const list = document.getElementById("categoryList");
+    const list = document.getElementById("category-list");
     list.innerHTML = "";
 
     categories.forEach(cat => {
-        const btn = document.createElement("button");
-        btn.className = "category-item";
-        btn.textContent = cat.replace("_", " ");
-        btn.onclick = () => loadCategory(cat);
-        list.appendChild(btn);
+        const div = document.createElement("div");
+        div.className = "category";
+        div.innerText = categoryNames[cat];
+        div.onclick = () => loadCategory(cat);
+        list.appendChild(div);
     });
 }
 
-// ------------------ Загрузка одной категории ----------------------
+async function loadCategory(category) {
+    document.getElementById("content-title").innerText = categoryNames[category];
 
-async function loadCategory(name) {
-    const container = document.getElementById("content");
-    container.innerHTML = "<p>Загрузка…</p>";
+    const url = `categories/${category}.json`;
 
     try {
-        const response = await fetch(`categories/${name}.json`);
-        if (!response.ok) throw new Error("Файл не найден");
+        const res = await fetch(url);
+        if (!res.ok) throw new Error("Файл не найден");
 
-        const data = await response.json();
+        const data = await res.json(); 
 
-        // ---- JSON имеет вид { category: "...", items: [...] }
-        if (!data.items || !Array.isArray(data.items)) {
-            throw new Error("Неверный формат JSON: ожидался items[]");
-        }
+        renderPhrases(data);
 
-        container.innerHTML = `<h2>${data.category}</h2>`;
-
-        data.items.forEach(item => {
-            const block = document.createElement("div");
-            block.className = "phrase-block";
-
-            block.innerHTML = `
-                <p><b>RU:</b> ${item.ru}</p>
-                <p><b>ING:</b> ${item.ing}</p>
-                <p><b>PRON:</b> ${item.pron}</p>
-            `;
-
-            container.appendChild(block);
-        });
-
-    } catch (err) {
-        container.innerHTML = `<p style="color:red;">Ошибка загрузки: ${err.message}</p>`;
+    } catch (e) {
+        document.getElementById("content").innerHTML =
+            `<p style="color:red">Ошибка: ${e.message}</p>`;
     }
 }
 
-// ------------------ Глобальный поиск ----------------------
+// =========================
+//   ОТОБРАЖЕНИЕ ФРАЗ
+// =========================
 
-async function searchPhrases() {
-    const q = document.getElementById("search").value.trim().toLowerCase();
-    const container = document.getElementById("content");
+function renderPhrases(data) {
+    const content = document.getElementById("content");
+    content.innerHTML = "";
 
-    if (q.length < 2) {
-        container.innerHTML = "<p>Введите минимум 2 символа…</p>";
+    const items = Array.isArray(data) ? data : data.items;
+
+    if (!items || !Array.isArray(items)) {
+        content.innerHTML = "<p style='color:red'>Неверный формат JSON</p>";
         return;
     }
 
-    container.innerHTML = "<h2>Результаты поиска</h2>";
+    items.forEach(item => {
+        const block = document.createElement("div");
+        block.className = "phrase";
 
-    for (let cat of categories) {
+        block.innerHTML = `
+            <p><b>RU:</b> ${item.ru}</p>
+            <p><b>ING:</b> ${item.ing}</p>
+            <p><b>PRON:</b> ${item.pron}</p>
+        `;
+
+        content.appendChild(block);
+    });
+}
+
+// =========================
+//   ПОИСК
+// =========================
+
+async function searchPhrases() {
+    const q = document.getElementById("search-bar").value.toLowerCase();
+    if (q.length < 2) return;
+
+    let results = [];
+
+    for (const cat of categories) {
         try {
-            const resp = await fetch(`categories/${cat}.json`);
-            if (!resp.ok) continue;
+            const res = await fetch(`categories/${cat}.json`);
+            if (!res.ok) continue;
 
-            const data = await resp.json();
-            if (!data.items) continue;
+            const data = await res.json();
+            const items = Array.isArray(data) ? data : data.items;
 
-            data.items.forEach(item => {
+            items.forEach(item => {
                 if (
                     item.ru.toLowerCase().includes(q) ||
                     item.ing.toLowerCase().includes(q)
                 ) {
-                    const block = document.createElement("div");
-                    block.className = "phrase-block";
-
-                    block.innerHTML = `
-                        <h4>${cat.replace("_", " ")}</h4>
-                        <p><b>RU:</b> ${item.ru}</p>
-                        <p><b>ING:</b> ${item.ing}</p>
-                        <p><b>PRON:</b> ${item.pron}</p>
-                    `;
-
-                    container.appendChild(block);
+                    results.push(item);
                 }
             });
+
         } catch {}
+    }
+
+    document.getElementById("content-title").innerText = "Поиск:";
+    renderPhrases(results);
+}
+
+// =========================
+//   ВХОД АДМИНА
+// =========================
+
+function adminLogin() {
+    let pass = prompt("Введите пароль администратора:");
+
+    if (pass === "ingush-secret") {
+        adminMode = true;
+        document.getElementById("admin-status").innerText = "✓ Авторизован";
+
+        // добавляем кнопку перехода
+        let btn = document.createElement("button");
+        btn.innerText = "Админка";
+        btn.onclick = goToAdmin;
+        document.getElementById("admin-panel").appendChild(btn);
+
+    } else {
+        alert("Неверный пароль.");
     }
 }
 
 window.onload = loadCategories;
+</script>
