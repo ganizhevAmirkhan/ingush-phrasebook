@@ -1,155 +1,73 @@
-// ================================
-// НАСТРОЙКИ GITHUB
-// ================================
-const GITHUB_OWNER = "ganizhevAmirkhan";
-const GITHUB_REPO = "ingush-phrasebook";
-const GITHUB_BRANCH = "main";
-
-// ================================
-// ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ
-// ================================
 window.adminMode = false;
 window.githubToken = null;
 
-// ================================
-// ВХОД АДМИНА
-// ================================
 function adminLogin() {
-    const pass = prompt("Введите пароль администратора:");
-    const tokenInput = document.getElementById("gh-token");
-    const token = tokenInput ? tokenInput.value.trim() : "";
+    const pass = prompt("Пароль:");
+    const token = document.getElementById("gh-token").value;
 
-    if (pass !== "ingush-secret") {
-        alert("Неверный пароль администратора");
-        return;
-    }
+    if (pass !== "ingush-secret") return alert("Неверный пароль");
+    if (!token) return alert("Введите GitHub Token");
 
-    if (!token) {
-        alert("Введите GitHub Token");
-        return;
-    }
+    adminMode = true;
+    githubToken = token;
 
-    window.adminMode = true;
-    window.githubToken = token;
-
-    const status = document.getElementById("admin-status");
-    if (status) status.textContent = "✓ Админ";
-
-    // Перерисовываем текущую категорию, чтобы появились кнопки
-    if (window.currentData) {
-        renderPhrases(window.currentData);
-    }
+    document.getElementById("admin-status").textContent = "✓ Админ";
+    if (currentData) renderPhrases(currentData);
 }
 
-// ================================
-// ДОБАВИТЬ ФРАЗУ
-// ================================
+// ======================
 function addPhrase() {
-    if (!window.currentData) {
-        alert("Сначала выберите категорию");
-        return;
-    }
-
-    const ru = prompt("Введите RU фразу:");
-    const ing = prompt("Введите ING фразу:");
-    const pron = prompt("Введите PRON:");
-
+    const ru = prompt("RU:");
+    const ing = prompt("ING:");
+    const pron = prompt("PRON:");
     if (!ru || !ing || !pron) return;
 
-    window.currentData.items.push({ ru, ing, pron });
-    renderPhrases(window.currentData);
+    currentData.items.push({ ru, ing, pron });
+    renderPhrases(currentData);
+    saveCategory();
 }
 
-// ================================
-// РЕДАКТИРОВАТЬ ФРАЗУ
-// ================================
-function editPhrase(index) {
-    if (!window.currentData) return;
-
-    const item = window.currentData.items[index];
-
-    const ru = prompt("RU:", item.ru);
-    const ing = prompt("ING:", item.ing);
-    const pron = prompt("PRON:", item.pron);
-
-    if (!ru || !ing || !pron) return;
-
-    window.currentData.items[index] = { ru, ing, pron };
-    renderPhrases(window.currentData);
+function editPhrase(i) {
+    const it = currentData.items[i];
+    it.ru = prompt("RU", it.ru);
+    it.ing = prompt("ING", it.ing);
+    it.pron = prompt("PRON", it.pron);
+    renderPhrases(currentData);
+    saveCategory();
 }
 
-// ================================
-// УДАЛИТЬ ФРАЗУ
-// ================================
-function deletePhrase(index) {
-    if (!window.currentData) return;
-
-    if (!confirm("Удалить фразу?")) return;
-
-    window.currentData.items.splice(index, 1);
-    renderPhrases(window.currentData);
+function deletePhrase(i) {
+    if (!confirm("Удалить?")) return;
+    currentData.items.splice(i,1);
+    renderPhrases(currentData);
+    saveCategory();
 }
 
-// ================================
-// 💾 СОХРАНИТЬ КАТЕГОРИЮ В GITHUB
-// ================================
+// ======================
+// SAVE JSON TO GITHUB
+// ======================
 async function saveCategory() {
-    if (!window.githubToken) {
-        alert("GitHub Token не задан");
-        return;
-    }
-
-    if (!window.currentCategory || !window.currentData) {
-        alert("Категория не выбрана");
-        return;
-    }
-
-    const path = `categories/${window.currentCategory}.json`;
-    const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}`;
+    const path = `categories/${currentCategory}.json`;
+    const url = `https://api.github.com/repos/ganizhevAmirkhan/ingush-phrasebook/contents/${path}`;
 
     let sha = null;
-
-    // 1️⃣ Получаем SHA текущего файла
-    const check = await fetch(url, {
-        headers: {
-            "Authorization": `token ${window.githubToken}`
-        }
+    const check = await fetch(url,{
+        headers:{Authorization:`token ${githubToken}`}
     });
+    if (check.ok) sha = (await check.json()).sha;
 
-    if (check.ok) {
-        const json = await check.json();
-        sha = json.sha;
-    }
+    const body = {
+        message:`Update ${currentCategory}`,
+        content:btoa(unescape(encodeURIComponent(JSON.stringify(currentData,null,2)))),
+        sha
+    };
 
-    // 2️⃣ Подготавливаем контент
-    const content = btoa(
-        unescape(
-            encodeURIComponent(
-                JSON.stringify(window.currentData, null, 2)
-            )
-        )
-    );
-
-    // 3️⃣ Загружаем в GitHub
-    const res = await fetch(url, {
-        method: "PUT",
-        headers: {
-            "Authorization": `token ${window.githubToken}`,
-            "Content-Type": "application/json"
+    await fetch(url,{
+        method:"PUT",
+        headers:{
+            Authorization:`token ${githubToken}`,
+            "Content-Type":"application/json"
         },
-        body: JSON.stringify({
-            message: `Update ${window.currentCategory}.json`,
-            content: content,
-            sha: sha || undefined,
-            branch: GITHUB_BRANCH
-        })
+        body:JSON.stringify(body)
     });
-
-    if (res.ok) {
-        alert("✅ Категория сохранена в GitHub");
-    } else {
-        const err = await res.json();
-        alert("❌ Ошибка сохранения: " + (err.message || "unknown"));
-        console.error(err);
-    }
 }
