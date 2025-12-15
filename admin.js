@@ -1,65 +1,58 @@
-// ==================================================
-// ADMIN.JS — ФИНАЛЬНЫЙ
-// ==================================================
+window.adminMode=false;
+window.githubToken=null;
 
-window.adminMode = false;
-
-// ==================================================
-function adminLogin() {
-  const tokenInput = document.getElementById("gh-token");
-  const status = document.getElementById("admin-status");
-
-  if (!tokenInput || !tokenInput.value) {
-    alert("Введите GitHub Token");
-    return;
-  }
-
-  window.adminMode = true;
-  window.githubToken = tokenInput.value.trim();
-
-  status.textContent = "✓ Админ";
-  status.style.color = "lime";
-
-  if (currentData) {
-    renderPhrases(currentData);
-  }
+function adminLogin(){
+  const token=document.getElementById("gh-token").value.trim();
+  if(!token) return alert("Введите GitHub Token");
+  adminMode=true;
+  githubToken=token;
+  document.getElementById("admin-status").textContent="✓ Админ";
+  if(currentData) renderPhrases();
 }
 
-// ==================================================
-function addPhrase() {
-  if (!adminMode) return;
-
-  const ru = prompt("RU:");
-  const ing = prompt("ING:");
-  const pron = prompt("PRON:");
-
-  if (!ru || !ing || !pron) return;
-
-  currentData.items.push({ ru, ing, pron });
-  saveLocal();
-  renderPhrases(currentData);
+function addPhrase(){
+  const ru=prompt("RU:");
+  const ing=prompt("ING:");
+  const pron=prompt("PRON (латиница):");
+  if(!ru||!ing||!pron) return;
+  currentData.items.push({ru,ing,pron});
+  saveCategory();
 }
 
-// ==================================================
-function editPhrase(index) {
-  const item = currentData.items[index];
-
-  const ru = prompt("RU:", item.ru);
-  const ing = prompt("ING:", item.ing);
-  const pron = prompt("PRON:", item.pron);
-
-  if (!ru || !ing || !pron) return;
-
-  currentData.items[index] = { ru, ing, pron };
-  saveLocal();
-  renderPhrases(currentData);
+function editPhrase(i){
+  const it=currentData.items[i];
+  it.ru=prompt("RU",it.ru);
+  it.ing=prompt("ING",it.ing);
+  it.pron=prompt("PRON",it.pron);
+  saveCategory();
 }
 
-// ==================================================
-function deletePhrase(index) {
-  if (!confirm("Удалить фразу?")) return;
+function deletePhrase(i){
+  if(!confirm("Удалить?")) return;
+  currentData.items.splice(i,1);
+  saveCategory();
+}
 
-  currentData.items.splice(index, 1);
-  saveLocal();
-  renderPhrases(currentData);
+async function saveCategory(){
+  const path=`categories/${currentCategory}.json`;
+  const url=`https://api.github.com/repos/ganizhevamirkhan/ingush-phrasebook/contents/${path}`;
+
+  let sha=null;
+  const check=await fetch(url,{headers:{Authorization:`token ${githubToken}`}});
+  if(check.ok) sha=(await check.json()).sha;
+
+  await fetch(url,{
+    method:"PUT",
+    headers:{
+      Authorization:`token ${githubToken}`,
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify({
+      message:`Update ${currentCategory}`,
+      content:btoa(unescape(encodeURIComponent(JSON.stringify(currentData,null,2)))),
+      sha
+    })
+  });
+
+  renderPhrases();
 }
