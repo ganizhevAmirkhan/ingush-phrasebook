@@ -1,105 +1,169 @@
-const categories = [
-    "greetings", "basic_phrases", "personal_info", "family", "home",
-    "food", "drinks", "travel", "transport", "hunting", "danger",
-    "thermal", "navigation", "weather", "emotions", "health", "help",
-    "commands", "tools", "animals", "time", "numbers", "colors",
-    "money", "shop", "city", "village", "guests", "communication",
-    "work", "misc"
-];
+// ===============================
+// КАТЕГОРИИ (русские названия)
+// ===============================
 
-// ------------------ Загрузка списка категорий ----------------------
+const categoryNames = {
+    greetings: "Приветствия",
+    basic_phrases: "Основные фразы",
+    personal_info: "Личные данные",
+    family: "Семья",
+    home: "Дом и быт",
+    food: "Еда",
+    drinks: "Питьё",
+    travel: "Путешествия",
+    transport: "Транспорт",
+    hunting: "Охота",
+    danger: "Опасность",
+    thermal: "Тепловизор / наблюдение",
+    navigation: "Ориентация на местности",
+    weather: "Погода",
+    emotions: "Эмоции",
+    health: "Здоровье",
+    help: "Помощь",
+    commands: "Команды",
+    tools: "Инструменты",
+    animals: "Животные",
+    time: "Время",
+    numbers: "Числа",
+    colors: "Цвета",
+    money: "Деньги",
+    shop: "В магазине",
+    city: "В городе",
+    village: "В селе",
+    guests: "Приём гостей",
+    communication: "Общение",
+    work: "Работа",
+    misc: "Разное"
+};
+
+const categories = Object.keys(categoryNames);
+let currentCategory = null;
+let currentData = null;
+let adminMode = false;
+
+// ===============================
+// ЗАГРУЗКА КАТЕГОРИЙ
+// ===============================
 
 function loadCategories() {
-    const list = document.getElementById("categoryList");
+    const list = document.getElementById("category-list");
     list.innerHTML = "";
 
     categories.forEach(cat => {
-        const btn = document.createElement("button");
-        btn.className = "category-item";
-        btn.textContent = cat.replace("_", " ");
-        btn.onclick = () => loadCategory(cat);
-        list.appendChild(btn);
+        const div = document.createElement("div");
+        div.className = "category";
+        div.innerText = categoryNames[cat];
+        div.onclick = () => loadCategory(cat);
+        list.appendChild(div);
     });
 }
 
-// ------------------ Загрузка одной категории ----------------------
-
-async function loadCategory(name) {
-    const container = document.getElementById("content");
-    container.innerHTML = "<p>Загрузка…</p>";
+async function loadCategory(cat) {
+    currentCategory = cat;
+    document.getElementById("content-title").innerText = categoryNames[cat];
 
     try {
-        const response = await fetch(`categories/${name}.json`);
-        if (!response.ok) throw new Error("Файл не найден");
+        const res = await fetch(`categories/${cat}.json`);
+        if (!res.ok) throw new Error("Файл не найден");
 
-        const data = await response.json();
+        const json = await res.json();
+        currentData = json.items || json;
 
-        // ---- JSON имеет вид { category: "...", items: [...] }
-        if (!data.items || !Array.isArray(data.items)) {
-            throw new Error("Неверный формат JSON: ожидался items[]");
-        }
-
-        container.innerHTML = `<h2>${data.category}</h2>`;
-
-        data.items.forEach(item => {
-            const block = document.createElement("div");
-            block.className = "phrase-block";
-
-            block.innerHTML = `
-                <p><b>RU:</b> ${item.ru}</p>
-                <p><b>ING:</b> ${item.ing}</p>
-                <p><b>PRON:</b> ${item.pron}</p>
-            `;
-
-            container.appendChild(block);
-        });
-
-    } catch (err) {
-        container.innerHTML = `<p style="color:red;">Ошибка загрузки: ${err.message}</p>`;
+        renderPhrases(currentData);
+    } catch (e) {
+        document.getElementById("content").innerHTML =
+            `<p style="color:red;">Ошибка: ${e.message}</p>`;
     }
 }
 
-// ------------------ Глобальный поиск ----------------------
+// ===============================
+// ВЫВОД ФРАЗ
+// ===============================
+
+function renderPhrases(items) {
+    const content = document.getElementById("content");
+    content.innerHTML = "";
+
+    items.forEach((item, index) => {
+        const block = document.createElement("div");
+        block.className = "phrase";
+
+        const audioFile = `audio/${currentCategory}/${item.pron}.mp3`;
+
+        block.innerHTML = `
+            <p><b>RU:</b> ${item.ru}</p>
+            <p><b>ING:</b> ${item.ing}</p>
+            <p><b>PRON:</b> ${item.pron}
+                <button class="audio-btn" onclick="playAudio('${audioFile}')">🔊</button>
+                <button class="rec-btn" onclick="startRecording('${item.pron}')">🎤</button>
+            </p>
+        `;
+
+        if (adminMode) {
+            block.innerHTML += `
+                <button class="edit-btn" onclick="editPhrase(${index})">✏</button>
+                <button class="delete-btn" onclick="deletePhrase(${index})">❌</button>
+            `;
+        }
+
+        content.appendChild(block);
+    });
+}
+
+function playAudio(url) {
+    let audio = new Audio(url);
+    audio.play();
+}
+
+// ===============================
+// ПОИСК
+// ===============================
 
 async function searchPhrases() {
-    const q = document.getElementById("search").value.trim().toLowerCase();
-    const container = document.getElementById("content");
+    const q = document.getElementById("search-bar").value.toLowerCase();
+    if (q.length < 2) return;
 
-    if (q.length < 2) {
-        container.innerHTML = "<p>Введите минимум 2 символа…</p>";
-        return;
+    let results = [];
+
+    for (const cat of categories) {
+        const res = await fetch(`categories/${cat}.json`);
+        if (!res.ok) continue;
+
+        const json = await res.json();
+        const items = json.items || json;
+
+        items.forEach(item => {
+            if (item.ru.toLowerCase().includes(q) || item.ing.toLowerCase().includes(q)) {
+                results.push({ ...item, cat });
+            }
+        });
     }
 
-    container.innerHTML = "<h2>Результаты поиска</h2>";
+    renderSearchResults(results);
+}
 
-    for (let cat of categories) {
-        try {
-            const resp = await fetch(`categories/${cat}.json`);
-            if (!resp.ok) continue;
+function renderSearchResults(list) {
+    const content = document.getElementById("content");
+    document.getElementById("content-title").innerText = "Результаты поиска";
+    content.innerHTML = "";
 
-            const data = await resp.json();
-            if (!data.items) continue;
+    list.forEach(item => {
+        const audioFile = `audio/${item.cat}/${item.pron}.mp3`;
 
-            data.items.forEach(item => {
-                if (
-                    item.ru.toLowerCase().includes(q) ||
-                    item.ing.toLowerCase().includes(q)
-                ) {
-                    const block = document.createElement("div");
-                    block.className = "phrase-block";
+        const block = document.createElement("div");
+        block.className = "phrase";
 
-                    block.innerHTML = `
-                        <h4>${cat.replace("_", " ")}</h4>
-                        <p><b>RU:</b> ${item.ru}</p>
-                        <p><b>ING:</b> ${item.ing}</p>
-                        <p><b>PRON:</b> ${item.pron}</p>
-                    `;
+        block.innerHTML = `
+            <p><b>${categoryNames[item.cat]}</b></p>
+            <p><b>RU:</b> ${item.ru}</p>
+            <p><b>ING:</b> ${item.ing}</p>
+            <p><b>PRON:</b> ${item.pron}
+                <button onclick="playAudio('${audioFile}')">🔊</button>
+            </p>
+        `;
 
-                    container.appendChild(block);
-                }
-            });
-        } catch {}
-    }
+        content.appendChild(block);
+    });
 }
 
 window.onload = loadCategories;
