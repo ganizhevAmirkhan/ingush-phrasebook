@@ -4,31 +4,53 @@
 <meta charset="UTF-8">
 <title>Ингушский разговорник</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <style>
-body { margin:0; font-family:Arial; background:#f5f5f5 }
-header { background:#111; color:#fff; padding:15px }
-#container { display:flex; height:calc(100vh - 60px) }
-#sidebar { width:250px; background:#eee; padding:10px; overflow:auto }
-.category { padding:8px; background:#fff; margin-bottom:5px; cursor:pointer }
-#content-area { flex:1; padding:15px; overflow:auto }
-.phrase { background:#fff; padding:10px; margin-bottom:10px }
-.audio-indicator { margin-left:8px }
-.has-audio { color:green }
+body { margin:0; font-family:Arial,sans-serif; background:#f5f5f5; }
+header {
+  background:#111; color:#fff; padding:10px;
+  display:flex; gap:10px; align-items:center;
+}
+#search-input { flex:1; padding:6px; }
+#container { display:flex; height:calc(100vh - 50px); }
+#sidebar {
+  width:260px; background:#eee; padding:10px;
+  overflow-y:auto;
+}
+.category {
+  background:#fff; padding:8px; margin-bottom:6px;
+  border-radius:5px; cursor:pointer;
+}
+.category:hover { background:#ddd; }
+#content-area { flex:1; padding:15px; overflow-y:auto; }
+.phrase {
+  background:#fff; padding:10px; margin-bottom:10px;
+  border-radius:6px;
+}
+.admin-btn { margin-left:6px; }
 </style>
 </head>
 
 <body>
 
 <header>
-  Ингушский разговорник
-  <input id="gh-token" type="password" placeholder="GitHub Token">
+  <b>Ингушский разговорник</b>
+
+  <input id="search-input"
+         placeholder="Поиск по фразам..."
+         oninput="searchPhrases()">
+
+  <input id="gh-token"
+         type="password"
+         placeholder="GitHub Token"
+         style="width:150px">
+
   <button onclick="adminLogin()">Админ</button>
   <span id="admin-status"></span>
 </header>
 
 <div id="container">
   <aside id="sidebar">
+    <h3>Категории</h3>
     <div id="category-list"></div>
   </aside>
 
@@ -38,12 +60,6 @@ header { background:#111; color:#fff; padding:15px }
   </main>
 </div>
 
-<!-- MP3 encoder -->
-<script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.0/lame.min.js"></script>
-
 <script src="script.js"></script>
-<script src="admin.js"></script>
-<script src="recorder.js"></script>
-
 </body>
 </html>
