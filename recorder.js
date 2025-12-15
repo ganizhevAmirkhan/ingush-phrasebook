@@ -1,61 +1,119 @@
-let recorder;
-let chunks = [];
+let mediaRecorder = null;
+let audioChunks = [];
 
+// ================================
+// НАЧАТЬ ЗАПИСЬ
+// ================================
 async function startRecording(index) {
-  if (!window.adminMode) return alert("Только админ");
-
-  const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-  recorder = new MediaRecorder(stream);
-  chunks = [];
-
-  recorder.ondataavailable = e => chunks.push(e.data);
-  recorder.onstop = () => uploadAudio(index);
-
-  recorder.start();
-  alert("Запись началась (3 сек)");
-
-  setTimeout(() => recorder.stop(), 3000);
-}
-
-async function uploadAudio(index) {
-  const blob = new Blob(chunks, { type: "audio/webm" });
-  const base64 = await blobToBase64(blob);
-
-  const latin = translit(window.currentData.items[index].ing);
-  const path = `audio/${window.currentCategory}/${latin}.webm`;
-
-  const res = await fetch(
-    `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}`,
-    {
-      method: "PUT",
-      headers: {
-        "Authorization": `token ${window.githubToken}`,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        message: "Add audio",
-        content: base64.split(",")[1],
-        branch: GITHUB_BRANCH
-      })
+    if (!window.adminMode) {
+        alert("Только администратор");
+        return;
     }
-  );
 
-  if (res.ok) alert("Аудио сохранено в GitHub");
-  else alert("Ошибка загрузки аудио");
+    if (!window.githubToken) {
+        alert("Введите GitHub Token");
+        return;
+    }
+
+    if (!window.currentCategory) {
+        alert("Категория не выбрана");
+        return;
+    }
+
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+
+        audioChunks = [];
+        mediaRecorder = new MediaRecorder(stream, {
+            mimeType: "audio/webm"
+        });
+
+        mediaRecorder.ondataavailable = e => {
+            if (e.data && e.data.size > 0) {
+                audioChunks.push(e.data);
+            }
+        };
+
+        mediaRecorder.onstop = () => uploadAudio(index);
+
+        mediaRecorder.start();
+        alert("🎙 Запись началась (3 секунды)");
+
+        setTimeout(() => {
+            if (mediaRecorder && mediaRecorder.state !== "inactive") {
+                mediaRecorder.stop();
+            }
+        }, 3000);
+
+    } catch (e) {
+        console.error(e);
+        alert("Ошибка доступа к микрофону");
+    }
 }
 
-// ===== ВСПОМОГАТЕЛЬНЫЕ =====
+// ================================
+// ЗАГРУЗКА АУДИО В GITHUB
+// ================================
+async function uploadAudio(index) {
+    if (!audioChunks.length) {
+        alert("Аудио не записалось");
+        return;
+    }
+
+    const blob = new Blob(audioChunks, { type: "audio/webm" });
+    const base64 = await blobToBase64(blob);
+
+    // 🔥 НАДЁЖНОЕ ИМЯ ФАЙЛА
+    const filename = `${index}.webm`;
+    const path = `audio/${window.currentCategory}/${filename}`;
+
+    const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}`;
+
+    let sha = null;
+
+    // 1️⃣ Проверяем, есть ли файл
+    const check = await fetch(url, {
+        headers: {
+            "Authorization": `token ${window.githubToken}`
+        }
+    });
+
+    if (check.ok) {
+        const json = await check.json();
+        sha = json.sha;
+    }
+
+    // 2️⃣ Загружаем / перезаписываем
+    const res = await fetch(url, {
+        method: "PUT",
+        headers: {
+            "Authorization": `token ${window.githubToken}`,
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            message: `Add audio: ${window.currentCategory}/${filename}`,
+            content: base64.split(",")[1],
+            sha: sha || undefined,
+            branch: GITHUB_BRANCH
+        })
+    });
+
+    if (res.ok) {
+        alert("✅ Аудио сохранено в GitHub");
+    } else {
+        const err = await res.json();
+        console.error(err);
+        alert("❌ Ошибка загрузки аудио: " + (err.message || "unknown"));
+    }
+}
+
+// ================================
+// BLOB → BASE64
+// ================================
 function blobToBase64(blob) {
-  return new Promise(r => {
-    const fr = new FileReader();
-    fr.onload = () => r(fr.result);
-    fr.readAsDataURL(blob);
-  });
-}
-
-function translit(text) {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "_")
-    .replace(/^_|_$/g, "");
+    return new Promise(resolve => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result);
+        reader.readAsDataURL(blob);
+    });
 }
