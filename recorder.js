@@ -1,138 +1,108 @@
-let recorder;
-let chunks = [];
+// ==================================================
+// RECORDER.JS — ФИНАЛЬНЫЙ
+// ==================================================
 
-function startRecording(index) {
-    const seconds = Number(prompt("Длительность записи (сек):", 3));
-    if (!seconds) return;
+let mediaRecorder = null;
+let audioChunks = [];
+let recordTimer = null;
+let recordDuration = 3000; // по умолчанию 3 сек
 
-    navigator.mediaDevices.getUserMedia({audio:true}).then(stream=>{
-        recorder = new MediaRecorder(stream,{
-            mimeType:"audio/webm;codecs=opus",
-            audioBitsPerSecond:48000
-        });
-
-        chunks = [];
-        recorder.ondataavailable = e => chlet recorder;
-let chunks = [];
-
-function startRecording(index) {
-  if (!adminMode || !githubToken) {
-    alert("Нужен админ-доступ");
+// ==================================================
+// ЗАПУСК ЗАПИСИ
+// ==================================================
+async function startRecording(category, index) {
+  if (!adminMode) {
+    alert("Только администратор может записывать аудио");
     return;
   }
 
-  const sec = Number(prompt("Длительность записи (сек):",3));
-  if (!sec) return;
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
 
-  navigator.mediaDevices.getUserMedia({audio:true}).then(stream=>{
-    recorder = new MediaRecorder(stream,{
-      mimeType:"audio/webm;codecs=opus",
-      audioBitsPerSecond:48000
+    mediaRecorder = new MediaRecorder(stream, {
+      mimeType: "audio/webm;codecs=opus",
+      audioBitsPerSecond: 48000 // 📦 оптимизация размера
     });
 
-    chunks = [];
-    recorder.ondataavailable = e => e.data.size && chunks.push(e.data);
+    audioChunks = [];
 
-    recorder.onstop = () => {
-      const blob = new Blob(chunks,{type:"audio/webm"});
-
-      // local fallback
-      const r = new FileReader();
-      r.onload = () => {
-        localStorage.setItem(
-          `audio_${currentCategory}_${index}`,
-          r.result
-        );
-        renderPhrases(currentData);
-      };
-      r.readAsDataURL(blob);
-
-      uploadAudio(blob,index);
+    mediaRecorder.ondataavailable = e => {
+      if (e.data.size > 0) audioChunks.push(e.data);
     };
 
-    recorder.start();
-    setTimeout(()=>recorder.stop(),sec*1000);
-  });
+    mediaRecorder.onstop = () => {
+      saveRecordedAudio(category, index);
+      stream.getTracks().forEach(t => t.stop());
+    };
+
+    mediaRecorder.start();
+
+    // ⏹ автостоп
+    recordTimer = setTimeout(() => stopRecording(), recordDuration);
+
+    alert(`🎙 Запись началась (${recordDuration / 1000} сек)`);
+
+  } catch (e) {
+    alert("❌ Нет доступа к микрофону");
+    console.error(e);
+  }
 }
 
-// =========================
-async function uploadAudio(blob,index) {
-  const path = `audio/${currentCategory}/${index}.webm`;
-  const url = `https://api.github.com/repos/ganizhevAmirkhan/ingush-phrasebook/contents/${path}`;
+// ==================================================
+// ОСТАНОВКА
+// ==================================================
+function stopRecording() {
+  if (mediaRecorder && mediaRecorder.state === "recording") {
+    clearTimeout(recordTimer);
+    mediaRecorder.stop();
+  }
+}
 
-  let sha = null;
-  const check = await fetch(url,{
-    headers:{Authorization:`token ${githubToken}`}
-  });
-  if (check.ok) sha = (await check.json()).sha;
+// ==================================================
+// СОХРАНЕНИЕ (локально + fallback)
+// ==================================================
+function saveRecordedAudio(category, index) {
+  const blob = new Blob(audioChunks, { type: "audio/webm" });
+  const url = URL.createObjectURL(blob);
 
-  const r = new FileReader();
-  r.onload = async () => {
-    await fetch(url,{
-      method:"PUT",
-      headers:{
-        Authorization:`token ${githubToken}`,
-        "Content-Type":"application/json"
-      },
-      body:JSON.stringify({
-        message:`Audio ${currentCategory}/${index}`,
-        content:r.result.split(",")[1],
-        sha
-      })
-    });
+  // 🧠 ЛОКАЛЬНЫЙ FALLBACK
+  localStorage.setItem(`audio_${category}_${index}`, url);
+
+  // 🟢 обновляем индикатор
+  const status = document.getElementById(`audio-status-${index}`);
+  if (status) status.textContent = "🟢";
+
+  // 🔊 мгновенно можно слушать
+  window.lastRecordedAudio = url;
+
+  alert("✔ Аудио записано (локально)");
+}
+
+// ==================================================
+// ВОСПРОИЗВЕДЕНИЕ С FALLBACK
+// ==================================================
+function playAudio(src) {
+  const audio = new Audio();
+
+  audio.onerror = () => {
+    // 🧠 если GitHub Pages не обновился
+    const key = `audio_${currentCategory}_${src.split("/").pop().replace(".webm","")}`;
+    const local = localStorage.getItem(key);
+    if (local) {
+      audio.src = local;
+      audio.play();
+    } else {
+      alert("Аудио не найдено");
+    }
   };
-  r.readAsDataURL(blob);
-}
-unks.push(e.data);
 
-        recorder.onstop = () => {
-            const blob = new Blob(chunks,{type:"audio/webm"});
-            const reader = new FileReader();
-            reader.onload = () => {
-                const base64 = reader.result;
-                localStorage.setItem(
-                    `audio_${currentCategory}_${index}`,
-                    base64
-                );
-                uploadAudio(blob,index);
-                renderPhrases(currentData);
-            };
-            reader.readAsDataURL(blob);
-        };
-
-        recorder.start();
-        setTimeout(()=>recorder.stop(), seconds*1000);
-    });
+  audio.src = src;
+  audio.play();
 }
 
-// ======================
-// UPLOAD TO GITHUB
-// ======================
-async function uploadAudio(blob,index) {
-    const path = `audio/${currentCategory}/${index}.webm`;
-    const url = `https://api.github.com/repos/ganizhevAmirkhan/ingush-phrasebook/contents/${path}`;
-
-    let sha = null;
-    const check = await fetch(url,{
-        headers:{Authorization:`token ${githubToken}`}
-    });
-    if (check.ok) sha = (await check.json()).sha;
-
-    const reader = new FileReader();
-    reader.onload = async () => {
-        const base64 = reader.result.split(",")[1];
-        await fetch(url,{
-            method:"PUT",
-            headers:{
-                Authorization:`token ${githubToken}`,
-                "Content-Type":"application/json"
-            },
-            body:JSON.stringify({
-                message:`Audio ${currentCategory}/${index}`,
-                content:base64,
-                sha
-            })
-        });
-    };
-    reader.readAsDataURL(blob);
+// ==================================================
+// ВЫБОР ДЛИТЕЛЬНОСТИ (опционально)
+// ==================================================
+function setRecordDuration(ms) {
+  recordDuration = ms;
 }
