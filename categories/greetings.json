@@ -2,9 +2,9 @@
   "category": "greetings",
   "items": [
     {
-      "ru": null,
-      "ing": null,
-      "pron": null
+      "ru": "Приветствую",
+      "ing": "Салам Алейкум",
+      "pron": "Sakam aleikum"
     },
     {
       "ru": "Здравствуйте",
