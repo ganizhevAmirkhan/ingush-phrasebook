@@ -1,219 +1,196 @@
-//
 // ===============================
-//     АДМИН МОДУЛЬ РАЗГОВОРНИКА
+// ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ
 // ===============================
-//
-
-let GITHUB_TOKEN = "";
-let GITHUB_OWNER = "ganizhevAmirkhan";
-let GITHUB_REPO = "ingush-phrasebook";
-let GITHUB_BRANCH = "main";
-
 let adminMode = false;
+let currentCategory = null;
+let currentData = null;
 
 // ===============================
-//   ВХОД В АДМИН-МОД
+// ВХОД АДМИНА
 // ===============================
-
 function adminLogin() {
-    const pass = prompt("Введите пароль администратора:");
+    let pass = prompt("Введите пароль администратора:");
 
     if (pass === "ingush-secret") {
         adminMode = true;
         document.getElementById("admin-status").innerText = "✓ Админ";
-        alert("Админ режим активирован!");
-
-        GITHUB_TOKEN = prompt("Введите GitHub token (для загрузки MP3):\nЕсли нет — оставьте пустым.");
-
         renderPhrases(currentData);
     } else {
-        alert("Неверный пароль");
+        alert("Неверный пароль.");
     }
 }
 
 // ===============================
-//   КНОПКА: ДОБАВИТЬ ФРАЗУ
+// ВСТАВИТЬ КНОПКИ ДЛЯ РЕДАКТИРОВАНИЯ
 // ===============================
+function createAdminButtons(item, index) {
+    if (!adminMode) return "";
 
-function addPhrase() {
-    if (!adminMode) return alert("Требуется вход администратора");
-
-    const ru = prompt("Новая фраза (RU):");
-    const ing = prompt("Перевод (ING):");
-    const pron = prompt("Произношение (латиница):");
-
-    if (!ru || !ing || !pron) return alert("Заполните все поля");
-
-    currentData.push({ ru, ing, pron });
-    renderPhrases(currentData);
-    saveCategory();
+    return `
+        <button class="edit-btn" onclick="editPhrase(${index})">✏</button>
+        <button class="delete-btn" onclick="deletePhrase(${index})">🗑</button>
+        <button class="rec-btn" onclick="startRecording('${index}')">🎤</button>
+    `;
 }
 
 // ===============================
-//   РЕДАКТИРОВАНИЕ ФРАЗЫ
+// РЕДАКТИРОВАНИЕ ФРАЗЫ
 // ===============================
-
 function editPhrase(index) {
-    if (!adminMode) return;
-
-    const item = currentData[index];
-
-    const ru = prompt("RU:", item.ru);
-    const ing = prompt("ING:", item.ing);
-    const pron = prompt("PRON:", item.pron);
+    let ru = prompt("RU:", currentData.items[index].ru);
+    let ing = prompt("ING:", currentData.items[index].ing);
+    let pron = prompt("PRON:", currentData.items[index].pron);
 
     if (!ru || !ing || !pron) return;
 
-    currentData[index] = { ru, ing, pron };
+    currentData.items[index] = { ru, ing, pron };
     renderPhrases(currentData);
-    saveCategory();
 }
 
 // ===============================
-//   УДАЛЕНИЕ ФРАЗЫ
+// УДАЛЕНИЕ ФРАЗЫ
 // ===============================
-
 function deletePhrase(index) {
-    if (!adminMode) return;
-
     if (!confirm("Удалить фразу?")) return;
 
-    currentData.splice(index, 1);
+    currentData.items.splice(index, 1);
     renderPhrases(currentData);
-    saveCategory();
 }
 
 // ===============================
-//   СОХРАНЕНИЕ КАТЕГОРИИ
+// ДОБАВЛЕНИЕ НОВОЙ ФРАЗЫ
 // ===============================
+function addPhrase() {
+    if (!adminMode) return alert("Только для администратора!");
 
-async function saveCategory() {
+    let ru = prompt("Введите RU фразу:");
+    let ing = prompt("Введите ING фразу:");
+    let pron = prompt("Введите PRON:");
+
+    if (!ru || !Ing || !pron) return;
+
+    currentData.items.push({ ru, ing, pron });
+    renderPhrases(currentData);
+}
+
+// ===============================
+// СОХРАНЕНИЕ КАТЕГОРИИ В JSON
+// ===============================
+function saveCategory() {
     if (!adminMode) return;
 
-    const filePath = `categories/${currentCategory}.json`;
-
-    const body = {
-        message: `update ${currentCategory}.json`,
-        content: btoa(unescape(encodeURIComponent(JSON.stringify({ items: currentData }, null, 2)))),
-        branch: GITHUB_BRANCH
-    };
-
-    // Получение SHA файла
-    const shaReq = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${filePath}`);
-    const shaData = await shaReq.json();
-
-    if (shaData.sha) body.sha = shaData.sha;
-
-    const upload = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${filePath}`, {
-        method: "PUT",
-        headers: {
-            "Content-Type": "application/json",
-            Authorization: `token ${GITHUB_TOKEN}`
-        },
-        body: JSON.stringify(body)
+    const blob = new Blob([JSON.stringify(currentData, null, 4)], {
+        type: "application/json",
     });
 
-    if (upload.ok) {
-        alert("Категория сохранена!");
-    } else {
-        alert("Ошибка сохранения (проверь токен!)");
-    }
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `${currentCategory}.json`;
+    a.click();
 }
 
 // ===============================
-//   СОХРАНИТЬ РАЗГОВОРНИК ZIP
+// ОЗВУЧКА (ВОСПРОИЗВЕДЕНИЕ MP3)
 // ===============================
+function playAudio(category, index) {
+    const audio = new Audio(`audio/${category}/${index}.mp3`);
+    audio.play().catch(() => alert("Аудио отсутствует"));
+}
 
+// ===============================
+// ЗАПИСЬ АУДИО ДЛЯ ФРАЗЫ
+// ===============================
+let mediaRecorder;
+let recordedChunks = [];
+
+async function startRecording(index) {
+    if (!adminMode) return alert("Только админ!");
+
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+
+    mediaRecorder = new MediaRecorder(stream);
+
+    recordedChunks = [];
+    mediaRecorder.ondataavailable = e => recordedChunks.push(e.data);
+
+    mediaRecorder.onstop = () => saveAudio(index);
+
+    mediaRecorder.start();
+    alert("Запись началась. Нажмите OK чтобы завершить запись.");
+
+    setTimeout(() => {
+        mediaRecorder.stop();
+    }, 3000); // 3 сек запись
+}
+
+function saveAudio(index) {
+    const blob = new Blob(recordedChunks, { type: "audio/mp3" });
+
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `${index}.mp3`;
+    a.click();
+
+    alert("Аудиофайл сохранён! Теперь загрузите его в GitHub: audio/категория/");
+}
+
+// ===============================
+// ЭКСПОРТ ВСЕГО РАЗГОВОРНИКА В ZIP
+// ===============================
 async function exportZip() {
     const zip = new JSZip();
 
-    for (const cat of categories) {
+    for (let cat of categories) {
         const res = await fetch(`categories/${cat}.json`);
-        if (!res.ok) continue;
-
         const json = await res.json();
-        zip.folder("categories").file(`${cat}.json`, JSON.stringify(json, null, 2));
+
+        zip.file(`${cat}.json`, JSON.stringify(json, null, 4));
     }
 
     const blob = await zip.generateAsync({ type: "blob" });
-    saveAs(blob, "ingush_phrasebook.zip");
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "phrasebook.zip";
+    a.click();
 }
 
 // ===============================
-//   ИМПОРТ ZIP РАЗГОВОРНИКА
+// ГЛАВНАЯ ФУНКЦИЯ ОТОБРАЖЕНИЯ
 // ===============================
+function renderPhrases(data) {
+    const content = document.getElementById("content");
+    content.innerHTML = "";
 
-async function importZip(file) {
-    const zip = await JSZip.loadAsync(file);
+    currentData = data;
 
-    for (const filename of Object.keys(zip.files)) {
-        if (!filename.endsWith(".json")) continue;
+    data.items.forEach((item, i) => {
+        const div = document.createElement("div");
+        div.className = "phrase";
 
-        const jsonText = await zip.files[filename].async("string");
+        div.innerHTML = `
+            <p><b>RU:</b> ${item.ru}</p>
+            <p><b>ING:</b> ${item.ing}</p>
+            <p><b>PRON:</b> ${item.pron}</p>
 
-        const filePath = filename;
-        const body = {
-            message: `import ${filePath}`,
-            content: btoa(unescape(encodeURIComponent(jsonText))),
-            branch: GITHUB_BRANCH
-        };
+            <button class="audio-btn" onclick="playAudio('${currentCategory}', ${i})">🔊</button>
 
-        // SHA
-        const shaReq = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${filePath}`);
-        const shaData = await shaReq.json();
-        if (shaData.sha) body.sha = shaData.sha;
+            ${createAdminButtons(item, i)}
+        `;
 
-        await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${filePath}`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json",
-                Authorization: `token ${GITHUB_TOKEN}`
-            },
-            body: JSON.stringify(body)
-        });
-    }
-
-    alert("Разговорник импортирован!");
-}
-
-// ===============================
-//   ЗАГРУЗКА MP3 НА GITHUB
-// ===============================
-
-async function uploadMP3(filename, blob, category) {
-    if (!GITHUB_TOKEN) {
-        alert("Токен GitHub не указан");
-        return;
-    }
-
-    const path = `audio/${category}/${filename}`;
-
-    const arrayBuffer = await blob.arrayBuffer();
-    const base64 = btoa(String.fromCharCode(...new Uint8Array(arrayBuffer)));
-
-    const body = {
-        message: `upload audio ${filename}`,
-        content: base64,
-        branch: GITHUB_BRANCH
-    };
-
-    // SHA — если файл существует
-    const shaReq = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}`);
-    const shaData = await shaReq.json();
-    if (shaData.sha) body.sha = shaData.sha;
-
-    const upload = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}`, {
-        method: "PUT",
-        headers: {
-            "Content-Type": "application/json",
-            Authorization: `token ${GITHUB_TOKEN}`
-        },
-        body: JSON.stringify(body)
+        content.appendChild(div);
     });
 
-    if (upload.ok) {
-        alert("Аудио загружено!");
-    } else {
-        alert("Ошибка загрузки аудио!");
+    if (adminMode) {
+        const btn = document.createElement("button");
+        btn.innerText = "➕ Добавить фразу";
+        btn.onclick = addPhrase;
+        btn.style = "margin-top:20px; padding:10px;";
+        content.appendChild(btn);
+
+        const save = document.createElement("button");
+        save.innerText = "💾 Сохранить категорию";
+        save.onclick = saveCategory;
+        save.style = "margin-left:15px; padding:10px;";
+        content.appendChild(save);
     }
 }
