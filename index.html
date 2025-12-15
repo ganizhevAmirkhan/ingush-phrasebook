@@ -1,62 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Ингушский разговорник</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Ингушский разговорник</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Основные стили -->
-    <link rel="stylesheet" href="style.css">
+<style>
+body { margin:0; font-family:Arial; background:#f5f5f5 }
+header { background:#111; color:#fff; padding:15px }
+#container { display:flex; height:calc(100vh - 60px) }
+#sidebar { width:250px; background:#eee; padding:10px; overflow:auto }
+.category { padding:8px; background:#fff; margin-bottom:5px; cursor:pointer }
+#content-area { flex:1; padding:15px; overflow:auto }
+.phrase { background:#fff; padding:10px; margin-bottom:10px }
+.audio-indicator { margin-left:8px }
+.has-audio { color:green }
+</style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
-<header class="topbar">
-    <div class="title">Ингушский разговорник</div>
-
-    <!-- Поиск -->
-    <input
-        id="search-bar"
-        class="search"
-        type="text"
-        placeholder="Поиск по фразам..."
-        oninput="searchPhrases()"
-    >
-
-    <!-- Админ-панель -->
-    <div class="admin-panel">
-        <input
-            id="gh-token"
-            type="password"
-            placeholder="GitHub Token"
-            title="Personal Access Token (Contents: Read & Write)"
-        >
-
-        <button onclick="adminLogin()">Админ</button>
-        <span id="admin-status"></span>
-    </div>
+<header>
+  Ингушский разговорник
+  <input id="gh-token" type="password" placeholder="GitHub Token">
+  <button onclick="adminLogin()">Админ</button>
+  <span id="admin-status"></span>
 </header>
 
-<!-- ================= MAIN LAYOUT ================= -->
-<div class="layout">
+<div id="container">
+  <aside id="sidebar">
+    <div id="category-list"></div>
+  </aside>
 
-    <!-- ===== SIDEBAR ===== -->
-    <aside class="sidebar">
-        <h2>Категории</h2>
-        <div id="category-list"></div>
-    </aside>
-
-    <!-- ===== CONTENT ===== -->
-    <main class="content">
-        <h2 id="content-title">Выберите категорию</h2>
-        <div id="content"></div>
-    </main>
-
+  <main id="content-area">
+    <h2 id="content-title">Выберите категорию</h2>
+    <div id="content"></div>
+  </main>
 </div>
 
-<!-- ================= SCRIPTS ================= -->
-<!-- ВАЖНО: порядок подключения -->
+<!-- MP3 encoder -->
+<script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.0/lame.min.js"></script>
+
 <script src="script.js"></script>
 <script src="admin.js"></script>
 <script src="recorder.js"></script>
