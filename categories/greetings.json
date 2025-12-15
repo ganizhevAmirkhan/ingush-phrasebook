@@ -3,8 +3,8 @@
   "items": [
     {
       "ru": "Привет",
-      "ing": "Салам",
-      "pron": "salam"
+      "ing": "Салам алейкум",
+      "pron": "salam aleikum"
     },
     {
       "ru": "Здравствуйте",
@@ -13,8 +13,8 @@
     },
     {
       "ru": "Доброе утро",
-      "ing": "1",
-      "pron": "kheti marshalla"
+      "ing": "1ийре дик хайл",
+      "pron": "Iredik heila"
     },
     {
       "ru": "Добрый день",
