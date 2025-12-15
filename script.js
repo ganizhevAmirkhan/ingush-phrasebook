@@ -1,22 +1,23 @@
-// ======================================
-// ПЕРЕМЕННЫЕ
-// ======================================
 const categories = [
-    "greetings", "basic_phrases", "personal_info", "family", "home",
-    "food", "drinks", "travel", "transport", "hunting",
-    "danger", "thermal", "orientation", "weather", "emotions",
-    "health", "help", "commands", "tools", "animals",
-    "time", "numbers", "colors", "money", "shop",
-    "city", "village", "guests", "communication", "work",
-    "misc"
+    "greetings","basic_phrases","personal_info","family","home",
+    "food","drinks","travel","transport","hunting",
+    "danger","thermal","orientation","weather","emotions",
+    "health","help","commands","tools","animals",
+    "time","numbers","colors","money","shop",
+    "city","village","guests","communication","work","misc"
 ];
 
 window.currentCategory = null;
 window.currentData = null;
 
-// ======================================
-// ЗАГРУЗКА СПИСКА КАТЕГОРИЙ
-// ======================================
+// ======================
+// INIT
+// ======================
+window.onload = loadCategories;
+
+// ======================
+// LOAD CATEGORIES
+// ======================
 function loadCategories() {
     const list = document.getElementById("category-list");
     list.innerHTML = "";
@@ -30,180 +31,106 @@ function loadCategories() {
     });
 }
 
-// ======================================
-// НАЗВАНИЯ КАТЕГОРИЙ (RU)
-// ======================================
+// ======================
 function convertCategoryName(cat) {
     const map = {
-        greetings: "Приветствия",
-        basic_phrases: "Основные фразы",
-        personal_info: "Личные данные",
-        family: "Семья",
-        home: "Дом и быт",
-        food: "Еда",
-        drinks: "Питьё",
-        travel: "Путешествия",
-        transport: "Транспорт",
-        hunting: "Охота",
-        danger: "Опасность",
-        thermal: "Тепловизор / наблюдение",
-        orientation: "Ориентация на местности",
-        weather: "Погода",
-        emotions: "Эмоции",
-        health: "Здоровье",
-        help: "Помощь",
-        commands: "Команды",
-        tools: "Инструменты",
-        animals: "Животные",
-        time: "Время",
-        numbers: "Числа",
-        colors: "Цвета",
-        money: "Деньги",
-        shop: "Магазин",
-        city: "Город",
-        village: "Село",
-        guests: "Гости",
-        communication: "Общение",
-        work: "Работа",
-        misc: "Разное"
+        greetings:"Приветствия",
+        basic_phrases:"Основные фразы",
+        personal_info:"Личные данные",
+        family:"Семья",
+        home:"Дом и быт",
+        food:"Еда",
+        drinks:"Питьё",
+        travel:"Путешествия",
+        transport:"Транспорт",
+        hunting:"Охота",
+        danger:"Опасность",
+        thermal:"Тепловизор / наблюдение",
+        orientation:"Ориентация на местности",
+        weather:"Погода",
+        emotions:"Эмоции",
+        health:"Здоровье",
+        help:"Помощь",
+        commands:"Команды",
+        tools:"Инструменты",
+        animals:"Животные",
+        time:"Время",
+        numbers:"Числа",
+        colors:"Цвета",
+        money:"Деньги",
+        shop:"Магазин",
+        city:"Город",
+        village:"Село",
+        guests:"Гости",
+        communication:"Общение",
+        work:"Работа",
+        misc:"Разное"
     };
     return map[cat] || cat;
 }
 
-// ======================================
-// ЗАГРУЗКА КАТЕГОРИИ
-// ======================================
-async function loadCategory(category) {
-    window.currentCategory = category;
-
+// ======================
+// LOAD CATEGORY
+// ======================
+async function loadCategory(cat) {
+    currentCategory = cat;
     document.getElementById("content-title").textContent =
-        convertCategoryName(category);
+        convertCategoryName(cat);
 
     const content = document.getElementById("content");
-    content.innerHTML = "<p>Загрузка...</p>";
+    content.innerHTML = "Загрузка...";
 
-    try {
-        const res = await fetch(`categories/${category}.json`);
-        if (!res.ok) throw new Error("Файл не найден");
+    const res = await fetch(`categories/${cat}.json`);
+    const data = await res.json();
 
-        const data = await res.json();
-        if (!Array.isArray(data.items)) {
-            throw new Error("Неверный формат JSON");
-        }
-
-        window.currentData = data;
-        renderPhrases(data);
-
-    } catch (e) {
-        content.innerHTML =
-            `<p style="color:red">Ошибка загрузки: ${e.message}</p>`;
-    }
+    currentData = data;
+    renderPhrases(data);
 }
 
-// ======================================
-// ОТОБРАЖЕНИЕ ФРАЗ
-// ======================================
+// ======================
+// RENDER
+// ======================
 function renderPhrases(data) {
     const content = document.getElementById("content");
     content.innerHTML = "";
 
-    data.items.forEach((item, index) => {
+    data.items.forEach((item, i) => {
+        const hasLocal = localStorage.getItem(`audio_${currentCategory}_${i}`);
+        const hasIcon = hasLocal ? "🟢" : "⚪";
+
         const div = document.createElement("div");
         div.className = "phrase";
-
         div.innerHTML = `
             <p><b>RU:</b> ${item.ru}</p>
             <p><b>ING:</b> ${item.ing}</p>
             <p><b>PRON:</b> ${item.pron}</p>
 
-            <button onclick="playAudio('${window.currentCategory}', ${index})">🔊</button>
+            <button onclick="playAudio('${currentCategory}',${i})">🔊</button>
+            <span>${hasIcon}</span>
 
             ${window.adminMode ? `
-                <button onclick="editPhrase(${index})">✏</button>
-                <button onclick="deletePhrase(${index})">🗑</button>
-                <button onclick="startRecording(${index})">🎤</button>
+                <button onclick="startRecording(${i})">🎤</button>
+                <button onclick="editPhrase(${i})">✏</button>
+                <button onclick="deletePhrase(${i})">🗑</button>
             ` : ""}
         `;
-
         content.appendChild(div);
     });
-
-    // ==============================
-    // КНОПКИ АДМИНА
-    // ==============================
-    if (window.adminMode) {
-        const panel = document.createElement("div");
-        panel.style.marginTop = "20px";
-
-        const addBtn = document.createElement("button");
-        addBtn.textContent = "➕ Добавить фразу";
-        addBtn.onclick = addPhrase;
-
-        const saveBtn = document.createElement("button");
-        saveBtn.textContent = "💾 Сохранить категорию";
-        saveBtn.onclick = saveCategory;
-        saveBtn.style.marginLeft = "10px";
-
-        panel.appendChild(addBtn);
-        panel.appendChild(saveBtn);
-        content.appendChild(panel);
-    }
 }
 
-// ======================================
-// ПОИСК
-// ======================================
-async function searchPhrases() {
-    const q = document.getElementById("search-bar").value.toLowerCase();
-    if (q.length < 2) return;
+// ======================
+// PLAY AUDIO (fallback)
+// ======================
+function playAudio(cat, index) {
+    const local = localStorage.getItem(`audio_${cat}_${index}`);
 
-    const content = document.getElementById("content");
-    document.getElementById("content-title").textContent =
-        "Результаты поиска";
-
-    content.innerHTML = "";
-
-    for (const cat of categories) {
-        try {
-            const res = await fetch(`categories/${cat}.json`);
-            if (!res.ok) continue;
-
-            const data = await res.json();
-
-            data.items.forEach((item, index) => {
-                if (
-                    item.ru.toLowerCase().includes(q) ||
-                    item.ing.toLowerCase().includes(q)
-                ) {
-                    const div = document.createElement("div");
-                    div.className = "phrase";
-
-                    div.innerHTML = `
-                        <h4>${convertCategoryName(cat)}</h4>
-                        <p><b>RU:</b> ${item.ru}</p>
-                        <p><b>ING:</b> ${item.ing}</p>
-                        <p><b>PRON:</b> ${item.pron}</p>
-                        <button onclick="playAudio('${cat}', ${index})">🔊</button>
-                    `;
-                    content.appendChild(div);
-                }
-            });
-
-        } catch (e) {}
+    if (local) {
+        new Audio(local).play();
+        return;
     }
-}
 
-// ======================================
-// 🔊 ПРОИГРЫВАНИЕ АУДИО (WEBM)
-// ======================================
-function playAudio(category, index) {
-    const audio = new Audio(`audio/${category}/${index}.webm`);
-    audio.play().catch(() => {
-        alert("Аудиофайл отсутствует");
+    const url = `audio/${cat}/${index}.webm?v=${Date.now()}`;
+    new Audio(url).play().catch(() => {
+        alert("Аудио ещё не доступно");
     });
 }
-
-// ======================================
-// СТАРТ
-// ======================================
-window.onload = loadCategories;
