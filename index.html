@@ -14,10 +14,18 @@
   <input id="search-bar" class="search" type="text"
          placeholder="Поиск по фразам..." oninput="searchPhrases()"/>
 
-  <div class="admin-panel">
-    <button class="btn" onclick="adminLogin()">Админ</button>
-    <span id="admin-status" class="admin-status"></span>
-  </div>
+ <div class="admin-panel">
+  <input
+    id="gh-token"
+    type="password"
+    placeholder="GitHub Token"
+    style="padding:6px; width:180px;"
+  >
+
+  <button onclick="adminLogin()">Админ</button>
+
+  <span id="admin-status"></span>
+</div>
 </header>
 
 <div class="layout">
