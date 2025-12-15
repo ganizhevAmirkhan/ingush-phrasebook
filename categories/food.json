@@ -1,52 +1,165 @@
 {
   "category": "food",
   "items": [
-    { "ru": "Еда", "ing": "Хий", "pron": "khiy" },
-    { "ru": "Питьё", "ing": "Мал", "pron": "mal" },
-
-    { "ru": "Хлеб", "ing": "Хьал", "pron": "khal" },
-    { "ru": "Мясо", "ing": "Берхь", "pron": "berkh" },
-    { "ru": "Суп", "ing": "Шорпа", "pron": "shorpa" },
-    { "ru": "Соль", "ing": "Доль", "pron": "dol" },
-
-    { "ru": "Вода", "ing": "Мал", "pron": "mal" },
-    { "ru": "Горячая вода", "ing": "Кхетта мал", "pron": "khetta mal" },
-    { "ru": "Холодная вода", "ing": "Серда мал", "pron": "serda mal" },
-
-    { "ru": "Хочу есть", "ing": "Со хий йа", "pron": "so khiy ya" },
-    { "ru": "Хочу пить", "ing": "Со мал безам ба", "pron": "so mal bezam ba" },
-
-    { "ru": "Дай воду", "ing": "Мал дика", "pron": "mal dika" },
-    { "ru": "Дай хлеб", "ing": "Хьал дика", "pron": "khal dika" },
-
-    { "ru": "Где еда?", "ing": "Хий хьа?", "pron": "khiy kha" },
-    { "ru": "Где вода?", "ing": "Мал хьа?", "pron": "mal kha" },
-
-    { "ru": "Вкусно", "ing": "Шор", "pron": "shor" },
-    { "ru": "Невкусно", "ing": "Му шор", "pron": "mu shor" },
-
-    { "ru": "Очень вкусно", "ing": "Шор йо", "pron": "shor yo" },
-    { "ru": "Хорошая еда", "ing": "Дика хий", "pron": "dika khiy" },
-
-    { "ru": "Плохая еда", "ing": "Му дика хий", "pron": "mu dika khiy" },
-
-    { "ru": "Я наелся", "ing": "Со хий йола", "pron": "so khiy yola" },
-    { "ru": "Я хочу ещё", "ing": "Со хьа а безам ба", "pron": "so kha a bezam ba" },
-
-    { "ru": "Не хочу это", "ing": "Со ха безам бац", "pron": "so kha bezam bats" },
-
-    { "ru": "Принеси еду", "ing": "Хий дика", "pron": "khiy dika" },
-    { "ru": "Принеси воду", "ing": "Мал дика", "pron": "mal dika" },
-
-    { "ru": "Это вкусно?", "ing": "Ха шор хьо?", "pron": "kha shor kho" },
-
-    { "ru": "Я приготовлю", "ing": "Со хий дулаа", "pron": "so khiy dulaa" },
-    { "ru": "Приготовь еду", "ing": "Хий дуйла", "pron": "khiy duyla" },
-
-    { "ru": "Я ем", "ing": "Со хий йуаж", "pron": "so khiy yuazh" },
-    { "ru": "Ты ешь?", "ing": "Хьа хий йуаж?", "pron": "kha khiy yuazh" },
-
-    { "ru": "Я пью", "ing": "Со мал ю", "pron": "so mal yu" },
-    { "ru": "Ты пьёшь?", "ing": "Хьа мал ю?", "pron": "kha mal yu" }
+    {
+      "ru": "Еда",
+      "ing": "Хий",
+      "pron": "khiy"
+    },
+    {
+      "ru": "Питьё",
+      "ing": "1",
+      "pron": "mal"
+    },
+    {
+      "ru": "Хлеб",
+      "ing": "Мякх",
+      "pron": "Mykh"
+    },
+    {
+      "ru": "Мясо",
+      "ing": "Берхь",
+      "pron": "berkh"
+    },
+    {
+      "ru": "Суп",
+      "ing": "Шорпа",
+      "pron": "shorpa"
+    },
+    {
+      "ru": "Соль",
+      "ing": "Доль",
+      "pron": "dol"
+    },
+    {
+      "ru": "Вода",
+      "ing": "Мал",
+      "pron": "mal"
+    },
+    {
+      "ru": "Горячая вода",
+      "ing": "Кхетта мал",
+      "pron": "khetta mal"
+    },
+    {
+      "ru": "Холодная вода",
+      "ing": "Серда мал",
+      "pron": "serda mal"
+    },
+    {
+      "ru": "Хочу есть",
+      "ing": "Со хий йа",
+      "pron": "so khiy ya"
+    },
+    {
+      "ru": "Хочу пить",
+      "ing": "Со мал безам ба",
+      "pron": "so mal bezam ba"
+    },
+    {
+      "ru": "Дай воду",
+      "ing": "Мал дика",
+      "pron": "mal dika"
+    },
+    {
+      "ru": "Дай хлеб",
+      "ing": "Хьал дика",
+      "pron": "khal dika"
+    },
+    {
+      "ru": "Где еда?",
+      "ing": "Хий хьа?",
+      "pron": "khiy kha"
+    },
+    {
+      "ru": "Где вода?",
+      "ing": "Мал хьа?",
+      "pron": "mal kha"
+    },
+    {
+      "ru": "Вкусно",
+      "ing": "Шор",
+      "pron": "shor"
+    },
+    {
+      "ru": "Невкусно",
+      "ing": "Му шор",
+      "pron": "mu shor"
+    },
+    {
+      "ru": "Очень вкусно",
+      "ing": "Шор йо",
+      "pron": "shor yo"
+    },
+    {
+      "ru": "Хорошая еда",
+      "ing": "Дика хий",
+      "pron": "dika khiy"
+    },
+    {
+      "ru": "Плохая еда",
+      "ing": "Му дика хий",
+      "pron": "mu dika khiy"
+    },
+    {
+      "ru": "Я наелся",
+      "ing": "Со хий йола",
+      "pron": "so khiy yola"
+    },
+    {
+      "ru": "Я хочу ещё",
+      "ing": "Со хьа а безам ба",
+      "pron": "so kha a bezam ba"
+    },
+    {
+      "ru": "Не хочу это",
+      "ing": "Со ха безам бац",
+      "pron": "so kha bezam bats"
+    },
+    {
+      "ru": "Принеси еду",
+      "ing": "Хий дика",
+      "pron": "khiy dika"
+    },
+    {
+      "ru": "Принеси воду",
+      "ing": "Мал дика",
+      "pron": "mal dika"
+    },
+    {
+      "ru": "Это вкусно?",
+      "ing": "Ха шор хьо?",
+      "pron": "kha shor kho"
+    },
+    {
+      "ru": "Я приготовлю",
+      "ing": "Со хий дулаа",
+      "pron": "so khiy dulaa"
+    },
+    {
+      "ru": "Приготовь еду",
+      "ing": "Хий дуйла",
+      "pron": "khiy duyla"
+    },
+    {
+      "ru": "Я ем",
+      "ing": "Со хий йуаж",
+      "pron": "so khiy yuazh"
+    },
+    {
+      "ru": "Ты ешь?",
+      "ing": "Хьа хий йуаж?",
+      "pron": "kha khiy yuazh"
+    },
+    {
+      "ru": "Я пью",
+      "ing": "Со мал ю",
+      "pron": "so mal yu"
+    },
+    {
+      "ru": "Ты пьёшь?",
+      "ing": "Хьа мал ю?",
+      "pron": "kha mal yu"
+    }
   ]
 }
