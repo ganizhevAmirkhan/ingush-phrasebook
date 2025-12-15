@@ -1,119 +1,67 @@
-let mediaRecorder = null;
-let audioChunks = [];
+let recorder;
+let chunks = [];
 
-// ================================
-// НАЧАТЬ ЗАПИСЬ
-// ================================
-async function startRecording(index) {
-    if (!window.adminMode) {
-        alert("Только администратор");
-        return;
-    }
+function startRecording(index) {
+    const seconds = Number(prompt("Длительность записи (сек):", 3));
+    if (!seconds) return;
 
-    if (!window.githubToken) {
-        alert("Введите GitHub Token");
-        return;
-    }
-
-    if (!window.currentCategory) {
-        alert("Категория не выбрана");
-        return;
-    }
-
-    try {
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-
-        audioChunks = [];
-        mediaRecorder = new MediaRecorder(stream, {
-            mimeType: "audio/webm"
+    navigator.mediaDevices.getUserMedia({audio:true}).then(stream=>{
+        recorder = new MediaRecorder(stream,{
+            mimeType:"audio/webm;codecs=opus",
+            audioBitsPerSecond:48000
         });
 
-        mediaRecorder.ondataavailable = e => {
-            if (e.data && e.data.size > 0) {
-                audioChunks.push(e.data);
-            }
+        chunks = [];
+        recorder.ondataavailable = e => chunks.push(e.data);
+
+        recorder.onstop = () => {
+            const blob = new Blob(chunks,{type:"audio/webm"});
+            const reader = new FileReader();
+            reader.onload = () => {
+                const base64 = reader.result;
+                localStorage.setItem(
+                    `audio_${currentCategory}_${index}`,
+                    base64
+                );
+                uploadAudio(blob,index);
+                renderPhrases(currentData);
+            };
+            reader.readAsDataURL(blob);
         };
 
-        mediaRecorder.onstop = () => uploadAudio(index);
-
-        mediaRecorder.start();
-        alert("🎙 Запись началась (3 секунды)");
-
-        setTimeout(() => {
-            if (mediaRecorder && mediaRecorder.state !== "inactive") {
-                mediaRecorder.stop();
-            }
-        }, 3000);
-
-    } catch (e) {
-        console.error(e);
-        alert("Ошибка доступа к микрофону");
-    }
+        recorder.start();
+        setTimeout(()=>recorder.stop(), seconds*1000);
+    });
 }
 
-// ================================
-// ЗАГРУЗКА АУДИО В GITHUB
-// ================================
-async function uploadAudio(index) {
-    if (!audioChunks.length) {
-        alert("Аудио не записалось");
-        return;
-    }
-
-    const blob = new Blob(audioChunks, { type: "audio/webm" });
-    const base64 = await blobToBase64(blob);
-
-    // 🔥 НАДЁЖНОЕ ИМЯ ФАЙЛА
-    const filename = `${index}.webm`;
-    const path = `audio/${window.currentCategory}/${filename}`;
-
-    const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}`;
+// ======================
+// UPLOAD TO GITHUB
+// ======================
+async function uploadAudio(blob,index) {
+    const path = `audio/${currentCategory}/${index}.webm`;
+    const url = `https://api.github.com/repos/ganizhevAmirkhan/ingush-phrasebook/contents/${path}`;
 
     let sha = null;
-
-    // 1️⃣ Проверяем, есть ли файл
-    const check = await fetch(url, {
-        headers: {
-            "Authorization": `token ${window.githubToken}`
-        }
+    const check = await fetch(url,{
+        headers:{Authorization:`token ${githubToken}`}
     });
+    if (check.ok) sha = (await check.json()).sha;
 
-    if (check.ok) {
-        const json = await check.json();
-        sha = json.sha;
-    }
-
-    // 2️⃣ Загружаем / перезаписываем
-    const res = await fetch(url, {
-        method: "PUT",
-        headers: {
-            "Authorization": `token ${window.githubToken}`,
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            message: `Add audio: ${window.currentCategory}/${filename}`,
-            content: base64.split(",")[1],
-            sha: sha || undefined,
-            branch: GITHUB_BRANCH
-        })
-    });
-
-    if (res.ok) {
-        alert("✅ Аудио сохранено в GitHub");
-    } else {
-        const err = await res.json();
-        console.error(err);
-        alert("❌ Ошибка загрузки аудио: " + (err.message || "unknown"));
-    }
-}
-
-// ================================
-// BLOB → BASE64
-// ================================
-function blobToBase64(blob) {
-    return new Promise(resolve => {
-        const reader = new FileReader();
-        reader.onloadend = () => resolve(reader.result);
-        reader.readAsDataURL(blob);
-    });
+    const reader = new FileReader();
+    reader.onload = async () => {
+        const base64 = reader.result.split(",")[1];
+        await fetch(url,{
+            method:"PUT",
+            headers:{
+                Authorization:`token ${githubToken}`,
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({
+                message:`Audio ${currentCategory}/${index}`,
+                content:base64,
+                sha
+            })
+        });
+    };
+    reader.readAsDataURL(blob);
 }
