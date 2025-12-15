@@ -1,48 +1,65 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Ингушский разговорник</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>Ингушский разговорник</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<!-- ================= HEADER ================= -->
 <header class="topbar">
-  <div class="title">Ингушский разговорник</div>
+    <div class="title">Ингушский разговорник</div>
 
-  <input id="search-bar" class="search" type="text"
-         placeholder="Поиск по фразам..." oninput="searchPhrases()"/>
+    <!-- Поиск -->
+    <input
+        id="search-bar"
+        class="search"
+        type="text"
+        placeholder="Поиск по фразам..."
+        oninput="searchPhrases()"
+    >
 
- <div class="admin-panel">
-  <input
-    id="gh-token"
-    type="password"
-    placeholder="GitHub Token"
-    style="padding:6px; width:180px;"
-  >
+    <!-- Админ-панель -->
+    <div class="admin-panel">
+        <input
+            id="gh-token"
+            type="password"
+            placeholder="GitHub Token"
+            title="Personal Access Token (Contents: Read & Write)"
+        >
 
-  <button onclick="adminLogin()">Админ</button>
-
-  <span id="admin-status"></span>
-</div>
+        <button onclick="adminLogin()">Админ</button>
+        <span id="admin-status"></span>
+    </div>
 </header>
 
+<!-- ================= MAIN LAYOUT ================= -->
 <div class="layout">
-  <aside class="sidebar">
-    <h2>Категории</h2>
-    <div id="category-list"></div>
-  </aside>
 
-  <main class="content">
-    <h2 id="content-title">Выберите категорию</h2>
-    <div id="content"></div>
-  </main>
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+        <h2>Категории</h2>
+        <div id="category-list"></div>
+    </aside>
+
+    <!-- ===== CONTENT ===== -->
+    <main class="content">
+        <h2 id="content-title">Выберите категорию</h2>
+        <div id="content"></div>
+    </main>
+
 </div>
 
-<!-- Порядок важен -->
+<!-- ================= SCRIPTS ================= -->
+<!-- ВАЖНО: порядок подключения -->
 <script src="script.js"></script>
 <script src="admin.js"></script>
 <script src="recorder.js"></script>
+
 </body>
 </html>
