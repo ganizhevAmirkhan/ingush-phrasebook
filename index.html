@@ -6,98 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-        }
+        body { margin: 0; font-family: Arial, sans-serif; background: #f5f5f5; }
+        header { background: #111; color: white; padding: 18px; font-size: 24px; font-weight: bold; position: relative; }
 
-        header {
-            background: #111;
-            color: white;
-            padding: 18px;
-            font-size: 24px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-        }
+        #search-bar { margin-left: 20px; padding: 8px 14px; width: 260px; }
 
-        #search-bar {
-            margin-left: 20px;
-            padding: 8px 14px;
-            width: 260px;
-        }
-
-        #container {
-            display: flex;
-            height: calc(100vh - 65px);
-        }
+        #container { display: flex; height: calc(100vh - 65px); }
 
         #sidebar {
-            width: 250px;
-            background: #f0f0f0;
-            padding: 15px;
-            border-right: 1px solid #ccc;
-            overflow-y: auto;
+            width: 250px; background: #f0f0f0; padding: 15px;
+            border-right: 1px solid #ccc; overflow-y: auto;
         }
+        .category { padding: 10px; margin-bottom: 5px; background: #fff; border-radius: 6px;
+            cursor: pointer; border: 1px solid #ddd; }
+        .category:hover { background: #e6e6e6; }
 
-        .category {
-            padding: 10px;
-            margin-bottom: 5px;
-            background: #fff;
-            border-radius: 6px;
+        #content-area { flex-grow: 1; padding: 20px; overflow-y: auto; }
+
+        .phrase { background: white; padding: 12px; border-radius: 6px;
+            margin-bottom: 12px; border: 1px solid #ddd; }
+
+        .audio-btn, .rec-btn {
             cursor: pointer;
-            border: 1px solid #ddd;
+            padding: 4px 6px;
+            margin-left: 6px;
+            border-radius: 4px;
+            border: none;
         }
 
-        .category:hover {
-            background: #e6e6e6;
-        }
-
-        #content-area {
-            flex-grow: 1;
-            padding: 20px;
-            overflow-y: auto;
-        }
-
-        .phrase {
-            background: white;
-            padding: 12px;
-            border-radius: 6px;
-            margin-bottom: 12px;
-            border: 1px solid #ddd;
-        }
-
-        #admin-buttons {
-            position: fixed;
-            right: 20px;
-            top: 15px;
-        }
-
-        #admin-buttons button {
-            margin-left: 10px;
-        }
-
-        #admin-status {
-            color: #0a0;
-            margin-left: 8px;
-        }
-
-        /* Панель администратора */
-        #admin-panel {
-            display: none;
-            background: #fff;
-            border: 2px solid #333;
-            padding: 15px;
-            position: fixed;
-            right: 15px;
-            bottom: 15px;
-            width: 360px;
-            height: 480px;
-            overflow-y: auto;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #0004;
-        }
+        #admin-panel { position: absolute; right: 20px; top: 18px; }
+        #admin-status { margin-left: 8px; color: #0a0; }
+        .edit-btn, .delete-btn { margin-left: 10px; cursor: pointer; }
     </style>
 </head>
 
@@ -107,38 +46,14 @@
     Ингушский разговорник
     <input id="search-bar" type="text" placeholder="Поиск по фразам..." oninput="searchPhrases()">
 
-    <div id="admin-buttons">
-        <button onclick="adminLogin()">Вход админ</button>
+    <div id="admin-panel">
+        <button onclick="adminLogin()">Админ</button>
         <span id="admin-status"></span>
     </div>
 </header>
 
-<!-- Панель администратора -->
-<div id="admin-panel">
-    <h3>Админ-панель</h3>
-
-    <label>Категория:</label>
-    <select id="admin-category"></select>
-
-    <h4>Добавить фразу</h4>
-
-    <label>Русский:</label>
-    <input id="admin-ru" style="width:100%">
-
-    <label>Ингушский:</label>
-    <input id="admin-ing" style="width:100%">
-
-    <label>Транскрипция:</label>
-    <input id="admin-pron" style="width:100%">
-
-    <button onclick="adminAddPhrase()">Добавить</button>
-
-    <hr>
-
-    <button onclick="adminDownloadAll()">Скачать разговорник ZIP</button>
-</div>
-
 <div id="container">
+
     <aside id="sidebar">
         <h2>Категории</h2>
         <div id="category-list"></div>
@@ -148,185 +63,17 @@
         <h2 id="content-title">Выберите категорию</h2>
         <div id="content"></div>
     </main>
+
 </div>
 
+<!-- Основная логика -->
+<script src="script.js"></script>
 
-<script>
-// =========================
-// Русские названия категорий
-// =========================
-const CATEGORY_TITLES = {
-    greetings: "Приветствия",
-    basic_phrases: "Базовые фразы",
-    personal_info: "Личная информация",
-    family: "Семья",
-    home: "Дом",
-    food: "Еда",
-    drinks: "Напитки",
-    travel: "Путешествия",
-    transport: "Транспорт",
-    hunting: "Охота",
-    danger: "Опасность",
-    thermal: "Тепловизор",
-    navigation: "Навигация",
-    weather: "Погода",
-    emotions: "Эмоции",
-    health: "Здоровье",
-    help: "Помощь",
-    commands: "Команды",
-    tools: "Инструменты",
-    animals: "Животные",
-    time: "Время",
-    numbers: "Числа",
-    colors: "Цвета",
-    money: "Деньги",
-    shop: "Магазин",
-    city: "Город",
-    village: "Село",
-    guests: "Гости",
-    communication: "Общение",
-    work: "Работа",
-    misc: "Прочее"
-};
-
-const categories = Object.keys(CATEGORY_TITLES);
-
-let adminMode = false;
-
-// =========================
-// Загрузка категорий
-// =========================
-
-function loadCategories() {
-    const list = document.getElementById("category-list");
-    const adminCat = document.getElementById("admin-category");
-    list.innerHTML = "";
-    adminCat.innerHTML = "";
-
-    categories.forEach(cat => {
-        // кнопка слева
-        const div = document.createElement("div");
-        div.className = "category";
-        div.innerText = CATEGORY_TITLES[cat];
-        div.onclick = () => loadCategory(cat);
-        list.appendChild(div);
-
-        // список категорий в админке
-        const opt = document.createElement("option");
-        opt.value = cat;
-        opt.innerText = CATEGORY_TITLES[cat];
-        adminCat.appendChild(opt);
-    });
-}
-
-async function loadCategory(category) {
-    document.getElementById("content-title").innerText = CATEGORY_TITLES[category];
-
-    try {
-        const res = await fetch(`categories/${category}.json`);
-        if (!res.ok) throw new Error("Файл не найден");
-
-        const json = await res.json();
-        const items = json.items ?? json;
-
-        renderPhrases(items);
-
-    } catch (e) {
-        document.getElementById("content").innerHTML =
-            `<p style="color:red">Ошибка загрузки: ${e.message}</p>`;
-    }
-}
-
-// =========================
-// Отображение фраз
-// =========================
-
-function renderPhrases(items) {
-    const content = document.getElementById("content");
-    content.innerHTML = "";
-
-    items.forEach(item => {
-        const block = document.createElement("div");
-        block.className = "phrase";
-
-        block.innerHTML = `
-            <p><b>RU:</b> ${item.ru}</p>
-            <p><b>ING:</b> ${item.ing}</p>
-            <p><b>PRON:</b> ${item.pron}</p>
-        `;
-
-        content.appendChild(block);
-    });
-}
-
-// =========================
-// Поиск
-// =========================
-
-async function searchPhrases() {
-    const q = document.getElementById("search-bar").value.toLowerCase();
-    if (q.length < 2) return;
-
-    let results = [];
-
-    for (const cat of categories) {
-        try {
-            const res = await fetch(`categories/${cat}.json`);
-            if (!res.ok) continue;
-
-            const json = await res.json();
-            const items = json.items ?? json;
-
-            items.forEach(item => {
-                if (
-                    item.ru.toLowerCase().includes(q) ||
-                    item.ing.toLowerCase().includes(q)
-                ) {
-                    results.push(item);
-                }
-            });
-
-        } catch {}
-    }
-
-    document.getElementById("content-title").innerText = "Результаты поиска";
-    renderPhrases(results);
-}
-
-// =========================
-// Админ режим
-// =========================
-
-function adminLogin() {
-    let pass = prompt("Введите пароль администратора:");
-
-    if (pass === "ingush-secret") {
-        adminMode = true;
-        document.getElementById("admin-status").innerText = "✓ Админ";
-        document.getElementById("admin-panel").style.display = "block";
-    } else {
-        alert("Неверный пароль.");
-    }
-}
-
-function adminAddPhrase() {
-    alert("Функция будет активна после подключения admin.js");
-}
-
-function adminDownloadAll() {
-    alert("Экспорт ZIP будет подключён в admin.js");
-}
-
-// =========================
-
-window.onload = loadCategories;
-</script> 
- <script>
-window.onload = loadCategories;
-</script>
-   
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<!-- Админ: сохранение, редактирование, GitHub upload -->
 <script src="admin.js"></script>
+
+<!-- Запись аудио + MP3 конвертация -->
+<script src="recorder.js"></script>
 
 </body>
 </html>
