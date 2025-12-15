@@ -1,82 +1,197 @@
+// =======================
+// НАСТРОЙКИ
+// =======================
 const categories = [
- "greetings","basic_phrases","personal_info","family","home",
- "food","drinks","travel","transport","hunting",
- "danger","thermal","orientation","weather","emotions",
- "health","help","commands","tools","animals",
- "time","numbers","colors","money","shop",
- "city","village","guests","communication","work","misc"
+  "greetings","basic_phrases","personal_info","family","home",
+  "food","drinks","travel","transport","hunting","danger",
+  "thermal","orientation","weather","emotions","health","help",
+  "commands","tools","animals","time","numbers","colors","money",
+  "shop","city","village","guests","communication","work","misc"
 ];
 
+const categoryNames = {
+  greetings:"Приветствия",
+  basic_phrases:"Основные фразы",
+  personal_info:"Личные данные",
+  family:"Семья",
+  home:"Дом и быт",
+  food:"Еда",
+  drinks:"Питьё",
+  travel:"Путешествия",
+  transport:"Транспорт",
+  hunting:"Охота",
+  danger:"Опасность",
+  thermal:"Тепловизор / наблюдение",
+  orientation:"Ориентация на местности",
+  weather:"Погода",
+  emotions:"Эмоции",
+  health:"Здоровье",
+  help:"Помощь",
+  commands:"Команды",
+  tools:"Инструменты",
+  animals:"Животные",
+  time:"Время",
+  numbers:"Числа",
+  colors:"Цвета",
+  money:"Деньги",
+  shop:"Магазин",
+  city:"Город",
+  village:"Село",
+  guests:"Гости",
+  communication:"Общение",
+  work:"Работа",
+  misc:"Разное"
+};
+
+// =======================
+let adminMode = false;
 let currentCategory = null;
 let currentData = null;
 
-window.onload = loadCategories;
-
+// =======================
+// ЗАГРУЗКА КАТЕГОРИЙ
+// =======================
 function loadCategories() {
   const list = document.getElementById("category-list");
   list.innerHTML = "";
-  categories.forEach(cat=>{
+
+  categories.forEach(cat => {
     const d = document.createElement("div");
-    d.className="category";
-    d.textContent=cat;
-    d.onclick=()=>loadCategory(cat);
+    d.className = "category";
+    d.textContent = categoryNames[cat] || cat;
+    d.onclick = () => loadCategory(cat);
     list.appendChild(d);
   });
 }
 
-async function loadCategory(cat){
-  currentCategory=cat;
-  document.getElementById("content-title").textContent=cat;
-  const res=await fetch(`categories/${cat}.json`);
-  currentData=await res.json();
-  renderPhrases();
-}
+// =======================
+// ЗАГРУЗКА КАТЕГОРИИ
+// =======================
+async function loadCategory(cat) {
+  currentCategory = cat;
+  document.getElementById("content-title").textContent =
+    categoryNames[cat];
 
-function renderPhrases(){
-  const content=document.getElementById("content");
-  content.innerHTML="";
-  currentData.items.forEach((item,i)=>{
-    const file=normalizePron(item.pron)+".mp3";
-    const div=document.createElement("div");
-    div.className="phrase";
-    div.innerHTML=`
-      <p><b>RU:</b> ${item.ru}</p>
-      <p><b>ING:</b> ${item.ing}</p>
-      <p><b>PRON:</b> ${item.pron}</p>
+  const content = document.getElementById("content");
+  content.innerHTML = "Загрузка...";
 
-      <button onclick="playAudio('${currentCategory}','${file}')">🔊</button>
-      <span class="audio-indicator" id="ai-${i}">⚪</span>
-
-      ${adminMode?`
-        <button onclick="startRecording('${currentCategory}','${item.pron}')">🎤</button>
-        <button onclick="editPhrase(${i})">✏</button>
-        <button onclick="deletePhrase(${i})">🗑</button>
-      `:""}
-    `;
-    content.appendChild(div);
-    checkAudio(i,file);
-  });
-
-  if(adminMode){
-    const b=document.createElement("button");
-    b.textContent="➕ Добавить фразу";
-    b.onclick=addPhrase;
-    content.appendChild(b);
+  try {
+    const res = await fetch(`categories/${cat}.json`);
+    const data = await res.json();
+    currentData = data;
+    renderPhrases();
+  } catch {
+    content.innerHTML = "<span style='color:red'>Ошибка загрузки</span>";
   }
 }
 
-function playAudio(cat,file){
-  new Audio(`audio/${cat}/${file}?v=${Date.now()}`).play()
-    .catch(()=>alert("Аудио ещё не доступно"));
+// =======================
+// ОТОБРАЖЕНИЕ ФРАЗ
+// =======================
+function renderPhrases() {
+  const content = document.getElementById("content");
+  content.innerHTML = "";
+
+  currentData.items.forEach((p, i) => {
+    const d = document.createElement("div");
+    d.className = "phrase";
+
+    d.innerHTML = `
+      <p><b>RU:</b> ${p.ru}</p>
+      <p><b>ING:</b> ${p.ing}</p>
+      <p><b>PRON:</b> ${p.pron}</p>
+      <button onclick="playAudio(${i})">🔊</button>
+      ${adminMode ? `
+        <button class="admin-btn" onclick="editPhrase(${i})">✏</button>
+        <button class="admin-btn" onclick="deletePhrase(${i})">🗑</button>
+      ` : ""}
+    `;
+    content.appendChild(d);
+  });
+
+  if (adminMode) {
+    const add = document.createElement("button");
+    add.textContent = "➕ Добавить фразу";
+    add.onclick = addPhrase;
+    add.style.marginTop = "10px";
+    content.appendChild(add);
+  }
 }
 
-function checkAudio(i,file){
-  fetch(`audio/${currentCategory}/${file}`,{method:"HEAD"})
-   .then(r=>{if(r.ok){
-     document.getElementById(`ai-${i}`).textContent="🟢";
-   }});
+// =======================
+// АУДИО (ТОЛЬКО ПРОИГРЫВАНИЕ)
+// =======================
+function playAudio(i) {
+  const audio = new Audio(`audio/${currentCategory}/${i}.webm`);
+  audio.play().catch(()=>alert("Аудио отсутствует"));
 }
 
-function normalizePron(p){
-  return p.toLowerCase().trim().replace(/\s+/g,"_").replace(/[^a-z0-9_]/g,"");
+// =======================
+// ПОИСК
+// =======================
+async function searchPhrases() {
+  const q = document.getElementById("search-input").value.toLowerCase();
+  if (q.length < 2) return;
+
+  const content = document.getElementById("content");
+  document.getElementById("content-title").textContent = "Результаты поиска";
+  content.innerHTML = "";
+
+  for (const cat of categories) {
+    try {
+      const res = await fetch(`categories/${cat}.json`);
+      const data = await res.json();
+      data.items.forEach(p => {
+        if (p.ru.toLowerCase().includes(q) ||
+            p.ing.toLowerCase().includes(q)) {
+          const d = document.createElement("div");
+          d.className = "phrase";
+          d.innerHTML = `
+            <b>${categoryNames[cat]}</b>
+            <p>${p.ru}</p>
+            <p>${p.ing}</p>
+          `;
+          content.appendChild(d);
+        }
+      });
+    } catch {}
+  }
 }
+
+// =======================
+// АДМИН
+// =======================
+function adminLogin() {
+  adminMode = true;
+  document.getElementById("admin-status").textContent = "✓ Админ";
+  if (currentData) renderPhrases();
+}
+
+// =======================
+// CRUD ФРАЗ
+// =======================
+function addPhrase() {
+  const ru = prompt("RU:");
+  const ing = prompt("ING:");
+  const pron = prompt("PRON:");
+  if (!ru || !ing || !pron) return;
+  currentData.items.push({ru,ing,pron});
+  renderPhrases();
+}
+
+function editPhrase(i) {
+  const p = currentData.items[i];
+  p.ru = prompt("RU:",p.ru);
+  p.ing = prompt("ING:",p.ing);
+  p.pron = prompt("PRON:",p.pron);
+  renderPhrases();
+}
+
+function deletePhrase(i) {
+  if (!confirm("Удалить фразу?")) return;
+  currentData.items.splice(i,1);
+  renderPhrases();
+}
+
+// =======================
+window.onload = loadCategories;
