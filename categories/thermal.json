@@ -1,49 +1,165 @@
 {
   "category": "thermal",
   "items": [
-    { "ru": "Тепловизор", "ing": "Т1ан йолча", "pron": "t1an yolcha" },
-    { "ru": "Тепловой след", "ing": "Т1ан лар", "pron": "t1an lar" },
-
-    { "ru": "Я вижу цель", "ing": "Со хьам барьгу", "pron": "so khyam bargu" },
-    { "ru": "Я не вижу", "ing": "Со гац", "pron": "so gats" },
-
-    { "ru": "Он в тепловом следе", "ing": "Из т1ан ларга", "pron": "iz t1an larga" },
-    { "ru": "Он движется", "ing": "Из удаж", "pron": "iz udazh" },
-    { "ru": "Он стоит", "ing": "Из тха", "pron": "iz tcha" },
-
-    { "ru": "Тепло сильное", "ing": "Т1ан йо", "pron": "t1an yo" },
-    { "ru": "Слабое тепло", "ing": "Т1ан ца йо", "pron": "t1an tsa yo" },
-
-    { "ru": "Где цель?", "ing": "Хьам хьа?", "pron": "khyam kha" },
-    { "ru": "Цель справа", "ing": "Хьам бархала", "pron": "khyam barkhala" },
-    { "ru": "Цель слева", "ing": "Хьам чехьала", "pron": "khyam chekhlala" },
-    { "ru": "Цель впереди", "ing": "Хьам хьалха", "pron": "khyam khalha" },
-    { "ru": "Цель позади", "ing": "Хьам патахка", "pron": "khyam patakhka" },
-
-    { "ru": "Расстояние большое", "ing": "Долча", "pron": "dolcha" },
-    { "ru": "Расстояние маленькое", "ing": "Гянна", "pron": "gyanna" },
-
-    { "ru": "Он движется влево", "ing": "Из чехьала удаж", "pron": "iz chekhlala udazh" },
-    { "ru": "Он движется вправо", "ing": "Из бархала удаж", "pron": "iz barkhala udazh" },
-    { "ru": "Он движется вперёд", "ing": "Из хьалха удаж", "pron": "iz khalha udazh" },
-    { "ru": "Он движется назад", "ing": "Из патахка удаж", "pron": "iz patakhka udazh" },
-
-    { "ru": "Он сел", "ing": "Из деча хинна", "pron": "iz decha khinna" },
-    { "ru": "Он лёг", "ing": "Из къайла хинна", "pron": "iz kayla khinna" },
-
-    { "ru": "Смотри в тепловизор", "ing": "Т1ан йолча хьаьжа", "pron": "t1an yolcha khyazha" },
-    { "ru": "Не моргай", "ing": "Му йара!", "pron": "mu yara" },
-
-    { "ru": "Чёткий сигнал", "ing": "Дика т1ан", "pron": "dika t1an" },
-    { "ru": "Слабый сигнал", "ing": "Ца т1ан", "pron": "tsa t1an" },
-
-    { "ru": "Пропал след", "ing": "Т1ан лар седа хинна", "pron": "t1an lar seda khinna" },
-    { "ru": "Появился след", "ing": "Т1ан лар йола", "pron": "t1an lar yola" },
-
-    { "ru": "Наведи прибор", "ing": "Т1ан йолча дика", "pron": "t1an yolcha dika" },
-    { "ru": "Держи ровно", "ing": "Дика дог1ийла", "pron": "dika dog1iyla" },
-
-    { "ru": "Стреляй только по команде", "ing": "Хьажаца туха", "pron": "khyazhatsa tukha" },
-    { "ru": "Жди команды", "ing": "Тха хьа хьажа", "pron": "tcha kha khyazha" }
+    {
+      "ru": "Тепловизор",
+      "ing": "Т1ан йолча",
+      "pron": "t1an yolcha"
+    },
+    {
+      "ru": "Тепловой след",
+      "ing": "1",
+      "pron": "t1an lar"
+    },
+    {
+      "ru": "Я вижу цель",
+      "ing": "Со хьам барьгу",
+      "pron": "so khyam bargu"
+    },
+    {
+      "ru": "Я не вижу",
+      "ing": "Со гац",
+      "pron": "so gats"
+    },
+    {
+      "ru": "Он в тепловом следе",
+      "ing": "Из т1ан ларга",
+      "pron": "iz t1an larga"
+    },
+    {
+      "ru": "Он движется",
+      "ing": "Из удаж",
+      "pron": "iz udazh"
+    },
+    {
+      "ru": "Он стоит",
+      "ing": "Из тха",
+      "pron": "iz tcha"
+    },
+    {
+      "ru": "Тепло сильное",
+      "ing": "Т1ан йо",
+      "pron": "t1an yo"
+    },
+    {
+      "ru": "Слабое тепло",
+      "ing": "Т1ан ца йо",
+      "pron": "t1an tsa yo"
+    },
+    {
+      "ru": "Где цель?",
+      "ing": "Хьам хьа?",
+      "pron": "khyam kha"
+    },
+    {
+      "ru": "Цель справа",
+      "ing": "Хьам бархала",
+      "pron": "khyam barkhala"
+    },
+    {
+      "ru": "Цель слева",
+      "ing": "Хьам чехьала",
+      "pron": "khyam chekhlala"
+    },
+    {
+      "ru": "Цель впереди",
+      "ing": "Хьам хьалха",
+      "pron": "khyam khalha"
+    },
+    {
+      "ru": "Цель позади",
+      "ing": "Хьам патахка",
+      "pron": "khyam patakhka"
+    },
+    {
+      "ru": "Расстояние большое",
+      "ing": "Долча",
+      "pron": "dolcha"
+    },
+    {
+      "ru": "Расстояние маленькое",
+      "ing": "Гянна",
+      "pron": "gyanna"
+    },
+    {
+      "ru": "Он движется влево",
+      "ing": "Из чехьала удаж",
+      "pron": "iz chekhlala udazh"
+    },
+    {
+      "ru": "Он движется вправо",
+      "ing": "Из бархала удаж",
+      "pron": "iz barkhala udazh"
+    },
+    {
+      "ru": "Он движется вперёд",
+      "ing": "Из хьалха удаж",
+      "pron": "iz khalha udazh"
+    },
+    {
+      "ru": "Он движется назад",
+      "ing": "Из патахка удаж",
+      "pron": "iz patakhka udazh"
+    },
+    {
+      "ru": "Он сел",
+      "ing": "Из деча хинна",
+      "pron": "iz decha khinna"
+    },
+    {
+      "ru": "Он лёг",
+      "ing": "Из къайла хинна",
+      "pron": "iz kayla khinna"
+    },
+    {
+      "ru": "Смотри в тепловизор",
+      "ing": "Т1ан йолча хьаьжа",
+      "pron": "t1an yolcha khyazha"
+    },
+    {
+      "ru": "Не моргай",
+      "ing": "Му йара!",
+      "pron": "mu yara"
+    },
+    {
+      "ru": "Чёткий сигнал",
+      "ing": "Дика т1ан",
+      "pron": "dika t1an"
+    },
+    {
+      "ru": "Слабый сигнал",
+      "ing": "Ца т1ан",
+      "pron": "tsa t1an"
+    },
+    {
+      "ru": "Пропал след",
+      "ing": "Т1ан лар седа хинна",
+      "pron": "t1an lar seda khinna"
+    },
+    {
+      "ru": "Появился след",
+      "ing": "Т1ан лар йола",
+      "pron": "t1an lar yola"
+    },
+    {
+      "ru": "Наведи прибор",
+      "ing": "Т1ан йолча дика",
+      "pron": "t1an yolcha dika"
+    },
+    {
+      "ru": "Держи ровно",
+      "ing": "Дика дог1ийла",
+      "pron": "dika dog1iyla"
+    },
+    {
+      "ru": "Стреляй только по команде",
+      "ing": "Хьажаца туха",
+      "pron": "khyazhatsa tukha"
+    },
+    {
+      "ru": "Жди команды",
+      "ing": "Тха хьа хьажа",
+      "pron": "tcha kha khyazha"
+    }
   ]
 }
