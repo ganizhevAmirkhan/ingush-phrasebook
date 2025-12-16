@@ -1,57 +1,82 @@
-let admin=false,category=null,data=null;
+const categories = [
+ "greetings","basic_phrases","personal_info","family","home",
+ "food","drinks","travel","transport","hunting",
+ "danger","thermal","orientation","weather","emotions",
+ "health","help","commands","tools","animals",
+ "time","numbers","colors","money","shop",
+ "city","village","guests","communication","work","misc"
+];
 
-function adminLogin(){
-  setToken(document.getElementById("gh-token").value);
-  admin=true;
-  document.getElementById("admin-status").textContent="✓";
-  if(data) render();
+let currentCategory = null;
+let currentData = null;
+
+window.onload = loadCategories;
+
+function loadCategories() {
+  const list = document.getElementById("category-list");
+  list.innerHTML = "";
+  categories.forEach(cat=>{
+    const d = document.createElement("div");
+    d.className="category";
+    d.textContent=cat;
+    d.onclick=()=>loadCategory(cat);
+    list.appendChild(d);
+  });
 }
 
-async function loadCategory(c){
-  category=c;
-  data=await (await fetch(`categories/${c}.json`)).json();
-  render();
+async function loadCategory(cat){
+  currentCategory=cat;
+  document.getElementById("content-title").textContent=cat;
+  const res=await fetch(`categories/${cat}.json`);
+  currentData=await res.json();
+  renderPhrases();
 }
 
-function render(){
-  const c=document.getElementById("content");
-  c.innerHTML=`<h2>${category}</h2>`;
+function renderPhrases(){
+  const content=document.getElementById("content");
+  content.innerHTML="";
+  currentData.items.forEach((item,i)=>{
+    const file=normalizePron(item.pron)+".mp3";
+    const div=document.createElement("div");
+    div.className="phrase";
+    div.innerHTML=`
+      <p><b>RU:</b> ${item.ru}</p>
+      <p><b>ING:</b> ${item.ing}</p>
+      <p><b>PRON:</b> ${item.pron}</p>
 
-  data.items.forEach(p=>{
-    c.innerHTML+=`
-    <div class="phrase">
-      <b>RU:</b> ${p.ru}<br>
-      <b>ING:</b> ${p.ing}<br>
-      <b>PRON:</b> ${p.pron}
-      <span class="ok">●</span><br>
+      <button onclick="playAudio('${currentCategory}','${file}')">🔊</button>
+      <span class="audio-indicator" id="ai-${i}">⚪</span>
 
-      <button onclick="new Audio('audio/${category}/${p.pron}.webm').play()">🔊</button>
-
-      ${admin?`
-        <button onclick="recordAudio('${category}','${p.pron}')">🎤</button>
-        <button onclick="stopAudio()">⏹</button>
+      ${adminMode?`
+        <button onclick="startRecording('${currentCategory}','${item.pron}')">🎤</button>
+        <button onclick="editPhrase(${i})">✏</button>
+        <button onclick="deletePhrase(${i})">🗑</button>
       `:""}
-    </div>`;
+    `;
+    content.appendChild(div);
+    checkAudio(i,file);
   });
 
-  if(admin){
-    c.innerHTML+=`<button onclick="saveCategory()">💾 Сохранить категорию</button>`;
+  if(adminMode){
+    const b=document.createElement("button");
+    b.textContent="➕ Добавить фразу";
+    b.onclick=addPhrase;
+    content.appendChild(b);
   }
 }
 
-async function saveCategory(){
-  await putFile(
-    `categories/${category}.json`,
-    JSON.stringify(data,null,2),
-    `update ${category}`
-  );
-  alert("Категория сохранена");
+function playAudio(cat,file){
+  new Audio(`audio/${cat}/${file}?v=${Date.now()}`).play()
+    .catch(()=>alert("Аудио ещё не доступно"));
 }
 
-(async()=>{
-  const cats=await (await fetch("categories")).text();
-  document.getElementById("sidebar").innerHTML=
-    cats.match(/\w+\.json/g)
-    .map(f=>`<div onclick="loadCategory('${f.replace('.json','')}')">${f.replace('.json','')}</div>`)
-    .join("");
-})();
+function checkAudio(i,file){
+  fetch(`audio/${currentCategory}/${file}`,{method:"HEAD"})
+   .then(r=>{if(r.ok){
+     document.getElementById(`ai-${i}`).textContent="🟢";
+   }});
+}
+
+function normalizePron(p){
+  return p.toLowerCase().trim().replace(/\s+/g,"_").replace(/[^a-z0-9_]/g,"");
+}
