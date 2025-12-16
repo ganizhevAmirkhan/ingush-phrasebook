@@ -1,6 +1,6 @@
 async function startRecording(category,pron){
-  const token=document.getElementById("gh-token").value.trim();
-  if(!token) return alert("Введите GitHub Token");
+  const token=githubToken;
+  if(!token) return alert("Нет GitHub Token");
 
   const stream=await navigator.mediaDevices.getUserMedia({audio:true});
   const rec=new MediaRecorder(stream,{mimeType:"audio/webm"});
@@ -59,7 +59,7 @@ async function uploadMp3(cat,pron,blob,token){
         sha
       })
     });
-    renderPhrases();
+    renderPhrases(currentData.items);
   };
   reader.readAsDataURL(blob);
 }
