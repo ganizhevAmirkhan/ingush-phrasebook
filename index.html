@@ -1,104 +1,86 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Ингушский разговорник</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
-    body { margin:0; font-family: Arial, sans-serif; background:#f5f5f5; }
+    body { margin: 0; font-family: Arial, sans-serif; background: #f5f5f5; }
 
-    header{
-      background:#111; color:#fff;
-      padding:10px 12px;
-      display:flex; align-items:center; gap:10px;
-    }
-    header strong{ white-space:nowrap; }
-
-    #search-input{
-      flex:1;
-      min-width:220px;
-      padding:7px 10px;
-      border-radius:4px;
-      border:0;
-      outline:none;
-    }
-    #search-btn{
-      padding:7px 12px;
-      cursor:pointer;
-      border:0;
-      border-radius:4px;
+    header {
+      background: #111;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    #gh-token{
-      width:190px;
-      padding:7px 10px;
-      border-radius:4px;
-      border:0;
-      outline:none;
+    header strong { white-space: nowrap; }
+
+    #search-input {
+      flex: 1;
+      padding: 6px 8px;
+      border-radius: 4px;
+      border: none;
+      min-width: 200px;
     }
 
-    #admin-btn{
-      padding:7px 12px;
-      cursor:pointer;
-      border:0;
-      border-radius:4px;
+    #search-btn {
+      padding: 6px 10px;
+      cursor: pointer;
     }
 
-    #admin-status{
-      margin-left:4px;
-      color:#7CFC00;
-      font-weight:700;
-      white-space:nowrap;
+    #gh-token {
+      width: 170px;
+      padding: 6px 8px;
+      border-radius: 4px;
+      border: none;
     }
 
-    #container{ display:flex; height: calc(100vh - 52px); }
+    header button { padding: 6px 10px; cursor: pointer; }
 
-    #sidebar{
-      width:260px;
-      background:#eee;
-      padding:10px;
-      overflow:auto;
-      border-right:1px solid #ccc;
-    }
-    #sidebar h3{ margin:6px 0 10px; }
+    #admin-status { margin-left: 5px; color: #0f0; font-weight: bold; }
 
-    .category{
-      background:#fff;
-      border:1px solid #ddd;
-      border-radius:6px;
-      padding:9px;
-      margin-bottom:7px;
-      cursor:pointer;
-      user-select:none;
-    }
-    .category:hover{ background:#f2f2f2; }
+    #container { display: flex; height: calc(100vh - 52px); }
 
-    #content-area{
-      flex:1;
-      padding:15px;
-      overflow:auto;
-      background:#fff;
-    }
-    #content-title{ margin:0 0 10px; }
-
-    .phrase{
-      background:#fafafa;
-      border:1px solid #ddd;
-      border-radius:10px;
-      padding:12px;
-      margin-bottom:12px;
-    }
-    .phrase button{
-      cursor:pointer;
-      padding:4px 8px;
-      border:1px solid #bbb;
-      border-radius:4px;
-      background:#fff;
-      margin-right:6px;
+    #sidebar {
+      width: 260px;
+      background: #eee;
+      padding: 10px;
+      overflow-y: auto;
+      border-right: 1px solid #ccc;
     }
 
-    .muted{ color:#666; }
+    #sidebar h3 { margin-top: 0; }
+
+    .category {
+      background: #fff;
+      padding: 8px;
+      margin-bottom: 6px;
+      border-radius: 5px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+    }
+    .category:hover { background: #e6e6e6; }
+
+    #content-area { flex: 1; padding: 15px; overflow-y: auto; }
+
+    #content-title { margin-top: 0; }
+
+    .phrase {
+      background: #fff;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+    }
+
+    .btn-row { margin-top: 6px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+    .phrase button { cursor: pointer; }
+
+    .hint { color:#666; margin-top: 8px; }
   </style>
 </head>
 
@@ -107,13 +89,12 @@
 <header>
   <strong>Ингушский разговорник</strong>
 
-  <input id="search-input" type="text" placeholder="Поиск по фразам..." />
+  <input id="search-input" type="text" placeholder="Поиск по фразам...">
+  <button id="search-btn" onclick="searchPhrases()">Искать</button>
 
-  <button id="search-btn" type="button">Искать</button>
+  <input id="gh-token" type="password" placeholder="GitHub Token">
 
-  <input id="gh-token" type="password" placeholder="GitHub Token" />
-
-  <button id="admin-btn" type="button">Админ</button>
+  <button onclick="adminLogin()">Админ</button>
   <span id="admin-status"></span>
 </header>
 
@@ -125,45 +106,25 @@
 
   <main id="content-area">
     <h2 id="content-title">Выберите категорию</h2>
-    <div id="content" class="muted">
-      Чтобы искать по всем категориям — введи запрос и нажми «Искать».
+    <div id="content">
+      <div class="hint">Можно искать по всем категориям через строку поиска сверху.</div>
     </div>
   </main>
 </div>
 
-<!-- ВАЖНО: порядок скриптов -->
+<!-- порядок важен -->
 <script src="github.js"></script>
 <script src="recorder.js"></script>
 <script src="script.js"></script>
 
 <script>
-  // ✅ Автовставка токена (как ты хотел: чтобы не исчезал после обновления)
-  const savedToken = localStorage.getItem("gh_token");
-  if (savedToken) document.getElementById("gh-token").value = savedToken;
+  // автоподстановка токена (как ты просил)
+  const t = localStorage.getItem("gh_token");
+  if (t) document.getElementById("gh-token").value = t;
 
-  // ✅ Кнопка "Админ" — вызывает твою функцию adminLogin()
-  document.getElementById("admin-btn").addEventListener("click", () => {
-    if (typeof adminLogin === "function") adminLogin();
-    else alert("adminLogin() не найдена. Проверь script.js/admin.js");
-  });
-
-  // ✅ Поиск: кнопка + Enter
-  function runSearch() {
-    // Ищем функцию из твоего script.js
-    if (typeof searchPhrases === "function") {
-      searchPhrases(); // твоя логика
-      return;
-    }
-    if (typeof doSearch === "function") {
-      doSearch(); // если у тебя так названо
-      return;
-    }
-    alert("Функция поиска не найдена (searchPhrases/doSearch). Проверь script.js");
-  }
-
-  document.getElementById("search-btn").addEventListener("click", runSearch);
+  // enter = искать
   document.getElementById("search-input").addEventListener("keydown", (e) => {
-    if (e.key === "Enter") runSearch();
+    if (e.key === "Enter") searchPhrases();
   });
 </script>
 
