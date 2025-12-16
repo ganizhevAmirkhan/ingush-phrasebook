@@ -6,13 +6,14 @@ function adminLogin(){
   if(!token) return alert("Введите GitHub Token");
   adminMode=true;
   githubToken=token;
+  localStorage.setItem("gh_token",token);
   document.getElementById("admin-status").textContent="✓ Админ";
-  if(currentData) renderPhrases();
+  if(currentData) renderPhrases(currentData.items);
 }
 
 function addPhrase(){
-  const ru=prompt("RU:");
-  const ing=prompt("ING:");
+  const ru=prompt("Русский:");
+  const ing=prompt("Ингушский:");
   const pron=prompt("PRON (латиница):");
   if(!ru||!ing||!pron) return;
   currentData.items.push({ru,ing,pron});
@@ -49,10 +50,12 @@ async function saveCategory(){
     },
     body:JSON.stringify({
       message:`Update ${currentCategory}`,
-      content:btoa(unescape(encodeURIComponent(JSON.stringify(currentData,null,2)))),
+      content:btoa(unescape(
+        encodeURIComponent(JSON.stringify(currentData,null,2))
+      )),
       sha
     })
   });
 
-  renderPhrases();
+  renderPhrases(currentData.items);
 }
