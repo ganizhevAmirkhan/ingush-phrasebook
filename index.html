@@ -1,87 +1,152 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<title>Ингушский разговорник</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Ингушский разговорник</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>
-body { margin:0; font-family:Arial; background:#f5f5f5 }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
 
-header {
-  background:#111;
-  color:#fff;
-  padding:10px;
-  display:flex;
-  gap:10px;
-  align-items:center;
-}
+    /* ===== Верхняя панель ===== */
+    header {
+      background: #111;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-header strong { white-space:nowrap }
+    header strong {
+      white-space: nowrap;
+    }
 
-#search-input {
-  flex:1;
-  padding:6px;
-}
+    #search-input {
+      flex: 1;
+      padding: 6px 8px;
+      border-radius: 4px;
+      border: none;
+    }
 
-#container {
-  display:flex;
-  height:calc(100vh - 52px);
-}
+    #gh-token {
+      width: 160px;
+      padding: 6px 8px;
+      border-radius: 4px;
+      border: none;
+    }
 
-#sidebar {
-  width:260px;
-  background:#eee;
-  padding:10px;
-  overflow:auto;
-}
+    header button {
+      padding: 6px 10px;
+      cursor: pointer;
+    }
 
-.category {
-  background:#fff;
-  padding:8px;
-  margin-bottom:6px;
-  cursor:pointer;
-  border-radius:5px;
-}
+    #admin-status {
+      color: #00ff00;
+      font-weight: bold;
+    }
 
-.category:hover { background:#e6e6e6 }
+    /* ===== Основная сетка ===== */
+    #container {
+      display: flex;
+      height: calc(100vh - 52px);
+    }
 
-#content-area {
-  flex:1;
-  padding:15px;
-  overflow:auto;
-}
+    /* ===== Категории ===== */
+    #sidebar {
+      width: 260px;
+      background: #eee;
+      padding: 10px;
+      overflow-y: auto;
+      border-right: 1px solid #ccc;
+    }
 
-.phrase {
-  background:#fff;
-  padding:10px;
-  margin-bottom:10px;
-  border-radius:6px;
-}
+    #sidebar h3 {
+      margin-top: 0;
+    }
 
-.audio-indicator { margin-left:6px }
-</style>
+    .category {
+      background: #fff;
+      padding: 8px;
+      margin-bottom: 6px;
+      border-radius: 5px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+    }
+
+    .category:hover {
+      background: #e6e6e6;
+    }
+
+    /* ===== Контент ===== */
+    #content-area {
+      flex: 1;
+      padding: 15px;
+      overflow-y: auto;
+    }
+
+    #content-title {
+      margin-top: 0;
+    }
+
+    .phrase {
+      background: #fff;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+    }
+
+    .phrase button {
+      margin-right: 6px;
+      cursor: pointer;
+    }
+
+    .audio-indicator {
+      margin-left: 6px;
+      font-size: 16px;
+    }
+  </style>
 </head>
 
 <body>
 
+<!-- ===== ВЕРХ ===== -->
 <header>
   <strong>Ингушский разговорник</strong>
 
-  <input id="search-input" placeholder="Поиск по фразам...">
+  <input
+    id="search-input"
+    type="text"
+    placeholder="Поиск по фразам..."
+  >
+
   <button onclick="searchPhrases()">Искать</button>
 
-  <input id="gh-token" type="password" placeholder="GitHub Token">
+  <input
+    id="gh-token"
+    type="password"
+    placeholder="GitHub Token"
+  >
+
   <button onclick="adminLogin()">Админ</button>
   <span id="admin-status"></span>
 </header>
 
+<!-- ===== ТЕЛО ===== -->
 <div id="container">
 
+  <!-- Левая панель -->
   <aside id="sidebar">
+    <h3>Категории</h3>
     <div id="category-list"></div>
   </aside>
 
+  <!-- Правая панель -->
   <main id="content-area">
     <h2 id="content-title">Выберите категорию</h2>
     <div id="content"></div>
@@ -89,8 +154,17 @@ header strong { white-space:nowrap }
 
 </div>
 
+<!-- ===== СКРИПТЫ (ПОРЯДОК ВАЖЕН) ===== -->
 <script src="script.js"></script>
 <script src="recorder.js"></script>
+
+<script>
+  // автоподстановка токена (если был введён ранее)
+  const savedToken = localStorage.getItem("gh_token");
+  if (savedToken) {
+    document.getElementById("gh-token").value = savedToken;
+  }
+</script>
 
 </body>
 </html>
