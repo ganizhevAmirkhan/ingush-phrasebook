@@ -68,11 +68,11 @@ function renderPhrases(items){
 
       ${adminMode ? `
         <button onclick="startRecording('${currentCategory.id}','${p.pron}')">🎤</button>
-      `:""}
+      ` : ""}
     `;
 
     c.appendChild(div);
-    checkAudio(currentCategory.id,i,file);
+    checkAudio(currentCategory.id, i, file);
   });
 
   if(adminMode){
@@ -92,7 +92,7 @@ async function searchPhrases(){
   const content = document.getElementById("content");
   content.innerHTML = "";
 
-  // 🔹 поиск внутри категории
+  // 🔹 поиск в текущей категории
   if(currentCategory && currentData){
     const res = currentData.items.filter(p =>
       p.ru.toLowerCase().includes(q) ||
@@ -139,19 +139,20 @@ async function searchPhrases(){
 /* ================== АУДИО ================== */
 
 function playAudio(cat,file){
-  new Audio(`audio/${cat}/${file}?v=${Date.now()`)
+  new Audio(`audio/${cat}/${file}?v=${Date.now()}`)
     .play()
     .catch(()=>alert("Аудио не найдено"));
 }
 
 function checkAudio(cat,i,file){
-  fetch(`audio/${cat}/${file}`,{method:"HEAD"})
+  fetch(`audio/${cat}/${file}`, { method:"HEAD" })
     .then(r=>{
       if(r.ok){
-        const el=document.getElementById(`ai-${cat}-${i}`);
+        const el = document.getElementById(`ai-${cat}-${i}`);
         if(el) el.textContent="🟢";
       }
-    });
+    })
+    .catch(()=>{});
 }
 
 /* ================== АДМИН ================== */
@@ -174,7 +175,7 @@ function addPhrase(){
   renderPhrases(currentData.items);
 }
 
-/* ================== ВСПОМОГАТЕЛЬНОЕ ================== */
+/* ================== УТИЛИТЫ ================== */
 
 function normalizePron(p){
   return p.toLowerCase().trim()
