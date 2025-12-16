@@ -1,70 +1,330 @@
 {
   "category": "basic_phrases",
   "items": [
-    { "ru": "Да", "ing": "Хьа", "pron": "kha" },
-    { "ru": "Нет", "ing": "Му", "pron": "mu" },
-    { "ru": "Может быть", "ing": "Мехка", "pron": "mehkha" },
-    { "ru": "Не знаю", "ing": "Сун хац", "pron": "sun khats" },
-    { "ru": "Я знаю", "ing": "Со кхийтав", "pron": "so khittav" },
-    { "ru": "Подожди", "ing": "Сабар де", "pron": "sabar de" },
-    { "ru": "Минуту", "ing": "Минута", "pron": "minuta" },
-    { "ru": "Сейчас", "ing": "Хьалха", "pron": "khalha" },
-    { "ru": "Потом", "ing": "Т1ехьа", "pron": "t1ekha" },
-    { "ru": "Рано", "ing": "Кхети", "pron": "kheti" },
-    { "ru": "Поздно", "ing": "Т1ехьана", "pron": "t1ekhana" },
-    { "ru": "Можно?", "ing": "Далуш?", "pron": "dalush" },
-    { "ru": "Нельзя", "ing": "Му далуш", "pron": "mu dalush" },
-    { "ru": "Я понял", "ing": "Со кхийтав", "pron": "so khittav" },
-    { "ru": "Я не понял", "ing": "Со кхитвац", "pron": "so khitvats" },
-    { "ru": "Говори медленнее", "ing": "Шортиг ладу", "pron": "shortig ladu" },
-    { "ru": "Повтори", "ing": "Даяккха", "pron": "dayakkha" },
-    { "ru": "Спасибо", "ing": "Баркалла", "pron": "barkalla" },
-    { "ru": "Пожалуйста", "ing": "Хьуна халд", "pron": "hyuna hald" },
-    { "ru": "Извини", "ing": "Къат1ер валл", "pron": "kater vall" },
-    { "ru": "Слушай", "ing": "Ладувх", "pron": "laduvkh" },
-    { "ru": "Смотри", "ing": "Хьажалахь", "pron": "khyazhalakh" },
-    { "ru": "Осторожно!", "ing": "Хьаьлха да!", "pron": "khalha da" },
-    { "ru": "Быстрее", "ing": "Марсха", "pron": "marsha" },
-    { "ru": "Медленнее", "ing": "Шортиг", "pron": "shortig" },
-    { "ru": "Хорошо", "ing": "Дика", "pron": "dika" },
-    { "ru": "Плохо", "ing": "Му", "pron": "mu" },
-    { "ru": "Я хочу", "ing": "Со безам ба", "pron": "so bezam ba" },
-    { "ru": "Мне нужно", "ing": "Са давах", "pron": "sa davakh" },
-    { "ru": "Я не хочу", "ing": "Со безам бац", "pron": "so bezam bats" },
-    { "ru": "Тише", "ing": "Шортиг", "pron": "shortig" },
-    { "ru": "Громче", "ing": "Кхетига", "pron": "khetiga" },
-    { "ru": "Я занят", "ing": "Со дӀаякха", "pron": "so d1ayakkha" },
-    { "ru": "Я свободен", "ing": "Со хьалха ву", "pron": "so khalha vu" },
-    { "ru": "Помоги мне", "ing": "Са г1о де", "pron": "sa g1o de" },
-    { "ru": "Мне трудно", "ing": "Са кхера", "pron": "sa khera" },
-    { "ru": "Мне легко", "ing": "Са т1еккха", "pron": "sa t1ekkha" },
-    { "ru": "Это правильно", "ing": "ХӀала дика", "pron": "h1ala dika" },
-    { "ru": "Это неправильно", "ing": "ХӀала му дика", "pron": "h1ala mu dika" },
-    { "ru": "Я согласен", "ing": "Со кхалха ву", "pron": "so khalha vu" },
-    { "ru": "Я не согласен", "ing": "Со му кхалха ву", "pron": "so mu khalha vu" },
-    { "ru": "Я устал", "ing": "Со къяд ваннув", "pron": "so kyad vannuv" },
-    { "ru": "Мне хочется спать", "ing": "Са йоаг1 безам ба", "pron": "sa yoag1 bezam ba" },
-    { "ru": "Мне холодно", "ing": "Са сердакха", "pron": "sa serdakha" },
-    { "ru": "Мне жарко", "ing": "Са кхетта", "pron": "sa khetta" },
-    { "ru": "Я голоден", "ing": "Со хий йа", "pron": "so khiy ya" },
-    { "ru": "Я хочу пить", "ing": "Со мал безам ба", "pron": "so mal bezam ba" },
-    { "ru": "Иди сюда", "ing": "Хьокха ца", "pron": "khyokha tsa" },
-    { "ru": "Иди туда", "ing": "Цугахь вуда", "pron": "tsugakh vuda" },
-    { "ru": "Стой", "ing": "Тха", "pron": "tcha" },
-    { "ru": "Стой здесь", "ing": "Тха хьокха", "pron": "tcha khyokha" },
-    { "ru": "Сюда", "ing": "Хьокха", "pron": "khyokha" },
-    { "ru": "Туда", "ing": "Цугахь", "pron": "tsugakh" },
-    { "ru": "Где это?", "ing": "ХӀалхача хьа?", "pron": "h1alkhacha kha" },
-    { "ru": "Почему?", "ing": "Мош?", "pron": "mosh" },
-    { "ru": "Зачем?", "ing": "Мош?", "pron": "mosh" },
-    { "ru": "Когда?", "ing": "Малха?", "pron": "malkha" },
-    { "ru": "Кто?", "ing": "Хо?", "pron": "kho" },
-    { "ru": "Что?", "ing": "Фо?", "pron": "fo" },
-    { "ru": "Сколько?", "ing": "Ца йа?", "pron": "tsa ya" },
-    { "ru": "Как?", "ing": "Мишта?", "pron": "mishta" },
-    { "ru": "Куда?", "ing": "Мича?", "pron": "micha" },
-    { "ru": "Откуда?", "ing": "Мичахьар?", "pron": "michakhar" },
-    { "ru": "Я иду", "ing": "Со вуда", "pron": "so vuda" },
-    { "ru": "Я приду позже", "ing": "Со т1ехьа хьа воаг1агва", "pron": "so t1ekha kha voag1agva" }
+    {
+      "ru": "Да",
+      "ing": "Хьа",
+      "pron": "kha"
+    },
+    {
+      "ru": "Нет",
+      "ing": "Дац",
+      "pron": "Datc"
+    },
+    {
+      "ru": "Может быть",
+      "ing": "Мехка",
+      "pron": "mehkha"
+    },
+    {
+      "ru": "Не знаю",
+      "ing": "Сун хац",
+      "pron": "sun khats"
+    },
+    {
+      "ru": "Я знаю",
+      "ing": "Со кхийтав",
+      "pron": "so khittav"
+    },
+    {
+      "ru": "Подожди",
+      "ing": "Сабар де",
+      "pron": "sabar de"
+    },
+    {
+      "ru": "Минуту",
+      "ing": "Минута",
+      "pron": "minuta"
+    },
+    {
+      "ru": "Сейчас",
+      "ing": "Хьалха",
+      "pron": "khalha"
+    },
+    {
+      "ru": "Потом",
+      "ing": "Т1ехьа",
+      "pron": "t1ekha"
+    },
+    {
+      "ru": "Рано",
+      "ing": "Кхети",
+      "pron": "kheti"
+    },
+    {
+      "ru": "Поздно",
+      "ing": "Т1ехьана",
+      "pron": "t1ekhana"
+    },
+    {
+      "ru": "Можно?",
+      "ing": "Далуш?",
+      "pron": "dalush"
+    },
+    {
+      "ru": "Нельзя",
+      "ing": "Му далуш",
+      "pron": "mu dalush"
+    },
+    {
+      "ru": "Я понял",
+      "ing": "Со кхийтав",
+      "pron": "so khittav"
+    },
+    {
+      "ru": "Я не понял",
+      "ing": "Со кхитвац",
+      "pron": "so khitvats"
+    },
+    {
+      "ru": "Говори медленнее",
+      "ing": "Шортиг ладу",
+      "pron": "shortig ladu"
+    },
+    {
+      "ru": "Повтори",
+      "ing": "Даяккха",
+      "pron": "dayakkha"
+    },
+    {
+      "ru": "Спасибо",
+      "ing": "Баркалла",
+      "pron": "barkalla"
+    },
+    {
+      "ru": "Пожалуйста",
+      "ing": "Хьуна халд",
+      "pron": "hyuna hald"
+    },
+    {
+      "ru": "Извини",
+      "ing": "Къат1ер валл",
+      "pron": "kater vall"
+    },
+    {
+      "ru": "Слушай",
+      "ing": "Ладувх",
+      "pron": "laduvkh"
+    },
+    {
+      "ru": "Смотри",
+      "ing": "Хьажалахь",
+      "pron": "khyazhalakh"
+    },
+    {
+      "ru": "Осторожно!",
+      "ing": "Хьаьлха да!",
+      "pron": "khalha da"
+    },
+    {
+      "ru": "Быстрее",
+      "ing": "Марсха",
+      "pron": "marsha"
+    },
+    {
+      "ru": "Медленнее",
+      "ing": "Шортиг",
+      "pron": "shortig"
+    },
+    {
+      "ru": "Хорошо",
+      "ing": "Дика",
+      "pron": "dika"
+    },
+    {
+      "ru": "Плохо",
+      "ing": "Му",
+      "pron": "mu"
+    },
+    {
+      "ru": "Я хочу",
+      "ing": "Со безам ба",
+      "pron": "so bezam ba"
+    },
+    {
+      "ru": "Мне нужно",
+      "ing": "Са давах",
+      "pron": "sa davakh"
+    },
+    {
+      "ru": "Я не хочу",
+      "ing": "Со безам бац",
+      "pron": "so bezam bats"
+    },
+    {
+      "ru": "Тише",
+      "ing": "Шортиг",
+      "pron": "shortig"
+    },
+    {
+      "ru": "Громче",
+      "ing": "Кхетига",
+      "pron": "khetiga"
+    },
+    {
+      "ru": "Я занят",
+      "ing": "Со дӀаякха",
+      "pron": "so d1ayakkha"
+    },
+    {
+      "ru": "Я свободен",
+      "ing": "Со хьалха ву",
+      "pron": "so khalha vu"
+    },
+    {
+      "ru": "Помоги мне",
+      "ing": "Са г1о де",
+      "pron": "sa g1o de"
+    },
+    {
+      "ru": "Мне трудно",
+      "ing": "Са кхера",
+      "pron": "sa khera"
+    },
+    {
+      "ru": "Мне легко",
+      "ing": "Са т1еккха",
+      "pron": "sa t1ekkha"
+    },
+    {
+      "ru": "Это правильно",
+      "ing": "ХӀала дика",
+      "pron": "h1ala dika"
+    },
+    {
+      "ru": "Это неправильно",
+      "ing": "ХӀала му дика",
+      "pron": "h1ala mu dika"
+    },
+    {
+      "ru": "Я согласен",
+      "ing": "Со кхалха ву",
+      "pron": "so khalha vu"
+    },
+    {
+      "ru": "Я не согласен",
+      "ing": "Со му кхалха ву",
+      "pron": "so mu khalha vu"
+    },
+    {
+      "ru": "Я устал",
+      "ing": "Со къяд ваннув",
+      "pron": "so kyad vannuv"
+    },
+    {
+      "ru": "Мне хочется спать",
+      "ing": "Са йоаг1 безам ба",
+      "pron": "sa yoag1 bezam ba"
+    },
+    {
+      "ru": "Мне холодно",
+      "ing": "Са сердакха",
+      "pron": "sa serdakha"
+    },
+    {
+      "ru": "Мне жарко",
+      "ing": "Са кхетта",
+      "pron": "sa khetta"
+    },
+    {
+      "ru": "Я голоден",
+      "ing": "Со хий йа",
+      "pron": "so khiy ya"
+    },
+    {
+      "ru": "Я хочу пить",
+      "ing": "Со мал безам ба",
+      "pron": "so mal bezam ba"
+    },
+    {
+      "ru": "Иди сюда",
+      "ing": "Хьокха ца",
+      "pron": "khyokha tsa"
+    },
+    {
+      "ru": "Иди туда",
+      "ing": "Цугахь вуда",
+      "pron": "tsugakh vuda"
+    },
+    {
+      "ru": "Стой",
+      "ing": "Тха",
+      "pron": "tcha"
+    },
+    {
+      "ru": "Стой здесь",
+      "ing": "Тха хьокха",
+      "pron": "tcha khyokha"
+    },
+    {
+      "ru": "Сюда",
+      "ing": "Хьокха",
+      "pron": "khyokha"
+    },
+    {
+      "ru": "Туда",
+      "ing": "Цугахь",
+      "pron": "tsugakh"
+    },
+    {
+      "ru": "Где это?",
+      "ing": "ХӀалхача хьа?",
+      "pron": "h1alkhacha kha"
+    },
+    {
+      "ru": "Почему?",
+      "ing": "Мош?",
+      "pron": "mosh"
+    },
+    {
+      "ru": "Зачем?",
+      "ing": "Мош?",
+      "pron": "mosh"
+    },
+    {
+      "ru": "Когда?",
+      "ing": "Малха?",
+      "pron": "malkha"
+    },
+    {
+      "ru": "Кто?",
+      "ing": "Хо?",
+      "pron": "kho"
+    },
+    {
+      "ru": "Что?",
+      "ing": "Фо?",
+      "pron": "fo"
+    },
+    {
+      "ru": "Сколько?",
+      "ing": "Ца йа?",
+      "pron": "tsa ya"
+    },
+    {
+      "ru": "Как?",
+      "ing": "Мишта?",
+      "pron": "mishta"
+    },
+    {
+      "ru": "Куда?",
+      "ing": "Мича?",
+      "pron": "micha"
+    },
+    {
+      "ru": "Откуда?",
+      "ing": "Мичахьар?",
+      "pron": "michakhar"
+    },
+    {
+      "ru": "Я иду",
+      "ing": "Со вуда",
+      "pron": "so vuda"
+    },
+    {
+      "ru": "Я приду позже",
+      "ing": "Со т1ехьа хьа воаг1агва",
+      "pron": "so t1ekha kha voag1agva"
+    }
   ]
 }
