@@ -3,41 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <title>Ингушский разговорник</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
-body{margin:0;font-family:Arial}
-header{background:#111;color:#fff;padding:10px;display:flex;gap:10px}
-input{padding:6px}
-#sidebar{width:260px;background:#eee;padding:10px}
-#content{padding:15px}
-.phrase{border:1px solid #ccc;padding:10px;margin-bottom:10px}
-.ok{color:#0a0;font-weight:bold}
+body { margin:0; font-family:Arial; background:#f5f5f5 }
+header { background:#111; color:#fff; padding:15px }
+#container { display:flex; height:calc(100vh - 60px) }
+#sidebar { width:250px; background:#eee; padding:10px; overflow:auto }
+.category { padding:8px; background:#fff; margin-bottom:5px; cursor:pointer }
+#content-area { flex:1; padding:15px; overflow:auto }
+.phrase { background:#fff; padding:10px; margin-bottom:10px }
+.audio-indicator { margin-left:8px }
+.has-audio { color:green }
 </style>
 </head>
 
 <body>
 
 <header>
-<b>Ингушский разговорник</b>
-<input id="search" placeholder="Поиск">
-<input id="gh-token" placeholder="GitHub Token" type="password">
-<button onclick="adminLogin()">Админ</button>
-<span id="admin-status"></span>
+  Ингушский разговорник
+  <input id="gh-token" type="password" placeholder="GitHub Token">
+  <button onclick="adminLogin()">Админ</button>
+  <span id="admin-status"></span>
 </header>
 
-<div style="display:flex;height:calc(100vh - 48px)">
-  <div id="sidebar"></div>
-  <div id="content"><h2>Выберите категорию</h2></div>
+<div id="container">
+  <aside id="sidebar">
+    <div id="category-list"></div>
+  </aside>
+
+  <main id="content-area">
+    <h2 id="content-title">Выберите категорию</h2>
+    <div id="content"></div>
+  </main>
 </div>
 
-<script src="github.js"></script>
-<script src="recorder.js"></script>
-<script src="script.js"></script>
+<!-- MP3 encoder -->
+<script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.0/lame.min.js"></script>
 
-<script>
-const t=localStorage.getItem("gh_token");
-if(t) document.getElementById("gh-token").value=t;
-</script>
+<script src="script.js"></script>
+<script src="admin.js"></script>
+<script src="recorder.js"></script>
 
 </body>
 </html>
