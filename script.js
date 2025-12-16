@@ -62,7 +62,7 @@ function renderPhrases(items){
       <b>PRON:</b> ${item.pron}<br>
 
       <button onclick="playAudio('${currentCategory}','${file}')">🔊</button>
-      <span class="audio-indicator" id="ai-${i}">⚪</span>
+      <span class="audio-indicator" id="ai-${currentCategory}-${i}">⚪</span>
 
       ${adminMode?`
         <button onclick="startRecording('${currentCategory}','${item.pron}')">🎤</button>
@@ -71,7 +71,7 @@ function renderPhrases(items){
       `:""}
     `;
     content.appendChild(div);
-    checkAudio(i,file);
+    checkAudio(currentCategory,i,file);
   });
 
   if(adminMode){
@@ -92,10 +92,13 @@ function playAudio(cat,file){
     .catch(()=>alert("Аудио не найдено"));
 }
 
-function checkAudio(i,file){
-  fetch(`audio/${currentCategory}/${file}`,{method:"HEAD"})
+function checkAudio(cat,i,file){
+  fetch(`audio/${cat}/${file}`,{method:"HEAD"})
     .then(r=>{
-      if(r.ok) document.getElementById(`ai-${i}`).textContent="🟢";
+      if(r.ok){
+        const el=document.getElementById(`ai-${cat}-${i}`);
+        if(el) el.textContent="🟢";
+      }
     });
 }
 
@@ -105,13 +108,47 @@ function normalizePron(p){
     .replace(/[^a-z0-9_]/g,"");
 }
 
-function searchPhrases(){
-  if(!currentData) return;
+/* 🔍 ГЛАВНОЕ: ПОИСК */
+async function searchPhrases(){
   const q=document.getElementById("search-input").value.toLowerCase();
-  const filtered=currentData.items.filter(it=>
-    `${it.ru} ${it.ing} ${it.pron}`.toLowerCase().includes(q)
-  );
-  renderPhrases(filtered);
+  if(!q) return;
+
+  // 🔹 Если категория выбрана — ищем в ней
+  if(currentCategory && currentData){
+    const filtered=currentData.items.filter(it =>
+      `${it.ru} ${it.ing} ${it.pron}`.toLowerCase().includes(q)
+    );
+    renderPhrases(filtered);
+    return;
+  }
+
+  // 🔹 Если категория НЕ выбрана — ищем по всем
+  document.getElementById("content-title").textContent="Результаты поиска";
+  const content=document.getElementById("content");
+  content.innerHTML="";
+
+  for(const c of categories){
+    try{
+      const res=await fetch(`categories/${c.id}.json`);
+      const data=await res.json();
+
+      data.items.forEach(item=>{
+        if(`${item.ru} ${item.ing} ${item.pron}`.toLowerCase().includes(q)){
+          const file=normalizePron(item.pron)+".mp3";
+          const div=document.createElement("div");
+          div.className="phrase";
+          div.innerHTML=`
+            <b>${c.ru}</b><br>
+            <b>RU:</b> ${item.ru}<br>
+            <b>ING:</b> ${item.ing}<br>
+            <b>PRON:</b> ${item.pron}<br>
+            <button onclick="playAudio('${c.id}','${file}')">🔊</button>
+          `;
+          content.appendChild(div);
+        }
+      });
+    }catch{}
+  }
 }
 
 function downloadCategory(){
