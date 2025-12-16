@@ -1,100 +1,58 @@
-const GH_OWNER = "ganizhevamirkhan";
-const GH_REPO  = "ingush-phrasebook";
-const GH_BRANCH = "main";
-
-// токен сохраняется автоматически
-const tokenInput = document.getElementById("gh-token");
-if (tokenInput) {
-  tokenInput.value = localStorage.getItem("gh_token") || "";
-  tokenInput.oninput = () =>
-    localStorage.setItem("gh_token", tokenInput.value);
-}
-
-// ========== АУДИО ==========
-async function uploadAudioToGitHub(blob, pron, category) {
-  const token = localStorage.getItem("gh_token");
-  if (!token) return alert("Введите GitHub Token");
-
-  const path = `audio/${category}/${pron}.webm`;
-  const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${path}`;
-
-  const content = await blobToBase64(blob);
+async function uploadToGitHub(path, content, token, message = "Update") {
+  const apiUrl = `https://api.github.com/repos/ganizhevamirkhan/ingush-phrasebook/contents/${path}`;
 
   let sha = null;
-  const check = await fetch(url, {
+
+  // Проверяем, существует ли файл
+  const check = await fetch(apiUrl, {
     headers: { Authorization: `token ${token}` }
   });
-  if (check.ok) sha = (await check.json()).sha;
 
-  const res = await fetch(url, {
+  if (check.ok) {
+    const data = await check.json();
+    sha = data.sha;
+  }
+
+  const body = {
+    message,
+    content: btoa(
+      typeof content === "string"
+        ? content
+        : JSON.stringify(content, null, 2)
+    ),
+    sha
+  };
+
+  const res = await fetch(apiUrl, {
     method: "PUT",
     headers: {
       Authorization: `token ${token}`,
       "Content-Type": "application/json"
     },
-    body: JSON.stringify({
-      message: `audio ${pron}`,
-      content,
-      sha,
-      branch: GH_BRANCH
-    })
+    body: JSON.stringify(body)
   });
 
   if (!res.ok) {
-    alert("Ошибка сохранения аудио");
-    return;
+    throw new Error("GitHub upload failed");
   }
 
-  alert("Аудио сохранено в GitHub");
+  return await res.json();
 }
 
-// ========== JSON КАТЕГОРИИ ==========
-async function saveCategoryToGitHub() {
-  const token = localStorage.getItem("gh_token");
-  if (!token) return alert("Введите GitHub Token");
+// ===== JSON =====
+async function uploadJSONToGitHub(path, json, token) {
+  return uploadToGitHub(path, json, token, "Update category");
+}
 
-  const path = `categories/${currentCategory}.json`;
-  const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${path}`;
-
-  let sha = null;
-  const check = await fetch(url, {
-    headers: { Authorization: `token ${token}` }
-  });
-  if (check.ok) sha = (await check.json()).sha;
-
-  const content = btoa(
-    unescape(encodeURIComponent(JSON.stringify(currentData, null, 2)))
+// ===== AUDIO =====
+async function uploadAudioToGitHub(path, blob, token) {
+  const buffer = await blob.arrayBuffer();
+  const base64 = btoa(
+    new Uint8Array(buffer).reduce(
+      (data, byte) => data + String.fromCharCode(byte),
+      ""
+    )
   );
 
-  const res = await fetch(url, {
-    method: "PUT",
-    headers: {
-      Authorization: `token ${token}`,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      message: `update ${currentCategory}`,
-      content,
-      sha,
-      branch: GH_BRANCH
-    })
-  });
-
-  if (!res.ok) {
-    alert("Ошибка сохранения категории");
-    return;
-  }
-
-  renderPhrases();
+  return uploadToGitHub(path, base64, token, "Add audio");
 }
-
-// ========== УТИЛИТА ==========
-function blobToBase64(blob) {
-  return new Promise(resolve => {
-    const reader = new FileReader();
-    reader.onloadend = () =>
-      resolve(reader.result.split(",")[1]);
-    reader.readAsDataURL(blob);
-  });
-}
-
