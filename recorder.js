@@ -1,35 +1,18 @@
-let mediaRecorder;
-let chunks = [];
+let recorder,chunks=[];
 
-async function startRecording(category, pron) {
-  const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-
-  mediaRecorder = new MediaRecorder(stream, {
-    mimeType: "audio/webm;codecs=opus",
-    audioBitsPerSecond: 32000
-  });
-
-  chunks = [];
-
-  mediaRecorder.ondataavailable = e => chunks.push(e.data);
-
-  mediaRecorder.onstop = async () => {
-    const blob = new Blob(chunks, { type: "audio/webm" });
-    const arrayBuffer = await blob.arrayBuffer();
-    const binary = String.fromCharCode(...new Uint8Array(arrayBuffer));
-
-    await githubPut(
-      `audio/${category}/${pron}.webm`,
-      binary,
-      `Add audio ${category}/${pron}`
-    );
-
+async function recordAudio(cat,pron){
+  const stream=await navigator.mediaDevices.getUserMedia({audio:true});
+  recorder=new MediaRecorder(stream,{mimeType:"audio/webm"});
+  chunks=[];
+  recorder.ondataavailable=e=>chunks.push(e.data);
+  recorder.onstop=async()=>{
+    const blob=new Blob(chunks);
+    const buf=await blob.arrayBuffer();
+    const bin=String.fromCharCode(...new Uint8Array(buf));
+    await putFile(`audio/${cat}/${pron}.webm`,bin,`audio ${pron}`);
     alert("Аудио сохранено в GitHub");
   };
-
-  mediaRecorder.start();
+  recorder.start();
 }
 
-function stopRecording() {
-  mediaRecorder.stop();
-}
+function stopAudio(){recorder.stop()}
