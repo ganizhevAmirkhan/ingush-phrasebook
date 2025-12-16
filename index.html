@@ -1,149 +1,42 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Ингушский разговорник</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-    }
-
-    header {
-      background: #111;
-      color: #fff;
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    header strong {
-      white-space: nowrap;
-    }
-
-    #search-input {
-      flex: 1;
-      padding: 6px 8px;
-      border-radius: 4px;
-      border: none;
-    }
-
-    #gh-token {
-      width: 170px;
-      padding: 6px 8px;
-      border-radius: 4px;
-      border: none;
-    }
-
-    header button {
-      padding: 6px 10px;
-      cursor: pointer;
-    }
-
-    #admin-status {
-      margin-left: 5px;
-      color: #0f0;
-      font-weight: bold;
-    }
-
-    #container {
-      display: flex;
-      height: calc(100vh - 52px);
-    }
-
-    #sidebar {
-      width: 260px;
-      background: #eee;
-      padding: 10px;
-      overflow-y: auto;
-      border-right: 1px solid #ccc;
-    }
-
-    .category {
-      background: #fff;
-      padding: 8px;
-      margin-bottom: 6px;
-      border-radius: 5px;
-      cursor: pointer;
-      border: 1px solid #ddd;
-    }
-
-    .category:hover {
-      background: #e6e6e6;
-    }
-
-    #content-area {
-      flex: 1;
-      padding: 15px;
-      overflow-y: auto;
-    }
-
-    .phrase {
-      background: #fff;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 6px;
-      border: 1px solid #ddd;
-    }
-
-    .phrase button {
-      margin-right: 6px;
-      cursor: pointer;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Ингушский разговорник</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{margin:0;font-family:Arial}
+header{background:#111;color:#fff;padding:10px;display:flex;gap:10px}
+input{padding:6px}
+#sidebar{width:260px;background:#eee;padding:10px}
+#content{padding:15px}
+.phrase{border:1px solid #ccc;padding:10px;margin-bottom:10px}
+.ok{color:#0a0;font-weight:bold}
+</style>
 </head>
 
 <body>
 
 <header>
-  <strong>Ингушский разговорник</strong>
-
-  <input
-    id="search-input"
-    type="text"
-    placeholder="Поиск по фразам..."
-    oninput="searchPhrases()"
-  >
-
-  <input
-    id="gh-token"
-    type="password"
-    placeholder="GitHub Token"
-  >
-
-  <button onclick="adminLogin()">Админ</button>
-  <span id="admin-status"></span>
+<b>Ингушский разговорник</b>
+<input id="search" placeholder="Поиск">
+<input id="gh-token" placeholder="GitHub Token" type="password">
+<button onclick="adminLogin()">Админ</button>
+<span id="admin-status"></span>
 </header>
 
-<div id="container">
-
-  <aside id="sidebar">
-    <h3>Категории</h3>
-    <div id="category-list"></div>
-  </aside>
-
-  <main id="content-area">
-    <h2 id="content-title">Выберите категорию</h2>
-    <div id="content"></div>
-  </main>
-
+<div style="display:flex;height:calc(100vh - 48px)">
+  <div id="sidebar"></div>
+  <div id="content"><h2>Выберите категорию</h2></div>
 </div>
 
-<!-- ⚠️ ПОРЯДОК СКРИПТОВ КРИТИЧЕН -->
 <script src="github.js"></script>
 <script src="recorder.js"></script>
 <script src="script.js"></script>
 
 <script>
-  // 🔐 автоподстановка токена
-  const savedToken = localStorage.getItem("gh_token");
-  if (savedToken) {
-    document.getElementById("gh-token").value = savedToken;
-  }
+const t=localStorage.getItem("gh_token");
+if(t) document.getElementById("gh-token").value=t;
 </script>
 
 </body>
