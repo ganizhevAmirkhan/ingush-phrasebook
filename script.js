@@ -1,63 +1,57 @@
-let adminMode = false;
-let currentCategory = null;
-let currentData = null;
+let admin=false,category=null,data=null;
 
-function adminLogin() {
-  const token = document.getElementById("gh-token").value;
-  setToken(token);
-  adminMode = true;
-  document.getElementById("admin-status").textContent = "✔";
+function adminLogin(){
+  setToken(document.getElementById("gh-token").value);
+  admin=true;
+  document.getElementById("admin-status").textContent="✓";
+  if(data) render();
 }
 
-async function loadCategory(cat) {
-  currentCategory = cat;
-  const res = await fetch(`categories/${cat}.json`);
-  currentData = await res.json();
+async function loadCategory(c){
+  category=c;
+  data=await (await fetch(`categories/${c}.json`)).json();
   render();
 }
 
-function render() {
-  const c = document.getElementById("content");
-  c.innerHTML = "";
+function render(){
+  const c=document.getElementById("content");
+  c.innerHTML=`<h2>${category}</h2>`;
 
-  currentData.items.forEach((p) => {
-    const div = document.createElement("div");
-    div.className = "phrase";
-
-    div.innerHTML = `
+  data.items.forEach(p=>{
+    c.innerHTML+=`
+    <div class="phrase">
       <b>RU:</b> ${p.ru}<br>
       <b>ING:</b> ${p.ing}<br>
-      <b>PRON:</b> ${p.pron}<br>
+      <b>PRON:</b> ${p.pron}
+      <span class="ok">●</span><br>
 
-      <button onclick="playAudio('${currentCategory}','${p.pron}')">🔊</button>
+      <button onclick="new Audio('audio/${category}/${p.pron}.webm').play()">🔊</button>
 
-      ${adminMode ? `
-        <button onclick="startRecording('${currentCategory}','${p.pron}')">🎤</button>
-        <button onclick="stopRecording()">⏹</button>
-      ` : ""}
-    `;
-
-    c.appendChild(div);
+      ${admin?`
+        <button onclick="recordAudio('${category}','${p.pron}')">🎤</button>
+        <button onclick="stopAudio()">⏹</button>
+      `:""}
+    </div>`;
   });
 
-  if (adminMode) {
-    const btn = document.createElement("button");
-    btn.textContent = "💾 Сохранить категорию";
-    btn.onclick = saveCategory;
-    c.appendChild(btn);
+  if(admin){
+    c.innerHTML+=`<button onclick="saveCategory()">💾 Сохранить категорию</button>`;
   }
 }
 
-function playAudio(cat, pron) {
-  const a = new Audio(`audio/${cat}/${pron}.webm`);
-  a.play().catch(() => alert("Аудио не найдено"));
+async function saveCategory(){
+  await putFile(
+    `categories/${category}.json`,
+    JSON.stringify(data,null,2),
+    `update ${category}`
+  );
+  alert("Категория сохранена");
 }
 
-async function saveCategory() {
-  await githubPut(
-    `categories/${currentCategory}.json`,
-    JSON.stringify(currentData, null, 2),
-    `Update ${currentCategory}`
-  );
-  alert("Категория сохранена в GitHub");
-}
+(async()=>{
+  const cats=await (await fetch("categories")).text();
+  document.getElementById("sidebar").innerHTML=
+    cats.match(/\w+\.json/g)
+    .map(f=>`<div onclick="loadCategory('${f.replace('.json','')}')">${f.replace('.json','')}</div>`)
+    .join("");
+})();
