@@ -1,220 +1,183 @@
-/* ================== ГЛОБАЛЬНЫЕ ДАННЫЕ ================== */
+/* ================== КАТЕГОРИИ ================== */
 
 const categories = [
-  { id: "greetings", title: "Приветствия" },
-  { id: "basic_phrases", title: "Основные фразы" },
-  { id: "personal_info", title: "Личные данные" },
-  { id: "family", title: "Семья" },
-  { id: "home", title: "Дом" },
-  { id: "food", title: "Еда" },
-  { id: "drinks", title: "Питьё" },
-  { id: "travel", title: "Путешествия" },
-  { id: "transport", title: "Транспорт" },
-  { id: "hunting", title: "Охота" },
-  { id: "danger", title: "Опасность" },
-  { id: "thermal", title: "Тепловизор" },
-  { id: "orientation", title: "Ориентация" },
-  { id: "weather", title: "Погода" },
-  { id: "emotions", title: "Эмоции" },
-  { id: "health", title: "Здоровье" },
-  { id: "help", title: "Помощь" },
-  { id: "commands", title: "Команды" },
-  { id: "tools", title: "Инструменты" },
-  { id: "animals", title: "Животные" },
-  { id: "time", title: "Время" },
-  { id: "numbers", title: "Числа" }
+  { id:"greetings", title:"Приветствия" },
+  { id:"basic_phrases", title:"Основные фразы" },
+  { id:"personal_info", title:"Личные данные" },
+  { id:"family", title:"Семья" },
+  { id:"home", title:"Дом" },
+  { id:"food", title:"Еда" },
+  { id:"drinks", title:"Питьё" },
+  { id:"travel", title:"Путешествия" },
+  { id:"transport", title:"Транспорт" },
+  { id:"hunting", title:"Охота" },
+  { id:"danger", title:"Опасность" }
 ];
 
 let currentCategory = null;
 let currentData = null;
 let adminMode = false;
 
-/* ================== ИНИЦИАЛИЗАЦИЯ ================== */
+/* ================== ЗАГРУЗКА ================== */
 
 window.onload = () => {
   renderCategories();
 };
 
-/* ================== КАТЕГОРИИ ================== */
-
-function renderCategories() {
+function renderCategories(){
   const list = document.getElementById("category-list");
   list.innerHTML = "";
 
-  categories.forEach(cat => {
-    const div = document.createElement("div");
-    div.className = "category";
-    div.textContent = cat.title;
-    div.onclick = () => loadCategory(cat.id, cat.title);
-    list.appendChild(div);
+  categories.forEach(cat=>{
+    const d = document.createElement("div");
+    d.className = "category";
+    d.textContent = cat.title;
+    d.onclick = ()=>loadCategory(cat);
+    list.appendChild(d);
   });
 }
 
-async function loadCategory(catId, title) {
-  currentCategory = catId;
-  document.getElementById("content-title").textContent = title;
+async function loadCategory(cat){
+  currentCategory = cat;
+  document.getElementById("content-title").textContent = cat.title;
 
-  const res = await fetch(`categories/${catId}.json`);
+  const res = await fetch(`categories/${cat.id}.json`);
   currentData = await res.json();
 
   renderPhrases(currentData.items);
 }
 
-/* ================== ОТОБРАЖЕНИЕ ФРАЗ ================== */
+/* ================== РЕНДЕР ================== */
 
-function renderPhrases(items) {
-  const content = document.getElementById("content");
-  content.innerHTML = "";
+function renderPhrases(items){
+  const c = document.getElementById("content");
+  c.innerHTML = "";
 
-  items.forEach((item, i) => {
+  items.forEach((p,i)=>{
+    const file = normalizePron(p.pron)+".mp3";
+
     const div = document.createElement("div");
-    div.className = "phrase";
-
+    div.className="phrase";
     div.innerHTML = `
-      <p><b>RU:</b> ${item.ru}</p>
-      <p><b>ING:</b> ${item.ing}</p>
-      <p><b>PRON:</b> ${item.pron}</p>
+      <p><b>RU:</b> ${p.ru}</p>
+      <p><b>ING:</b> ${p.ing}</p>
+      <p><b>PRON:</b> ${p.pron}</p>
 
-      <button onclick="playAudio('${currentCategory}','${item.pron}')">🔊</button>
-      <span class="audio-indicator" id="ai-${currentCategory}-${i}">⚪</span>
+      <button onclick="playAudio('${currentCategory.id}','${file}')">🔊</button>
+      <span id="ai-${currentCategory.id}-${i}" class="audio-indicator">⚪</span>
 
       ${adminMode ? `
-        <button onclick="startRecording('${currentCategory}','${item.pron}')">🎤</button>
-        <button onclick="editPhrase(${i})">✏</button>
-        <button onclick="deletePhrase(${i})">🗑</button>
-      ` : ""}
+        <button onclick="startRecording('${currentCategory.id}','${p.pron}')">🎤</button>
+      `:""}
     `;
 
-    content.appendChild(div);
-
-    checkAudio(currentCategory, i, item.pron);
+    c.appendChild(div);
+    checkAudio(currentCategory.id,i,file);
   });
-}
 
-/* ================== АУДИО ================== */
-
-function normalizePron(p) {
-  return p
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, "_")
-    .replace(/[^a-z0-9_]/g, "");
-}
-
-function playAudio(cat, pron) {
-  const file = normalizePron(pron) + ".mp3";
-  const url = `audio/${cat}/${file}?v=${Date.now()}`;
-
-  new Audio(url)
-    .play()
-    .catch(() =>
-      alert("Аудио ещё не доступно (GitHub Pages обновляется)")
-    );
-}
-
-/* 🟢 проверка наличия аудио */
-function checkAudio(cat, i, pron) {
-  const file = normalizePron(pron) + ".mp3";
-  const url = `audio/${cat}/${file}?v=${Date.now()}`;
-
-  fetch(url, { method: "HEAD", cache: "no-store" })
-    .then(r => {
-      if (r.ok) {
-        const el = document.getElementById(`ai-${cat}-${i}`);
-        if (el) el.textContent = "🟢";
-      }
-    })
-    .catch(() => {});
+  if(adminMode){
+    const b=document.createElement("button");
+    b.textContent="➕ Добавить фразу";
+    b.onclick=addPhrase;
+    c.appendChild(b);
+  }
 }
 
 /* ================== ПОИСК ================== */
 
-async function searchPhrases() {
+async function searchPhrases(){
   const q = document.getElementById("search-input").value.trim().toLowerCase();
-  if (!q) return;
+  if(!q) return;
 
-  // если категория выбрана — ищем в ней
-  if (currentCategory && currentData) {
-    const filtered = currentData.items.filter(i =>
-      i.ru.toLowerCase().includes(q) ||
-      i.ing.toLowerCase().includes(q) ||
-      i.pron.toLowerCase().includes(q)
+  const content = document.getElementById("content");
+  content.innerHTML = "";
+
+  // 🔹 поиск внутри категории
+  if(currentCategory && currentData){
+    const res = currentData.items.filter(p =>
+      p.ru.toLowerCase().includes(q) ||
+      p.ing.toLowerCase().includes(q) ||
+      p.pron.toLowerCase().includes(q)
     );
-    renderPhrases(filtered);
+    document.getElementById("content-title").textContent="Поиск в категории";
+    renderPhrases(res);
     return;
   }
 
-  // иначе — глобальный поиск
-  const results = [];
+  // 🔹 глобальный поиск
+  document.getElementById("content-title").textContent="Результаты поиска";
 
-  for (const cat of categories) {
-    const res = await fetch(`categories/${cat.id}.json`);
-    const data = await res.json();
+  for(const cat of categories){
+    const r = await fetch(`categories/${cat.id}.json`);
+    const d = await r.json();
 
-    data.items.forEach(item => {
-      if (
-        item.ru.toLowerCase().includes(q) ||
-        item.ing.toLowerCase().includes(q) ||
-        item.pron.toLowerCase().includes(q)
-      ) {
-        results.push({ ...item, _cat: cat });
-      }
+    const found = d.items.filter(p =>
+      p.ru.toLowerCase().includes(q) ||
+      p.ing.toLowerCase().includes(q) ||
+      p.pron.toLowerCase().includes(q)
+    );
+
+    if(!found.length) continue;
+
+    const h = document.createElement("h3");
+    h.textContent = cat.title;
+    content.appendChild(h);
+
+    found.forEach(p=>{
+      const div=document.createElement("div");
+      div.className="phrase";
+      div.innerHTML=`
+        <p><b>RU:</b> ${p.ru}</p>
+        <p><b>ING:</b> ${p.ing}</p>
+        <p><b>PRON:</b> ${p.pron}</p>
+      `;
+      content.appendChild(div);
     });
   }
-
-  renderGlobalResults(results);
 }
 
-function renderGlobalResults(items) {
-  const content = document.getElementById("content");
-  content.innerHTML = "";
-  document.getElementById("content-title").textContent = "Результаты поиска";
+/* ================== АУДИО ================== */
 
-  items.forEach(item => {
-    const div = document.createElement("div");
-    div.className = "phrase";
+function playAudio(cat,file){
+  new Audio(`audio/${cat}/${file}?v=${Date.now()`)
+    .play()
+    .catch(()=>alert("Аудио не найдено"));
+}
 
-    div.innerHTML = `
-      <p><b>[${item._cat.title}]</b></p>
-      <p><b>RU:</b> ${item.ru}</p>
-      <p><b>ING:</b> ${item.ing}</p>
-      <p><b>PRON:</b> ${item.pron}</p>
-
-      <button onclick="playAudio('${item._cat.id}','${item.pron}')">🔊</button>
-    `;
-
-    content.appendChild(div);
-  });
+function checkAudio(cat,i,file){
+  fetch(`audio/${cat}/${file}`,{method:"HEAD"})
+    .then(r=>{
+      if(r.ok){
+        const el=document.getElementById(`ai-${cat}-${i}`);
+        if(el) el.textContent="🟢";
+      }
+    });
 }
 
 /* ================== АДМИН ================== */
 
-function adminLogin() {
-  adminMode = true;
-  document.getElementById("admin-status").textContent = "✓ Админ";
-  if (currentData) renderPhrases(currentData.items);
+function adminLogin(){
+  const t=document.getElementById("gh-token").value.trim();
+  if(!t) return alert("Введите GitHub Token");
+  localStorage.setItem("gh_token",t);
+  adminMode=true;
+  document.getElementById("admin-status").textContent="✓ Админ";
+  if(currentData) renderPhrases(currentData.items);
 }
 
-function addPhrase() {
-  const ru = prompt("RU:");
-  const ing = prompt("ING:");
-  const pron = prompt("PRON (латиница):");
-  if (!ru || !ing || !pron) return;
-
-  currentData.items.push({ ru, ing, pron });
+function addPhrase(){
+  const ru=prompt("RU");
+  const ing=prompt("ING");
+  const pron=prompt("PRON");
+  if(!ru||!ing||!pron) return;
+  currentData.items.push({ru,ing,pron});
   renderPhrases(currentData.items);
 }
 
-function editPhrase(i) {
-  const it = currentData.items[i];
-  it.ru = prompt("RU", it.ru);
-  it.ing = prompt("ING", it.ing);
-  it.pron = prompt("PRON", it.pron);
-  renderPhrases(currentData.items);
-}
+/* ================== ВСПОМОГАТЕЛЬНОЕ ================== */
 
-function deletePhrase(i) {
-  if (!confirm("Удалить фразу?")) return;
-  currentData.items.splice(i, 1);
-  renderPhrases(currentData.items);
+function normalizePron(p){
+  return p.toLowerCase().trim()
+    .replace(/\s+/g,"_")
+    .replace(/[^a-z0-9_]/g,"");
 }
