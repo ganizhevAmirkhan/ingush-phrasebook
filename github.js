@@ -1,49 +1,33 @@
-const REPO = "ganizhevamirkhan/ingush-phrasebook";
-const BRANCH = "main";
+const REPO="ganizhevamirkhan/ingush-phrasebook";
+const BRANCH="main";
 
-function getToken() {
-  return localStorage.getItem("gh_token");
+function setToken(t){localStorage.setItem("gh_token",t)}
+function getToken(){return localStorage.getItem("gh_token")}
+
+function b64(s){
+  return btoa(unescape(encodeURIComponent(s)));
 }
 
-function setToken(t) {
-  localStorage.setItem("gh_token", t);
-}
+async function putFile(path,content,message){
+  const token=getToken();
+  if(!token) throw "NO TOKEN";
 
-function toBase64(str) {
-  return btoa(unescape(encodeURIComponent(str)));
-}
+  let sha=null;
+  const url=`https://api.github.com/repos/${REPO}/contents/${path}`;
+  const r=await fetch(url,{headers:{Authorization:`token ${token}`}});
+  if(r.ok) sha=(await r.json()).sha;
 
-async function githubPut(path, content, message) {
-  const token = getToken();
-  if (!token) throw new Error("Нет GitHub Token");
-
-  let sha = null;
-
-  const check = await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`, {
-    headers: { Authorization: `token ${token}` }
-  });
-
-  if (check.ok) {
-    const j = await check.json();
-    sha = j.sha;
-  }
-
-  const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`, {
-    method: "PUT",
-    headers: {
-      Authorization: `token ${token}`,
-      "Content-Type": "application/json"
+  await fetch(url,{
+    method:"PUT",
+    headers:{
+      Authorization:`token ${token}`,
+      "Content-Type":"application/json"
     },
-    body: JSON.stringify({
+    body:JSON.stringify({
       message,
-      content: toBase64(content),
+      content:b64(content),
       sha,
-      branch: BRANCH
+      branch:BRANCH
     })
   });
-
-  if (!res.ok) {
-    const t = await res.text();
-    throw new Error(t);
-  }
 }
