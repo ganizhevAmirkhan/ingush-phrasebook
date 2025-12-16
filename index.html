@@ -7,21 +7,37 @@
 
 <style>
 body { margin:0; font-family:Arial; background:#f5f5f5 }
-header { background:#111; color:#fff; padding:15px }
-#container { display:flex; height:calc(100vh - 60px) }
-#sidebar { width:250px; background:#eee; padding:10px; overflow:auto }
-.category { padding:8px; background:#fff; margin-bottom:5px; cursor:pointer }
+header {
+  background:#111; color:#fff; padding:12px;
+  display:flex; align-items:center; gap:10px;
+}
+#search-input { flex:1; padding:6px }
+#container { display:flex; height:calc(100vh - 54px) }
+#sidebar { width:260px; background:#eee; padding:10px; overflow:auto }
+.category {
+  background:#fff; padding:8px; margin-bottom:6px;
+  border-radius:6px; cursor:pointer;
+}
 #content-area { flex:1; padding:15px; overflow:auto }
-.phrase { background:#fff; padding:10px; margin-bottom:10px }
-.audio-indicator { margin-left:8px }
-.has-audio { color:green }
+.phrase {
+  background:#fff; padding:10px;
+  border-radius:8px; margin-bottom:10px;
+}
+.audio-indicator { margin-left:6px }
 </style>
 </head>
 
 <body>
 
 <header>
-  Ингушский разговорник
+  <b>Ингушский разговорник</b>
+
+  <input
+    id="search-input"
+    placeholder="Поиск по фразам…"
+    oninput="searchPhrases()"
+  >
+
   <input id="gh-token" type="password" placeholder="GitHub Token">
   <button onclick="adminLogin()">Админ</button>
   <span id="admin-status"></span>
@@ -44,6 +60,11 @@ header { background:#111; color:#fff; padding:15px }
 <script src="script.js"></script>
 <script src="admin.js"></script>
 <script src="recorder.js"></script>
+
+<script>
+const saved = localStorage.getItem("gh_token");
+if(saved) document.getElementById("gh-token").value = saved;
+</script>
 
 </body>
 </html>
