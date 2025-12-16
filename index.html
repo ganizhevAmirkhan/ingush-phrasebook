@@ -7,22 +7,58 @@
 
 <style>
 body { margin:0; font-family:Arial; background:#f5f5f5 }
+
 header {
-  background:#111; color:#fff; padding:12px;
-  display:flex; align-items:center; gap:8px;
+  background:#111;
+  color:#fff;
+  padding:10px;
+  display:flex;
+  gap:10px;
+  align-items:center;
 }
-#search-input { flex:1; padding:6px }
-#container { display:flex; height:calc(100vh - 54px) }
-#sidebar { width:260px; background:#eee; padding:10px; overflow:auto }
+
+header strong { white-space:nowrap }
+
+#search-input {
+  flex:1;
+  padding:6px;
+}
+
+#container {
+  display:flex;
+  height:calc(100vh - 52px);
+}
+
+#sidebar {
+  width:260px;
+  background:#eee;
+  padding:10px;
+  overflow:auto;
+}
+
 .category {
-  background:#fff; padding:8px; margin-bottom:6px;
-  border-radius:6px; cursor:pointer;
+  background:#fff;
+  padding:8px;
+  margin-bottom:6px;
+  cursor:pointer;
+  border-radius:5px;
 }
-#content-area { flex:1; padding:15px; overflow:auto }
+
+.category:hover { background:#e6e6e6 }
+
+#content-area {
+  flex:1;
+  padding:15px;
+  overflow:auto;
+}
+
 .phrase {
-  background:#fff; padding:10px;
-  border-radius:8px; margin-bottom:10px;
+  background:#fff;
+  padding:10px;
+  margin-bottom:10px;
+  border-radius:6px;
 }
+
 .audio-indicator { margin-left:6px }
 </style>
 </head>
@@ -30,13 +66,9 @@ header {
 <body>
 
 <header>
-  <b>Ингушский разговорник</b>
+  <strong>Ингушский разговорник</strong>
 
-  <input
-    id="search-input"
-    placeholder="Поиск по фразам…"
-  >
-
+  <input id="search-input" placeholder="Поиск по фразам...">
   <button onclick="searchPhrases()">Искать</button>
 
   <input id="gh-token" type="password" placeholder="GitHub Token">
@@ -45,6 +77,7 @@ header {
 </header>
 
 <div id="container">
+
   <aside id="sidebar">
     <div id="category-list"></div>
   </aside>
@@ -53,18 +86,11 @@ header {
     <h2 id="content-title">Выберите категорию</h2>
     <div id="content"></div>
   </main>
+
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.0/lame.min.js"></script>
-
 <script src="script.js"></script>
-<script src="admin.js"></script>
 <script src="recorder.js"></script>
-
-<script>
-const saved = localStorage.getItem("gh_token");
-if(saved) document.getElementById("gh-token").value = saved;
-</script>
 
 </body>
 </html>
