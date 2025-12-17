@@ -1,3 +1,14 @@
+// восстановление токена
+const savedToken = localStorage.getItem("gh_token");
+if (savedToken) {
+  githubToken = savedToken;
+  adminMode = true;
+  const input = document.getElementById("gh-token");
+  if (input) input.value = savedToken;
+  const st = document.getElementById("admin-status");
+  if (st) st.textContent = "✓ Админ";
+}
+
 window.adminMode=false;
 window.githubToken=null;
 
