@@ -68,17 +68,18 @@ window.onload = async () => {
   loadCategories();
   await preloadAllCategories();
 
+  const zipBtn = document.getElementById("download-zip");
+
   if (githubToken) {
     adminMode = true;
 
-    const tokenInput = document.getElementById("gh-token");
-    if (tokenInput) tokenInput.value = githubToken;
+    document.getElementById("gh-token").value = githubToken;
+    document.getElementById("admin-status").textContent = "✓ Админ";
 
-    const status = document.getElementById("admin-status");
-    if (status) status.textContent = "✓ Админ";
+    if (zipBtn) zipBtn.classList.remove("hidden");
+  } else {
+    if (zipBtn) zipBtn.classList.add("hidden");
   }
-
-  updateZipButton();
 };
 
 
@@ -179,6 +180,23 @@ function adminLogin(){
   localStorage.setItem("githubToken", token);
 
   document.getElementById("admin-status").textContent = "✓ Админ";
+window.onload = async () => {
+  loadCategories();
+  await preloadAllCategories();
+
+  const zipBtn = document.getElementById("download-zip");
+
+  if (githubToken) {
+    adminMode = true;
+
+    document.getElementById("gh-token").value = githubToken;
+    document.getElementById("admin-status").textContent = "✓ Админ";
+
+    if (zipBtn) zipBtn.classList.remove("hidden");
+  } else {
+    if (zipBtn) zipBtn.classList.add("hidden");
+  }
+};
 
   updateZipButton(); // ← ВАЖНО
 
@@ -277,6 +295,7 @@ function downloadZip(){
     "_blank"
   );
 }
+
 
 
 
