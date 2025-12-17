@@ -176,8 +176,13 @@ function adminLogin(){
   localStorage.setItem("githubToken", token);
 
   document.getElementById("admin-status").textContent = "✓ Админ";
+
+  // ✅ показать кнопку "Скачать архив"
+  document.getElementById("download-zip-btn")?.classList.remove("hidden");
+
   if(currentData) renderPhrases();
 }
+
 
 /* ================= SEARCH (ПРАВИЛЬНО) ================= */
 
@@ -388,4 +393,5 @@ function downloadZip(){
     "_blank"
   );
 }
+
 
