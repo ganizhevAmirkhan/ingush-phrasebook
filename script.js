@@ -240,3 +240,10 @@ document.addEventListener("click",e=>{
     hideSuggestions();
   }
 });
+function downloadZip(){
+  window.open(
+    "https://github.com/ganizhevAmirkhan/ingush-phrasebook/archive/refs/heads/main.zip",
+    "_blank"
+  );
+}
+
