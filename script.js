@@ -28,6 +28,7 @@ const categoryTitles = {
 
 let currentCategory = null;
 let currentData = null;
+
 let allPhrases = [];
 let searchResults = [];
 let currentView = "category";
@@ -41,7 +42,7 @@ window.onload = async () => {
   loadCategories();
   await preloadAllCategories();
 
-  if(githubToken){
+  if (githubToken) {
     adminMode = true;
     document.getElementById("admin-status").textContent = "✓ Админ";
     document.getElementById("download-zip").classList.remove("hidden");
@@ -55,22 +56,24 @@ function loadCategories(){
   const list = document.getElementById("category-list");
   list.innerHTML = "";
   categories.forEach(cat=>{
-    const d = document.createElement("div");
-    d.className = "category";
-    d.textContent = categoryTitles[cat];
-    d.onclick = () => loadCategory(cat);
+    const d=document.createElement("div");
+    d.className="category";
+    d.textContent=categoryTitles[cat];
+    d.onclick=()=>loadCategory(cat);
     list.appendChild(d);
   });
 }
 
 async function loadCategory(cat){
-  currentView = "category";
-  currentCategory = cat;
+  currentView="category";
+  currentCategory=cat;
+
   document.getElementById("content-title").textContent =
     categoryTitles[cat];
 
-  const r = await fetch(`categories/${cat}.json`);
-  currentData = await r.json();
+  const r=await fetch(`categories/${cat}.json`);
+  currentData=await r.json();
+
   renderCategory();
 }
 
@@ -83,7 +86,8 @@ function normalizePron(p){
 }
 
 function renderPhrase(item,i,cat){
-  const file = normalizePron(item.pron)+".mp3";
+  const file=normalizePron(item.pron)+".mp3";
+
   return `
   <div class="phrase">
     <p><b>ING:</b> ${item.ing}</p>
@@ -103,26 +107,41 @@ function renderPhrase(item,i,cat){
 }
 
 function renderCategory(){
-  const c = document.getElementById("content");
+  const c=document.getElementById("content");
   c.innerHTML="";
+
   currentData.items.forEach((it,i)=>{
-    c.insertAdjacentHTML("beforeend",
+    c.insertAdjacentHTML(
+      "beforeend",
       renderPhrase(it,i,currentCategory)
     );
-    checkAudio(`${currentCategory}-${i}`,
-      normalizePron(it.pron)+".mp3");
+    checkAudio(
+      `${currentCategory}-${i}`,
+      normalizePron(it.pron)+".mp3"
+    );
   });
+
+  if(adminMode){
+    const btn=document.createElement("button");
+    btn.textContent="➕ Добавить фразу";
+    btn.onclick=()=>addPhrase(currentCategory);
+    c.appendChild(btn);
+  }
 }
 
 function renderSearch(){
-  const c = document.getElementById("content");
+  const c=document.getElementById("content");
   c.innerHTML="";
+
   searchResults.forEach((p,i)=>{
-    c.insertAdjacentHTML("beforeend",
+    c.insertAdjacentHTML(
+      "beforeend",
       renderPhrase(p,i,p.category)
     );
-    checkAudio(`${p.category}-${i}`,
-      normalizePron(p.pron)+".mp3");
+    checkAudio(
+      `${p.category}-${i}`,
+      normalizePron(p.pron)+".mp3"
+    );
   });
 }
 
@@ -134,11 +153,11 @@ function renderCurrentView(){
 
 function playAudio(cat,file){
   new Audio(`audio/${cat}/${file}?v=${Date.now()}`).play()
-    .catch(()=>alert("Аудио ещё нет"));
+    .catch(()=>alert("Аудио нет"));
 }
 
 function checkAudio(id,file){
-  const cat = id.split("-")[0];
+  const cat=id.split("-")[0];
   fetch(`audio/${cat}/${file}`,{method:"HEAD"})
     .then(r=>{
       if(r.ok){
@@ -177,6 +196,68 @@ function downloadZip(){
   );
 }
 
+/* ================= CRUD ФРАЗ ================= */
+
+function addPhrase(cat){
+  const ru=prompt("Русский:");
+  const ing=prompt("Ингушский:");
+  const pron=prompt("Произношение (латиница):");
+
+  if(!ru||!ing||!pron) return;
+
+  currentData.items.push({ru,ing,pron});
+  saveCategory(cat);
+}
+
+function editPhrase(cat,i){
+  const it=currentData.items[i];
+
+  it.ru=prompt("Русский:",it.ru);
+  it.ing=prompt("Ингушский:",it.ing);
+  it.pron=prompt("Произношение:",it.pron);
+
+  saveCategory(cat);
+}
+
+function deletePhrase(cat,i){
+  if(!confirm("Удалить фразу?")) return;
+  currentData.items.splice(i,1);
+  saveCategory(cat);
+}
+
+/* ================= SAVE TO GITHUB ================= */
+
+async function saveCategory(cat){
+  if(!githubToken) return alert("Нет GitHub Token");
+
+  const path=`categories/${cat}.json`;
+  const url=`https://api.github.com/repos/ganizhevAmirkhan/ingush-phrasebook/contents/${path}`;
+
+  let sha=null;
+  const check=await fetch(url,{
+    headers:{Authorization:`token ${githubToken}`}
+  });
+  if(check.ok) sha=(await check.json()).sha;
+
+  await fetch(url,{
+    method:"PUT",
+    headers:{
+      Authorization:`token ${githubToken}`,
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify({
+      message:`Update ${cat}`,
+      content:btoa(unescape(
+        encodeURIComponent(JSON.stringify(currentData,null,2))
+      )),
+      sha
+    })
+  });
+
+  await preloadAllCategories();
+  renderCurrentView();
+}
+
 /* ================= SEARCH ================= */
 
 async function preloadAllCategories(){
@@ -192,15 +273,15 @@ async function preloadAllCategories(){
   }
 }
 
-const sInput = document.getElementById("global-search");
-const sBox   = document.getElementById("search-results");
+const sInput=document.getElementById("global-search");
+const sBox=document.getElementById("search-results");
 
 function hideSuggestions(){
   sBox.classList.add("hidden");
   sBox.innerHTML="";
 }
 
-sInput.oninput = () => {
+sInput.oninput=()=>{
   const q=sInput.value.toLowerCase().trim();
   sBox.innerHTML="";
 
@@ -210,7 +291,7 @@ sInput.oninput = () => {
   }
 
   allPhrases
-    .filter(p =>
+    .filter(p=>
       (p.ru||"").toLowerCase().includes(q) ||
       (p.ing||"").toLowerCase().includes(q) ||
       (p.pron||"").toLowerCase().includes(q)
@@ -231,14 +312,11 @@ sInput.oninput = () => {
   sBox.classList.remove("hidden");
 };
 
-document.getElementById("search-btn").onclick = doSearch;
+document.getElementById("search-btn").onclick=doSearch;
 
 function doSearch(){
   const q=sInput.value.toLowerCase().trim();
-  if(!q){
-    hideSuggestions();
-    return;
-  }
+  if(!q) return;
 
   currentView="search";
   hideSuggestions();
@@ -246,7 +324,7 @@ function doSearch(){
   document.getElementById("content-title").textContent =
     "Поиск: "+sInput.value;
 
-  searchResults=allPhrases.filter(p =>
+  searchResults=allPhrases.filter(p=>
     (p.ru||"").toLowerCase().includes(q) ||
     (p.ing||"").toLowerCase().includes(q) ||
     (p.pron||"").toLowerCase().includes(q)
