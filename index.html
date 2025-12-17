@@ -9,7 +9,7 @@
 body { margin:0; font-family:Arial; background:#f5f5f5 }
 header {
   background:#111; color:#fff; padding:12px;
-  display:flex; align-items:center; gap:8px;
+  display:flex; align-items:center; gap:10px;
 }
 #search-input { flex:1; padding:6px }
 #container { display:flex; height:calc(100vh - 54px) }
@@ -35,9 +35,8 @@ header {
   <input
     id="search-input"
     placeholder="Поиск по фразам…"
+    oninput="searchPhrases()"
   >
-
-  <button onclick="searchPhrases()">Искать</button>
 
   <input id="gh-token" type="password" placeholder="GitHub Token">
   <button onclick="adminLogin()">Админ</button>
@@ -55,6 +54,7 @@ header {
   </main>
 </div>
 
+<!-- MP3 encoder -->
 <script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.0/lame.min.js"></script>
 
 <script src="script.js"></script>
