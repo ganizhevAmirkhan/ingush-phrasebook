@@ -1,6 +1,5 @@
 async function startRecording(category,pron){
-  const token=githubToken;
-  if(!token) return alert("Нет GitHub Token");
+  if(!githubToken) return alert("Нет GitHub Token");
 
   const stream=await navigator.mediaDevices.getUserMedia({audio:true});
   const rec=new MediaRecorder(stream,{mimeType:"audio/webm"});
@@ -11,7 +10,7 @@ async function startRecording(category,pron){
     stream.getTracks().forEach(t=>t.stop());
     const webm=new Blob(chunks,{type:"audio/webm"});
     const mp3=await webmToMp3(webm);
-    uploadMp3(category,pron,mp3,token);
+    uploadMp3(category,pron,mp3);
   };
 
   rec.start();
@@ -36,13 +35,13 @@ async function webmToMp3(blob){
   return new Blob(mp3,{type:"audio/mp3"});
 }
 
-async function uploadMp3(cat,pron,blob,token){
+async function uploadMp3(cat,pron,blob){
   const file=normalizePron(pron)+".mp3";
   const path=`audio/${cat}/${file}`;
-  const url=`https://api.github.com/repos/ganizhevamirkhan/ingush-phrasebook/contents/${path}`;
+  const url=`https://api.github.com/repos/ganizhevAmirkhan/ingush-phrasebook/contents/${path}`;
 
   let sha=null;
-  const check=await fetch(url,{headers:{Authorization:`token ${token}`}});
+  const check=await fetch(url,{headers:{Authorization:`token ${githubToken}`}});
   if(check.ok) sha=(await check.json()).sha;
 
   const reader=new FileReader();
@@ -50,7 +49,7 @@ async function uploadMp3(cat,pron,blob,token){
     await fetch(url,{
       method:"PUT",
       headers:{
-        Authorization:`token ${token}`,
+        Authorization:`token ${githubToken}`,
         "Content-Type":"application/json"
       },
       body:JSON.stringify({
@@ -59,7 +58,7 @@ async function uploadMp3(cat,pron,blob,token){
         sha
       })
     });
-    renderPhrases(currentData.items);
+    renderCurrentView();
   };
   reader.readAsDataURL(blob);
 }
