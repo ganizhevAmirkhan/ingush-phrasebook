@@ -113,3 +113,32 @@ body {
 }
 
 .hidden { display:none; }
+
+/* ===== Поисковые подсказки ===== */
+.search-results {
+  position: absolute;
+  top: 42px;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  max-height: 260px;
+  overflow-y: auto;
+  z-index: 9999;
+}
+
+.search-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #111;          /* ← ВАЖНО */
+  font-size: 14px;
+  background: #fff;
+}
+
+.search-item:hover {
+  background: #f0f0f0;
+}
+
+.hidden {
+  display: none;
+}
