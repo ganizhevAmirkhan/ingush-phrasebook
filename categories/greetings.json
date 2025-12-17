@@ -3,8 +3,8 @@
   "items": [
     {
       "ru": "Приветствую",
-      "ing": "Салам Алейкум",
-      "pron": "Salam alekum"
+      "ing": null,
+      "pron": null
     },
     {
       "ru": "Здравствуйте",
