@@ -29,7 +29,7 @@ const categoryTitles = {
 let currentCategory = null;
 let currentData = null;
 
-let allPhrases = [];
+let allPhrases = [];      // {ru,ing,pron,category,index}
 let searchResults = [];
 let currentView = "category";
 
@@ -85,7 +85,7 @@ function normalizePron(p){
     .replace(/[^a-z0-9_]/g,"");
 }
 
-function renderPhrase(item,i,cat){
+function renderPhrase(item,cat){
   const file=normalizePron(item.pron)+".mp3";
 
   return `
@@ -96,12 +96,12 @@ function renderPhrase(item,i,cat){
     <i>${categoryTitles[cat]}</i><br>
 
     <button onclick="playAudio('${cat}','${file}')">▶</button>
-    <span id="ai-${cat}-${i}">⚪</span>
+    <span id="ai-${cat}-${item.index}">⚪</span>
 
     ${adminMode ? `
       <button onclick="startRecording('${cat}','${item.pron}')">🎤</button>
-      <button onclick="editPhrase('${cat}',${i})">✏</button>
-      <button onclick="deletePhrase('${cat}',${i})">🗑</button>
+      <button onclick="editPhrase('${cat}',${item.index})">✏</button>
+      <button onclick="deletePhrase('${cat}',${item.index})">🗑</button>
     ` : ""}
   </div>`;
 }
@@ -111,9 +111,10 @@ function renderCategory(){
   c.innerHTML="";
 
   currentData.items.forEach((it,i)=>{
+    const item={...it,index:i};
     c.insertAdjacentHTML(
       "beforeend",
-      renderPhrase(it,i,currentCategory)
+      renderPhrase(item,currentCategory)
     );
     checkAudio(
       `${currentCategory}-${i}`,
@@ -133,14 +134,14 @@ function renderSearch(){
   const c=document.getElementById("content");
   c.innerHTML="";
 
-  searchResults.forEach((p,i)=>{
+  searchResults.forEach(item=>{
     c.insertAdjacentHTML(
       "beforeend",
-      renderPhrase(p,i,p.category)
+      renderPhrase(item,item.category)
     );
     checkAudio(
-      `${p.category}-${i}`,
-      normalizePron(p.pron)+".mp3"
+      `${item.category}-${item.index}`,
+      normalizePron(item.pron)+".mp3"
     );
   });
 }
@@ -198,36 +199,45 @@ function downloadZip(){
 
 /* ================= CRUD ФРАЗ ================= */
 
-function addPhrase(cat){
+async function addPhrase(cat){
   const ru=prompt("Русский:");
   const ing=prompt("Ингушский:");
   const pron=prompt("Произношение (латиница):");
 
   if(!ru||!ing||!pron) return;
 
-  currentData.items.push({ru,ing,pron});
-  saveCategory(cat);
+  const r=await fetch(`categories/${cat}.json`);
+  const data=await r.json();
+
+  data.items.push({ru,ing,pron});
+  await saveCategory(cat,data);
 }
 
-function editPhrase(cat,i){
-  const it=currentData.items[i];
+async function editPhrase(cat,index){
+  const r=await fetch(`categories/${cat}.json`);
+  const data=await r.json();
+  const it=data.items[index];
 
   it.ru=prompt("Русский:",it.ru);
   it.ing=prompt("Ингушский:",it.ing);
   it.pron=prompt("Произношение:",it.pron);
 
-  saveCategory(cat);
+  await saveCategory(cat,data);
 }
 
-function deletePhrase(cat,i){
+async function deletePhrase(cat,index){
   if(!confirm("Удалить фразу?")) return;
-  currentData.items.splice(i,1);
-  saveCategory(cat);
+
+  const r=await fetch(`categories/${cat}.json`);
+  const data=await r.json();
+
+  data.items.splice(index,1);
+  await saveCategory(cat,data);
 }
 
 /* ================= SAVE TO GITHUB ================= */
 
-async function saveCategory(cat){
+async function saveCategory(cat,data){
   if(!githubToken) return alert("Нет GitHub Token");
 
   const path=`categories/${cat}.json`;
@@ -248,12 +258,13 @@ async function saveCategory(cat){
     body:JSON.stringify({
       message:`Update ${cat}`,
       content:btoa(unescape(
-        encodeURIComponent(JSON.stringify(currentData,null,2))
+        encodeURIComponent(JSON.stringify(data,null,2))
       )),
       sha
     })
   });
 
+  currentData = data;
   await preloadAllCategories();
   renderCurrentView();
 }
@@ -262,12 +273,18 @@ async function saveCategory(cat){
 
 async function preloadAllCategories(){
   allPhrases=[];
+
   for(const cat of categories){
     try{
       const r=await fetch(`categories/${cat}.json`);
       const d=await r.json();
-      d.items.forEach(it=>{
-        allPhrases.push({...it,category:cat});
+
+      d.items.forEach((it,i)=>{
+        allPhrases.push({
+          ...it,
+          category:cat,
+          index:i
+        });
       });
     }catch{}
   }
