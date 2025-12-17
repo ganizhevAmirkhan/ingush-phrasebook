@@ -51,14 +51,29 @@ window.githubToken = localStorage.getItem("githubToken");
 
 /* ================= INIT ================= */
 
-if (githubToken) {
-  adminMode = true;
-  document.getElementById("gh-token").value = githubToken;
-  document.getElementById("admin-status").textContent = "✓ Админ";
+/* ================= INIT ================= */
 
-  const zipBtn = document.getElementById("download-zip");
-  if (zipBtn) zipBtn.style.display = "block";
-}
+window.onload = async () => {
+  loadCategories();
+  await preloadAllCategories();
+
+  if (githubToken) {
+    adminMode = true;
+
+    const tokenInput = document.getElementById("gh-token");
+    if (tokenInput) tokenInput.value = githubToken;
+
+    const status = document.getElementById("admin-status");
+    if (status) status.textContent = "✓ Админ";
+
+    const zipBtn = document.getElementById("download-zip");
+    if (zipBtn) zipBtn.style.display = "block";
+  } else {
+    const zipBtn = document.getElementById("download-zip");
+    if (zipBtn) zipBtn.style.display = "none";
+  }
+};
+
 
 /* ================= CATEGORIES ================= */
 
@@ -387,6 +402,7 @@ function downloadZip(){
     "_blank"
   );
 }
+
 
 
 
