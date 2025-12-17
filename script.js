@@ -60,9 +60,6 @@ if (githubToken) {
   if (zipBtn) zipBtn.style.display = "block";
 }
 
-};
-
-
 /* ================= CATEGORIES ================= */
 
 function loadCategories(){
@@ -390,6 +387,7 @@ function downloadZip(){
     "_blank"
   );
 }
+
 
 
 
