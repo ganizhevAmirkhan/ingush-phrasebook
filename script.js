@@ -1,3 +1,5 @@
+/* ================= DATA ================= */
+
 const categories = [
  "greetings","basic_phrases","personal_info","family","home",
  "food","drinks","travel","transport","hunting",
@@ -45,11 +47,10 @@ let currentCategory = null;
 let currentData = null;
 let allPhrases = [];
 
-// Глобальные флаги как у тебя
+/* ================= GLOBAL STATE ================= */
+
 window.adminMode = false;
 window.githubToken = localStorage.getItem("githubToken");
-
-/* ================= INIT ================= */
 
 /* ================= INIT ================= */
 
@@ -57,23 +58,20 @@ window.onload = async () => {
   loadCategories();
   await preloadAllCategories();
 
+  const zipBtn = document.getElementById("download-zip");
+  const tokenInput = document.getElementById("gh-token");
+  const status = document.getElementById("admin-status");
+
   if (githubToken) {
     adminMode = true;
 
-    const tokenInput = document.getElementById("gh-token");
     if (tokenInput) tokenInput.value = githubToken;
-
-    const status = document.getElementById("admin-status");
     if (status) status.textContent = "✓ Админ";
-
-    const zipBtn = document.getElementById("download-zip");
-    if (zipBtn) zipBtn.style.display = "block";
+    if (zipBtn) zipBtn.classList.remove("hidden");
   } else {
-    const zipBtn = document.getElementById("download-zip");
-    if (zipBtn) zipBtn.style.display = "none";
+    if (zipBtn) zipBtn.classList.add("hidden");
   }
 };
-
 
 /* ================= CATEGORIES ================= */
 
@@ -92,16 +90,15 @@ function loadCategories(){
 
 async function loadCategory(cat){
   currentCategory = cat;
-
-  const title = document.getElementById("content-title");
-  if (title) title.textContent = categoryTitles[cat] || cat;
+  document.getElementById("content-title").textContent =
+    categoryTitles[cat] || cat;
 
   const res = await fetch(`categories/${cat}.json`);
   currentData = await res.json();
   renderPhrases();
 }
 
-/* ================= RENDER (КАТЕГОРИЯ) ================= */
+/* ================= RENDER ================= */
 
 function renderPhrases(){
   const content = document.getElementById("content");
@@ -116,7 +113,7 @@ function renderPhrases(){
       <p><b>ING:</b> ${item.ing || ""}</p>
       <p><b>RU:</b> ${item.ru || ""}</p>
       <p><b>PRON:</b> ${item.pron || ""}</p>
-      <i>${categoryTitles[currentCategory] || currentCategory}</i><br>
+      <i>${categoryTitles[currentCategory]}</i><br>
 
       <button onclick="playAudio('${currentCategory}','${file}')">▶</button>
       <span id="ai-${i}">⚪</span>
@@ -128,7 +125,7 @@ function renderPhrases(){
       ` : ""}
     `;
     content.appendChild(div);
-    checkAudio(i, file);
+    checkAudio(i,file);
   });
 
   if(adminMode){
@@ -146,24 +143,12 @@ function playAudio(cat,file){
     .catch(()=>alert("Аудио ещё не доступно"));
 }
 
-// Старый индикатор (для режима категории)
 function checkAudio(i,file){
   fetch(`audio/${currentCategory}/${file}`,{method:"HEAD"})
     .then(r=>{
       if(r.ok){
         const el = document.getElementById(`ai-${i}`);
-        if (el) el.textContent="🟢";
-      }
-    });
-}
-
-// Новый индикатор (для результатов поиска, где категория разная)
-function checkAudioForSpan(cat, spanId, file){
-  fetch(`audio/${cat}/${file}`,{method:"HEAD"})
-    .then(r=>{
-      if(r.ok){
-        const el = document.getElementById(spanId);
-        if (el) el.textContent = "🟢";
+        if(el) el.textContent="🟢";
       }
     });
 }
@@ -185,15 +170,12 @@ function adminLogin(){
   localStorage.setItem("githubToken", token);
 
   document.getElementById("admin-status").textContent = "✓ Админ";
-
-  const zipBtn = document.getElementById("download-zip");
-  if (zipBtn) zipBtn.style.display = "block";
+  document.getElementById("download-zip").classList.remove("hidden");
 
   if(currentData) renderPhrases();
 }
 
-
-/* ================= SEARCH (ПРАВИЛЬНО) ================= */
+/* ================= SEARCH ================= */
 
 async function preloadAllCategories(){
   allPhrases = [];
@@ -201,194 +183,77 @@ async function preloadAllCategories(){
     try{
       const r = await fetch(`categories/${cat}.json`);
       const d = await r.json();
-      (d.items || []).forEach(it=>{
-        allPhrases.push({
-          ru: it.ru || "",
-          ing: it.ing || "",
-          pron: it.pron || "",
-          category: cat
-        });
+      d.items.forEach(it=>{
+        allPhrases.push({...it, category: cat});
       });
     }catch{}
   }
 }
 
-// Элементы поиска
 const sInput = document.getElementById("global-search");
 const sBox   = document.getElementById("search-results");
-const sBtn   = document.getElementById("search-btn");
 
 function hideSuggestions(){
-  if (!sBox) return;
   sBox.classList.add("hidden");
-  sBox.innerHTML = "";
+  sBox.innerHTML="";
 }
 
-function showSuggestions(){
-  if (!sBox) return;
-  sBox.classList.remove("hidden");
-}
-
-// Внутренняя утилита: "что показать в подсказке"
-function suggestionText(p){
-  // если ru есть — показываем ru, иначе ing, иначе pron
-  const main = (p.ru || p.ing || p.pron || "").trim();
-  const catName = categoryTitles[p.category] || p.category;
-  return `${main} — ${catName}`;
-}
-
-// Внутренняя утилита: вставить подсказку в строку
-function applySuggestionToInput(p){
-  // В строку вставляем саму фразу (лучше RU, если есть)
-  const text = (p.ru || p.ing || p.pron || "").trim();
-  sInput.value = text;
-  hideSuggestions();
-  sInput.focus();
-}
-
-// Генерация подсказок при вводе
-if (sInput){
-  sInput.oninput = ()=>{
-    const q = sInput.value.toLowerCase().trim();
-    if (!sBox) return;
-
-    sBox.innerHTML = "";
-
-    if(q.length < 2){
-      hideSuggestions();
-      return;
-    }
-
-    const found = allPhrases
-      .filter(p =>
-        (p.ru||"").toLowerCase().includes(q) ||
-        (p.ing||"").toLowerCase().includes(q) ||
-        (p.pron||"").toLowerCase().includes(q)
-      )
-      .slice(0, 30);
-
-    if (found.length === 0){
-      hideSuggestions();
-      return;
-    }
-
-    found.forEach(p=>{
-      const d = document.createElement("div");
-      d.className = "search-item";
-      d.textContent = suggestionText(p);
-
-      // ВАЖНО: клик по подсказке НЕ грузит категорию,
-      // а просто вставляет текст и закрывает подсказки.
-      d.onclick = ()=> applySuggestionToInput(p);
-
-      sBox.appendChild(d);
-    });
-
-    showSuggestions();
-  };
-
-  // Enter = поиск
-  sInput.addEventListener("keydown", (e)=>{
-    if(e.key === "Enter"){
-      e.preventDefault();
-      doSearch();
-    } else if (e.key === "Escape"){
-      hideSuggestions();
-    }
-  });
-}
-
-// Поиск по кнопке
-if (sBtn){
-  sBtn.onclick = ()=> doSearch();
-}
-
-// Рендер одной карточки результата (чтобы были ▶ и индикатор)
-function renderSearchResultCard(p, idx){
-  const file = normalizePron(p.pron) + ".mp3";
-  const spanId = `sai-${idx}-${Math.random().toString(16).slice(2)}`;
-
-  const div = document.createElement("div");
-  div.className = "phrase";
-
-  // В поиске делаем безопасно: редактирование не показываем,
-  // потому что editPhrase/deletePhrase работают по индексу currentData текущей категории.
-  // Чтобы редактировать — даём кнопку открыть категорию.
-  div.innerHTML = `
-    <p><b>ING:</b> ${p.ing || ""}</p>
-    <p><b>RU:</b> ${p.ru || ""}</p>
-    <p><b>PRON:</b> ${p.pron || ""}</p>
-    <i>${categoryTitles[p.category] || p.category}</i><br>
-
-    <button onclick="playAudio('${p.category}','${file}')">▶</button>
-    <span id="${spanId}">⚪</span>
-
-    ${adminMode ? `
-      <button onclick="openCategoryFromSearch('${p.category}','${encodeURIComponent(p.pron || "")}')">✏ Открыть категорию</button>
-    ` : ""}
-  `;
-
-  // Проверяем аудио
-  checkAudioForSpan(p.category, spanId, file);
-
-  return div;
-}
-
-// Открыть категорию из результатов поиска (для редактирования в правильной логике)
-window.openCategoryFromSearch = async (cat, pronEnc)=>{
-  const pron = decodeURIComponent(pronEnc || "");
-  await loadCategory(cat);
-
-  // попробуем подсветить фразу по pron
-  setTimeout(()=>{
-    const content = document.getElementById("content");
-    if(!content) return;
-
-    const cards = content.querySelectorAll(".phrase");
-    for(const card of cards){
-      const text = card.innerText || "";
-      if(pron && text.includes(pron)){
-        card.scrollIntoView({behavior:"smooth", block:"center"});
-        card.style.outline = "3px solid #1f6feb";
-        setTimeout(()=> card.style.outline = "", 1200);
-        break;
-      }
-    }
-  }, 100);
-};
-
-function doSearch(){
-  if (!sInput) return;
+sInput.oninput = ()=>{
   const q = sInput.value.toLowerCase().trim();
-  if(!q) return;
+  sBox.innerHTML="";
 
-  // ВАЖНО: подсказки должны исчезать и не мешать
-  hideSuggestions();
-
-  const title = document.getElementById("content-title");
-  if (title) title.textContent = `Поиск: ${sInput.value}`;
-
-  const content = document.getElementById("content");
-  content.innerHTML = "";
-
-  const results = allPhrases.filter(p =>
-    (p.ru||"").toLowerCase().includes(q) ||
-    (p.ing||"").toLowerCase().includes(q) ||
-    (p.pron||"").toLowerCase().includes(q)
-  );
-
-  if(results.length === 0){
-    content.innerHTML = `<p>Ничего не найдено.</p>`;
+  if(q.length < 2){
+    hideSuggestions();
     return;
   }
 
-  results.forEach((p, idx)=>{
-    content.appendChild(renderSearchResultCard(p, idx));
+  allPhrases.filter(p=>
+    (p.ru||"").toLowerCase().includes(q) ||
+    (p.ing||"").toLowerCase().includes(q) ||
+    (p.pron||"").toLowerCase().includes(q)
+  ).slice(0,20).forEach(p=>{
+    const d = document.createElement("div");
+    d.className="search-item";
+    d.textContent = `${p.ru} — ${categoryTitles[p.category]}`;
+    d.onclick = ()=>{
+      sInput.value = p.ru;
+      hideSuggestions();
+    };
+    sBox.appendChild(d);
+  });
+
+  sBox.classList.remove("hidden");
+};
+
+document.getElementById("search-btn").onclick = doSearch;
+
+function doSearch(){
+  const q = sInput.value.toLowerCase().trim();
+  if(!q) return;
+
+  hideSuggestions();
+  document.getElementById("content-title").textContent = `Поиск: ${sInput.value}`;
+  const content = document.getElementById("content");
+  content.innerHTML="";
+
+  allPhrases.filter(p=>
+    (p.ru||"").toLowerCase().includes(q) ||
+    (p.ing||"").toLowerCase().includes(q) ||
+    (p.pron||"").toLowerCase().includes(q)
+  ).forEach(p=>{
+    const d=document.createElement("div");
+    d.className="phrase";
+    d.innerHTML=`
+      <p><b>ING:</b> ${p.ing}</p>
+      <p><b>RU:</b> ${p.ru}</p>
+      <p><b>PRON:</b> ${p.pron}</p>
+      <i>${categoryTitles[p.category]}</i>
+    `;
+    content.appendChild(d);
   });
 }
 
-// Закрывать подсказки кликом вне поиска
-document.addEventListener("click", e=>{
+document.addEventListener("click",e=>{
   if(!e.target.closest(".search-wrap")){
     hideSuggestions();
   }
@@ -402,8 +267,3 @@ function downloadZip(){
     "_blank"
   );
 }
-
-
-
-
-
