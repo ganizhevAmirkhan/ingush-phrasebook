@@ -1,230 +1,105 @@
 {
-  "category": "greetings",
+  "category": "animals",
   "items": [
     {
-      "ru": "Как дела",
-      "ing": "Миштад хьа г1улкаж",
-      "pron": "mishtad ha gulkaj"
+      "ru": "Животные",
+      "ing": "Хьйбаж",
+      "pron": "haibaj"
     },
     {
-      "ru": "Здравствуйте",
-      "ing": "Марша доаг1алд",
-      "pron": "marsha doag1ald"
+      "ru": "Животное",
+      "ing": "Дода",
+      "pron": "doda"
     },
     {
-      "ru": "Доброе утро",
-      "ing": "1уйре дик хейл",
-      "pron": "uire dik heil"
+      "ru": "Собака",
+      "ing": "Жали",
+      "pron": "Jail"
     },
     {
-      "ru": "Добрый вечер",
-      "ing": "Гув маршалла",
-      "pron": "guv marshalla"
+      "ru": "Кошка",
+      "ing": "Циск",
+      "pron": "tcisk"
     },
     {
-      "ru": "Как поживаешь?",
-      "ing": "Вахар миштад хьа",
-      "pron": "vakhar mishtad ha"
+      "ru": "Волк",
+      "ing": "Мокх",
+      "pron": "mokh"
     },
     {
-      "ru": "Рад тебя видеть",
-      "ing": "Со хьо гу вах шун",
-      "pron": "so kho gu vakh shun"
+      "ru": "Лиса",
+      "ing": "Кел",
+      "pron": "kel"
     },
     {
-      "ru": "Рад встрече с тобой",
-      "ing": "Со хьо дог1ийла шун",
-      "pron": "so kho dog1iyla shun"
+      "ru": "Кабан",
+      "ing": "Борг",
+      "pron": "borg"
     },
     {
-      "ru": "Давно не виделись",
-      "ing": "Дуьйре хьо гац ву",
-      "pron": "duyre kho gats vu"
+      "ru": "Олень",
+      "ing": "Керла",
+      "pron": "kerla"
     },
     {
-      "ru": "С приездом!",
-      "ing": "Воаг1алд маршалла!",
-      "pron": "voag1ald marshalla"
+      "ru": "Корова",
+      "ing": "Ц1ан",
+      "pron": "ts1an"
     },
     {
-      "ru": "Добро пожаловать",
-      "ing": "Марша бо!",
-      "pron": "marsha bo"
+      "ru": "Бык",
+      "ing": "Маъгъ",
+      "pron": "magh"
     },
     {
-      "ru": "Входите",
-      "ing": "Чуда!",
-      "pron": "chuda"
+      "ru": "Овца",
+      "ing": "Бокх",
+      "pron": "bokh"
     },
     {
-      "ru": "Проходите",
-      "ing": "Воаг1а!",
-      "pron": "voag1a"
+      "ru": "Коза",
+      "ing": "ГIов",
+      "pron": "g1ov"
     },
     {
-      "ru": "Как ты?",
-      "ing": "Мишта хьа?",
-      "pron": "mishta kha"
+      "ru": "Курица",
+      "ing": "Курза",
+      "pron": "kurza"
     },
     {
-      "ru": "Как вы?",
-      "ing": "Мишта шу?",
-      "pron": "mishta shu"
+      "ru": "Петух",
+      "ing": "Курза к1онг",
+      "pron": "kurza k1ong"
     },
     {
-      "ru": "Хорошо",
-      "ing": "Дика",
-      "pron": "dika"
+      "ru": "Медведь",
+      "ing": "Доьх",
+      "pron": "dyokh"
     },
     {
-      "ru": "Очень хорошо",
-      "ing": "Дика йо",
-      "pron": "dika yo"
+      "ru": "Барс",
+      "ing": "Ирх",
+      "pron": "irkh"
     },
     {
-      "ru": "Спасибо",
-      "ing": "Баркалла",
-      "pron": "barkalla"
+      "ru": "Он опасный зверь",
+      "ing": "Из аькъа йо",
+      "pron": "iz akqa yo"
     },
     {
-      "ru": "Большое спасибо",
-      "ing": "Дял ряз хал хьуна",
-      "pron": "dyal ryaz khal hyuna"
+      "ru": "Большой зверь",
+      "ing": "Ларча аькъа",
+      "pron": "larcha akqa"
     },
     {
-      "ru": "Пожалуйста (в ответ на спасибо)",
-      "ing": "Хьуна халд",
-      "pron": "hyuna hald"
+      "ru": "Маленький зверь",
+      "ing": "Керча аькъа",
+      "pron": "kercha akqa"
     },
     {
-      "ru": "Извини",
-      "ing": "Къат1ер валл",
-      "pron": "kater vall"
-    },
-    {
-      "ru": "Прощай",
-      "ing": "Санди аьттув",
-      "pron": "sandi attuv"
-    },
-    {
-      "ru": "До свидания",
-      "ing": "1адик хайла",
-      "pron": "1adik khaila"
-    },
-    {
-      "ru": "Увидимся позже",
-      "ing": "Т1ехьа хьа гуйнагва",
-      "pron": "t1ekha kha guynagva"
-    },
-    {
-      "ru": "Спокойной ночи",
-      "ing": "Йоьх маршалла",
-      "pron": "yokh marshalla"
-    },
-    {
-      "ru": "Слава Богу",
-      "ing": "Дал ба хоастам",
-      "pron": "dal ba khoastam"
-    },
-    {
-      "ru": "Как прошёл день?",
-      "ing": "Дев мишта ха?",
-      "pron": "dev mishta kha"
-    },
-    {
-      "ru": "Как утро?",
-      "ing": "Кхети мишта ха?",
-      "pron": "kheti mishta kha"
-    },
-    {
-      "ru": "Как вечер?",
-      "ing": "Гув мишта ха?",
-      "pron": "guv mishta kha"
-    },
-    {
-      "ru": "Приятно познакомиться",
-      "ing": "Со хьо дог1ийла шун",
-      "pron": "so kho dog1iyla shun"
-    },
-    {
-      "ru": "Рад знакомству",
-      "ing": "Со хьо дог1ийла шун",
-      "pron": "so kho dog1iyla shun"
-    },
-    {
-      "ru": "Как жизнь?",
-      "ing": "Кхет а хьа?",
-      "pron": "khet a kha"
-    },
-    {
-      "ru": "Нормально",
-      "ing": "Халха",
-      "pron": "khalkha"
-    },
-    {
-      "ru": "Слава Всевышнему",
-      "ing": "Аллах ба хоастам",
-      "pron": "allah ba khoastam"
-    },
-    {
-      "ru": "Очень рад",
-      "ing": "Шун йо",
-      "pron": "shun yo"
-    },
-    {
-      "ru": "Доброе время суток",
-      "ing": "Маршалла",
-      "pron": "marshalla"
-    },
-    {
-      "ru": "Пожелаю удачи",
-      "ing": "Къонах хил йу",
-      "pron": "konakh khil yu"
-    },
-    {
-      "ru": "С мира пришёл?",
-      "ing": "Маршалла воаг1а?",
-      "pron": "marshalla voag1a"
-    },
-    {
-      "ru": "С миром иди",
-      "ing": "Маршалла вуда",
-      "pron": "marshalla vuda"
-    },
-    {
-      "ru": "Садись",
-      "ing": "Де ца",
-      "pron": "de tsa"
-    },
-    {
-      "ru": "Прошу, присаживайся",
-      "ing": "Хьа де ца",
-      "pron": "kha de tsa"
-    },
-    {
-      "ru": "Заходи",
-      "ing": "Чуда",
-      "pron": "chuda"
-    },
-    {
-      "ru": "Заходите",
-      "ing": "Шу чуда",
-      "pron": "shu chuda"
-    },
-    {
-      "ru": "Иди сюда",
-      "ing": "Хьокха ца",
-      "pron": "khyokha tsa"
-    },
-    {
-      "ru": "Эй где ты",
-      "ing": "Ей мичав хьо",
-      "pron": "Ei michav ho"
-    },
-    {
-      "ru": "1",
-      "ing": "1",
-      "pron": "1"
+      "ru": "След зверя",
+      "ing": "Аькъа лар",
+      "pron": "akqa lar"
     }
   ]
 }
