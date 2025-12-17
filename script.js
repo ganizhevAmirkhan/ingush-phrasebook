@@ -160,7 +160,7 @@ function adminLogin(){
   if(currentData) renderPhrases();
 }
 
-/* ================= SEARCH ================= */
+/* ================= SEARCH (ИСПРАВЛЕНО) ================= */
 
 async function preloadAllCategories(){
   allPhrases = [];
@@ -192,18 +192,28 @@ sInput.oninput = ()=>{
     return;
   }
 
-  allPhrases.filter(p=>
+  const found = allPhrases.filter(p =>
     (p.ru||"").toLowerCase().includes(q) ||
     (p.ing||"").toLowerCase().includes(q) ||
     (p.pron||"").toLowerCase().includes(q)
-  ).slice(0,20).forEach(p=>{
+  ).slice(0,20);
+
+  found.forEach(p=>{
     const d = document.createElement("div");
     d.className="search-item";
     d.textContent = `${p.ru} — ${categoryTitles[p.category]}`;
+    d.onclick = ()=>{
+      sInput.value = p.ru;
+      hideSuggestions();
+    };
     sBox.appendChild(d);
   });
 
-  sBox.classList.remove("hidden");
+  if(found.length){
+    sBox.classList.remove("hidden");
+  }else{
+    hideSuggestions();
+  }
 };
 
 document.getElementById("search-btn").onclick = ()=>{
@@ -218,7 +228,7 @@ document.getElementById("search-btn").onclick = ()=>{
   const content = document.getElementById("content");
   content.innerHTML="";
 
-  allPhrases.filter(p=>
+  allPhrases.filter(p =>
     (p.ru||"").toLowerCase().includes(q) ||
     (p.ing||"").toLowerCase().includes(q) ||
     (p.pron||"").toLowerCase().includes(q)
@@ -240,10 +250,12 @@ document.addEventListener("click",e=>{
     hideSuggestions();
   }
 });
+
+/* ================= DOWNLOAD ================= */
+
 function downloadZip(){
   window.open(
     "https://github.com/ganizhevAmirkhan/ingush-phrasebook/archive/refs/heads/main.zip",
     "_blank"
   );
 }
-
