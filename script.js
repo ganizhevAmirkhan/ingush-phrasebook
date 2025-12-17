@@ -29,7 +29,7 @@ const categoryTitles = {
 let currentCategory = null;
 let currentData = null;
 
-let allPhrases = [];      // {ru,ing,pron,category,index}
+let allPhrases = [];   // {ru,ing,pron,category}
 let searchResults = [];
 let currentView = "category";
 
@@ -49,6 +49,14 @@ window.onload = async () => {
     document.getElementById("admin-logout").classList.remove("hidden");
   }
 };
+
+/* ================= UTILS ================= */
+
+function normalizePron(p){
+  return (p||"").toLowerCase().trim()
+    .replace(/\s+/g,"_")
+    .replace(/[^a-z0-9_]/g,"");
+}
 
 /* ================= CATEGORIES ================= */
 
@@ -79,29 +87,23 @@ async function loadCategory(cat){
 
 /* ================= RENDER ================= */
 
-function normalizePron(p){
-  return (p||"").toLowerCase().trim()
-    .replace(/\s+/g,"_")
-    .replace(/[^a-z0-9_]/g,"");
-}
-
-function renderPhrase(item,cat){
-  const file=normalizePron(item.pron)+".mp3";
+function renderPhrase(item){
+  const file = normalizePron(item.pron) + ".mp3";
 
   return `
   <div class="phrase">
     <p><b>ING:</b> ${item.ing}</p>
     <p><b>RU:</b> ${item.ru}</p>
     <p><b>PRON:</b> ${item.pron}</p>
-    <i>${categoryTitles[cat]}</i><br>
+    <i>${categoryTitles[item.category]}</i><br>
 
-    <button onclick="playAudio('${cat}','${file}')">▶</button>
-    <span id="ai-${cat}-${item.index}">⚪</span>
+    <button onclick="playAudio('${item.category}','${file}')">▶</button>
+    <span id="ai-${item.category}-${file}">⚪</span>
 
     ${adminMode ? `
-      <button onclick="startRecording('${cat}','${item.pron}')">🎤</button>
-      <button onclick="editPhrase('${cat}',${item.index})">✏</button>
-      <button onclick="deletePhrase('${cat}',${item.index})">🗑</button>
+      <button onclick="recordFromSearch('${item.category}','${item.pron}')">🎤</button>
+      <button onclick="editFromSearch('${item.category}','${item.pron}')">✏</button>
+      <button onclick="deleteFromSearch('${item.category}','${item.pron}')">🗑</button>
     ` : ""}
   </div>`;
 }
@@ -110,16 +112,12 @@ function renderCategory(){
   const c=document.getElementById("content");
   c.innerHTML="";
 
-  currentData.items.forEach((it,i)=>{
-    const item={...it,index:i};
+  currentData.items.forEach(it=>{
     c.insertAdjacentHTML(
       "beforeend",
-      renderPhrase(item,currentCategory)
+      renderPhrase({...it, category: currentCategory})
     );
-    checkAudio(
-      `${currentCategory}-${i}`,
-      normalizePron(it.pron)+".mp3"
-    );
+    checkAudio(currentCategory, it.pron);
   });
 
   if(adminMode){
@@ -134,15 +132,9 @@ function renderSearch(){
   const c=document.getElementById("content");
   c.innerHTML="";
 
-  searchResults.forEach(item=>{
-    c.insertAdjacentHTML(
-      "beforeend",
-      renderPhrase(item,item.category)
-    );
-    checkAudio(
-      `${item.category}-${item.index}`,
-      normalizePron(item.pron)+".mp3"
-    );
+  searchResults.forEach(it=>{
+    c.insertAdjacentHTML("beforeend", renderPhrase(it));
+    checkAudio(it.category, it.pron);
   });
 }
 
@@ -157,12 +149,12 @@ function playAudio(cat,file){
     .catch(()=>alert("Аудио нет"));
 }
 
-function checkAudio(id,file){
-  const cat=id.split("-")[0];
+function checkAudio(cat,pron){
+  const file = normalizePron(pron)+".mp3";
   fetch(`audio/${cat}/${file}`,{method:"HEAD"})
     .then(r=>{
       if(r.ok){
-        const el=document.getElementById(`ai-${id}`);
+        const el=document.getElementById(`ai-${cat}-${file}`);
         if(el) el.textContent="🟢";
       }
     });
@@ -197,48 +189,15 @@ function downloadZip(){
   );
 }
 
-/* ================= CRUD ФРАЗ ================= */
+/* ================= SEARCH CRUD (КЛЮЧЕВО!) ================= */
 
-async function addPhrase(cat){
-  const ru=prompt("Русский:");
-  const ing=prompt("Ингушский:");
-  const pron=prompt("Произношение (латиница):");
-
-  if(!ru||!ing||!pron) return;
-
-  const r=await fetch(`categories/${cat}.json`);
-  const data=await r.json();
-
-  data.items.push({ru,ing,pron});
-  await saveCategory(cat,data);
+async function loadCategoryData(cat){
+  const r = await fetch(`categories/${cat}.json`);
+  return await r.json();
 }
 
-async function editPhrase(cat,index){
-  const r=await fetch(`categories/${cat}.json`);
-  const data=await r.json();
-  const it=data.items[index];
-
-  it.ru=prompt("Русский:",it.ru);
-  it.ing=prompt("Ингушский:",it.ing);
-  it.pron=prompt("Произношение:",it.pron);
-
-  await saveCategory(cat,data);
-}
-
-async function deletePhrase(cat,index){
-  if(!confirm("Удалить фразу?")) return;
-
-  const r=await fetch(`categories/${cat}.json`);
-  const data=await r.json();
-
-  data.items.splice(index,1);
-  await saveCategory(cat,data);
-}
-
-/* ================= SAVE TO GITHUB ================= */
-
-async function saveCategory(cat,data){
-  if(!githubToken) return alert("Нет GitHub Token");
+async function saveCategoryData(cat,data){
+  if(!githubToken) return;
 
   const path=`categories/${cat}.json`;
   const url=`https://api.github.com/repos/ganizhevAmirkhan/ingush-phrasebook/contents/${path}`;
@@ -263,8 +222,58 @@ async function saveCategory(cat,data){
       sha
     })
   });
+}
 
-  currentData = data;
+/* --- операции из поиска --- */
+
+async function editFromSearch(cat,pron){
+  const data = await loadCategoryData(cat);
+  const idx = data.items.findIndex(
+    it => normalizePron(it.pron) === normalizePron(pron)
+  );
+  if(idx === -1) return alert("Фраза не найдена");
+
+  const it = data.items[idx];
+  it.ru = prompt("Русский:", it.ru);
+  it.ing = prompt("Ингушский:", it.ing);
+  it.pron = prompt("Произношение:", it.pron);
+
+  await saveCategoryData(cat,data);
+  await preloadAllCategories();
+  renderCurrentView();
+}
+
+async function deleteFromSearch(cat,pron){
+  if(!confirm("Удалить фразу?")) return;
+
+  const data = await loadCategoryData(cat);
+  const idx = data.items.findIndex(
+    it => normalizePron(it.pron) === normalizePron(pron)
+  );
+  if(idx === -1) return;
+
+  data.items.splice(idx,1);
+  await saveCategoryData(cat,data);
+  await preloadAllCategories();
+  renderCurrentView();
+}
+
+async function recordFromSearch(cat,pron){
+  await startRecording(cat,pron);
+}
+
+/* ================= ADD PHRASE ================= */
+
+async function addPhrase(cat){
+  const ru=prompt("Русский:");
+  const ing=prompt("Ингушский:");
+  const pron=prompt("Произношение (латиница):");
+  if(!ru||!ing||!pron) return;
+
+  const data = await loadCategoryData(cat);
+  data.items.push({ru,ing,pron});
+
+  await saveCategoryData(cat,data);
   await preloadAllCategories();
   renderCurrentView();
 }
@@ -273,18 +282,12 @@ async function saveCategory(cat,data){
 
 async function preloadAllCategories(){
   allPhrases=[];
-
   for(const cat of categories){
     try{
       const r=await fetch(`categories/${cat}.json`);
       const d=await r.json();
-
-      d.items.forEach((it,i)=>{
-        allPhrases.push({
-          ...it,
-          category:cat,
-          index:i
-        });
+      d.items.forEach(it=>{
+        allPhrases.push({...it, category:cat});
       });
     }catch{}
   }
@@ -309,9 +312,9 @@ sInput.oninput=()=>{
 
   allPhrases
     .filter(p=>
-      (p.ru||"").toLowerCase().includes(q) ||
-      (p.ing||"").toLowerCase().includes(q) ||
-      (p.pron||"").toLowerCase().includes(q)
+      p.ru.toLowerCase().includes(q) ||
+      p.ing.toLowerCase().includes(q) ||
+      p.pron.toLowerCase().includes(q)
     )
     .slice(0,20)
     .forEach(p=>{
@@ -342,9 +345,9 @@ function doSearch(){
     "Поиск: "+sInput.value;
 
   searchResults=allPhrases.filter(p=>
-    (p.ru||"").toLowerCase().includes(q) ||
-    (p.ing||"").toLowerCase().includes(q) ||
-    (p.pron||"").toLowerCase().includes(q)
+    p.ru.toLowerCase().includes(q) ||
+    p.ing.toLowerCase().includes(q) ||
+    p.pron.toLowerCase().includes(q)
   );
 
   renderSearch();
