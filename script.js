@@ -160,7 +160,7 @@ function adminLogin(){
   if(currentData) renderPhrases();
 }
 
-/* ================= SEARCH (ИСПРАВЛЕНО) ================= */
+/* ================= SEARCH ================= */
 
 async function preloadAllCategories(){
   allPhrases = [];
@@ -168,8 +168,12 @@ async function preloadAllCategories(){
     try{
       const r = await fetch(`categories/${cat}.json`);
       const d = await r.json();
-      d.items.forEach(it=>{
-        allPhrases.push({...it, category: cat});
+      d.items.forEach((it, index)=>{
+        allPhrases.push({
+          ...it,
+          category: cat,
+          index
+        });
       });
     }catch{}
   }
@@ -180,12 +184,13 @@ const sBox   = document.getElementById("search-results");
 
 function hideSuggestions(){
   sBox.classList.add("hidden");
-  sBox.innerHTML="";
+  sBox.innerHTML = "";
 }
 
+/* ---------- ПОДСКАЗКИ ---------- */
 sInput.oninput = ()=>{
   const q = sInput.value.toLowerCase().trim();
-  sBox.innerHTML="";
+  sBox.innerHTML = "";
 
   if(q.length < 2){
     hideSuggestions();
@@ -196,12 +201,17 @@ sInput.oninput = ()=>{
     (p.ru||"").toLowerCase().includes(q) ||
     (p.ing||"").toLowerCase().includes(q) ||
     (p.pron||"").toLowerCase().includes(q)
-  ).slice(0,20);
+  ).slice(0,15);
+
+  if(!found.length){
+    hideSuggestions();
+    return;
+  }
 
   found.forEach(p=>{
     const d = document.createElement("div");
-    d.className="search-item";
-    d.textContent = `${p.ru} — ${categoryTitles[p.category]}`;
+    d.className = "search-item";
+    d.textContent = p.ru;
     d.onclick = ()=>{
       sInput.value = p.ru;
       hideSuggestions();
@@ -209,13 +219,10 @@ sInput.oninput = ()=>{
     sBox.appendChild(d);
   });
 
-  if(found.length){
-    sBox.classList.remove("hidden");
-  }else{
-    hideSuggestions();
-  }
+  sBox.classList.remove("hidden");
 };
 
+/* ---------- КНОПКА ПОИСК ---------- */
 document.getElementById("search-btn").onclick = ()=>{
   const q = sInput.value.toLowerCase().trim();
   if(!q) return;
@@ -223,33 +230,61 @@ document.getElementById("search-btn").onclick = ()=>{
   hideSuggestions();
 
   document.getElementById("content-title").textContent =
-    `Поиск: ${sInput.value}`;
+    `Результаты поиска: ${sInput.value}`;
 
   const content = document.getElementById("content");
-  content.innerHTML="";
+  content.innerHTML = "";
 
-  allPhrases.filter(p =>
+  const results = allPhrases.filter(p =>
     (p.ru||"").toLowerCase().includes(q) ||
     (p.ing||"").toLowerCase().includes(q) ||
     (p.pron||"").toLowerCase().includes(q)
-  ).forEach(p=>{
-    const d=document.createElement("div");
-    d.className="phrase";
-    d.innerHTML=`
-      <p><b>ING:</b> ${p.ing}</p>
-      <p><b>RU:</b> ${p.ru}</p>
-      <p><b>PRON:</b> ${p.pron}</p>
-      <i>${categoryTitles[p.category]}</i>
+  );
+
+  if(!results.length){
+    content.innerHTML = "<p>Ничего не найдено</p>";
+    return;
+  }
+
+  results.forEach((item,i)=>{
+    const file = normalizePron(item.pron) + ".mp3";
+
+    const div = document.createElement("div");
+    div.className = "phrase";
+    div.innerHTML = `
+      <p><b>ING:</b> ${item.ing}</p>
+      <p><b>RU:</b> ${item.ru}</p>
+      <p><b>PRON:</b> ${item.pron}</p>
+      <i>${categoryTitles[item.category]}</i><br>
+
+      <button onclick="playAudio('${item.category}','${file}')">▶</button>
+      <span id="ai-search-${i}">⚪</span>
+
+      ${adminMode ? `
+        <button onclick="startRecording('${item.category}','${item.pron}')">🎤</button>
+        <button onclick="editPhrase(${item.index})">✏</button>
+        <button onclick="deletePhrase(${item.index})">🗑</button>
+      ` : ""}
     `;
-    content.appendChild(d);
+    content.appendChild(div);
+
+    fetch(`audio/${item.category}/${file}`,{method:"HEAD"})
+      .then(r=>{
+        if(r.ok){
+          document.getElementById(`ai-search-${i}`).textContent="🟢";
+        }
+      });
   });
 };
 
+/* ---------- КЛИК ВНЕ ПОИСКА ---------- */
 document.addEventListener("click",e=>{
   if(!e.target.closest(".search-wrap")){
     hideSuggestions();
   }
 });
+
+
 
 /* ================= DOWNLOAD ================= */
 
@@ -259,3 +294,4 @@ function downloadZip(){
     "_blank"
   );
 }
+
