@@ -1,4 +1,4 @@
-/* ====== ДАННЫЕ ====== */
+/* ================= DATA ================= */
 
 const categories = [
  "greetings","basic_phrases","personal_info","family","home",
@@ -24,7 +24,7 @@ const categoryTitles = {
  work:"Работа", misc:"Разное"
 };
 
-/* ====== СОСТОЯНИЕ ====== */
+/* ================= STATE ================= */
 
 let currentCategory = null;
 let currentData = null;
@@ -35,7 +35,7 @@ let currentView = "category";
 let adminMode = false;
 let githubToken = localStorage.getItem("githubToken");
 
-/* ====== INIT ====== */
+/* ================= INIT ================= */
 
 window.onload = async () => {
   loadCategories();
@@ -49,7 +49,7 @@ window.onload = async () => {
   }
 };
 
-/* ====== КАТЕГОРИИ ====== */
+/* ================= CATEGORIES ================= */
 
 function loadCategories(){
   const list = document.getElementById("category-list");
@@ -58,7 +58,7 @@ function loadCategories(){
     const d = document.createElement("div");
     d.className = "category";
     d.textContent = categoryTitles[cat];
-    d.onclick = ()=>loadCategory(cat);
+    d.onclick = () => loadCategory(cat);
     list.appendChild(d);
   });
 }
@@ -66,13 +66,15 @@ function loadCategories(){
 async function loadCategory(cat){
   currentView = "category";
   currentCategory = cat;
-  document.getElementById("content-title").textContent = categoryTitles[cat];
+  document.getElementById("content-title").textContent =
+    categoryTitles[cat];
+
   const r = await fetch(`categories/${cat}.json`);
   currentData = await r.json();
   renderCategory();
 }
 
-/* ====== РЕНДЕР ====== */
+/* ================= RENDER ================= */
 
 function normalizePron(p){
   return (p||"").toLowerCase().trim()
@@ -96,7 +98,7 @@ function renderPhrase(item,i,cat){
       <button onclick="startRecording('${cat}','${item.pron}')">🎤</button>
       <button onclick="editPhrase('${cat}',${i})">✏</button>
       <button onclick="deletePhrase('${cat}',${i})">🗑</button>
-    `:""}
+    ` : ""}
   </div>`;
 }
 
@@ -104,8 +106,11 @@ function renderCategory(){
   const c = document.getElementById("content");
   c.innerHTML="";
   currentData.items.forEach((it,i)=>{
-    c.insertAdjacentHTML("beforeend",renderPhrase(it,i,currentCategory));
-    checkAudio(`${currentCategory}-${i}`,normalizePron(it.pron)+".mp3");
+    c.insertAdjacentHTML("beforeend",
+      renderPhrase(it,i,currentCategory)
+    );
+    checkAudio(`${currentCategory}-${i}`,
+      normalizePron(it.pron)+".mp3");
   });
 }
 
@@ -113,8 +118,11 @@ function renderSearch(){
   const c = document.getElementById("content");
   c.innerHTML="";
   searchResults.forEach((p,i)=>{
-    c.insertAdjacentHTML("beforeend",renderPhrase(p,i,p.category));
-    checkAudio(`${p.category}-${i}`,normalizePron(p.pron)+".mp3");
+    c.insertAdjacentHTML("beforeend",
+      renderPhrase(p,i,p.category)
+    );
+    checkAudio(`${p.category}-${i}`,
+      normalizePron(p.pron)+".mp3");
   });
 }
 
@@ -122,15 +130,16 @@ function renderCurrentView(){
   currentView==="search" ? renderSearch() : renderCategory();
 }
 
-/* ====== АУДИО ====== */
+/* ================= AUDIO ================= */
 
 function playAudio(cat,file){
   new Audio(`audio/${cat}/${file}?v=${Date.now()}`).play()
-    .catch(()=>alert("Нет аудио"));
+    .catch(()=>alert("Аудио ещё нет"));
 }
 
 function checkAudio(id,file){
-  fetch(`audio/${id.split("-")[0]}/${file}`,{method:"HEAD"})
+  const cat = id.split("-")[0];
+  fetch(`audio/${cat}/${file}`,{method:"HEAD"})
     .then(r=>{
       if(r.ok){
         const el=document.getElementById(`ai-${id}`);
@@ -139,11 +148,12 @@ function checkAudio(id,file){
     });
 }
 
-/* ====== АДМИН ====== */
+/* ================= ADMIN ================= */
 
 function adminLogin(){
   const t=document.getElementById("gh-token").value.trim();
   if(!t) return alert("Введите GitHub Token");
+
   githubToken=t;
   adminMode=true;
   localStorage.setItem("githubToken",t);
@@ -151,6 +161,7 @@ function adminLogin(){
   document.getElementById("admin-status").textContent="✓ Админ";
   document.getElementById("download-zip").classList.remove("hidden");
   document.getElementById("admin-logout").classList.remove("hidden");
+
   renderCurrentView();
 }
 
@@ -166,28 +177,86 @@ function downloadZip(){
   );
 }
 
-/* ====== ПОИСК ====== */
+/* ================= SEARCH ================= */
 
 async function preloadAllCategories(){
   allPhrases=[];
   for(const cat of categories){
-    const r=await fetch(`categories/${cat}.json`);
-    const d=await r.json();
-    d.items.forEach(it=>allPhrases.push({...it,category:cat}));
+    try{
+      const r=await fetch(`categories/${cat}.json`);
+      const d=await r.json();
+      d.items.forEach(it=>{
+        allPhrases.push({...it,category:cat});
+      });
+    }catch{}
   }
 }
+
+const sInput = document.getElementById("global-search");
+const sBox   = document.getElementById("search-results");
+
+function hideSuggestions(){
+  sBox.classList.add("hidden");
+  sBox.innerHTML="";
+}
+
+sInput.oninput = () => {
+  const q=sInput.value.toLowerCase().trim();
+  sBox.innerHTML="";
+
+  if(q.length<2){
+    hideSuggestions();
+    return;
+  }
+
+  allPhrases
+    .filter(p =>
+      (p.ru||"").toLowerCase().includes(q) ||
+      (p.ing||"").toLowerCase().includes(q) ||
+      (p.pron||"").toLowerCase().includes(q)
+    )
+    .slice(0,20)
+    .forEach(p=>{
+      const d=document.createElement("div");
+      d.className="search-item";
+      d.textContent=`${p.ru} — ${categoryTitles[p.category]}`;
+      d.onclick=()=>{
+        sInput.value=p.ru;
+        hideSuggestions();
+        doSearch();
+      };
+      sBox.appendChild(d);
+    });
+
+  sBox.classList.remove("hidden");
+};
 
 document.getElementById("search-btn").onclick = doSearch;
 
 function doSearch(){
-  const q=document.getElementById("global-search").value.toLowerCase().trim();
-  if(!q) return;
+  const q=sInput.value.toLowerCase().trim();
+  if(!q){
+    hideSuggestions();
+    return;
+  }
+
   currentView="search";
-  document.getElementById("content-title").textContent="Поиск: "+q;
-  searchResults=allPhrases.filter(p=>
-    p.ru.toLowerCase().includes(q) ||
-    p.ing.toLowerCase().includes(q) ||
-    p.pron.toLowerCase().includes(q)
+  hideSuggestions();
+
+  document.getElementById("content-title").textContent =
+    "Поиск: "+sInput.value;
+
+  searchResults=allPhrases.filter(p =>
+    (p.ru||"").toLowerCase().includes(q) ||
+    (p.ing||"").toLowerCase().includes(q) ||
+    (p.pron||"").toLowerCase().includes(q)
   );
+
   renderSearch();
 }
+
+document.addEventListener("click",e=>{
+  if(!e.target.closest(".search-wrap")){
+    hideSuggestions();
+  }
+});
