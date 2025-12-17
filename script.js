@@ -168,12 +168,8 @@ async function preloadAllCategories(){
     try{
       const r = await fetch(`categories/${cat}.json`);
       const d = await r.json();
-      d.items.forEach((it, index)=>{
-        allPhrases.push({
-          ...it,
-          category: cat,
-          index
-        });
+      d.items.forEach(it=>{
+        allPhrases.push({...it, category: cat});
       });
     }catch{}
   }
@@ -187,9 +183,9 @@ function hideSuggestions(){
   sBox.innerHTML = "";
 }
 
-/* ---------- ПОДСКАЗКИ ---------- */
-sInput.oninput = ()=>{
-  const q = sInput.value.toLowerCase().trim();
+/* ===== ВЫПАДАЮЩИЕ ПОДСКАЗКИ ===== */
+sInput.oninput = () => {
+  const q = sInput.value.trim().toLowerCase();
   sBox.innerHTML = "";
 
   if(q.length < 2){
@@ -201,7 +197,7 @@ sInput.oninput = ()=>{
     (p.ru||"").toLowerCase().includes(q) ||
     (p.ing||"").toLowerCase().includes(q) ||
     (p.pron||"").toLowerCase().includes(q)
-  ).slice(0,15);
+  ).slice(0,20);
 
   if(!found.length){
     hideSuggestions();
@@ -211,79 +207,69 @@ sInput.oninput = ()=>{
   found.forEach(p=>{
     const d = document.createElement("div");
     d.className = "search-item";
-    d.textContent = p.ru;
-    d.onclick = ()=>{
+    d.textContent = `${p.ru} — ${categoryTitles[p.category]}`;
+
+    // ⬅️ ВАЖНО: только подставляем текст
+    d.onclick = () => {
       sInput.value = p.ru;
       hideSuggestions();
     };
+
     sBox.appendChild(d);
   });
 
   sBox.classList.remove("hidden");
 };
 
-/* ---------- КНОПКА ПОИСК ---------- */
-document.getElementById("search-btn").onclick = ()=>{
-  const q = sInput.value.toLowerCase().trim();
+/* ===== КНОПКА ПОИСК ===== */
+document.getElementById("search-btn").onclick = () => {
+  const q = sInput.value.trim().toLowerCase();
   if(!q) return;
 
   hideSuggestions();
 
   document.getElementById("content-title").textContent =
-    `Результаты поиска: ${sInput.value}`;
+    `Поиск: ${sInput.value}`;
 
   const content = document.getElementById("content");
   content.innerHTML = "";
 
-  const results = allPhrases.filter(p =>
+  const found = allPhrases.filter(p =>
     (p.ru||"").toLowerCase().includes(q) ||
     (p.ing||"").toLowerCase().includes(q) ||
     (p.pron||"").toLowerCase().includes(q)
   );
 
-  if(!results.length){
-    content.innerHTML = "<p>Ничего не найдено</p>";
-    return;
-  }
-
-  results.forEach((item,i)=>{
-    const file = normalizePron(item.pron) + ".mp3";
+  found.forEach(p=>{
+    const file = normalizePron(p.pron) + ".mp3";
 
     const div = document.createElement("div");
     div.className = "phrase";
     div.innerHTML = `
-      <p><b>ING:</b> ${item.ing}</p>
-      <p><b>RU:</b> ${item.ru}</p>
-      <p><b>PRON:</b> ${item.pron}</p>
-      <i>${categoryTitles[item.category]}</i><br>
+      <p><b>ING:</b> ${p.ing}</p>
+      <p><b>RU:</b> ${p.ru}</p>
+      <p><b>PRON:</b> ${p.pron}</p>
+      <i>${categoryTitles[p.category]}</i><br>
 
-      <button onclick="playAudio('${item.category}','${file}')">▶</button>
-      <span id="ai-search-${i}">⚪</span>
+      <button onclick="playAudio('${p.category}','${file}')">▶</button>
+      <span class="audio-indicator">⚪</span>
 
       ${adminMode ? `
-        <button onclick="startRecording('${item.category}','${item.pron}')">🎤</button>
-        <button onclick="editPhrase(${item.index})">✏</button>
-        <button onclick="deletePhrase(${item.index})">🗑</button>
+        <button onclick="startRecording('${p.category}','${p.pron}')">🎤</button>
+        <button onclick="editPhrase(${found.indexOf(p)})">✏</button>
+        <button onclick="deletePhrase(${found.indexOf(p)})">🗑</button>
       ` : ""}
     `;
     content.appendChild(div);
-
-    fetch(`audio/${item.category}/${file}`,{method:"HEAD"})
-      .then(r=>{
-        if(r.ok){
-          document.getElementById(`ai-search-${i}`).textContent="🟢";
-        }
-      });
   });
 };
 
-/* ---------- КЛИК ВНЕ ПОИСКА ---------- */
-document.addEventListener("click",e=>{
+/* ===== КЛИК ВНЕ ПОИСКА ===== */
+document.addEventListener("click", e=>{
   if(!e.target.closest(".search-wrap")){
     hideSuggestions();
   }
 });
-
 
 
 /* ================= DOWNLOAD ================= */
@@ -294,4 +280,5 @@ function downloadZip(){
     "_blank"
   );
 }
+
 
