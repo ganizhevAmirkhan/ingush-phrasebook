@@ -170,7 +170,8 @@ function adminLogin(){
   localStorage.setItem("githubToken", token);
 
   document.getElementById("admin-status").textContent = "✓ Админ";
-  document.getElementById("download-zip").classList.remove("hidden");
+
+  updateZipButton(); // ← ВАЖНО
 
   if(currentData) renderPhrases();
 }
@@ -267,4 +268,5 @@ function downloadZip(){
     "_blank"
   );
 }
+
 
