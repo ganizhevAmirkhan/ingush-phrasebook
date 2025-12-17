@@ -13,8 +13,8 @@
   <div class="title">Ингушский разговорник</div>
 
   <div class="search-wrap">
-    <input id="global-search" class="search"
-      type="text" placeholder="Поиск по всем фразам…" autocomplete="off">
+    <input id="global-search" class="search" type="text"
+           placeholder="Поиск по всем фразам…" autocomplete="off">
     <button id="search-btn" class="btn btn-primary">🔍</button>
     <div id="search-results" class="search-results hidden"></div>
   </div>
@@ -22,17 +22,18 @@
   <div class="admin-panel">
     <input id="gh-token" type="password" placeholder="GitHub Token">
     <button onclick="adminLogin()" class="btn btn-ghost">Админ</button>
+
+    <button id="download-zip"
+            class="btn btn-primary hidden"
+            onclick="downloadZip()">⬇ Архив</button>
+
+    <button id="admin-logout"
+            class="btn btn-ghost hidden"
+            onclick="adminLogout()">Выйти</button>
+
     <span id="admin-status" class="admin-status"></span>
   </div>
 </header>
-
-<!-- 🔽 КНОПКА СКАЧИВАНИЯ (ТОЛЬКО ДЛЯ АДМИНА) -->
-<button id="download-zip"
-        onclick="downloadZip()"
-        class="hidden">
-  ⬇ Скачать архив
-</button>
-
 
 <div class="layout">
   <aside class="sidebar">
@@ -46,9 +47,8 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.0/lame.min.js"></script>
-<script src="script.js"></script>
-<script src="admin.js"></script>
 <script src="recorder.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
