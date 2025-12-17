@@ -58,20 +58,19 @@ window.onload = async () => {
   loadCategories();
   await preloadAllCategories();
 
-  const zipBtn = document.getElementById("download-zip");
-  const tokenInput = document.getElementById("gh-token");
-  const status = document.getElementById("admin-status");
-
   if (githubToken) {
     adminMode = true;
 
+    const tokenInput = document.getElementById("gh-token");
     if (tokenInput) tokenInput.value = githubToken;
+
+    const status = document.getElementById("admin-status");
     if (status) status.textContent = "✓ Админ";
-    if (zipBtn) zipBtn.classList.remove("hidden");
-  } else {
-    if (zipBtn) zipBtn.classList.add("hidden");
   }
+
+  updateZipButton();
 };
+
 
 /* ================= CATEGORIES ================= */
 
@@ -268,5 +267,6 @@ function downloadZip(){
     "_blank"
   );
 }
+
 
 
