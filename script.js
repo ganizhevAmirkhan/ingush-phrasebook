@@ -55,15 +55,16 @@ window.onload = async () => {
   loadCategories();
   await preloadAllCategories();
 
-  // Восстановление токена
   if (githubToken) {
     adminMode = true;
-    const tokenInput = document.getElementById("gh-token");
-    if (tokenInput) tokenInput.value = githubToken;
-    const st = document.getElementById("admin-status");
-    if (st) st.textContent = "✓ Админ";
+    document.getElementById("gh-token").value = githubToken;
+    document.getElementById("admin-status").textContent = "✓ Админ";
+
+    // ✅ показать кнопку "Скачать архив"
+    document.getElementById("download-zip-btn")?.classList.remove("hidden");
   }
 };
+
 
 /* ================= CATEGORIES ================= */
 
@@ -387,3 +388,4 @@ function downloadZip(){
     "_blank"
   );
 }
+
