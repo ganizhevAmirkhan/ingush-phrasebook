@@ -2,6 +2,11 @@
   "category": "greetings",
   "items": [
     {
+      "ru": "Как дела",
+      "ing": "Миштад хьа г1улкаж",
+      "pron": "mishtad ha gulkaj"
+    },
+    {
       "ru": "Здравствуйте",
       "ing": "Марша доаг1алд",
       "pron": "marsha doag1ald"
@@ -215,6 +220,11 @@
       "ru": "Эй где ты",
       "ing": "Ей мичав хьо",
       "pron": "Ei michav ho"
+    },
+    {
+      "ru": "1",
+      "ing": "1",
+      "pron": "1"
     }
   ]
 }
