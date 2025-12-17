@@ -51,6 +51,16 @@ let allPhrases = [];
 
 window.adminMode = false;
 window.githubToken = localStorage.getItem("githubToken");
+function updateZipButton(){
+  const btn = document.getElementById("download-zip");
+  if(!btn) return;
+
+  if(adminMode){
+    btn.classList.remove("hidden");
+  } else {
+    btn.classList.add("hidden");
+  }
+}
 
 /* ================= INIT ================= */
 
@@ -267,6 +277,7 @@ function downloadZip(){
     "_blank"
   );
 }
+
 
 
 
