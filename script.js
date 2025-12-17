@@ -51,18 +51,15 @@ window.githubToken = localStorage.getItem("githubToken");
 
 /* ================= INIT ================= */
 
-window.onload = async () => {
-  loadCategories();
-  await preloadAllCategories();
+if (githubToken) {
+  adminMode = true;
+  document.getElementById("gh-token").value = githubToken;
+  document.getElementById("admin-status").textContent = "✓ Админ";
 
-  if (githubToken) {
-    adminMode = true;
-    document.getElementById("gh-token").value = githubToken;
-    document.getElementById("admin-status").textContent = "✓ Админ";
+  const zipBtn = document.getElementById("download-zip");
+  if (zipBtn) zipBtn.style.display = "block";
+}
 
-    // ✅ показать кнопку "Скачать архив"
-    document.getElementById("download-zip-btn")?.classList.remove("hidden");
-  }
 };
 
 
@@ -177,8 +174,8 @@ function adminLogin(){
 
   document.getElementById("admin-status").textContent = "✓ Админ";
 
-  // ✅ показать кнопку "Скачать архив"
-  document.getElementById("download-zip-btn")?.classList.remove("hidden");
+  const zipBtn = document.getElementById("download-zip");
+  if (zipBtn) zipBtn.style.display = "block";
 
   if(currentData) renderPhrases();
 }
@@ -393,5 +390,6 @@ function downloadZip(){
     "_blank"
   );
 }
+
 
 
