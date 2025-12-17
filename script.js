@@ -7,78 +7,71 @@ const categories = [
  "city","village","guests","communication","work","misc"
 ];
 
-// русские названия категорий
 const categoryTitles = {
- greetings:"Приветствия",
- basic_phrases:"Базовые фразы",
- personal_info:"Личная информация",
- family:"Семья",
- home:"Дом",
- food:"Еда",
- drinks:"Напитки",
- travel:"Путешествия",
- transport:"Транспорт",
- hunting:"Охота",
- danger:"Опасность",
- thermal:"Тепловизор",
- orientation:"Ориентирование",
- weather:"Погода",
- emotions:"Эмоции",
- health:"Здоровье",
- help:"Помощь",
- commands:"Команды",
- tools:"Инструменты",
- animals:"Животные",
- time:"Время",
- numbers:"Числа",
- colors:"Цвета",
- money:"Деньги",
- shop:"Магазин",
- city:"Город",
- village:"Деревня",
- guests:"Гости",
- communication:"Общение",
- work:"Работа",
- misc:"Разное"
+ greetings: "Приветствия",
+ basic_phrases: "Базовые фразы",
+ personal_info: "Личная информация",
+ family: "Семья",
+ home: "Дом",
+ food: "Еда",
+ drinks: "Напитки",
+ travel: "Путешествия",
+ transport: "Транспорт",
+ hunting: "Охота",
+ danger: "Опасность",
+ thermal: "Тепловизор",
+ orientation: "Ориентирование",
+ weather: "Погода",
+ emotions: "Эмоции",
+ health: "Здоровье",
+ help: "Помощь",
+ commands: "Команды",
+ tools: "Инструменты",
+ animals: "Животные",
+ time: "Время",
+ numbers: "Числа",
+ colors: "Цвета",
+ money: "Деньги",
+ shop: "Магазин",
+ city: "Город",
+ village: "Деревня",
+ guests: "Гости",
+ communication: "Общение",
+ work: "Работа",
+ misc: "Разное"
 };
 
 let currentCategory = null;
 let currentData = null;
 let allPhrases = [];
-let backupItems = null; // для возврата после поиска
+
+window.adminMode = false;
+window.githubToken = localStorage.getItem("githubToken");
 
 /* ================= INIT ================= */
 
-window.onload = async ()=>{
+window.onload = async () => {
   loadCategories();
-  restoreToken();
   await preloadAllCategories();
-};
 
-/* ================= TOKEN ================= */
-
-function restoreToken(){
-  const t = localStorage.getItem("gh-token");
-  if(t){
-    document.getElementById("gh-token").value = t;
+  if (githubToken) {
+    adminMode = true;
+    document.getElementById("gh-token").value = githubToken;
+    document.getElementById("admin-status").textContent = "✓ Админ";
   }
-}
-
-function saveToken(){
-  const t = document.getElementById("gh-token").value.trim();
-  if(t) localStorage.setItem("gh-token", t);
-}
+};
 
 /* ================= CATEGORIES ================= */
 
-function loadCategories() {
+function loadCategories(){
   const list = document.getElementById("category-list");
   list.innerHTML = "";
+
   categories.forEach(cat=>{
     const d = document.createElement("div");
-    d.className="category";
+    d.className = "category";
     d.textContent = categoryTitles[cat] || cat;
-    d.onclick = ()=> loadCategory(cat);
+    d.onclick = () => loadCategory(cat);
     list.appendChild(d);
   });
 }
@@ -90,7 +83,6 @@ async function loadCategory(cat){
 
   const res = await fetch(`categories/${cat}.json`);
   currentData = await res.json();
-  backupItems = null;
   renderPhrases();
 }
 
@@ -101,16 +93,17 @@ function renderPhrases(){
   content.innerHTML = "";
 
   currentData.items.forEach((item,i)=>{
-    const file = normalizePron(item.pron)+".mp3";
+    const file = normalizePron(item.pron) + ".mp3";
+
     const div = document.createElement("div");
-    div.className="phrase";
+    div.className = "phrase";
     div.innerHTML = `
       <p><b>ING:</b> ${item.ing}</p>
       <p><b>RU:</b> ${item.ru}</p>
       <p><b>PRON:</b> ${item.pron}</p>
       <i>${categoryTitles[currentCategory]}</i><br>
 
-      <button onclick="playAudio('${currentCategory}','${file}')">🔊</button>
+      <button onclick="playAudio('${currentCategory}','${file}')">▶</button>
       <span id="ai-${i}">⚪</span>
 
       ${adminMode ? `
@@ -140,19 +133,31 @@ function playAudio(cat,file){
 
 function checkAudio(i,file){
   fetch(`audio/${currentCategory}/${file}`,{method:"HEAD"})
-   .then(r=>{
-     if(r.ok){
-       const el = document.getElementById(`ai-${i}`);
-       if(el) el.textContent="🟢";
-     }
-   });
+    .then(r=>{
+      if(r.ok){
+        document.getElementById(`ai-${i}`).textContent="🟢";
+      }
+    });
 }
 
 function normalizePron(p){
-  return (p||"").toLowerCase()
-    .trim()
+  return (p||"").toLowerCase().trim()
     .replace(/\s+/g,"_")
     .replace(/[^a-z0-9_]/g,"");
+}
+
+/* ================= ADMIN ================= */
+
+function adminLogin(){
+  const token = document.getElementById("gh-token").value.trim();
+  if(!token) return alert("Введите GitHub Token");
+
+  githubToken = token;
+  adminMode = true;
+  localStorage.setItem("githubToken", token);
+
+  document.getElementById("admin-status").textContent = "✓ Админ";
+  if(currentData) renderPhrases();
 }
 
 /* ================= SEARCH ================= */
@@ -164,20 +169,26 @@ async function preloadAllCategories(){
       const r = await fetch(`categories/${cat}.json`);
       const d = await r.json();
       d.items.forEach(it=>{
-        allPhrases.push({...it, category:cat});
+        allPhrases.push({...it, category: cat});
       });
     }catch{}
   }
 }
 
 const sInput = document.getElementById("global-search");
-const sBox = document.getElementById("search-results");
+const sBox   = document.getElementById("search-results");
+
+function hideSuggestions(){
+  sBox.classList.add("hidden");
+  sBox.innerHTML="";
+}
 
 sInput.oninput = ()=>{
   const q = sInput.value.toLowerCase().trim();
   sBox.innerHTML="";
+
   if(q.length < 2){
-    sBox.classList.add("hidden");
+    hideSuggestions();
     return;
   }
 
@@ -185,7 +196,7 @@ sInput.oninput = ()=>{
     (p.ru||"").toLowerCase().includes(q) ||
     (p.ing||"").toLowerCase().includes(q) ||
     (p.pron||"").toLowerCase().includes(q)
-  ).slice(0,15).forEach(p=>{
+  ).slice(0,20).forEach(p=>{
     const d = document.createElement("div");
     d.className="search-item";
     d.textContent = `${p.ru} — ${categoryTitles[p.category]}`;
@@ -199,35 +210,33 @@ document.getElementById("search-btn").onclick = ()=>{
   const q = sInput.value.toLowerCase().trim();
   if(!q) return;
 
-  sBox.classList.add("hidden");
+  hideSuggestions();
 
-  if(!backupItems){
-    backupItems = currentData ? currentData.items : [];
-  }
-
-  currentCategory = "search";
   document.getElementById("content-title").textContent =
     `Поиск: ${sInput.value}`;
 
-  currentData = {
-    items: allPhrases.filter(p=>
-      (p.ru||"").toLowerCase().includes(q) ||
-      (p.ing||"").toLowerCase().includes(q) ||
-      (p.pron||"").toLowerCase().includes(q)
-    )
-  };
+  const content = document.getElementById("content");
+  content.innerHTML="";
 
-  renderPhrases();
+  allPhrases.filter(p=>
+    (p.ru||"").toLowerCase().includes(q) ||
+    (p.ing||"").toLowerCase().includes(q) ||
+    (p.pron||"").toLowerCase().includes(q)
+  ).forEach(p=>{
+    const d=document.createElement("div");
+    d.className="phrase";
+    d.innerHTML=`
+      <p><b>ING:</b> ${p.ing}</p>
+      <p><b>RU:</b> ${p.ru}</p>
+      <p><b>PRON:</b> ${p.pron}</p>
+      <i>${categoryTitles[p.category]}</i>
+    `;
+    content.appendChild(d);
+  });
 };
 
-/* ================= ADMIN ================= */
-
-function adminLogin(){
-  saveToken();
-  const token = document.getElementById("gh-token").value.trim();
-  if(!token) return alert("Введите GitHub Token");
-  adminMode = true;
-  githubToken = token;
-  document.getElementById("admin-status").textContent="✓ Админ";
-  if(currentData) renderPhrases();
-}
+document.addEventListener("click",e=>{
+  if(!e.target.closest(".search-wrap")){
+    hideSuggestions();
+  }
+});
