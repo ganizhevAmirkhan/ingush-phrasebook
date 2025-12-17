@@ -1,54 +1,180 @@
 {
   "category": "transport",
   "items": [
-    { "ru": "Машина", "ing": "Машин", "pron": "mashin" },
-    { "ru": "Автобус", "ing": "Автобус", "pron": "avtobus" },
-    { "ru": "Грузовик", "ing": "Газик", "pron": "gazik" },
-    { "ru": "Такси", "ing": "Такси", "pron": "taksi" },
-
-    { "ru": "Ехать", "ing": "Вуда", "pron": "vuda" },
-    { "ru": "Я еду", "ing": "Со вуда", "pron": "so vuda" },
-    { "ru": "Ты едешь?", "ing": "Хьа вуда?", "pron": "kha vuda" },
-
-    { "ru": "Поехали!", "ing": "Вуда хьа!", "pron": "vuda kha" },
-    { "ru": "Стой!", "ing": "Тха!", "pron": "tcha" },
-
-    { "ru": "Поедем медленно", "ing": "Шортиг вуда", "pron": "shortig vuda" },
-    { "ru": "Поедем быстрее", "ing": "Марсха вуда", "pron": "marsha vuda" },
-
-    { "ru": "Поверни налево", "ing": "Чехьала вуда", "pron": "chekhala vuda" },
-    { "ru": "Поверни направо", "ing": "Бархала вуда", "pron": "barkhala vuda" },
-
-    { "ru": "Остановись здесь", "ing": "Хьокха тха", "pron": "khyokha tcha" },
-    { "ru": "Остановись там", "ing": "Цугахь тха", "pron": "tsugakh tcha" },
-
-    { "ru": "Где остановка?", "ing": "Остановка хьа?", "pron": "ostanovka kha" },
-
-    { "ru": "Я водитель", "ing": "Со вудашка", "pron": "so vudashka" },
-    { "ru": "Он водитель", "ing": "Из вудашка", "pron": "iz vudashka" },
-
-    { "ru": "Сломалась машина", "ing": "Машин т1аккха", "pron": "mashin t1akkha" },
-    { "ru": "Машина работает", "ing": "Машин лоца", "pron": "mashin lotsa" },
-    { "ru": "Машина не работает", "ing": "Машин му лоца", "pron": "mashin mu lotsa" },
-
-    { "ru": "Заправка", "ing": "Заправка", "pron": "zapravka" },
-    { "ru": "Где заправка?", "ing": "Заправка хьа?", "pron": "zapravka kha" },
-
-    { "ru": "Заправь", "ing": "Заправ дуйла", "pron": "zaprav duyla" },
-    { "ru": "Бензин", "ing": "Бензин", "pron": "benzin" },
-    { "ru": "Дизель", "ing": "Дизель", "pron": "dizel" },
-
-    { "ru": "Мне нужно в город", "ing": "Са шахь давах", "pron": "sa shah davakh" },
-    { "ru": "Мне нужно в село", "ing": "Са гӀалачче давах", "pron": "sa ghalachche davakh" },
-
-    { "ru": "Сколько стоит поездка?", "ing": "Вудай ца йа?", "pron": "vuday tsa ya" },
-    { "ru": "Дорого", "ing": "Далга", "pron": "dalga" },
-    { "ru": "Дёшево", "ing": "Ца далга", "pron": "tsa dalga" },
-
-    { "ru": "Опасная дорога", "ing": "Кхерме гота", "pron": "kherme gota" },
-    { "ru": "Хорошая дорога", "ing": "Дика гота", "pron": "dika gota" },
-
-    { "ru": "Где водитель?", "ing": "Вудашка хьа?", "pron": "vudashka kha" },
-    { "ru": "Где машина?", "ing": "Машин хьа?", "pron": "mashin kha" }
+    {
+      "ru": "Машина",
+      "ing": "Машин",
+      "pron": "mashin"
+    },
+    {
+      "ru": "Автобус",
+      "ing": "Автобус",
+      "pron": "avtobus"
+    },
+    {
+      "ru": "Грузовик",
+      "ing": "Газик",
+      "pron": "gazik"
+    },
+    {
+      "ru": "Такси",
+      "ing": "Такси",
+      "pron": "taksi"
+    },
+    {
+      "ru": "Ехать",
+      "ing": "Вуда",
+      "pron": "vuda"
+    },
+    {
+      "ru": "Я еду",
+      "ing": "Со вуда",
+      "pron": "so vuda"
+    },
+    {
+      "ru": "Ты едешь?",
+      "ing": "Хьа вуда?",
+      "pron": "kha vuda"
+    },
+    {
+      "ru": "Поехали!",
+      "ing": "Вуда хьа!",
+      "pron": "vuda kha"
+    },
+    {
+      "ru": "Стой!",
+      "ing": "Тха!",
+      "pron": "tcha"
+    },
+    {
+      "ru": "Поедем медленно",
+      "ing": "Шортиг вуда",
+      "pron": "shortig vuda"
+    },
+    {
+      "ru": "Поедем быстрее",
+      "ing": "Марсха вуда",
+      "pron": "marsha vuda"
+    },
+    {
+      "ru": "Поверни налево",
+      "ing": "Чехьала вуда",
+      "pron": "chekhala vuda"
+    },
+    {
+      "ru": "Поверни направо",
+      "ing": "Бархала вуда",
+      "pron": "barkhala vuda"
+    },
+    {
+      "ru": "Остановись здесь",
+      "ing": "Хьокха тха",
+      "pron": "khyokha tcha"
+    },
+    {
+      "ru": "Остановись там",
+      "ing": "Цугахь тха",
+      "pron": "tsugakh tcha"
+    },
+    {
+      "ru": "Где остановка?",
+      "ing": "Остановка хьа?",
+      "pron": "ostanovka kha"
+    },
+    {
+      "ru": "Я водитель",
+      "ing": "Со вудашка",
+      "pron": "so vudashka"
+    },
+    {
+      "ru": "Он водитель",
+      "ing": "Из вудашка",
+      "pron": "iz vudashka"
+    },
+    {
+      "ru": "Сломалась машина",
+      "ing": "Машин т1аккха",
+      "pron": "mashin t1akkha"
+    },
+    {
+      "ru": "Машина работает",
+      "ing": "Машин лоца",
+      "pron": "mashin lotsa"
+    },
+    {
+      "ru": "Машина не работает",
+      "ing": "Машин му лоца",
+      "pron": "mashin mu lotsa"
+    },
+    {
+      "ru": "Заправка",
+      "ing": "Заправка",
+      "pron": "zapravka"
+    },
+    {
+      "ru": "Где заправка?",
+      "ing": "Заправка хьа?",
+      "pron": "zapravka kha"
+    },
+    {
+      "ru": "Заправь",
+      "ing": "Заправ дуйла",
+      "pron": "zaprav duyla"
+    },
+    {
+      "ru": "Бензин",
+      "ing": "Бензин",
+      "pron": "benzin"
+    },
+    {
+      "ru": "Дизель",
+      "ing": "Дизель",
+      "pron": "dizel"
+    },
+    {
+      "ru": "Мне нужно в город",
+      "ing": "Са шахь давах",
+      "pron": "sa shah davakh"
+    },
+    {
+      "ru": "Мне нужно в село",
+      "ing": "Са гӀалачче давах",
+      "pron": "sa ghalachche davakh"
+    },
+    {
+      "ru": "Сколько стоит поездка?",
+      "ing": "Вудай ца йа?",
+      "pron": "vuday tsa ya"
+    },
+    {
+      "ru": "Дорого",
+      "ing": "Далга",
+      "pron": "dalga"
+    },
+    {
+      "ru": "Дёшево",
+      "ing": "Ца далга",
+      "pron": "tsa dalga"
+    },
+    {
+      "ru": "Опасная дорога",
+      "ing": "Кхерме никъ",
+      "pron": "kherme nikh"
+    },
+    {
+      "ru": "Хорошая дорога",
+      "ing": "Дика гота",
+      "pron": "dika gota"
+    },
+    {
+      "ru": "Где водитель?",
+      "ing": "Вудашка хьа?",
+      "pron": "vudashka kha"
+    },
+    {
+      "ru": "Где машина?",
+      "ing": "Машин хьа?",
+      "pron": "mashin kha"
+    }
   ]
 }
