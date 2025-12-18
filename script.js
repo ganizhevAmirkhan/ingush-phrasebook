@@ -186,24 +186,10 @@ function renderCurrentView(){
 /* ================= AUDIO ================= */
 
 function checkAudio(cat, file){
-  const base = file.replace(/\.(mp3|webm)$/i, "");
-  const variants = [
-    file,
-    `${base}.webm`,
-    `${base}.mp3`
-  ];
-
   const el = document.getElementById(`ai-${file}`);
-  if(!el) return;
+  if(el) el.textContent = "🟢";
+}
 
-  let checked = 0;
-
-  variants.forEach(f=>{
-    const audio = new Audio(`audio/${cat}/${f}`);
-
-    audio.oncanplaythrough = () => {
-      el.textContent = "🟢";
-    };
 
     audio.onerror = () => {
       checked++;
@@ -445,6 +431,7 @@ window.playAudio = function(cat, file){
     console.error("❌ audio load error", url, e);
   };
 };
+
 
 
 
