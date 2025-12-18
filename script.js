@@ -1,35 +1,4 @@
-/* ================= CONFIG ================= */
-
-const OWNER = "ganizhevAmirkhan";
-const REPO  = "ingush-phrasebook";
-const BRANCH = "main";
-
-/* ================= STATE ================= */
-
-let currentCategory = null;
-let currentData = null;
-let adminMode = false;
-let githubToken = localStorage.getItem("githubToken");
-
-/* ================= UTILS ================= */
-
-function genId(){
-  return "f_" + Date.now() + "_" + Math.random().toString(36).slice(2,6);
-}
-const safe = v => (v ?? "").toString();
-
-/* ================= INIT ================= */
-
-window.onload = async () => {
-  loadCategories();
-
-  if(githubToken){
-    adminMode = true;
-    document.getElementById("admin-status").textContent = "✓ Админ";
-  }
-};
-
-/* ================= CATEGORIES ================= */
+/* ================= DATA ================= */
 
 const categories = [
  "greetings","basic_phrases","personal_info","family","home",
@@ -41,124 +10,261 @@ const categories = [
 ];
 
 const categoryTitles = {
- greetings:"Приветствия", basic_phrases:"Базовые фразы",
- personal_info:"Личная информация", family:"Семья",
- home:"Дом", food:"Еда", drinks:"Напитки",
- travel:"Путешествия", transport:"Транспорт",
- hunting:"Охота", danger:"Опасность", thermal:"Тепловизор",
- orientation:"Ориентирование", weather:"Погода",
- emotions:"Эмоции", health:"Здоровье", help:"Помощь",
- commands:"Команды", tools:"Инструменты", animals:"Животные",
- time:"Время", numbers:"Числа", colors:"Цвета",
- money:"Деньги", shop:"Магазин", city:"Город",
- village:"Деревня", guests:"Гости", communication:"Общение",
- work:"Работа", misc:"Разное"
+ greetings: "Приветствия",
+ basic_phrases: "Базовые фразы",
+ personal_info: "Личная информация",
+ family: "Семья",
+ home: "Дом",
+ food: "Еда",
+ drinks: "Напитки",
+ travel: "Путешествия",
+ transport: "Транспорт",
+ hunting: "Охота",
+ danger: "Опасность",
+ thermal: "Тепловизор",
+ orientation: "Ориентирование",
+ weather: "Погода",
+ emotions: "Эмоции",
+ health: "Здоровье",
+ help: "Помощь",
+ commands: "Команды",
+ tools: "Инструменты",
+ animals: "Животные",
+ time: "Время",
+ numbers: "Числа",
+ colors: "Цвета",
+ money: "Деньги",
+ shop: "Магазин",
+ city: "Город",
+ village: "Деревня",
+ guests: "Гости",
+ communication: "Общение",
+ work: "Работа",
+ misc: "Разное"
 };
+
+let currentCategory = null;
+let currentData = null;
+let allPhrases = [];
+
+/* ================= GLOBAL STATE ================= */
+
+window.adminMode = false;
+window.githubToken = localStorage.getItem("githubToken");
+
+/* ================= INIT ================= */
+
+window.onload = async () => {
+  loadCategories();
+  await preloadAllCategories();
+
+  const zipBtn = document.getElementById("download-zip");
+  const tokenInput = document.getElementById("gh-token");
+  const status = document.getElementById("admin-status");
+
+  if (githubToken) {
+    adminMode = true;
+
+    if (tokenInput) tokenInput.value = githubToken;
+    if (status) status.textContent = "✓ Админ";
+    if (zipBtn) zipBtn.classList.remove("hidden");
+  } else {
+    if (zipBtn) zipBtn.classList.add("hidden");
+  }
+};
+
+/* ================= CATEGORIES ================= */
 
 function loadCategories(){
   const list = document.getElementById("category-list");
   list.innerHTML = "";
+
   categories.forEach(cat=>{
-    const el = document.createElement("div");
-    el.className = "category";
-    el.textContent = categoryTitles[cat];
-    el.onclick = () => loadCategory(cat);
-    list.appendChild(el);
+    const d = document.createElement("div");
+    d.className = "category";
+    d.textContent = categoryTitles[cat] || cat;
+    d.onclick = () => loadCategory(cat);
+    list.appendChild(d);
   });
 }
 
 async function loadCategory(cat){
   currentCategory = cat;
-  document.getElementById("content-title").textContent = categoryTitles[cat];
+  document.getElementById("content-title").textContent =
+    categoryTitles[cat] || cat;
 
-  const r = await fetch(`categories/${cat}.json`);
-  currentData = await r.json();
-
-  migrateItems(currentData);
-  renderCategory();
-}
-
-/* ================= MIGRATION ================= */
-
-function migrateItems(data){
-  let changed = false;
-
-  data.items.forEach(it=>{
-    if(!it.id){
-      it.id = genId();
-      changed = true;
-    }
-
-    // ВСЕГДА webm
-    if(!it.audio || it.audio.endsWith(".mp3")){
-      it.audio = it.id + ".webm";
-      changed = true;
-    }
-  });
-
-  return changed;
+  const res = await fetch(`categories/${cat}.json`);
+  currentData = await res.json();
+  renderPhrases();
 }
 
 /* ================= RENDER ================= */
 
-function renderPhrase(item){
-  return `
-  <div class="phrase">
-    <p><b>ING:</b> ${safe(item.ing)}</p>
-    <p><b>RU:</b> ${safe(item.ru)}</p>
-    <p><b>PRON:</b> ${safe(item.pron)}</p>
+function renderPhrases(){
+  const content = document.getElementById("content");
+  content.innerHTML = "";
 
-    <button onclick="playAudio('${item.category}','${item.audio}')">▶</button>
-    <span id="ai-${item.audio}">⚪</span>
+  currentData.items.forEach((item,i)=>{
+    const file = normalizePron(item.pron) + ".mp3";
 
-    ${adminMode ? `<button onclick="recordById('${item.id}')">🎤</button>` : ""}
-  </div>`;
-}
+    const div = document.createElement("div");
+    div.className = "phrase";
+    div.innerHTML = `
+      <p><b>ING:</b> ${item.ing || ""}</p>
+      <p><b>RU:</b> ${item.ru || ""}</p>
+      <p><b>PRON:</b> ${item.pron || ""}</p>
+      <i>${categoryTitles[currentCategory]}</i><br>
 
-function renderCategory(){
-  const c = document.getElementById("content");
-  c.innerHTML = "";
+      <button onclick="playAudio('${currentCategory}','${file}')">▶</button>
+      <span id="ai-${i}">⚪</span>
 
-  currentData.items.forEach(it=>{
-    it.category = currentCategory;
-    c.insertAdjacentHTML("beforeend", renderPhrase(it));
-    checkAudio(it.category, it.audio);
+      ${adminMode ? `
+        <button onclick="startRecording('${currentCategory}','${item.pron || ""}')">🎤</button>
+        <button onclick="editPhrase(${i})">✏</button>
+        <button onclick="deletePhrase(${i})">🗑</button>
+      ` : ""}
+    `;
+    content.appendChild(div);
+    checkAudio(i,file);
   });
+
+  if(adminMode){
+    const b = document.createElement("button");
+    b.textContent = "➕ Добавить фразу";
+    b.onclick = addPhrase;
+    content.appendChild(b);
+  }
 }
 
 /* ================= AUDIO ================= */
 
-function playAudio(cat, file){
-  const url = `audio/${cat}/${file}?v=${Date.now()}`;
-  const audio = new Audio(url);
-
-  audio.onplay = () => setIndicator(file,"🟢");
-  audio.onended = () => setIndicator(file,"⚪");
-  audio.onerror = () => {
-    setIndicator(file,"🔴");
-    alert("Аудио не найдено");
-  };
-
-  audio.play().catch(()=>{
-    setIndicator(file,"🔴");
-    alert("Ошибка воспроизведения");
-  });
+function playAudio(cat,file){
+  new Audio(`audio/${cat}/${file}?v=${Date.now()}`).play()
+    .catch(()=>alert("Аудио ещё не доступно"));
 }
 
-function checkAudio(cat,file){
-  fetch(`audio/${cat}/${file}`,{method:"HEAD"})
+function checkAudio(i,file){
+  fetch(`audio/${currentCategory}/${file}`,{method:"HEAD"})
     .then(r=>{
-      if(r.ok) setIndicator(file,"🟢");
+      if(r.ok){
+        const el = document.getElementById(`ai-${i}`);
+        if(el) el.textContent="🟢";
+      }
     });
 }
 
-function setIndicator(file,icon){
-  const el = document.getElementById(`ai-${file}`);
-  if(el) el.textContent = icon;
+function normalizePron(p){
+  return (p||"").toLowerCase().trim()
+    .replace(/\s+/g,"_")
+    .replace(/[^a-z0-9_]/g,"");
 }
 
 /* ================= ADMIN ================= */
 
-function recordById(id){
-  startRecording(currentCategory,id);
+function adminLogin(){
+  const token = document.getElementById("gh-token").value.trim();
+  if(!token) return alert("Введите GitHub Token");
+
+  githubToken = token;
+  adminMode = true;
+  localStorage.setItem("githubToken", token);
+
+  document.getElementById("admin-status").textContent = "✓ Админ";
+  document.getElementById("download-zip").classList.remove("hidden");
+
+  if(currentData) renderPhrases();
 }
+
+/* ================= SEARCH ================= */
+
+async function preloadAllCategories(){
+  allPhrases = [];
+  for(const cat of categories){
+    try{
+      const r = await fetch(`categories/${cat}.json`);
+      const d = await r.json();
+      d.items.forEach(it=>{
+        allPhrases.push({...it, category: cat});
+      });
+    }catch{}
+  }
+}
+
+const sInput = document.getElementById("global-search");
+const sBox   = document.getElementById("search-results");
+
+function hideSuggestions(){
+  sBox.classList.add("hidden");
+  sBox.innerHTML="";
+}
+
+sInput.oninput = ()=>{
+  const q = sInput.value.toLowerCase().trim();
+  sBox.innerHTML="";
+
+  if(q.length < 2){
+    hideSuggestions();
+    return;
+  }
+
+  allPhrases.filter(p=>
+    (p.ru||"").toLowerCase().includes(q) ||
+    (p.ing||"").toLowerCase().includes(q) ||
+    (p.pron||"").toLowerCase().includes(q)
+  ).slice(0,20).forEach(p=>{
+    const d = document.createElement("div");
+    d.className="search-item";
+    d.textContent = `${p.ru} — ${categoryTitles[p.category]}`;
+    d.onclick = ()=>{
+      sInput.value = p.ru;
+      hideSuggestions();
+    };
+    sBox.appendChild(d);
+  });
+
+  sBox.classList.remove("hidden");
+};
+
+document.getElementById("search-btn").onclick = doSearch;
+
+function doSearch(){
+  const q = sInput.value.toLowerCase().trim();
+  if(!q) return;
+
+  hideSuggestions();
+  document.getElementById("content-title").textContent = `Поиск: ${sInput.value}`;
+  const content = document.getElementById("content");
+  content.innerHTML="";
+
+  allPhrases.filter(p=>
+    (p.ru||"").toLowerCase().includes(q) ||
+    (p.ing||"").toLowerCase().includes(q) ||
+    (p.pron||"").toLowerCase().includes(q)
+  ).forEach(p=>{
+    const d=document.createElement("div");
+    d.className="phrase";
+    d.innerHTML=`
+      <p><b>ING:</b> ${p.ing}</p>
+      <p><b>RU:</b> ${p.ru}</p>
+      <p><b>PRON:</b> ${p.pron}</p>
+      <i>${categoryTitles[p.category]}</i>
+    `;
+    content.appendChild(d);
+  });
+}
+
+document.addEventListener("click",e=>{
+  if(!e.target.closest(".search-wrap")){
+    hideSuggestions();
+  }
+});
+
+/* ================= ZIP ================= */
+
+function downloadZip(){
+  window.open(
+    "https://github.com/ganizhevAmirkhan/ingush-phrasebook/archive/refs/heads/main.zip",
+    "_blank"
+  );
+}
+
