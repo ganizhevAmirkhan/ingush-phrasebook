@@ -185,45 +185,35 @@ function renderCurrentView(){
 
 /* ================= AUDIO ================= */
 
-async function playAudio(cat, file){
-  const tried = new Set();
+function checkAudio(cat, file){
   const base = file.replace(/\.(mp3|webm)$/i, "");
-
   const variants = [
     file,
     `${base}.webm`,
     `${base}.mp3`
   ];
 
-  for(const f of variants){
-    if(tried.has(f)) continue;
-    tried.add(f);
+  const el = document.getElementById(`ai-${file}`);
+  if(!el) return;
 
-    const url = `audio/${cat}/${f}?v=${Date.now()}`;
+  let checked = 0;
 
-    try{
-      const r = await fetch(url, { method: "HEAD" });
-      if(!r.ok) continue;
+  variants.forEach(f=>{
+    const audio = new Audio(`audio/${cat}/${f}`);
 
-      const audio = new Audio(url);
-      await audio.play();
-      return;
-    }catch{}
-  }
+    audio.oncanplaythrough = () => {
+      el.textContent = "🟢";
+    };
 
-  alert("Аудио нет");
-}
-
-
-function checkAudio(cat,file){
-  fetch(`audio/${cat}/${file}`,{method:"HEAD"})
-    .then(r=>{
-      if(r.ok){
-        const el = document.getElementById(`ai-${file}`);
-        if(el) el.textContent = "🟢";
+    audio.onerror = () => {
+      checked++;
+      if(checked === variants.length && el.textContent !== "🟢"){
+        el.textContent = "⚪";
       }
-    });
+    };
+  });
 }
+
 
 /* ================= ADMIN ================= */
 
@@ -434,6 +424,7 @@ function doSearch(){
 
   renderSearch();
 }
+
 
 
 
