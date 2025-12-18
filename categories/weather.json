@@ -4,137 +4,198 @@
     {
       "ru": "Погода",
       "ing": "Юьхад",
-      "pron": "yukhad"
+      "pron": "yukhad",
+      "id": "f_1766025115892_a7t7",
+      "audio": "f_1766025115892_a7t7.mp3"
     },
     {
       "ru": "Какая погода?",
       "ing": "Юьхад мотт?",
-      "pron": "yukhad mott"
+      "pron": "yukhad mott",
+      "id": "f_1766025115892_yh3r",
+      "audio": "f_1766025115892_yh3r.mp3"
     },
     {
       "ru": "Хорошая погода",
       "ing": "Юьхад дика",
-      "pron": "yukhad dika"
+      "pron": "yukhad dika",
+      "id": "f_1766025115892_crfu",
+      "audio": "f_1766025115892_crfu.mp3"
     },
     {
       "ru": "Плохая погода",
       "ing": "Юьхад му",
-      "pron": "yukhad mu"
+      "pron": "yukhad mu",
+      "id": "f_1766025115892_y31i",
+      "audio": "f_1766025115892_y31i.mp3"
     },
     {
       "ru": "Холодно",
       "ing": "Сув",
-      "pron": "suv"
+      "pron": "suv",
+      "id": "f_1766025115892_8l9c",
+      "audio": "f_1766025115892_8l9c.mp3"
     },
     {
       "ru": "Тепло",
       "ing": "Маьна",
-      "pron": "mana"
+      "pron": "mana",
+      "id": "f_1766025115892_v5bo",
+      "audio": "f_1766025115892_v5bo.mp3"
     },
     {
       "ru": "Жарко",
       "ing": "Деша",
-      "pron": "desha"
+      "pron": "desha",
+      "id": "f_1766025115892_nkok",
+      "audio": "f_1766025115892_nkok.mp3"
     },
     {
       "ru": "Дождь",
       "ing": "Ох",
-      "pron": "okh"
+      "pron": "okh",
+      "id": "f_1766025115892_uqdq",
+      "audio": "f_1766025115892_uqdq.mp3"
     },
     {
       "ru": "Идёт дождь",
       "ing": "Ох вуда",
-      "pron": "okh vuda"
+      "pron": "okh vuda",
+      "id": "f_1766025115892_opjc",
+      "audio": "f_1766025115892_opjc.mp3"
     },
     {
       "ru": "Снег",
       "ing": "Саг",
-      "pron": "sag"
+      "pron": "sag",
+      "id": "f_1766025115892_t8zu",
+      "audio": "f_1766025115892_t8zu.mp3"
     },
     {
       "ru": "Идёт снег",
       "ing": "Саг вуда",
-      "pron": "sag vuda"
+      "pron": "sag vuda",
+      "id": "f_1766025115892_pkt4",
+      "audio": "f_1766025115892_pkt4.mp3"
     },
     {
       "ru": "Туман",
       "ing": "Тха",
-      "pron": "tcha"
+      "pron": "tcha",
+      "id": "f_1766025115892_0yx3",
+      "audio": "f_1766025115892_0yx3.mp3"
     },
     {
       "ru": "Туманно",
       "ing": "Тха ву",
-      "pron": "tcha vu"
+      "pron": "tcha vu",
+      "id": "f_1766025115892_680p",
+      "audio": "f_1766025115892_680p.mp3"
     },
     {
       "ru": "Ветер",
       "ing": "Бац",
-      "pron": "bats"
+      "pron": "bats",
+      "id": "f_1766025115892_xs0d",
+      "audio": "f_1766025115892_xs0d.mp3"
     },
     {
       "ru": "Сильный ветер",
       "ing": "Бац йо",
-      "pron": "bats yo"
+      "pron": "bats yo",
+      "id": "f_1766025115892_9irk",
+      "audio": "f_1766025115892_9irk.mp3"
     },
     {
       "ru": "Слабый ветер",
       "ing": "Бац ца",
-      "pron": "bats tsa"
+      "pron": "bats tsa",
+      "id": "f_1766025115892_g9li",
+      "audio": "f_1766025115892_g9li.mp3"
     },
     {
       "ru": "Гроза",
       "ing": "Малх т1ехьаш",
-      "pron": "malkh t1ekh-yash"
+      "pron": "malkh t1ekh-yash",
+      "id": "f_1766025115892_54ld",
+      "audio": "f_1766025115892_54ld.mp3"
     },
     {
       "ru": "Молния",
       "ing": "Т1ехь",
-      "pron": "t1ekh"
+      "pron": "t1ekh",
+      "id": "f_1766025115892_9k79",
+      "audio": "f_1766025115892_9k79.mp3"
     },
     {
       "ru": "Гром",
       "ing": "Т1ехь баха",
-      "pron": "t1ekh bakha"
+      "pron": "t1ekh bakha",
+      "id": "f_1766025115892_ml5j",
+      "audio": "f_1766025115892_ml5j.mp3"
     },
     {
       "ru": "Сегодня",
       "ing": "Тахана",
-      "pron": "takhana"
+      "pron": "takhana",
+      "id": "f_1766025115892_uw23",
+      "audio": "f_1766025115892_uw23.mp3"
     },
     {
       "ru": "Завтра",
       "ing": "Кхоан",
-      "pron": "khonna"
+      "pron": "khonna",
+      "id": "f_1766025115892_9wpw",
+      "audio": "f_1766025115892_9wpw.mp3"
     },
     {
       "ru": "Вчера",
       "ing": "Делха",
-      "pron": "delkha"
+      "pron": "delkha",
+      "id": "f_1766025115892_a51g",
+      "audio": "f_1766025115892_a51g.mp3"
     },
     {
       "ru": "Сегодня холодно",
       "ing": "Тахана сув",
-      "pron": "takhana suv"
+      "pron": "takhana suv",
+      "id": "f_1766025115892_5qko",
+      "audio": "f_1766025115892_5qko.mp3"
     },
     {
       "ru": "Завтра будет тепло",
       "ing": "Кхаца маьна хина",
-      "pron": "khatsa mana khina"
+      "pron": "khatsa mana khina",
+      "id": "f_1766025115892_hley",
+      "audio": "f_1766025115892_hley.mp3"
     },
     {
       "ru": "Какая температура?",
       "ing": "Температура мотт?",
-      "pron": "temperatura mott"
+      "pron": "temperatura mott",
+      "id": "f_1766025115892_0fuj",
+      "audio": "f_1766025115892_0fuj.mp3"
     },
     {
       "ru": "Очень холодно",
       "ing": "Сув йо",
-      "pron": "suv yo"
+      "pron": "suv yo",
+      "id": "f_1766025115892_m6ad",
+      "audio": "f_1766025115892_m6ad.mp3"
     },
     {
       "ru": "Очень жарко",
       "ing": "Деша йо",
-      "pron": "desha yo"
+      "pron": "desha yo",
+      "id": "f_1766025115892_ofy8",
+      "audio": "f_1766025115892_ofy8.mp3"
+    },
+    {
+      "id": "f_1766025115892_et6o",
+      "ru": "уауау",
+      "ing": "уум",
+      "pron": "sd",
+      "audio": "f_1766025115892_et6o.mp3"
     }
   ]
 }
