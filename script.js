@@ -424,6 +424,25 @@ function doSearch(){
 
   renderSearch();
 }
+// ===== GLOBAL AUDIO PLAYER (FIX) =====
+window.playAudio = function(cat, file){
+  console.log("playAudio called:", cat, file);
+
+  const url = `audio/${cat}/${file}`;
+  const audio = new Audio(url);
+
+  audio.volume = 1;
+  audio.muted = false;
+
+  audio.play()
+    .then(() => {
+      console.log("▶ playing:", url);
+    })
+    .catch(err => {
+      console.error("❌ audio error:", err);
+    });
+};
+
 
 
 
