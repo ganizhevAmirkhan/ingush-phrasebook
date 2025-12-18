@@ -4,237 +4,338 @@
     {
       "ru": "Семья",
       "ing": "Дезал",
-      "pron": "Dezal"
+      "pron": "Dezal",
+      "id": "f_1766024735115_eb1p",
+      "audio": "f_1766024735115_eb1p.mp3"
     },
     {
       "ru": "Моя семья",
       "ing": "Со дошам",
-      "pron": "so dosham"
+      "pron": "so dosham",
+      "id": "f_1766024735115_vv32",
+      "audio": "f_1766024735115_vv32.mp3"
     },
     {
       "ru": "Твоя семья",
       "ing": "Хьа дошам",
-      "pron": "kha dosham"
+      "pron": "kha dosham",
+      "id": "f_1766024735115_apde",
+      "audio": "f_1766024735115_apde.mp3"
     },
     {
       "ru": "Отец",
       "ing": "Да",
-      "pron": "da"
+      "pron": "da",
+      "id": "f_1766024735115_u04d",
+      "audio": "f_1766024735115_u04d.mp3"
     },
     {
       "ru": "Мой отец",
       "ing": "Са да",
-      "pron": "sa da"
+      "pron": "sa da",
+      "id": "f_1766024735115_e2xu",
+      "audio": "f_1766024735115_e2xu.mp3"
     },
     {
       "ru": "Твой отец",
       "ing": "Хьа да",
-      "pron": "kha da"
+      "pron": "kha da",
+      "id": "f_1766024735115_walw",
+      "audio": "f_1766024735115_walw.mp3"
     },
     {
       "ru": "Мать",
       "ing": "Нана",
-      "pron": "nana"
+      "pron": "nana",
+      "id": "f_1766024735115_3ahf",
+      "audio": "f_1766024735115_3ahf.mp3"
     },
     {
       "ru": "Моя мать",
       "ing": "Со нана",
-      "pron": "so nana"
+      "pron": "so nana",
+      "id": "f_1766024735115_2h4w",
+      "audio": "f_1766024735115_2h4w.mp3"
     },
     {
       "ru": "Брат",
       "ing": "Вош",
-      "pron": "Vosh"
+      "pron": "Vosh",
+      "id": "f_1766024735115_murc",
+      "audio": "f_1766024735115_murc.mp3"
     },
     {
       "ru": "Старший брат",
       "ing": "Воакха вош",
-      "pron": "Vokha vosh"
+      "pron": "Vokha vosh",
+      "id": "f_1766024735115_zvad",
+      "audio": "f_1766024735115_zvad.mp3"
     },
     {
       "ru": "Младший брат",
       "ing": "Ваза дитта",
-      "pron": "vaza ditta"
+      "pron": "vaza ditta",
+      "id": "f_1766024735115_jan1",
+      "audio": "f_1766024735115_jan1.mp3"
     },
     {
       "ru": "Сестра",
       "ing": "Йоьва",
-      "pron": "yova"
+      "pron": "yova",
+      "id": "f_1766024735115_er8f",
+      "audio": "f_1766024735115_er8f.mp3"
     },
     {
       "ru": "Старшая сестра",
       "ing": "Йоьва хьокха",
-      "pron": "yova khyokha"
+      "pron": "yova khyokha",
+      "id": "f_1766024735115_vjnb",
+      "audio": "f_1766024735115_vjnb.mp3"
     },
     {
       "ru": "Младшая сестра",
       "ing": "Йоьва дитта",
-      "pron": "yova ditta"
+      "pron": "yova ditta",
+      "id": "f_1766024735115_demi",
+      "audio": "f_1766024735115_demi.mp3"
     },
     {
       "ru": "Сын",
       "ing": "КIант",
-      "pron": "k1ant"
+      "pron": "k1ant",
+      "id": "f_1766024735115_gjst",
+      "audio": "f_1766024735115_gjst.mp3"
     },
     {
       "ru": "Дочь",
       "ing": "Керет",
-      "pron": "keret"
+      "pron": "keret",
+      "id": "f_1766024735115_8jdw",
+      "audio": "f_1766024735115_8jdw.mp3"
     },
     {
       "ru": "Дети",
       "ing": "Из",
-      "pron": "iz"
+      "pron": "iz",
+      "id": "f_1766024735115_d6l5",
+      "audio": "f_1766024735115_d6l5.mp3"
     },
     {
       "ru": "Мой сын",
       "ing": "Со кIант",
-      "pron": "so k1ant"
+      "pron": "so k1ant",
+      "id": "f_1766024735115_daf6",
+      "audio": "f_1766024735115_daf6.mp3"
     },
     {
       "ru": "Моя дочь",
       "ing": "Со керет",
-      "pron": "so keret"
+      "pron": "so keret",
+      "id": "f_1766024735115_joc0",
+      "audio": "f_1766024735115_joc0.mp3"
     },
     {
       "ru": "Муж",
       "ing": "Солжа",
-      "pron": "solzha"
+      "pron": "solzha",
+      "id": "f_1766024735115_0ug8",
+      "audio": "f_1766024735115_0ug8.mp3"
     },
     {
       "ru": "Жена",
       "ing": "ЙоагI",
-      "pron": "yoag1"
+      "pron": "yoag1",
+      "id": "f_1766024735115_3a0f",
+      "audio": "f_1766024735115_3a0f.mp3"
     },
     {
       "ru": "Бабушка",
       "ing": "Баб",
-      "pron": "bab"
+      "pron": "bab",
+      "id": "f_1766024735115_dxje",
+      "audio": "f_1766024735115_dxje.mp3"
     },
     {
       "ru": "Дедушка",
       "ing": "Бер",
-      "pron": "ber"
+      "pron": "ber",
+      "id": "f_1766024735115_uh15",
+      "audio": "f_1766024735115_uh15.mp3"
     },
     {
       "ru": "Родственники",
       "ing": "Къонах",
-      "pron": "konakh"
+      "pron": "konakh",
+      "id": "f_1766024735115_b4ws",
+      "audio": "f_1766024735115_b4ws.mp3"
     },
     {
       "ru": "Моя семья большая",
       "ing": "Со дошам дола",
-      "pron": "so dosham dola"
+      "pron": "so dosham dola",
+      "id": "f_1766024735115_ncgr",
+      "audio": "f_1766024735115_ncgr.mp3"
     },
     {
       "ru": "Моя семья маленькая",
       "ing": "Со дошам ца дола",
-      "pron": "so dosham tsa dola"
+      "pron": "so dosham tsa dola",
+      "id": "f_1766024735115_dvm0",
+      "audio": "f_1766024735115_dvm0.mp3"
     },
     {
       "ru": "У меня есть семья",
       "ing": "Со дошам йо",
-      "pron": "so dosham yo"
+      "pron": "so dosham yo",
+      "id": "f_1766024735115_wmba",
+      "audio": "f_1766024735115_wmba.mp3"
     },
     {
       "ru": "У меня нет семьи",
       "ing": "Со дошам му йо",
-      "pron": "so dosham mu yo"
+      "pron": "so dosham mu yo",
+      "id": "f_1766024735115_x8u5",
+      "audio": "f_1766024735115_x8u5.mp3"
     },
     {
       "ru": "Ты женат?",
       "ing": "Хьа йоагI?",
-      "pron": "kha yoag1"
+      "pron": "kha yoag1",
+      "id": "f_1766024735115_f655",
+      "audio": "f_1766024735115_f655.mp3"
     },
     {
       "ru": "Ты замужем?",
       "ing": "Хьа йоагI?",
-      "pron": "kha yoag1"
+      "pron": "kha yoag1",
+      "id": "f_1766024735115_bj7m",
+      "audio": "f_1766024735115_bj7m.mp3"
     },
     {
       "ru": "Я женат",
       "ing": "Со йоагI",
-      "pron": "so yoag1"
+      "pron": "so yoag1",
+      "id": "f_1766024735115_cocf",
+      "audio": "f_1766024735115_cocf.mp3"
     },
     {
       "ru": "Я замужем",
       "ing": "Со йоагI",
-      "pron": "so yoag1"
+      "pron": "so yoag1",
+      "id": "f_1766024735115_wfd2",
+      "audio": "f_1766024735115_wfd2.mp3"
     },
     {
       "ru": "Я не женат",
       "ing": "Со му йоагI",
-      "pron": "so mu yoag1"
+      "pron": "so mu yoag1",
+      "id": "f_1766024735115_h0z3",
+      "audio": "f_1766024735115_h0z3.mp3"
     },
     {
       "ru": "У тебя есть дети?",
       "ing": "Хьа из йой?",
-      "pron": "kha iz yoi"
+      "pron": "kha iz yoi",
+      "id": "f_1766024735115_ky42",
+      "audio": "f_1766024735115_ky42.mp3"
     },
     {
       "ru": "У меня есть дети",
       "ing": "Со из йо",
-      "pron": "so iz yo"
+      "pron": "so iz yo",
+      "id": "f_1766024735115_3ffl",
+      "audio": "f_1766024735115_3ffl.mp3"
     },
     {
       "ru": "У меня нет детей",
       "ing": "Со му из йо",
-      "pron": "so mu iz yo"
+      "pron": "so mu iz yo",
+      "id": "f_1766024735115_621m",
+      "audio": "f_1766024735115_621m.mp3"
     },
     {
       "ru": "Где твоя семья?",
       "ing": "Хьа дошам хьа?",
-      "pron": "kha dosham kha"
+      "pron": "kha dosham kha",
+      "id": "f_1766024735115_04t1",
+      "audio": "f_1766024735115_04t1.mp3"
     },
     {
       "ru": "Моя семья дома",
       "ing": "Со дошам ц1га ву",
-      "pron": "so dosham ts1ga vu"
+      "pron": "so dosham ts1ga vu",
+      "id": "f_1766024735115_fsaw",
+      "audio": "f_1766024735115_fsaw.mp3"
     },
     {
       "ru": "Это мой брат",
       "ing": "Ха со ваза",
-      "pron": "kha so vaza"
+      "pron": "kha so vaza",
+      "id": "f_1766024735115_clmi",
+      "audio": "f_1766024735115_clmi.mp3"
     },
     {
       "ru": "Это моя сестра",
       "ing": "Ха со йоьва",
-      "pron": "kha so yova"
+      "pron": "kha so yova",
+      "id": "f_1766024735115_ansp",
+      "audio": "f_1766024735115_ansp.mp3"
     },
     {
       "ru": "Это мои родители",
       "ing": "Ха сий да-нана",
-      "pron": "kha sii da-nana"
+      "pron": "kha sii da-nana",
+      "id": "f_1766024735115_efga",
+      "audio": "f_1766024735115_efga.mp3"
     },
     {
       "ru": "У меня много родственников",
       "ing": "Со къонах меттиг",
-      "pron": "so konakh mettig"
+      "pron": "so konakh mettig",
+      "id": "f_1766024735115_5em2",
+      "audio": "f_1766024735115_5em2.mp3"
     },
     {
       "ru": "У меня мало родственников",
       "ing": "Со къонах ца меттиг",
-      "pron": "so konakh tsa mettig"
+      "pron": "so konakh tsa mettig",
+      "id": "f_1766024735115_5493",
+      "audio": "f_1766024735115_5493.mp3"
     },
     {
       "ru": "Сколько у тебя братьев?",
       "ing": "Хьа ваза ца йа?",
-      "pron": "kha vaza tsa ya"
+      "pron": "kha vaza tsa ya",
+      "id": "f_1766024735115_22eg",
+      "audio": "f_1766024735115_22eg.mp3"
     },
     {
       "ru": "Сколько сестёр?",
       "ing": "Хьа йоьва ца йа?",
-      "pron": "kha yova tsa ya"
+      "pron": "kha yova tsa ya",
+      "id": "f_1766024735115_hvge",
+      "audio": "f_1766024735115_hvge.mp3"
     },
     {
       "ru": "Я старший в семье",
       "ing": "Со хьокха дошамаш",
-      "pron": "so khyokha doshamash"
+      "pron": "so khyokha doshamash",
+      "id": "f_1766024735115_alyn",
+      "audio": "f_1766024735115_alyn.mp3"
     },
     {
       "ru": "Я младший в семье",
       "ing": "Со дитта дошамаш",
-      "pron": "so ditta doshamash"
+      "pron": "so ditta doshamash",
+      "id": "f_1766024735115_fbpe",
+      "audio": "f_1766024735115_fbpe.mp3"
+    },
+    {
+      "id": "f_1766024735115_6j74",
+      "ru": "в",
+      "ing": "ва",
+      "pron": "d",
+      "audio": "f_1766024735115_6j74.mp3"
     }
   ]
 }
