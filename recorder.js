@@ -1,64 +1,72 @@
-async function recordById(category,id){
+let mediaRecorder;
+let recordedChunks = [];
+
+async function startRecording(category, id){
+  recordedChunks = [];
+
+  const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+  mediaRecorder = new MediaRecorder(stream);
+
+  mediaRecorder.ondataavailable = e => {
+    if(e.data.size > 0) recordedChunks.push(e.data);
+  };
+
+  mediaRecorder.onstop = async () => {
+    const blob = new Blob(recordedChunks, { type: "audio/webm" });
+    await uploadAudio(blob, category, id);
+  };
+
+  mediaRecorder.start();
+  alert("Запись началась. Нажмите OK чтобы остановить.");
+  mediaRecorder.stop();
+}
+
+/* ================= UPLOAD ================= */
+
+async function uploadAudio(blob, category, id){
   if(!githubToken) return alert("Нет GitHub Token");
 
-  const stream=await navigator.mediaDevices.getUserMedia({audio:true});
-  const rec=new MediaRecorder(stream,{mimeType:"audio/webm"});
-  let chunks=[];
+  const fileName = `${id}.mp3`;
+  const path = `audio/${category}/${fileName}`;
 
-  rec.ondataavailable=e=>chunks.push(e.data);
-  rec.onstop=async()=>{
-    stream.getTracks().forEach(t=>t.stop());
-    const webm=new Blob(chunks,{type:"audio/webm"});
-    const mp3=await webmToMp3(webm);
-    await uploadMp3(category,id,mp3);
-    await preloadAllCategories();
-    renderCurrentView();
-  };
+  const base64 = await blobToBase64(blob);
 
-  rec.start();
-  setTimeout(()=>rec.stop(),4000);
-}
+  const url = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${path}`;
 
-async function webmToMp3(blob){
-  const ctx=new AudioContext();
-  const buf=await ctx.decodeAudioData(await blob.arrayBuffer());
-  const enc=new lamejs.Mp3Encoder(1,buf.sampleRate,64);
-  const samples=buf.getChannelData(0);
-  let mp3=[];
-  for(let i=0;i<samples.length;i+=1152){
-    const chunk=samples.subarray(i,i+1152);
-    const b=new Int16Array(chunk.length);
-    for(let j=0;j<chunk.length;j++) b[j]=chunk[j]*32767;
-    const d=enc.encodeBuffer(b);
-    if(d.length) mp3.push(d);
+  let sha = null;
+  const check = await fetch(url,{
+    headers:{ Authorization:`token ${githubToken}` }
+  });
+  if(check.ok){
+    sha = (await check.json()).sha;
   }
-  const end=enc.flush();
-  if(end.length) mp3.push(end);
-  return new Blob(mp3,{type:"audio/mp3"});
+
+  await fetch(url,{
+    method:"PUT",
+    headers:{
+      Authorization:`token ${githubToken}`,
+      "Content-Type":"application/json"
+    },
+    body: JSON.stringify({
+      message:`Add audio ${fileName}`,
+      content: base64,
+      sha
+    })
+  });
+
+  alert("Аудио сохранено");
+
+  // 🔁 обновляем индикатор
+  checkAudio(category, fileName);
 }
 
-async function uploadMp3(cat,id,blob){
-  const file=id+".mp3";
-  const url=`https://api.github.com/repos/${OWNER}/${REPO}/contents/audio/${cat}/${file}`;
+/* ================= UTILS ================= */
 
-  let sha=null;
-  const check=await fetch(url,{headers:{Authorization:`token ${githubToken}`}});
-  if(check.ok) sha=(await check.json()).sha;
-
-  const reader=new FileReader();
-  reader.onload=async()=>{
-    await fetch(url,{
-      method:"PUT",
-      headers:{
-        Authorization:`token ${githubToken}`,
-        "Content-Type":"application/json"
-      },
-      body:JSON.stringify({
-        message:`audio ${file}`,
-        content:reader.result.split(",")[1],
-        sha
-      })
-    });
-  };
-  reader.readAsDataURL(blob);
+function blobToBase64(blob){
+  return new Promise(resolve=>{
+    const reader = new FileReader();
+    reader.onloadend = () =>
+      resolve(reader.result.split(",")[1]);
+    reader.readAsDataURL(blob);
+  });
 }
