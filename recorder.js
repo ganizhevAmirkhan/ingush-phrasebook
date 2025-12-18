@@ -5,7 +5,7 @@ async function startRecording(category, id){
   recordedChunks = [];
 
   const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-  mediaRecorder = new MediaRecorder(stream);
+  mediaRecorder = new MediaRecorder(stream, { mimeType: "audio/webm" });
 
   mediaRecorder.ondataavailable = e => {
     if(e.data.size > 0) recordedChunks.push(e.data);
@@ -17,16 +17,12 @@ async function startRecording(category, id){
   };
 
   mediaRecorder.start();
-  alert("Запись началась. Нажмите OK чтобы остановить.");
+  alert("Запись идёт. Нажмите OK для остановки.");
   mediaRecorder.stop();
 }
 
-/* ================= UPLOAD ================= */
-
 async function uploadAudio(blob, category, id){
-  if(!githubToken) return alert("Нет GitHub Token");
-
-  const fileName = `${id}.mp3`;
+  const fileName = `${id}.webm`;
   const path = `audio/${category}/${fileName}`;
 
   const base64 = await blobToBase64(blob);
@@ -37,9 +33,7 @@ async function uploadAudio(blob, category, id){
   const check = await fetch(url,{
     headers:{ Authorization:`token ${githubToken}` }
   });
-  if(check.ok){
-    sha = (await check.json()).sha;
-  }
+  if(check.ok) sha = (await check.json()).sha;
 
   await fetch(url,{
     method:"PUT",
@@ -54,19 +48,13 @@ async function uploadAudio(blob, category, id){
     })
   });
 
-  alert("Аудио сохранено");
-
-  // 🔁 обновляем индикатор
   checkAudio(category, fileName);
 }
 
-/* ================= UTILS ================= */
-
 function blobToBase64(blob){
   return new Promise(resolve=>{
-    const reader = new FileReader();
-    reader.onloadend = () =>
-      resolve(reader.result.split(",")[1]);
-    reader.readAsDataURL(blob);
+    const r = new FileReader();
+    r.onloadend = () => resolve(r.result.split(",")[1]);
+    r.readAsDataURL(blob);
   });
 }
