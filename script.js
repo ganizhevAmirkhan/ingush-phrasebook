@@ -102,7 +102,7 @@ function migrateItems(data){
       changed = true;
     }
     if(!it.audio){
-      it.audio = it.id + ".mp3";
+      it.audio = it.id + ".webm";
       changed = true;
     }
   });
@@ -284,7 +284,7 @@ async function addPhrase(cat){
 
   const d = await loadCategoryData(cat);
   const id = genId();
-  d.items.push({id,ru,ing,pron,audio:id+".mp3"});
+  d.items.push({id,ru,ing,pron,audio:id+".webm"});
 
   await saveCategoryData(cat,d);
   await preloadAllCategories();
@@ -400,3 +400,4 @@ function doSearch(){
 
   renderSearch();
 }
+
