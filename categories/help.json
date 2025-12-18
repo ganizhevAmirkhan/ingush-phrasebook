@@ -4,67 +4,100 @@
     {
       "ru": "Помоги!",
       "ing": "Г1о де!",
-      "pron": "g1o de"
+      "pron": "g1o de",
+      "id": "f_1766021548159_6bbx",
+      "audio": "f_1766021548159_6bbx.mp3"
     },
     {
       "ru": "Мне нужна помощь",
       "ing": "Сун г1о де дез",
-      "pron": "sun guo de dez"
+      "pron": "sun guo de dez",
+      "id": "f_1766021548159_hxi9",
+      "audio": "f_1766021548159_hxi9.mp3"
     },
     {
       "ru": "Позови кого-нибудь",
       "ing": "Хьанца ца веза!",
-      "pron": "khantsa tsa vezza"
+      "pron": "khantsa tsa vezza",
+      "id": "f_1766021548159_nfsn",
+      "audio": "f_1766021548159_nfsn.mp3"
     },
     {
       "ru": "Помоги ему",
       "ing": "Из г1о деда",
-      "pron": "iz g1o deda"
+      "pron": "iz g1o deda",
+      "id": "f_1766021548159_rtpd",
+      "audio": "f_1766021548159_rtpd.mp3"
     },
     {
       "ru": "Помоги мне",
       "ing": "Са г1о де",
-      "pron": "sa g1o de"
+      "pron": "sa g1o de",
+      "id": "f_1766021548159_qz6s",
+      "audio": "f_1766021548159_qz6s.mp3"
     },
     {
       "ru": "Помоги им",
       "ing": "Оха г1о деда",
-      "pron": "okha g1o deda"
+      "pron": "okha g1o deda",
+      "id": "f_1766021548159_k4dc",
+      "audio": "f_1766021548159_k4dc.mp3"
     },
     {
       "ru": "Позвони",
       "ing": "Телефон деш!",
-      "pron": "telefon desh"
+      "pron": "telefon desh",
+      "id": "f_1766021548159_qo9r",
+      "audio": "f_1766021548159_qo9r.mp3"
     },
     {
       "ru": "Вызови помощь",
       "ing": "Г1о ца веза",
-      "pron": "g1o tsa vezza"
+      "pron": "g1o tsa vezza",
+      "id": "f_1766021548159_g0mi",
+      "audio": "f_1766021548159_g0mi.mp3"
     },
     {
       "ru": "Я потерялся",
       "ing": "Со седа хинна",
-      "pron": "so seda khinna"
+      "pron": "so seda khinna",
+      "id": "f_1766021548159_g07y",
+      "audio": "f_1766021548159_g07y.mp3"
     },
     {
       "ru": "Я поранился",
       "ing": "Со беха хинна",
-      "pron": "so bekha khinna"
+      "pron": "so bekha khinna",
+      "id": "f_1766021548159_1ev3",
+      "audio": "f_1766021548159_1ev3.mp3"
     },
     {
       "ru": "Поддержи меня",
       "ing": "Са дог1ийла",
-      "pron": "sa dog1iyla"
+      "pron": "sa dog1iyla",
+      "id": "f_1766021548159_tb85",
+      "audio": "f_1766021548159_tb85.mp3"
     },
     {
       "ru": "Подожди меня",
       "ing": "Са сабар де",
-      "pron": "sa sabar de"
+      "pron": "sa sabar de",
+      "id": "f_1766021548159_zj28",
+      "audio": "f_1766021548159_zj28.mp3"
     },
     {
       "ru": "Жди здесь",
       "ing": "Хьокха сабар де",
-      "pron": "khyokha sabar de"
+      "pron": "khyokha sabar de",
+      "id": "f_1766021548159_4jgm",
+      "audio": "f_1766021548159_4jgm.mp3"
+    },
+    {
+      "id": "f_1766021548159_m6ix",
+      "ru": "1",
+      "ing": "1",
+      "pron": "1",
+      "audio": "f_1766021548159_m6ix.mp3"
     }
   ]
 }
