@@ -16,20 +16,21 @@
     <input id="global-search" class="search"
       type="text" placeholder="Поиск по всем фразам…" autocomplete="off">
     <button id="search-btn" class="btn btn-primary">🔍</button>
+    <div id="search-results" class="search-results hidden"></div>
   </div>
 
   <div class="admin-panel">
     <input id="gh-token" type="password" placeholder="GitHub Token">
-    <button onclick="loginAdmin()">Админ</button>
-    <button id="admin-logout" class="hidden" onclick="logoutAdmin()">Выйти</button>
+    <button onclick="adminLogin()">Админ</button>
+    <button id="download-zip" class="hidden" onclick="downloadZip()">⬇ Архив</button>
+    <button id="admin-logout" class="hidden" onclick="adminLogout()">Выйти</button>
     <span id="admin-status"></span>
   </div>
 </header>
 
 <div class="layout">
   <aside class="sidebar">
-    <!-- 🔴 ВАЖНО: id ДОЛЖЕН БЫТЬ categories -->
-    <div id="categories"></div>
+    <div id="category-list"></div>
   </aside>
 
   <main class="content">
@@ -38,7 +39,9 @@
   </main>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.0/lame.min.js"></script>
 <script src="script.js"></script>
 <script src="recorder.js"></script>
+
 </body>
 </html>
