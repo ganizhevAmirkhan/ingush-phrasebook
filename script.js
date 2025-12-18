@@ -1,12 +1,8 @@
-/* ================= CONFIG ================= */
-
 const OWNER = "ganizhevAmirkhan";
 const REPO  = "ingush-phrasebook";
 
 let githubToken = localStorage.getItem("gh_token") || null;
 let isAdmin = false;
-
-/* ====== КАТЕГОРИИ (РОВНО ТВОЙ СПИСОК) ====== */
 
 const categories = [
   "animals","basic_phrases","city","colors","commands","communication",
@@ -15,8 +11,6 @@ const categories = [
   "orientation","personal_info","shop","thermal","time","tools",
   "transport","travel","village","weather","work"
 ];
-
-/* ====== НАЗВАНИЯ ДЛЯ МЕНЮ ====== */
 
 const categoryTitles = {
   greetings:"Приветствия",
@@ -53,33 +47,30 @@ const categoryTitles = {
   work:"Работа"
 };
 
-/* ================= STATE ================= */
-
-let phraseIndex = {};   // id -> category
+let phraseIndex = {};
 let currentCategory = null;
 let currentData = null;
 
-/* ================= INIT ================= */
-
-document.addEventListener("DOMContentLoaded", async ()=>{
+document.addEventListener("DOMContentLoaded", async () => {
   renderCategoriesMenu();
   await preloadAllCategories();
 });
 
-/* ================= MENU ================= */
+/* ===== МЕНЮ ===== */
 
 function renderCategoriesMenu(){
   const menu = document.getElementById("categories");
   menu.innerHTML = "";
   categories.forEach(cat=>{
     const b = document.createElement("button");
+    b.className = "category";
     b.textContent = categoryTitles[cat] || cat;
     b.onclick = ()=>openCategory(cat);
     menu.appendChild(b);
   });
 }
 
-/* ================= LOAD ================= */
+/* ===== ЗАГРУЗКА ===== */
 
 async function loadCategoryData(cat){
   const r = await fetch(`categories/${cat}.json`);
@@ -100,15 +91,17 @@ async function preloadAllCategories(){
   }
 }
 
-/* ================= OPEN ================= */
+/* ===== ОТКРЫТИЕ КАТЕГОРИИ ===== */
 
 async function openCategory(cat){
   currentCategory = cat;
   currentData = await loadCategoryData(cat);
+  document.getElementById("content-title").textContent =
+    categoryTitles[cat] || cat;
   renderList(currentData.items);
 }
 
-/* ================= RENDER ================= */
+/* ===== ОТОБРАЖЕНИЕ ===== */
 
 function renderList(items){
   const box = document.getElementById("content");
@@ -116,7 +109,7 @@ function renderList(items){
 
   items.forEach(it=>{
     const d = document.createElement("div");
-    d.className = "card";
+    d.className = "phrase";
 
     d.innerHTML = `
       <b>ING:</b> ${it.ing}<br>
@@ -125,7 +118,7 @@ function renderList(items){
       <small>${categoryTitles[currentCategory]}</small><br>
 
       <button onclick="playAudio('${currentCategory}','${it.audio}')">▶</button>
-      <span id="ai-${it.audio}">⚪</span>
+      <span id="ai-${it.id}">⚪</span>
 
       ${isAdmin ? `
         <button onclick="startRecording('${currentCategory}','${it.id}')">🎤</button>
@@ -135,7 +128,7 @@ function renderList(items){
     `;
 
     box.appendChild(d);
-    checkAudio(currentCategory,it.audio);
+    checkAudio(currentCategory, it);
   });
 
   if(isAdmin){
@@ -146,7 +139,7 @@ function renderList(items){
   }
 }
 
-/* ================= AUDIO ================= */
+/* ===== АУДИО ===== */
 
 function playAudio(cat,file){
   const a = new Audio(`audio/${cat}/${file}?v=${Date.now()}`);
@@ -154,92 +147,38 @@ function playAudio(cat,file){
   a.play();
 }
 
-function checkAudio(cat,file){
-  fetch(`audio/${cat}/${file}`,{method:"HEAD"})
+function checkAudio(cat,it){
+  fetch(`audio/${cat}/${it.audio}`,{method:"HEAD"})
     .then(r=>{
-      const el = document.getElementById(`ai-${file}`);
+      const el = document.getElementById(`ai-${it.id}`);
       if(el) el.textContent = r.ok ? "🟢" : "⚪";
     });
 }
 
-/* ================= SEARCH ================= */
-
-async function searchAll(q){
-  q = q.toLowerCase();
-  const res = [];
-
-  for(const cat of categories){
-    try{
-      const d = await loadCategoryData(cat);
-      d.items.forEach(it=>{
-        if(
-          it.ru.toLowerCase().includes(q) ||
-          it.ing.toLowerCase().includes(q) ||
-          it.pron.toLowerCase().includes(q)
-        ){
-          res.push({...it,_cat:cat});
-        }
-      });
-    }catch{}
-  }
-
-  renderSearch(res);
-}
-
-function renderSearch(items){
-  const box = document.getElementById("content");
-  box.innerHTML = "<h3>Результаты поиска</h3>";
-
-  items.forEach(it=>{
-    const d = document.createElement("div");
-    d.className = "card";
-
-    d.innerHTML = `
-      <b>ING:</b> ${it.ing}<br>
-      <b>RU:</b> ${it.ru}<br>
-      <b>PRON:</b> ${it.pron}<br>
-      <small>${categoryTitles[it._cat]}</small><br>
-
-      <button onclick="playAudio('${it._cat}','${it.audio}')">▶</button>
-      <span id="ai-${it.audio}">⚪</span>
-
-      ${isAdmin ? `
-        <button onclick="startRecording('${it._cat}','${it.id}')">🎤</button>
-        <button onclick="editById('${it.id}')">✏</button>
-        <button onclick="deleteById('${it.id}')">🗑</button>
-      ` : ""}
-    `;
-
-    box.appendChild(d);
-    checkAudio(it._cat,it.audio);
-  });
-}
-
-/* ================= ADMIN ================= */
+/* ===== АДМИН ===== */
 
 function loginAdmin(){
-  const t = prompt("GitHub Token:");
-  if(!t) return;
+  const t = document.getElementById("gh-token").value;
+  if(!t) return alert("Нет токена");
   githubToken = t;
   localStorage.setItem("gh_token",t);
   isAdmin = true;
-  alert("Админ включён");
+  document.getElementById("admin-status").textContent = "✓ Админ";
+  openCategory(currentCategory);
 }
 
 function logoutAdmin(){
   isAdmin = false;
-  alert("Выход из админа");
+  document.getElementById("admin-status").textContent = "";
+  openCategory(currentCategory);
 }
 
-/* ================= CRUD ================= */
+/* ===== CRUD ===== */
 
 async function editById(id){
   const cat = phraseIndex[id];
-  if(!cat) return alert("Категория не найдена");
-
   const d = await loadCategoryData(cat);
   const it = d.items.find(x=>x.id===id);
-  if(!it) return;
 
   it.ru = prompt("RU",it.ru);
   it.ing = prompt("ING",it.ing);
@@ -274,7 +213,7 @@ async function addPhrase(){
   openCategory(currentCategory);
 }
 
-/* ================= SAVE ================= */
+/* ===== SAVE ===== */
 
 async function saveCategory(cat,data){
   const url = `https://api.github.com/repos/${OWNER}/${REPO}/contents/categories/${cat}.json`;
