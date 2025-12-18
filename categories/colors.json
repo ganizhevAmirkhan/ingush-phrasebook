@@ -4,52 +4,79 @@
     {
       "ru": "Цвет",
       "ing": "Бос",
-      "pron": "Bos"
+      "pron": "Bos",
+      "id": "f_1766025660255_8b84",
+      "audio": "f_1766025660255_8b84.mp3"
     },
     {
       "ru": "Какой цвет?",
       "ing": "Бег мотт?",
-      "pron": "beg mott"
+      "pron": "beg mott",
+      "id": "f_1766025660255_y3mp",
+      "audio": "f_1766025660255_y3mp.mp3"
     },
     {
       "ru": "Белый",
       "ing": "Ян",
-      "pron": "yan"
+      "pron": "yan",
+      "id": "f_1766025660255_k3le",
+      "audio": "f_1766025660255_k3le.mp3"
     },
     {
       "ru": "Чёрный",
       "ing": "ЧIог",
-      "pron": "ch1og"
+      "pron": "ch1og",
+      "id": "f_1766025660255_4y1e",
+      "audio": "f_1766025660255_4y1e.mp3"
     },
     {
       "ru": "Красный",
       "ing": "Ц1е́",
-      "pron": "ts1e"
+      "pron": "ts1e",
+      "id": "f_1766025660255_efhh",
+      "audio": "f_1766025660255_efhh.mp3"
     },
     {
       "ru": "Жёлтый",
       "ing": "Ӏажа́гӀа",
-      "pron": "azhag1a"
+      "pron": "azhag1a",
+      "id": "f_1766025660255_d1w9",
+      "audio": "f_1766025660255_d1w9.mp3"
     },
     {
       "ru": "Синий",
       "ing": "Хьала",
-      "pron": "khyala"
+      "pron": "khyala",
+      "id": "f_1766025660255_hynu",
+      "audio": "f_1766025660255_hynu.mp3"
     },
     {
       "ru": "Зелёный",
       "ing": "Диг",
-      "pron": "dig"
+      "pron": "dig",
+      "id": "f_1766025660255_rv4w",
+      "audio": "f_1766025660255_rv4w.mp3"
     },
     {
       "ru": "Яркий цвет",
       "ing": "Йо бег",
-      "pron": "yo beg"
+      "pron": "yo beg",
+      "id": "f_1766025660255_oicj",
+      "audio": "f_1766025660255_oicj.mp3"
     },
     {
       "ru": "Тёмный цвет",
       "ing": "ЧIог бег",
-      "pron": "ch1og beg"
+      "pron": "ch1og beg",
+      "id": "f_1766025660255_sht8",
+      "audio": "f_1766025660255_sht8.mp3"
+    },
+    {
+      "id": "f_1766025660255_pirr",
+      "ru": "ыыыс",
+      "ing": "какепим",
+      "pron": "dcvdssv",
+      "audio": "f_1766025660255_pirr.mp3"
     }
   ]
 }
