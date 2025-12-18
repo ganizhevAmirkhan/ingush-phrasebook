@@ -8,9 +8,8 @@ async function startRecording(category, id) {
   }
 
   chunks = [];
-
   const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-  mediaRecorder = new MediaRecorder(stream, { mimeType: "audio/webm" });
+  mediaRecorder = new MediaRecorder(stream);
 
   mediaRecorder.ondataavailable = e => {
     if (e.data.size) chunks.push(e.data);
@@ -33,12 +32,6 @@ async function uploadAudio(blob, category, id) {
 
   const base64 = await blobToBase64(blob);
 
-  let sha = null;
-  const check = await fetch(url, {
-    headers: { Authorization: `token ${githubToken}` }
-  });
-  if (check.ok) sha = (await check.json()).sha;
-
   await fetch(url, {
     method: "PUT",
     headers: {
@@ -46,13 +39,12 @@ async function uploadAudio(blob, category, id) {
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      message: `Update audio ${fileName}`,
-      content: base64,
-      sha
+      message: `Add audio ${fileName}`,
+      content: base64
     })
   });
 
-  checkAudio(category, fileName);
+  checkAudio(category, { id, audio: fileName });
 }
 
 function blobToBase64(blob) {
