@@ -4,152 +4,219 @@
     {
       "ru": "Путешествие",
       "ing": "Лоацам",
-      "pron": "loatsam"
+      "pron": "loatsam",
+      "id": "f_1766025182393_3n9u",
+      "audio": "f_1766025182393_3n9u.mp3"
     },
     {
       "ru": "Я путешествую",
       "ing": "Со лоацаш ву",
-      "pron": "so loatsash vu"
+      "pron": "so loatsash vu",
+      "id": "f_1766025182393_3r65",
+      "audio": "f_1766025182393_3r65.mp3"
     },
     {
       "ru": "Ты путешествуешь?",
       "ing": "Хьа лоацаш ву?",
-      "pron": "kha loatsash vu"
+      "pron": "kha loatsash vu",
+      "id": "f_1766025182393_bv34",
+      "audio": "f_1766025182393_bv34.mp3"
     },
     {
       "ru": "Куда ты собираешься?",
       "ing": "Хьа мича вах веза?",
-      "pron": "kha micha vakh vez"
+      "pron": "kha micha vakh vez",
+      "id": "f_1766025182393_4qsj",
+      "audio": "f_1766025182393_4qsj.mp3"
     },
     {
       "ru": "Я еду в Магас",
       "ing": "Со Магасхь вуда",
-      "pron": "so magas vuda"
+      "pron": "so magas vuda",
+      "id": "f_1766025182393_3j5t",
+      "audio": "f_1766025182393_3j5t.mp3"
     },
     {
       "ru": "Я еду домой",
       "ing": "Со ц1а вуда",
-      "pron": "so ts1a vuda"
+      "pron": "so ts1a vuda",
+      "id": "f_1766025182393_pdl5",
+      "audio": "f_1766025182393_pdl5.mp3"
     },
     {
       "ru": "Где ты сейчас?",
       "ing": "Хьа хьалха хьа?",
-      "pron": "kha khalha kha"
+      "pron": "kha khalha kha",
+      "id": "f_1766025182393_yucu",
+      "audio": "f_1766025182393_yucu.mp3"
     },
     {
       "ru": "Я здесь",
       "ing": "Со хьокха",
-      "pron": "so khyokha"
+      "pron": "so khyokha",
+      "id": "f_1766025182393_8huy",
+      "audio": "f_1766025182393_8huy.mp3"
     },
     {
       "ru": "Я там",
       "ing": "Со цугахь",
-      "pron": "so tsugakh"
+      "pron": "so tsugakh",
+      "id": "f_1766025182393_6ww2",
+      "audio": "f_1766025182393_6ww2.mp3"
     },
     {
       "ru": "Мне нужно в город",
       "ing": "Са шахь вах давах",
-      "pron": "sa shah vakh davakh"
+      "pron": "sa shah vakh davakh",
+      "id": "f_1766025182393_i1qo",
+      "audio": "f_1766025182393_i1qo.mp3"
     },
     {
       "ru": "Мне нужно в село",
       "ing": "Са гӀалачче вах давах",
-      "pron": "sa ghalachche vakh davakh"
+      "pron": "sa ghalachche vakh davakh",
+      "id": "f_1766025182393_o3ta",
+      "audio": "f_1766025182393_o3ta.mp3"
     },
     {
       "ru": "Где город?",
       "ing": "г1ал мичахь е",
-      "pron": "gal michah e"
+      "pron": "gal michah e",
+      "id": "f_1766025182393_8ejd",
+      "audio": "f_1766025182393_8ejd.mp3"
     },
     {
       "ru": "Где село?",
       "ing": "ГӀалачч хьа?",
-      "pron": "ghalachch kha"
+      "pron": "ghalachch kha",
+      "id": "f_1766025182393_q45c",
+      "audio": "f_1766025182393_q45c.mp3"
     },
     {
       "ru": "Я заблудился",
       "ing": "Со йолачо хинна",
-      "pron": "so yolacho khinna"
+      "pron": "so yolacho khinna",
+      "id": "f_1766025182393_wr9t",
+      "audio": "f_1766025182393_wr9t.mp3"
     },
     {
       "ru": "Мне нужна помощь",
       "ing": "Са г1о давах",
-      "pron": "sa g1o davakh"
+      "pron": "sa g1o davakh",
+      "id": "f_1766025182393_nlam",
+      "audio": "f_1766025182393_nlam.mp3"
     },
     {
       "ru": "Где дорога?",
       "ing": "Гота хьа?",
-      "pron": "gota kha"
+      "pron": "gota kha",
+      "id": "f_1766025182393_6gsy",
+      "audio": "f_1766025182393_6gsy.mp3"
     },
     {
       "ru": "Это далеко?",
       "ing": "Ха долча?",
-      "pron": "kha dolcha"
+      "pron": "kha dolcha",
+      "id": "f_1766025182393_ev5o",
+      "audio": "f_1766025182393_ev5o.mp3"
     },
     {
       "ru": "Это близко?",
       "ing": "Ха гянна?",
-      "pron": "kha gyanna"
+      "pron": "kha gyanna",
+      "id": "f_1766025182393_cne4",
+      "audio": "f_1766025182393_cne4.mp3"
     },
     {
       "ru": "Я приеду завтра",
       "ing": "Со кхети хьа воаг1агва",
-      "pron": "so kheti kha voag1agva"
+      "pron": "so kheti kha voag1agva",
+      "id": "f_1766025182393_y9rh",
+      "audio": "f_1766025182393_y9rh.mp3"
     },
     {
       "ru": "Я приеду сегодня",
       "ing": "Со тахана воаг1а",
-      "pron": "so takhana voag1a"
+      "pron": "so takhana voag1a",
+      "id": "f_1766025182393_rlq6",
+      "audio": "f_1766025182393_rlq6.mp3"
     },
     {
       "ru": "Когда уезжаешь?",
       "ing": "Хьа малха арвуда?",
-      "pron": "kha malkha arvuda"
+      "pron": "kha malkha arvuda",
+      "id": "f_1766025182393_p47i",
+      "audio": "f_1766025182393_p47i.mp3"
     },
     {
       "ru": "Я уезжаю сейчас",
       "ing": "Со хьалха арвуда",
-      "pron": "so khalha arvuda"
+      "pron": "so khalha arvuda",
+      "id": "f_1766025182393_iwvm",
+      "audio": "f_1766025182393_iwvm.mp3"
     },
     {
       "ru": "Приведи меня туда",
       "ing": "Са цугахь вуда",
-      "pron": "sa tsugakh vuda"
+      "pron": "sa tsugakh vuda",
+      "id": "f_1766025182393_l6s9",
+      "audio": "f_1766025182393_l6s9.mp3"
     },
     {
       "ru": "Проводи меня",
       "ing": "Са догийла",
-      "pron": "sa dogiyla"
+      "pron": "sa dogiyla",
+      "id": "f_1766025182393_yg61",
+      "audio": "f_1766025182393_yg61.mp3"
     },
     {
       "ru": "Мне нужно такси",
       "ing": "Са такси давах",
-      "pron": "sa taksi davakh"
+      "pron": "sa taksi davakh",
+      "id": "f_1766025182393_o86a",
+      "audio": "f_1766025182393_o86a.mp3"
     },
     {
       "ru": "Сколько стоит дорога?",
       "ing": "Гота ца йа?",
-      "pron": "gota tsa ya"
+      "pron": "gota tsa ya",
+      "id": "f_1766025182393_wjw6",
+      "audio": "f_1766025182393_wjw6.mp3"
     },
     {
       "ru": "Мой багаж",
       "ing": "Со багажь",
-      "pron": "so bagazh"
+      "pron": "so bagazh",
+      "id": "f_1766025182393_44nh",
+      "audio": "f_1766025182393_44nh.mp3"
     },
     {
       "ru": "Где мой багаж?",
       "ing": "Со багажь хьа?",
-      "pron": "so bagazh kha"
+      "pron": "so bagazh kha",
+      "id": "f_1766025182393_mfen",
+      "audio": "f_1766025182393_mfen.mp3"
     },
     {
       "ru": "Я быстро вернусь",
       "ing": "Со мелда хьа виннагва",
-      "pron": "so melda kha vinnagva"
+      "pron": "so melda kha vinnagva",
+      "id": "f_1766025182393_zd0s",
+      "audio": "f_1766025182393_zd0s.mp3"
     },
     {
       "ru": "Я скоро приеду",
       "ing": "Со гянна воаг1агва",
-      "pron": "so gyanna voag1agva"
+      "pron": "so gyanna voag1agva",
+      "id": "f_1766025182393_s9pu",
+      "audio": "f_1766025182393_s9pu.mp3"
+    },
+    {
+      "id": "f_1766025182393_s6zm",
+      "ru": "вамвва",
+      "ing": "типрао",
+      "pron": "ddvfv",
+      "audio": "f_1766025182393_s6zm.mp3"
     }
   ]
 }
