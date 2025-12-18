@@ -26,8 +26,7 @@ async function startRecording(category, id){
 async function uploadAudio(blob, category, id){
   if(!githubToken) return alert("Нет GitHub Token");
 
-  // ✅ ВАЖНО: сохраняем как .webm
-  const fileName = `${id}.webm`;
+  const fileName = `${id}.mp3`;
   const path = `audio/${category}/${fileName}`;
 
   const base64 = await blobToBase64(blob);
