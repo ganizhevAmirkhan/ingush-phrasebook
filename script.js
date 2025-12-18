@@ -185,28 +185,37 @@ function renderCurrentView(){
 /* ================= AUDIO ================= */
 
 async function playAudio(cat, file){
+  const tried = new Set();
+
+  // 1️⃣ сначала — как указано в JSON
   const base = file.replace(/\.(mp3|webm)$/i, "");
   const variants = [
+    file,
     `${base}.mp3`,
     `${base}.webm`
   ];
 
   for(const f of variants){
+    if(tried.has(f)) continue;
+    tried.add(f);
+
     const url = `audio/${cat}/${f}?v=${Date.now()}`;
+
     try{
       const r = await fetch(url, { method: "HEAD" });
       if(!r.ok) continue;
 
       const audio = new Audio(url);
       await audio.play();
-      return; // ✅ если сыграло — выходим
+      return; // ✅ УСПЕХ
     }catch(e){
-      // пробуем следующий формат
+      // пробуем дальше
     }
   }
 
   alert("Аудио нет");
 }
+
 
 
 function checkAudio(cat,file){
@@ -420,4 +429,5 @@ function doSearch(){
 
   renderSearch();
 }
+
 
