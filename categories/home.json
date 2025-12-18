@@ -4,182 +4,261 @@
     {
       "ru": "Дом",
       "ing": "Ц1а",
-      "pron": "ts1a"
+      "pron": "ts1a",
+      "id": "f_1766025491600_xits",
+      "audio": "f_1766025491600_xits.mp3"
     },
     {
       "ru": "Мой дом",
       "ing": "Со ц1а",
-      "pron": "so ts1a"
+      "pron": "so ts1a",
+      "id": "f_1766025491600_1pal",
+      "audio": "f_1766025491600_1pal.mp3"
     },
     {
       "ru": "Твой дом",
       "ing": "Хьа ц1а",
-      "pron": "kha tc1a"
+      "pron": "kha tc1a",
+      "id": "f_1766025491600_wscq",
+      "audio": "f_1766025491600_wscq.mp3"
     },
     {
       "ru": "Комната",
       "ing": "Къам",
-      "pron": "kam"
+      "pron": "kam",
+      "id": "f_1766025491600_79ja",
+      "audio": "f_1766025491600_79ja.mp3"
     },
     {
       "ru": "Кухня",
       "ing": "Шуьл",
-      "pron": "shul"
+      "pron": "shul",
+      "id": "f_1766025491600_1bvj",
+      "audio": "f_1766025491600_1bvj.mp3"
     },
     {
       "ru": "Спальня",
       "ing": "Йо1ам",
-      "pron": "yo1am"
+      "pron": "yo1am",
+      "id": "f_1766025491600_ol4z",
+      "audio": "f_1766025491600_ol4z.mp3"
     },
     {
       "ru": "Гостиная",
       "ing": "Дошамаш къам",
-      "pron": "doshamash kam"
+      "pron": "doshamash kam",
+      "id": "f_1766025491600_cpdt",
+      "audio": "f_1766025491600_cpdt.mp3"
     },
     {
       "ru": "Дверь",
       "ing": "Богам",
-      "pron": "bogam"
+      "pron": "bogam",
+      "id": "f_1766025491600_tzv6",
+      "audio": "f_1766025491600_tzv6.mp3"
     },
     {
       "ru": "Окно",
       "ing": "Тама",
-      "pron": "tama"
+      "pron": "tama",
+      "id": "f_1766025491600_npmf",
+      "audio": "f_1766025491600_npmf.mp3"
     },
     {
       "ru": "Пол",
       "ing": "Йолг",
-      "pron": "yolg"
+      "pron": "yolg",
+      "id": "f_1766025491600_pzoz",
+      "audio": "f_1766025491600_pzoz.mp3"
     },
     {
       "ru": "Потолок",
       "ing": "Байлакх",
-      "pron": "baylakh"
+      "pron": "baylakh",
+      "id": "f_1766025491600_tkjf",
+      "audio": "f_1766025491600_tkjf.mp3"
     },
     {
       "ru": "Стена",
       "ing": "Баг",
-      "pron": "bag"
+      "pron": "bag",
+      "id": "f_1766025491600_eddy",
+      "audio": "f_1766025491600_eddy.mp3"
     },
     {
       "ru": "Стол",
       "ing": "Стол",
-      "pron": "stol"
+      "pron": "stol",
+      "id": "f_1766025491600_b3ey",
+      "audio": "f_1766025491600_b3ey.mp3"
     },
     {
       "ru": "Стул",
       "ing": "Стул",
-      "pron": "stul"
+      "pron": "stul",
+      "id": "f_1766025491600_d6n8",
+      "audio": "f_1766025491600_d6n8.mp3"
     },
     {
       "ru": "Кровать",
       "ing": "Къайлякх",
-      "pron": "kaylakh"
+      "pron": "kaylakh",
+      "id": "f_1766025491600_dki9",
+      "audio": "f_1766025491600_dki9.mp3"
     },
     {
       "ru": "Чисто",
       "ing": "Чиста",
-      "pron": "chista"
+      "pron": "chista",
+      "id": "f_1766025491600_u6c5",
+      "audio": "f_1766025491600_u6c5.mp3"
     },
     {
       "ru": "Грязно",
       "ing": "Муса",
-      "pron": "musa"
+      "pron": "musa",
+      "id": "f_1766025491600_8wu2",
+      "audio": "f_1766025491600_8wu2.mp3"
     },
     {
       "ru": "Уберите здесь",
       "ing": "Хьокха деж де!",
-      "pron": "khyokha dezh de"
+      "pron": "khyokha dezh de",
+      "id": "f_1766025491600_a5ll",
+      "audio": "f_1766025491600_a5ll.mp3"
     },
     {
       "ru": "Принеси это",
       "ing": "Ха дика!",
-      "pron": "kha dika"
+      "pron": "kha dika",
+      "id": "f_1766025491600_wt1r",
+      "audio": "f_1766025491600_wt1r.mp3"
     },
     {
       "ru": "Поставь сюда",
       "ing": "Хьокха деж",
-      "pron": "khyokha dezh"
+      "pron": "khyokha dezh",
+      "id": "f_1766025491600_t8jo",
+      "audio": "f_1766025491600_t8jo.mp3"
     },
     {
       "ru": "Закрой дверь",
       "ing": "Богам хетта",
-      "pron": "bogam khetta"
+      "pron": "bogam khetta",
+      "id": "f_1766025491600_ju5m",
+      "audio": "f_1766025491600_ju5m.mp3"
     },
     {
       "ru": "Открой дверь",
       "ing": "Богам теша",
-      "pron": "bogam tesh"
+      "pron": "bogam tesh",
+      "id": "f_1766025491600_4qtt",
+      "audio": "f_1766025491600_4qtt.mp3"
     },
     {
       "ru": "Вода есть?",
       "ing": "Мал йой?",
-      "pron": "mal yoi"
+      "pron": "mal yoi",
+      "id": "f_1766025491600_i561",
+      "audio": "f_1766025491600_i561.mp3"
     },
     {
       "ru": "Принеси воды",
       "ing": "Мал дика",
-      "pron": "mal dika"
+      "pron": "mal dika",
+      "id": "f_1766025491600_bt3d",
+      "audio": "f_1766025491600_bt3d.mp3"
     },
     {
       "ru": "Где кухня?",
       "ing": "Шуьл хьа?",
-      "pron": "shul kha"
+      "pron": "shul kha",
+      "id": "f_1766025491600_cm4b",
+      "audio": "f_1766025491600_cm4b.mp3"
     },
     {
       "ru": "Где туалет?",
       "ing": "Туалет хьа?",
-      "pron": "tualet kha"
+      "pron": "tualet kha",
+      "id": "f_1766025491600_eo0h",
+      "audio": "f_1766025491600_eo0h.mp3"
     },
     {
       "ru": "Можно войти?",
       "ing": "Чуда далуш?",
-      "pron": "chuda dalush"
+      "pron": "chuda dalush",
+      "id": "f_1766025491600_ie4p",
+      "audio": "f_1766025491600_ie4p.mp3"
     },
     {
       "ru": "Заходи",
       "ing": "Чуда",
-      "pron": "chuda"
+      "pron": "chuda",
+      "id": "f_1766025491600_akgx",
+      "audio": "f_1766025491600_akgx.mp3"
     },
     {
       "ru": "Мне нужно отдохнуть",
       "ing": "Са т1акха вез",
-      "pron": "sa t1akha vez"
+      "pron": "sa t1akha vez",
+      "id": "f_1766025491600_8uxq",
+      "audio": "f_1766025491600_8uxq.mp3"
     },
     {
       "ru": "Я хочу спать",
       "ing": "Со йоаг1 безам ба",
-      "pron": "so yoag1 bezam ba"
+      "pron": "so yoag1 bezam ba",
+      "id": "f_1766025491600_n2gw",
+      "audio": "f_1766025491600_n2gw.mp3"
     },
     {
       "ru": "Где ты живёшь?",
       "ing": "Хьа дакъош ву?",
-      "pron": "kha dakosh vu"
+      "pron": "kha dakosh vu",
+      "id": "f_1766025491600_7elq",
+      "audio": "f_1766025491600_7elq.mp3"
     },
     {
       "ru": "Я живу здесь",
       "ing": "Со хьокха дакъош ву",
-      "pron": "so khyokha dakosh vu"
+      "pron": "so khyokha dakosh vu",
+      "id": "f_1766025491600_5vgf",
+      "audio": "f_1766025491600_5vgf.mp3"
     },
     {
       "ru": "Почини это",
       "ing": "Ха дуйле",
-      "pron": "kha duyale"
+      "pron": "kha duyale",
+      "id": "f_1766025491600_d3qr",
+      "audio": "f_1766025491600_d3qr.mp3"
     },
     {
       "ru": "Сломано",
       "ing": "Т1аккха",
-      "pron": "t1akkha"
+      "pron": "t1akkha",
+      "id": "f_1766025491600_a9wq",
+      "audio": "f_1766025491600_a9wq.mp3"
     },
     {
       "ru": "Работает",
       "ing": "Лоца",
-      "pron": "lotsa"
+      "pron": "lotsa",
+      "id": "f_1766025491600_zduz",
+      "audio": "f_1766025491600_zduz.mp3"
     },
     {
       "ru": "Не работает",
       "ing": "Му лоца",
-      "pron": "mu lotsa"
+      "pron": "mu lotsa",
+      "id": "f_1766025491600_kgcz",
+      "audio": "f_1766025491600_kgcz.mp3"
+    },
+    {
+      "id": "f_1766025491600_adjn",
+      "ru": "ысыс",
+      "ing": "ысф",
+      "pron": "sscac",
+      "audio": "f_1766025491600_adjn.mp3"
     }
   ]
 }
