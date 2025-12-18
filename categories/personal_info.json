@@ -4,217 +4,310 @@
     {
       "ru": null,
       "ing": null,
-      "pron": null
+      "pron": null,
+      "id": "f_1766025348310_bc9d",
+      "audio": "f_1766025348310_bc9d.mp3"
     },
     {
       "ru": "Доброе утро",
       "ing": "1уйре дик хейл",
-      "pron": "uire dik heil"
+      "pron": "uire dik heil",
+      "id": "f_1766025348310_n5g9",
+      "audio": "f_1766025348310_n5g9.mp3"
     },
     {
       "ru": "Добрый вечер",
       "ing": "Гув маршалла",
-      "pron": "guv marshalla"
+      "pron": "guv marshalla",
+      "id": "f_1766025348310_lgwp",
+      "audio": "f_1766025348310_lgwp.mp3"
     },
     {
       "ru": "Как поживаешь?",
       "ing": "Вахар миштад хьа",
-      "pron": "vakhar mishtad ha"
+      "pron": "vakhar mishtad ha",
+      "id": "f_1766025348310_hn3t",
+      "audio": "f_1766025348310_hn3t.mp3"
     },
     {
       "ru": "Рад тебя видеть",
       "ing": "Со хьо гу вах шун",
-      "pron": "so kho gu vakh shun"
+      "pron": "so kho gu vakh shun",
+      "id": "f_1766025348310_p1pi",
+      "audio": "f_1766025348310_p1pi.mp3"
     },
     {
       "ru": "Рад встрече с тобой",
       "ing": "Со хьо дог1ийла шун",
-      "pron": "so kho dog1iyla shun"
+      "pron": "so kho dog1iyla shun",
+      "id": "f_1766025348310_kfae",
+      "audio": "f_1766025348310_kfae.mp3"
     },
     {
       "ru": "Давно не виделись",
       "ing": "Дуьйре хьо гац ву",
-      "pron": "duyre kho gats vu"
+      "pron": "duyre kho gats vu",
+      "id": "f_1766025348310_j7sr",
+      "audio": "f_1766025348310_j7sr.mp3"
     },
     {
       "ru": "С приездом!",
       "ing": "Воаг1алд маршалла!",
-      "pron": "voag1ald marshalla"
+      "pron": "voag1ald marshalla",
+      "id": "f_1766025348310_9d9e",
+      "audio": "f_1766025348310_9d9e.mp3"
     },
     {
       "ru": "Добро пожаловать",
       "ing": "Марша бо!",
-      "pron": "marsha bo"
+      "pron": "marsha bo",
+      "id": "f_1766025348310_khbn",
+      "audio": "f_1766025348310_khbn.mp3"
     },
     {
       "ru": "Входите",
       "ing": "Чуда!",
-      "pron": "chuda"
+      "pron": "chuda",
+      "id": "f_1766025348310_zwzt",
+      "audio": "f_1766025348310_zwzt.mp3"
     },
     {
       "ru": "Проходите",
       "ing": "Воаг1а!",
-      "pron": "voag1a"
+      "pron": "voag1a",
+      "id": "f_1766025348310_96jk",
+      "audio": "f_1766025348310_96jk.mp3"
     },
     {
       "ru": "Как ты?",
       "ing": "Мишта хьа?",
-      "pron": "mishta kha"
+      "pron": "mishta kha",
+      "id": "f_1766025348310_c5q1",
+      "audio": "f_1766025348310_c5q1.mp3"
     },
     {
       "ru": "Как вы?",
       "ing": "Мишта шу?",
-      "pron": "mishta shu"
+      "pron": "mishta shu",
+      "id": "f_1766025348310_jrfs",
+      "audio": "f_1766025348310_jrfs.mp3"
     },
     {
       "ru": "Хорошо",
       "ing": "Дика",
-      "pron": "dika"
+      "pron": "dika",
+      "id": "f_1766025348310_6nzw",
+      "audio": "f_1766025348310_6nzw.mp3"
     },
     {
       "ru": "Очень хорошо",
       "ing": "Дика йо",
-      "pron": "dika yo"
+      "pron": "dika yo",
+      "id": "f_1766025348310_yetz",
+      "audio": "f_1766025348310_yetz.mp3"
     },
     {
       "ru": "Спасибо",
       "ing": "Баркалла",
-      "pron": "barkalla"
+      "pron": "barkalla",
+      "id": "f_1766025348310_31p4",
+      "audio": "f_1766025348310_31p4.mp3"
     },
     {
       "ru": "Большое спасибо",
       "ing": "Дял ряз хал хьуна",
-      "pron": "dyal ryaz khal hyuna"
+      "pron": "dyal ryaz khal hyuna",
+      "id": "f_1766025348310_5dnu",
+      "audio": "f_1766025348310_5dnu.mp3"
     },
     {
       "ru": "Пожалуйста (в ответ на спасибо)",
       "ing": "Хьуна халд",
-      "pron": "hyuna hald"
+      "pron": "hyuna hald",
+      "id": "f_1766025348310_82vr",
+      "audio": "f_1766025348310_82vr.mp3"
     },
     {
       "ru": "Извини",
       "ing": "Къат1ер валл",
-      "pron": "kater vall"
+      "pron": "kater vall",
+      "id": "f_1766025348310_vo6t",
+      "audio": "f_1766025348310_vo6t.mp3"
     },
     {
       "ru": "Прощай",
       "ing": "Санди аьттув",
-      "pron": "sandi attuv"
+      "pron": "sandi attuv",
+      "id": "f_1766025348310_176d",
+      "audio": "f_1766025348310_176d.mp3"
     },
     {
       "ru": "До свидания",
       "ing": "1адик хайла",
-      "pron": "1adik khaila"
+      "pron": "1adik khaila",
+      "id": "f_1766025348310_agkf",
+      "audio": "f_1766025348310_agkf.mp3"
     },
     {
       "ru": "Увидимся позже",
       "ing": "Т1ехьа хьа гуйнагва",
-      "pron": "t1ekha kha guynagva"
+      "pron": "t1ekha kha guynagva",
+      "id": "f_1766025348310_czcz",
+      "audio": "f_1766025348310_czcz.mp3"
     },
     {
       "ru": "Спокойной ночи",
       "ing": "Йоьх маршалла",
-      "pron": "yokh marshalla"
+      "pron": "yokh marshalla",
+      "id": "f_1766025348310_qlop",
+      "audio": "f_1766025348310_qlop.mp3"
     },
     {
       "ru": "Слава Богу",
       "ing": "Дал ба хоастам",
-      "pron": "dal ba khoastam"
+      "pron": "dal ba khoastam",
+      "id": "f_1766025348310_tvt5",
+      "audio": "f_1766025348310_tvt5.mp3"
     },
     {
       "ru": "Как прошёл день?",
       "ing": "Дев мишта ха?",
-      "pron": "dev mishta kha"
+      "pron": "dev mishta kha",
+      "id": "f_1766025348310_2t0t",
+      "audio": "f_1766025348310_2t0t.mp3"
     },
     {
       "ru": "Как утро?",
       "ing": "Кхети мишта ха?",
-      "pron": "kheti mishta kha"
+      "pron": "kheti mishta kha",
+      "id": "f_1766025348310_aisv",
+      "audio": "f_1766025348310_aisv.mp3"
     },
     {
       "ru": "Как вечер?",
       "ing": "Гув мишта ха?",
-      "pron": "guv mishta kha"
+      "pron": "guv mishta kha",
+      "id": "f_1766025348310_ek2k",
+      "audio": "f_1766025348310_ek2k.mp3"
     },
     {
       "ru": "Приятно познакомиться",
       "ing": "Со хьо дог1ийла шун",
-      "pron": "so kho dog1iyla shun"
+      "pron": "so kho dog1iyla shun",
+      "id": "f_1766025348310_1ben",
+      "audio": "f_1766025348310_1ben.mp3"
     },
     {
       "ru": "Рад знакомству",
       "ing": "Со хьо дог1ийла шун",
-      "pron": "so kho dog1iyla shun"
+      "pron": "so kho dog1iyla shun",
+      "id": "f_1766025348310_n8ad",
+      "audio": "f_1766025348310_n8ad.mp3"
     },
     {
       "ru": "Как жизнь?",
       "ing": "Кхет а хьа?",
-      "pron": "khet a kha"
+      "pron": "khet a kha",
+      "id": "f_1766025348310_eqzh",
+      "audio": "f_1766025348310_eqzh.mp3"
     },
     {
       "ru": "Нормально",
       "ing": "Халха",
-      "pron": "khalkha"
+      "pron": "khalkha",
+      "id": "f_1766025348310_0678",
+      "audio": "f_1766025348310_0678.mp3"
     },
     {
       "ru": "Слава Всевышнему",
       "ing": "Аллах ба хоастам",
-      "pron": "allah ba khoastam"
+      "pron": "allah ba khoastam",
+      "id": "f_1766025348310_3bxn",
+      "audio": "f_1766025348310_3bxn.mp3"
     },
     {
       "ru": "Очень рад",
       "ing": "Шун йо",
-      "pron": "shun yo"
+      "pron": "shun yo",
+      "id": "f_1766025348310_pvqq",
+      "audio": "f_1766025348310_pvqq.mp3"
     },
     {
       "ru": "Доброе время суток",
       "ing": "Маршалла",
-      "pron": "marshalla"
+      "pron": "marshalla",
+      "id": "f_1766025348310_3mkx",
+      "audio": "f_1766025348310_3mkx.mp3"
     },
     {
       "ru": "Пожелаю удачи",
       "ing": "Къонах хил йу",
-      "pron": "konakh khil yu"
+      "pron": "konakh khil yu",
+      "id": "f_1766025348310_zx0c",
+      "audio": "f_1766025348310_zx0c.mp3"
     },
     {
       "ru": "С мира пришёл?",
       "ing": "Маршалла воаг1а?",
-      "pron": "marshalla voag1a"
+      "pron": "marshalla voag1a",
+      "id": "f_1766025348310_6ems",
+      "audio": "f_1766025348310_6ems.mp3"
     },
     {
       "ru": "С миром иди",
       "ing": "Маршалла вуда",
-      "pron": "marshalla vuda"
+      "pron": "marshalla vuda",
+      "id": "f_1766025348310_22su",
+      "audio": "f_1766025348310_22su.mp3"
     },
     {
       "ru": "Садись",
       "ing": "Де ца",
-      "pron": "de tsa"
+      "pron": "de tsa",
+      "id": "f_1766025348310_sm3p",
+      "audio": "f_1766025348310_sm3p.mp3"
     },
     {
       "ru": "Прошу, присаживайся",
       "ing": "Хьа де ца",
-      "pron": "kha de tsa"
+      "pron": "kha de tsa",
+      "id": "f_1766025348310_xtw9",
+      "audio": "f_1766025348310_xtw9.mp3"
     },
     {
       "ru": "Заходи",
       "ing": "Чуда",
-      "pron": "chuda"
+      "pron": "chuda",
+      "id": "f_1766025348310_che2",
+      "audio": "f_1766025348310_che2.mp3"
     },
     {
       "ru": "Заходите",
       "ing": "Шу чуда",
-      "pron": "shu chuda"
+      "pron": "shu chuda",
+      "id": "f_1766025348310_6k2e",
+      "audio": "f_1766025348310_6k2e.mp3"
     },
     {
       "ru": "Иди сюда",
       "ing": "Хьокха ца",
-      "pron": "khyokha tsa"
+      "pron": "khyokha tsa",
+      "id": "f_1766025348310_gow1",
+      "audio": "f_1766025348310_gow1.mp3"
     },
     {
       "ru": "Эй где ты",
       "ing": "Ей мичав хьо",
-      "pron": "Ei michav ho"
+      "pron": "Ei michav ho",
+      "id": "f_1766025348310_kj3q",
+      "audio": "f_1766025348310_kj3q.mp3"
+    },
+    {
+      "id": "f_1766025348310_831e",
+      "ru": "ывсава",
+      "ing": "мпир",
+      "pron": "dvcsd",
+      "audio": "f_1766025348310_831e.mp3"
     }
   ]
 }
