@@ -35,9 +35,8 @@ const categoryTitles = {
 let currentCategory = null;
 let currentData = null;
 
-let allPhrases = [];          // плоский список
-let phraseIndex = {};        // id -> category
-
+let allPhrases = [];
+let phraseIndex = {};   // id -> category
 let searchResults = [];
 let currentView = "category";
 
@@ -66,23 +65,23 @@ window.onload = async () => {
   }
 };
 
-/* ================= CATEGORIES ================= */
+/* ================= CATEGORY LIST ================= */
 
 function loadCategories(){
   const list = document.getElementById("category-list");
   list.innerHTML = "";
   categories.forEach(cat=>{
-    const d=document.createElement("div");
-    d.className="category";
-    d.textContent=categoryTitles[cat];
-    d.onclick=()=>loadCategory(cat);
-    list.appendChild(d);
+    const el = document.createElement("div");
+    el.className = "category";
+    el.textContent = categoryTitles[cat];
+    el.onclick = () => loadCategory(cat);
+    list.appendChild(el);
   });
 }
 
 async function loadCategory(cat){
-  currentView="category";
-  currentCategory=cat;
+  currentView = "category";
+  currentCategory = cat;
 
   document.getElementById("content-title").textContent = categoryTitles[cat];
 
@@ -96,10 +95,16 @@ async function loadCategory(cat){
 /* ================= MIGRATION ================= */
 
 function migrateItems(data){
-  let changed=false;
+  let changed = false;
   data.items.forEach(it=>{
-    if(!it.id){ it.id=genId(); changed=true; }
-    if(!it.audio){ it.audio=it.id+".mp3"; changed=true; }
+    if(!it.id){
+      it.id = genId();
+      changed = true;
+    }
+    if(!it.audio){
+      it.audio = it.id + ".mp3";
+      changed = true;
+    }
   });
   return changed;
 }
@@ -110,7 +115,7 @@ async function migrateAllCategories(){
   for(const cat of categories){
     const d = await loadCategoryData(cat);
     if(migrateItems(d)){
-      await saveCategoryData(cat,d);
+      await saveCategoryData(cat, d);
     }
   }
 
@@ -140,41 +145,41 @@ function renderPhrase(item){
 }
 
 function renderCategory(){
-  const c=document.getElementById("content");
-  c.innerHTML="";
+  const c = document.getElementById("content");
+  c.innerHTML = "";
 
   if(adminMode){
-    const m=document.createElement("button");
-    m.textContent="⚙ Миграция ID (один раз)";
-    m.onclick=migrateAllCategories;
+    const m = document.createElement("button");
+    m.textContent = "⚙ Миграция ID (один раз)";
+    m.onclick = migrateAllCategories;
     c.appendChild(m);
   }
 
   currentData.items.forEach(it=>{
-    it.category=currentCategory;
+    it.category = currentCategory;
     c.insertAdjacentHTML("beforeend", renderPhrase(it));
-    checkAudio(it.category,it.audio);
+    checkAudio(it.category, it.audio);
   });
 
   if(adminMode){
-    const b=document.createElement("button");
-    b.textContent="➕ Добавить фразу";
-    b.onclick=()=>addPhrase(currentCategory);
+    const b = document.createElement("button");
+    b.textContent = "➕ Добавить фразу";
+    b.onclick = () => addPhrase(currentCategory);
     c.appendChild(b);
   }
 }
 
 function renderSearch(){
-  const c=document.getElementById("content");
-  c.innerHTML="";
+  const c = document.getElementById("content");
+  c.innerHTML = "";
   searchResults.forEach(it=>{
     c.insertAdjacentHTML("beforeend", renderPhrase(it));
-    checkAudio(it.category,it.audio);
+    checkAudio(it.category, it.audio);
   });
 }
 
 function renderCurrentView(){
-  currentView==="search" ? renderSearch() : renderCategory();
+  currentView === "search" ? renderSearch() : renderCategory();
 }
 
 /* ================= AUDIO ================= */
@@ -188,8 +193,8 @@ function checkAudio(cat,file){
   fetch(`audio/${cat}/${file}`,{method:"HEAD"})
     .then(r=>{
       if(r.ok){
-        const el=document.getElementById(`ai-${file}`);
-        if(el) el.textContent="🟢";
+        const el = document.getElementById(`ai-${file}`);
+        if(el) el.textContent = "🟢";
       }
     });
 }
@@ -197,14 +202,14 @@ function checkAudio(cat,file){
 /* ================= ADMIN ================= */
 
 function adminLogin(){
-  const t=document.getElementById("gh-token").value.trim();
+  const t = document.getElementById("gh-token").value.trim();
   if(!t) return alert("Введите GitHub Token");
 
-  githubToken=t;
-  adminMode=true;
-  localStorage.setItem("githubToken",t);
+  githubToken = t;
+  adminMode = true;
+  localStorage.setItem("githubToken", t);
 
-  document.getElementById("admin-status").textContent="✓ Админ";
+  document.getElementById("admin-status").textContent = "✓ Админ";
   document.getElementById("download-zip").classList.remove("hidden");
   document.getElementById("admin-logout").classList.remove("hidden");
 
@@ -223,21 +228,39 @@ function downloadZip(){
   );
 }
 
-/* ================= CRUD (ID-BASED) ================= */
+/* ================= CATEGORY RESOLUTION ================= */
+
+async function findCategoryById(id){
+  if(phraseIndex[id]) return phraseIndex[id];
+
+  for(const cat of categories){
+    try{
+      const r = await fetch(`categories/${cat}.json`);
+      const d = await r.json();
+      if(d.items.some(it => it.id === id)){
+        phraseIndex[id] = cat;
+        return cat;
+      }
+    }catch{}
+  }
+  return null;
+}
+
+/* ================= CRUD ================= */
 
 async function loadCategoryData(cat){
-  const r=await fetch(`categories/${cat}.json`);
-  const d=await r.json();
+  const r = await fetch(`categories/${cat}.json`);
+  const d = await r.json();
   migrateItems(d);
   return d;
 }
 
 async function saveCategoryData(cat,data){
-  const url=`https://api.github.com/repos/${OWNER}/${REPO}/contents/categories/${cat}.json`;
+  const url = `https://api.github.com/repos/${OWNER}/${REPO}/contents/categories/${cat}.json`;
 
-  let sha=null;
-  const check=await fetch(url,{headers:{Authorization:`token ${githubToken}`}});
-  if(check.ok) sha=(await check.json()).sha;
+  let sha = null;
+  const check = await fetch(url,{headers:{Authorization:`token ${githubToken}`}});
+  if(check.ok) sha = (await check.json()).sha;
 
   await fetch(url,{
     method:"PUT",
@@ -245,67 +268,67 @@ async function saveCategoryData(cat,data){
       Authorization:`token ${githubToken}`,
       "Content-Type":"application/json"
     },
-    body:JSON.stringify({
+    body: JSON.stringify({
       message:`Update ${cat}`,
-      content:btoa(unescape(encodeURIComponent(JSON.stringify(data,null,2)))),
+      content: btoa(unescape(encodeURIComponent(JSON.stringify(data,null,2)))),
       sha
     })
   });
 }
 
 async function addPhrase(cat){
-  const ru=prompt("Русский:");
-  const ing=prompt("Ингушский:");
-  const pron=prompt("Произношение:");
-  if(!ru||!ing||!pron) return;
+  const ru = prompt("Русский:");
+  const ing = prompt("Ингушский:");
+  const pron = prompt("Произношение:");
+  if(!ru || !ing || !pron) return;
 
-  const d=await loadCategoryData(cat);
-  const id=genId();
+  const d = await loadCategoryData(cat);
+  const id = genId();
   d.items.push({id,ru,ing,pron,audio:id+".mp3"});
 
   await saveCategoryData(cat,d);
   await preloadAllCategories();
-  currentData=d;
+  currentData = d;
   renderCurrentView();
 }
 
 async function editById(id){
-  const cat = phraseIndex[id];
+  const cat = await findCategoryById(id);
   if(!cat) return alert("Категория не найдена");
 
-  const d=await loadCategoryData(cat);
-  const it=d.items.find(x=>x.id===id);
+  const d = await loadCategoryData(cat);
+  const it = d.items.find(x=>x.id===id);
   if(!it) return alert("Фраза не найдена");
 
-  it.ru=prompt("Русский:",it.ru);
-  it.ing=prompt("Ингушский:",it.ing);
-  it.pron=prompt("Произношение:",it.pron);
+  it.ru = prompt("Русский:", it.ru);
+  it.ing = prompt("Ингушский:", it.ing);
+  it.pron = prompt("Произношение:", it.pron);
 
   await saveCategoryData(cat,d);
   await preloadAllCategories();
 
-  if(currentCategory===cat) currentData=d;
+  if(currentCategory === cat) currentData = d;
   renderCurrentView();
 }
 
 async function deleteById(id){
   if(!confirm("Удалить фразу?")) return;
 
-  const cat = phraseIndex[id];
+  const cat = await findCategoryById(id);
   if(!cat) return alert("Категория не найдена");
 
-  const d=await loadCategoryData(cat);
-  d.items=d.items.filter(x=>x.id!==id);
+  const d = await loadCategoryData(cat);
+  d.items = d.items.filter(x=>x.id!==id);
 
   await saveCategoryData(cat,d);
   await preloadAllCategories();
 
-  if(currentCategory===cat) currentData=d;
+  if(currentCategory === cat) currentData = d;
   renderCurrentView();
 }
 
-function recordById(id){
-  const cat = phraseIndex[id];
+async function recordById(id){
+  const cat = await findCategoryById(id);
   if(!cat) return alert("Категория не найдена");
   startRecording(cat,id);
 }
@@ -313,41 +336,44 @@ function recordById(id){
 /* ================= SEARCH ================= */
 
 async function preloadAllCategories(){
-  allPhrases=[];
-  phraseIndex={};
+  allPhrases = [];
+  phraseIndex = {};
 
   for(const cat of categories){
     try{
-      const r=await fetch(`categories/${cat}.json`);
-      const d=await r.json();
+      const r = await fetch(`categories/${cat}.json`);
+      const d = await r.json();
       migrateItems(d);
 
       d.items.forEach(it=>{
-        allPhrases.push({...it,category:cat});
-        phraseIndex[it.id]=cat;
+        allPhrases.push({...it, category: cat});
+        phraseIndex[it.id] = cat;
       });
     }catch{}
   }
 }
 
-const sInput=document.getElementById("global-search");
-const sBox=document.getElementById("search-results");
+const sInput = document.getElementById("global-search");
+const sBox   = document.getElementById("search-results");
 
-sInput.oninput=()=>{
-  const q=low(sInput.value);
-  sBox.innerHTML="";
-  if(q.length<2){ sBox.classList.add("hidden"); return; }
+sInput.oninput = () => {
+  const q = low(sInput.value);
+  sBox.innerHTML = "";
+  if(q.length < 2){
+    sBox.classList.add("hidden");
+    return;
+  }
 
-  allPhrases.filter(p=>
+  allPhrases.filter(p =>
     low(p.ru).includes(q) ||
     low(p.ing).includes(q) ||
     low(p.pron).includes(q)
   ).slice(0,20).forEach(p=>{
-    const d=document.createElement("div");
-    d.className="search-item";
-    d.textContent=`${p.ru} — ${categoryTitles[p.category]}`;
-    d.onclick=()=>{
-      sInput.value=p.ru;
+    const d = document.createElement("div");
+    d.className = "search-item";
+    d.textContent = `${p.ru} — ${categoryTitles[p.category]}`;
+    d.onclick = () => {
+      sInput.value = p.ru;
       sBox.classList.add("hidden");
       doSearch();
     };
@@ -357,17 +383,20 @@ sInput.oninput=()=>{
   sBox.classList.remove("hidden");
 };
 
-document.getElementById("search-btn").onclick=doSearch;
+document.getElementById("search-btn").onclick = doSearch;
 
 function doSearch(){
-  const q=low(sInput.value);
+  const q = low(sInput.value);
   if(!q) return;
-  currentView="search";
-  document.getElementById("content-title").textContent="Поиск: "+sInput.value;
-  searchResults=allPhrases.filter(p=>
+
+  currentView = "search";
+  document.getElementById("content-title").textContent = "Поиск: " + sInput.value;
+
+  searchResults = allPhrases.filter(p =>
     low(p.ru).includes(q) ||
     low(p.ing).includes(q) ||
     low(p.pron).includes(q)
   );
+
   renderSearch();
 }
