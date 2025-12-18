@@ -1,3 +1,5 @@
+console.log("script.js START");
+
 /* ================= CONFIG ================= */
 
 const OWNER = "ganizhevAmirkhan";
@@ -431,6 +433,8 @@ window.playAudio = function(cat, file){
     console.error("❌ audio load error", url, e);
   };
 };
+
+console.log("script.js END");
 
 
 
