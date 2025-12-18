@@ -115,7 +115,16 @@ function renderPhrases(){
       <p><b>PRON:</b> ${item.pron || ""}</p>
       <i>${categoryTitles[currentCategory]}</i><br>
 
-      <button onclick="playAudio('${currentCategory}','${file}')">▶</button>
+    const hasAudio = item.audio && item.audio.trim() !== "";
+
+<button 
+  onclick="${hasAudio ? `playAudio('${category}','${item.audio}')` : ''}"
+  ${hasAudio ? '' : 'disabled'}
+  style="${hasAudio ? '' : 'opacity:0.4;cursor:not-allowed'}"
+>
+▶
+</button>
+
       <span id="ai-${i}">⚪</span>
 
       ${adminMode ? `
@@ -267,4 +276,5 @@ function downloadZip(){
     "_blank"
   );
 }
+
 
