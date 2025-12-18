@@ -4,102 +4,142 @@
     {
       "ru": "Животные",
       "ing": "Хьйбаж",
-      "pron": "haibaj"
+      "pron": "haibaj",
+      "id": "f_1766017415464_5gdw",
+      "audio": "f_1766017415464_5gdw.mp3"
     },
     {
       "ru": "Животное",
       "ing": "Дода",
-      "pron": "doda"
+      "pron": "doda",
+      "id": "f_1766017415464_q27c",
+      "audio": "f_1766017415464_q27c.mp3"
     },
     {
       "ru": "Собака",
       "ing": "Жали",
-      "pron": "Jail"
+      "pron": "Jail",
+      "id": "f_1766017415464_7q5y",
+      "audio": "f_1766017415464_7q5y.mp3"
     },
     {
       "ru": "Кошка",
       "ing": "Циск",
-      "pron": "Ticks"
+      "pron": "Ticks",
+      "id": "f_1766017415464_6dzd",
+      "audio": "f_1766017415464_6dzd.mp3"
     },
     {
       "ru": "Волк",
       "ing": "Борз",
-      "pron": "Borz"
+      "pron": "Borz",
+      "id": "f_1766017415464_5zxf",
+      "audio": "f_1766017415464_5zxf.mp3"
     },
     {
       "ru": "Лиса",
       "ing": "Кел",
-      "pron": "kel"
+      "pron": "kel",
+      "id": "f_1766017415464_h7ui",
+      "audio": "f_1766017415464_h7ui.mp3"
     },
     {
       "ru": "Кабан",
       "ing": "нал",
-      "pron": "nalg"
+      "pron": "nalg",
+      "id": "f_1766017415464_b23w",
+      "audio": "f_1766017415464_b23w.mp3"
     },
     {
       "ru": "Олень",
       "ing": "Керла",
-      "pron": "kerla"
+      "pron": "kerla",
+      "id": "f_1766017415464_i5h5",
+      "audio": "f_1766017415464_i5h5.mp3"
     },
     {
       "ru": "Корова",
       "ing": "Ц1ан",
-      "pron": "ts1an"
+      "pron": "ts1an",
+      "id": "f_1766017415464_livf",
+      "audio": "f_1766017415464_livf.mp3"
     },
     {
       "ru": "Бык",
       "ing": "Маъгъ",
-      "pron": "magh"
+      "pron": "magh",
+      "id": "f_1766017415464_jtbe",
+      "audio": "f_1766017415464_jtbe.mp3"
     },
     {
       "ru": "Овца",
       "ing": "Бокх",
-      "pron": "bokh"
+      "pron": "bokh",
+      "id": "f_1766017415464_b5y9",
+      "audio": "f_1766017415464_b5y9.mp3"
     },
     {
       "ru": "Коза",
       "ing": "ГIов",
-      "pron": "g1ov"
+      "pron": "g1ov",
+      "id": "f_1766017415464_6bep",
+      "audio": "f_1766017415464_6bep.mp3"
     },
     {
       "ru": "Курица",
       "ing": "Курза",
-      "pron": "kurza"
+      "pron": "kurza",
+      "id": "f_1766017415464_xnuq",
+      "audio": "f_1766017415464_xnuq.mp3"
     },
     {
       "ru": "Петух",
       "ing": "Курза к1онг",
-      "pron": "kurza k1ong"
+      "pron": "kurza k1ong",
+      "id": "f_1766017415464_tmnt",
+      "audio": "f_1766017415464_tmnt.mp3"
     },
     {
       "ru": "Медведь",
       "ing": "Доьх",
-      "pron": "dyokh"
+      "pron": "dyokh",
+      "id": "f_1766017415464_m1j2",
+      "audio": "f_1766017415464_m1j2.mp3"
     },
     {
       "ru": "Барс",
       "ing": "Ирх",
-      "pron": "irkh"
+      "pron": "irkh",
+      "id": "f_1766017415464_f6b9",
+      "audio": "f_1766017415464_f6b9.mp3"
     },
     {
       "ru": "Он опасный зверь",
       "ing": "Из аькъа йо",
-      "pron": "iz akqa yo"
+      "pron": "iz akqa yo",
+      "id": "f_1766017415464_jxa4",
+      "audio": "f_1766017415464_jxa4.mp3"
     },
     {
       "ru": "Большой зверь",
       "ing": "Ларча аькъа",
-      "pron": "larcha akqa"
+      "pron": "larcha akqa",
+      "id": "f_1766017415464_kdki",
+      "audio": "f_1766017415464_kdki.mp3"
     },
     {
       "ru": "Маленький зверь",
       "ing": "Керча аькъа",
-      "pron": "kercha akqa"
+      "pron": "kercha akqa",
+      "id": "f_1766017415464_ndae",
+      "audio": "f_1766017415464_ndae.mp3"
     },
     {
       "ru": "След зверя",
       "ing": "Аькъа лар",
-      "pron": "akqa lar"
+      "pron": "akqa lar",
+      "id": "f_1766017415464_a31r",
+      "audio": "f_1766017415464_a31r.mp3"
     }
   ]
 }
