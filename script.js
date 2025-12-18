@@ -184,10 +184,30 @@ function renderCurrentView(){
 
 /* ================= AUDIO ================= */
 
-function playAudio(cat,file){
-  new Audio(`audio/${cat}/${file}?v=${Date.now()}`).play()
-    .catch(()=>alert("Аудио нет"));
+async function playAudio(cat, file){
+  const base = file.replace(/\.(mp3|webm)$/i, "");
+  const variants = [
+    `${base}.mp3`,
+    `${base}.webm`
+  ];
+
+  for(const f of variants){
+    const url = `audio/${cat}/${f}?v=${Date.now()}`;
+    try{
+      const r = await fetch(url, { method: "HEAD" });
+      if(!r.ok) continue;
+
+      const audio = new Audio(url);
+      await audio.play();
+      return; // ✅ если сыграло — выходим
+    }catch(e){
+      // пробуем следующий формат
+    }
+  }
+
+  alert("Аудио нет");
 }
+
 
 function checkAudio(cat,file){
   fetch(`audio/${cat}/${file}`,{method:"HEAD"})
@@ -400,3 +420,4 @@ function doSearch(){
 
   renderSearch();
 }
+
