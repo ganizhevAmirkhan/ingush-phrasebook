@@ -4,102 +4,149 @@
     {
       "ru": "Время",
       "ing": "Вай",
-      "pron": "vai"
+      "pron": "vai",
+      "id": "f_1766025044136_11pw",
+      "audio": "f_1766025044136_11pw.mp3"
     },
     {
       "ru": "Который час?",
       "ing": "Вай мотт?",
-      "pron": "vai mott"
+      "pron": "vai mott",
+      "id": "f_1766025044136_ukw7",
+      "audio": "f_1766025044136_ukw7.mp3"
     },
     {
       "ru": "Сейчас",
       "ing": "ТIа",
-      "pron": "t1a"
+      "pron": "t1a",
+      "id": "f_1766025044136_pdrk",
+      "audio": "f_1766025044136_pdrk.mp3"
     },
     {
       "ru": "Сегодня",
       "ing": "Тахана",
-      "pron": "takhana"
+      "pron": "takhana",
+      "id": "f_1766025044136_ijh5",
+      "audio": "f_1766025044136_ijh5.mp3"
     },
     {
       "ru": "Вчера",
       "ing": "Делха",
-      "pron": "delkha"
+      "pron": "delkha",
+      "id": "f_1766025044136_f8w0",
+      "audio": "f_1766025044136_f8w0.mp3"
     },
     {
       "ru": "Завтра",
       "ing": "Кхаца",
-      "pron": "khatsa"
+      "pron": "khatsa",
+      "id": "f_1766025044136_lu6y",
+      "audio": "f_1766025044136_lu6y.mp3"
     },
     {
       "ru": "Утро",
       "ing": "1ийре",
-      "pron": "iyare"
+      "pron": "iyare",
+      "id": "f_1766025044136_87wh",
+      "audio": "f_1766025044136_87wh.mp3"
     },
     {
       "ru": "День",
       "ing": "Ден",
-      "pron": "den"
+      "pron": "den",
+      "id": "f_1766025044136_v4u8",
+      "audio": "f_1766025044136_v4u8.mp3"
     },
     {
       "ru": "Вечер",
       "ing": "Шовх",
-      "pron": "shovkh"
+      "pron": "shovkh",
+      "id": "f_1766025044136_ni8i",
+      "audio": "f_1766025044136_ni8i.mp3"
     },
     {
       "ru": "Ночь",
       "ing": "Йовх",
-      "pron": "yovkh"
+      "pron": "yovkh",
+      "id": "f_1766025044136_ivez",
+      "audio": "f_1766025044136_ivez.mp3"
     },
     {
       "ru": "Через час",
       "ing": "Вай юкъах",
-      "pron": "vai yukakh"
+      "pron": "vai yukakh",
+      "id": "f_1766025044136_xsjo",
+      "audio": "f_1766025044136_xsjo.mp3"
     },
     {
       "ru": "Через минуту",
       "ing": "Минут юкъах",
-      "pron": "minut yukakh"
+      "pron": "minut yukakh",
+      "id": "f_1766025044136_v8wg",
+      "audio": "f_1766025044136_v8wg.mp3"
     },
     {
       "ru": "Скоро",
       "ing": "Хаькха",
-      "pron": "khaekha"
+      "pron": "khaekha",
+      "id": "f_1766025044136_72uw",
+      "audio": "f_1766025044136_72uw.mp3"
     },
     {
       "ru": "Позже",
       "ing": "Т1ехьа",
-      "pron": "t1ekhya"
+      "pron": "t1ekhya",
+      "id": "f_1766025044136_nw1n",
+      "audio": "f_1766025044136_nw1n.mp3"
     },
     {
       "ru": "Рано",
       "ing": "Мадха",
-      "pron": "madkha"
+      "pron": "madkha",
+      "id": "f_1766025044136_y6cm",
+      "audio": "f_1766025044136_y6cm.mp3"
     },
     {
       "ru": "Поздно",
       "ing": "К1ера",
-      "pron": "k1era"
+      "pron": "k1era",
+      "id": "f_1766025044136_0yfj",
+      "audio": "f_1766025044136_0yfj.mp3"
     },
     {
       "ru": "Когда?",
       "ing": "Маца?",
-      "pron": "matsa"
+      "pron": "matsa",
+      "id": "f_1766025044136_bzw3",
+      "audio": "f_1766025044136_bzw3.mp3"
     },
     {
       "ru": "Сейчас нельзя",
       "ing": "Т1а му дац",
-      "pron": "t1a mu dats"
+      "pron": "t1a mu dats",
+      "id": "f_1766025044136_moi4",
+      "audio": "f_1766025044136_moi4.mp3"
     },
     {
       "ru": "Я приду позже",
       "ing": "Со т1ехьа хьа воаг1агва",
-      "pron": "so t1ekhya kha voag1agva"
+      "pron": "so t1ekhya kha voag1agva",
+      "id": "f_1766025044136_rmfi",
+      "audio": "f_1766025044136_rmfi.mp3"
     },
     {
       "ru": "Мы идём сейчас",
       "ing": "Тхо т1а вудаш",
-      "pron": "tkho t1a vudash"
+      "pron": "tkho t1a vudash",
+      "id": "f_1766025044136_3y7m",
+      "audio": "f_1766025044136_3y7m.mp3"
+    },
+    {
+      "id": "f_1766025044136_mhq0",
+      "ru": "уууууу",
+      "ing": "скпк",
+      "pron": "dddd",
+      "audio": "f_1766025044136_mhq0.mp3"
     }
   ]
 }
