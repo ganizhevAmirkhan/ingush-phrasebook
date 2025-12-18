@@ -4,177 +4,254 @@
     {
       "ru": "Машина",
       "ing": "Машен",
-      "pron": "mashen"
+      "pron": "mashen",
+      "id": "f_1766023943620_72d6",
+      "audio": "f_1766023943620_72d6.mp3"
     },
     {
       "ru": "Автобус",
       "ing": "Автобус",
-      "pron": "avtobus"
+      "pron": "avtobus",
+      "id": "f_1766023943620_nuwt",
+      "audio": "f_1766023943620_nuwt.mp3"
     },
     {
       "ru": "Грузовик",
       "ing": "Газик",
-      "pron": "gazik"
+      "pron": "gazik",
+      "id": "f_1766023943620_6ovq",
+      "audio": "f_1766023943620_6ovq.mp3"
     },
     {
       "ru": "Такси",
       "ing": "Такси",
-      "pron": "taksi"
+      "pron": "taksi",
+      "id": "f_1766023943620_znnp",
+      "audio": "f_1766023943620_znnp.mp3"
     },
     {
       "ru": "Ехать",
       "ing": "Вуда",
-      "pron": "vuda"
+      "pron": "vuda",
+      "id": "f_1766023943620_ree5",
+      "audio": "f_1766023943620_ree5.mp3"
     },
     {
       "ru": "Я еду",
       "ing": "Со вуда",
-      "pron": "so vuda"
+      "pron": "so vuda",
+      "id": "f_1766023943620_6y7s",
+      "audio": "f_1766023943620_6y7s.mp3"
     },
     {
       "ru": "Ты едешь?",
       "ing": "Хьо вуда?",
-      "pron": "kho vuda"
+      "pron": "kho vuda",
+      "id": "f_1766023943620_wo5d",
+      "audio": "f_1766023943620_wo5d.mp3"
     },
     {
       "ru": "Поехали!",
       "ing": "Вуда хьа!",
-      "pron": "vuda kha"
+      "pron": "vuda kha",
+      "id": "f_1766023943620_frcn",
+      "audio": "f_1766023943620_frcn.mp3"
     },
     {
       "ru": "Стой!",
       "ing": "Сац",
-      "pron": "Satc"
+      "pron": "Satc",
+      "id": "f_1766023943620_8mdb",
+      "audio": "f_1766023943620_8mdb.mp3"
     },
     {
       "ru": "Поедем медленно",
       "ing": "Шортиг вуда",
-      "pron": "shortig vuda"
+      "pron": "shortig vuda",
+      "id": "f_1766023943620_p1h7",
+      "audio": "f_1766023943620_p1h7.mp3"
     },
     {
       "ru": "Поедем быстрее",
       "ing": "Марсха вуда",
-      "pron": "marsha vuda"
+      "pron": "marsha vuda",
+      "id": "f_1766023943620_tw8n",
+      "audio": "f_1766023943620_tw8n.mp3"
     },
     {
       "ru": "Поверни налево",
       "ing": "Чехьала вуда",
-      "pron": "chekhala vuda"
+      "pron": "chekhala vuda",
+      "id": "f_1766023943620_h2sm",
+      "audio": "f_1766023943620_h2sm.mp3"
     },
     {
       "ru": "Поверни направо",
       "ing": "Бархала вуда",
-      "pron": "barkhala vuda"
+      "pron": "barkhala vuda",
+      "id": "f_1766023943620_r2cs",
+      "audio": "f_1766023943620_r2cs.mp3"
     },
     {
       "ru": "Остановись здесь",
       "ing": "Хьокха тха",
-      "pron": "khyokha tcha"
+      "pron": "khyokha tcha",
+      "id": "f_1766023943620_i1p6",
+      "audio": "f_1766023943620_i1p6.mp3"
     },
     {
       "ru": "Остановись там",
       "ing": "Цугахь тха",
-      "pron": "tsugakh tcha"
+      "pron": "tsugakh tcha",
+      "id": "f_1766023943620_3ej2",
+      "audio": "f_1766023943620_3ej2.mp3"
     },
     {
       "ru": "Где остановка?",
       "ing": "Остановка хьа?",
-      "pron": "ostanovka kha"
+      "pron": "ostanovka kha",
+      "id": "f_1766023943620_ec8l",
+      "audio": "f_1766023943620_ec8l.mp3"
     },
     {
       "ru": "Я водитель",
       "ing": "Со вудашка",
-      "pron": "so vudashka"
+      "pron": "so vudashka",
+      "id": "f_1766023943620_7g53",
+      "audio": "f_1766023943620_7g53.mp3"
     },
     {
       "ru": "Он водитель",
       "ing": "Из вудашка",
-      "pron": "iz vudashka"
+      "pron": "iz vudashka",
+      "id": "f_1766023943620_pbg8",
+      "audio": "f_1766023943620_pbg8.mp3"
     },
     {
       "ru": "Сломалась машина",
       "ing": "Машин т1аккха",
-      "pron": "mashin t1akkha"
+      "pron": "mashin t1akkha",
+      "id": "f_1766023943620_mvag",
+      "audio": "f_1766023943620_mvag.mp3"
     },
     {
       "ru": "Машина работает",
       "ing": "Машин лоца",
-      "pron": "mashin lotsa"
+      "pron": "mashin lotsa",
+      "id": "f_1766023943620_uh7k",
+      "audio": "f_1766023943620_uh7k.mp3"
     },
     {
       "ru": "Машина не работает",
       "ing": "Машин му лоца",
-      "pron": "mashin mu lotsa"
+      "pron": "mashin mu lotsa",
+      "id": "f_1766023943620_f6ri",
+      "audio": "f_1766023943620_f6ri.mp3"
     },
     {
       "ru": "Заправка",
       "ing": "Заправка",
-      "pron": "zapravka"
+      "pron": "zapravka",
+      "id": "f_1766023943620_x4wf",
+      "audio": "f_1766023943620_x4wf.mp3"
     },
     {
       "ru": "Где заправка?",
       "ing": "Заправка хьа?",
-      "pron": "zapravka kha"
+      "pron": "zapravka kha",
+      "id": "f_1766023943620_wta7",
+      "audio": "f_1766023943620_wta7.mp3"
     },
     {
       "ru": "Заправь",
       "ing": "Заправ дуйла",
-      "pron": "zaprav duyla"
+      "pron": "zaprav duyla",
+      "id": "f_1766023943620_vnj1",
+      "audio": "f_1766023943620_vnj1.mp3"
     },
     {
       "ru": "Бензин",
       "ing": "Бензин",
-      "pron": "benzin"
+      "pron": "benzin",
+      "id": "f_1766023943620_be4l",
+      "audio": "f_1766023943620_be4l.mp3"
     },
     {
       "ru": "Дизель",
       "ing": "Дизель",
-      "pron": "dizel"
+      "pron": "dizel",
+      "id": "f_1766023943620_asz6",
+      "audio": "f_1766023943620_asz6.mp3"
     },
     {
       "ru": "Мне нужно в город",
       "ing": "Са шахь давах",
-      "pron": "sa shah davakh"
+      "pron": "sa shah davakh",
+      "id": "f_1766023943620_rgva",
+      "audio": "f_1766023943620_rgva.mp3"
     },
     {
       "ru": "Мне нужно в село",
       "ing": "Са гӀалачче давах",
-      "pron": "sa ghalachche davakh"
+      "pron": "sa ghalachche davakh",
+      "id": "f_1766023943620_wbrq",
+      "audio": "f_1766023943620_wbrq.mp3"
     },
     {
       "ru": "Сколько стоит поездка?",
       "ing": "Вудай ца йа?",
-      "pron": "vuday tsa ya"
+      "pron": "vuday tsa ya",
+      "id": "f_1766023943620_s5oi",
+      "audio": "f_1766023943620_s5oi.mp3"
     },
     {
       "ru": "Дорого",
       "ing": "Далга",
-      "pron": "dalga"
+      "pron": "dalga",
+      "id": "f_1766023943620_uabl",
+      "audio": "f_1766023943620_uabl.mp3"
     },
     {
       "ru": "Дёшево",
       "ing": "Ца далга",
-      "pron": "tsa dalga"
+      "pron": "tsa dalga",
+      "id": "f_1766023943620_a5fd",
+      "audio": "f_1766023943620_a5fd.mp3"
     },
     {
       "ru": "Опасная дорога",
       "ing": "Кхерме никъ",
-      "pron": "kherme nikh"
+      "pron": "kherme nikh",
+      "id": "f_1766023943620_lfqg",
+      "audio": "f_1766023943620_lfqg.mp3"
     },
     {
       "ru": "Хорошая дорога",
       "ing": "Дика гота",
-      "pron": "dika gota"
+      "pron": "dika gota",
+      "id": "f_1766023943620_uim2",
+      "audio": "f_1766023943620_uim2.mp3"
     },
     {
       "ru": "Где водитель?",
       "ing": "Вудашка хьа?",
-      "pron": "vudashka kha"
+      "pron": "vudashka kha",
+      "id": "f_1766023943620_6c5s",
+      "audio": "f_1766023943620_6c5s.mp3"
     },
     {
       "ru": "Где машина?",
       "ing": "Машин хьа?",
-      "pron": "mashin kha"
+      "pron": "mashin kha",
+      "id": "f_1766023943620_mv3b",
+      "audio": "f_1766023943620_mv3b.mp3"
+    },
+    {
+      "id": "f_1766023943620_lwj4",
+      "ru": "ш",
+      "ing": "в",
+      "pron": "r",
+      "audio": "f_1766023943620_lwj4.mp3"
     }
   ]
 }
