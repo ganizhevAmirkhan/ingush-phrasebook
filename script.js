@@ -1,5 +1,3 @@
-console.log("script.js START");
-
 /* ================= CONFIG ================= */
 
 const OWNER = "ganizhevAmirkhan";
@@ -104,8 +102,7 @@ function migrateItems(data){
       changed = true;
     }
     if(!it.audio){
-      // ✅ теперь по умолчанию webm
-      it.audio = it.id + ".webm";
+      it.audio = it.id + ".mp3";
       changed = true;
     }
   });
@@ -187,21 +184,20 @@ function renderCurrentView(){
 
 /* ================= AUDIO ================= */
 
-function checkAudio(cat, file){
-  const el = document.getElementById(`ai-${file}`);
-  if(el) el.textContent = "🟢";
+function playAudio(cat,file){
+  new Audio(`audio/${cat}/${file}?v=${Date.now()}`).play()
+    .catch(()=>alert("Аудио нет"));
 }
 
-
-    audio.onerror = () => {
-      checked++;
-      if(checked === variants.length && el.textContent !== "🟢"){
-        el.textContent = "⚪";
+function checkAudio(cat,file){
+  fetch(`audio/${cat}/${file}`,{method:"HEAD"})
+    .then(r=>{
+      if(r.ok){
+        const el = document.getElementById(`ai-${file}`);
+        if(el) el.textContent = "🟢";
       }
-    };
-  });
+    });
 }
-
 
 /* ================= ADMIN ================= */
 
@@ -288,15 +284,7 @@ async function addPhrase(cat){
 
   const d = await loadCategoryData(cat);
   const id = genId();
-
-  // ✅ audio теперь webm
-  d.items.push({
-    id,
-    ru,
-    ing,
-    pron,
-    audio: id + ".webm"
-  });
+  d.items.push({id,ru,ing,pron,audio:id+".mp3"});
 
   await saveCategoryData(cat,d);
   await preloadAllCategories();
@@ -412,32 +400,4 @@ function doSearch(){
 
   renderSearch();
 }
-// ===== SIMPLE AUDIO PLAYER (FINAL) =====
-window.playAudio = function(cat, file){
-  console.log("▶ playAudio:", cat, file);
-
-  const url = `audio/${cat}/${file}`;
-  const audio = new Audio(url);
-
-  audio.preload = "auto";
-  audio.volume = 1;
-  audio.muted = false;
-
-  audio.oncanplay = () => {
-    audio.play()
-      .then(() => console.log("🔊 playing", url))
-      .catch(err => console.error("❌ play error", err));
-  };
-
-  audio.onerror = (e) => {
-    console.error("❌ audio load error", url, e);
-  };
-};
-
-console.log("script.js END");
-
-
-
-
-
 
