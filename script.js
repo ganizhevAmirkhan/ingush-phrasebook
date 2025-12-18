@@ -274,9 +274,16 @@ async function saveCategoryData(cat,data){
   });
 }
 
-function refreshAfterChange(){
-  currentView === "search" ? doSearch() : renderCategory();
+async function refreshAfterChange(){
+  await preloadAllCategories();
+
+  if(currentView === "search"){
+    doSearch();        // пересобирает searchResults и перерисует
+  } else if(currentCategory){
+    await loadCategory(currentCategory);
+  }
 }
+
 
 async function addPhrase(cat){
   const ru = prompt("Русский:");
@@ -291,7 +298,7 @@ async function addPhrase(cat){
   await saveCategoryData(cat,d);
   await preloadAllCategories();
   currentData = d;
-  refreshAfterChange();
+  ();
 }
 
 async function editById(id){
@@ -400,3 +407,4 @@ function doSearch(){
 
   renderSearch();
 }
+
