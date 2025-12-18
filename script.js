@@ -424,25 +424,27 @@ function doSearch(){
 
   renderSearch();
 }
-// ===== GLOBAL AUDIO PLAYER (FIX) =====
+// ===== SIMPLE AUDIO PLAYER (FINAL) =====
 window.playAudio = function(cat, file){
-  console.log("playAudio called:", cat, file);
+  console.log("▶ playAudio:", cat, file);
 
   const url = `audio/${cat}/${file}`;
   const audio = new Audio(url);
 
+  audio.preload = "auto";
   audio.volume = 1;
   audio.muted = false;
 
-  audio.play()
-    .then(() => {
-      console.log("▶ playing:", url);
-    })
-    .catch(err => {
-      console.error("❌ audio error:", err);
-    });
-};
+  audio.oncanplay = () => {
+    audio.play()
+      .then(() => console.log("🔊 playing", url))
+      .catch(err => console.error("❌ play error", err));
+  };
 
+  audio.onerror = (e) => {
+    console.error("❌ audio load error", url, e);
+  };
+};
 
 
 
