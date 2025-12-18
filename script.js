@@ -1,211 +1,270 @@
-let categories = {};
+/* ================= DATA ================= */
+
+const categories = [
+ "greetings","basic_phrases","personal_info","family","home",
+ "food","drinks","travel","transport","hunting",
+ "danger","thermal","orientation","weather","emotions",
+ "health","help","commands","tools","animals",
+ "time","numbers","colors","money","shop",
+ "city","village","guests","communication","work","misc"
+];
+
+const categoryTitles = {
+ greetings: "Приветствия",
+ basic_phrases: "Базовые фразы",
+ personal_info: "Личная информация",
+ family: "Семья",
+ home: "Дом",
+ food: "Еда",
+ drinks: "Напитки",
+ travel: "Путешествия",
+ transport: "Транспорт",
+ hunting: "Охота",
+ danger: "Опасность",
+ thermal: "Тепловизор",
+ orientation: "Ориентирование",
+ weather: "Погода",
+ emotions: "Эмоции",
+ health: "Здоровье",
+ help: "Помощь",
+ commands: "Команды",
+ tools: "Инструменты",
+ animals: "Животные",
+ time: "Время",
+ numbers: "Числа",
+ colors: "Цвета",
+ money: "Деньги",
+ shop: "Магазин",
+ city: "Город",
+ village: "Деревня",
+ guests: "Гости",
+ communication: "Общение",
+ work: "Работа",
+ misc: "Разное"
+};
+
 let currentCategory = null;
 let currentData = null;
-let currentView = "category"; // category | search
-let searchResults = [];
+let allPhrases = [];
 
-const categoriesList = document.getElementById("categories");
-const content = document.getElementById("content");
-const searchInput = document.getElementById("searchInput");
+/* ================= GLOBAL STATE ================= */
 
-/* =========================
-   INIT
-========================= */
+window.adminMode = false;
+window.githubToken = localStorage.getItem("githubToken");
 
-async function init() {
+/* ================= INIT ================= */
+
+window.onload = async () => {
+  loadCategories();
   await preloadAllCategories();
-  renderCategories();
-}
-init();
 
-/* =========================
-   LOAD JSON
-========================= */
+  const zipBtn = document.getElementById("download-zip");
+  const tokenInput = document.getElementById("gh-token");
+  const status = document.getElementById("admin-status");
 
-async function preloadAllCategories() {
-  const files = [
-    "basic_phrases","greetings","family","home","food","drinks","travel",
-    "transport","health","help","commands","tools","animals","time",
-    "numbers","weather","emotions","colors","money","shop","city","village",
-    "guests","communication","work","misc","hunting"
-  ];
+  if (githubToken) {
+    adminMode = true;
 
-  for (const name of files) {
-    const res = await fetch(`categories/${name}.json`);
-    if (res.ok) categories[name] = await res.json();
+    if (tokenInput) tokenInput.value = githubToken;
+    if (status) status.textContent = "✓ Админ";
+    if (zipBtn) zipBtn.classList.remove("hidden");
+  } else {
+    if (zipBtn) zipBtn.classList.add("hidden");
   }
-}
+};
 
-/* =========================
-   RENDER CATEGORY LIST
-========================= */
+/* ================= CATEGORIES ================= */
 
-function renderCategories() {
-  categoriesList.innerHTML = "";
-  Object.keys(categories).forEach(cat => {
-    const btn = document.createElement("button");
-    btn.textContent = categories[cat].category;
-    btn.onclick = () => openCategory(cat);
-    categoriesList.appendChild(btn);
+function loadCategories(){
+  const list = document.getElementById("category-list");
+  list.innerHTML = "";
+
+  categories.forEach(cat=>{
+    const d = document.createElement("div");
+    d.className = "category";
+    d.textContent = categoryTitles[cat] || cat;
+    d.onclick = () => loadCategory(cat);
+    list.appendChild(d);
   });
 }
 
-/* =========================
-   OPEN CATEGORY
-========================= */
-
-function openCategory(cat) {
+async function loadCategory(cat){
   currentCategory = cat;
-  currentData = categories[cat];
-  currentView = "category";
-  renderPhrases(currentData.items);
+  document.getElementById("content-title").textContent =
+    categoryTitles[cat] || cat;
+
+  const res = await fetch(`categories/${cat}.json`);
+  currentData = await res.json();
+  renderPhrases();
 }
 
-/* =========================
-   SEARCH
-========================= */
+/* ================= RENDER ================= */
 
-function doSearch() {
-  const q = searchInput.value.trim().toLowerCase();
-  if (!q) return;
-
-  searchResults = [];
-  currentView = "search";
-
-  Object.entries(categories).forEach(([cat, data]) => {
-    data.items.forEach(item => {
-      if (
-        item.ru.toLowerCase().includes(q) ||
-        item.ing.toLowerCase().includes(q) ||
-        item.pron.toLowerCase().includes(q)
-      ) {
-        searchResults.push({ ...item, _cat: cat });
-      }
-    });
-  });
-
-  renderPhrases(searchResults);
-}
-
-/* =========================
-   RENDER PHRASES
-========================= */
-
-function renderPhrases(list) {
+function renderPhrases(){
+  const content = document.getElementById("content");
   content.innerHTML = "";
 
-  list.forEach(item => {
-    const hasAudio = !!item.audio;
+  currentData.items.forEach((item,i)=>{
+    const file = normalizePron(item.pron) + ".mp3";
 
-    const card = document.createElement("div");
-    card.className = "card";
+    const div = document.createElement("div");
+    div.className = "phrase";
+    div.innerHTML = `
+      <p><b>ING:</b> ${item.ing || ""}</p>
+      <p><b>RU:</b> ${item.ru || ""}</p>
+      <p><b>PRON:</b> ${item.pron || ""}</p>
+      <i>${categoryTitles[currentCategory]}</i><br>
 
-    card.innerHTML = `
-      <b>ING:</b> ${item.ing}<br>
-      <b>RU:</b> ${item.ru}<br>
-      <b>PRON:</b> ${item.pron}<br>
-      <div class="controls">
-        <button ${!hasAudio ? "disabled" : ""} onclick="playAudio('${item._cat || currentCategory}','${item.audio}')">▶</button>
-        <button onclick="startRecording('${item._cat || currentCategory}','${item.pron}')">🎤</button>
-        <button onclick="editById('${item.id}')">✏</button>
-      </div>
+      <button onclick="playAudio('${currentCategory}','${file}')">▶</button>
+      <span id="ai-${i}">⚪</span>
+
+      ${adminMode ? `
+        <button onclick="startRecording('${currentCategory}','${item.pron || ""}')">🎤</button>
+        <button onclick="editPhrase(${i})">✏</button>
+        <button onclick="deletePhrase(${i})">🗑</button>
+      ` : ""}
     `;
-
-    card.querySelector("button").style.background =
-      hasAudio ? "green" : "gray";
-
-    content.appendChild(card);
+    content.appendChild(div);
+    checkAudio(i,file);
   });
+
+  if(adminMode){
+    const b = document.createElement("button");
+    b.textContent = "➕ Добавить фразу";
+    b.onclick = addPhrase;
+    content.appendChild(b);
+  }
 }
 
-/* =========================
-   PLAY AUDIO
-========================= */
+/* ================= AUDIO ================= */
 
-function playAudio(cat, file) {
-  if (!file) return;
-
-  const audio = new Audio(`audio/${cat}/${file}`);
-  audio.play().catch(() => alert("Ошибка воспроизведения"));
+function playAudio(cat,file){
+  new Audio(`audio/${cat}/${file}?v=${Date.now()}`).play()
+    .catch(()=>alert("Аудио ещё не доступно"));
 }
 
-/* =========================
-   EDIT
-========================= */
-
-async function editById(id) {
-  let catFound = null;
-  let item = null;
-
-  Object.entries(categories).forEach(([cat, data]) => {
-    data.items.forEach(i => {
-      if (i.id === id) {
-        catFound = cat;
-        item = i;
+function checkAudio(i,file){
+  fetch(`audio/${currentCategory}/${file}`,{method:"HEAD"})
+    .then(r=>{
+      if(r.ok){
+        const el = document.getElementById(`ai-${i}`);
+        if(el) el.textContent="🟢";
       }
     });
-  });
+}
 
-  if (!item) return;
+function normalizePron(p){
+  return (p||"").toLowerCase().trim()
+    .replace(/\s+/g,"_")
+    .replace(/[^a-z0-9_]/g,"");
+}
 
-  const ru = prompt("RU:", item.ru);
-  const ing = prompt("ING:", item.ing);
-  const pron = prompt("PRON:", item.pron);
+/* ================= ADMIN ================= */
 
-  if (ru !== null) item.ru = ru;
-  if (ing !== null) item.ing = ing;
-  if (pron !== null) item.pron = pron;
+function adminLogin(){
+  const token = document.getElementById("gh-token").value.trim();
+  if(!token) return alert("Введите GitHub Token");
 
-  await saveCategory(catFound);
+  githubToken = token;
+  adminMode = true;
+  localStorage.setItem("githubToken", token);
 
-  renderCurrentView();
+  document.getElementById("admin-status").textContent = "✓ Админ";
+  document.getElementById("download-zip").classList.remove("hidden");
 
-  // 🔄 если мы в поиске — пересобрать результаты
-  if (currentView === "search") {
-    doSearch();
+  if(currentData) renderPhrases();
+}
+
+/* ================= SEARCH ================= */
+
+async function preloadAllCategories(){
+  allPhrases = [];
+  for(const cat of categories){
+    try{
+      const r = await fetch(`categories/${cat}.json`);
+      const d = await r.json();
+      d.items.forEach(it=>{
+        allPhrases.push({...it, category: cat});
+      });
+    }catch{}
   }
 }
 
-/* =========================
-   SAVE JSON (GitHub API)
-========================= */
+const sInput = document.getElementById("global-search");
+const sBox   = document.getElementById("search-results");
 
-async function saveCategory(cat) {
-  const token = githubToken;
-  if (!token) return alert("Нет GitHub Token");
+function hideSuggestions(){
+  sBox.classList.add("hidden");
+  sBox.innerHTML="";
+}
 
-  const data = categories[cat];
-  const path = `categories/${cat}.json`;
-  const url = `https://api.github.com/repos/ganizhevamirkhan/ingush-phrasebook/contents/${path}`;
+sInput.oninput = ()=>{
+  const q = sInput.value.toLowerCase().trim();
+  sBox.innerHTML="";
 
-  const res = await fetch(url, {
-    headers: { Authorization: `token ${token}` }
+  if(q.length < 2){
+    hideSuggestions();
+    return;
+  }
+
+  allPhrases.filter(p=>
+    (p.ru||"").toLowerCase().includes(q) ||
+    (p.ing||"").toLowerCase().includes(q) ||
+    (p.pron||"").toLowerCase().includes(q)
+  ).slice(0,20).forEach(p=>{
+    const d = document.createElement("div");
+    d.className="search-item";
+    d.textContent = `${p.ru} — ${categoryTitles[p.category]}`;
+    d.onclick = ()=>{
+      sInput.value = p.ru;
+      hideSuggestions();
+    };
+    sBox.appendChild(d);
   });
-  const json = await res.json();
 
-  await fetch(url, {
-    method: "PUT",
-    headers: {
-      Authorization: `token ${token}`,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      message: `update ${cat}`,
-      content: btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2)))),
-      sha: json.sha
-    })
+  sBox.classList.remove("hidden");
+};
+
+document.getElementById("search-btn").onclick = doSearch;
+
+function doSearch(){
+  const q = sInput.value.toLowerCase().trim();
+  if(!q) return;
+
+  hideSuggestions();
+  document.getElementById("content-title").textContent = `Поиск: ${sInput.value}`;
+  const content = document.getElementById("content");
+  content.innerHTML="";
+
+  allPhrases.filter(p=>
+    (p.ru||"").toLowerCase().includes(q) ||
+    (p.ing||"").toLowerCase().includes(q) ||
+    (p.pron||"").toLowerCase().includes(q)
+  ).forEach(p=>{
+    const d=document.createElement("div");
+    d.className="phrase";
+    d.innerHTML=`
+      <p><b>ING:</b> ${p.ing}</p>
+      <p><b>RU:</b> ${p.ru}</p>
+      <p><b>PRON:</b> ${p.pron}</p>
+      <i>${categoryTitles[p.category]}</i>
+    `;
+    content.appendChild(d);
   });
 }
 
-/* =========================
-   VIEW RENDER
-========================= */
+document.addEventListener("click",e=>{
+  if(!e.target.closest(".search-wrap")){
+    hideSuggestions();
+  }
+});
 
-function renderCurrentView() {
-  if (currentView === "category" && currentData) {
-    renderPhrases(currentData.items);
-  }
-  if (currentView === "search") {
-    renderPhrases(searchResults);
-  }
+/* ================= ZIP ================= */
+
+function downloadZip(){
+  window.open(
+    "https://github.com/ganizhevAmirkhan/ingush-phrasebook/archive/refs/heads/main.zip",
+    "_blank"
+  );
 }
+
