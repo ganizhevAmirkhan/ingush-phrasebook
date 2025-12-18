@@ -34,7 +34,10 @@ const categoryTitles = {
 
 let currentCategory = null;
 let currentData = null;
-let allPhrases = [];
+
+let allPhrases = [];          // плоский список
+let phraseIndex = {};        // id -> category
+
 let searchResults = [];
 let currentView = "category";
 
@@ -46,9 +49,8 @@ let githubToken = localStorage.getItem("githubToken");
 function genId(){
   return "f_" + Date.now() + "_" + Math.random().toString(36).slice(2,6);
 }
-
-function safe(v){ return (v || "").toString(); }
-function low(v){ return safe(v).toLowerCase(); }
+const safe = v => (v ?? "").toString();
+const low  = v => safe(v).toLowerCase();
 
 /* ================= INIT ================= */
 
@@ -91,37 +93,28 @@ async function loadCategory(cat){
   renderCategory();
 }
 
-/* ================= MIGRATION (CORE) ================= */
+/* ================= MIGRATION ================= */
 
 function migrateItems(data){
-  let changed = false;
+  let changed=false;
   data.items.forEach(it=>{
-    if(!it.id){
-      it.id = genId();
-      changed = true;
-    }
-    if(!it.audio){
-      it.audio = it.id + ".mp3";
-      changed = true;
-    }
+    if(!it.id){ it.id=genId(); changed=true; }
+    if(!it.audio){ it.audio=it.id+".mp3"; changed=true; }
   });
   return changed;
 }
 
-/* ================= FULL MIGRATION BUTTON ================= */
-
 async function migrateAllCategories(){
-  if(!confirm("Выполнить миграцию ID и AUDIO для всех категорий?")) return;
+  if(!confirm("Зафиксировать id и audio во всех категориях?")) return;
 
   for(const cat of categories){
     const d = await loadCategoryData(cat);
-    const changed = migrateItems(d);
-    if(changed){
-      await saveCategoryData(cat, d);
+    if(migrateItems(d)){
+      await saveCategoryData(cat,d);
     }
   }
 
-  alert("Миграция завершена. Страница будет перезагружена.");
+  alert("Миграция завершена. Страница перезагрузится.");
   location.reload();
 }
 
@@ -139,9 +132,9 @@ function renderPhrase(item){
     <span id="ai-${item.audio}">⚪</span>
 
     ${adminMode ? `
-      <button onclick="recordById('${item.category}','${item.id}')">🎤</button>
-      <button onclick="editById('${item.category}','${item.id}')">✏</button>
-      <button onclick="deleteById('${item.category}','${item.id}')">🗑</button>
+      <button onclick="recordById('${item.id}')">🎤</button>
+      <button onclick="editById('${item.id}')">✏</button>
+      <button onclick="deleteById('${item.id}')">🗑</button>
     ` : ""}
   </div>`;
 }
@@ -151,10 +144,10 @@ function renderCategory(){
   c.innerHTML="";
 
   if(adminMode){
-    const mig=document.createElement("button");
-    mig.textContent="⚙ Миграция ID (один раз)";
-    mig.onclick=migrateAllCategories;
-    c.appendChild(mig);
+    const m=document.createElement("button");
+    m.textContent="⚙ Миграция ID (один раз)";
+    m.onclick=migrateAllCategories;
+    c.appendChild(m);
   }
 
   currentData.items.forEach(it=>{
@@ -230,7 +223,7 @@ function downloadZip(){
   );
 }
 
-/* ================= CRUD ================= */
+/* ================= CRUD (ID-BASED) ================= */
 
 async function loadCategoryData(cat){
   const r=await fetch(`categories/${cat}.json`);
@@ -271,12 +264,15 @@ async function addPhrase(cat){
   d.items.push({id,ru,ing,pron,audio:id+".mp3"});
 
   await saveCategoryData(cat,d);
-  currentData=d;
   await preloadAllCategories();
+  currentData=d;
   renderCurrentView();
 }
 
-async function editById(cat,id){
+async function editById(id){
+  const cat = phraseIndex[id];
+  if(!cat) return alert("Категория не найдена");
+
   const d=await loadCategoryData(cat);
   const it=d.items.find(x=>x.id===id);
   if(!it) return alert("Фраза не найдена");
@@ -286,34 +282,49 @@ async function editById(cat,id){
   it.pron=prompt("Произношение:",it.pron);
 
   await saveCategoryData(cat,d);
-  currentData=d;
   await preloadAllCategories();
+
+  if(currentCategory===cat) currentData=d;
   renderCurrentView();
 }
 
-async function deleteById(cat,id){
+async function deleteById(id){
   if(!confirm("Удалить фразу?")) return;
+
+  const cat = phraseIndex[id];
+  if(!cat) return alert("Категория не найдена");
+
   const d=await loadCategoryData(cat);
   d.items=d.items.filter(x=>x.id!==id);
 
   await saveCategoryData(cat,d);
-  currentData=d;
   await preloadAllCategories();
+
+  if(currentCategory===cat) currentData=d;
   renderCurrentView();
+}
+
+function recordById(id){
+  const cat = phraseIndex[id];
+  if(!cat) return alert("Категория не найдена");
+  startRecording(cat,id);
 }
 
 /* ================= SEARCH ================= */
 
 async function preloadAllCategories(){
   allPhrases=[];
+  phraseIndex={};
+
   for(const cat of categories){
     try{
       const r=await fetch(`categories/${cat}.json`);
       const d=await r.json();
       migrateItems(d);
+
       d.items.forEach(it=>{
-       allPhrases.push({...it, category: cat});
-phraseIndex[it.id] = cat;
+        allPhrases.push({...it,category:cat});
+        phraseIndex[it.id]=cat;
       });
     }catch{}
   }
@@ -360,4 +371,3 @@ function doSearch(){
   );
   renderSearch();
 }
-
