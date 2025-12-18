@@ -21,12 +21,15 @@
 
   <div class="admin-panel">
     <input id="gh-token" type="password" placeholder="GitHub Token">
-    <button onclick="adminLogin()">Админ</button>
-    <button id="download-zip" class="hidden" onclick="downloadZip()">⬇ Архив</button>
-    <button id="admin-logout" class="hidden" onclick="adminLogout()">Выйти</button>
-    <span id="admin-status"></span>
+    <button onclick="adminLogin()" class="btn btn-ghost">Админ</button>
+    <span id="admin-status" class="admin-status"></span>
   </div>
 </header>
+<button id="download-zip" class="hidden" onclick="downloadZip()">
+  ⬇ Скачать архив
+</button>
+
+
 
 <div class="layout">
   <aside class="sidebar">
@@ -41,6 +44,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.0/lame.min.js"></script>
 <script src="script.js"></script>
+<script src="admin.js"></script>
 <script src="recorder.js"></script>
 
 </body>
