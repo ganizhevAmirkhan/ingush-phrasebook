@@ -4,162 +4,233 @@
     {
       "ru": "Тепловизор",
       "ing": "Т1ан йолча",
-      "pron": "t1an yolcha"
+      "pron": "t1an yolcha",
+      "id": "f_1766025280638_x29r",
+      "audio": "f_1766025280638_x29r.mp3"
     },
     {
       "ru": "Тепловой след",
       "ing": "1",
-      "pron": "t1an lar"
+      "pron": "t1an lar",
+      "id": "f_1766025280638_3dsl",
+      "audio": "f_1766025280638_3dsl.mp3"
     },
     {
       "ru": "Я вижу цель",
       "ing": "Со хьам барьгу",
-      "pron": "so khyam bargu"
+      "pron": "so khyam bargu",
+      "id": "f_1766025280638_cina",
+      "audio": "f_1766025280638_cina.mp3"
     },
     {
       "ru": "Я не вижу",
       "ing": "Со гац",
-      "pron": "so gats"
+      "pron": "so gats",
+      "id": "f_1766025280638_z00a",
+      "audio": "f_1766025280638_z00a.mp3"
     },
     {
       "ru": "Он в тепловом следе",
       "ing": "Из т1ан ларга",
-      "pron": "iz t1an larga"
+      "pron": "iz t1an larga",
+      "id": "f_1766025280638_cyyt",
+      "audio": "f_1766025280638_cyyt.mp3"
     },
     {
       "ru": "Он движется",
       "ing": "Из удаж",
-      "pron": "iz udazh"
+      "pron": "iz udazh",
+      "id": "f_1766025280638_doq1",
+      "audio": "f_1766025280638_doq1.mp3"
     },
     {
       "ru": "Он стоит",
       "ing": "Из тха",
-      "pron": "iz tcha"
+      "pron": "iz tcha",
+      "id": "f_1766025280638_5fzo",
+      "audio": "f_1766025280638_5fzo.mp3"
     },
     {
       "ru": "Тепло сильное",
       "ing": "Т1ан йо",
-      "pron": "t1an yo"
+      "pron": "t1an yo",
+      "id": "f_1766025280638_qroy",
+      "audio": "f_1766025280638_qroy.mp3"
     },
     {
       "ru": "Слабое тепло",
       "ing": "Т1ан ца йо",
-      "pron": "t1an tsa yo"
+      "pron": "t1an tsa yo",
+      "id": "f_1766025280638_lx03",
+      "audio": "f_1766025280638_lx03.mp3"
     },
     {
       "ru": "Где цель?",
       "ing": "Хьам хьа?",
-      "pron": "khyam kha"
+      "pron": "khyam kha",
+      "id": "f_1766025280638_ct4v",
+      "audio": "f_1766025280638_ct4v.mp3"
     },
     {
       "ru": "Цель справа",
       "ing": "Хьам бархала",
-      "pron": "khyam barkhala"
+      "pron": "khyam barkhala",
+      "id": "f_1766025280638_b6lt",
+      "audio": "f_1766025280638_b6lt.mp3"
     },
     {
       "ru": "Цель слева",
       "ing": "Хьам чехьала",
-      "pron": "khyam chekhlala"
+      "pron": "khyam chekhlala",
+      "id": "f_1766025280638_1lf2",
+      "audio": "f_1766025280638_1lf2.mp3"
     },
     {
       "ru": "Цель впереди",
       "ing": "Хьам хьалха",
-      "pron": "khyam khalha"
+      "pron": "khyam khalha",
+      "id": "f_1766025280638_ed96",
+      "audio": "f_1766025280638_ed96.mp3"
     },
     {
       "ru": "Цель позади",
       "ing": "Хьам патахка",
-      "pron": "khyam patakhka"
+      "pron": "khyam patakhka",
+      "id": "f_1766025280638_958h",
+      "audio": "f_1766025280638_958h.mp3"
     },
     {
       "ru": "Расстояние большое",
       "ing": "Долча",
-      "pron": "dolcha"
+      "pron": "dolcha",
+      "id": "f_1766025280638_s5ay",
+      "audio": "f_1766025280638_s5ay.mp3"
     },
     {
       "ru": "Расстояние маленькое",
       "ing": "Гянна",
-      "pron": "gyanna"
+      "pron": "gyanna",
+      "id": "f_1766025280638_cjki",
+      "audio": "f_1766025280638_cjki.mp3"
     },
     {
       "ru": "Он движется влево",
       "ing": "Из чехьала удаж",
-      "pron": "iz chekhlala udazh"
+      "pron": "iz chekhlala udazh",
+      "id": "f_1766025280638_2v60",
+      "audio": "f_1766025280638_2v60.mp3"
     },
     {
       "ru": "Он движется вправо",
       "ing": "Из бархала удаж",
-      "pron": "iz barkhala udazh"
+      "pron": "iz barkhala udazh",
+      "id": "f_1766025280638_th67",
+      "audio": "f_1766025280638_th67.mp3"
     },
     {
       "ru": "Он движется вперёд",
       "ing": "Из хьалха удаж",
-      "pron": "iz khalha udazh"
+      "pron": "iz khalha udazh",
+      "id": "f_1766025280638_qzsy",
+      "audio": "f_1766025280638_qzsy.mp3"
     },
     {
       "ru": "Он движется назад",
       "ing": "Из патахка удаж",
-      "pron": "iz patakhka udazh"
+      "pron": "iz patakhka udazh",
+      "id": "f_1766025280638_jnm7",
+      "audio": "f_1766025280638_jnm7.mp3"
     },
     {
       "ru": "Он сел",
       "ing": "Из деча хинна",
-      "pron": "iz decha khinna"
+      "pron": "iz decha khinna",
+      "id": "f_1766025280638_qpxk",
+      "audio": "f_1766025280638_qpxk.mp3"
     },
     {
       "ru": "Он лёг",
       "ing": "Из къайла хинна",
-      "pron": "iz kayla khinna"
+      "pron": "iz kayla khinna",
+      "id": "f_1766025280638_gz3m",
+      "audio": "f_1766025280638_gz3m.mp3"
     },
     {
       "ru": "Смотри в тепловизор",
       "ing": "Т1ан йолча хьаьжа",
-      "pron": "t1an yolcha khyazha"
+      "pron": "t1an yolcha khyazha",
+      "id": "f_1766025280638_85td",
+      "audio": "f_1766025280638_85td.mp3"
     },
     {
       "ru": "Не моргай",
       "ing": "Му йара!",
-      "pron": "mu yara"
+      "pron": "mu yara",
+      "id": "f_1766025280638_ijqp",
+      "audio": "f_1766025280638_ijqp.mp3"
     },
     {
       "ru": "Чёткий сигнал",
       "ing": "Дика т1ан",
-      "pron": "dika t1an"
+      "pron": "dika t1an",
+      "id": "f_1766025280638_jlw3",
+      "audio": "f_1766025280638_jlw3.mp3"
     },
     {
       "ru": "Слабый сигнал",
       "ing": "Ца т1ан",
-      "pron": "tsa t1an"
+      "pron": "tsa t1an",
+      "id": "f_1766025280638_apdv",
+      "audio": "f_1766025280638_apdv.mp3"
     },
     {
       "ru": "Пропал след",
       "ing": "Т1ан лар седа хинна",
-      "pron": "t1an lar seda khinna"
+      "pron": "t1an lar seda khinna",
+      "id": "f_1766025280638_utam",
+      "audio": "f_1766025280638_utam.mp3"
     },
     {
       "ru": "Появился след",
       "ing": "Т1ан лар йола",
-      "pron": "t1an lar yola"
+      "pron": "t1an lar yola",
+      "id": "f_1766025280638_whx8",
+      "audio": "f_1766025280638_whx8.mp3"
     },
     {
       "ru": "Наведи прибор",
       "ing": "Т1ан йолча дика",
-      "pron": "t1an yolcha dika"
+      "pron": "t1an yolcha dika",
+      "id": "f_1766025280638_es2z",
+      "audio": "f_1766025280638_es2z.mp3"
     },
     {
       "ru": "Держи ровно",
       "ing": "Дика дог1ийла",
-      "pron": "dika dog1iyla"
+      "pron": "dika dog1iyla",
+      "id": "f_1766025280638_uo68",
+      "audio": "f_1766025280638_uo68.mp3"
     },
     {
       "ru": "Стреляй только по команде",
       "ing": "Хьажаца туха",
-      "pron": "khyazhatsa tukha"
+      "pron": "khyazhatsa tukha",
+      "id": "f_1766025280638_khsl",
+      "audio": "f_1766025280638_khsl.mp3"
     },
     {
       "ru": "Жди команды",
       "ing": "Тха хьа хьажа",
-      "pron": "tcha kha khyazha"
+      "pron": "tcha kha khyazha",
+      "id": "f_1766025280638_xvj1",
+      "audio": "f_1766025280638_xvj1.mp3"
+    },
+    {
+      "id": "f_1766025280638_5u89",
+      "ru": "ысвуу",
+      "ing": "ычсыцфвс",
+      "pron": "dcvsdvsfdv",
+      "audio": "f_1766025280638_5u89.mp3"
     }
   ]
 }
