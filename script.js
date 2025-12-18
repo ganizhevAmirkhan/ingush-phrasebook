@@ -1,4 +1,4 @@
-/* ================== CONFIG ================== */
+/* ================= CONFIG ================= */
 
 const OWNER = "ganizhevAmirkhan";
 const REPO  = "ingush-phrasebook";
@@ -6,28 +6,84 @@ const REPO  = "ingush-phrasebook";
 let githubToken = localStorage.getItem("gh_token") || null;
 let isAdmin = false;
 
+/* ====== КАТЕГОРИИ (РОВНО ТВОЙ СПИСОК) ====== */
+
 const categories = [
-  "greetings","basic_phrases","family","home","food","drinks",
-  "travel","transport","health","help","commands","animals",
-  "time","numbers","colors","weather","emotions","danger","misc"
+  "animals","basic_phrases","city","colors","commands","communication",
+  "conversation","danger","drinks","emotions","family","food","greetings",
+  "guests","health","help","home","hunting","misc","money","numbers",
+  "orientation","personal_info","shop","thermal","time","tools",
+  "transport","travel","village","weather","work"
 ];
 
-/* ================== STATE ================== */
+/* ====== НАЗВАНИЯ ДЛЯ МЕНЮ ====== */
 
+const categoryTitles = {
+  greetings:"Приветствия",
+  basic_phrases:"Базовые фразы",
+  personal_info:"Личная информация",
+  family:"Семья",
+  home:"Дом",
+  food:"Еда",
+  drinks:"Напитки",
+  travel:"Путешествия",
+  transport:"Транспорт",
+  hunting:"Охота",
+  danger:"Опасность",
+  thermal:"Тепловизор",
+  orientation:"Ориентирование",
+  weather:"Погода",
+  emotions:"Эмоции",
+  health:"Здоровье",
+  help:"Помощь",
+  commands:"Команды",
+  tools:"Инструменты",
+  animals:"Животные",
+  time:"Время",
+  numbers:"Числа",
+  colors:"Цвета",
+  money:"Деньги",
+  shop:"Магазин",
+  city:"Город",
+  village:"Деревня",
+  guests:"Гости",
+  communication:"Общение",
+  conversation:"Разговор",
+  misc:"Разное",
+  work:"Работа"
+};
+
+/* ================= STATE ================= */
+
+let phraseIndex = {};   // id -> category
 let currentCategory = null;
 let currentData = null;
-let phraseIndex = {}; // id -> category
 
-/* ================== INIT ================== */
+/* ================= INIT ================= */
 
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener("DOMContentLoaded", async ()=>{
+  renderCategoriesMenu();
   await preloadAllCategories();
 });
 
-/* ================== LOAD ================== */
+/* ================= MENU ================= */
 
-async function loadCategoryData(category){
-  const r = await fetch(`categories/${category}.json`);
+function renderCategoriesMenu(){
+  const menu = document.getElementById("categories");
+  menu.innerHTML = "";
+  categories.forEach(cat=>{
+    const b = document.createElement("button");
+    b.textContent = categoryTitles[cat] || cat;
+    b.onclick = ()=>openCategory(cat);
+    menu.appendChild(b);
+  });
+}
+
+/* ================= LOAD ================= */
+
+async function loadCategoryData(cat){
+  const r = await fetch(`categories/${cat}.json`);
+  if(!r.ok) throw new Error("404");
   return await r.json();
 }
 
@@ -44,44 +100,29 @@ async function preloadAllCategories(){
   }
 }
 
-/* ================== FIND CATEGORY ================== */
+/* ================= OPEN ================= */
 
-async function findCategoryById(id){
-  if(phraseIndex[id]) return phraseIndex[id];
-
-  for(const cat of categories){
-    try{
-      const d = await loadCategoryData(cat);
-      if(d.items.some(i => i.id === id)){
-        phraseIndex[id] = cat;
-        return cat;
-      }
-    }catch{}
-  }
-  return null;
-}
-
-/* ================== RENDER ================== */
-
-async function openCategory(category){
-  currentCategory = category;
-  currentData = await loadCategoryData(category);
+async function openCategory(cat){
+  currentCategory = cat;
+  currentData = await loadCategoryData(cat);
   renderList(currentData.items);
 }
+
+/* ================= RENDER ================= */
 
 function renderList(items){
   const box = document.getElementById("content");
   box.innerHTML = "";
 
   items.forEach(it=>{
-    const div = document.createElement("div");
-    div.className = "card";
+    const d = document.createElement("div");
+    d.className = "card";
 
-    div.innerHTML = `
+    d.innerHTML = `
       <b>ING:</b> ${it.ing}<br>
       <b>RU:</b> ${it.ru}<br>
       <b>PRON:</b> ${it.pron}<br>
-      <small>${currentCategory}</small><br>
+      <small>${categoryTitles[currentCategory]}</small><br>
 
       <button onclick="playAudio('${currentCategory}','${it.audio}')">▶</button>
       <span id="ai-${it.audio}">⚪</span>
@@ -93,39 +134,39 @@ function renderList(items){
       ` : ""}
     `;
 
-    box.appendChild(div);
-    checkAudio(currentCategory, it.audio);
+    box.appendChild(d);
+    checkAudio(currentCategory,it.audio);
   });
 
   if(isAdmin){
-    const addBtn = document.createElement("button");
-    addBtn.textContent = "+ Добавить фразу";
-    addBtn.onclick = addPhrase;
-    box.appendChild(addBtn);
+    const add = document.createElement("button");
+    add.textContent = "+ Добавить фразу";
+    add.onclick = addPhrase;
+    box.appendChild(add);
   }
 }
 
-/* ================== AUDIO ================== */
+/* ================= AUDIO ================= */
 
-function playAudio(category, file){
-  const a = new Audio(`audio/${category}/${file}?v=${Date.now()}`);
-  a.onerror = () => alert("Аудио не воспроизводится");
+function playAudio(cat,file){
+  const a = new Audio(`audio/${cat}/${file}?v=${Date.now()}`);
+  a.onerror = ()=>alert("Аудио не воспроизводится");
   a.play();
 }
 
-function checkAudio(category, file){
-  fetch(`audio/${category}/${file}`,{method:"HEAD"})
+function checkAudio(cat,file){
+  fetch(`audio/${cat}/${file}`,{method:"HEAD"})
     .then(r=>{
       const el = document.getElementById(`ai-${file}`);
       if(el) el.textContent = r.ok ? "🟢" : "⚪";
     });
 }
 
-/* ================== SEARCH ================== */
+/* ================= SEARCH ================= */
 
 async function searchAll(q){
   q = q.toLowerCase();
-  const results = [];
+  const res = [];
 
   for(const cat of categories){
     try{
@@ -136,13 +177,13 @@ async function searchAll(q){
           it.ing.toLowerCase().includes(q) ||
           it.pron.toLowerCase().includes(q)
         ){
-          results.push({...it, _cat: cat});
+          res.push({...it,_cat:cat});
         }
       });
     }catch{}
   }
 
-  renderSearch(results);
+  renderSearch(res);
 }
 
 function renderSearch(items){
@@ -150,14 +191,14 @@ function renderSearch(items){
   box.innerHTML = "<h3>Результаты поиска</h3>";
 
   items.forEach(it=>{
-    const div = document.createElement("div");
-    div.className = "card";
+    const d = document.createElement("div");
+    d.className = "card";
 
-    div.innerHTML = `
+    d.innerHTML = `
       <b>ING:</b> ${it.ing}<br>
       <b>RU:</b> ${it.ru}<br>
       <b>PRON:</b> ${it.pron}<br>
-      <small>${it._cat}</small><br>
+      <small>${categoryTitles[it._cat]}</small><br>
 
       <button onclick="playAudio('${it._cat}','${it.audio}')">▶</button>
       <span id="ai-${it.audio}">⚪</span>
@@ -168,12 +209,13 @@ function renderSearch(items){
         <button onclick="deleteById('${it.id}')">🗑</button>
       ` : ""}
     `;
-    box.appendChild(div);
-    checkAudio(it._cat, it.audio);
+
+    box.appendChild(d);
+    checkAudio(it._cat,it.audio);
   });
 }
 
-/* ================== ADMIN ================== */
+/* ================= ADMIN ================= */
 
 function loginAdmin(){
   const t = prompt("GitHub Token:");
@@ -189,71 +231,54 @@ function logoutAdmin(){
   alert("Выход из админа");
 }
 
-/* ================== CRUD ================== */
+/* ================= CRUD ================= */
 
 async function editById(id){
-  const cat = await findCategoryById(id);
+  const cat = phraseIndex[id];
   if(!cat) return alert("Категория не найдена");
 
   const d = await loadCategoryData(cat);
   const it = d.items.find(x=>x.id===id);
-  if(!it) return alert("Фраза не найдена");
+  if(!it) return;
 
-  it.ru   = prompt("RU:",it.ru);
-  it.ing  = prompt("ING:",it.ing);
-  it.pron = prompt("PRON:",it.pron);
+  it.ru = prompt("RU",it.ru);
+  it.ing = prompt("ING",it.ing);
+  it.pron = prompt("PRON",it.pron);
 
-  await saveCategoryData(cat,d);
-  await preloadAllCategories();
-
-  if(currentCategory===cat){
-    currentData = d;
-    renderList(d.items);
-  }
+  await saveCategory(cat,d);
+  openCategory(cat);
 }
 
 async function deleteById(id){
   if(!confirm("Удалить?")) return;
-  const cat = await findCategoryById(id);
-  if(!cat) return alert("Категория не найдена");
-
+  const cat = phraseIndex[id];
   const d = await loadCategoryData(cat);
   d.items = d.items.filter(x=>x.id!==id);
-
-  await saveCategoryData(cat,d);
-  await preloadAllCategories();
-
-  if(currentCategory===cat){
-    currentData = d;
-    renderList(d.items);
-  }
+  await saveCategory(cat,d);
+  openCategory(cat);
 }
 
 async function addPhrase(){
-  const ru = prompt("RU:");
-  const ing = prompt("ING:");
-  const pron = prompt("PRON:");
+  const ru = prompt("RU");
+  const ing = prompt("ING");
+  const pron = prompt("PRON");
   if(!ru||!ing) return;
 
   const id = "f_" + Date.now();
   currentData.items.push({
-    id, ru, ing, pron,
-    audio: id + ".webm"
+    id,ru,ing,pron,
+    audio:id+".webm"
   });
 
-  await saveCategoryData(currentCategory,currentData);
-  await preloadAllCategories();
-  renderList(currentData.items);
+  await saveCategory(currentCategory,currentData);
+  openCategory(currentCategory);
 }
 
-/* ================== SAVE ================== */
+/* ================= SAVE ================= */
 
-async function saveCategoryData(category,data){
-  const url = `https://api.github.com/repos/${OWNER}/${REPO}/contents/categories/${category}.json`;
-
-  const r = await fetch(url,{
-    headers:{Authorization:`token ${githubToken}`}
-  });
+async function saveCategory(cat,data){
+  const url = `https://api.github.com/repos/${OWNER}/${REPO}/contents/categories/${cat}.json`;
+  const r = await fetch(url,{headers:{Authorization:`token ${githubToken}`}});
   const j = await r.json();
 
   await fetch(url,{
@@ -263,9 +288,11 @@ async function saveCategoryData(category,data){
       "Content-Type":"application/json"
     },
     body:JSON.stringify({
-      message:`Update ${category}`,
+      message:`Update ${cat}`,
       content:btoa(unescape(encodeURIComponent(JSON.stringify(data,null,2)))),
       sha:j.sha
     })
   });
+
+  await preloadAllCategories();
 }
