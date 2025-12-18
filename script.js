@@ -102,7 +102,8 @@ function migrateItems(data){
       changed = true;
     }
     if(!it.audio){
-      it.audio = it.id + ".mp3";
+      // ✅ теперь по умолчанию webm
+      it.audio = it.id + ".webm";
       changed = true;
     }
   });
@@ -186,13 +187,12 @@ function renderCurrentView(){
 
 async function playAudio(cat, file){
   const tried = new Set();
-
-  // 1️⃣ сначала — как указано в JSON
   const base = file.replace(/\.(mp3|webm)$/i, "");
+
   const variants = [
     file,
-    `${base}.mp3`,
-    `${base}.webm`
+    `${base}.webm`,
+    `${base}.mp3`
   ];
 
   for(const f of variants){
@@ -207,10 +207,8 @@ async function playAudio(cat, file){
 
       const audio = new Audio(url);
       await audio.play();
-      return; // ✅ УСПЕХ
-    }catch(e){
-      // пробуем дальше
-    }
+      return;
+    }catch{}
   }
 
   alert("Аудио нет");
@@ -312,7 +310,15 @@ async function addPhrase(cat){
 
   const d = await loadCategoryData(cat);
   const id = genId();
-  d.items.push({id,ru,ing,pron,audio:id+".mp3"});
+
+  // ✅ audio теперь webm
+  d.items.push({
+    id,
+    ru,
+    ing,
+    pron,
+    audio: id + ".webm"
+  });
 
   await saveCategoryData(cat,d);
   await preloadAllCategories();
@@ -428,6 +434,7 @@ function doSearch(){
 
   renderSearch();
 }
+
 
 
 
