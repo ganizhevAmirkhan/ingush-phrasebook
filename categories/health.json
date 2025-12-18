@@ -4,82 +4,121 @@
     {
       "ru": "Здоровье",
       "ing": "Магар",
-      "pron": "magar"
+      "pron": "magar",
+      "id": "f_1766020839248_0dr4",
+      "audio": "f_1766020839248_0dr4.mp3"
     },
     {
       "ru": "У меня болит голова",
       "ing": "Са ло ма беха",
-      "pron": "sa lo ma bekha"
+      "pron": "sa lo ma bekha",
+      "id": "f_1766020839248_52dq",
+      "audio": "f_1766020839248_52dq.mp3"
     },
     {
       "ru": "У меня болит живот",
       "ing": "Са гIал беха",
-      "pron": "sa g1al bekha"
+      "pron": "sa g1al bekha",
+      "id": "f_1766020839248_04rn",
+      "audio": "f_1766020839248_04rn.mp3"
     },
     {
       "ru": "Мне плохо",
       "ing": "Са му ву",
-      "pron": "sa mu vu"
+      "pron": "sa mu vu",
+      "id": "f_1766020839248_5b5u",
+      "audio": "f_1766020839248_5b5u.mp3"
     },
     {
       "ru": "Мне хорошо",
       "ing": "Са дика ву",
-      "pron": "sa dika vu"
+      "pron": "sa dika vu",
+      "id": "f_1766020839248_00l2",
+      "audio": "f_1766020839248_00l2.mp3"
     },
     {
       "ru": "Мне нужно к врачу",
       "ing": "Са дохача давах",
-      "pron": "sa dokhacha davakh"
+      "pron": "sa dokhacha davakh",
+      "id": "f_1766020839248_xl6i",
+      "audio": "f_1766020839248_xl6i.mp3"
     },
     {
       "ru": "Где больница?",
       "ing": "Бехачча хьа?",
-      "pron": "bekhatcha kha"
+      "pron": "bekhatcha kha",
+      "id": "f_1766020839248_uksz",
+      "audio": "f_1766020839248_uksz.mp3"
     },
     {
       "ru": "У меня температура",
       "ing": "Со температура йола",
-      "pron": "so temperatura yola"
+      "pron": "so temperatura yola",
+      "id": "f_1766020839248_v72h",
+      "audio": "f_1766020839248_v72h.mp3"
     },
     {
       "ru": "Мне холодно",
       "ing": "Са сув",
-      "pron": "sa suv"
+      "pron": "sa suv",
+      "id": "f_1766020839248_8n7s",
+      "audio": "f_1766020839248_8n7s.mp3"
     },
     {
       "ru": "Мне жарко",
       "ing": "Са деша",
-      "pron": "sa desha"
+      "pron": "sa desha",
+      "id": "f_1766020839248_5e48",
+      "audio": "f_1766020839248_5e48.mp3"
     },
     {
       "ru": "Я устал",
       "ing": "Со къяд ваннув",
-      "pron": "so kyad vannuv"
+      "pron": "so kyad vannuv",
+      "id": "f_1766020839248_zs2d",
+      "audio": "f_1766020839248_zs2d.mp3"
     },
     {
       "ru": "Я ранен",
       "ing": "Со беха йо",
-      "pron": "so bekha yo"
+      "pron": "so bekha yo",
+      "id": "f_1766020839248_o75q",
+      "audio": "f_1766020839248_o75q.mp3"
     },
     {
       "ru": "Мне нужна вода",
       "ing": "Са хьий давах",
-      "pron": "sa hyii davakh"
+      "pron": "sa hyii davakh",
+      "id": "f_1766020839248_63pl",
+      "audio": "f_1766020839248_63pl.mp3"
     },
     {
       "ru": "Мне нужна еда",
       "ing": "Са гIала давах",
-      "pron": "sa g1ala davakh"
+      "pron": "sa g1ala davakh",
+      "id": "f_1766020839248_9onf",
+      "audio": "f_1766020839248_9onf.mp3"
     },
     {
       "ru": "Я не могу дышать",
       "ing": "Со му хьаца хьам",
-      "pron": "so mu khatsa khyam"
+      "pron": "so mu khatsa khyam",
+      "id": "f_1766020839248_lwcz",
+      "audio": "f_1766020839248_lwcz.mp3"
     },
     {
       "ru": "Я в больнице",
       "ing": "Со больнице ва",
-      "pron": "So bolnice va"
+      "pron": "So bolnice va",
+      "id": "f_1766020839248_4mg4",
+      "audio": "f_1766020839248_4mg4.mp3"
+    },
+    {
+      "id": "f_1766020839248_4rsn",
+      "ru": "Я сильный",
+      "ing": "Со ч1оаг1 ва",
+      "pron": "so chog va",
+      "audio": "f_1766020839248_4rsn.mp3"
     }
   ]
 }
