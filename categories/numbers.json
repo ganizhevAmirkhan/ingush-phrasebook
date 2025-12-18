@@ -4,87 +4,128 @@
     {
       "ru": "Один",
       "ing": "Ц1а",
-      "pron": "ts1a"
+      "pron": "ts1a",
+      "id": "f_1766025451240_dwk0",
+      "audio": "f_1766025451240_dwk0.mp3"
     },
     {
       "ru": "Два",
       "ing": "Ши1",
-      "pron": "Shia"
+      "pron": "Shia",
+      "id": "f_1766025451240_8f4g",
+      "audio": "f_1766025451240_8f4g.mp3"
     },
     {
       "ru": "Три",
       "ing": "Кхо1a",
-      "pron": "khoa"
+      "pron": "khoa",
+      "id": "f_1766025451240_3zl3",
+      "audio": "f_1766025451240_3zl3.mp3"
     },
     {
       "ru": "Четыре",
       "ing": "Дий",
-      "pron": "diy"
+      "pron": "diy",
+      "id": "f_1766025451240_lwc9",
+      "audio": "f_1766025451240_lwc9.mp3"
     },
     {
       "ru": "Пять",
       "ing": "Пхьи",
-      "pron": "phyi"
+      "pron": "phyi",
+      "id": "f_1766025451240_7kcg",
+      "audio": "f_1766025451240_7kcg.mp3"
     },
     {
       "ru": "Шесть",
       "ing": "Йи",
-      "pron": "yi"
+      "pron": "yi",
+      "id": "f_1766025451240_rff6",
+      "audio": "f_1766025451240_rff6.mp3"
     },
     {
       "ru": "Семь",
       "ing": "Барг",
-      "pron": "barg"
+      "pron": "barg",
+      "id": "f_1766025451240_qhlq",
+      "audio": "f_1766025451240_qhlq.mp3"
     },
     {
       "ru": "Восемь",
       "ing": "Барх",
-      "pron": "Barkh"
+      "pron": "Barkh",
+      "id": "f_1766025451240_6jvi",
+      "audio": "f_1766025451240_6jvi.mp3"
     },
     {
       "ru": "Девять",
       "ing": "Иск",
-      "pron": "isk"
+      "pron": "isk",
+      "id": "f_1766025451240_47ad",
+      "audio": "f_1766025451240_47ad.mp3"
     },
     {
       "ru": "Десять",
       "ing": "Иц",
-      "pron": "its"
+      "pron": "its",
+      "id": "f_1766025451240_vfy5",
+      "audio": "f_1766025451240_vfy5.mp3"
     },
     {
       "ru": "Сколько?",
       "ing": "Шун мотт?",
-      "pron": "shun mott"
+      "pron": "shun mott",
+      "id": "f_1766025451240_3yk9",
+      "audio": "f_1766025451240_3yk9.mp3"
     },
     {
       "ru": "Сколько стоит?",
       "ing": "Шун хьа хила?",
-      "pron": "shun kha hila"
+      "pron": "shun kha hila",
+      "id": "f_1766025451240_aqgc",
+      "audio": "f_1766025451240_aqgc.mp3"
     },
     {
       "ru": "Сколько километров?",
       "ing": "Шун километраш?",
-      "pron": "shun kilometrash"
+      "pron": "shun kilometrash",
+      "id": "f_1766025451240_72ut",
+      "audio": "f_1766025451240_72ut.mp3"
     },
     {
       "ru": "Раз",
       "ing": "Ц1е",
-      "pron": "ts1e"
+      "pron": "ts1e",
+      "id": "f_1766025451240_u6ys",
+      "audio": "f_1766025451240_u6ys.mp3"
     },
     {
       "ru": "Два раза",
       "ing": "Шов ц1е",
-      "pron": "shov ts1e"
+      "pron": "shov ts1e",
+      "id": "f_1766025451240_1mmt",
+      "audio": "f_1766025451240_1mmt.mp3"
     },
     {
       "ru": "Много",
       "ing": "Дар",
-      "pron": "dar"
+      "pron": "dar",
+      "id": "f_1766025451240_34y4",
+      "audio": "f_1766025451240_34y4.mp3"
     },
     {
       "ru": "Мало",
       "ing": "Керча",
-      "pron": "kercha"
+      "pron": "kercha",
+      "id": "f_1766025451240_c0jh",
+      "audio": "f_1766025451240_c0jh.mp3"
+    },
+    {
+      "id": "f_1766025451240_8a2f",
+      "ru": "ывсвымсывм",
+      "ing": "асыуасмыв",
+      "pron": "dvfvbfd",
+      "audio": "f_1766025451240_8a2f.mp3"
     }
   ]
 }
