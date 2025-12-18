@@ -4,327 +4,464 @@
     {
       "ru": "Это так",
       "ing": "Ишт ди из",
-      "pron": "Isht di iz"
+      "pron": "Isht di iz",
+      "id": "f_1766022575804_wk6h",
+      "audio": "f_1766022575804_wk6h.mp3"
     },
     {
       "ru": "Нет",
       "ing": "Дац",
-      "pron": "Datc"
+      "pron": "Datc",
+      "id": "f_1766022575804_t1ge",
+      "audio": "f_1766022575804_t1ge.mp3"
     },
     {
       "ru": "Может быть",
       "ing": "Мехка",
-      "pron": "mehkha"
+      "pron": "mehkha",
+      "id": "f_1766022575804_8b3c",
+      "audio": "f_1766022575804_8b3c.mp3"
     },
     {
       "ru": "Не знаю",
       "ing": "Сун хац",
-      "pron": "sun khats"
+      "pron": "sun khats",
+      "id": "f_1766022575804_ufpx",
+      "audio": "f_1766022575804_ufpx.mp3"
     },
     {
       "ru": "Я знаю",
       "ing": "Со кхийтав",
-      "pron": "so khittav"
+      "pron": "so khittav",
+      "id": "f_1766022575804_z8r8",
+      "audio": "f_1766022575804_z8r8.mp3"
     },
     {
       "ru": "Подожди",
       "ing": "Сабар де",
-      "pron": "sabar de"
+      "pron": "sabar de",
+      "id": "f_1766022575804_8080",
+      "audio": "f_1766022575804_8080.mp3"
     },
     {
       "ru": "Минуту",
       "ing": "Минута",
-      "pron": "minuta"
+      "pron": "minuta",
+      "id": "f_1766022575804_4jhm",
+      "audio": "f_1766022575804_4jhm.mp3"
     },
     {
       "ru": "Сейчас",
       "ing": "Хьалха",
-      "pron": "khalha"
+      "pron": "khalha",
+      "id": "f_1766022575804_kt9g",
+      "audio": "f_1766022575804_kt9g.mp3"
     },
     {
       "ru": "Потом",
       "ing": "Т1ехьа",
-      "pron": "t1ekha"
+      "pron": "t1ekha",
+      "id": "f_1766022575804_7eti",
+      "audio": "f_1766022575804_7eti.mp3"
     },
     {
       "ru": "Рано",
       "ing": "Кхети",
-      "pron": "kheti"
+      "pron": "kheti",
+      "id": "f_1766022575804_yfsc",
+      "audio": "f_1766022575804_yfsc.mp3"
     },
     {
       "ru": "Поздно",
       "ing": "Т1ехьана",
-      "pron": "t1ekhana"
+      "pron": "t1ekhana",
+      "id": "f_1766022575804_40v2",
+      "audio": "f_1766022575804_40v2.mp3"
     },
     {
       "ru": "Можно?",
       "ing": "Далуш?",
-      "pron": "dalush"
+      "pron": "dalush",
+      "id": "f_1766022575804_72kf",
+      "audio": "f_1766022575804_72kf.mp3"
     },
     {
       "ru": "Нельзя",
       "ing": "Му далуш",
-      "pron": "mu dalush"
+      "pron": "mu dalush",
+      "id": "f_1766022575804_z0aq",
+      "audio": "f_1766022575804_z0aq.mp3"
     },
     {
       "ru": "Я понял",
       "ing": "Со кхийтав",
-      "pron": "so khittav"
+      "pron": "so khittav",
+      "id": "f_1766022575804_01wj",
+      "audio": "f_1766022575804_01wj.mp3"
     },
     {
       "ru": "Я не понял",
       "ing": "Со кхитвац",
-      "pron": "so khitvats"
+      "pron": "so khitvats",
+      "id": "f_1766022575804_cdk8",
+      "audio": "f_1766022575804_cdk8.mp3"
     },
     {
       "ru": "Говори медленнее",
       "ing": "Шортиг ладу",
-      "pron": "shortig ladu"
+      "pron": "shortig ladu",
+      "id": "f_1766022575804_ddzp",
+      "audio": "f_1766022575804_ddzp.mp3"
     },
     {
       "ru": "Повтори",
       "ing": "Даяккха",
-      "pron": "dayakkha"
+      "pron": "dayakkha",
+      "id": "f_1766022575804_jrew",
+      "audio": "f_1766022575804_jrew.mp3"
     },
     {
       "ru": "Спасибо",
       "ing": "Баркалла",
-      "pron": "barkalla"
+      "pron": "barkalla",
+      "id": "f_1766022575804_0dvx",
+      "audio": "f_1766022575804_0dvx.mp3"
     },
     {
       "ru": "Пожалуйста",
       "ing": "Хьуна халд",
-      "pron": "hyuna hald"
+      "pron": "hyuna hald",
+      "id": "f_1766022575804_d0zc",
+      "audio": "f_1766022575804_d0zc.mp3"
     },
     {
       "ru": "Извини",
       "ing": "Къат1ер валл",
-      "pron": "kater vall"
+      "pron": "kater vall",
+      "id": "f_1766022575804_3po7",
+      "audio": "f_1766022575804_3po7.mp3"
     },
     {
       "ru": "Слушай",
       "ing": "Ладувх",
-      "pron": "laduvkh"
+      "pron": "laduvkh",
+      "id": "f_1766022575804_4n21",
+      "audio": "f_1766022575804_4n21.mp3"
     },
     {
       "ru": "Смотри",
       "ing": "Хьажалахь",
-      "pron": "khyazhalakh"
+      "pron": "khyazhalakh",
+      "id": "f_1766022575804_aeqh",
+      "audio": "f_1766022575804_aeqh.mp3"
     },
     {
       "ru": "Осторожно!",
       "ing": "Хьаьлха да!",
-      "pron": "khalha da"
+      "pron": "khalha da",
+      "id": "f_1766022575804_k8o8",
+      "audio": "f_1766022575804_k8o8.mp3"
     },
     {
       "ru": "Быстрее",
       "ing": "Марсха",
-      "pron": "marsha"
+      "pron": "marsha",
+      "id": "f_1766022575804_efvj",
+      "audio": "f_1766022575804_efvj.mp3"
     },
     {
       "ru": "Медленнее",
       "ing": "Шортиг",
-      "pron": "shortig"
+      "pron": "shortig",
+      "id": "f_1766022575804_4ec5",
+      "audio": "f_1766022575804_4ec5.mp3"
     },
     {
       "ru": "Хорошо",
       "ing": "Дика",
-      "pron": "dika"
+      "pron": "dika",
+      "id": "f_1766022575804_t6qt",
+      "audio": "f_1766022575804_t6qt.mp3"
     },
     {
       "ru": "Плохо",
       "ing": "Му",
-      "pron": "mu"
+      "pron": "mu",
+      "id": "f_1766022575804_f0dt",
+      "audio": "f_1766022575804_f0dt.mp3"
     },
     {
       "ru": "Я хочу",
       "ing": "Со безам ба",
-      "pron": "so bezam ba"
+      "pron": "so bezam ba",
+      "id": "f_1766022575804_vbnx",
+      "audio": "f_1766022575804_vbnx.mp3"
     },
     {
       "ru": "Мне нужно",
       "ing": "Са давах",
-      "pron": "sa davakh"
+      "pron": "sa davakh",
+      "id": "f_1766022575804_xvdl",
+      "audio": "f_1766022575804_xvdl.mp3"
     },
     {
       "ru": "Я не хочу",
       "ing": "Со безам бац",
-      "pron": "so bezam bats"
+      "pron": "so bezam bats",
+      "id": "f_1766022575804_aodh",
+      "audio": "f_1766022575804_aodh.mp3"
     },
     {
       "ru": "Тише",
       "ing": "Шортиг",
-      "pron": "shortig"
+      "pron": "shortig",
+      "id": "f_1766022575804_hse6",
+      "audio": "f_1766022575804_hse6.mp3"
     },
     {
       "ru": "Громче",
       "ing": "Кхетига",
-      "pron": "khetiga"
+      "pron": "khetiga",
+      "id": "f_1766022575804_grf7",
+      "audio": "f_1766022575804_grf7.mp3"
     },
     {
       "ru": "Я занят",
       "ing": "Со дӀаякха",
-      "pron": "so d1ayakkha"
+      "pron": "so d1ayakkha",
+      "id": "f_1766022575804_8dwr",
+      "audio": "f_1766022575804_8dwr.mp3"
     },
     {
       "ru": "Я свободен",
       "ing": "Со хьалха ву",
-      "pron": "so khalha vu"
+      "pron": "so khalha vu",
+      "id": "f_1766022575804_42g5",
+      "audio": "f_1766022575804_42g5.mp3"
     },
     {
       "ru": "Помоги мне",
       "ing": "Са г1о де",
-      "pron": "sa g1o de"
+      "pron": "sa g1o de",
+      "id": "f_1766022575804_rtkc",
+      "audio": "f_1766022575804_rtkc.mp3"
     },
     {
       "ru": "Мне трудно",
       "ing": "Са кхера",
-      "pron": "sa khera"
+      "pron": "sa khera",
+      "id": "f_1766022575804_ozaw",
+      "audio": "f_1766022575804_ozaw.mp3"
     },
     {
       "ru": "Мне легко",
       "ing": "Са т1еккха",
-      "pron": "sa t1ekkha"
+      "pron": "sa t1ekkha",
+      "id": "f_1766022575804_s2m1",
+      "audio": "f_1766022575804_s2m1.mp3"
     },
     {
       "ru": "Это правильно",
       "ing": "ХӀала дика",
-      "pron": "h1ala dika"
+      "pron": "h1ala dika",
+      "id": "f_1766022575804_59yw",
+      "audio": "f_1766022575804_59yw.mp3"
     },
     {
       "ru": "Это неправильно",
       "ing": "ХӀала му дика",
-      "pron": "h1ala mu dika"
+      "pron": "h1ala mu dika",
+      "id": "f_1766022575804_gjnx",
+      "audio": "f_1766022575804_gjnx.mp3"
     },
     {
       "ru": "Я согласен",
       "ing": "Со кхалха ву",
-      "pron": "so khalha vu"
+      "pron": "so khalha vu",
+      "id": "f_1766022575804_82qi",
+      "audio": "f_1766022575804_82qi.mp3"
     },
     {
       "ru": "Я не согласен",
       "ing": "Со му кхалха ву",
-      "pron": "so mu khalha vu"
+      "pron": "so mu khalha vu",
+      "id": "f_1766022575804_wewq",
+      "audio": "f_1766022575804_wewq.mp3"
     },
     {
       "ru": "Я устал",
       "ing": "Со къяд ваннув",
-      "pron": "so kyad vannuv"
+      "pron": "so kyad vannuv",
+      "id": "f_1766022575804_61gt",
+      "audio": "f_1766022575804_61gt.mp3"
     },
     {
       "ru": "Мне хочется спать",
       "ing": "Са йоаг1 безам ба",
-      "pron": "sa yoag1 bezam ba"
+      "pron": "sa yoag1 bezam ba",
+      "id": "f_1766022575804_279o",
+      "audio": "f_1766022575804_279o.mp3"
     },
     {
       "ru": "Мне холодно",
       "ing": "Са сердакха",
-      "pron": "sa serdakha"
+      "pron": "sa serdakha",
+      "id": "f_1766022575804_b7zj",
+      "audio": "f_1766022575804_b7zj.mp3"
     },
     {
       "ru": "Мне жарко",
       "ing": "Са кхетта",
-      "pron": "sa khetta"
+      "pron": "sa khetta",
+      "id": "f_1766022575804_qrvl",
+      "audio": "f_1766022575804_qrvl.mp3"
     },
     {
       "ru": "Я голоден",
       "ing": "Со хий йа",
-      "pron": "so khiy ya"
+      "pron": "so khiy ya",
+      "id": "f_1766022575804_dtl0",
+      "audio": "f_1766022575804_dtl0.mp3"
     },
     {
       "ru": "Я хочу пить",
       "ing": "Со мал безам ба",
-      "pron": "so mal bezam ba"
+      "pron": "so mal bezam ba",
+      "id": "f_1766022575804_42zo",
+      "audio": "f_1766022575804_42zo.mp3"
     },
     {
       "ru": "Иди сюда",
       "ing": "Хьокха ца",
-      "pron": "khyokha tsa"
+      "pron": "khyokha tsa",
+      "id": "f_1766022575804_vnu0",
+      "audio": "f_1766022575804_vnu0.mp3"
     },
     {
       "ru": "Иди туда",
       "ing": "Цугахь вуда",
-      "pron": "tsugakh vuda"
+      "pron": "tsugakh vuda",
+      "id": "f_1766022575804_6d6a",
+      "audio": "f_1766022575804_6d6a.mp3"
     },
     {
       "ru": "Стой",
       "ing": "Тха",
-      "pron": "tcha"
+      "pron": "tcha",
+      "id": "f_1766022575804_tsy0",
+      "audio": "f_1766022575804_tsy0.mp3"
     },
     {
       "ru": "Стой здесь",
       "ing": "Тха хьокха",
-      "pron": "tcha khyokha"
+      "pron": "tcha khyokha",
+      "id": "f_1766022575804_705p",
+      "audio": "f_1766022575804_705p.mp3"
     },
     {
       "ru": "Сюда",
       "ing": "Хьокха",
-      "pron": "khyokha"
+      "pron": "khyokha",
+      "id": "f_1766022575804_bill",
+      "audio": "f_1766022575804_bill.mp3"
     },
     {
       "ru": "Туда",
       "ing": "Цугахь",
-      "pron": "tsugakh"
+      "pron": "tsugakh",
+      "id": "f_1766022575804_ca3i",
+      "audio": "f_1766022575804_ca3i.mp3"
     },
     {
       "ru": "Где это?",
       "ing": "ХӀалхача хьа?",
-      "pron": "h1alkhacha kha"
+      "pron": "h1alkhacha kha",
+      "id": "f_1766022575804_lltk",
+      "audio": "f_1766022575804_lltk.mp3"
     },
     {
       "ru": "Почему?",
       "ing": "Мош?",
-      "pron": "mosh"
+      "pron": "mosh",
+      "id": "f_1766022575804_fpb5",
+      "audio": "f_1766022575804_fpb5.mp3"
     },
     {
       "ru": "Зачем?",
       "ing": "Мош?",
-      "pron": "mosh"
+      "pron": "mosh",
+      "id": "f_1766022575804_0nar",
+      "audio": "f_1766022575804_0nar.mp3"
     },
     {
       "ru": "Когда?",
       "ing": "Малха?",
-      "pron": "malkha"
+      "pron": "malkha",
+      "id": "f_1766022575804_bast",
+      "audio": "f_1766022575804_bast.mp3"
     },
     {
       "ru": "Кто?",
       "ing": "Хо?",
-      "pron": "kho"
+      "pron": "kho",
+      "id": "f_1766022575804_62jy",
+      "audio": "f_1766022575804_62jy.mp3"
     },
     {
       "ru": "Что?",
       "ing": "Фо?",
-      "pron": "fo"
+      "pron": "fo",
+      "id": "f_1766022575804_37w8",
+      "audio": "f_1766022575804_37w8.mp3"
     },
     {
       "ru": "Сколько?",
       "ing": "Ца йа?",
-      "pron": "tsa ya"
+      "pron": "tsa ya",
+      "id": "f_1766022575804_blmm",
+      "audio": "f_1766022575804_blmm.mp3"
     },
     {
       "ru": "Как?",
       "ing": "Мишта?",
-      "pron": "mishta"
+      "pron": "mishta",
+      "id": "f_1766022575804_n0a1",
+      "audio": "f_1766022575804_n0a1.mp3"
     },
     {
       "ru": "Куда?",
       "ing": "Мича?",
-      "pron": "micha"
+      "pron": "micha",
+      "id": "f_1766022575804_pmil",
+      "audio": "f_1766022575804_pmil.mp3"
     },
     {
       "ru": "Откуда?",
       "ing": "Мичахьар?",
-      "pron": "michakhar"
+      "pron": "michakhar",
+      "id": "f_1766022575804_kcv0",
+      "audio": "f_1766022575804_kcv0.mp3"
     },
     {
       "ru": "Я иду",
       "ing": "Со вуда",
-      "pron": "so vuda"
+      "pron": "so vuda",
+      "id": "f_1766022575804_ecfp",
+      "audio": "f_1766022575804_ecfp.mp3"
     },
     {
       "ru": "Я приду позже",
       "ing": "Со т1ехьа хьа воаг1агва",
-      "pron": "so t1ekha kha voag1agva"
+      "pron": "so t1ekha kha voag1agva",
+      "id": "f_1766022575804_5gd9",
+      "audio": "f_1766022575804_5gd9.mp3"
+    },
+    {
+      "id": "f_1766022575804_8k39",
+      "ru": "ц",
+      "ing": "ы",
+      "pron": "w",
+      "audio": "f_1766022575804_8k39.mp3"
     }
   ]
 }
