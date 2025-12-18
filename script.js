@@ -312,7 +312,8 @@ async function preloadAllCategories(){
       const d=await r.json();
       migrateItems(d);
       d.items.forEach(it=>{
-        allPhrases.push({...it,category:cat});
+       allPhrases.push({...it, category: cat});
+phraseIndex[it.id] = cat;
       });
     }catch{}
   }
@@ -359,3 +360,4 @@ function doSearch(){
   );
   renderSearch();
 }
+
