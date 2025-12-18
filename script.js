@@ -91,13 +91,38 @@ async function loadCategory(cat){
   renderCategory();
 }
 
-/* ================= MIGRATION ================= */
+/* ================= MIGRATION (CORE) ================= */
 
 function migrateItems(data){
+  let changed = false;
   data.items.forEach(it=>{
-    if(!it.id) it.id = genId();
-    if(!it.audio) it.audio = it.id + ".mp3";
+    if(!it.id){
+      it.id = genId();
+      changed = true;
+    }
+    if(!it.audio){
+      it.audio = it.id + ".mp3";
+      changed = true;
+    }
   });
+  return changed;
+}
+
+/* ================= FULL MIGRATION BUTTON ================= */
+
+async function migrateAllCategories(){
+  if(!confirm("Выполнить миграцию ID и AUDIO для всех категорий?")) return;
+
+  for(const cat of categories){
+    const d = await loadCategoryData(cat);
+    const changed = migrateItems(d);
+    if(changed){
+      await saveCategoryData(cat, d);
+    }
+  }
+
+  alert("Миграция завершена. Страница будет перезагружена.");
+  location.reload();
 }
 
 /* ================= RENDER ================= */
@@ -125,10 +150,17 @@ function renderCategory(){
   const c=document.getElementById("content");
   c.innerHTML="";
 
+  if(adminMode){
+    const mig=document.createElement("button");
+    mig.textContent="⚙ Миграция ID (один раз)";
+    mig.onclick=migrateAllCategories;
+    c.appendChild(mig);
+  }
+
   currentData.items.forEach(it=>{
-    it.category = currentCategory;
+    it.category=currentCategory;
     c.insertAdjacentHTML("beforeend", renderPhrase(it));
-    checkAudio(it.category, it.audio);
+    checkAudio(it.category,it.audio);
   });
 
   if(adminMode){
@@ -144,7 +176,7 @@ function renderSearch(){
   c.innerHTML="";
   searchResults.forEach(it=>{
     c.insertAdjacentHTML("beforeend", renderPhrase(it));
-    checkAudio(it.category, it.audio);
+    checkAudio(it.category,it.audio);
   });
 }
 
