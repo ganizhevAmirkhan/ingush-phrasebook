@@ -1,56 +1,72 @@
 let mediaRecorder;
-let chunks = [];
+let recordedChunks = [];
 
-async function startRecording(category, id) {
-  if (!githubToken) {
-    alert("Нет GitHub Token");
-    return;
-  }
+async function startRecording(category, id){
+  recordedChunks = [];
 
-  chunks = [];
   const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
   mediaRecorder = new MediaRecorder(stream);
 
   mediaRecorder.ondataavailable = e => {
-    if (e.data.size) chunks.push(e.data);
+    if(e.data.size > 0) recordedChunks.push(e.data);
   };
 
   mediaRecorder.onstop = async () => {
-    const blob = new Blob(chunks, { type: "audio/webm" });
+    const blob = new Blob(recordedChunks, { type: "audio/webm" });
     await uploadAudio(blob, category, id);
   };
 
   mediaRecorder.start();
-  alert("Идёт запись. Нажмите OK для остановки.");
+  alert("Запись началась. Нажмите OK чтобы остановить.");
   mediaRecorder.stop();
 }
 
-async function uploadAudio(blob, category, id) {
-  const fileName = `${id}.webm`;
+/* ================= UPLOAD ================= */
+
+async function uploadAudio(blob, category, id){
+  if(!githubToken) return alert("Нет GitHub Token");
+
+  const fileName = `${id}.mp3`;
   const path = `audio/${category}/${fileName}`;
-  const url = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${path}`;
 
   const base64 = await blobToBase64(blob);
 
-  await fetch(url, {
-    method: "PUT",
-    headers: {
-      Authorization: `token ${githubToken}`,
-      "Content-Type": "application/json"
+  const url = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${path}`;
+
+  let sha = null;
+  const check = await fetch(url,{
+    headers:{ Authorization:`token ${githubToken}` }
+  });
+  if(check.ok){
+    sha = (await check.json()).sha;
+  }
+
+  await fetch(url,{
+    method:"PUT",
+    headers:{
+      Authorization:`token ${githubToken}`,
+      "Content-Type":"application/json"
     },
     body: JSON.stringify({
-      message: `Add audio ${fileName}`,
-      content: base64
+      message:`Add audio ${fileName}`,
+      content: base64,
+      sha
     })
   });
 
-  checkAudio(category, { id, audio: fileName });
+  alert("Аудио сохранено");
+
+  // 🔁 обновляем индикатор
+  checkAudio(category, fileName);
 }
 
-function blobToBase64(blob) {
-  return new Promise(res => {
-    const r = new FileReader();
-    r.onloadend = () => res(r.result.split(",")[1]);
-    r.readAsDataURL(blob);
+/* ================= UTILS ================= */
+
+function blobToBase64(blob){
+  return new Promise(resolve=>{
+    const reader = new FileReader();
+    reader.onloadend = () =>
+      resolve(reader.result.split(",")[1]);
+    reader.readAsDataURL(blob);
   });
 }
