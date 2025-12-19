@@ -516,11 +516,10 @@ async function preloadAllCategories(){
 // recorder.js вызовет этот хук после загрузки mp3
 window.onAudioUploaded = async function(cat, id, fileName){
   try{
-    // обновим JSON, если вдруг там не id.mp3
     const d = await loadCategoryData(cat);
     const it = d.items.find(x=>x.id===id);
     if(it){
-      it.audio = fileName; // обычно = id.mp3
+      it.audio = fileName;
       await saveCategoryData(cat, d);
     }
 
@@ -530,7 +529,6 @@ window.onAudioUploaded = async function(cat, id, fileName){
       currentData = d;
     }
 
-    // 🔄 если мы в поиске — пересобрать результаты
     if(currentView === "search"){
       rebuildSearchResults();
     }else{
@@ -539,6 +537,7 @@ window.onAudioUploaded = async function(cat, id, fileName){
 
   }catch(e){
     console.error(e);
-    alert("Аудио загрузилось, но JSON не обновился. Проверь токен/права.");
+    alert("Аудио загрузилось, но JSON не обновился.");
   }
 };
+
