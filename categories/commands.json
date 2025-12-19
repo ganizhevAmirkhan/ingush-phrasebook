@@ -3,15 +3,15 @@
   "items": [
     {
       "ru": "Стой!",
-      "ing": "Тха!",
-      "pron": "tcha",
+      "ing": "Сац",
+      "pron": "Catc",
       "id": "f_1766023804599_qyel",
       "audio": "f_1766023804599_qyel.mp3"
     },
     {
       "ru": "Иди!",
-      "ing": "Вале",
-      "pron": "Vale",
+      "ing": "Вуда!",
+      "pron": "vuda",
       "id": "f_1766023804599_3uwj",
       "audio": "f_1766023804599_3uwj.mp3"
     },
