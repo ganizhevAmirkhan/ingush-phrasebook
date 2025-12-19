@@ -516,19 +516,18 @@ async function preloadAllCategories(){
 // recorder.js вызовет этот хук после загрузки mp3
 window.onAudioUploaded = async function(cat, id, fileName){
   try{
-    const d = await loadCategoryData(cat);
-    const it = d.items.find(x=>x.id===id);
-    if(it){
-      it.audio = fileName;
-      await saveCategoryData(cat, d);
-    }
+    // ❗ НЕ трогаем JSON — текст уже сохранён
+    // audio всегда = id.mp3, менять нечего
 
     await preloadAllCategories();
 
-    if(currentCategory === cat && currentView === "category"){
-      currentData = d;
+    // обновим currentData если мы в категории
+    if(currentView === "category" && currentCategory === cat){
+      const fresh = await loadCategoryData(cat);
+      currentData = fresh;
     }
 
+    // 🔄 если мы в поиске — пересобрать результаты
     if(currentView === "search"){
       rebuildSearchResults();
     }else{
@@ -537,7 +536,8 @@ window.onAudioUploaded = async function(cat, id, fileName){
 
   }catch(e){
     console.error(e);
-    alert("Аудио загрузилось, но JSON не обновился.");
+    alert("Аудио записалось, но интерфейс не обновился");
   }
 };
+
 
