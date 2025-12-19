@@ -52,6 +52,10 @@ function b64EncodeUnicode(str){
   return btoa(unescape(encodeURIComponent(str)));
 }
 
+function b64DecodeUnicode(b64){
+  return decodeURIComponent(escape(atob(b64)));
+}
+
 /* ================= INIT ================= */
 window.onload = async () => {
   loadCategories();
@@ -62,7 +66,6 @@ window.onload = async () => {
     setAdminUI(true);
   }
 
-  // автоподсказки включаем сразу
   setupSearchSuggest();
 };
 
@@ -92,7 +95,6 @@ async function loadCategory(cat){
 }
 
 /* ================= MIGRATION ================= */
-// ВСЕГДА audio = id.mp3 (самый надежный путь)
 function migrateItems(data){
   let changed = false;
   data.items.forEach(it=>{
@@ -103,12 +105,6 @@ function migrateItems(data){
     if(!it.audio || !/\.(mp3|webm)$/i.test(it.audio)){
       it.audio = `${it.id}.mp3`;
       changed = true;
-    }else{
-      // если было старое имя (например pron.mp3), можно оставить, но мы переводим в id.mp3
-      // чтобы не ломалось при правках текста:
-      if(it.audio !== `${it.id}.mp3` && it.audio.endsWith(".mp3")){
-        // НЕ меняем насильно существующее, только если пусто/невалидно
-      }
     }
   });
   return changed;
@@ -133,7 +129,6 @@ async function migrateAllCategories(){
 function renderPhrase(item){
   const file = item.audio || `${item.id}.mp3`;
 
-  // play по умолчанию disabled (включим когда HEAD ok)
   return `
   <div class="phrase" id="ph-${item.id}">
     <p><b>ING:</b> ${safe(item.ing)}</p>
@@ -192,13 +187,9 @@ function renderCurrentView(){
 }
 
 /* ================= AUDIO ================= */
-// универсально: если mp3 не найден — пробуем webm
-async function playAudio(cat, file, id){
+async function playAudio(cat, file){
   const base = file.replace(/\.(mp3|webm)$/i, "");
-  const variants = [
-    `${base}.mp3`,
-    `${base}.webm`
-  ];
+  const variants = [`${base}.mp3`, `${base}.webm`];
 
   for(const f of variants){
     const url = `audio/${cat}/${f}?v=${Date.now()}`;
@@ -209,9 +200,7 @@ async function playAudio(cat, file, id){
       const audio = new Audio(url);
       await audio.play();
       return;
-    }catch(e){
-      // пробуем следующий
-    }
+    }catch(e){}
   }
 
   alert("Аудио не найдено");
@@ -232,7 +221,6 @@ function checkAudio(cat, file, id){
         return;
       }
     }
-    // нет аудио — оставляем ⚪ и disabled=true
   })();
 }
 
@@ -270,6 +258,7 @@ function downloadZip(){
 async function findCategoryById(id){
   if(phraseIndex[id]) return phraseIndex[id];
 
+  // fallback (редко понадобится)
   for(const cat of categories){
     try{
       const r = await fetch(`categories/${cat}.json`);
@@ -283,15 +272,67 @@ async function findCategoryById(id){
   return null;
 }
 
+/* ================= CRUD HELPERS ================= */
+function updateCacheFromItem(cat, item){
+  // allPhrases
+  const p = allPhrases.find(x => x.id === item.id);
+  if(p){
+    p.ru = item.ru;
+    p.ing = item.ing;
+    p.pron = item.pron;
+    p.audio = item.audio;
+    p.category = cat;
+  }else{
+    allPhrases.push({ ...item, category: cat });
+  }
+
+  // index
+  phraseIndex[item.id] = cat;
+
+  // если сейчас поиск — обновим searchResults из allPhrases
+  if(currentView === "search"){
+    rebuildSearchResults();
+  }
+}
+
+function removeFromCache(id){
+  allPhrases = allPhrases.filter(x => x.id !== id);
+  delete phraseIndex[id];
+
+  if(currentView === "search"){
+    rebuildSearchResults();
+  }
+}
+
 /* ================= CRUD (GitHub JSON) ================= */
 async function loadCategoryData(cat){
+  // для отображения можно с pages
   const r = await fetch(`categories/${cat}.json`);
   const d = await r.json();
   migrateItems(d);
   return d;
 }
 
-async function saveCategoryData(cat,data){
+// ВАЖНО: эта функция читает JSON именно через GitHub API (без кэша Pages)
+async function loadCategoryDataFromGitHubAPI(cat){
+  const token = githubToken;
+  if(!token) throw new Error("Нет GitHub Token");
+
+  const url = `https://api.github.com/repos/${OWNER}/${REPO}/contents/categories/${cat}.json?ref=${BRANCH}`;
+  const res = await fetch(url, { headers: { Authorization: `token ${token}` } });
+  if(!res.ok){
+    const txt = await res.text().catch(()=>"(no details)");
+    throw new Error("Не удалось прочитать JSON через GitHub API: " + txt);
+  }
+
+  const json = await res.json();
+  const content = b64DecodeUnicode(json.content.replace(/\n/g, ""));
+  const data = JSON.parse(content);
+  migrateItems(data);
+  return data;
+}
+
+async function saveCategoryData(cat, data){
   const token = githubToken;
   if(!token) throw new Error("Нет GitHub Token");
 
@@ -328,30 +369,28 @@ async function addPhrase(cat){
   const pron = prompt("Произношение:");
   if(!ru || !ing || !pron) return;
 
-  const d = await loadCategoryData(cat);
+  const d = await loadCategoryDataFromGitHubAPI(cat); // ✅ без кэша
   const id = genId();
-  d.items.push({ id, ru, ing, pron, audio: `${id}.mp3` });
+  const item = { id, ru, ing, pron, audio: `${id}.mp3` };
+  d.items.push(item);
 
   await saveCategoryData(cat, d);
-  await preloadAllCategories();
+
+  // ✅ обновляем кэш вручную (не перезагружаем pages)
+  updateCacheFromItem(cat, item);
 
   if(currentCategory === cat){
     currentData = d;
   }
 
-  // если мы были в поиске — пересобрать результаты
-  if(currentView === "search"){
-    rebuildSearchResults();
-  }else{
-    renderCurrentView();
-  }
+  renderCurrentView();
 }
 
 async function editById(id){
   const cat = await findCategoryById(id);
   if(!cat) return alert("Категория не найдена");
 
-  const d = await loadCategoryData(cat);
+  const d = await loadCategoryDataFromGitHubAPI(cat); // ✅ без кэша
   const it = d.items.find(x=>x.id===id);
   if(!it) return alert("Фраза не найдена");
 
@@ -365,22 +404,18 @@ async function editById(id){
   it.ing  = newIng;
   it.pron = newPron;
 
-  // audio НЕ зависит от pron — всегда id.mp3
   if(!it.audio) it.audio = `${it.id}.mp3`;
 
   await saveCategoryData(cat, d);
-  await preloadAllCategories();
+
+  // ✅ СРАЗУ фиксируем в памяти (это ключ к твоей проблеме)
+  updateCacheFromItem(cat, it);
 
   if(currentCategory === cat){
     currentData = d;
   }
 
-  // 🔄 если мы в поиске — пересобрать результаты
-  if(currentView === "search"){
-    rebuildSearchResults();
-  }else{
-    renderCurrentView();
-  }
+  renderCurrentView();
 }
 
 async function deleteById(id){
@@ -389,40 +424,31 @@ async function deleteById(id){
   const cat = await findCategoryById(id);
   if(!cat) return alert("Категория не найдена");
 
-  const d = await loadCategoryData(cat);
+  const d = await loadCategoryDataFromGitHubAPI(cat); // ✅ без кэша
   d.items = d.items.filter(x=>x.id!==id);
 
   await saveCategoryData(cat, d);
-  await preloadAllCategories();
+
+  // ✅ обновляем кэш
+  removeFromCache(id);
 
   if(currentCategory === cat){
     currentData = d;
   }
 
-  // 🔄 если мы в поиске — пересобрать результаты
-  if(currentView === "search"){
-    rebuildSearchResults();
-  }else{
-    renderCurrentView();
-  }
+  renderCurrentView();
 }
 
 /* ================= RECORD ================= */
-// recorder.js должен иметь startRecording(cat, id)
 async function recordById(id){
   const cat = await findCategoryById(id);
   if(!cat) return alert("Категория не найдена");
-
-  // найдем актуальный item (чтобы audio было id.mp3)
-  const d = await loadCategoryData(cat);
-  const it = d.items.find(x=>x.id===id);
-  if(!it) return alert("Фраза не найдена");
 
   if(typeof startRecording !== "function"){
     return alert("recorder.js не загружен или startRecording отсутствует");
   }
 
-  startRecording(cat, id); // MP3 будет audio/<cat>/<id>.mp3
+  startRecording(cat, id); // mp3 = audio/<cat>/<id>.mp3
 }
 
 /* ================= SEARCH (с подсказками) ================= */
@@ -453,7 +479,7 @@ function setupSearchSuggest(){
         d.onclick = () => {
           sInput.value = p.ru;
           sBox.classList.add("hidden");
-          doSearch(); // ✅ раньше пропадало — возвращаем
+          doSearch();
         };
         sBox.appendChild(d);
       });
@@ -502,9 +528,7 @@ async function preloadAllCategories(){
       migrateItems(d);
 
       d.items.forEach(it=>{
-        // гарантируем audio=id.mp3 на клиенте
         if(!it.audio) it.audio = `${it.id}.mp3`;
-
         allPhrases.push({...it, category: cat});
         phraseIndex[it.id] = cat;
       });
@@ -513,32 +537,43 @@ async function preloadAllCategories(){
 }
 
 /* ================= HOOK AFTER AUDIO UPLOAD ================= */
-// recorder.js вызовет этот хук после загрузки mp3
+// recorder.js вызывает этот хук после загрузки mp3
 window.onAudioUploaded = async function(cat, id, fileName){
   try{
-    // обновим JSON, если вдруг там не id.mp3
-    const d = await loadCategoryData(cat);
+    // ✅ 1) берём АКТУАЛЬНЫЙ JSON через GitHub API (не через Pages)
+    const d = await loadCategoryDataFromGitHubAPI(cat);
+
+    // ✅ 2) находим item
     const it = d.items.find(x=>x.id===id);
-    if(it){
-      it.audio = fileName; // обычно = id.mp3
-      await saveCategoryData(cat, d);
+    if(!it) throw new Error("Фраза не найдена в JSON при обновлении аудио");
+
+    // ✅ 3) ОБНОВЛЯЕМ ТОЛЬКО audio, но при этом
+    //      берём свежий текст из кэша (чтобы никогда не откатился)
+    const cached = allPhrases.find(x => x.id === id);
+    if(cached){
+      it.ru = cached.ru;
+      it.ing = cached.ing;
+      it.pron = cached.pron;
     }
 
-    await preloadAllCategories();
+    it.audio = fileName; // обычно id.mp3
 
+    // ✅ 4) сохраняем JSON
+    await saveCategoryData(cat, d);
+
+    // ✅ 5) фиксируем в кэше
+    updateCacheFromItem(cat, it);
+
+    // ✅ 6) обновляем текущие данные категории (если открыта)
     if(currentCategory === cat && currentView === "category"){
       currentData = d;
     }
 
-    // 🔄 если мы в поиске — пересобрать результаты
-    if(currentView === "search"){
-      rebuildSearchResults();
-    }else{
-      renderCurrentView();
-    }
+    // ✅ 7) перерисовка
+    renderCurrentView();
 
   }catch(e){
     console.error(e);
-    alert("Аудио загрузилось, но JSON не обновился. Проверь токен/права.");
+    alert("Аудио загрузилось, но обновление JSON/экрана не удалось. Проверь токен/права.");
   }
 };
