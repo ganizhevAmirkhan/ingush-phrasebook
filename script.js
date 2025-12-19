@@ -3,6 +3,31 @@ const OWNER  = "ganizhevAmirkhan";
 const REPO   = "ingush-phrasebook";
 const BRANCH = "main";
 
+/* ================= DATA ================= */
+const categories = [
+  "greetings","basic_phrases","personal_info","family","home",
+  "food","drinks","travel","transport","hunting",
+  "danger","thermal","orientation","weather","emotions",
+  "health","help","commands","tools","animals",
+  "time","numbers","colors","money","shop",
+  "city","village","guests","communication","work","misc"
+];
+
+const categoryTitles = {
+  greetings:"Приветствия", basic_phrases:"Базовые фразы",
+  personal_info:"Личная информация", family:"Семья",
+  home:"Дом", food:"Еда", drinks:"Напитки",
+  travel:"Путешествия", transport:"Транспорт",
+  hunting:"Охота", danger:"Опасность", thermal:"Тепловизор",
+  orientation:"Ориентирование", weather:"Погода",
+  emotions:"Эмоции", health:"Здоровье", help:"Помощь",
+  commands:"Команды", tools:"Инструменты", animals:"Животные",
+  time:"Время", numbers:"Числа", colors:"Цвета",
+  money:"Деньги", shop:"Магазин", city:"Город",
+  village:"Деревня", guests:"Гости", communication:"Общение",
+  work:"Работа", misc:"Разное"
+};
+
 /* ================= STATE ================= */
 let currentCategory = null;
 let currentData = null;
@@ -11,10 +36,9 @@ let phraseIndex = {};
 let currentView = "category";
 let searchResults = [];
 let lastSearchQuery = "";
+
 let adminMode = false;
 let githubToken = localStorage.getItem("githubToken");
-
-let editingItemId = null;
 
 /* ================= UTILS ================= */
 const safe = v => (v ?? "").toString();
@@ -32,32 +56,127 @@ function b64DecodeUnicode(b64){
 }
 
 /* ================= INIT ================= */
-window.onload = async ()=>{
+window.onload = async () => {
   loadCategories();
   await preloadAllCategories();
-
   if(githubToken){
     adminMode = true;
-    document.getElementById("admin-status").textContent = "✓ Админ";
+    setAdminUI(true);
   }
-
   setupSearchSuggest();
 };
 
-/* ================= AI ================= */
+/* ================= CATEGORY ================= */
+function loadCategories(){
+  const list = document.getElementById("category-list");
+  list.innerHTML = "";
+  categories.forEach(cat=>{
+    const el = document.createElement("div");
+    el.className = "category";
+    el.textContent = categoryTitles[cat];
+    el.onclick = () => loadCategory(cat);
+    list.appendChild(el);
+  });
+}
+
+async function loadCategory(cat){
+  currentView = "category";
+  currentCategory = cat;
+  document.getElementById("content-title").textContent = categoryTitles[cat];
+  const r = await fetch(`categories/${cat}.json`);
+  currentData = await r.json();
+  migrateItems(currentData);
+  renderCategory();
+}
+
+/* ================= MIGRATION ================= */
+function migrateItems(data){
+  data.items.forEach(it=>{
+    if(!it.id) it.id = genId();
+    if(!it.audio) it.audio = `${it.id}.mp3`;
+  });
+}
+
+/* ================= RENDER ================= */
+function renderPhrase(item){
+  return `
+  <div class="phrase">
+    <p><b>ING:</b> ${safe(item.ing)}</p>
+    <p><b>RU:</b> ${safe(item.ru)}</p>
+    <p><b>PRON:</b> ${safe(item.pron)}</p>
+
+    ${adminMode ? `
+      <button onclick="recordById('${item.id}')">🎤</button>
+      <button onclick="openEdit('${item.id}')">✏</button>
+    ` : ""}
+  </div>`;
+}
+
+function renderCategory(){
+  const c = document.getElementById("content");
+  c.innerHTML = "";
+  currentData.items.forEach(it=>{
+    it.category = currentCategory;
+    c.insertAdjacentHTML("beforeend", renderPhrase(it));
+  });
+}
+
+/* ================= ADMIN ================= */
+function setAdminUI(on){
+  document.getElementById("admin-status").textContent = on ? "✓ Админ" : "";
+}
+
+function adminLogin(){
+  githubToken = document.getElementById("gh-token").value.trim();
+  if(!githubToken) return alert("Введите GitHub Token");
+  localStorage.setItem("githubToken", githubToken);
+  adminMode = true;
+  setAdminUI(true);
+  renderCategory();
+}
+
+/* ================= RECORD ================= */
+async function recordById(id){
+  const cat = phraseIndex[id];
+  startRecording(cat, id);
+}
+
+/* ================= SEARCH ================= */
+function setupSearchSuggest(){}
+
+/* ================= CACHE ================= */
+async function preloadAllCategories(){
+  allPhrases = [];
+  phraseIndex = {};
+  for(const cat of categories){
+    try{
+      const r = await fetch(`categories/${cat}.json`);
+      const d = await r.json();
+      migrateItems(d);
+      d.items.forEach(it=>{
+        allPhrases.push({...it, category:cat});
+        phraseIndex[it.id] = cat;
+      });
+    }catch{}
+  }
+}
+
+/* =========================================================
+   🤖 AI SECTION
+========================================================= */
+
+let editingId = null;
+
 function saveAiKey(){
   const key = document.getElementById("ai-key").value.trim();
-  if(!key) return alert("Введите OpenAI API ключ");
+  if(!key) return alert("Введите OpenAI API Key");
   localStorage.setItem("openaiKey", key);
   document.getElementById("ai-status").textContent = "✓";
 }
 
 async function callAI(prompt){
   const key = localStorage.getItem("openaiKey");
-  if(!key){
-    alert("Нет OpenAI API ключа");
-    return "";
-  }
+  if(!key) return alert("Нет OpenAI API ключа");
 
   const res = await fetch("https://api.openai.com/v1/chat/completions",{
     method:"POST",
@@ -78,30 +197,12 @@ async function callAI(prompt){
   return json.choices?.[0]?.message?.content || "";
 }
 
-async function aiFixRu(){
-  const ru = editRu.value;
-  const out = await callAI("Исправь орфографию:\n"+ru);
-  if(out) editRu.value = out;
-}
-async function aiTranslateIng(){
-  const out = await callAI("Переведи на ингушский:\n"+editRu.value);
-  if(out) editIng.value = out;
-}
-async function aiMakePron(){
-  const out = await callAI("Сделай латинскую транскрипцию:\n"+editIng.value);
-  if(out) editPron.value = out.toLowerCase();
-}
-
-/* ================= EDIT MODAL ================= */
-const editModal = document.getElementById("edit-modal");
-const editRu = document.getElementById("edit-ru");
-const editIng = document.getElementById("edit-ing");
-const editPron = document.getElementById("edit-pron");
-
-async function editById(id){
-  editingItemId = id;
+/* ===== MODAL ===== */
+async function openEdit(id){
+  editingId = id;
   const cat = phraseIndex[id];
-  const d = await loadCategoryDataFromGitHubAPI(cat);
+  const r = await fetch(`categories/${cat}.json`);
+  const d = await r.json();
   const it = d.items.find(x=>x.id===id);
 
   editRu.value = it.ru;
@@ -113,115 +214,28 @@ async function editById(id){
 
 function closeEdit(){
   editModal.classList.add("hidden");
-  editingItemId = null;
+  editingId = null;
 }
 
 async function saveEdit(){
-  const cat = phraseIndex[editingItemId];
-  const d = await loadCategoryDataFromGitHubAPI(cat);
-  const it = d.items.find(x=>x.id===editingItemId);
+  const cat = phraseIndex[editingId];
+  const r = await fetch(`categories/${cat}.json`);
+  const d = await r.json();
+  const it = d.items.find(x=>x.id===editingId);
 
-  it.ru = editRu.value.trim();
-  it.ing = editIng.value.trim();
+  it.ru   = editRu.value.trim();
+  it.ing  = editIng.value.trim();
   it.pron = editPron.value.trim();
 
-  await saveCategoryData(cat, d);
-  updateCacheFromItem(cat, it);
-
-  if(currentCategory===cat) currentData = d;
-
+  await saveCategory(cat, d);
   closeEdit();
-  renderCurrentView();
+  loadCategory(cat);
 }
 
-/* ================= DATA ================= */
-const categories = [
-  "greetings","basic_phrases","family","food","travel","health","misc"
-];
-const categoryTitles = {
-  greetings:"Приветствия",
-  basic_phrases:"Базовые фразы",
-  family:"Семья",
-  food:"Еда",
-  travel:"Путешествия",
-  health:"Здоровье",
-  misc:"Разное"
-};
-
-/* ================= RENDER ================= */
-function renderPhrase(item){
-  return `
-  <div class="phrase">
-    <p><b>ING:</b> ${safe(item.ing)}</p>
-    <p><b>RU:</b> ${safe(item.ru)}</p>
-    <p><b>PRON:</b> ${safe(item.pron)}</p>
-    ${adminMode ? `<button onclick="editById('${item.id}')">✏</button>`:""}
-  </div>`;
-}
-
-function renderCategory(){
-  content.innerHTML = "";
-  currentData.items.forEach(it=>{
-    it.category=currentCategory;
-    content.insertAdjacentHTML("beforeend",renderPhrase(it));
-  });
-}
-
-function renderCurrentView(){
-  renderCategory();
-}
-
-/* ================= LOAD ================= */
-async function loadCategory(cat){
-  currentCategory = cat;
-  contentTitle.textContent = categoryTitles[cat];
-  const r = await fetch(`categories/${cat}.json`);
-  currentData = await r.json();
-  renderCategory();
-}
-
-function loadCategories(){
-  categoryList.innerHTML="";
-  categories.forEach(c=>{
-    const d=document.createElement("div");
-    d.className="category";
-    d.textContent=categoryTitles[c];
-    d.onclick=()=>loadCategory(c);
-    categoryList.appendChild(d);
-  });
-}
-
-/* ================= SEARCH ================= */
-function setupSearchSuggest(){}
-
-/* ================= CACHE ================= */
-async function preloadAllCategories(){
-  for(const cat of categories){
-    try{
-      const r=await fetch(`categories/${cat}.json`);
-      const d=await r.json();
-      d.items.forEach(it=>{
-        allPhrases.push({...it,category:cat});
-        phraseIndex[it.id]=cat;
-      });
-    }catch{}
-  }
-}
-
-/* ================= GITHUB ================= */
-async function loadCategoryDataFromGitHubAPI(cat){
-  const res = await fetch(
-    `https://api.github.com/repos/${OWNER}/${REPO}/contents/categories/${cat}.json`,
-    {headers:{Authorization:`token ${githubToken}`}}
-  );
-  const json = await res.json();
-  return JSON.parse(b64DecodeUnicode(json.content));
-}
-
-async function saveCategoryData(cat,data){
-  const url=`https://api.github.com/repos/${OWNER}/${REPO}/contents/categories/${cat}.json`;
-  const r=await fetch(url,{headers:{Authorization:`token ${githubToken}`}});
-  const sha=r.ok?(await r.json()).sha:null;
+async function saveCategory(cat,data){
+  const url = `https://api.github.com/repos/${OWNER}/${REPO}/contents/categories/${cat}.json`;
+  const check = await fetch(url,{headers:{Authorization:`token ${githubToken}`}});
+  const sha = (await check.json()).sha;
 
   await fetch(url,{
     method:"PUT",
@@ -230,16 +244,20 @@ async function saveCategoryData(cat,data){
       "Content-Type":"application/json"
     },
     body:JSON.stringify({
-      message:"update",
-      content:b64EncodeUnicode(JSON.stringify(data,null,2)),
-      sha
+      message:"edit phrase",
+      sha,
+      content:b64EncodeUnicode(JSON.stringify(data,null,2))
     })
   });
 }
 
-function updateCacheFromItem(cat,it){
-  const p=allPhrases.find(x=>x.id===it.id);
-  if(p){
-    p.ru=it.ru;p.ing=it.ing;p.pron=it.pron;
-  }
+/* ===== AI BUTTONS ===== */
+async function aiFixRu(){
+  editRu.value = await callAI("Исправь орфографию:\n"+editRu.value);
+}
+async function aiTranslateIng(){
+  editIng.value = await callAI("Переведи на ингушский:\n"+editRu.value);
+}
+async function aiMakePron(){
+  editPron.value = (await callAI("Сделай транскрипцию:\n"+editIng.value)).toLowerCase();
 }
