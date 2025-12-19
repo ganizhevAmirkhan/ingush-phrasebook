@@ -577,4 +577,115 @@ window.onAudioUploaded = async function(cat, id, fileName){
     alert("Аудио загрузилось, но обновление JSON/экрана не удалось. Проверь токен/права.");
   }
 };
+/* ================= AI ================= */
+
+let editingItemId = null;
+
+function saveAiKey(){
+  const key = document.getElementById("ai-key").value.trim();
+  if(!key) return alert("Введите OpenAI API ключ");
+  localStorage.setItem("openaiKey", key);
+  document.getElementById("ai-status").textContent = "✓";
+}
+
+async function callAI(prompt){
+  const key = localStorage.getItem("openaiKey");
+  if(!key){
+    alert("Нет OpenAI API ключа");
+    return "";
+  }
+
+  const res = await fetch("https://api.openai.com/v1/chat/completions",{
+    method:"POST",
+    headers:{
+      "Authorization":"Bearer " + key,
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify({
+      model:"gpt-4o-mini",
+      messages:[
+        {role:"system",content:"Ты помощник для создания разговорника."},
+        {role:"user",content:prompt}
+      ]
+    })
+  });
+
+  const json = await res.json();
+  return json.choices?.[0]?.message?.content || "";
+}
+
+/* 🇷🇺 RU */
+async function aiFixRu(){
+  const ru = document.getElementById("edit-ru").value;
+  const out = await callAI(
+    "Исправь орфографию и стиль, не меняя смысл:\n" + ru
+  );
+  if(out) document.getElementById("edit-ru").value = out;
+}
+
+/* 🟢 ING */
+async function aiTranslateIng(){
+  const ru = document.getElementById("edit-ru").value;
+  const out = await callAI(
+    "Переведи на ингушский язык:\n" + ru
+  );
+  if(out) document.getElementById("edit-ing").value = out;
+}
+
+/* 🔤 PRON */
+async function aiMakePron(){
+  const ing = document.getElementById("edit-ing").value;
+  const out = await callAI(
+    "Сделай латинскую транскрипцию для произношения:\n" + ing
+  );
+  if(out) document.getElementById("edit-pron").value =
+    out.toLowerCase().replace(/\s+/g,"_");
+}
+
+/* ================= EDIT MODAL ================= */
+
+async function editById(id){
+  editingItemId = id;
+  const cat = await findCategoryById(id);
+  const d = await loadCategoryDataFromGitHubAPI(cat);
+  const it = d.items.find(x=>x.id===id);
+
+  document.getElementById("edit-ru").value = it.ru;
+  document.getElementById("edit-ing").value = it.ing;
+  document.getElementById("edit-pron").value = it.pron;
+
+  document.getElementById("edit-modal").classList.remove("hidden");
+}
+
+function closeEdit(){
+  document.getElementById("edit-modal").classList.add("hidden");
+  editingItemId = null;
+}
+
+async function saveEdit(){
+  if(!editingItemId) return;
+
+  const ru   = document.getElementById("edit-ru").value.trim();
+  const ing  = document.getElementById("edit-ing").value.trim();
+  const pron = document.getElementById("edit-pron").value.trim();
+
+  const cat = await findCategoryById(editingItemId);
+  const d = await loadCategoryDataFromGitHubAPI(cat);
+  const it = d.items.find(x=>x.id===editingItemId);
+
+  it.ru = ru;
+  it.ing = ing;
+  it.pron = pron;
+
+  await saveCategoryData(cat, d);
+  updateCacheFromItem(cat, it);
+
+  if(currentCategory === cat){
+    currentData = d;
+  }
+
+  closeEdit();
+  renderCurrentView();
+}
+
 
