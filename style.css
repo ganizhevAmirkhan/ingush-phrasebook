@@ -142,3 +142,46 @@ body {
 .hidden {
   display: none;
 }
+
+.ai-panel {
+  display:flex;
+  gap:6px;
+  align-items:center;
+}
+
+.modal {
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.5);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+.modal.hidden { display:none; }
+
+.modal-box {
+  background:#fff;
+  padding:15px;
+  width:90%;
+  max-width:500px;
+  border-radius:10px;
+}
+
+.modal-box label {
+  display:block;
+  margin-bottom:10px;
+}
+
+.modal-box textarea,
+.modal-box input {
+  width:100%;
+  margin-top:4px;
+}
+
+.modal-actions {
+  display:flex;
+  gap:10px;
+  justify-content:flex-end;
+}
