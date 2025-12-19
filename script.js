@@ -304,3 +304,57 @@ async function preloadAllCategories(){
     }catch{}
   }
 }
+/* ================= COMPAT (старый index.html) ================= */
+
+/**
+ * Старый index.html вызывает setAdminUI(...)
+ * Поэтому даём совместимую реализацию (алиас на setAdminUI, если есть, или простая логика)
+ */
+function setAdminUI(on){
+  const st = document.getElementById("admin-status");
+  if(st) st.textContent = on ? "✓ Админ" : "";
+
+  const dl = document.getElementById("download-zip");
+  const lo = document.getElementById("admin-logout");
+
+  if(dl) dl.classList.toggle("hidden", !on);
+  if(lo) lo.classList.toggle("hidden", !on);
+}
+
+/**
+ * Иногда в старых версиях был setAdminUI / setAdminUi — подстрахуемся
+ */
+window.setAdminUI = setAdminUI;
+window.setAdminUi = setAdminUI;
+
+/**
+ * Старые кнопки в HTML часто вызывают adminLogin/adminLogout/downloadZip
+ * Если их нет — добавляем совместимые.
+ */
+window.adminLogin = function(){
+  const inp = document.getElementById("gh-token");
+  const t = (inp ? inp.value : "").trim();
+  if(!t) return alert("Введите GitHub Token");
+
+  githubToken = t;
+  adminMode = true;
+  localStorage.setItem("githubToken", t);
+
+  setAdminUI(true);
+  renderCurrentView();
+};
+
+window.adminLogout = function(){
+  localStorage.removeItem("githubToken");
+  location.reload();
+};
+
+window.downloadZip = function(){
+  window.open(`https://github.com/${OWNER}/${REPO}/archive/refs/heads/${BRANCH}.zip`, "_blank");
+};
+
+/**
+ * Подстрахуем клик по подсказке: иногда HTML вызывает doSearch напрямую
+ */
+window.doSearch = doSearch;
+
