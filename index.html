@@ -13,8 +13,7 @@
   <div class="title">Ингушский разговорник</div>
 
   <div class="search-wrap">
-    <input id="global-search" class="search"
-      type="text" placeholder="Поиск по всем фразам…" autocomplete="off">
+    <input id="global-search" class="search" placeholder="Поиск по всем фразам…">
     <button id="search-btn" class="btn btn-primary">🔍</button>
     <div id="search-results" class="search-results hidden"></div>
   </div>
@@ -25,17 +24,12 @@
     <span id="admin-status" class="admin-status"></span>
   </div>
 
-  <!-- 🧠 AI PANEL -->
   <div class="ai-panel">
     <input id="ai-key" type="password" placeholder="OpenAI API Key">
     <button onclick="saveAiKey()">💾</button>
     <span id="ai-status"></span>
   </div>
 </header>
-
-<button id="download-zip" class="hidden" onclick="downloadZip()">
-  ⬇ Скачать архив
-</button>
 
 <div class="layout">
   <aside class="sidebar">
@@ -48,7 +42,7 @@
   </main>
 </div>
 
-<!-- 🧩 MODAL EDIT -->
+<!-- MODAL -->
 <div id="edit-modal" class="modal hidden">
   <div class="modal-box">
 
@@ -81,6 +75,5 @@
 <script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.0/lame.min.js"></script>
 <script src="script.js"></script>
 <script src="recorder.js"></script>
-
 </body>
 </html>
