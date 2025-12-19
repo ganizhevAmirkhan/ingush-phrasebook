@@ -10,44 +10,29 @@ const categories = [
 ];
 
 const categoryTitles = {
- greetings: "Приветствия",
- basic_phrases: "Базовые фразы",
- personal_info: "Личная информация",
- family: "Семья",
- home: "Дом",
- food: "Еда",
- drinks: "Напитки",
- travel: "Путешествия",
- transport: "Транспорт",
- hunting: "Охота",
- danger: "Опасность",
- thermal: "Тепловизор",
- orientation: "Ориентирование",
- weather: "Погода",
- emotions: "Эмоции",
- health: "Здоровье",
- help: "Помощь",
- commands: "Команды",
- tools: "Инструменты",
- animals: "Животные",
- time: "Время",
- numbers: "Числа",
- colors: "Цвета",
- money: "Деньги",
- shop: "Магазин",
- city: "Город",
- village: "Деревня",
- guests: "Гости",
- communication: "Общение",
- work: "Работа",
- misc: "Разное"
+ greetings:"Приветствия", basic_phrases:"Базовые фразы",
+ personal_info:"Личная информация", family:"Семья",
+ home:"Дом", food:"Еда", drinks:"Напитки",
+ travel:"Путешествия", transport:"Транспорт",
+ hunting:"Охота", danger:"Опасность",
+ thermal:"Тепловизор", orientation:"Ориентирование",
+ weather:"Погода", emotions:"Эмоции",
+ health:"Здоровье", help:"Помощь",
+ commands:"Команды", tools:"Инструменты",
+ animals:"Животные", time:"Время",
+ numbers:"Числа", colors:"Цвета",
+ money:"Деньги", shop:"Магазин",
+ city:"Город", village:"Деревня",
+ guests:"Гости", communication:"Общение",
+ work:"Работа", misc:"Разное"
 };
 
 let currentCategory = null;
 let currentData = null;
 let allPhrases = [];
+let currentView = "category";
 
-/* ================= GLOBAL STATE ================= */
+/* ================= GLOBAL ================= */
 
 window.adminMode = false;
 window.githubToken = localStorage.getItem("githubToken");
@@ -58,18 +43,10 @@ window.onload = async () => {
   loadCategories();
   await preloadAllCategories();
 
-  const zipBtn = document.getElementById("download-zip");
-  const tokenInput = document.getElementById("gh-token");
-  const status = document.getElementById("admin-status");
-
   if (githubToken) {
     adminMode = true;
-
-    if (tokenInput) tokenInput.value = githubToken;
-    if (status) status.textContent = "✓ Админ";
-    if (zipBtn) zipBtn.classList.remove("hidden");
-  } else {
-    if (zipBtn) zipBtn.classList.add("hidden");
+    document.getElementById("admin-status").textContent = "✓ Админ";
+    document.getElementById("download-zip").classList.remove("hidden");
   }
 };
 
@@ -78,77 +55,74 @@ window.onload = async () => {
 function loadCategories(){
   const list = document.getElementById("category-list");
   list.innerHTML = "";
-
   categories.forEach(cat=>{
-    const d = document.createElement("div");
-    d.className = "category";
-    d.textContent = categoryTitles[cat] || cat;
-    d.onclick = () => loadCategory(cat);
+    const d=document.createElement("div");
+    d.className="category";
+    d.textContent=categoryTitles[cat]||cat;
+    d.onclick=()=>loadCategory(cat);
     list.appendChild(d);
   });
 }
 
 async function loadCategory(cat){
-  currentCategory = cat;
+  currentView="category";
+  currentCategory=cat;
   document.getElementById("content-title").textContent =
     categoryTitles[cat] || cat;
 
-  const res = await fetch(`categories/${cat}.json`);
-  currentData = await res.json();
-  renderPhrases();
+  const r = await fetch(`categories/${cat}.json`);
+  currentData = await r.json();
+  renderList(currentData.items, cat);
 }
 
-/* ================= RENDER ================= */
+/* ================= RENDER (ЕДИНЫЙ) ================= */
 
-function renderPhrases(){
-  const content = document.getElementById("content");
-  content.innerHTML = "";
+function renderList(items, forcedCategory=null){
+  const content=document.getElementById("content");
+  content.innerHTML="";
 
-  currentData.items.forEach((item,i)=>{
-    const file = normalizePron(item.pron) + ".mp3";
+  items.forEach((item,i)=>{
+    const cat = forcedCategory || item.category;
+    const file = normalizePron(item.pron)+".mp3";
+    const audioPath = `audio/${cat}/${file}`;
 
-    const div = document.createElement("div");
-    div.className = "phrase";
-    div.innerHTML = `
-      <p><b>ING:</b> ${item.ing || ""}</p>
-      <p><b>RU:</b> ${item.ru || ""}</p>
-      <p><b>PRON:</b> ${item.pron || ""}</p>
-      <i>${categoryTitles[currentCategory]}</i><br>
+    const div=document.createElement("div");
+    div.className="phrase";
+    div.innerHTML=`
+      <p><b>ING:</b> ${item.ing||""}</p>
+      <p><b>RU:</b> ${item.ru||""}</p>
+      <p><b>PRON:</b> ${item.pron||""}</p>
+      <i>${categoryTitles[cat]}</i><br>
 
-      <button onclick="playAudio('${currentCategory}','${file}')">▶</button>
+      <button id="play-${i}" disabled
+        onclick="playAudio('${cat}','${file}')">▶</button>
       <span id="ai-${i}">⚪</span>
 
-      ${adminMode ? `
-        <button onclick="startRecording('${currentCategory}','${item.pron || ""}')">🎤</button>
+      ${adminMode?`
+        <button onclick="startRecording('${cat}','${item.pron}')">🎤</button>
         <button onclick="editPhrase(${i})">✏</button>
         <button onclick="deletePhrase(${i})">🗑</button>
-      ` : ""}
+      `:""}
     `;
     content.appendChild(div);
-    checkAudio(i,file);
-  });
 
-  if(adminMode){
-    const b = document.createElement("button");
-    b.textContent = "➕ Добавить фразу";
-    b.onclick = addPhrase;
-    content.appendChild(b);
-  }
+    checkAudio(i, audioPath);
+  });
 }
 
 /* ================= AUDIO ================= */
 
 function playAudio(cat,file){
   new Audio(`audio/${cat}/${file}?v=${Date.now()}`).play()
-    .catch(()=>alert("Аудио ещё не доступно"));
+    .catch(()=>alert("Аудио недоступно"));
 }
 
-function checkAudio(i,file){
-  fetch(`audio/${currentCategory}/${file}`,{method:"HEAD"})
+function checkAudio(i,path){
+  fetch(path,{method:"HEAD"})
     .then(r=>{
       if(r.ok){
-        const el = document.getElementById(`ai-${i}`);
-        if(el) el.textContent="🟢";
+        document.getElementById(`ai-${i}`).textContent="🟢";
+        document.getElementById(`play-${i}`).disabled=false;
       }
     });
 }
@@ -159,105 +133,36 @@ function normalizePron(p){
     .replace(/[^a-z0-9_]/g,"");
 }
 
-/* ================= ADMIN ================= */
-
-function adminLogin(){
-  const token = document.getElementById("gh-token").value.trim();
-  if(!token) return alert("Введите GitHub Token");
-
-  githubToken = token;
-  adminMode = true;
-  localStorage.setItem("githubToken", token);
-
-  document.getElementById("admin-status").textContent = "✓ Админ";
-  document.getElementById("download-zip").classList.remove("hidden");
-
-  if(currentData) renderPhrases();
-}
-
 /* ================= SEARCH ================= */
 
 async function preloadAllCategories(){
-  allPhrases = [];
+  allPhrases=[];
   for(const cat of categories){
     try{
-      const r = await fetch(`categories/${cat}.json`);
-      const d = await r.json();
+      const r=await fetch(`categories/${cat}.json`);
+      const d=await r.json();
       d.items.forEach(it=>{
-        allPhrases.push({...it, category: cat});
+        allPhrases.push({...it, category:cat});
       });
     }catch{}
   }
 }
 
-const sInput = document.getElementById("global-search");
-const sBox   = document.getElementById("search-results");
-
-function hideSuggestions(){
-  sBox.classList.add("hidden");
-  sBox.innerHTML="";
-}
-
-sInput.oninput = ()=>{
-  const q = sInput.value.toLowerCase().trim();
-  sBox.innerHTML="";
-
-  if(q.length < 2){
-    hideSuggestions();
-    return;
-  }
-
-  allPhrases.filter(p=>
-    (p.ru||"").toLowerCase().includes(q) ||
-    (p.ing||"").toLowerCase().includes(q) ||
-    (p.pron||"").toLowerCase().includes(q)
-  ).slice(0,20).forEach(p=>{
-    const d = document.createElement("div");
-    d.className="search-item";
-    d.textContent = `${p.ru} — ${categoryTitles[p.category]}`;
-    d.onclick = ()=>{
-      sInput.value = p.ru;
-      hideSuggestions();
-    };
-    sBox.appendChild(d);
-  });
-
-  sBox.classList.remove("hidden");
-};
-
-document.getElementById("search-btn").onclick = doSearch;
-
-function doSearch(){
-  const q = sInput.value.toLowerCase().trim();
+document.getElementById("search-btn").onclick = ()=>{
+  const q=document.getElementById("global-search").value.toLowerCase().trim();
   if(!q) return;
 
-  hideSuggestions();
-  document.getElementById("content-title").textContent = `Поиск: ${sInput.value}`;
-  const content = document.getElementById("content");
-  content.innerHTML="";
+  currentView="search";
+  document.getElementById("content-title").textContent="Поиск: "+q;
 
-  allPhrases.filter(p=>
+  const res = allPhrases.filter(p=>
     (p.ru||"").toLowerCase().includes(q) ||
     (p.ing||"").toLowerCase().includes(q) ||
     (p.pron||"").toLowerCase().includes(q)
-  ).forEach(p=>{
-    const d=document.createElement("div");
-    d.className="phrase";
-    d.innerHTML=`
-      <p><b>ING:</b> ${p.ing}</p>
-      <p><b>RU:</b> ${p.ru}</p>
-      <p><b>PRON:</b> ${p.pron}</p>
-      <i>${categoryTitles[p.category]}</i>
-    `;
-    content.appendChild(d);
-  });
-}
+  );
 
-document.addEventListener("click",e=>{
-  if(!e.target.closest(".search-wrap")){
-    hideSuggestions();
-  }
-});
+  renderList(res);
+};
 
 /* ================= ZIP ================= */
 
@@ -267,4 +172,3 @@ function downloadZip(){
     "_blank"
   );
 }
-
