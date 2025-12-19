@@ -9,26 +9,36 @@ body {
   color:#fff;
   padding:12px;
   display:flex;
-  gap:10px;
   align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
 }
 
+.title {
+  font-size:20px;
+  font-weight:700;
+}
+
+/* ===== SEARCH ===== */
 .search-wrap {
+  position:relative;
   flex:1;
+  max-width:520px;
   display:flex;
-  gap:5px;
+  gap:6px;
 }
 
 .search {
   flex:1;
-  padding:6px;
+  padding:8px 10px;
   border-radius:6px;
-  border:none;
+  border:0;
 }
 
+/* ===== LAYOUT ===== */
 .layout {
   display:flex;
-  height:calc(100vh - 56px);
+  height:calc(100vh - 72px);
 }
 
 .sidebar {
@@ -41,32 +51,79 @@ body {
 .content {
   flex:1;
   padding:15px;
-  background:#fff;
   overflow:auto;
+  background:#fff;
 }
 
+/* ===== CATEGORY ===== */
 .category {
-  padding:8px;
   background:#fff;
+  padding:8px;
   margin-bottom:6px;
   cursor:pointer;
   border-radius:6px;
 }
+.category:hover { background:#f0f0f0; }
 
+/* ===== PHRASE ===== */
 .phrase {
+  background:#fafafa;
   border:1px solid #ddd;
   padding:10px;
   margin-bottom:10px;
   border-radius:8px;
-  background:#fafafa;
 }
 
+/* ▶ PLAY BUTTON */
+.play-btn {
+  padding:4px 8px;
+  margin-right:6px;
+  cursor:pointer;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  padding:6px 10px;
+  border-radius:6px;
+  border:0;
+  cursor:pointer;
+}
+.btn-primary { background:#1f6feb; color:#fff; }
+.btn-ghost { background:#e6e6e6; }
+
+.admin-status {
+  color:#7CFC00;
+  font-weight:700;
+}
+
+/* ===== SEARCH SUGGEST ===== */
+.search-results {
+  position:absolute;
+  top:42px;
+  left:0;
+  right:0;
+  background:#fff;
+  border:1px solid #ccc;
+  max-height:260px;
+  overflow-y:auto;
+  z-index:9999;
+}
+.search-item {
+  padding:8px 12px;
+  cursor:pointer;
+}
+.search-item:hover { background:#f0f0f0; }
+
+.hidden { display:none; }
+
+/* ===== AI PANEL ===== */
 .ai-panel {
   display:flex;
-  gap:5px;
+  gap:6px;
   align-items:center;
 }
 
+/* ===== MODAL ===== */
 .modal {
   position:fixed;
   inset:0;
@@ -76,7 +133,6 @@ body {
   justify-content:center;
   z-index:9999;
 }
-
 .modal.hidden { display:none; }
 
 .modal-box {
@@ -95,10 +151,11 @@ body {
 .modal-box textarea,
 .modal-box input {
   width:100%;
+  margin-top:4px;
 }
 
 .modal-actions {
   display:flex;
-  justify-content:flex-end;
   gap:10px;
+  justify-content:flex-end;
 }
