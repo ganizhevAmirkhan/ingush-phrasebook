@@ -9,58 +9,26 @@ body {
   color:#fff;
   padding:12px;
   display:flex;
+  gap:10px;
   align-items:center;
-  gap:12px;
-  flex-wrap:wrap;
 }
 
-.title {
-  font-size:20px;
-  font-weight:700;
-}
-
-/* ===== SEARCH ===== */
 .search-wrap {
-  position:relative;
   flex:1;
-  max-width:520px;
   display:flex;
-  gap:6px;
+  gap:5px;
 }
 
 .search {
   flex:1;
-  padding:8px 10px;
+  padding:6px;
   border-radius:6px;
-  border:0;
+  border:none;
 }
 
-.search-results {
-  position:absolute;
-  top:42px;
-  left:0;
-  right:0;
-  background:#fff;
-  border:1px solid #ccc;
-  max-height:260px;
-  overflow-y:auto;
-  z-index:9999;
-}
-
-.search-item {
-  padding:8px 12px;
-  cursor:pointer;
-  font-size:14px;
-}
-
-.search-item:hover {
-  background:#f0f0f0;
-}
-
-/* ===== LAYOUT ===== */
 .layout {
   display:flex;
-  height:calc(100vh - 70px);
+  height:calc(100vh - 56px);
 }
 
 .sidebar {
@@ -73,60 +41,32 @@ body {
 .content {
   flex:1;
   padding:15px;
-  overflow:auto;
   background:#fff;
+  overflow:auto;
 }
 
-/* ===== CATEGORY ===== */
 .category {
-  background:#fff;
   padding:8px;
+  background:#fff;
   margin-bottom:6px;
   cursor:pointer;
   border-radius:6px;
 }
 
-.category:hover { background:#f0f0f0; }
-
-/* ===== PHRASE ===== */
 .phrase {
-  background:#fafafa;
   border:1px solid #ddd;
   padding:10px;
   margin-bottom:10px;
   border-radius:8px;
+  background:#fafafa;
 }
 
-/* ===== BUTTONS ===== */
-.btn {
-  padding:6px 10px;
-  border-radius:6px;
-  border:0;
-  cursor:pointer;
-}
-.btn-primary { background:#1f6feb; color:#fff; }
-.btn-ghost { background:#e6e6e6; }
-
-/* ===== ADMIN ===== */
-.admin-status {
-  color:#7CFC00;
-  font-weight:700;
-}
-
-/* ===== AI PANEL ===== */
 .ai-panel {
   display:flex;
-  gap:6px;
+  gap:5px;
   align-items:center;
 }
 
-.ai-panel input {
-  padding:6px;
-  border-radius:6px;
-  border:0;
-}
-
-/* ===== MODAL ===== */
 .modal {
   position:fixed;
   inset:0;
@@ -143,30 +83,22 @@ body {
   background:#fff;
   padding:15px;
   width:90%;
-  max-width:520px;
+  max-width:500px;
   border-radius:10px;
 }
 
 .modal-box label {
   display:block;
-  margin-bottom:12px;
+  margin-bottom:10px;
 }
 
 .modal-box textarea,
 .modal-box input {
   width:100%;
-  margin-top:4px;
-  padding:6px;
-}
-
-.modal-box button {
-  margin-top:4px;
 }
 
 .modal-actions {
   display:flex;
-  gap:10px;
   justify-content:flex-end;
+  gap:10px;
 }
-
-.hidden { display:none; }
