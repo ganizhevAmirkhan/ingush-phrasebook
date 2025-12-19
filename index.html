@@ -24,6 +24,13 @@
     <button onclick="adminLogin()" class="btn btn-ghost">Админ</button>
     <span id="admin-status" class="admin-status"></span>
   </div>
+
+  <!-- 🧠 AI PANEL -->
+  <div class="ai-panel">
+    <input id="ai-key" type="password" placeholder="OpenAI API Key">
+    <button onclick="saveAiKey()">💾</button>
+    <span id="ai-status"></span>
+  </div>
 </header>
 
 <button id="download-zip" class="hidden" onclick="downloadZip()">
@@ -39,6 +46,36 @@
     <h2 id="content-title">Выберите категорию</h2>
     <div id="content"></div>
   </main>
+</div>
+
+<!-- 🧩 MODAL EDIT -->
+<div id="edit-modal" class="modal hidden">
+  <div class="modal-box">
+
+    <label>
+      Русский:
+      <textarea id="edit-ru"></textarea>
+      <button onclick="aiFixRu()">🤖</button>
+    </label>
+
+    <label>
+      Ингушский:
+      <textarea id="edit-ing"></textarea>
+      <button onclick="aiTranslateIng()">🤖</button>
+    </label>
+
+    <label>
+      PRON:
+      <input id="edit-pron">
+      <button onclick="aiMakePron()">🤖</button>
+    </label>
+
+    <div class="modal-actions">
+      <button onclick="saveEdit()">💾 Сохранить</button>
+      <button onclick="closeEdit()">❌ Отмена</button>
+    </div>
+
+  </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.0/lame.min.js"></script>
