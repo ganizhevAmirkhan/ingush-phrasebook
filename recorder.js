@@ -10,7 +10,6 @@ async function startRecording(category, id){
     return;
   }
 
-  // Пишем в webm (так умеют почти все), потом конвертируем в mp3
   let mimeType = "audio/webm;codecs=opus";
   if(!MediaRecorder.isTypeSupported(mimeType)) mimeType = "audio/webm";
 
@@ -36,7 +35,6 @@ async function startRecording(category, id){
       const fileName = `${id}.mp3`;
       await uploadMp3(category, fileName, mp3Blob, token);
 
-      // скажем script.js обновить индикатор + JSON + поиск/категории
       if(typeof window.onAudioUploaded === "function"){
         await window.onAudioUploaded(category, id, fileName);
       }
@@ -52,8 +50,8 @@ async function startRecording(category, id){
 }
 
 async function webmToMp3(blob){
-  // важно: AudioContext должен быть доступен (часто требует user gesture — у нас он есть, запись по кнопке)
-  const ctx = new (window.AudioContext || window.webkitAudioContext)();
+  const AudioCtx = window.AudioContext || window.webkitAudioContext;
+  const ctx = new AudioCtx();
 
   const ab = await blob.arrayBuffer();
   const audioBuffer = await ctx.decodeAudioData(ab);
@@ -69,7 +67,6 @@ async function webmToMp3(blob){
   for(let i=0; i<samples.length; i+=blockSize){
     const chunk = samples.subarray(i, i+blockSize);
 
-    // float32 -> int16
     const int16 = new Int16Array(chunk.length);
     for(let j=0; j<chunk.length; j++){
       let s = Math.max(-1, Math.min(1, chunk[j]));
