@@ -1,360 +1,125 @@
-/* ================= CONFIG ================= */
-const OWNER  = "ganizhevAmirkhan";
-const REPO   = "ingush-phrasebook";
-const BRANCH = "main";
+async function startRecording(category, id){
+  const token = githubToken;
+  if(!token) return alert("Нет GitHub Token");
 
-/* ================= DATA ================= */
-const categories = [
-  "greetings","basic_phrases","personal_info","family","home",
-  "food","drinks","travel","transport","hunting",
-  "danger","thermal","orientation","weather","emotions",
-  "health","help","commands","tools","animals",
-  "time","numbers","colors","money","shop",
-  "city","village","guests","communication","work","misc"
-];
-
-const categoryTitles = {
-  greetings:"Приветствия", basic_phrases:"Базовые фразы",
-  personal_info:"Личная информация", family:"Семья",
-  home:"Дом", food:"Еда", drinks:"Напитки",
-  travel:"Путешествия", transport:"Транспорт",
-  hunting:"Охота", danger:"Опасность", thermal:"Тепловизор",
-  orientation:"Ориентирование", weather:"Погода",
-  emotions:"Эмоции", health:"Здоровье", help:"Помощь",
-  commands:"Команды", tools:"Инструменты", animals:"Животные",
-  time:"Время", numbers:"Числа", colors:"Цвета",
-  money:"Деньги", shop:"Магазин", city:"Город",
-  village:"Деревня", guests:"Гости", communication:"Общение",
-  work:"Работа", misc:"Разное"
-};
-
-/* ================= STATE ================= */
-let currentCategory = null;
-let currentData = null;
-
-let allPhrases = [];          // 🔴 ЕДИНСТВЕННЫЙ ИСТОЧНИК ПРАВДЫ
-let phraseIndex = {};         // id -> category
-let currentView = "category"; // category | search
-let searchResults = [];
-let lastSearchQuery = "";
-
-let adminMode = false;
-let githubToken = localStorage.getItem("githubToken");
-
-/* ================= UTILS ================= */
-function genId(){
-  return "f_" + Date.now() + "_" + Math.random().toString(36).slice(2,6);
-}
-const safe = v => (v ?? "").toString();
-const low  = v => safe(v).toLowerCase();
-const b64EncodeUnicode = str => btoa(unescape(encodeURIComponent(str)));
-
-/* ================= INIT ================= */
-window.onload = async () => {
-  loadCategories();
-  await preloadAllCategories();
-
-  if(githubToken){
-    adminMode = true;
-    setAdminUI(true);
+  let stream;
+  try{
+    stream = await navigator.mediaDevices.getUserMedia({audio:true});
+  }catch(e){
+    alert("Нет доступа к микрофону");
+    return;
   }
 
-  setupSearchSuggest();
-};
+  // Пишем в webm (так умеют почти все), потом конвертируем в mp3
+  let mimeType = "audio/webm;codecs=opus";
+  if(!MediaRecorder.isTypeSupported(mimeType)) mimeType = "audio/webm";
 
-/* ================= CATEGORY LIST ================= */
-function loadCategories(){
-  const list = document.getElementById("category-list");
-  list.innerHTML = "";
-  categories.forEach(cat=>{
-    const el = document.createElement("div");
-    el.className = "category";
-    el.textContent = categoryTitles[cat];
-    el.onclick = () => loadCategory(cat);
-    list.appendChild(el);
-  });
-}
-
-async function loadCategory(cat){
-  currentView = "category";
-  currentCategory = cat;
-  document.getElementById("content-title").textContent = categoryTitles[cat];
-
-  const r = await fetch(`categories/${cat}.json`);
-  currentData = await r.json();
-  renderCategory();
-}
-
-/* ================= RENDER ================= */
-function renderPhrase(item){
-  const file = item.audio || `${item.id}.mp3`;
-
-  return `
-  <div class="phrase" id="ph-${item.id}">
-    <p><b>ING:</b> ${safe(item.ing)}</p>
-    <p><b>RU:</b> ${safe(item.ru)}</p>
-    <p><b>PRON:</b> ${safe(item.pron)}</p>
-    <i>${categoryTitles[item.category]}</i><br>
-
-    <button id="pb-${item.id}" disabled onclick="playAudio('${item.category}','${file}','${item.id}')">▶</button>
-    <span id="ai-${item.id}">⚪</span>
-
-    ${adminMode ? `
-      <button onclick="recordById('${item.id}')">🎤</button>
-      <button onclick="editById('${item.id}')">✏</button>
-      <button onclick="deleteById('${item.id}')">🗑</button>
-    ` : ""}
-  </div>`;
-}
-
-function renderCategory(){
-  const c = document.getElementById("content");
-  c.innerHTML = "";
-
-  currentData.items.forEach(it=>{
-    it.category = currentCategory;
-    c.insertAdjacentHTML("beforeend", renderPhrase(it));
-    checkAudio(it.category, it.audio || `${it.id}.mp3`, it.id);
-  });
-
-  if(adminMode){
-    const b = document.createElement("button");
-    b.textContent = "➕ Добавить фразу";
-    b.onclick = () => addPhrase(currentCategory);
-    c.appendChild(b);
+  let rec;
+  try{
+    rec = new MediaRecorder(stream, { mimeType });
+  }catch(e){
+    alert("MediaRecorder не поддерживается этим браузером");
+    stream.getTracks().forEach(t=>t.stop());
+    return;
   }
-}
 
-function renderSearch(){
-  const c = document.getElementById("content");
-  c.innerHTML = "";
-  searchResults.forEach(it=>{
-    c.insertAdjacentHTML("beforeend", renderPhrase(it));
-    checkAudio(it.category, it.audio || `${it.id}.mp3`, it.id);
-  });
-}
+  const chunks = [];
+  rec.ondataavailable = e => { if(e.data && e.data.size) chunks.push(e.data); };
 
-function renderCurrentView(){
-  currentView === "search" ? renderSearch() : renderCategory();
-}
+  rec.onstop = async () => {
+    stream.getTracks().forEach(t=>t.stop());
 
-/* ================= AUDIO ================= */
-async function playAudio(cat, file){
-  const base = file.replace(/\.(mp3|webm)$/i,"");
-  for(const ext of ["mp3","webm"]){
-    const url = `audio/${cat}/${base}.${ext}?v=${Date.now()}`;
-    const r = await fetch(url,{method:"HEAD"}).catch(()=>null);
-    if(r && r.ok){
-      new Audio(url).play();
-      return;
-    }
-  }
-  alert("Аудио не найдено");
-}
+    try{
+      const webmBlob = new Blob(chunks, { type: mimeType });
+      const mp3Blob = await webmToMp3(webmBlob);
 
-function checkAudio(cat,file,id){
-  const base = file.replace(/\.(mp3|webm)$/i,"");
-  (async()=>{
-    for(const ext of ["mp3","webm"]){
-      const r = await fetch(`audio/${cat}/${base}.${ext}`,{method:"HEAD"}).catch(()=>null);
-      if(r && r.ok){
-        document.getElementById(`ai-${id}`).textContent="🟢";
-        document.getElementById(`pb-${id}`).disabled=false;
-        return;
+      const fileName = `${id}.mp3`;
+      await uploadMp3(category, fileName, mp3Blob, token);
+
+      // скажем script.js обновить индикатор + JSON + поиск/категории
+      if(typeof window.onAudioUploaded === "function"){
+        await window.onAudioUploaded(category, id, fileName);
       }
+
+    }catch(err){
+      console.error(err);
+      alert("Ошибка записи/конвертации");
     }
-  })();
-}
-
-/* ================= SEARCH ================= */
-function setupSearchSuggest(){
-  const input = document.getElementById("global-search");
-  const box   = document.getElementById("search-results");
-
-  input.oninput = ()=>{
-    const q = low(input.value);
-    box.innerHTML="";
-    if(q.length<2){box.classList.add("hidden");return;}
-
-    allPhrases.filter(p=>
-      low(p.ru).includes(q)||low(p.ing).includes(q)||low(p.pron).includes(q)
-    ).slice(0,20).forEach(p=>{
-      const d=document.createElement("div");
-      d.textContent=`${p.ru} — ${categoryTitles[p.category]}`;
-      d.onclick=()=>{input.value=p.ru;doSearch();};
-      box.appendChild(d);
-    });
-    box.classList.remove("hidden");
   };
 
-  document.getElementById("search-btn").onclick = doSearch;
+  rec.start();
+  setTimeout(()=>rec.stop(), 4000);
 }
 
-function doSearch(){
-  const q = safe(document.getElementById("global-search").value);
-  if(!q) return;
-  lastSearchQuery=q;
-  currentView="search";
-  document.getElementById("content-title").textContent="Поиск: "+q;
-  rebuildSearchResults();
+async function webmToMp3(blob){
+  // важно: AudioContext должен быть доступен (часто требует user gesture — у нас он есть, запись по кнопке)
+  const ctx = new (window.AudioContext || window.webkitAudioContext)();
+
+  const ab = await blob.arrayBuffer();
+  const audioBuffer = await ctx.decodeAudioData(ab);
+
+  const sampleRate = audioBuffer.sampleRate;
+  const mp3Encoder = new lamejs.Mp3Encoder(1, sampleRate, 64);
+
+  const samples = audioBuffer.getChannelData(0);
+
+  const blockSize = 1152;
+  let mp3Data = [];
+
+  for(let i=0; i<samples.length; i+=blockSize){
+    const chunk = samples.subarray(i, i+blockSize);
+
+    // float32 -> int16
+    const int16 = new Int16Array(chunk.length);
+    for(let j=0; j<chunk.length; j++){
+      let s = Math.max(-1, Math.min(1, chunk[j]));
+      int16[j] = s < 0 ? s * 32768 : s * 32767;
+    }
+
+    const buf = mp3Encoder.encodeBuffer(int16);
+    if(buf.length) mp3Data.push(buf);
+  }
+
+  const end = mp3Encoder.flush();
+  if(end.length) mp3Data.push(end);
+
+  return new Blob(mp3Data, { type:"audio/mpeg" });
 }
 
-function rebuildSearchResults(){
-  const q=low(lastSearchQuery);
-  searchResults=allPhrases.filter(p=>
-    low(p.ru).includes(q)||low(p.ing).includes(q)||low(p.pron).includes(q)
-  );
-  renderSearch();
-}
+async function uploadMp3(cat, fileName, blob, token){
+  const path = `audio/${cat}/${fileName}`;
+  const url  = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${path}`;
 
-/* ================= CRUD ================= */
-async function addPhrase(cat){
-  const ru=prompt("Русский:");
-  const ing=prompt("Ингушский:");
-  const pron=prompt("Произношение:");
-  if(!ru||!ing||!pron) return;
+  let sha = null;
+  const check = await fetch(url,{headers:{Authorization:`token ${token}`}});
+  if(check.ok) sha = (await check.json()).sha;
 
-  const id=genId();
-  const item={id,ru,ing,pron,audio:`${id}.mp3`,category:cat};
+  const base64 = await blobToBase64(blob);
 
-  const d=await loadCategoryData(cat);
-  d.items.push(item);
-  await saveCategoryData(cat,d);
-
-  allPhrases.push(item);
-  phraseIndex[id]=cat;
-
-  renderCurrentView();
-}
-
-async function editById(id){
-  const p=allPhrases.find(x=>x.id===id);
-  if(!p) return;
-
-  const ru=prompt("Русский:",p.ru);
-  const ing=prompt("Ингушский:",p.ing);
-  const pron=prompt("Произношение:",p.pron);
-  if(ru===null||ing===null||pron===null) return;
-
-  p.ru=ru; p.ing=ing; p.pron=pron;
-
-  const d=await loadCategoryData(p.category);
-  Object.assign(d.items.find(x=>x.id===id),p);
-  await saveCategoryData(p.category,d);
-
-  renderCurrentView();
-}
-
-async function deleteById(id){
-  if(!confirm("Удалить?")) return;
-  const cat=phraseIndex[id];
-  const d=await loadCategoryData(cat);
-  d.items=d.items.filter(x=>x.id!==id);
-  await saveCategoryData(cat,d);
-
-  allPhrases=allPhrases.filter(x=>x.id!==id);
-  renderCurrentView();
-}
-
-/* ================= RECORD ================= */
-async function recordById(id){
-  const p=allPhrases.find(x=>x.id===id);
-  if(!p) return;
-  startRecording(p.category,id);
-}
-
-window.onAudioUploaded = async function(cat,id,file){
-  const p=allPhrases.find(x=>x.id===id);
-  if(p) p.audio=file;
-
-  const d=await loadCategoryData(cat);
-  const it=d.items.find(x=>x.id===id);
-  if(it){it.audio=file;await saveCategoryData(cat,d);}
-
-  renderCurrentView();
-};
-
-/* ================= DATA LOAD ================= */
-async function loadCategoryData(cat){
-  const r=await fetch(`categories/${cat}.json`);
-  return await r.json();
-}
-
-async function saveCategoryData(cat,data){
-  const url=`https://api.github.com/repos/${OWNER}/${REPO}/contents/categories/${cat}.json`;
-  const sha=(await fetch(url,{headers:{Authorization:`token ${githubToken}`}}).then(r=>r.json())).sha;
-
-  await fetch(url,{
+  const put = await fetch(url,{
     method:"PUT",
-    headers:{Authorization:`token ${githubToken}`,"Content-Type":"application/json"},
-    body:JSON.stringify({message:`Update ${cat}`,content:b64EncodeUnicode(JSON.stringify(data,null,2)),sha})
+    headers:{
+      Authorization:`token ${token}`,
+      "Content-Type":"application/json"
+    },
+    body: JSON.stringify({
+      message:`audio ${fileName}`,
+      content: base64,
+      sha
+    })
   });
-}
 
-async function preloadAllCategories(){
-  allPhrases=[]; phraseIndex={};
-  for(const cat of categories){
-    try{
-      const d=await loadCategoryData(cat);
-      d.items.forEach(it=>{
-        it.category=cat;
-        allPhrases.push(it);
-        phraseIndex[it.id]=cat;
-      });
-    }catch{}
+  if(!put.ok){
+    const txt = await put.text().catch(()=>"(no details)");
+    throw new Error("Ошибка загрузки mp3: " + txt);
   }
 }
-/* ================= COMPAT (старый index.html) ================= */
 
-/**
- * Старый index.html вызывает setAdminUI(...)
- * Поэтому даём совместимую реализацию (алиас на setAdminUI, если есть, или простая логика)
- */
-function setAdminUI(on){
-  const st = document.getElementById("admin-status");
-  if(st) st.textContent = on ? "✓ Админ" : "";
-
-  const dl = document.getElementById("download-zip");
-  const lo = document.getElementById("admin-logout");
-
-  if(dl) dl.classList.toggle("hidden", !on);
-  if(lo) lo.classList.toggle("hidden", !on);
+function blobToBase64(blob){
+  return new Promise((resolve, reject)=>{
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result.split(",")[1]);
+    reader.onerror = reject;
+    reader.readAsDataURL(blob);
+  });
 }
-
-/**
- * Иногда в старых версиях был setAdminUI / setAdminUi — подстрахуемся
- */
-window.setAdminUI = setAdminUI;
-window.setAdminUi = setAdminUI;
-
-/**
- * Старые кнопки в HTML часто вызывают adminLogin/adminLogout/downloadZip
- * Если их нет — добавляем совместимые.
- */
-window.adminLogin = function(){
-  const inp = document.getElementById("gh-token");
-  const t = (inp ? inp.value : "").trim();
-  if(!t) return alert("Введите GitHub Token");
-
-  githubToken = t;
-  adminMode = true;
-  localStorage.setItem("githubToken", t);
-
-  setAdminUI(true);
-  renderCurrentView();
-};
-
-window.adminLogout = function(){
-  localStorage.removeItem("githubToken");
-  location.reload();
-};
-
-window.downloadZip = function(){
-  window.open(`https://github.com/${OWNER}/${REPO}/archive/refs/heads/${BRANCH}.zip`, "_blank");
-};
-
-/**
- * Подстрахуем клик по подсказке: иногда HTML вызывает doSearch напрямую
- */
-window.doSearch = doSearch;
-
