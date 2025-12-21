@@ -1,9 +1,10 @@
 {
   "name": "Ингушский разговорник",
-  "short_name": "Разговорник",
-  "start_url": "/ingush-phrasebook/",
+  "short_name": "Ингушский",
+  "description": "Ингушско-русский разговорник с аудио и редактором",
+  "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#111111",
   "theme_color": "#111111",
   "orientation": "portrait",
   "icons": [
