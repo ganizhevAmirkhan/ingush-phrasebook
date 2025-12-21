@@ -904,5 +904,11 @@ async function saveEdit(){
 
   toast("Неизвестный режим окна", false);
 }
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js");
+  });
+}
 
 /* ================= END ================= */
+
