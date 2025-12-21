@@ -3,13 +3,24 @@
 <head>
  <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#111111">
- <meta charset="UTF-8">
+
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta charset="UTF-8">
 <title>Ингушский разговорник</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("./sw.js").catch(console.error);
+    });
+  }
+</script>
 
 <header class="topbar">
   <div class="title">Ингушский разговорник</div>
