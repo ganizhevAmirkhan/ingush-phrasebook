@@ -213,15 +213,15 @@
     },
     {
       "ru": "Я пью",
-      "ing": "Со молаж ва",
-      "pron": "so molazh va",
+      "ing": "Со мал ю",
+      "pron": "so mal yu",
       "id": "f_1766022476934_aprs",
       "audio": "f_1766022476934_aprs.mp3"
     },
     {
       "ru": "Ты пьёшь?",
-      "ing": "Хьа мал ю?",
-      "pron": "kha mal yu",
+      "ing": "Хьа молаж ви?",
+      "pron": "kha molazh vi?",
       "id": "f_1766022476934_uq3t",
       "audio": "f_1766022476934_uq3t.mp3"
     },
