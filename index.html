@@ -1,29 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
- <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#111111">
-
-<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
-<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <meta charset="UTF-8">
-<title>Ингушский разговорник</title>
+<title>Хабар - Ингушский разговорник</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker.register("./sw.js").catch(console.error);
-    });
-  }
-</script>
 
 <header class="topbar">
-  <div class="title">Ингушский разговорник</div>
+  <div class="title">Хабар - Ингушский разговорник</div>
 
   <div class="search-wrap">
     <input id="global-search" class="search" placeholder="Поиск по всем фразам…">
@@ -38,7 +25,7 @@
   </div>
 
   <div class="ai-panel">
-    <input id="ai-key" type="password" placeholder="OpenAI API Key">
+    <input id="ai-key" type="password" placeholder="Gemini API Key">
     <button onclick="saveAiKey()">💾</button>
     <span id="ai-status"></span>
   </div>
