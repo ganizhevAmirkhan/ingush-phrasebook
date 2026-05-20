@@ -929,6 +929,80 @@ ${phraseBlock}
 `.trim();
 }
 
+function normalizeRuForLookup(text){
+  return low(text)
+    .replace(/[.,!?;:()"«»]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/^я\s+/, ""); // "Я хочу пить" и "Хочу пить" считаем близкими
+}
+
+function findPhraseFromHabar(ruText){
+  const needle = normalizeRuForLookup(ruText);
+  if(!needle) return null;
+
+  // 1) точное совпадение
+  let hit = allPhrases.find(p => normalizeRuForLookup(p.ru) === needle);
+  if(hit) return hit;
+
+  // 2) мягкое совпадение по включению
+  hit = allPhrases.find(p => {
+    const hay = normalizeRuForLookup(p.ru);
+    return hay && (hay.includes(needle) || needle.includes(hay));
+  });
+  return hit || null;
+}
+
+function findExactNonQuestionPhraseFromHabar(ruText){
+  const needle = normalizeRuForLookup(ruText);
+  if(!needle) return null;
+  return allPhrases.find(p =>
+    normalizeRuForLookup(p.ru) === needle &&
+    !/[?？]/.test(safe(p.ru))
+  ) || null;
+}
+
+function cleanIngCandidate(text){
+  return safe(text)
+    .split("*")[0]
+    .split("(")[0]
+    .trim();
+}
+
+function findWordIngFromDosh(ruWord){
+  const needle = normalizeRuForLookup(ruWord);
+  if(!needle || !Array.isArray(dictionaryWords)) return "";
+
+  const word = dictionaryWords.find(w => normalizeRuForLookup(w?.ru) === needle);
+  if(!word) return "";
+
+  const senses = Array.isArray(word.senses) ? word.senses : [];
+  const raw = senses[0]?.ing || "";
+  return cleanIngCandidate(raw);
+}
+
+function findWordIngFromHabar(ruWord){
+  const needle = normalizeRuForLookup(ruWord);
+  if(!needle || !Array.isArray(allPhrases)) return "";
+
+  const hit = allPhrases.find(p => normalizeRuForLookup(p?.ru) === needle);
+  return cleanIngCandidate(hit?.ing);
+}
+
+function tryTemplateThisX(ruText){
+  const norm = normalizeRuForLookup(ruText);
+  const m = norm.match(/^это\s+(.+)$/);
+  if(!m) return "";
+
+  const xRu = (m[1] || "").trim();
+  if(!xRu) return "";
+
+  const xIng = findWordIngFromDosh(xRu) || findWordIngFromHabar(xRu);
+  if(!xIng) return "";
+
+  return `Из ${xIng}`;
+}
+
 /* 🇷🇺 RU — исправление */
 async function aiFixRu(){
   const el = document.getElementById("edit-ru");
@@ -944,6 +1018,31 @@ async function aiTranslateIng(){
   const ru = document.getElementById("edit-ru")?.value || "";
   if(!ru.trim()) return;
 
+  // 1) Точное совпадение в habar (без вопросительных вариантов).
+  const exact = findExactNonQuestionPhraseFromHabar(ru);
+  if(exact?.ing){
+    document.getElementById("edit-ing").value = safe(exact.ing);
+    toast("Взято из habar ✓", true);
+    return;
+  }
+
+  // 2) Шаблон "Это X" (лексема X из dosh/habar).
+  const templated = tryTemplateThisX(ru);
+  if(templated){
+    document.getElementById("edit-ing").value = templated;
+    toast("Собрано по шаблону dosh/habar ✓", true);
+    return;
+  }
+
+  // 3) Мягкий поиск готового варианта в habar.
+  const habarHit = findPhraseFromHabar(ru);
+  if(habarHit?.ing){
+    document.getElementById("edit-ing").value = safe(habarHit.ing);
+    toast("Взято из habar ✓", true);
+    return;
+  }
+
+  // 4) Только затем ИИ.
   const src = buildSourceContext(ru);
   const out = await callAI(
 `Переведи на ингушский язык. Верни только перевод одной строкой.
