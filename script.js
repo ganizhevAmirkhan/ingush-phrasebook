@@ -703,59 +703,69 @@ function scrollToPhrase(id){
   setTimeout(()=>el.classList.remove("flash"), 900);
 }
 
-/* ================= AI ================= */
-/*
-  Мы используем Chat Completions:
-  POST https://api.openai.com/v1/chat/completions :contentReference[oaicite:3]{index=3}
-  Модель gpt-4o-mini :contentReference[oaicite:4]{index=4}
-*/
+/* ================= AI (Gemini) ================= */
+const GEMINI_MODEL = "gemini-1.5-flash";
+
+function getAiKey(){
+  // Совместимость: если раньше был сохранен openaiKey, принимаем его как ключ Gemini.
+  return localStorage.getItem("geminiKey") || localStorage.getItem("openaiKey") || "";
+}
 
 function initAiUI(){
-  const key = localStorage.getItem("openaiKey");
+  const key = getAiKey();
   const st = document.getElementById("ai-status");
   if(st) st.textContent = key ? "✓" : "";
 }
 
 function saveAiKey(){
   const key = document.getElementById("ai-key")?.value?.trim();
-  if(!key) return alert("Введите OpenAI API ключ");
-  localStorage.setItem("openaiKey", key);
+  if(!key) return alert("Введите Gemini API ключ");
+  localStorage.setItem("geminiKey", key);
+  localStorage.removeItem("openaiKey");
   initAiUI();
   toast("Ключ сохранён ✓", true);
 }
 
 async function callAI(prompt){
-  const key = localStorage.getItem("openaiKey");
+  const key = getAiKey();
   if(!key){
-    toast("Нет OpenAI API ключа", false);
+    toast("Нет Gemini API ключа", false);
     return "";
   }
 
-  const res = await fetch("https://api.openai.com/v1/chat/completions",{
+  const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${encodeURIComponent(key)}`,{
     method:"POST",
     headers:{
-      "Authorization":"Bearer " + key,
       "Content-Type":"application/json"
     },
     body:JSON.stringify({
-      model:"gpt-4o-mini",
-      messages:[
-        {role:"system",content:"Ты помощник для создания ингушского разговорника. Отвечай только готовым текстом без пояснений."},
-        {role:"user",content:prompt}
-      ],
-      temperature: 0.3
+      contents: [{
+        role: "user",
+        parts: [{
+          text:
+`Ты помощник для создания ингушского разговорника.
+Отвечай только готовым текстом без пояснений.
+
+${prompt}`
+        }]
+      }],
+      generationConfig: {
+        temperature: 0.3
+      }
     })
   });
 
   if(!res.ok){
     const txt = await res.text().catch(()=>"(no details)");
-    console.error("OpenAI error:", txt);
+    console.error("Gemini error:", txt);
     toast("Ошибка ИИ (ключ/лимиты)", false);
     return "";
   }
 
   const json = await res.json();
-  return json.choices?.[0]?.message?.content?.trim() || "";
+  const parts = json?.candidates?.[0]?.content?.parts || [];
+  const text = parts.map(p => p?.text || "").join("").trim();
+  return text;
 }
 
 /* 🇷🇺 RU — исправление */
@@ -904,11 +914,5 @@ async function saveEdit(){
 
   toast("Неизвестный режим окна", false);
 }
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js");
-  });
-}
 
 /* ================= END ================= */
-
