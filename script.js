@@ -705,10 +705,14 @@ function scrollToPhrase(id){
 
 /* ================= AI (Gemini) ================= */
 const GEMINI_MODELS = [
+  "gemini-2.5-flash",
+  "gemini-2.5-pro",
   "gemini-2.0-flash",
   "gemini-1.5-flash-latest",
   "gemini-1.5-flash"
 ];
+
+let resolvedGeminiModel = null;
 
 function getAiKey(){
   // Совместимость: если раньше был сохранен openaiKey, принимаем его как ключ Gemini.
@@ -753,8 +757,11 @@ ${prompt}`
     }
   };
 
+  const dynamicModels = await fetchGeminiModels(key);
+  const modelsToTry = buildModelTryList(dynamicModels);
+
   let lastErrorText = "";
-  for(const model of GEMINI_MODELS){
+  for(const model of modelsToTry){
     const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(key)}`,{
       method:"POST",
       headers:{
@@ -764,6 +771,7 @@ ${prompt}`
     });
 
     if(res.ok){
+      resolvedGeminiModel = model;
       const json = await res.json();
       const parts = json?.candidates?.[0]?.content?.parts || [];
       const text = parts.map(p => p?.text || "").join("").trim();
@@ -785,6 +793,41 @@ ${prompt}`
   console.error("Gemini error:", lastErrorText || "Model not found");
   toast("Ошибка ИИ: модель недоступна", false);
   return "";
+}
+
+async function fetchGeminiModels(key){
+  try{
+    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${encodeURIComponent(key)}`);
+    if(!res.ok) return [];
+    const json = await res.json();
+    const models = Array.isArray(json?.models) ? json.models : [];
+
+    return models
+      .filter(m => (m?.supportedGenerationMethods || []).includes("generateContent"))
+      .map(m => (m?.name || "").replace(/^models\//, ""))
+      .filter(Boolean);
+  }catch{
+    return [];
+  }
+}
+
+function buildModelTryList(dynamicModels){
+  const out = [];
+  const pushUnique = (m)=>{
+    if(!m || out.includes(m)) return;
+    out.push(m);
+  };
+
+  // 1) ранее успешно найденная модель
+  pushUnique(resolvedGeminiModel);
+
+  // 2) наш приоритетный список
+  GEMINI_MODELS.forEach(pushUnique);
+
+  // 3) модели, которые реально доступны для текущего ключа
+  dynamicModels.forEach(pushUnique);
+
+  return out;
 }
 
 /* 🇷🇺 RU — исправление */
