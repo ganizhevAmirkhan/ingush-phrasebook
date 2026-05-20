@@ -704,7 +704,11 @@ function scrollToPhrase(id){
 }
 
 /* ================= AI (Gemini) ================= */
-const GEMINI_MODEL = "gemini-1.5-flash";
+const GEMINI_MODELS = [
+  "gemini-2.0-flash",
+  "gemini-1.5-flash-latest",
+  "gemini-1.5-flash"
+];
 
 function getAiKey(){
   // Совместимость: если раньше был сохранен openaiKey, принимаем его как ключ Gemini.
@@ -733,39 +737,54 @@ async function callAI(prompt){
     return "";
   }
 
-  const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${encodeURIComponent(key)}`,{
-    method:"POST",
-    headers:{
-      "Content-Type":"application/json"
-    },
-    body:JSON.stringify({
-      contents: [{
-        role: "user",
-        parts: [{
-          text:
+  const body = {
+    contents: [{
+      role: "user",
+      parts: [{
+        text:
 `Ты помощник для создания ингушского разговорника.
 Отвечай только готовым текстом без пояснений.
 
 ${prompt}`
-        }]
-      }],
-      generationConfig: {
-        temperature: 0.3
-      }
-    })
-  });
+      }]
+    }],
+    generationConfig: {
+      temperature: 0.3
+    }
+  };
 
-  if(!res.ok){
+  let lastErrorText = "";
+  for(const model of GEMINI_MODELS){
+    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(key)}`,{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify(body)
+    });
+
+    if(res.ok){
+      const json = await res.json();
+      const parts = json?.candidates?.[0]?.content?.parts || [];
+      const text = parts.map(p => p?.text || "").join("").trim();
+      if(text) return text;
+      return "";
+    }
+
     const txt = await res.text().catch(()=>"(no details)");
+    lastErrorText = txt;
+
+    // Если модель недоступна, пробуем следующую.
+    if(res.status === 404) continue;
+
     console.error("Gemini error:", txt);
     toast("Ошибка ИИ (ключ/лимиты)", false);
     return "";
   }
 
-  const json = await res.json();
-  const parts = json?.candidates?.[0]?.content?.parts || [];
-  const text = parts.map(p => p?.text || "").join("").trim();
-  return text;
+  console.error("Gemini error:", lastErrorText || "Model not found");
+  toast("Ошибка ИИ: модель недоступна", false);
+  return "";
 }
 
 /* 🇷🇺 RU — исправление */
