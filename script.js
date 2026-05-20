@@ -50,6 +50,9 @@ let editMode = null;            // "edit" | "add"
 let editingItemId = null;       // id при редактировании
 let editingCategory = null;     // cat при добавлении/редактировании
 
+/* --- AI sources (dosh + habar) --- */
+let dictionaryWords = [];
+
 /* ================= UTILS ================= */
 function genId(){
   return "f_" + Date.now() + "_" + Math.random().toString(36).slice(2,6);
@@ -87,6 +90,7 @@ function toast(msg, ok=true){
 window.onload = async () => {
   loadCategories();
   await preloadAllCategories();
+  await preloadDictionaryForAI();
 
   if(githubToken){
     adminMode = true;
@@ -617,6 +621,26 @@ async function preloadAllCategories(){
   }
 }
 
+async function preloadDictionaryForAI(){
+  const urls = [
+    "https://dosh.inghub.ru/public/dictionary.json",
+    "https://raw.githubusercontent.com/ganizhevAmirkhan/ingush-language/main/public/dictionary.json"
+  ];
+
+  for(const url of urls){
+    try{
+      const res = await fetch(url, { cache: "no-store" });
+      if(!res.ok) continue;
+      const data = await res.json();
+      const words = Array.isArray(data?.words) ? data.words : [];
+      if(words.length){
+        dictionaryWords = words;
+        return;
+      }
+    }catch{}
+  }
+}
+
 /* ================= HOOK AFTER AUDIO UPLOAD ================= */
 // recorder.js вызывает этот хук после загрузки mp3
 window.onAudioUploaded = async function(cat, id, fileName){
@@ -830,6 +854,81 @@ function buildModelTryList(dynamicModels){
   return out;
 }
 
+function buildDictionaryHints(ruText, limit=12){
+  const q = low(ruText).trim();
+  if(!q || !Array.isArray(dictionaryWords) || !dictionaryWords.length) return [];
+
+  const tokens = q.split(/[\s,.;:!?()"'`«»\-]+/).filter(Boolean);
+  const uniq = [...new Set([q, ...tokens])];
+  const out = [];
+  const seen = new Set();
+
+  for(const w of dictionaryWords){
+    const ru = safe(w?.ru);
+    const ruLow = low(ru);
+    if(!ruLow) continue;
+
+    const matched = uniq.some(t => ruLow === t || ruLow.includes(t) || t.includes(ruLow));
+    if(!matched) continue;
+
+    const senses = Array.isArray(w?.senses) ? w.senses : [];
+    const ing = senses.map(s => safe(s?.ing).trim()).filter(Boolean);
+    if(!ing.length) continue;
+
+    const line = `${ru} -> ${ing.join(" | ")}`;
+    if(seen.has(line)) continue;
+    seen.add(line);
+    out.push(line);
+    if(out.length >= limit) break;
+  }
+  return out;
+}
+
+function buildPhraseHints(ruText, limit=8){
+  const q = low(ruText).trim();
+  if(!q || !Array.isArray(allPhrases) || !allPhrases.length) return [];
+
+  const out = [];
+  const seen = new Set();
+  for(const p of allPhrases){
+    const ru = safe(p?.ru).trim();
+    const ing = safe(p?.ing).trim();
+    if(!ru || !ing) continue;
+
+    const ruLow = low(ru);
+    if(!(ruLow.includes(q) || q.includes(ruLow))) continue;
+
+    const line = `${ru} -> ${ing}`;
+    if(seen.has(line)) continue;
+    seen.add(line);
+    out.push(line);
+    if(out.length >= limit) break;
+  }
+  return out;
+}
+
+function buildSourceContext(ruText){
+  const dictHints = buildDictionaryHints(ruText);
+  const phraseHints = buildPhraseHints(ruText);
+
+  const dictBlock = dictHints.length
+    ? dictHints.map(x => `- ${x}`).join("\n")
+    : "- (нет совпадений в словаре)";
+
+  const phraseBlock = phraseHints.length
+    ? phraseHints.map(x => `- ${x}`).join("\n")
+    : "- (нет совпадений по фразам)";
+
+  return `
+Источники (обязательные):
+1) Словарь dosh.inghub.ru (лексика):
+${dictBlock}
+
+2) Фразы habar.inghub.ru (контекст употребления):
+${phraseBlock}
+`.trim();
+}
+
 /* 🇷🇺 RU — исправление */
 async function aiFixRu(){
   const el = document.getElementById("edit-ru");
@@ -845,7 +944,17 @@ async function aiTranslateIng(){
   const ru = document.getElementById("edit-ru")?.value || "";
   if(!ru.trim()) return;
 
-  const out = await callAI("Переведи на ингушский язык. Верни только перевод:\n" + ru);
+  const src = buildSourceContext(ru);
+  const out = await callAI(
+`Переведи на ингушский язык. Верни только перевод одной строкой.
+Используй только лексику и формы, подтвержденные источниками ниже.
+Запрещено использовать чеченские формы и неподтвержденные варианты.
+
+${src}
+
+Текст для перевода:
+${ru}`
+  );
   if(out) document.getElementById("edit-ing").value = out;
 }
 
