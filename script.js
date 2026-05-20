@@ -934,7 +934,48 @@ function normalizeRuForLookup(text){
     .replace(/[.,!?;:()"«»]/g, " ")
     .replace(/\s+/g, " ")
     .trim()
-    .replace(/^я\s+/, ""); // "Я хочу пить" и "Хочу пить" считаем близкими
+    .replace(/^я\s+/, "") // "Я хочу пить" и "Хочу пить" считаем близкими
+    .split(" ")
+    .map(normalizeRuToken)
+    .filter(Boolean)
+    .join(" ");
+}
+
+function normalizeRuToken(token){
+  let t = safe(token).toLowerCase().trim();
+  if(!t) return "";
+
+  // Нормализуем частые формы, чтобы "сколько стоят бананы" находило
+  // "сколько стоит бананы" и похожие записи в базе.
+  if(t === "стоят") t = "стоит";
+
+  // Очень мягкая нормализация окончаний (ru plural/case variants).
+  const endings = ["ами","ями","ого","ему","ому","иях","ах","ях","ов","ев","ом","ам","ям","ы","и","а","я","у","ю"];
+  if(t.length > 5){
+    for(const end of endings){
+      if(t.endsWith(end) && t.length - end.length >= 4){
+        t = t.slice(0, -end.length);
+        break;
+      }
+    }
+  }
+  return t;
+}
+
+function tokenSetRu(text){
+  const norm = normalizeRuForLookup(text);
+  if(!norm) return new Set();
+  return new Set(norm.split(" ").filter(Boolean));
+}
+
+function jaccardSet(a, b){
+  if(!a.size || !b.size) return 0;
+  let inter = 0;
+  for(const x of a){
+    if(b.has(x)) inter++;
+  }
+  const uni = a.size + b.size - inter;
+  return uni ? inter / uni : 0;
 }
 
 function findPhraseFromHabar(ruText){
@@ -951,6 +992,28 @@ function findPhraseFromHabar(ruText){
     return hay && (hay.includes(needle) || needle.includes(hay));
   });
   return hit || null;
+}
+
+function findBestPhraseFromHabar(ruText){
+  const needleSet = tokenSetRu(ruText);
+  if(!needleSet.size) return null;
+
+  let best = null;
+  let bestScore = 0;
+
+  for(const p of allPhrases){
+    if(!p?.ru || !p?.ing) continue;
+    if(/[?？]/.test(safe(p.ru))) continue; // для утверждений избегаем вопросительных
+
+    const s = jaccardSet(needleSet, tokenSetRu(p.ru));
+    if(s > bestScore){
+      best = p;
+      bestScore = s;
+    }
+  }
+
+  // Порог: не брать случайные фразы.
+  return bestScore >= 0.6 ? best : null;
 }
 
 function findExactNonQuestionPhraseFromHabar(ruText){
@@ -1042,7 +1105,15 @@ async function aiTranslateIng(){
     return;
   }
 
-  // 4) Только затем ИИ.
+  // 4) Умный ближайший матч из habar (если смысл очень близок).
+  const habarBest = findBestPhraseFromHabar(ru);
+  if(habarBest?.ing){
+    document.getElementById("edit-ing").value = safe(habarBest.ing);
+    toast("Взято из habar (близкое совпадение) ✓", true);
+    return;
+  }
+
+  // 5) Только затем ИИ.
   const src = buildSourceContext(ru);
   const out = await callAI(
 `Переведи на ингушский язык. Верни только перевод одной строкой.
