@@ -884,48 +884,17 @@ function buildDictionaryHints(ruText, limit=12){
   return out;
 }
 
-function buildPhraseHints(ruText, limit=8){
-  const q = low(ruText).trim();
-  if(!q || !Array.isArray(allPhrases) || !allPhrases.length) return [];
-
-  const out = [];
-  const seen = new Set();
-  for(const p of allPhrases){
-    const ru = safe(p?.ru).trim();
-    const ing = safe(p?.ing).trim();
-    if(!ru || !ing) continue;
-
-    const ruLow = low(ru);
-    if(!(ruLow.includes(q) || q.includes(ruLow))) continue;
-
-    const line = `${ru} -> ${ing}`;
-    if(seen.has(line)) continue;
-    seen.add(line);
-    out.push(line);
-    if(out.length >= limit) break;
-  }
-  return out;
-}
-
 function buildSourceContext(ruText){
   const dictHints = buildDictionaryHints(ruText);
-  const phraseHints = buildPhraseHints(ruText);
 
   const dictBlock = dictHints.length
     ? dictHints.map(x => `- ${x}`).join("\n")
     : "- (нет совпадений в словаре)";
 
-  const phraseBlock = phraseHints.length
-    ? phraseHints.map(x => `- ${x}`).join("\n")
-    : "- (нет совпадений по фразам)";
-
   return `
 Источники (обязательные):
-1) Словарь dosh.inghub.ru (лексика):
+Словарь dosh.inghub.ru (лексика):
 ${dictBlock}
-
-2) Фразы habar.inghub.ru (контекст употребления):
-${phraseBlock}
 `.trim();
 }
 
@@ -1032,6 +1001,31 @@ function cleanIngCandidate(text){
     .trim();
 }
 
+function parseIngAlternatives(text){
+  return safe(text)
+    .split("*")
+    .map(part => safe(part).split("(")[0].trim())
+    .map(part => part.replace(/\s+/g, " ").trim())
+    .filter(Boolean);
+}
+
+function findExactIngFromDosh(ruText){
+  const needle = normalizeRuForLookup(ruText);
+  if(!needle || !Array.isArray(dictionaryWords)) return "";
+
+  const word = dictionaryWords.find(w => normalizeRuForLookup(w?.ru) === needle);
+  if(!word) return "";
+
+  const senses = Array.isArray(word.senses) ? word.senses : [];
+  const raw = senses[0]?.ing || "";
+  const vars = parseIngAlternatives(raw);
+  if(!vars.length) return "";
+
+  // В dosh иногда даются альтернативы через "*", показываем их явно.
+  if(vars.length > 1) return vars.slice(0, 2).join(" / ");
+  return vars[0];
+}
+
 function findWordIngFromDosh(ruWord){
   const needle = normalizeRuForLookup(ruWord);
   if(!needle || !Array.isArray(dictionaryWords)) return "";
@@ -1060,7 +1054,7 @@ function tryTemplateThisX(ruText){
   const xRu = (m[1] || "").trim();
   if(!xRu) return "";
 
-  const xIng = findWordIngFromDosh(xRu) || findWordIngFromHabar(xRu);
+  const xIng = findWordIngFromDosh(xRu);
   if(!xIng) return "";
 
   return `Из ${xIng}`;
@@ -1081,39 +1075,23 @@ async function aiTranslateIng(){
   const ru = document.getElementById("edit-ru")?.value || "";
   if(!ru.trim()) return;
 
-  // 1) Точное совпадение в habar (без вопросительных вариантов).
-  const exact = findExactNonQuestionPhraseFromHabar(ru);
-  if(exact?.ing){
-    document.getElementById("edit-ing").value = safe(exact.ing);
-    toast("Взято из habar ✓", true);
+  // 1) Сначала строго dosh (открытый dictionary.json).
+  const doshExact = findExactIngFromDosh(ru);
+  if(doshExact){
+    document.getElementById("edit-ing").value = doshExact;
+    toast("Взято из dosh ✓", true);
     return;
   }
 
-  // 2) Шаблон "Это X" (лексема X из dosh/habar).
+  // 2) Шаблон "Это X" (лексема X только из dosh).
   const templated = tryTemplateThisX(ru);
   if(templated){
     document.getElementById("edit-ing").value = templated;
-    toast("Собрано по шаблону dosh/habar ✓", true);
+    toast("Собрано по шаблону dosh ✓", true);
     return;
   }
 
-  // 3) Мягкий поиск готового варианта в habar.
-  const habarHit = findPhraseFromHabar(ru);
-  if(habarHit?.ing){
-    document.getElementById("edit-ing").value = safe(habarHit.ing);
-    toast("Взято из habar ✓", true);
-    return;
-  }
-
-  // 4) Умный ближайший матч из habar (если смысл очень близок).
-  const habarBest = findBestPhraseFromHabar(ru);
-  if(habarBest?.ing){
-    document.getElementById("edit-ing").value = safe(habarBest.ing);
-    toast("Взято из habar (близкое совпадение) ✓", true);
-    return;
-  }
-
-  // 5) Только затем ИИ.
+  // 3) Только затем ИИ.
   const src = buildSourceContext(ru);
   const out = await callAI(
 `Переведи на ингушский язык. Верни только перевод одной строкой.
