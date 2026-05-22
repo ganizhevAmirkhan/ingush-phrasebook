@@ -738,10 +738,30 @@ function scrollToPhrase(id){
 }
 
 /* ================= AI (LanguageAPI) ================= */
-const DEFAULT_LANGUAGE_API_BASE = "http://localhost:8787";
+const DEFAULT_LANGUAGE_API_BASE =
+  location.hostname === "habar.inghub.ru"
+    ? "https://api.inghub.ru"
+    : "http://localhost:8787";
+
+function normalizeLanguageApiBase(rawBase){
+  let base = safe(rawBase).trim();
+  if(!base) return "";
+
+  // If site is HTTPS, force API URL to HTTPS to avoid Mixed Content.
+  if(location.protocol === "https:" && /^http:\/\//i.test(base)){
+    base = base.replace(/^http:\/\//i, "https://");
+  }
+
+  return base.replace(/\/+$/, "");
+}
 
 function getLanguageApiBase(){
-  return localStorage.getItem("languageApiBase") || DEFAULT_LANGUAGE_API_BASE;
+  const saved = localStorage.getItem("languageApiBase");
+  const normalized = normalizeLanguageApiBase(saved || DEFAULT_LANGUAGE_API_BASE);
+  if(normalized && normalized !== saved){
+    localStorage.setItem("languageApiBase", normalized);
+  }
+  return normalized;
 }
 
 function initAiUI(){
@@ -754,7 +774,7 @@ function initAiUI(){
 }
 
 function saveAiKey(){
-  const base = document.getElementById("ai-key")?.value?.trim();
+  const base = normalizeLanguageApiBase(document.getElementById("ai-key")?.value);
   if(!base) return alert("Введите URL LanguageAPI");
   localStorage.setItem("languageApiBase", base);
   initAiUI();
@@ -762,17 +782,22 @@ function saveAiKey(){
 }
 
 async function callLanguageApi(path, payload){
-  const base = getLanguageApiBase().replace(/\/+$/, "");
+  const base = getLanguageApiBase();
+  const ctrl = new AbortController();
+  const timeoutId = setTimeout(() => ctrl.abort(), 15000);
   let res;
   try{
     res = await fetch(`${base}${path}`,{
       method:"POST",
       headers:{ "Content-Type":"application/json" },
-      body:JSON.stringify(payload || {})
+      body:JSON.stringify(payload || {}),
+      signal: ctrl.signal
     });
   }catch{
-    toast("LanguageAPI недоступен", false);
+    toast("LanguageAPI недоступен (проверь https://api.inghub.ru)", false);
     return null;
+  }finally{
+    clearTimeout(timeoutId);
   }
   const json = await res.json().catch(()=>null);
   if(!res.ok || !json?.ok){
