@@ -10,8 +10,8 @@
     },
     {
       "ru": "Цена",
-      "ing": "Хьила",
-      "pron": "khila",
+      "ing": "мах цены нет! мах баь варгвац",
+      "pron": "makh tseny net! makh ba vargvats",
       "id": "f_1766025409671_vaj6",
       "audio": "f_1766025409671_vaj6.mp3"
     },
@@ -73,16 +73,16 @@
     },
     {
       "ru": "Заплати",
-      "ing": "Хила деш!",
-      "pron": "khila desh",
+      "ing": "Дале мах",
+      "pron": "dale makh",
       "id": "f_1766025409671_0un0",
       "audio": "f_1766025409671_0un0.mp3"
     },
     {
       "id": "f_1766025409671_jdry",
-      "ru": "ввыам",
-      "ing": "апв",
-      "pron": "fbvdf",
+      "ru": "Рубль",
+      "ing": "сом",
+      "pron": "som",
       "audio": "f_1766025409671_jdry.mp3"
     }
   ]
