@@ -174,6 +174,67 @@ function buildDictionaryHints(ruText, limit = 12) {
   return hints;
 }
 
+function findPhrasePronByIng(ingText) {
+  const target = normalizeText(ingText);
+  if (!target) return "";
+  const hit = state.phrases.find((p) => normalizeText(p.ing) === target && p.pron);
+  return (hit?.pron || "").toString().trim();
+}
+
+function transliterateIngushToPron(ingText) {
+  const src = (ingText || "").toString().trim();
+  if (!src) return "";
+
+  // Если текст уже латиницей, просто нормализуем пробелы.
+  if (/^[a-z0-9\s'`".,!?;:()\-]+$/i.test(src)) {
+    return src.replace(/\s+/g, " ").trim().toLowerCase();
+  }
+
+  let t = src.toLowerCase();
+
+  const multi = [
+    [/кх/g, "kh"],
+    [/къ/g, "k'"],
+    [/к1/g, "k1"],
+    [/г1/g, "g1"],
+    [/х1/g, "h1"],
+    [/ц1/g, "ts1"],
+    [/ч1/g, "ch1"],
+    [/ш1/g, "sh1"],
+    [/т1/g, "t1"],
+    [/п1/g, "p1"],
+    [/б1/g, "b1"],
+    [/д1/g, "d1"],
+    [/ж1/g, "zh1"],
+    [/гӀ/g, "gh1"],
+    [/гӏ/g, "gh1"],
+    [/хь/g, "h'"],
+    [/аъ/g, "a'"],
+    [/оъ/g, "o'"],
+    [/уъ/g, "u'"],
+    [/еъ/g, "e'"],
+    [/иъ/g, "i'"],
+    [/яъ/g, "ya'"],
+    [/юъ/g, "yu'"]
+  ];
+  for (const [re, to] of multi) t = t.replace(re, to);
+
+  const single = {
+    "а": "a", "б": "b", "в": "v", "г": "g", "д": "d", "е": "e", "ё": "yo",
+    "ж": "zh", "з": "z", "и": "i", "й": "y", "к": "k", "л": "l", "м": "m",
+    "н": "n", "о": "o", "п": "p", "р": "r", "с": "s", "т": "t", "у": "u",
+    "ф": "f", "х": "kh", "ц": "ts", "ч": "ch", "ш": "sh", "щ": "shch",
+    "ъ": "", "ы": "y", "ь": "", "э": "e", "ю": "yu", "я": "ya",
+    "Ӏ": "1", "ӏ": "1", "і": "1", "1": "1"
+  };
+
+  let out = "";
+  for (const ch of t) {
+    out += Object.prototype.hasOwnProperty.call(single, ch) ? single[ch] : ch;
+  }
+  return out.replace(/\s+/g, " ").trim().toLowerCase();
+}
+
 function validateIngText(ingText, ruText) {
   const ingNorm = normalizeText(ingText);
   if (!ingNorm) {
@@ -240,9 +301,14 @@ async function assistTask(task, text) {
   const cleanText = (text || "").toString().trim();
   if (!cleanText) return { ok: false, status: 400, error: "empty_text" };
 
+  if (task === "make_pron") {
+    const fromPhrase = findPhrasePronByIng(cleanText);
+    if (fromPhrase) return { ok: true, text: fromPhrase };
+    return { ok: true, text: transliterateIngushToPron(cleanText) };
+  }
+
   const prompts = {
-    fix_ru: `Исправь орфографию и стиль, не меняя смысл. Верни только исправленный текст.\n\n${cleanText}`,
-    make_pron: `Сделай латинскую транскрипцию (произношение) одной строкой. Без кавычек и без пояснений.\n\n${cleanText}`
+    fix_ru: `Исправь орфографию и стиль, не меняя смысл. Верни только исправленный текст.\n\n${cleanText}`
   };
   const prompt = prompts[task];
   if (!prompt) return { ok: false, status: 400, error: "unsupported_task" };
