@@ -276,15 +276,15 @@
     },
     {
       "ru": "Я согласен",
-      "ing": "Со ряза ва",
-      "pron": "so ryaza va",
+      "ing": "Со кхалха ву",
+      "pron": "so khalha vu",
       "id": "f_1766022575804_82qi",
       "audio": "f_1766022575804_82qi.mp3"
     },
     {
       "ru": "Я не согласен",
-      "ing": "Со му кхалха ву",
-      "pron": "so mu khalha vu",
+      "ing": "Со ряза вац",
+      "pron": "so ryaza vats",
       "id": "f_1766022575804_wewq",
       "audio": "f_1766022575804_wewq.mp3"
     },
