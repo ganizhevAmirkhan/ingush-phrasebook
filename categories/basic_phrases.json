@@ -353,15 +353,15 @@
     },
     {
       "ru": "Стой здесь",
-      "ing": "Латт укхаза",
-      "pron": "latt ukhaza",
+      "ing": "Тха хьокха",
+      "pron": "tcha khyokha",
       "id": "f_1766022575804_705p",
       "audio": "f_1766022575804_705p.mp3"
     },
     {
       "ru": "Сюда",
-      "ing": "Хьокха",
-      "pron": "khyokha",
+      "ing": "укхаза / предлог/послелог",
+      "pron": "ukhaza / predlog/poslelog",
       "id": "f_1766022575804_bill",
       "audio": "f_1766022575804_bill.mp3"
     },
