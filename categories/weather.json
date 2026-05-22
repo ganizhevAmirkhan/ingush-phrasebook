@@ -171,15 +171,15 @@
     },
     {
       "ru": "Какая температура?",
-      "ing": "Ф теператур е?",
-      "pron": "f teperatur e?",
+      "ing": "Температура мотт?",
+      "pron": "temperatura mott",
       "id": "f_1766025115892_0fuj",
       "audio": "f_1766025115892_0fuj.mp3"
     },
     {
       "ru": "Очень холодно",
-      "ing": "Сув йо",
-      "pron": "suv yo",
+      "ing": "тIехянн шийла",
+      "pron": "tiekhyann shiyla",
       "id": "f_1766025115892_m6ad",
       "audio": "f_1766025115892_m6ad.mp3"
     },
