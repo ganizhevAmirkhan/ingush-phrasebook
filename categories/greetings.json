@@ -276,15 +276,15 @@
     },
     {
       "ru": "Прошу, присаживайся",
-      "ing": "Хьавалел ахал",
-      "pron": "h'avalel akhal",
+      "ing": "Хьа де ца",
+      "pron": "kha de tsa",
       "id": "f_1766018537465_uorb",
       "audio": "f_1766018537465_uorb.mp3"
     },
     {
       "ru": "Заходи",
-      "ing": "Чуда",
-      "pron": "chuda",
+      "ing": "Чудавл",
+      "pron": "chudavl",
       "id": "f_1766018537465_cari",
       "audio": "f_1766018537465_cari.mp3"
     },
