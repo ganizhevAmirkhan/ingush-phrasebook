@@ -31,15 +31,15 @@
     },
     {
       "ru": "Рад тебя видеть",
-      "ing": "Со хьо гу вах шун",
-      "pron": "so kho gu vakh shun",
+      "ing": "ДИКА ХЕТ СОНА ХЬО БIАРГАВАЙНА.",
+      "pron": "dika khet sona h'o biargavayna.",
       "id": "f_1766025348310_p1pi",
       "audio": "f_1766025348310_p1pi.mp3"
     },
     {
       "ru": "Рад встрече с тобой",
-      "ing": "Со хьо дог1ийла шун",
-      "pron": "so kho dog1iyla shun",
+      "ing": "Г1АДВАХАВ ХЬОГ1А КХИЙТА.",
+      "pron": "g1advakhav h'og1a khiyta.",
       "id": "f_1766025348310_kfae",
       "audio": "f_1766025348310_kfae.mp3"
     },
@@ -59,8 +59,8 @@
     },
     {
       "ru": "Добро пожаловать",
-      "ing": "Марша бо!",
-      "pron": "marsha bo",
+      "ing": "МЯРША ВОАГ1АЛ",
+      "pron": "myarsha voag1al",
       "id": "f_1766025348310_khbn",
       "audio": "f_1766025348310_khbn.mp3"
     },
@@ -136,8 +136,8 @@
     },
     {
       "ru": "Прощай",
-      "ing": "Санди аьттув",
-      "pron": "sandi attuv",
+      "ing": "IАДИКХЕЙЛ.",
+      "pron": "iadikheyl.",
       "id": "f_1766025348310_176d",
       "audio": "f_1766025348310_176d.mp3"
     },
@@ -179,14 +179,14 @@
     {
       "ru": "Как утро?",
       "ing": "Кхети мишта ха?",
-      "pron": "kheti mishta kha",
+      "pron": "kheti mishta kha?",
       "id": "f_1766025348310_aisv",
       "audio": "f_1766025348310_aisv.mp3"
     },
     {
       "ru": "Как вечер?",
-      "ing": "Гув мишта ха?",
-      "pron": "guv mishta kha",
+      "ing": "ма сайре",
+      "pron": "ma sayre",
       "id": "f_1766025348310_ek2k",
       "audio": "f_1766025348310_ek2k.mp3"
     },
@@ -213,8 +213,8 @@
     },
     {
       "ru": "Нормально",
-      "ing": "Халха",
-      "pron": "khalkha",
+      "ing": "МЕГАЖ ДА.",
+      "pron": "megazh da.",
       "id": "f_1766025348310_0678",
       "audio": "f_1766025348310_0678.mp3"
     },
@@ -227,8 +227,8 @@
     },
     {
       "ru": "Очень рад",
-      "ing": "Шун йо",
-      "pron": "shun yo",
+      "ing": "ТIЕХ Г1АДВАХА ВА.",
+      "pron": "tiekh g1advakha va.",
       "id": "f_1766025348310_pvqq",
       "audio": "f_1766025348310_pvqq.mp3"
     },
@@ -241,8 +241,8 @@
     },
     {
       "ru": "Пожелаю удачи",
-      "ing": "Къонах хил йу",
-      "pron": "konakh khil yu",
+      "ing": "АЬТТУ БОАКХАЛБ.",
+      "pron": "attu boakhalb.",
       "id": "f_1766025348310_zx0c",
       "audio": "f_1766025348310_zx0c.mp3"
     },
@@ -262,8 +262,8 @@
     },
     {
       "ru": "Садись",
-      "ing": "Де ца",
-      "pron": "de tsa",
+      "ing": "1аха",
+      "pron": "1akha",
       "id": "f_1766025348310_sm3p",
       "audio": "f_1766025348310_sm3p.mp3"
     },
@@ -276,22 +276,22 @@
     },
     {
       "ru": "Заходи",
-      "ing": "Чуда",
-      "pron": "chuda",
+      "ing": "ЧУДАВЛ.",
+      "pron": "chudavl.",
       "id": "f_1766025348310_che2",
       "audio": "f_1766025348310_che2.mp3"
     },
     {
       "ru": "Заходите",
-      "ing": "Шу чуда",
-      "pron": "shu chuda",
+      "ing": "Шо чудавла",
+      "pron": "sho chudavla",
       "id": "f_1766025348310_6k2e",
       "audio": "f_1766025348310_6k2e.mp3"
     },
     {
       "ru": "Иди сюда",
-      "ing": "Хьокха ца",
-      "pron": "khyokha tsa",
+      "ing": "ХЬАВЕЛ СУГАХЬ.",
+      "pron": "h'avel sugah'.",
       "id": "f_1766025348310_gow1",
       "audio": "f_1766025348310_gow1.mp3"
     },
