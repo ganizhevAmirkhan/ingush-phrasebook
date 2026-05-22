@@ -38,22 +38,22 @@
     },
     {
       "ru": "Дай скидку",
-      "ing": "Хьила ца хьа",
-      "pron": "khila tsa kha",
+      "ing": "x́a тIерабакх",
+      "pron": "x́a tierabakh",
       "id": "f_1766025409671_6zbk",
       "audio": "f_1766025409671_6zbk.mp3"
     },
     {
       "ru": "У меня нет денег",
-      "ing": "Со му акхча йо",
-      "pron": "so mu akhcha yo",
+      "ing": "дац сога а шайка",
+      "pron": "dats soga a shayka",
       "id": "f_1766025409671_35fy",
       "audio": "f_1766025409671_35fy.mp3"
     },
     {
       "ru": "У меня есть деньги",
-      "ing": "Со акхча йо",
-      "pron": "so akhcha yo",
+      "ing": "сога да ахча",
+      "pron": "soga da akhcha",
       "id": "f_1766025409671_li2c",
       "audio": "f_1766025409671_li2c.mp3"
     },
