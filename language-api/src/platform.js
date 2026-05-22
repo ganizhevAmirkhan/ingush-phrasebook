@@ -18,6 +18,11 @@ const CORPUS_STORIES_DIR = path.join(ROOT, "data", "corpus", "stories");
 const CORPUS_NOVELLAS_DIR = path.join(ROOT, "data", "corpus", "novellas");
 const BLACKLIST_FILE = path.join(ROOT, "data", "blacklist.json");
 const MODERATION_LOG = path.join(ROOT, "data", "moderation-queue.log.jsonl");
+const GRAMMAR_DIR = path.join(ROOT, "data", "grammar");
+const GRAMMAR_PATTERNS_FILE = path.join(GRAMMAR_DIR, "patterns.json");
+const GRAMMAR_RULES_FILE = path.join(GRAMMAR_DIR, "rules.json");
+const GRAMMAR_LEXEMES_FILE = path.join(GRAMMAR_DIR, "lexemes.json");
+const GRAMMAR_DECLENSIONS_FILE = path.join(GRAMMAR_DIR, "declensions.json");
 
 const DOSH_URLS = [
   "https://dosh.inghub.ru/public/dictionary.json",
@@ -29,6 +34,12 @@ const state = {
   phrases: [],
   corpus: [],
   blacklist: [],
+  grammar: {
+    patterns: [],
+    rules: [],
+    lexemes: [],
+    declensions: []
+  },
   moderationQueue: [],
   metrics: {
     lookupsWord: 0,
@@ -36,6 +47,7 @@ const state = {
     lookupsCorpus: 0,
     translateTotal: 0,
     translateFromDosh: 0,
+    translateFromGrammar: 0,
     translateFromPhrase: 0,
     translateFromLLM: 0,
     translateRejected: 0
@@ -128,6 +140,26 @@ async function loadBlacklist() {
   }
 }
 
+async function loadGrammarFile(filePath, key) {
+  try {
+    const json = await readJson(filePath);
+    const arr = Array.isArray(json?.[key]) ? json[key] : [];
+    return arr;
+  } catch {
+    return [];
+  }
+}
+
+async function loadGrammarData() {
+  const [patterns, rules, lexemes, declensions] = await Promise.all([
+    loadGrammarFile(GRAMMAR_PATTERNS_FILE, "patterns"),
+    loadGrammarFile(GRAMMAR_RULES_FILE, "rules"),
+    loadGrammarFile(GRAMMAR_LEXEMES_FILE, "lexemes"),
+    loadGrammarFile(GRAMMAR_DECLENSIONS_FILE, "declensions")
+  ]);
+  return { patterns, rules, lexemes, declensions };
+}
+
 function findWordExact(ruText) {
   const norm = normalizeText(ruText);
   if (!norm) return null;
@@ -149,30 +181,240 @@ function findWordForToken(token) {
   return byToken[0] || null;
 }
 
+function pickBaseVariantFromWord(word) {
+  const variants = Array.isArray(word?.ingVariants) ? word.ingVariants : [];
+  if (!variants.length) return "";
+  // Prefer shortest compact variant, then keep only first lexical part.
+  const sorted = [...variants].sort((a, b) => a.length - b.length);
+  const raw = sorted[0] || "";
+  return raw
+    .split(/[\/,;]+/)[0]
+    .trim()
+    .split(/\s+/)[0]
+    .trim();
+}
+
+function buildPatternRegex(ruPattern) {
+  const source = (ruPattern || "").toString().trim();
+  if (!source) return null;
+
+  const parts = source.split(/(\{[A-Za-z0-9_]+\})/).filter(Boolean);
+  const slotNames = [];
+  const reParts = parts.map((part) => {
+    const slotMatch = part.match(/^\{([A-Za-z0-9_]+)\}$/);
+    if (slotMatch) {
+      slotNames.push(slotMatch[1]);
+      return "(.+?)";
+    }
+    const escaped = normalizeText(part).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    return escaped.replace(/\s+/g, "\\s+");
+  });
+  if (!reParts.length) return null;
+  return {
+    regex: new RegExp(`^${reParts.join("")}$`, "i"),
+    slotNames
+  };
+}
+
+function findGrammarLexeme(ruText) {
+  const norm = normalizeText(ruText);
+  if (!norm) return null;
+  const exact = state.grammar.lexemes.find((x) => normalizeText(x?.ru) === norm) || null;
+  if (exact) return exact;
+
+  const targetTokens = tokenizeRu(ruText);
+  if (!targetTokens.length) return null;
+  if (targetTokens.length === 1) {
+    const token = targetTokens[0];
+    const tokenStem = token.length > 3 ? token.replace(/[аеиоуыяю]$/i, "") : token;
+    return state.grammar.lexemes.find((x) => {
+      const lt = tokenizeRu(x?.ru || "");
+      return lt.some((t) => {
+        const tStem = t.length > 3 ? t.replace(/[аеиоуыяю]$/i, "") : t;
+        return (
+          t === token
+          || t.startsWith(token)
+          || token.startsWith(t)
+          || (tokenStem && tStem && tokenStem === tStem)
+        );
+      });
+    }) || null;
+  }
+  return null;
+}
+
+function getTargetFormForCase(requiredCase) {
+  const rc = (requiredCase || "base").toString().toLowerCase();
+  const rule = state.grammar.rules.find((r) =>
+    r?.type === "slot_transform"
+    && r?.apply === "use_lexeme_form"
+    && (r?.when?.requiredCase || "").toString().toLowerCase() === rc
+  );
+  const byRule = (rule?.targetForm || "").toString().toLowerCase().trim();
+  return byRule || "base";
+}
+
+function resolveSlotForms(slotRu) {
+  const slotText = (slotRu || "").toString().trim();
+  if (!slotText) return { base: "", dat: "" };
+
+  const lexeme = findGrammarLexeme(slotText);
+  if (lexeme?.forms) {
+    const out = {};
+    for (const [k, v] of Object.entries(lexeme.forms || {})) {
+      out[k.toLowerCase()] = (v || "").toString().trim();
+    }
+    out.base = out.base || "";
+    out.dat = out.dat || out.base;
+    return out;
+  }
+
+  const tokens = tokenizeRu(slotText);
+  if (tokens.length === 1) {
+    const w = findWordForToken(tokens[0]);
+    const base = pickBaseVariantFromWord(w);
+    return { base, dat: base };
+  }
+
+  const composed = composeFromDictionaryTokens(slotText);
+  if (composed.ok) return { base: composed.translation, dat: composed.translation };
+
+  return { base: "", dat: "" };
+}
+
+function fillIngTemplate(template, slotValues) {
+  let out = (template || "").toString();
+  for (const [slotName, forms] of Object.entries(slotValues || {})) {
+    const base = (forms?.base || "").toString().trim();
+    const dat = (forms?.dat || base).toString().trim();
+    const selected = (forms?.selected || base).toString().trim();
+
+    for (const [formKey, formValue] of Object.entries(forms || {})) {
+      if (formKey === "selected") continue;
+      const val = (formValue || "").toString().trim();
+      if (!val) continue;
+      out = out.replace(new RegExp(`\\{${slotName}_${formKey.toUpperCase()}\\}`, "g"), val);
+    }
+
+    out = out
+      .replace(new RegExp(`\\{${slotName}_BASE\\}`, "g"), base)
+      .replace(new RegExp(`\\{${slotName}_DAT\\}`, "g"), dat)
+      .replace(new RegExp(`\\{${slotName}\\}`, "g"), selected);
+  }
+  return out.replace(/\s+/g, " ").trim();
+}
+
+function tryGrammarPatternTranslate(ruText) {
+  const ruNorm = normalizeText(ruText);
+  if (!ruNorm) return { ok: false, translation: "" };
+
+  const patterns = [...state.grammar.patterns]
+    .sort((a, b) => Number(b?.priority || 0) - Number(a?.priority || 0));
+
+  const isQuestionInput = (() => {
+    const src = (ruText || "").toString().trim().toLowerCase();
+    if (!src) return false;
+    if (/[?？]\s*$/.test(src)) return true;
+    const first = normalizeText(src).split(" ")[0] || "";
+    const qWords = new Set([
+      "кто", "что", "какой", "когда", "где", "куда", "почему", "кому", "сколько", "как", "откуда"
+    ]);
+    return qWords.has(first);
+  })();
+
+  const isNegationInput = (() => {
+    const src = ` ${normalizeText(ruText)} `;
+    if (!src.trim()) return false;
+    const markers = [" не ", " нет ", " никто ", " ничто ", " ничего ", " никогда "];
+    return markers.some((m) => src.includes(m));
+  })();
+
+  const isQuestionPattern = (pattern) => {
+    const ruPattern = normalizeText(pattern?.ruPattern || "");
+    const ingTemplate = (pattern?.ingTemplate || "").toString();
+    if (ingTemplate.includes("?")) return true;
+    const first = ruPattern.split(" ")[0] || "";
+    const qWords = new Set([
+      "кто", "что", "какой", "когда", "где", "куда", "почему", "кому", "сколько", "как", "откуда"
+    ]);
+    return qWords.has(first);
+  };
+
+  const isNegationPattern = (pattern) => {
+    const ruPattern = ` ${normalizeText(pattern?.ruPattern || "")} `;
+    const ingTemplate = ` ${(pattern?.ingTemplate || "").toString().toLowerCase()} `;
+    const markersRu = [" не ", " нет ", " никто ", " ничто ", " ничего "];
+    const markersIng = [" ма ", "а,", "ац", "цар", "цхьаккха", "хiамма", "хIамма"];
+    return markersRu.some((m) => ruPattern.includes(m)) || markersIng.some((m) => ingTemplate.includes(m));
+  };
+
+  const ordered = (() => {
+    if (isQuestionInput) {
+      return [
+        ...patterns.filter((p) => isQuestionPattern(p)),
+        ...patterns.filter((p) => !isQuestionPattern(p))
+      ];
+    }
+    if (isNegationInput) {
+      return [
+        ...patterns.filter((p) => isNegationPattern(p)),
+        ...patterns.filter((p) => !isNegationPattern(p))
+      ];
+    }
+    return patterns;
+  })();
+
+  for (const pattern of ordered) {
+    const parsed = buildPatternRegex(pattern?.ruPattern || "");
+    if (!parsed) continue;
+
+    const match = ruNorm.match(parsed.regex);
+    if (!match) continue;
+
+    const slotValues = {};
+    let failed = false;
+    for (let i = 0; i < parsed.slotNames.length; i += 1) {
+      const slotName = parsed.slotNames[i];
+      const slotRu = (match[i + 1] || "").trim();
+      const forms = resolveSlotForms(slotRu);
+      if (!forms.base) {
+        failed = true;
+        break;
+      }
+      const slotSpec = Array.isArray(pattern?.slots)
+        ? pattern.slots.find((s) => (s?.name || "") === slotName)
+        : null;
+      const targetForm = getTargetFormForCase(slotSpec?.requiredCase || "base");
+      slotValues[slotName] = {
+        ...forms,
+        selected: targetForm === "dat" ? (forms.dat || forms.base) : forms.base
+      };
+    }
+    if (failed) continue;
+
+    const translation = fillIngTemplate(pattern?.ingTemplate || "", slotValues);
+    if (!translation) continue;
+
+    return {
+      ok: true,
+      translation,
+      patternId: (pattern?.id || "").toString()
+    };
+  }
+  return { ok: false, translation: "" };
+}
+
 function composeFromDictionaryTokens(ruText) {
   const tokens = tokenizeRu(ruText);
   if (!tokens.length || tokens.length < 2) {
     return { ok: false, translation: "", covered: 0, total: tokens.length };
   }
 
-  const pickBaseVariant = (word) => {
-    const variants = Array.isArray(word?.ingVariants) ? word.ingVariants : [];
-    if (!variants.length) return "";
-    // Prefer shortest compact variant, then keep only first lexical part.
-    const sorted = [...variants].sort((a, b) => a.length - b.length);
-    const raw = sorted[0] || "";
-    return raw
-      .split(/[\/,;]+/)[0]
-      .trim()
-      .split(/\s+/)[0]
-      .trim();
-  };
-
   const ingTokens = [];
   let covered = 0;
   for (const token of tokens) {
     const word = findWordForToken(token);
-    const firstVariant = pickBaseVariant(word);
+    const firstVariant = pickBaseVariantFromWord(word);
     if (!firstVariant) continue;
     covered += 1;
     ingTokens.push(firstVariant);
@@ -393,6 +635,40 @@ async function translate(ruText) {
     return { ok: false, status: 400, error: "empty_ru" };
   }
 
+  const ruNormForRouting = ` ${normalizeText(ru)} `;
+  const isNegationInput = [" не ", " нет ", " никто ", " ничто ", " ничего ", " никогда "]
+    .some((m) => ruNormForRouting.includes(m));
+
+  // For negation phrases, prioritize grammar templates (particle/negative forms).
+  if (isNegationInput) {
+    const byGrammarNeg = tryGrammarPatternTranslate(ru);
+    if (byGrammarNeg.ok) {
+      state.metrics.translateFromGrammar += 1;
+      return {
+        ok: true,
+        translation: byGrammarNeg.translation,
+        usedSource: SOURCE.GRAMMAR,
+        confidence: 0.9,
+        fallbackUsed: false
+      };
+    }
+  }
+
+  const exactGrammarLexeme = findGrammarLexeme(ru);
+  if (exactGrammarLexeme && normalizeText(exactGrammarLexeme.ru || "") === normalizeText(ru)) {
+    const base = (exactGrammarLexeme?.forms?.base || "").toString().trim();
+    if (base) {
+      state.metrics.translateFromGrammar += 1;
+      return {
+        ok: true,
+        translation: base,
+        usedSource: SOURCE.GRAMMAR,
+        confidence: 0.95,
+        fallbackUsed: false
+      };
+    }
+  }
+
   const exactWord = findWordExact(ru);
   if (exactWord) {
     state.metrics.translateFromDosh += 1;
@@ -401,6 +677,18 @@ async function translate(ruText) {
       translation: exactWord.ingVariants.slice(0, 2).join(" / "),
       usedSource: SOURCE.DOSH,
       confidence: 1,
+      fallbackUsed: false
+    };
+  }
+
+  const byGrammar = tryGrammarPatternTranslate(ru);
+  if (byGrammar.ok) {
+    state.metrics.translateFromGrammar += 1;
+    return {
+      ok: true,
+      translation: byGrammar.translation,
+      usedSource: SOURCE.GRAMMAR,
+      confidence: 0.9,
       fallbackUsed: false
     };
   }
@@ -534,6 +822,10 @@ function getMetrics() {
       wordsLoaded: state.words.length,
       phrasesLoaded: state.phrases.length,
       corpusLoaded: state.corpus.length,
+      grammarPatternsLoaded: state.grammar.patterns.length,
+      grammarRulesLoaded: state.grammar.rules.length,
+      grammarLexemesLoaded: state.grammar.lexemes.length,
+      grammarDeclensionsLoaded: state.grammar.declensions.length,
       moderationPending: state.moderationQueue.length
     }
   };
@@ -544,16 +836,18 @@ function getModerationQueue() {
 }
 
 async function refreshAllSources() {
-  const [words, phrases, corpus, blacklist] = await Promise.all([
+  const [words, phrases, corpus, blacklist, grammar] = await Promise.all([
     loadDictionary(),
     loadPhrases(),
     loadCorpus(),
-    loadBlacklist()
+    loadBlacklist(),
+    loadGrammarData()
   ]);
   state.words = words;
   state.phrases = phrases;
   state.corpus = corpus;
   state.blacklist = blacklist;
+  state.grammar = grammar;
 }
 
 module.exports = {

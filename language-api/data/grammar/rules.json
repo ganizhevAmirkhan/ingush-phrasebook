@@ -1,0 +1,85 @@
+{
+  "rules": [
+    {
+      "id": "slot_case_dative",
+      "type": "slot_transform",
+      "when": {
+        "requiredCase": "dative"
+      },
+      "apply": "use_lexeme_form",
+      "targetForm": "dat"
+    },
+    {
+      "id": "slot_case_base",
+      "type": "slot_transform",
+      "when": {
+        "requiredCase": "base"
+      },
+      "apply": "use_lexeme_form",
+      "targetForm": "base"
+    },
+    {
+      "id": "slot_case_genitive",
+      "type": "slot_transform",
+      "when": {
+        "requiredCase": "genitive"
+      },
+      "apply": "use_lexeme_form",
+      "targetForm": "gen"
+    },
+    {
+      "id": "slot_case_ergative",
+      "type": "slot_transform",
+      "when": {
+        "requiredCase": "ergative"
+      },
+      "apply": "use_lexeme_form",
+      "targetForm": "erg"
+    },
+    {
+      "id": "slot_case_instrumental",
+      "type": "slot_transform",
+      "when": {
+        "requiredCase": "instrumental"
+      },
+      "apply": "use_lexeme_form",
+      "targetForm": "ins"
+    },
+    {
+      "id": "slot_case_material",
+      "type": "slot_transform",
+      "when": {
+        "requiredCase": "material"
+      },
+      "apply": "use_lexeme_form",
+      "targetForm": "mat"
+    },
+    {
+      "id": "slot_case_locative",
+      "type": "slot_transform",
+      "when": {
+        "requiredCase": "locative"
+      },
+      "apply": "use_lexeme_form",
+      "targetForm": "loc"
+    },
+    {
+      "id": "slot_case_comparative",
+      "type": "slot_transform",
+      "when": {
+        "requiredCase": "comparative"
+      },
+      "apply": "use_lexeme_form",
+      "targetForm": "cmp"
+    },
+    {
+      "id": "fallback_unknown_lexeme",
+      "type": "slot_transform",
+      "when": {
+        "lexemeMissing": true
+      },
+      "apply": "identity_from_dictionary",
+      "targetForm": "base"
+    }
+  ]
+}

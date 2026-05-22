@@ -39,9 +39,11 @@ Optional env:
 Pipeline order:
 
 1. `dosh` exact match
-2. `habar` phrase match
-3. LLM fallback
-4. validation + moderation queue on reject
+2. `grammar` pattern/rule/lexeme match
+3. `habar` phrase match
+4. `dosh` token composition fallback (for short phrases)
+5. LLM fallback
+6. validation + moderation queue on reject
 
 ## Data Sources
 
@@ -50,4 +52,9 @@ Pipeline order:
 - Corpus store:
   - `language-api/data/corpus/stories/*.json`
   - `language-api/data/corpus/novellas/*.json`
+- Grammar store (MVP scaffold):
+  - `language-api/data/grammar/patterns.json`
+  - `language-api/data/grammar/rules.json`
+  - `language-api/data/grammar/lexemes.json`
+  - `language-api/data/grammar/declensions.json`
 

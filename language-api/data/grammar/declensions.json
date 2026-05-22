@@ -1,0 +1,106 @@
+{
+  "declensions": [
+    {
+      "id": "case_system_overview",
+      "label": "8 падежей (ингушский)",
+      "cases": [
+        { "name": "nominative", "labelRu": "именительный" },
+        { "name": "genitive", "labelRu": "родительный" },
+        { "name": "dative", "labelRu": "дательный" },
+        { "name": "ergative", "labelRu": "эргативный" },
+        { "name": "instrumental", "labelRu": "творительный" },
+        { "name": "material", "labelRu": "вещественный" },
+        { "name": "locative", "labelRu": "местный" },
+        { "name": "comparative", "labelRu": "сравнительный" }
+      ]
+    },
+    {
+      "id": "paradigm_brother",
+      "ru": "брат",
+      "ingBase": "веший",
+      "forms": {
+        "dat": "вешийна",
+        "ins": "вешийца",
+        "mat": "вешех"
+      },
+      "examples": [
+        {
+          "ru": "Я с братом поехала в горы.",
+          "ing": "Со вешийца лоам яхай."
+        }
+      ]
+    },
+    {
+      "id": "paradigm_mother",
+      "ru": "мать",
+      "ingBase": "наьна",
+      "forms": {
+        "loc": "наьнага",
+        "cmp": "наьнал"
+      },
+      "examples": [
+        {
+          "ru": "Лучше моей матери никого нет.",
+          "ing": "Са наьнал дикагIа саг вац."
+        }
+      ]
+    },
+    {
+      "id": "paradigm_heart",
+      "ru": "сердце",
+      "ingBase": "дог",
+      "forms": {
+        "dat": "дега"
+      }
+    },
+    {
+      "id": "paradigm_pupil",
+      "ru": "ученик",
+      "ingBase": "дешархочо",
+      "forms": {
+        "gen": "дешархочун",
+        "dat": "дешархочунна"
+      }
+    },
+    {
+      "id": "noun_classes_overview_lesson_23",
+      "label": "Классно-числовые показатели (урок 23)",
+      "classNumberIndicators": [
+        { "class": "I", "singular": "ва", "plural": "ба" },
+        { "class": "II", "singular": "я", "plural": "ба" },
+        { "class": "III", "singular": "я", "plural": "я" },
+        { "class": "IV", "singular": "да", "plural": "да" },
+        { "class": "V", "singular": "ба", "plural": "ба" },
+        { "class": "VI", "singular": "ба", "plural": "да" }
+      ]
+    },
+    {
+      "id": "plural_formation_lesson_23",
+      "label": "Образование множественного числа",
+      "patterns": [
+        { "suffix": "-аш/-ош/-еш", "example": "бер -> бераш" },
+        { "suffix": "-раш", "example": "цIи -> цIераш" },
+        { "suffix": "-маш", "example": "коч -> кочамаш" },
+        { "suffix": "-наш", "example": "са -> саьнаш" },
+        { "suffix": "-и/-ий", "example": "кIант -> кIантий" },
+        { "suffix": "-арч/-рч", "example": "ча -> чарч" },
+        { "suffix": "-арий", "example": "воша -> вежарий" },
+        { "suffix": "suppletive", "example": "саг -> нах" }
+      ]
+    },
+    {
+      "id": "paradigm_house_neighbor_flower",
+      "label": "Падежные формы: дом / сосед / цветок",
+      "singular": {
+        "house": { "nom": "цIа", "gen": "цIен", "dat": "цIенна", "erg": "цIено", "ins": "цIенца", "mat": "цIенах", "loc": "цIенга", "cmp": "цIенал" },
+        "neighbor": { "nom": "лоалахо", "gen": "лоалахочун", "dat": "лоалахочунна", "erg": "лоалахочо", "ins": "лоалахочунца", "mat": "лоалахочох", "loc": "лоалахочунга", "cmp": "лоалахочул" },
+        "flower": { "nom": "зиза", "gen": "зизай", "dat": "зизашта", "erg": "зизо", "ins": "зизаца", "mat": "зизах", "loc": "зизага", "cmp": "зизал" }
+      },
+      "plural": {
+        "house": { "nom": "цIенош", "gen": "цIеной", "dat": "цIеношта", "erg": "цIеноша", "ins": "цIеношца", "mat": "цIеноех", "loc": "цIеношка", "cmp": "цIеноел" },
+        "neighbor": { "nom": "лоалахой", "gen": "лоалахой", "dat": "лоалахошта", "erg": "лоалахоша", "ins": "лоалахошца", "mat": "лоалахоех", "loc": "лоалахошка", "cmp": "лоалахоел" },
+        "flower": { "nom": "зизаш", "gen": "зизай", "dat": "зизашта", "erg": "зизаша", "ins": "зизашца", "mat": "зизаех", "loc": "зизашка", "cmp": "зизаел" }
+      }
+    }
+  ]
+}
