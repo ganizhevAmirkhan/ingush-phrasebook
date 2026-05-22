@@ -52,15 +52,15 @@
     },
     {
       "ru": "С приездом!",
-      "ing": "Воаг1ал маршалла!",
-      "pron": "voag1al marshalla!",
+      "ing": "Воаг1алд маршалла!",
+      "pron": "voag1ald marshalla",
       "id": "f_1766025348310_9d9e",
       "audio": "f_1766025348310_9d9e.mp3"
     },
     {
       "ru": "Добро пожаловать",
-      "ing": "Марша бо!",
-      "pron": "marsha bo",
+      "ing": "МЯРША ВОАГ1АЛ",
+      "pron": "myarsha voag1al",
       "id": "f_1766025348310_khbn",
       "audio": "f_1766025348310_khbn.mp3"
     },
