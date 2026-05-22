@@ -101,15 +101,15 @@
     },
     {
       "ru": "Сильный ветер",
-      "ing": "чIоагIа мух",
-      "pron": "chioagia mukh",
+      "ing": "Бац йо",
+      "pron": "bats yo",
       "id": "f_1766025115892_9irk",
       "audio": "f_1766025115892_9irk.mp3"
     },
     {
       "ru": "Слабый ветер",
-      "ing": "Бац ца",
-      "pron": "bats tsa",
+      "ing": "уне мух",
+      "pron": "une mukh",
       "id": "f_1766025115892_g9li",
       "audio": "f_1766025115892_g9li.mp3"
     },
