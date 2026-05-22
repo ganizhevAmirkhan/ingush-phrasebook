@@ -727,131 +727,49 @@ function scrollToPhrase(id){
   setTimeout(()=>el.classList.remove("flash"), 900);
 }
 
-/* ================= AI (Gemini) ================= */
-const GEMINI_MODELS = [
-  "gemini-2.5-flash",
-  "gemini-2.5-pro",
-  "gemini-2.0-flash",
-  "gemini-1.5-flash-latest",
-  "gemini-1.5-flash"
-];
+/* ================= AI (LanguageAPI) ================= */
+const DEFAULT_LANGUAGE_API_BASE = "http://localhost:8787";
 
-let resolvedGeminiModel = null;
-
-function getAiKey(){
-  // Совместимость: если раньше был сохранен openaiKey, принимаем его как ключ Gemini.
-  return localStorage.getItem("geminiKey") || localStorage.getItem("openaiKey") || "";
+function getLanguageApiBase(){
+  return localStorage.getItem("languageApiBase") || DEFAULT_LANGUAGE_API_BASE;
 }
 
 function initAiUI(){
-  const key = getAiKey();
+  const input = document.getElementById("ai-key");
+  if(input && !input.value){
+    input.value = getLanguageApiBase();
+  }
   const st = document.getElementById("ai-status");
-  if(st) st.textContent = key ? "✓" : "";
+  if(st) st.textContent = getLanguageApiBase() ? "✓" : "";
 }
 
 function saveAiKey(){
-  const key = document.getElementById("ai-key")?.value?.trim();
-  if(!key) return alert("Введите Gemini API ключ");
-  localStorage.setItem("geminiKey", key);
-  localStorage.removeItem("openaiKey");
+  const base = document.getElementById("ai-key")?.value?.trim();
+  if(!base) return alert("Введите URL LanguageAPI");
+  localStorage.setItem("languageApiBase", base);
   initAiUI();
-  toast("Ключ сохранён ✓", true);
+  toast("LanguageAPI URL сохранён ✓", true);
 }
 
-async function callAI(prompt){
-  const key = getAiKey();
-  if(!key){
-    toast("Нет Gemini API ключа", false);
-    return "";
-  }
-
-  const body = {
-    contents: [{
-      role: "user",
-      parts: [{
-        text:
-`Ты помощник для создания ингушского разговорника.
-Отвечай только готовым текстом без пояснений.
-
-${prompt}`
-      }]
-    }],
-    generationConfig: {
-      temperature: 0.3
-    }
-  };
-
-  const dynamicModels = await fetchGeminiModels(key);
-  const modelsToTry = buildModelTryList(dynamicModels);
-
-  let lastErrorText = "";
-  for(const model of modelsToTry){
-    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(key)}`,{
-      method:"POST",
-      headers:{
-        "Content-Type":"application/json"
-      },
-      body:JSON.stringify(body)
-    });
-
-    if(res.ok){
-      resolvedGeminiModel = model;
-      const json = await res.json();
-      const parts = json?.candidates?.[0]?.content?.parts || [];
-      const text = parts.map(p => p?.text || "").join("").trim();
-      if(text) return text;
-      return "";
-    }
-
-    const txt = await res.text().catch(()=>"(no details)");
-    lastErrorText = txt;
-
-    // Если модель недоступна, пробуем следующую.
-    if(res.status === 404) continue;
-
-    console.error("Gemini error:", txt);
-    toast("Ошибка ИИ (ключ/лимиты)", false);
-    return "";
-  }
-
-  console.error("Gemini error:", lastErrorText || "Model not found");
-  toast("Ошибка ИИ: модель недоступна", false);
-  return "";
-}
-
-async function fetchGeminiModels(key){
+async function callLanguageApi(path, payload){
+  const base = getLanguageApiBase().replace(/\/+$/, "");
+  let res;
   try{
-    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${encodeURIComponent(key)}`);
-    if(!res.ok) return [];
-    const json = await res.json();
-    const models = Array.isArray(json?.models) ? json.models : [];
-
-    return models
-      .filter(m => (m?.supportedGenerationMethods || []).includes("generateContent"))
-      .map(m => (m?.name || "").replace(/^models\//, ""))
-      .filter(Boolean);
+    res = await fetch(`${base}${path}`,{
+      method:"POST",
+      headers:{ "Content-Type":"application/json" },
+      body:JSON.stringify(payload || {})
+    });
   }catch{
-    return [];
+    toast("LanguageAPI недоступен", false);
+    return null;
   }
-}
-
-function buildModelTryList(dynamicModels){
-  const out = [];
-  const pushUnique = (m)=>{
-    if(!m || out.includes(m)) return;
-    out.push(m);
-  };
-
-  // 1) ранее успешно найденная модель
-  pushUnique(resolvedGeminiModel);
-
-  // 2) наш приоритетный список
-  GEMINI_MODELS.forEach(pushUnique);
-
-  // 3) модели, которые реально доступны для текущего ключа
-  dynamicModels.forEach(pushUnique);
-
-  return out;
+  const json = await res.json().catch(()=>null);
+  if(!res.ok || !json?.ok){
+    toast("Ошибка LanguageAPI", false);
+    return null;
+  }
+  return json;
 }
 
 function buildDictionaryHints(ruText, limit=12){
@@ -1066,8 +984,8 @@ async function aiFixRu(){
   const ru = el?.value || "";
   if(!ru.trim()) return;
 
-  const out = await callAI("Исправь орфографию и стиль, не меняя смысл. Верни только исправленный текст:\n" + ru);
-  if(out) el.value = out;
+  const res = await callLanguageApi("/ai/assist", { task:"fix_ru", text: ru });
+  if(res?.text) el.value = res.text;
 }
 
 /* 🟢 ING — перевод */
@@ -1075,35 +993,12 @@ async function aiTranslateIng(){
   const ru = document.getElementById("edit-ru")?.value || "";
   if(!ru.trim()) return;
 
-  // 1) Сначала строго dosh (открытый dictionary.json).
-  const doshExact = findExactIngFromDosh(ru);
-  if(doshExact){
-    document.getElementById("edit-ing").value = doshExact;
-    toast("Взято из dosh ✓", true);
-    return;
+  const res = await callLanguageApi("/translate", { ru });
+  if(!res) return;
+  document.getElementById("edit-ing").value = safe(res.translation);
+  if(res.usedSource){
+    toast(`Источник: ${res.usedSource}`, true);
   }
-
-  // 2) Шаблон "Это X" (лексема X только из dosh).
-  const templated = tryTemplateThisX(ru);
-  if(templated){
-    document.getElementById("edit-ing").value = templated;
-    toast("Собрано по шаблону dosh ✓", true);
-    return;
-  }
-
-  // 3) Только затем ИИ.
-  const src = buildSourceContext(ru);
-  const out = await callAI(
-`Переведи на ингушский язык. Верни только перевод одной строкой.
-Используй только лексику и формы, подтвержденные источниками ниже.
-Запрещено использовать чеченские формы и неподтвержденные варианты.
-
-${src}
-
-Текст для перевода:
-${ru}`
-  );
-  if(out) document.getElementById("edit-ing").value = out;
 }
 
 /* 🔤 PRON — транскрипция */
@@ -1111,9 +1006,9 @@ async function aiMakePron(){
   const ing = document.getElementById("edit-ing")?.value || "";
   if(!ing.trim()) return;
 
-  const out = await callAI("Сделай латинскую транскрипцию (произношение) одной строкой. Без кавычек и без пояснений:\n" + ing);
-  if(out){
-    document.getElementById("edit-pron").value = out.toLowerCase().trim();
+  const res = await callLanguageApi("/ai/assist", { task:"make_pron", text: ing });
+  if(res?.text){
+    document.getElementById("edit-pron").value = res.text.toLowerCase().trim();
   }
 }
 
