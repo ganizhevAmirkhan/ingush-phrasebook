@@ -618,7 +618,13 @@ async function assistTask(task, text) {
   if (!prompt) return { ok: false, status: 400, error: "unsupported_task" };
 
   const llm = await callGemini(prompt);
-  if (!llm.ok) return { ok: false, status: 503, error: llm.error };
+  if (!llm.ok) {
+    // fix_ru is an auxiliary UI action; never fail UX for any LLM outage.
+    if (task === "fix_ru") {
+      return { ok: true, text: cleanText };
+    }
+    return { ok: false, status: 503, error: llm.error };
+  }
   return { ok: true, text: llm.text };
 }
 

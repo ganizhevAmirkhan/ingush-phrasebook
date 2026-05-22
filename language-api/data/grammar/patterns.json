@@ -9169,6 +9169,34 @@
           "ing_expected": "Й — ПОКАЗАТЕЛЬ ЖЕНСКОГО КЛАССА"
         }
       ]
+    },
+    {
+      "id": "weather_very_strong_rain_linked_form",
+      "ruPattern": "очень сильный дождь",
+      "description": "Preferred linked construction for strong rain",
+      "slots": [],
+      "ingTemplate": "ТIЕХДЯННА ЧIОАГIА ДОГIА",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "очень сильный дождь",
+          "ing_expected": "ТIЕХДЯННА ЧIОАГIА ДОГIА"
+        }
+      ]
+    },
+    {
+      "id": "weather_very_strong_rain_linked_form_typo",
+      "ruPattern": "очень силиный дождь",
+      "description": "Typo-tolerant variant for strong rain phrase",
+      "slots": [],
+      "ingTemplate": "ТIЕХДЯННА ЧIОАГIА ДОГIА",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "очень силиный дождь",
+          "ing_expected": "ТIЕХДЯННА ЧIОАГIА ДОГIА"
+        }
+      ]
     }
   ]
 }
