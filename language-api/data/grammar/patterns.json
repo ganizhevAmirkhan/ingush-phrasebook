@@ -9491,6 +9491,482 @@
           "ing_expected": "ХЬАВЕЛ СУГАХЬ."
         }
       ]
+    },
+    {
+      "id": "etiquette_long_time_no_see",
+      "ruPattern": "давно не виделись",
+      "description": "Long time no see phrase",
+      "slots": [],
+      "ingTemplate": "ДУКХА ХА Е ВАЙ БАРЬГА ЦА ГУ.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "давно не виделись",
+          "ing_expected": "ДУКХА ХА Е ВАЙ БАРЬГА ЦА ГУ."
+        }
+      ]
+    },
+    {
+      "id": "etiquette_good_time_of_day",
+      "ruPattern": "доброе время суток",
+      "description": "Generic greeting by time of day",
+      "slots": [],
+      "ingTemplate": "ДИКАНЦ ЛАТАЛЛ.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "доброе время суток",
+          "ing_expected": "ДИКАНЦ ЛАТАЛЛ."
+        }
+      ]
+    },
+    {
+      "id": "etiquette_sit_down",
+      "ruPattern": "садись",
+      "description": "Simple command to sit",
+      "slots": [],
+      "ingTemplate": "IАХА.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "садись",
+          "ing_expected": "IАХА."
+        }
+      ]
+    },
+    {
+      "id": "etiquette_come_in_plural",
+      "ruPattern": "заходите",
+      "description": "Invitation command plural/polite",
+      "slots": [],
+      "ingTemplate": "ШО ЧУДОВЛ.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "заходите",
+          "ing_expected": "ШО ЧУДОВЛ."
+        }
+      ]
+    },
+    {
+      "id": "state_i_need",
+      "ruPattern": "мне нужно",
+      "description": "Need state base phrase",
+      "slots": [],
+      "ingTemplate": "СУН ДЕЗА.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мне нужно",
+          "ing_expected": "СУН ДЕЗА."
+        }
+      ]
+    },
+    {
+      "id": "state_i_do_not_want",
+      "ruPattern": "я не хочу",
+      "description": "Negation of wish",
+      "slots": [],
+      "ingTemplate": "СА БЕЗАМ БАЦ.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я не хочу",
+          "ing_expected": "СА БЕЗАМ БАЦ."
+        }
+      ]
+    },
+    {
+      "id": "state_louder",
+      "ruPattern": "громче",
+      "description": "Request to speak louder",
+      "slots": [],
+      "ingTemplate": "Ч1ОАГА.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "громче",
+          "ing_expected": "Ч1ОАГА."
+        }
+      ]
+    },
+    {
+      "id": "state_i_am_busy",
+      "ruPattern": "я занят",
+      "description": "Busy state",
+      "slots": [],
+      "ingTemplate": "СО МУКЪА ВАЦ.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я занят",
+          "ing_expected": "СО МУКЪА ВАЦ."
+        }
+      ]
+    },
+    {
+      "id": "state_i_am_free",
+      "ruPattern": "я свободен",
+      "description": "Free state",
+      "slots": [],
+      "ingTemplate": "СО МУКЪА ВА.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я свободен",
+          "ing_expected": "СО МУКЪА ВА."
+        }
+      ]
+    },
+    {
+      "id": "state_help_me",
+      "ruPattern": "помоги мне",
+      "description": "Request for help",
+      "slots": [],
+      "ingTemplate": "Г1О ДЕ СОНА.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "помоги мне",
+          "ing_expected": "Г1О ДЕ СОНА."
+        }
+      ]
+    },
+    {
+      "id": "state_it_is_hard_for_me",
+      "ruPattern": "мне трудно",
+      "description": "Difficulty state",
+      "slots": [],
+      "ingTemplate": "СУННА ХАЛА Е.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мне трудно",
+          "ing_expected": "СУННА ХАЛА Е."
+        }
+      ]
+    },
+    {
+      "id": "state_it_is_easy_for_me",
+      "ruPattern": "мне легко",
+      "description": "Ease state",
+      "slots": [],
+      "ingTemplate": "СУННА АТТАГ1 Е.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мне легко",
+          "ing_expected": "СУННА АТТАГ1 Е."
+        }
+      ]
+    },
+    {
+      "id": "state_i_agree",
+      "ruPattern": "я согласен",
+      "description": "Agreement state",
+      "slots": [],
+      "ingTemplate": "СО РЯЗА ВА.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я согласен",
+          "ing_expected": "СО РЯЗА ВА."
+        }
+      ]
+    },
+    {
+      "id": "state_i_do_not_agree",
+      "ruPattern": "я не согласен",
+      "description": "Disagreement state",
+      "slots": [],
+      "ingTemplate": "СО РЯЗА ВАЦ.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я не согласен",
+          "ing_expected": "СО РЯЗА ВАЦ."
+        }
+      ]
+    },
+    {
+      "id": "state_i_want_to_sleep",
+      "ruPattern": "мне хочется спать",
+      "description": "Sleep desire phrase",
+      "slots": [],
+      "ingTemplate": "СА НАБ Е БЕЗАМ БА.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мне хочется спать",
+          "ing_expected": "СА НАБ Е БЕЗАМ БА."
+        }
+      ]
+    },
+    {
+      "id": "state_i_am_hungry",
+      "ruPattern": "я голоден",
+      "description": "Hunger state",
+      "slots": [],
+      "ingTemplate": "СО МЕЦ ВА.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я голоден",
+          "ing_expected": "СО МЕЦ ВА."
+        }
+      ]
+    },
+    {
+      "id": "command_stop",
+      "ruPattern": "стой",
+      "description": "Stop command",
+      "slots": [],
+      "ingTemplate": "ЛАТТ.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "стой",
+          "ing_expected": "ЛАТТ."
+        }
+      ]
+    },
+    {
+      "id": "command_stop_here",
+      "ruPattern": "стой здесь",
+      "description": "Stop here command",
+      "slots": [],
+      "ingTemplate": "ЛАТТ УКХАЗА.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "стой здесь",
+          "ing_expected": "ЛАТТ УКХАЗА."
+        }
+      ]
+    },
+    {
+      "id": "family_younger_sister",
+      "ruPattern": "младшая сестра",
+      "description": "Kinship younger sister",
+      "slots": [],
+      "ingTemplate": "ЗАМАГ1А ЙИША.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "младшая сестра",
+          "ing_expected": "ЗАМАГ1А ЙИША."
+        }
+      ]
+    },
+    {
+      "id": "family_my_family_is_small",
+      "ruPattern": "моя семья маленькая",
+      "description": "Family size phrase",
+      "slots": [],
+      "ingTemplate": "СА ДЕЗАЛ КЪЕЗИГ БА.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "моя семья маленькая",
+          "ing_expected": "СА ДЕЗАЛ КЪЕЗИГ БА."
+        }
+      ]
+    },
+    {
+      "id": "family_i_have_family",
+      "ruPattern": "у меня есть семья",
+      "description": "Possession of family",
+      "slots": [],
+      "ingTemplate": "ДЕЗАЛ БА СА.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "у меня есть семья",
+          "ing_expected": "ДЕЗАЛ БА СА."
+        }
+      ]
+    },
+    {
+      "id": "family_i_have_no_family",
+      "ruPattern": "у меня нет семьи",
+      "description": "No family phrase",
+      "slots": [],
+      "ingTemplate": "ДЕЗАЛ БАЦ СА.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "у меня нет семьи",
+          "ing_expected": "ДЕЗАЛ БАЦ СА."
+        }
+      ]
+    },
+    {
+      "id": "family_are_you_married_female",
+      "ruPattern": "ты замужем",
+      "description": "Marriage status question to female",
+      "slots": [],
+      "ingTemplate": "ХЬО МАЬРЕ ЙИ?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "ты замужем",
+          "ing_expected": "ХЬО МАЬРЕ ЙИ?"
+        }
+      ]
+    },
+    {
+      "id": "family_i_am_married_male",
+      "ruPattern": "я женат",
+      "description": "Male married status",
+      "slots": [],
+      "ingTemplate": "СО САГ ЙОАЛЯ ВА.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я женат",
+          "ing_expected": "СО САГ ЙОАЛЯ ВА."
+        }
+      ]
+    },
+    {
+      "id": "family_i_am_not_married_male",
+      "ruPattern": "я не женат",
+      "description": "Male not married status",
+      "slots": [],
+      "ingTemplate": "СО САГ ЙОАЛЯ ВАЦ.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я не женат",
+          "ing_expected": "СО САГ ЙОАЛЯ ВАЦ."
+        }
+      ]
+    },
+    {
+      "id": "family_do_you_have_children",
+      "ruPattern": "у тебя есть дети",
+      "description": "Question about having children",
+      "slots": [],
+      "ingTemplate": "БЕРАШ ДИ ХЬА?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "у тебя есть дети",
+          "ing_expected": "БЕРАШ ДИ ХЬА?"
+        }
+      ]
+    },
+    {
+      "id": "family_i_have_children",
+      "ruPattern": "у меня есть дети",
+      "description": "Having children phrase",
+      "slots": [],
+      "ingTemplate": "БЕРАШ ДА СА.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "у меня есть дети",
+          "ing_expected": "БЕРАШ ДА СА."
+        }
+      ]
+    },
+    {
+      "id": "family_i_have_no_children",
+      "ruPattern": "у меня нет детей",
+      "description": "No children phrase",
+      "slots": [],
+      "ingTemplate": "БЕРАШ ДАЦ СА.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "у меня нет детей",
+          "ing_expected": "БЕРАШ ДАЦ СА."
+        }
+      ]
+    },
+    {
+      "id": "family_these_are_my_parents",
+      "ruPattern": "это мои родители",
+      "description": "Introducing parents",
+      "slots": [],
+      "ingTemplate": "ЕРАЖ СА ДА-НАНА.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "это мои родители",
+          "ing_expected": "ЕРАЖ СА ДА-НАНА."
+        }
+      ]
+    },
+    {
+      "id": "family_i_have_many_relatives",
+      "ruPattern": "у меня много родственников",
+      "description": "Many relatives phrase",
+      "slots": [],
+      "ingTemplate": "СА ДУКХА ГАРГАРА НАХ БА.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "у меня много родственников",
+          "ing_expected": "СА ДУКХА ГАРГАРА НАХ БА."
+        }
+      ]
+    },
+    {
+      "id": "family_i_have_few_relatives",
+      "ruPattern": "у меня мало родственников",
+      "description": "Few relatives phrase",
+      "slots": [],
+      "ingTemplate": "КIЕЗИГА ГАРГАРА НАХ БА СА.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "у меня мало родственников",
+          "ing_expected": "КIЕЗИГА ГАРГАРА НАХ БА СА."
+        }
+      ]
+    },
+    {
+      "id": "family_how_many_brothers_you_have",
+      "ruPattern": "сколько у тебя братьев",
+      "description": "Question about number of brothers",
+      "slots": [],
+      "ingTemplate": "МАССА ВОШ ВА ХЬА?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "сколько у тебя братьев",
+          "ing_expected": "МАССА ВОШ ВА ХЬА?"
+        }
+      ]
+    },
+    {
+      "id": "family_how_many_sisters",
+      "ruPattern": "сколько сестер",
+      "description": "Question about number of sisters",
+      "slots": [],
+      "ingTemplate": "МАССА ЙИША ЙА?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "сколько сестер",
+          "ing_expected": "МАССА ЙИША ЙА?"
+        }
+      ]
+    },
+    {
+      "id": "family_i_am_eldest_in_family",
+      "ruPattern": "я старший в семье",
+      "description": "Eldest status in family",
+      "slots": [],
+      "ingTemplate": "Ц1АГАРА ВОАКХА ВА СО.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я старший в семье",
+          "ing_expected": "Ц1АГАРА ВОАКХА ВА СО."
+        }
+      ]
     }
   ]
 }
