@@ -269,15 +269,15 @@
     },
     {
       "ru": "Это мой брат",
-      "ing": "ер са воша ва",
-      "pron": "er sa vosha va",
+      "ing": "Ер",
+      "pron": "kha so vaza",
       "id": "f_1766024735115_clmi",
       "audio": "f_1766024735115_clmi.mp3"
     },
     {
       "ru": "Это моя сестра",
-      "ing": "Ха со йоьва",
-      "pron": "kha so yova",
+      "ing": "ер са йиша",
+      "pron": "er sa yisha",
       "id": "f_1766024735115_ansp",
       "audio": "f_1766024735115_ansp.mp3"
     },
