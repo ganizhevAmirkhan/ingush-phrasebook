@@ -94,15 +94,15 @@
     },
     {
       "ru": "Ветер",
-      "ing": "мух",
-      "pron": "mukh",
+      "ing": "Бац",
+      "pron": "bats",
       "id": "f_1766025115892_xs0d",
       "audio": "f_1766025115892_xs0d.mp3"
     },
     {
       "ru": "Сильный ветер",
-      "ing": "Бац йо",
-      "pron": "bats yo",
+      "ing": "чIоагIа мух",
+      "pron": "chioagia mukh",
       "id": "f_1766025115892_9irk",
       "audio": "f_1766025115892_9irk.mp3"
     },
