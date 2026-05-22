@@ -213,15 +213,15 @@
     },
     {
       "ru": "Я женат",
-      "ing": "Со саг йоаля ва",
-      "pron": "so sag yoalya va",
+      "ing": "Со йоагI",
+      "pron": "so yoag1",
       "id": "f_1766024735115_cocf",
       "audio": "f_1766024735115_cocf.mp3"
     },
     {
       "ru": "Я замужем",
-      "ing": "Со йоагI",
-      "pron": "so yoag1",
+      "ing": "со маьре е",
+      "pron": "so mare e",
       "id": "f_1766024735115_wfd2",
       "audio": "f_1766024735115_wfd2.mp3"
     },
