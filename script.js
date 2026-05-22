@@ -291,6 +291,11 @@ function renderCategory(){
   const c = document.getElementById("content");
   c.innerHTML = "";
 
+  if(!currentData || !Array.isArray(currentData.items)){
+    c.innerHTML = "<p>Данные категории ещё не загружены. Выберите категорию повторно.</p>";
+    return;
+  }
+
   // toolbar
   renderToolbar(c);
 
@@ -339,6 +344,11 @@ function renderSearch(){
 }
 
 function renderCurrentView(){
+  if(currentView !== "search" && (!currentData || !Array.isArray(currentData.items))){
+    const c = document.getElementById("content");
+    if(c) c.innerHTML = "<p>Выберите категорию.</p>";
+    return;
+  }
   currentView === "search" ? renderSearch() : renderCategory();
 }
 
