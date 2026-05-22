@@ -134,6 +134,68 @@ function findWordExact(ruText) {
   return state.words.find((w) => w.ruNorm === norm) || null;
 }
 
+function findWordForToken(token) {
+  if (!token) return null;
+  // Prefer exact normalized match first.
+  const exact = state.words.find((w) => w.ruNorm === token);
+  if (exact) return exact;
+
+  // Then allow token match inside dictionary tokenization.
+  const byToken = state.words.filter((w) => Array.isArray(w.ruTokens) && w.ruTokens.includes(token));
+  if (!byToken.length) return null;
+
+  // Prefer shorter entries (usually closer to a base lemma).
+  byToken.sort((a, b) => (a.ruNorm.length - b.ruNorm.length));
+  return byToken[0] || null;
+}
+
+function composeFromDictionaryTokens(ruText) {
+  const tokens = tokenizeRu(ruText);
+  if (!tokens.length || tokens.length < 2) {
+    return { ok: false, translation: "", covered: 0, total: tokens.length };
+  }
+
+  const pickBaseVariant = (word) => {
+    const variants = Array.isArray(word?.ingVariants) ? word.ingVariants : [];
+    if (!variants.length) return "";
+    // Prefer shortest compact variant, then keep only first lexical part.
+    const sorted = [...variants].sort((a, b) => a.length - b.length);
+    const raw = sorted[0] || "";
+    return raw
+      .split(/[\/,;]+/)[0]
+      .trim()
+      .split(/\s+/)[0]
+      .trim();
+  };
+
+  const ingTokens = [];
+  let covered = 0;
+  for (const token of tokens) {
+    const word = findWordForToken(token);
+    const firstVariant = pickBaseVariant(word);
+    if (!firstVariant) continue;
+    covered += 1;
+    ingTokens.push(firstVariant);
+  }
+
+  if (!ingTokens.length) {
+    return { ok: false, translation: "", covered, total: tokens.length };
+  }
+
+  // Require near-full coverage to avoid random partial output.
+  const coverage = covered / tokens.length;
+  if (coverage < 0.8) {
+    return { ok: false, translation: "", covered, total: tokens.length };
+  }
+
+  return {
+    ok: true,
+    translation: ingTokens.join(" ").replace(/\s+/g, " ").trim(),
+    covered,
+    total: tokens.length
+  };
+}
+
 function jaccard(aSet, bSet) {
   if (!aSet.size || !bSet.size) return 0;
   let intersection = 0;
@@ -352,6 +414,20 @@ async function translate(ruText) {
       usedSource: SOURCE.HABAR,
       confidence: phrase.confidence,
       fallbackUsed: false
+    };
+  }
+
+  // Deterministic fallback: compose phrase from dosh token matches.
+  // This keeps translation working when LLM is unavailable.
+  const composed = composeFromDictionaryTokens(ru);
+  if (composed.ok) {
+    state.metrics.translateFromDosh += 1;
+    return {
+      ok: true,
+      translation: composed.translation,
+      usedSource: SOURCE.DOSH,
+      confidence: 0.82,
+      fallbackUsed: true
     };
   }
 
