@@ -1,1 +1,8 @@
 {"id":"mod_1779461062905","createdAt":"2026-05-22T14:44:22.905Z","ru":"в москве с кем ты дружишь","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779467165778","createdAt":"2026-05-22T16:26:05.778Z","ru":"Какая погода?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779480845130","createdAt":"2026-05-22T20:14:05.130Z","ru":"Какая температура?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779480845148","createdAt":"2026-05-22T20:14:05.148Z","ru":"кака температура?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779481200439","createdAt":"2026-05-22T20:20:00.439Z","ru":"Рад встрече с тобой","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779481870072","createdAt":"2026-05-22T20:31:10.072Z","ru":"Прощай","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779481870082","createdAt":"2026-05-22T20:31:10.082Z","ru":"Увидимся позже","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779481870095","createdAt":"2026-05-22T20:31:10.095Z","ru":"Как прошёл день?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}

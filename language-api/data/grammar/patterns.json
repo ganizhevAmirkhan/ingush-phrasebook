@@ -1303,6 +1303,62 @@
       ]
     },
     {
+      "id": "weather_how_weather_general",
+      "ruPattern": "какая погода",
+      "description": "General weather question",
+      "slots": [],
+      "ingTemplate": "МАЛАГIА ХАОТТАМ БА?",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "какая погода",
+          "ing_expected": "МАЛАГIА ХАОТТАМ БА?"
+        }
+      ]
+    },
+    {
+      "id": "weather_how_temperature_general",
+      "ruPattern": "какая температура",
+      "description": "General temperature question",
+      "slots": [],
+      "ingTemplate": "МЕЛ Е ТЕМПЕРАТУР?",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "какая температура",
+          "ing_expected": "МЕЛ Е ТЕМПЕРАТУР?"
+        }
+      ]
+    },
+    {
+      "id": "weather_how_temperature_general_typo",
+      "ruPattern": "кака температура",
+      "description": "Typo-tolerant variant for temperature question",
+      "slots": [],
+      "ingTemplate": "МЕЛ Е ТЕМПЕРАТУР?",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "кака температура",
+          "ing_expected": "МЕЛ Е ТЕМПЕРАТУР?"
+        }
+      ]
+    },
+    {
+      "id": "weather_bad_weather_general",
+      "ruPattern": "плохая погода",
+      "description": "General statement about bad weather",
+      "slots": [],
+      "ingTemplate": "ВО ХАОТТАМ",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "плохая погода",
+          "ing_expected": "ВО ХАОТТАМ"
+        }
+      ]
+    },
+    {
       "id": "weather_it_is_raining",
       "ruPattern": "идет дождь",
       "description": "Weather event rain",
@@ -9195,6 +9251,244 @@
         {
           "ru": "очень силиный дождь",
           "ing_expected": "ТIЕХДЯННА ЧIОАГIА ДОГIА"
+        }
+      ]
+    },
+    {
+      "id": "etiquette_glad_to_meet_you",
+      "ruPattern": "рад встрече с тобой",
+      "description": "Greeting etiquette phrase",
+      "slots": [],
+      "ingTemplate": "Г1АДВАХАВ ХЬОГ1А КХИЙТА.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "рад встрече с тобой",
+          "ing_expected": "Г1АДВАХАВ ХЬОГ1А КХИЙТА."
+        }
+      ]
+    },
+    {
+      "id": "etiquette_welcome",
+      "ruPattern": "добро пожаловать",
+      "description": "Welcome greeting phrase",
+      "slots": [],
+      "ingTemplate": "МЯРША ВОАГ1АЛ",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "добро пожаловать",
+          "ing_expected": "МЯРША ВОАГ1АЛ"
+        }
+      ]
+    },
+    {
+      "id": "etiquette_how_are_you_plural_short",
+      "ruPattern": "как вы",
+      "description": "Short polite greeting form",
+      "slots": [],
+      "ingTemplate": "МИШТАД ШО.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "как вы",
+          "ing_expected": "МИШТАД ШО."
+        }
+      ]
+    },
+    {
+      "id": "etiquette_sorry",
+      "ruPattern": "извини",
+      "description": "Apology form",
+      "slots": [],
+      "ingTemplate": "КЪАТ1ЕРВАЛ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "извини",
+          "ing_expected": "КЪАТ1ЕРВАЛ."
+        }
+      ]
+    },
+    {
+      "id": "etiquette_goodbye_informal",
+      "ruPattern": "прощай",
+      "description": "Informal farewell",
+      "slots": [],
+      "ingTemplate": "IАДИКХЕЙЛ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "прощай",
+          "ing_expected": "IАДИКХЕЙЛ."
+        }
+      ]
+    },
+    {
+      "id": "etiquette_see_you_later",
+      "ruPattern": "увидимся позже",
+      "description": "Parting phrase see you later",
+      "slots": [],
+      "ingTemplate": "Т1ЕХЬА ГУДА ВАЙ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "увидимся позже",
+          "ing_expected": "Т1ЕХЬА ГУДА ВАЙ."
+        }
+      ]
+    },
+    {
+      "id": "etiquette_good_night",
+      "ruPattern": "спокойной ночи",
+      "description": "Night greeting",
+      "slots": [],
+      "ingTemplate": "БИЙСА ДАЬКЪЕЛХЕЙЛА.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "спокойной ночи",
+          "ing_expected": "БИЙСА ДАЬКЪЕЛХЕЙЛА."
+        }
+      ]
+    },
+    {
+      "id": "etiquette_how_was_day",
+      "ruPattern": "как прошел день",
+      "description": "Question about how day went",
+      "slots": [],
+      "ingTemplate": "ДИ ДА МИШТ ДАХАР ХЬА?",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "как прошел день",
+          "ing_expected": "ДИ ДА МИШТ ДАХАР ХЬА?"
+        }
+      ]
+    },
+    {
+      "id": "etiquette_how_morning",
+      "ruPattern": "как утро",
+      "description": "Question about morning state",
+      "slots": [],
+      "ingTemplate": "МААШТ Е IУЙРЕ?",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "как утро",
+          "ing_expected": "МААШТ Е IУЙРЕ?"
+        }
+      ]
+    },
+    {
+      "id": "etiquette_glad_to_meet_acquainted",
+      "ruPattern": "рад знакомству",
+      "description": "Polite phrase glad to make acquaintance",
+      "slots": [],
+      "ingTemplate": "ДК ХЕТ ВЕЙЗА.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "рад знакомству",
+          "ing_expected": "ДК ХЕТ ВЕЙЗА."
+        }
+      ]
+    },
+    {
+      "id": "etiquette_how_life",
+      "ruPattern": "как жизнь",
+      "description": "Question how life is going",
+      "slots": [],
+      "ingTemplate": "МИШТА ДА ВАХАР?",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "как жизнь",
+          "ing_expected": "МИШТА ДА ВАХАР?"
+        }
+      ]
+    },
+    {
+      "id": "etiquette_normal_response",
+      "ruPattern": "нормально",
+      "description": "Short response normally/fine",
+      "slots": [],
+      "ingTemplate": "МЕГАЖ ДА.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "нормально",
+          "ing_expected": "МЕГАЖ ДА."
+        }
+      ]
+    },
+    {
+      "id": "etiquette_very_glad",
+      "ruPattern": "очень рад",
+      "description": "Strong positive greeting response",
+      "slots": [],
+      "ingTemplate": "ТIЕХ Г1АДВАХА ВА.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "очень рад",
+          "ing_expected": "ТIЕХ Г1АДВАХА ВА."
+        }
+      ]
+    },
+    {
+      "id": "etiquette_wish_luck",
+      "ruPattern": "пожелаю удачи",
+      "description": "Wishing luck phrase",
+      "slots": [],
+      "ingTemplate": "АЬТТУ БОАКХАЛБ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "пожелаю удачи",
+          "ing_expected": "АЬТТУ БОАКХАЛБ."
+        }
+      ]
+    },
+    {
+      "id": "etiquette_please_take_a_seat",
+      "ruPattern": "прошу присаживайся",
+      "description": "Invitation to sit down",
+      "slots": [],
+      "ingTemplate": "ХЬАВАЛЕЛ АХАЛ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "прошу присаживайся",
+          "ing_expected": "ХЬАВАЛЕЛ АХАЛ."
+        }
+      ]
+    },
+    {
+      "id": "etiquette_come_in",
+      "ruPattern": "заходи",
+      "description": "Invitation to come in",
+      "slots": [],
+      "ingTemplate": "ЧУДАВЛ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "заходи",
+          "ing_expected": "ЧУДАВЛ."
+        }
+      ]
+    },
+    {
+      "id": "etiquette_come_here",
+      "ruPattern": "иди сюда",
+      "description": "Invitation command to come here",
+      "slots": [],
+      "ingTemplate": "ХЬАВЕЛ СУГАХЬ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "иди сюда",
+          "ing_expected": "ХЬАВЕЛ СУГАХЬ."
         }
       ]
     }

@@ -10,6 +10,7 @@ function normalizeText(value) {
   return (value || "")
     .toString()
     .toLowerCase()
+    .replace(/ё/g, "е")
     .replace(/[.,!?;:()"«»]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
