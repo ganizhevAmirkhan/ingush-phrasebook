@@ -1121,7 +1121,7 @@
       "id": "f_1766030410812_8qdb",
       "category": "drink",
       "ru": "Где вода?",
-      "expectedIng": "Мал хьа?"
+      "expectedIng": "Мичад хи"
     },
     {
       "id": "f_1766030410812_9bg3",
@@ -1745,7 +1745,7 @@
       "id": "f_1766022476934_mfot",
       "category": "food",
       "ru": "Хочу пить",
-      "expectedIng": "Са хий мал безам ба"
+      "expectedIng": "Малх ба"
     },
     {
       "id": "f_1766022476934_7z41",
@@ -1757,7 +1757,7 @@
       "id": "f_1766022476934_wcny",
       "category": "food",
       "ru": "Дай воду",
-      "expectedIng": "Хий да"
+      "expectedIng": "Хи да"
     },
     {
       "id": "f_1766022476934_gpmt",
@@ -1775,7 +1775,7 @@
       "id": "f_1766022476934_bqfb",
       "category": "food",
       "ru": "Где вода?",
-      "expectedIng": "Мичад хий"
+      "expectedIng": "Мичад хи"
     },
     {
       "id": "f_1766022476934_m84d",
@@ -1835,7 +1835,7 @@
       "id": "f_1766022476934_yqu7",
       "category": "food",
       "ru": "Принеси воду",
-      "expectedIng": "Мал дика"
+      "expectedIng": "Оамал йи"
     },
     {
       "id": "f_1766022476934_2tj4",
@@ -4751,7 +4751,7 @@
       "id": "f_1766025387472_zh5i",
       "category": "village",
       "ru": "Где вода?",
-      "expectedIng": "Хьий хьа?"
+      "expectedIng": "Мичад хи"
     },
     {
       "id": "f_1766025387472_1nbb",

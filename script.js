@@ -738,181 +738,161 @@ function scrollToPhrase(id){
   setTimeout(()=>el.classList.remove("flash"), 900);
 }
 
-/* ================= AI (LanguageAPI) ================= */
+/* ================= AI: LanguageAPI → Gemini fallback ================= */
+const GEMINI_MODELS = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash-latest"];
 const DEFAULT_LANGUAGE_API_BASE =
   location.hostname === "habar.inghub.ru"
     ? "https://api.inghub.ru"
     : "http://localhost:8787";
 
-function normalizeLanguageApiBase(rawBase){
-  let base = safe(rawBase).trim();
-  if(!base) return "";
-
-  // If site is HTTPS, force API URL to HTTPS to avoid Mixed Content.
-  if(location.protocol === "https:" && /^http:\/\//i.test(base)){
-    base = base.replace(/^http:\/\//i, "https://");
-  }
-
-  return base.replace(/\/+$/, "");
+function getLanguageApiBase(){
+  const saved = safe(localStorage.getItem("languageApiBase")).trim();
+  return (saved || DEFAULT_LANGUAGE_API_BASE).replace(/\/+$/, "");
 }
 
-function getLanguageApiBase(){
-  const saved = localStorage.getItem("languageApiBase");
-  const normalized = normalizeLanguageApiBase(saved || DEFAULT_LANGUAGE_API_BASE);
-  if(normalized && normalized !== saved){
-    localStorage.setItem("languageApiBase", normalized);
-  }
-  return normalized;
+function getGeminiKey(){
+  return safe(localStorage.getItem("geminiApiKey")).trim();
 }
 
 function initAiUI(){
   const input = document.getElementById("ai-key");
   if(input && !input.value){
-    input.value = getLanguageApiBase();
+    input.value = getGeminiKey();
   }
   const st = document.getElementById("ai-status");
-  if(st) st.textContent = getLanguageApiBase() ? "✓" : "";
+  const parts = [];
+  if(getLanguageApiBase()) parts.push("API");
+  if(getGeminiKey()) parts.push("Gemini");
+  if(st) st.textContent = parts.length ? `✓ ${parts.join("+")}` : "";
 }
 
 function saveAiKey(){
-  const base = normalizeLanguageApiBase(document.getElementById("ai-key")?.value);
-  if(!base) return alert("Введите URL LanguageAPI");
-  localStorage.setItem("languageApiBase", base);
+  const key = safe(document.getElementById("ai-key")?.value).trim();
+  if(!key) return alert("Введите Gemini API key");
+  localStorage.setItem("geminiApiKey", key);
   initAiUI();
-  toast("LanguageAPI URL сохранён ✓", true);
+  toast("Gemini key сохранён ✓", true);
 }
 
-async function callLanguageApi(path, payload){
+async function callLanguageApiTranslate(ru){
   const base = getLanguageApiBase();
   const ctrl = new AbortController();
-  const timeoutId = setTimeout(() => ctrl.abort(), 12000);
-  let res;
+  const timeoutId = setTimeout(() => ctrl.abort(), 15000);
   try{
-    res = await fetch(`${base}${path}`,{
-      method:"POST",
-      headers:{ "Content-Type":"application/json" },
-      body:JSON.stringify(payload || {}),
+    const res = await fetch(`${base}/translate`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ru, skipHabar: true }),
       signal: ctrl.signal,
       cache: "no-store"
     });
+    const json = await res.json().catch(() => null);
+    if(res.ok && json?.ok && json?.translation){
+      return json;
+    }
+    return { ok: false, error: json?.error || `http_${res.status}` };
   }catch{
-    toast("LanguageAPI недоступен (проверь https://api.inghub.ru)", false);
-    return null;
+    return { ok: false, error: "api_unreachable" };
   }finally{
     clearTimeout(timeoutId);
   }
-  const json = await res.json().catch(()=>null);
-  if(!res.ok || !json?.ok){
-    const errCode = safe(json?.error) || `http_${safe(res?.status) || "unknown"}`;
-    toast(`Ошибка LanguageAPI: ${errCode}`, false);
-    return null;
-  }
-  return json;
 }
 
-async function callLanguageApiGet(path, params){
-  const base = getLanguageApiBase();
+async function callGemini(prompt){
+  const key = getGeminiKey();
+  if(!key){
+    toast("Введите Gemini API key в шапке и нажмите 💾", false);
+    return null;
+  }
+
+  const body = {
+    contents: [{ role: "user", parts: [{ text: prompt }] }],
+    generationConfig: { temperature: 0.2 }
+  };
+
   const ctrl = new AbortController();
-  const timeoutId = setTimeout(() => ctrl.abort(), 8000);
+  const timeoutId = setTimeout(() => ctrl.abort(), 30000);
 
-  const url = new URL(`${base}${path}`);
-  Object.entries(params || {}).forEach(([k, v]) => {
-    if(v == null) return;
-    url.searchParams.set(k, safe(v));
-  });
-
-  let res;
   try{
-    res = await fetch(url.toString(), {
-      method: "GET",
-      headers: { "Content-Type":"application/json" },
-      signal: ctrl.signal,
-      cache: "no-store"
-    });
-  }catch{
-    return null;
+    for(const model of GEMINI_MODELS){
+      try{
+        const res = await fetch(
+          `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(key)}`,
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(body),
+            signal: ctrl.signal
+          }
+        );
+        if(!res.ok) continue;
+        const json = await res.json();
+        const text = (json?.candidates?.[0]?.content?.parts || [])
+          .map((part) => safe(part?.text))
+          .join("")
+          .trim();
+        if(text) return text;
+      }catch{
+        // try next model
+      }
+    }
   }finally{
     clearTimeout(timeoutId);
   }
 
-  const json = await res.json().catch(()=>null);
-  if(!res.ok || !json?.ok) return null;
-  return json;
-}
-
-function extractIngFromLookupItems(items, ruText){
-  const list = Array.isArray(items) ? items : [];
-  if(!list.length) return "";
-
-  const targetNorm = normalizeRuForLookup(ruText);
-  const exact = list.find(it => normalizeRuForLookup(it?.ru) === targetNorm) || null;
-  const ordered = exact ? [exact, ...list.filter(it => it !== exact)] : list;
-
-  for(const it of ordered){
-    const phraseIng = safe(it?.ing).trim();
-    if(phraseIng) return phraseIng;
-
-    const vars = Array.isArray(it?.ingVariants) ? it.ingVariants : [];
-    const firstVar = safe(vars[0]).trim();
-    if(firstVar) return firstVar;
-  }
-  return "";
-}
-
-function extractIngFromCorpusItems(items){
-  const list = Array.isArray(items) ? items : [];
-  if(!list.length) return "";
-  for(const it of list){
-    const ing = safe(it?.snippet?.ing).trim();
-    if(ing) return ing;
-  }
-  return "";
-}
-
-async function resolveClientFallbackTranslation(ruText){
-  // 1) LanguageAPI lookup: phrase source
-  const phraseLookup = await callLanguageApiGet("/lookup/phrase", { ru: ruText });
-  const phraseIng = extractIngFromLookupItems(phraseLookup?.items, ruText);
-  if(phraseIng){
-    return { translation: phraseIng, usedSource: "lookup_phrase" };
-  }
-
-  // 2) LanguageAPI lookup: dictionary source
-  const wordLookup = await callLanguageApiGet("/lookup/word", { ru: ruText });
-  const wordIng = extractIngFromLookupItems(wordLookup?.items, ruText);
-  if(wordIng){
-    return { translation: wordIng, usedSource: "lookup_word" };
-  }
-
-  // 3) LanguageAPI lookup: corpus snippet as contextual fallback
-  const corpusLookup = await callLanguageApiGet("/lookup/corpus", { q: ruText });
-  const corpusIng = extractIngFromCorpusItems(corpusLookup?.items);
-  if(corpusIng){
-    return { translation: corpusIng, usedSource: "lookup_corpus" };
-  }
-
-  // 4) Local client hints as last resort (no server error in UI)
-  const exactHabar = findExactNonQuestionPhraseFromHabar(ruText);
-  if(exactHabar?.ing){
-    return { translation: safe(exactHabar.ing), usedSource: "habar_local_exact" };
-  }
-
-  const exactDosh = findExactIngFromDosh(ruText);
-  if(exactDosh){
-    return { translation: exactDosh, usedSource: "dosh_local_exact" };
-  }
-
-  const bestHabar = findBestPhraseFromHabar(ruText);
-  if(bestHabar?.ing){
-    return { translation: safe(bestHabar.ing), usedSource: "habar_local_best" };
-  }
-
-  const template = tryTemplateThisX(ruText);
-  if(template){
-    return { translation: template, usedSource: "template_local" };
-  }
-
+  toast("Gemini недоступен (проверь ключ)", false);
   return null;
+}
+
+function findPhrasePronByIng(ingText){
+  const target = safe(ingText).replace(/\s+/g, " ").trim().toLowerCase();
+  if(!target) return "";
+  const hit = allPhrases.find((p) => safe(p?.ing).replace(/\s+/g, " ").trim().toLowerCase() === target);
+  return safe(hit?.pron).trim();
+}
+
+function transliterateIngushToPron(ingText){
+  const src = safe(ingText).trim();
+  if(!src) return "";
+  if(/^[a-z0-9\s'`".,!?;:()\-]+$/i.test(src)){
+    return src.replace(/\s+/g, " ").trim().toLowerCase();
+  }
+
+  let t = src.toLowerCase();
+  const multi = [
+    [/кх/g, "kh"], [/къ/g, "k'"], [/к1/g, "k1"], [/г1/g, "g1"], [/х1/g, "h1"],
+    [/ц1/g, "ts1"], [/ч1/g, "ch1"], [/ш1/g, "sh1"], [/т1/g, "t1"], [/п1/g, "p1"],
+    [/б1/g, "b1"], [/д1/g, "d1"], [/ж1/g, "zh1"], [/гӀ/g, "gh1"], [/гӏ/g, "gh1"],
+    [/хь/g, "h'"], [/аъ/g, "a'"], [/оъ/g, "o'"], [/уъ/g, "u'"], [/еъ/g, "e'"],
+    [/иъ/g, "i'"], [/яъ/g, "ya'"], [/юъ/g, "yu'"]
+  ];
+  for(const [re, to] of multi) t = t.replace(re, to);
+
+  const single = {
+    "а": "a", "б": "b", "в": "v", "г": "g", "д": "d", "е": "e", "ё": "yo",
+    "ж": "zh", "з": "z", "и": "i", "й": "y", "к": "k", "л": "l", "м": "m",
+    "н": "n", "о": "o", "п": "p", "р": "r", "с": "s", "т": "t", "у": "u",
+    "ф": "f", "х": "kh", "ц": "ts", "ч": "ch", "ш": "sh", "щ": "shch",
+    "ъ": "", "ы": "y", "ь": "", "э": "e", "ю": "yu", "я": "ya",
+    "Ӏ": "1", "ӏ": "1", "і": "1", "1": "1"
+  };
+
+  let out = "";
+  for(const ch of t){
+    out += Object.prototype.hasOwnProperty.call(single, ch) ? single[ch] : ch;
+  }
+  return out.replace(/\s+/g, " ").trim().toLowerCase();
+}
+
+function buildGeminiTranslatePrompt(ruText){
+  return [
+    "Ты переводчик на ингушский язык.",
+    "Используй разговорный ингушский, не чеченские формы.",
+    "Не копируй готовые фразы из разговорника — переводи заново.",
+    buildSourceContext(ruText),
+    `Текст:\n${ruText}`,
+    "Верни только перевод, без пояснений."
+  ].join("\n\n");
 }
 
 function setAiTranslateBusy(isBusy){
@@ -1135,8 +1115,10 @@ async function aiFixRu(){
   const ru = el?.value || "";
   if(!ru.trim()) return;
 
-  const res = await callLanguageApi("/ai/assist", { task:"fix_ru", text: ru });
-  if(res?.text) el.value = res.text;
+  const text = await callGemini(
+    `Исправь орфографию и стиль, не меняя смысл. Верни только исправленный текст.\n\n${ru}`
+  );
+  if(text) el.value = text;
 }
 
 /* 🟢 ING — перевод */
@@ -1150,23 +1132,25 @@ async function aiTranslateIng(){
   setAiTranslateBusy(true);
 
   try{
-    const res = await callLanguageApi("/translate", { ru });
-    if(res?.translation){
-      document.getElementById("edit-ing").value = safe(res.translation);
-      if(res.usedSource){
-        toast(`Источник: ${res.usedSource}`, true);
-      }
+    const api = await callLanguageApiTranslate(ru);
+    if(api?.translation){
+      document.getElementById("edit-ing").value = cleanIngCandidate(api.translation);
+      toast(`Источник: ${api.usedSource || "api"}`, true);
       return;
     }
 
-    const fallback = await resolveClientFallbackTranslation(ru);
-    if(fallback?.translation){
-      document.getElementById("edit-ing").value = safe(fallback.translation);
-      toast(`Источник: ${fallback.usedSource}`, true);
+    const text = await callGemini(buildGeminiTranslatePrompt(ru));
+    if(text){
+      document.getElementById("edit-ing").value = cleanIngCandidate(text);
+      toast("Источник: gemini (fallback)", true);
       return;
     }
 
-    toast("Перевод не найден. Добавьте фразу в базу.", false);
+    if(api?.error === "missing_gemini_key"){
+      toast("API не нашёл перевод. Добавь Gemini key для fallback.", false);
+    }else{
+      toast("Перевод не получен (API + Gemini)", false);
+    }
   }finally{
     setAiTranslateBusy(false);
   }
@@ -1177,9 +1161,10 @@ async function aiMakePron(){
   const ing = document.getElementById("edit-ing")?.value || "";
   if(!ing.trim()) return;
 
-  const res = await callLanguageApi("/ai/assist", { task:"make_pron", text: ing });
-  if(res?.text){
-    document.getElementById("edit-pron").value = res.text.toLowerCase().trim();
+  const fromPhrase = findPhrasePronByIng(ing);
+  const pron = fromPhrase || transliterateIngushToPron(ing);
+  if(pron){
+    document.getElementById("edit-pron").value = pron;
   }
 }
 

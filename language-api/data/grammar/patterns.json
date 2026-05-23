@@ -258,6 +258,48 @@
       ]
     },
     {
+      "id": "give_water_colloquial",
+      "ruPattern": "дай воду",
+      "description": "Give water (colloquial: Хи да)",
+      "slots": [],
+      "ingTemplate": "Хи да",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "дай воду",
+          "ing_expected": "Хи да"
+        }
+      ]
+    },
+    {
+      "id": "want_drink_water_colloquial",
+      "ruPattern": "хочу пить",
+      "description": "Want to drink (colloquial short: Малх ба)",
+      "slots": [],
+      "ingTemplate": "Малх ба",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "хочу пить",
+          "ing_expected": "Малх ба"
+        }
+      ]
+    },
+    {
+      "id": "bring_water_colloquial",
+      "ruPattern": "принеси воду",
+      "description": "Bring water (colloquial: Оамал йи)",
+      "slots": [],
+      "ingTemplate": "Оамал йи",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "принеси воду",
+          "ing_expected": "Оамал йи"
+        }
+      ]
+    },
+    {
       "id": "i_am_here",
       "ruPattern": "я здесь",
       "description": "I am here (confirming presence: Со укхаз ва, not az укхаза / Со хьокха)",
@@ -10644,14 +10686,14 @@
     {
       "id": "malsagov_focus_where_water",
       "ruPattern": "где вода",
-      "description": "High-priority lexical phrase for water location",
+      "description": "Where is water (colloquial: Мичад хи, not Мичай хи?)",
       "slots": [],
-      "ingTemplate": "МИЧАЙ ХИ?",
+      "ingTemplate": "Мичад хи",
       "priority": 99,
       "examples": [
         {
           "ru": "где вода",
-          "ing_expected": "МИЧАЙ ХИ?"
+          "ing_expected": "Мичад хи"
         }
       ]
     },

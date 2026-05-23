@@ -78,7 +78,10 @@ async function route(req, res) {
 
   if (req.method === "POST" && path === "/translate") {
     const body = await readBody(req);
-    const result = await translate(body?.ru || "");
+    const result = await translate(body?.ru || "", {
+      skipHabar: !!body?.skipHabar,
+      excludeSources: Array.isArray(body?.excludeSources) ? body.excludeSources : []
+    });
     if (!result.ok) {
       return sendJson(res, result.status || 400, { ok: false, error: result.error });
     }

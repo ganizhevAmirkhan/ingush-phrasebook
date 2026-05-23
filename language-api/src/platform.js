@@ -550,11 +550,16 @@ function jaccard(aSet, bSet) {
   return union ? intersection / union : 0;
 }
 
-function findPhraseBest(ruText) {
+function findPhraseBest(ruText, options = {}) {
+  const exclude = new Set((options.excludeSources || []).map((s) => s.toLowerCase()));
+  const phrases = exclude.size
+    ? state.phrases.filter((phrase) => !exclude.has((phrase.source || "").toLowerCase()))
+    : state.phrases;
+
   const norm = normalizeText(ruText);
   if (!norm) return null;
 
-  const exactMatches = state.phrases.filter((phrase) => phrase.ruNorm === norm);
+  const exactMatches = phrases.filter((phrase) => phrase.ruNorm === norm);
   if (exactMatches.length) {
     exactMatches.sort((a, b) => {
       const pa = PHRASE_SOURCE_PRIORITY[a.source] || 0;
@@ -570,7 +575,7 @@ function findPhraseBest(ruText) {
 
   let best = null;
   let bestScore = 0;
-  for (const phrase of state.phrases) {
+  for (const phrase of phrases) {
     if (!phrase.ruTokens.length) continue;
     const score = jaccard(target, new Set(phrase.ruTokens));
     if (score > bestScore) {
@@ -756,12 +761,20 @@ async function appendModeration(item) {
   await fs.appendFile(MODERATION_LOG, `${JSON.stringify(item)}\n`, "utf8").catch(() => {});
 }
 
-async function translate(ruText) {
+async function translate(ruText, options = {}) {
   state.metrics.translateTotal += 1;
   const ru = (ruText || "").toString().trim();
   if (!ru) {
     return { ok: false, status: 400, error: "empty_ru" };
   }
+
+  const excludeSources = [
+    ...(Array.isArray(options.excludeSources) ? options.excludeSources : [])
+  ];
+  if (options.skipHabar) {
+    excludeSources.push(SOURCE.HABAR, SOURCE.CORPUS);
+  }
+  const phraseOptions = excludeSources.length ? { excludeSources } : {};
 
   const ruNormForRouting = ` ${normalizeText(ru)} `;
   const isNegationInput = [" не ", " нет ", " никто ", " ничто ", " ничего ", " никогда "]
@@ -836,7 +849,7 @@ async function translate(ruText) {
     };
   }
 
-  const phrase = findPhraseBest(ru);
+  const phrase = findPhraseBest(ru, phraseOptions);
   if (phrase) {
     if (phrase.source === SOURCE.PAYDADOSH) state.metrics.translateFromPaydaDosh += 1;
     else state.metrics.translateFromPhrase += 1;
