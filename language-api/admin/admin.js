@@ -164,6 +164,7 @@ function renderList(el, items, activeKey, onClick, labelFn) {
 }
 
 const PAGE_SIZE = 100;
+const SHOW_ALL_LIMIT = 5000;
 
 function updateListMeta(metaId, total, offset, shown) {
   const el = document.getElementById(metaId);
@@ -174,26 +175,31 @@ function updateListMeta(metaId, total, offset, shown) {
   }
   const from = offset + 1;
   const to = offset + shown;
-  el.textContent = `Показано ${from}–${to} из ${total}`;
+  el.textContent = `Всего: ${total} · на экране ${from}–${to}`;
 }
 
-function setPagerButtons(prevId, nextId, offset, total, pageSize = PAGE_SIZE) {
+function setPagerButtons(prevId, nextId, pageId, offset, total, pageSize) {
   const prev = document.getElementById(prevId);
   const next = document.getElementById(nextId);
+  const page = document.getElementById(pageId);
+  const pages = Math.max(1, Math.ceil(total / pageSize));
+  const current = Math.min(pages, Math.floor(offset / pageSize) + 1);
   if (prev) prev.disabled = offset <= 0;
   if (next) next.disabled = offset + pageSize >= total;
+  if (page) page.textContent = `${current} / ${pages}`;
 }
 
 let patternsActive = "";
 let patternsOffset = 0;
+let patternsPageSize = PAGE_SIZE;
 
 async function loadPatterns() {
   const q = document.getElementById("patterns-search")?.value.trim() || "";
-  const { json } = await api(`/grammar/patterns?q=${encodeURIComponent(q)}&limit=${PAGE_SIZE}&offset=${patternsOffset}`);
+  const { json } = await api(`/grammar/patterns?q=${encodeURIComponent(q)}&limit=${patternsPageSize}&offset=${patternsOffset}`);
   const total = json.total || 0;
   const items = json.items || [];
   updateListMeta("patterns-meta", total, patternsOffset, items.length);
-  setPagerButtons("patterns-prev", "patterns-next", patternsOffset, total);
+  setPagerButtons("patterns-prev", "patterns-next", "patterns-page", patternsOffset, total, patternsPageSize);
   renderList(
     document.getElementById("patterns-list"),
     json.items || [],
@@ -271,14 +277,15 @@ async function deletePattern() {
 
 let lexemeActive = "";
 let lexemesOffset = 0;
+let lexemesPageSize = PAGE_SIZE;
 
 async function loadLexemes() {
   const q = document.getElementById("lexemes-search")?.value.trim() || "";
-  const { json } = await api(`/grammar/lexemes?q=${encodeURIComponent(q)}&limit=${PAGE_SIZE}&offset=${lexemesOffset}`);
+  const { json } = await api(`/grammar/lexemes?q=${encodeURIComponent(q)}&limit=${lexemesPageSize}&offset=${lexemesOffset}`);
   const total = json.total || 0;
   const items = json.items || [];
   updateListMeta("lexemes-meta", total, lexemesOffset, items.length);
-  setPagerButtons("lexemes-prev", "lexemes-next", lexemesOffset, total);
+  setPagerButtons("lexemes-prev", "lexemes-next", "lexemes-page", lexemesOffset, total, lexemesPageSize);
   renderList(
     document.getElementById("lexemes-list"),
     items,
@@ -508,26 +515,36 @@ function bindEvents() {
     btn.addEventListener("click", () => switchTab(btn.dataset.tab));
   });
 
-  document.getElementById("patterns-search")?.addEventListener("input", () => { patternsOffset = 0; loadPatterns(); });
+  document.getElementById("patterns-search")?.addEventListener("input", () => { patternsOffset = 0; patternsPageSize = PAGE_SIZE; loadPatterns(); });
   document.getElementById("patterns-prev")?.addEventListener("click", () => {
-    patternsOffset = Math.max(0, patternsOffset - PAGE_SIZE);
+    patternsOffset = Math.max(0, patternsOffset - patternsPageSize);
     loadPatterns();
   });
   document.getElementById("patterns-next")?.addEventListener("click", () => {
-    patternsOffset += PAGE_SIZE;
+    patternsOffset += patternsPageSize;
+    loadPatterns();
+  });
+  document.getElementById("patterns-all")?.addEventListener("click", () => {
+    patternsPageSize = SHOW_ALL_LIMIT;
+    patternsOffset = 0;
     loadPatterns();
   });
   document.getElementById("patterns-new")?.addEventListener("click", newPattern);
   document.getElementById("pattern-form")?.addEventListener("submit", savePattern);
   document.getElementById("pattern-delete")?.addEventListener("click", deletePattern);
 
-  document.getElementById("lexemes-search")?.addEventListener("input", () => { lexemesOffset = 0; loadLexemes(); });
+  document.getElementById("lexemes-search")?.addEventListener("input", () => { lexemesOffset = 0; lexemesPageSize = PAGE_SIZE; loadLexemes(); });
   document.getElementById("lexemes-prev")?.addEventListener("click", () => {
-    lexemesOffset = Math.max(0, lexemesOffset - PAGE_SIZE);
+    lexemesOffset = Math.max(0, lexemesOffset - lexemesPageSize);
     loadLexemes();
   });
   document.getElementById("lexemes-next")?.addEventListener("click", () => {
-    lexemesOffset += PAGE_SIZE;
+    lexemesOffset += lexemesPageSize;
+    loadLexemes();
+  });
+  document.getElementById("lexemes-all")?.addEventListener("click", () => {
+    lexemesPageSize = SHOW_ALL_LIMIT;
+    lexemesOffset = 0;
     loadLexemes();
   });
   document.getElementById("lexemes-new")?.addEventListener("click", newLexeme);

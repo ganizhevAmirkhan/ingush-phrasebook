@@ -52,7 +52,7 @@ function paginate(items, { q = "", offset = 0, limit = 50, fields = [] } = {}) {
     list = list.filter((item) => fields.some((f) => normalizeText(item?.[f]).includes(query)));
   }
   const total = list.length;
-  const slice = list.slice(Number(offset) || 0, (Number(offset) || 0) + Math.min(Number(limit) || 50, 200));
+  const slice = list.slice(Number(offset) || 0, (Number(offset) || 0) + Math.min(Number(limit) || 50, 5000));
   return { total, offset: Number(offset) || 0, limit: slice.length, items: slice };
 }
 
