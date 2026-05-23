@@ -129,15 +129,15 @@
     },
     {
       "ru": "Мне нужен чай",
-      "ing": "СУН чай ДЕЗА.",
-      "pron": "sun chay deza.",
+      "ing": "Са чай давах",
+      "pron": "sa chai davakh",
       "id": "f_1766030410812_ur71",
       "audio": "f_1766030410812_ur71.webm"
     },
     {
       "ru": "Мне нужен кофе",
-      "ing": "Са кофе давах",
-      "pron": "sa kofe davakh",
+      "ing": "СУН кофи ДЕЗА.",
+      "pron": "sun kofi deza.",
       "id": "f_1766030410812_s2lk",
       "audio": "f_1766030410812_s2lk.webm"
     },
