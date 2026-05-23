@@ -314,6 +314,34 @@
       ]
     },
     {
+      "id": "i_am_at_home",
+      "ruPattern": "я дома",
+      "description": "I am at home (locative + copula ва, like presence marker: Со ц1ага ва)",
+      "slots": [],
+      "ingTemplate": "Со ц1ага ва",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "я дома",
+          "ing_expected": "Со ц1ага ва"
+        }
+      ]
+    },
+    {
+      "id": "i_work_at_home",
+      "ruPattern": "я дома работаю",
+      "description": "I work at home (Az + locative + finite verb бу)",
+      "slots": [],
+      "ingTemplate": "Аз ц1г1а болх бу",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "я дома работаю",
+          "ing_expected": "Аз ц1г1а болх бу"
+        }
+      ]
+    },
+    {
       "id": "we_are_there",
       "ruPattern": "мы там",
       "description": "We are there (confirming: Тхо цигахь да, not вай дIа / Тхо цугахь)",

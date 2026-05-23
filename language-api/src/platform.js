@@ -511,7 +511,52 @@ function tryGrammarPatternTranslate(ruText) {
   return { ok: false, translation: "" };
 }
 
+const CANNOT_INFINITIVE_DOSH = {
+  "дышать": "Суна са дах могац"
+};
+
+// Locative presence / activity at home (ва/бу copula markers must not be dropped).
+const AT_HOME_PHRASES_DOSH = {
+  "я дома": "Со ц1ага ва",
+  "я дома работаю": "Аз ц1г1а болх бу"
+};
+
+function tryComposeAtHomePhrase(ruText) {
+  const norm = normalizeText(ruText).replace(/[!?.…]+$/g, "").trim();
+  const translation = AT_HOME_PHRASES_DOSH[norm];
+  if (!translation) {
+    return { ok: false, translation: "" };
+  }
+  return { ok: true, translation };
+}
+
+function tryComposeCannotInfinitive(ruText) {
+  const norm = normalizeText(ruText).replace(/[!?.…]+$/g, "").trim();
+  const match = norm.match(/^я не могу (.+)$/);
+  if (!match) {
+    return { ok: false, translation: "" };
+  }
+
+  const verbRu = match[1].trim();
+  const translation = CANNOT_INFINITIVE_DOSH[verbRu];
+  if (!translation) {
+    return { ok: false, translation: "" };
+  }
+
+  return { ok: true, translation };
+}
+
 function composeFromDictionaryTokens(ruText) {
+  const atHome = tryComposeAtHomePhrase(ruText);
+  if (atHome.ok) {
+    return atHome;
+  }
+
+  const cannotInf = tryComposeCannotInfinitive(ruText);
+  if (cannotInf.ok) {
+    return cannotInf;
+  }
+
   const tokens = tokenizeRu(ruText);
   if (!tokens.length || tokens.length < 2) {
     return { ok: false, translation: "", covered: 0, total: tokens.length };
