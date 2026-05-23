@@ -276,6 +276,11 @@ async function route(req, res) {
       const apiPath = path.slice("/admin/api".length) || "/";
       return adminApiRoute(req, res, apiPath, url);
     }
+    if (path === "/admin" && req.method === "GET") {
+      res.writeHead(302, { Location: "/admin/" });
+      res.end();
+      return;
+    }
     return sendAdminStatic(req, res, path);
   }
 
