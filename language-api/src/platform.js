@@ -156,6 +156,9 @@ async function loadLessonColloquialPhrases() {
   return out;
 }
 
+// Habar phrasebook is excluded from /translate until re-enabled (avoids circular lookups).
+const DISABLE_HABAR_PHRASE_SOURCE = true;
+
 const PHRASE_SOURCE_PRIORITY = {
   [SOURCE.PAYDADOSH]: 4,
   [SOURCE.HABAR]: 3,
@@ -771,8 +774,11 @@ async function translate(ruText, options = {}) {
   const excludeSources = [
     ...(Array.isArray(options.excludeSources) ? options.excludeSources : [])
   ];
+  if (DISABLE_HABAR_PHRASE_SOURCE || options.skipHabar) {
+    excludeSources.push(SOURCE.HABAR);
+  }
   if (options.skipHabar) {
-    excludeSources.push(SOURCE.HABAR, SOURCE.CORPUS);
+    excludeSources.push(SOURCE.CORPUS);
   }
   const phraseOptions = excludeSources.length ? { excludeSources } : {};
 
