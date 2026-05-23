@@ -163,11 +163,37 @@ function renderList(el, items, activeKey, onClick, labelFn) {
   });
 }
 
+const PAGE_SIZE = 100;
+
+function updateListMeta(metaId, total, offset, shown) {
+  const el = document.getElementById(metaId);
+  if (!el) return;
+  if (!total) {
+    el.textContent = "Ничего не найдено";
+    return;
+  }
+  const from = offset + 1;
+  const to = offset + shown;
+  el.textContent = `Показано ${from}–${to} из ${total}`;
+}
+
+function setPagerButtons(prevId, nextId, offset, total, pageSize = PAGE_SIZE) {
+  const prev = document.getElementById(prevId);
+  const next = document.getElementById(nextId);
+  if (prev) prev.disabled = offset <= 0;
+  if (next) next.disabled = offset + pageSize >= total;
+}
+
 let patternsActive = "";
+let patternsOffset = 0;
 
 async function loadPatterns() {
   const q = document.getElementById("patterns-search")?.value.trim() || "";
-  const { json } = await api(`/grammar/patterns?q=${encodeURIComponent(q)}&limit=80`);
+  const { json } = await api(`/grammar/patterns?q=${encodeURIComponent(q)}&limit=${PAGE_SIZE}&offset=${patternsOffset}`);
+  const total = json.total || 0;
+  const items = json.items || [];
+  updateListMeta("patterns-meta", total, patternsOffset, items.length);
+  setPagerButtons("patterns-prev", "patterns-next", patternsOffset, total);
   renderList(
     document.getElementById("patterns-list"),
     json.items || [],
@@ -244,13 +270,18 @@ async function deletePattern() {
 }
 
 let lexemeActive = "";
+let lexemesOffset = 0;
 
 async function loadLexemes() {
   const q = document.getElementById("lexemes-search")?.value.trim() || "";
-  const { json } = await api(`/grammar/lexemes?q=${encodeURIComponent(q)}&limit=80`);
+  const { json } = await api(`/grammar/lexemes?q=${encodeURIComponent(q)}&limit=${PAGE_SIZE}&offset=${lexemesOffset}`);
+  const total = json.total || 0;
+  const items = json.items || [];
+  updateListMeta("lexemes-meta", total, lexemesOffset, items.length);
+  setPagerButtons("lexemes-prev", "lexemes-next", lexemesOffset, total);
   renderList(
     document.getElementById("lexemes-list"),
-    json.items || [],
+    items,
     lexemeActive,
     loadLexemeEditor,
     {
@@ -477,12 +508,28 @@ function bindEvents() {
     btn.addEventListener("click", () => switchTab(btn.dataset.tab));
   });
 
-  document.getElementById("patterns-search")?.addEventListener("input", () => loadPatterns());
+  document.getElementById("patterns-search")?.addEventListener("input", () => { patternsOffset = 0; loadPatterns(); });
+  document.getElementById("patterns-prev")?.addEventListener("click", () => {
+    patternsOffset = Math.max(0, patternsOffset - PAGE_SIZE);
+    loadPatterns();
+  });
+  document.getElementById("patterns-next")?.addEventListener("click", () => {
+    patternsOffset += PAGE_SIZE;
+    loadPatterns();
+  });
   document.getElementById("patterns-new")?.addEventListener("click", newPattern);
   document.getElementById("pattern-form")?.addEventListener("submit", savePattern);
   document.getElementById("pattern-delete")?.addEventListener("click", deletePattern);
 
-  document.getElementById("lexemes-search")?.addEventListener("input", () => loadLexemes());
+  document.getElementById("lexemes-search")?.addEventListener("input", () => { lexemesOffset = 0; loadLexemes(); });
+  document.getElementById("lexemes-prev")?.addEventListener("click", () => {
+    lexemesOffset = Math.max(0, lexemesOffset - PAGE_SIZE);
+    loadLexemes();
+  });
+  document.getElementById("lexemes-next")?.addEventListener("click", () => {
+    lexemesOffset += PAGE_SIZE;
+    loadLexemes();
+  });
   document.getElementById("lexemes-new")?.addEventListener("click", newLexeme);
   document.getElementById("lexeme-form")?.addEventListener("submit", saveLexeme);
   document.getElementById("lexeme-delete")?.addEventListener("click", deleteLexeme);

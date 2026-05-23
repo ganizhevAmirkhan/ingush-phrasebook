@@ -151,7 +151,24 @@ body {
   .split { grid-template-columns: 1fr; }
 }
 
-.list {
+.list-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #555;
+}
+.pager { display: flex; gap: 6px; }
+.pager button {
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+}
+.pager button:disabled { opacity: 0.4; cursor: default; }
+
   background: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 10px;
