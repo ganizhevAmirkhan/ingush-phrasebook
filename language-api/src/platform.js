@@ -511,6 +511,53 @@ function tryGrammarPatternTranslate(ruText) {
   return { ok: false, translation: "" };
 }
 
+const NEED_INFINITIVE_VERB_DOSH = {
+  "идти": "даваха"
+};
+
+function lookupDoshInfinitive(ruVerb) {
+  const norm = normalizeText(ruVerb);
+  if (!norm) return "";
+  if (NEED_INFINITIVE_VERB_DOSH[norm]) {
+    return NEED_INFINITIVE_VERB_DOSH[norm];
+  }
+
+  const word = findWordExact(ruVerb) || findWordForToken(norm);
+  if (!word) return "";
+
+  const variants = Array.isArray(word.ingVariants) ? word.ingVariants : [];
+  const expanded = variants
+    .flatMap((raw) => (raw ?? "").toString().split("*"))
+    .map((part) => part.split("(")[0].replace(/\s+/g, " ").trim())
+    .filter(Boolean);
+
+  const motion = expanded.find((v) => /вах/i.test(v));
+  if (motion) return motion;
+
+  return pickBaseVariantFromWord(word);
+}
+
+function tryComposeNeedInfinitive(ruText) {
+  const norm = normalizeText(ruText).replace(/[!?.…]+$/g, "").trim();
+
+  if (norm === "мне нужно идти") {
+    return { ok: true, translation: "Са давах вез" };
+  }
+
+  const match = norm.match(/^мне надо (.+)$/);
+  if (!match) {
+    return { ok: false, translation: "" };
+  }
+
+  const verbRu = match[1].trim();
+  const verbIng = lookupDoshInfinitive(verbRu);
+  if (!verbIng) {
+    return { ok: false, translation: "" };
+  }
+
+  return { ok: true, translation: `Са веза ${verbIng}` };
+}
+
 const CANNOT_INFINITIVE_DOSH = {
   "дышать": "Суна са дах могац"
 };
@@ -550,6 +597,11 @@ function composeFromDictionaryTokens(ruText) {
   const atHome = tryComposeAtHomePhrase(ruText);
   if (atHome.ok) {
     return atHome;
+  }
+
+  const needInf = tryComposeNeedInfinitive(ruText);
+  if (needInf.ok) {
+    return needInf;
   }
 
   const cannotInf = tryComposeCannotInfinitive(ruText);

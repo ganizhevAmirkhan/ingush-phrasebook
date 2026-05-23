@@ -2966,6 +2966,12 @@
       "expectedIng": "Ц1а вах безам ба са"
     },
     {
+      "id": "regression_mne_nado_idti",
+      "category": "misc",
+      "ru": "Мне надо идти",
+      "expectedIng": "Са веза даваха"
+    },
+    {
       "id": "f_1766024853692_t6wu",
       "category": "misc",
       "ru": "Мне нужно идти",

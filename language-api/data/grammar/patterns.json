@@ -314,6 +314,20 @@
       ]
     },
     {
+      "id": "i_need_to_go_nuzhno",
+      "ruPattern": "мне нужно идти",
+      "description": "Need to go (phrasebook: Са давах вез)",
+      "slots": [],
+      "ingTemplate": "Са давах вез",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "мне нужно идти",
+          "ing_expected": "Са давах вез"
+        }
+      ]
+    },
+    {
       "id": "i_am_at_home",
       "ruPattern": "я дома",
       "description": "I am at home (locative + copula ва, like presence marker: Со ц1ага ва)",
