@@ -9967,6 +9967,918 @@
           "ing_expected": "Ц1АГАРА ВОАКХА ВА СО."
         }
       ]
+    },
+    {
+      "id": "generic_i_need_object_masc",
+      "ruPattern": "мне нужен {X}",
+      "description": "Generic need + noun (masculine phrasing)",
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
+      "ingTemplate": "СУН {X_BASE} ДЕЗА.",
+      "priority": 86,
+      "examples": [
+        {
+          "ru": "мне нужен песок",
+          "ing_expected": "СУН Г1УЛ ДЕЗА."
+        }
+      ]
+    },
+    {
+      "id": "generic_i_need_object_fem",
+      "ruPattern": "мне нужна {X}",
+      "description": "Generic need + noun (feminine phrasing)",
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
+      "ingTemplate": "СУН {X_BASE} ДЕЗА.",
+      "priority": 86,
+      "examples": [
+        {
+          "ru": "мне нужна польза",
+          "ing_expected": "СУН ПАЙДА ДЕЗА."
+        }
+      ]
+    },
+    {
+      "id": "generic_i_need_object_neutral",
+      "ruPattern": "мне нужно {X}",
+      "description": "Generic need + noun (neutral phrasing)",
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
+      "ingTemplate": "СУН {X_BASE} ДЕЗА.",
+      "priority": 86,
+      "examples": [
+        {
+          "ru": "мне нужно дело",
+          "ing_expected": "СУН Г1УЛЛАКХ ДЕЗА."
+        }
+      ]
+    },
+    {
+      "id": "generic_i_have_object",
+      "ruPattern": "у меня есть {X}",
+      "description": "Generic possession phrase",
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
+      "ingTemplate": "{X_BASE} ДА СА.",
+      "priority": 86,
+      "examples": [
+        {
+          "ru": "у меня есть враг",
+          "ing_expected": "МОАСТАГ ДА СА."
+        }
+      ]
+    },
+    {
+      "id": "generic_i_have_no_object",
+      "ruPattern": "у меня нет {X}",
+      "description": "Generic negative possession phrase",
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
+      "ingTemplate": "{X_BASE} ДАЦ СА.",
+      "priority": 86,
+      "examples": [
+        {
+          "ru": "у меня нет колодца",
+          "ing_expected": "Г1УВ ДАЦ СА."
+        }
+      ]
+    },
+    {
+      "id": "generic_where_is_located",
+      "ruPattern": "где находится {X}",
+      "description": "Generic location question",
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
+      "ingTemplate": "МИЧАЙ {X_BASE}?",
+      "priority": 86,
+      "examples": [
+        {
+          "ru": "где находится колодец",
+          "ing_expected": "МИЧАЙ Г1УВ?"
+        }
+      ]
+    },
+    {
+      "id": "generic_this_is_object",
+      "ruPattern": "это {X}",
+      "description": "Generic demonstrative phrase",
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
+      "ingTemplate": "ЕР {X_BASE}.",
+      "priority": 84,
+      "examples": [
+        {
+          "ru": "это свет",
+          "ing_expected": "ЕР СЕРДАЛО."
+        }
+      ]
+    },
+    {
+      "id": "generic_my_object",
+      "ruPattern": "мой {X}",
+      "description": "Generic possessive noun phrase (my)",
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
+      "ingTemplate": "СА {X_BASE}",
+      "priority": 84,
+      "examples": [
+        {
+          "ru": "мой язык",
+          "ing_expected": "СА МОТТ"
+        }
+      ]
+    },
+    {
+      "id": "generic_my_object_fem_ru",
+      "ruPattern": "моя {X}",
+      "description": "Generic possessive noun phrase (my/feminine in Russian)",
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
+      "ingTemplate": "СА {X_BASE}",
+      "priority": 84,
+      "examples": [
+        {
+          "ru": "моя сестра",
+          "ing_expected": "СА ЙИША"
+        }
+      ]
+    },
+    {
+      "id": "generic_many_objects",
+      "ruPattern": "много {X}",
+      "description": "Generic quantity phrase (many)",
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
+      "ingTemplate": "ДУКХА {X_BASE}",
+      "priority": 83,
+      "examples": [
+        {
+          "ru": "много пользы",
+          "ing_expected": "ДУКХА ПАЙДА"
+        }
+      ]
+    },
+    {
+      "id": "generic_few_objects",
+      "ruPattern": "мало {X}",
+      "description": "Generic quantity phrase (few/little)",
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
+      "ingTemplate": "КIЕЗИГА {X_BASE}",
+      "priority": 83,
+      "examples": [
+        {
+          "ru": "мало света",
+          "ing_expected": "КIЕЗИГА СЕРДАЛО"
+        }
+      ]
+    },
+    {
+      "id": "generic_six_objects",
+      "ruPattern": "шесть {X}",
+      "description": "Generic numeral phrase",
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
+      "ingTemplate": "ЙАЛХ {X_BASE}",
+      "priority": 83,
+      "examples": [
+        {
+          "ru": "шесть человек",
+          "ing_expected": "ЙАЛХ САГ"
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_need_water",
+      "ruPattern": "мне нужна вода",
+      "description": "High-priority lexical phrase for water need",
+      "slots": [],
+      "ingTemplate": "СУН ХИ ДЕЗА.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "мне нужна вода",
+          "ing_expected": "СУН ХИ ДЕЗА."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_where_water",
+      "ruPattern": "где вода",
+      "description": "High-priority lexical phrase for water location",
+      "slots": [],
+      "ingTemplate": "МИЧАЙ ХИ?",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "где вода",
+          "ing_expected": "МИЧАЙ ХИ?"
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_this_is_water",
+      "ruPattern": "это вода",
+      "description": "High-priority lexical phrase for demonstrative water",
+      "slots": [],
+      "ingTemplate": "ЕР ХИ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "это вода",
+          "ing_expected": "ЕР ХИ."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_this_is_light",
+      "ruPattern": "это свет",
+      "description": "High-priority lexical phrase for demonstrative light",
+      "slots": [],
+      "ingTemplate": "ЕР СЕРДАЛО.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "это свет",
+          "ing_expected": "ЕР СЕРДАЛО."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_much_water",
+      "ruPattern": "много воды",
+      "description": "High-priority lexical phrase for much water",
+      "slots": [],
+      "ingTemplate": "ДУКХА ХИ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "много воды",
+          "ing_expected": "ДУКХА ХИ."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_little_water",
+      "ruPattern": "мало воды",
+      "description": "High-priority lexical phrase for little water",
+      "slots": [],
+      "ingTemplate": "КIЕЗИГА ХИ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "мало воды",
+          "ing_expected": "КIЕЗИГА ХИ."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_my_language",
+      "ruPattern": "мой язык",
+      "description": "High-priority lexical phrase for possessive language",
+      "slots": [],
+      "ingTemplate": "СА МОТТ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "мой язык",
+          "ing_expected": "СА МОТТ."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_my_sister",
+      "ruPattern": "моя сестра",
+      "description": "High-priority lexical phrase for possessive sister",
+      "slots": [],
+      "ingTemplate": "СА ЙИША.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "моя сестра",
+          "ing_expected": "СА ЙИША."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_have_enemy",
+      "ruPattern": "у меня есть враг",
+      "description": "High-priority lexical phrase for enemy possession",
+      "slots": [],
+      "ingTemplate": "МОАСТАГ ДА СА.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "у меня есть враг",
+          "ing_expected": "МОАСТАГ ДА СА."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_no_enemy",
+      "ruPattern": "у меня нет врага",
+      "description": "High-priority lexical phrase for no enemy",
+      "slots": [],
+      "ingTemplate": "МОАСТАГ ДАЦ СА.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "у меня нет врага",
+          "ing_expected": "МОАСТАГ ДАЦ СА."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_this_is_enemy",
+      "ruPattern": "это враг",
+      "description": "High-priority lexical phrase for demonstrative enemy",
+      "slots": [],
+      "ingTemplate": "ЕР МОАСТАГ ВА.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "это враг",
+          "ing_expected": "ЕР МОАСТАГ ВА."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_six_people",
+      "ruPattern": "шесть человек",
+      "description": "High-priority lexical phrase for six people",
+      "slots": [],
+      "ingTemplate": "ЙАЛХ САГ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "шесть человек",
+          "ing_expected": "ЙАЛХ САГ."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_where_well",
+      "ruPattern": "где колодец",
+      "description": "High-priority lexical phrase for well location",
+      "slots": [],
+      "ingTemplate": "МИЧАЙ Г1УВ?",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "где колодец",
+          "ing_expected": "МИЧАЙ Г1УВ?"
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_this_is_well",
+      "ruPattern": "это колодец",
+      "description": "High-priority lexical phrase for demonstrative well",
+      "slots": [],
+      "ingTemplate": "ЕР Г1УВ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "это колодец",
+          "ing_expected": "ЕР Г1УВ."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_i_speak",
+      "ruPattern": "я говорю",
+      "description": "High-priority lexical phrase for speaking",
+      "slots": [],
+      "ingTemplate": "СО ЙАХА.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "я говорю",
+          "ing_expected": "СО ЙАХА."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_i_write",
+      "ruPattern": "я пишу",
+      "description": "High-priority lexical phrase for writing",
+      "slots": [],
+      "ingTemplate": "СО ЙАЗДУ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "я пишу",
+          "ing_expected": "СО ЙАЗДУ."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_i_stand",
+      "ruPattern": "я стою",
+      "description": "High-priority lexical phrase for standing",
+      "slots": [],
+      "ingTemplate": "СО ЛАТТ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "я стою",
+          "ing_expected": "СО ЛАТТ."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_i_play",
+      "ruPattern": "я играю",
+      "description": "High-priority lexical phrase for playing",
+      "slots": [],
+      "ingTemplate": "СО ЛАКХА.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "я играю",
+          "ing_expected": "СО ЛАКХА."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_i_smoke",
+      "ruPattern": "я курю",
+      "description": "High-priority lexical phrase for smoking",
+      "slots": [],
+      "ingTemplate": "СО ОЗАР.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "я курю",
+          "ing_expected": "СО ОЗАР."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_i_hear",
+      "ruPattern": "я слышу",
+      "description": "High-priority lexical phrase for hearing",
+      "slots": [],
+      "ingTemplate": "СО ХАЗА.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "я слышу",
+          "ing_expected": "СО ХАЗА."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_speak_imperative",
+      "ruPattern": "говори",
+      "description": "High-priority lexical imperative phrase",
+      "slots": [],
+      "ingTemplate": "ЙАХА.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "говори",
+          "ing_expected": "ЙАХА."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_write_imperative",
+      "ruPattern": "пиши",
+      "description": "High-priority lexical imperative for writing",
+      "slots": [],
+      "ingTemplate": "ЙАЗДЕ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "пиши",
+          "ing_expected": "ЙАЗДЕ."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_listen_imperative",
+      "ruPattern": "слушай",
+      "description": "High-priority lexical imperative for hearing",
+      "slots": [],
+      "ingTemplate": "ХАЗА.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "слушай",
+          "ing_expected": "ХАЗА."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_dont_write",
+      "ruPattern": "не пиши",
+      "description": "High-priority lexical negative imperative for writing",
+      "slots": [],
+      "ingTemplate": "МА ЙАЗДЕ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "не пиши",
+          "ing_expected": "МА ЙАЗДЕ."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_dont_smoke",
+      "ruPattern": "не кури",
+      "description": "High-priority lexical negative imperative for smoking",
+      "slots": [],
+      "ingTemplate": "МА ОЗАР.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "не кури",
+          "ing_expected": "МА ОЗАР."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_play_imperative",
+      "ruPattern": "играй",
+      "description": "High-priority lexical imperative for playing",
+      "slots": [],
+      "ingTemplate": "ЛАКХА.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "играй",
+          "ing_expected": "ЛАКХА."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_q_do_you_speak",
+      "ruPattern": "ты говоришь",
+      "description": "High-priority lexical question for speaking",
+      "slots": [],
+      "ingTemplate": "ЙАХА IА?",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "ты говоришь",
+          "ing_expected": "ЙАХА IА?"
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_q_do_you_write",
+      "ruPattern": "ты пишешь",
+      "description": "High-priority lexical question for writing",
+      "slots": [],
+      "ingTemplate": "ЙАЗДУ IА?",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "ты пишешь",
+          "ing_expected": "ЙАЗДУ IА?"
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_q_do_you_hear",
+      "ruPattern": "ты слышишь",
+      "description": "High-priority lexical question for hearing",
+      "slots": [],
+      "ingTemplate": "ХАЗА IА?",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "ты слышишь",
+          "ing_expected": "ХАЗА IА?"
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_q_do_you_stand",
+      "ruPattern": "ты стоишь",
+      "description": "High-priority lexical question for standing",
+      "slots": [],
+      "ingTemplate": "ЛАТТ IА?",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "ты стоишь",
+          "ing_expected": "ЛАТТ IА?"
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_q_do_you_play",
+      "ruPattern": "ты играешь",
+      "description": "High-priority lexical question for playing",
+      "slots": [],
+      "ingTemplate": "ЛАКХА IА?",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "ты играешь",
+          "ing_expected": "ЛАКХА IА?"
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_q_do_you_smoke",
+      "ruPattern": "ты куришь",
+      "description": "High-priority lexical question for smoking",
+      "slots": [],
+      "ingTemplate": "ОЗАР IА?",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "ты куришь",
+          "ing_expected": "ОЗАР IА?"
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_q_what_you_say",
+      "ruPattern": "что ты говоришь",
+      "description": "High-priority lexical question what you say",
+      "slots": [],
+      "ingTemplate": "ФУ ЙАХА IА?",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "что ты говоришь",
+          "ing_expected": "ФУ ЙАХА IА?"
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_q_what_you_write",
+      "ruPattern": "что ты пишешь",
+      "description": "High-priority lexical question what you write",
+      "slots": [],
+      "ingTemplate": "ФУ ЙАЗДУ IА?",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "что ты пишешь",
+          "ing_expected": "ФУ ЙАЗДУ IА?"
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_q_what_you_hear",
+      "ruPattern": "что ты слышишь",
+      "description": "High-priority lexical question what you hear",
+      "slots": [],
+      "ingTemplate": "ФУ ХАЗА IА?",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "что ты слышишь",
+          "ing_expected": "ФУ ХАЗА IА?"
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_q_what_you_play",
+      "ruPattern": "на чем ты играешь",
+      "description": "High-priority lexical question what instrument you play",
+      "slots": [],
+      "ingTemplate": "ФУН ТIА ЛАКХА IА?",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "на чем ты играешь",
+          "ing_expected": "ФУН ТIА ЛАКХА IА?"
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_i_do_not_speak",
+      "ruPattern": "я не говорю",
+      "description": "High-priority lexical negative phrase for speaking",
+      "slots": [],
+      "ingTemplate": "СО ЙАХАЦ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "я не говорю",
+          "ing_expected": "СО ЙАХАЦ."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_i_do_not_write",
+      "ruPattern": "я не пишу",
+      "description": "High-priority lexical negative phrase for writing",
+      "slots": [],
+      "ingTemplate": "СО ЙАЗДАЦ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "я не пишу",
+          "ing_expected": "СО ЙАЗДАЦ."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_i_do_not_hear",
+      "ruPattern": "я не слышу",
+      "description": "High-priority lexical negative phrase for hearing",
+      "slots": [],
+      "ingTemplate": "СО ХАЗАЦ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "я не слышу",
+          "ing_expected": "СО ХАЗАЦ."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_i_do_not_stand",
+      "ruPattern": "я не стою",
+      "description": "High-priority lexical negative phrase for standing",
+      "slots": [],
+      "ingTemplate": "СО ЛАТТАЦ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "я не стою",
+          "ing_expected": "СО ЛАТТАЦ."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_i_do_not_play",
+      "ruPattern": "я не играю",
+      "description": "High-priority lexical negative phrase for playing",
+      "slots": [],
+      "ingTemplate": "СО ЛАКХАЦ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "я не играю",
+          "ing_expected": "СО ЛАКХАЦ."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_i_do_not_smoke",
+      "ruPattern": "я не курю",
+      "description": "High-priority lexical negative phrase for smoking",
+      "slots": [],
+      "ingTemplate": "СО ОЗАРАЦ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "я не курю",
+          "ing_expected": "СО ОЗАРАЦ."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_speak_polite",
+      "ruPattern": "говорите",
+      "description": "High-priority lexical polite imperative for speaking",
+      "slots": [],
+      "ingTemplate": "ЙАХА.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "говорите",
+          "ing_expected": "ЙАХА."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_write_polite",
+      "ruPattern": "пишите",
+      "description": "High-priority lexical polite imperative for writing",
+      "slots": [],
+      "ingTemplate": "ЙАЗДЕ.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "пишите",
+          "ing_expected": "ЙАЗДЕ."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_listen_polite",
+      "ruPattern": "слушайте",
+      "description": "High-priority lexical polite imperative for hearing",
+      "slots": [],
+      "ingTemplate": "ХАЗА.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "слушайте",
+          "ing_expected": "ХАЗА."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_listen_once",
+      "ruPattern": "послушай",
+      "description": "High-priority lexical imperative listen once",
+      "slots": [],
+      "ingTemplate": "ХАЗА.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "послушай",
+          "ing_expected": "ХАЗА."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_listen_once_polite",
+      "ruPattern": "послушайте",
+      "description": "High-priority lexical polite imperative listen once",
+      "slots": [],
+      "ingTemplate": "ХАЗА.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "послушайте",
+          "ing_expected": "ХАЗА."
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_dont_listen",
+      "ruPattern": "не слушай",
+      "description": "High-priority lexical negative imperative for hearing",
+      "slots": [],
+      "ingTemplate": "МА ХАЗА.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "не слушай",
+          "ing_expected": "МА ХАЗА."
+        }
+      ]
     }
   ]
 }

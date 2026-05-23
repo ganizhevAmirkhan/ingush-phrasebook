@@ -4333,6 +4333,411 @@
         "base": "дукха вахалва хьо",
         "fem": "дукха яхийла хьо"
       }
+    },
+    {
+      "ru": "салам",
+      "pos": "noun",
+      "forms": {
+        "base": "салам",
+        "dat": "салама"
+      },
+      "notes": "Malsagov 1963 high-confidence dictionary layer"
+    },
+    {
+      "ru": "свет",
+      "pos": "noun",
+      "forms": {
+        "base": "сердало",
+        "dat": "сердалона"
+      },
+      "notes": "Malsagov 1963 high-confidence dictionary layer"
+    },
+    {
+      "ru": "просвещение",
+      "pos": "noun",
+      "forms": {
+        "base": "сердало",
+        "dat": "сердалона"
+      },
+      "notes": "Malsagov 1963 high-confidence dictionary layer"
+    },
+    {
+      "ru": "клеймо",
+      "pos": "noun",
+      "forms": {
+        "base": "фост",
+        "dat": "фоста"
+      },
+      "notes": "Malsagov 1963 high-confidence dictionary layer"
+    },
+    {
+      "ru": "тавро",
+      "pos": "noun",
+      "forms": {
+        "base": "фост",
+        "dat": "фоста"
+      },
+      "notes": "Malsagov 1963 high-confidence dictionary layer"
+    },
+    {
+      "ru": "слышать",
+      "pos": "verb",
+      "forms": {
+        "base": "хаза",
+        "dat": "хаза"
+      },
+      "notes": "Malsagov 1963 high-confidence dictionary layer"
+    },
+    {
+      "ru": "река",
+      "pos": "noun",
+      "forms": {
+        "base": "хий",
+        "dat": "хийна"
+      },
+      "notes": "Malsagov 1963 high-confidence dictionary layer"
+    },
+    {
+      "ru": "красивый",
+      "pos": "adj",
+      "forms": {
+        "base": "хоза",
+        "dat": "хозача"
+      },
+      "notes": "Malsagov 1963 high-confidence dictionary layer"
+    },
+    {
+      "ru": "шесть",
+      "pos": "numeral",
+      "forms": {
+        "base": "йалх",
+        "dat": "йалха"
+      },
+      "notes": "Malsagov 1963 high-confidence dictionary layer"
+    },
+    {
+      "ru": "сестра",
+      "pos": "noun",
+      "forms": {
+        "base": "йиша",
+        "dat": "йишена"
+      },
+      "notes": "Malsagov 1963 high-confidence dictionary layer"
+    },
+    {
+      "ru": "коран",
+      "pos": "noun",
+      "forms": {
+        "base": "къурIан",
+        "dat": "къурIана"
+      },
+      "notes": "Malsagov 1963 high-confidence dictionary layer"
+    },
+    {
+      "ru": "дело",
+      "pos": "noun",
+      "forms": {
+        "base": "г1уллакх",
+        "dat": "г1уллакха"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 2)"
+    },
+    {
+      "ru": "служба",
+      "pos": "noun",
+      "forms": {
+        "base": "г1уллакх",
+        "dat": "г1уллакха"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 2)"
+    },
+    {
+      "ru": "услуга",
+      "pos": "noun",
+      "forms": {
+        "base": "г1уллакх",
+        "dat": "г1уллакха"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 2)"
+    },
+    {
+      "ru": "служащий",
+      "pos": "noun",
+      "forms": {
+        "base": "г1улукхча",
+        "dat": "г1улукхча"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 2)"
+    },
+    {
+      "ru": "песок",
+      "pos": "noun",
+      "forms": {
+        "base": "г1ул",
+        "dat": "г1ула"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 2)"
+    },
+    {
+      "ru": "колодец",
+      "pos": "noun",
+      "forms": {
+        "base": "г1ув",
+        "dat": "г1ува"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 2)"
+    },
+    {
+      "ru": "паук",
+      "pos": "noun",
+      "forms": {
+        "base": "гийзг",
+        "dat": "гийзга"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 2)"
+    },
+    {
+      "ru": "говорить",
+      "pos": "verb",
+      "forms": {
+        "base": "йаха",
+        "dat": "йаха"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 2)"
+    },
+    {
+      "ru": "писать",
+      "pos": "verb",
+      "forms": {
+        "base": "йаз",
+        "dat": "йаз"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 2)"
+    },
+    {
+      "ru": "враг",
+      "pos": "noun",
+      "forms": {
+        "base": "моастаг",
+        "dat": "моастага"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 2)"
+    },
+    {
+      "ru": "язык",
+      "pos": "noun",
+      "forms": {
+        "base": "мотт",
+        "dat": "мотта"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 2)"
+    },
+    {
+      "ru": "корень",
+      "pos": "noun",
+      "forms": {
+        "base": "овла",
+        "dat": "овла"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 2)"
+    },
+    {
+      "ru": "польза",
+      "pos": "noun",
+      "forms": {
+        "base": "пайда",
+        "dat": "пайда"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 2)"
+    },
+    {
+      "ru": "выгода",
+      "pos": "noun",
+      "forms": {
+        "base": "пайда",
+        "dat": "пайда"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 2)"
+    },
+    {
+      "ru": "добыча",
+      "pos": "noun",
+      "forms": {
+        "base": "фос",
+        "dat": "фоса"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 2)"
+    },
+    {
+      "ru": "проясниться",
+      "pos": "verb",
+      "forms": {
+        "base": "йекх",
+        "dat": "йекх"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 3)"
+    },
+    {
+      "ru": "терпеть",
+      "pos": "verb",
+      "forms": {
+        "base": "лар",
+        "dat": "лар"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 3)"
+    },
+    {
+      "ru": "желать",
+      "pos": "verb",
+      "forms": {
+        "base": "лар",
+        "dat": "лар"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 3)"
+    },
+    {
+      "ru": "считать",
+      "pos": "verb",
+      "forms": {
+        "base": "ларх",
+        "dat": "ларх"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 3)"
+    },
+    {
+      "ru": "почитать",
+      "pos": "verb",
+      "forms": {
+        "base": "ларх",
+        "dat": "ларх"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 3)"
+    },
+    {
+      "ru": "стоять",
+      "pos": "verb",
+      "forms": {
+        "base": "латта",
+        "dat": "латта"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 3)"
+    },
+    {
+      "ru": "играть",
+      "pos": "verb",
+      "forms": {
+        "base": "лакха",
+        "dat": "лакха"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 3)"
+    },
+    {
+      "ru": "постель",
+      "pos": "noun",
+      "forms": {
+        "base": "мотт",
+        "dat": "мотта"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 3)"
+    },
+    {
+      "ru": "аул",
+      "pos": "noun",
+      "forms": {
+        "base": "овла",
+        "dat": "овла"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 3)"
+    },
+    {
+      "ru": "тянуть",
+      "pos": "verb",
+      "forms": {
+        "base": "озар",
+        "dat": "озар"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 3)"
+    },
+    {
+      "ru": "курить",
+      "pos": "verb",
+      "forms": {
+        "base": "озар",
+        "dat": "озар"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 3)"
+    },
+    {
+      "ru": "балалайка",
+      "pos": "noun",
+      "forms": {
+        "base": "пандар",
+        "dat": "пандара"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 3)"
+    },
+    {
+      "ru": "гармония",
+      "pos": "noun",
+      "forms": {
+        "base": "пандар",
+        "dat": "пандара"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 3)"
+    },
+    {
+      "ru": "задержка",
+      "pos": "noun",
+      "forms": {
+        "base": "гоам",
+        "dat": "гоама"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 3)"
+    },
+    {
+      "ru": "замедление",
+      "pos": "noun",
+      "forms": {
+        "base": "гоам",
+        "dat": "гоама"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 3)"
+    },
+    {
+      "ru": "кислый",
+      "pos": "adj",
+      "forms": {
+        "base": "миста",
+        "dat": "мистача"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 3)"
+    },
+    {
+      "ru": "бедный",
+      "pos": "adj",
+      "forms": {
+        "base": "миска",
+        "dat": "мискача"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 3)"
+    },
+    {
+      "ru": "несчастный",
+      "pos": "adj",
+      "forms": {
+        "base": "миска",
+        "dat": "мискача"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 3)"
+    },
+    {
+      "ru": "жалкий",
+      "pos": "adj",
+      "forms": {
+        "base": "миска",
+        "dat": "мискача"
+      },
+      "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 3)"
     }
   ]
 }
