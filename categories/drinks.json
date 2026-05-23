@@ -157,15 +157,15 @@
     },
     {
       "ru": "Сделай чай",
-      "ing": "Чай дел",
-      "pron": "chay del",
+      "ing": "Чай дуйла",
+      "pron": "chai duyla",
       "id": "f_1766030410812_qh6v",
       "audio": "f_1766030410812_qh6v.webm"
     },
     {
       "ru": "Сделай кофе",
-      "ing": "Кофе дуйла",
-      "pron": "kofe duyla",
+      "ing": "Кофе дел",
+      "pron": "kofe del",
       "id": "f_1766030410812_w3hu",
       "audio": "f_1766030410812_w3hu.webm"
     },
