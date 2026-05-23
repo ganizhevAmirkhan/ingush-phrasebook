@@ -216,6 +216,90 @@
       ]
     },
     {
+      "id": "go_up_imperative",
+      "ruPattern": "иди вверх",
+      "description": "Go up (colloquial: УрагIа гIу, not гIу урагIа)",
+      "slots": [],
+      "ingTemplate": "УрагIа гIу",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "иди вверх",
+          "ing_expected": "УрагIа гIу"
+        }
+      ]
+    },
+    {
+      "id": "go_down_imperative",
+      "ruPattern": "иди вниз",
+      "description": "Go down (colloquial: Iо гIу / Iо къалхa валl, not гIу Iо / ЦIара вуда)",
+      "slots": [],
+      "ingTemplate": "Iо гIу",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "иди вниз",
+          "ing_expected": "Iо гIу"
+        }
+      ]
+    },
+    {
+      "id": "how_to_get_to_city",
+      "ruPattern": "как пройти в город",
+      "description": "How to get to the city (dosh: Мшта чудола да гIала)",
+      "slots": [],
+      "ingTemplate": "Мшта чудола да гIала",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "как пройти в город?",
+          "ing_expected": "Мшта чудола да гIала"
+        }
+      ]
+    },
+    {
+      "id": "i_am_here",
+      "ruPattern": "я здесь",
+      "description": "I am here (confirming presence: Со укхаз ва, not az укхаза / Со хьокха)",
+      "slots": [],
+      "ingTemplate": "Со укхаз ва",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "я здесь",
+          "ing_expected": "Со укхаз ва"
+        }
+      ]
+    },
+    {
+      "id": "we_are_there",
+      "ruPattern": "мы там",
+      "description": "We are there (confirming: Тхо цигахь да, not вай дIа / Тхо цугахь)",
+      "slots": [],
+      "ingTemplate": "Тхо цигахь да",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "мы там",
+          "ing_expected": "Тхо цигахь да"
+        }
+      ]
+    },
+    {
+      "id": "we_are_here",
+      "ruPattern": "мы здесь",
+      "description": "We are here (confirming: Тхо укхаз да, like Со укхаз ва)",
+      "slots": [],
+      "ingTemplate": "Тхо укхаз да",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "мы здесь",
+          "ing_expected": "Тхо укхаз да"
+        }
+      ]
+    },
+    {
       "id": "show_road_imperative",
       "ruPattern": "покажи дорогу",
       "description": "Show the road/way",

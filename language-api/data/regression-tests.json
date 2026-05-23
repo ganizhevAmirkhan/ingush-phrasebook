@@ -3365,7 +3365,7 @@
       "id": "f_1766024553032_8j02",
       "category": "orientation",
       "ru": "Как пройти в город?",
-      "expectedIng": "Магахь мишта вах веза?"
+      "expectedIng": "Мшта чудола да гIала"
     },
     {
       "id": "f_1766024553032_0qrg",
@@ -3377,13 +3377,19 @@
       "id": "f_1766024553032_76eo",
       "category": "orientation",
       "ru": "Я здесь",
-      "expectedIng": "Со хьокха"
+      "expectedIng": "Со укхаз ва"
+    },
+    {
+      "id": "f_1766024553032_whre",
+      "category": "orientation",
+      "ru": "Мы здесь",
+      "expectedIng": "Тхо укхаз да"
     },
     {
       "id": "f_1766024553032_c2pa",
       "category": "orientation",
       "ru": "Мы там",
-      "expectedIng": "Тхо цугахь"
+      "expectedIng": "Тхо цигахь да"
     },
     {
       "id": "f_1766024553032_xh3a",
@@ -4565,7 +4571,7 @@
       "id": "f_1766025182393_8huy",
       "category": "travel",
       "ru": "Я здесь",
-      "expectedIng": "Со хьокха"
+      "expectedIng": "Со укхаз ва"
     },
     {
       "id": "f_1766025182393_6ww2",

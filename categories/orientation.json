@@ -206,22 +206,22 @@
     },
     {
       "ru": "Иди вверх",
-      "ing": "БIар вуда",
-      "pron": "b1ar vuda",
+      "ing": "УрагIа гIу",
+      "pron": "urag1a g1u",
       "id": "f_1766024553032_u7u8",
       "audio": "f_1766024553032_u7u8.mp3"
     },
     {
       "ru": "Иди вниз",
-      "ing": "ЦIара вуда",
-      "pron": "ts1ara vuda",
+      "ing": "Iо гIу / Iо къалхa валl",
+      "pron": "io g1u / io qalha vall",
       "id": "f_1766024553032_15vv",
       "audio": "f_1766024553032_15vv.mp3"
     },
     {
       "ru": "Как пройти в город?",
-      "ing": "Магахь мишта вах веза?",
-      "pron": "magakh mishta vakh vezza",
+      "ing": "Мшта чудола да гIала",
+      "pron": "mshta chudola da g1ala",
       "id": "f_1766024553032_8j02",
       "audio": "f_1766024553032_8j02.mp3"
     },
@@ -234,15 +234,22 @@
     },
     {
       "ru": "Я здесь",
-      "ing": "Со хьокха",
-      "pron": "so khyokha",
+      "ing": "Со укхаз ва",
+      "pron": "so ukhaz va",
       "id": "f_1766024553032_76eo",
       "audio": "f_1766024553032_76eo.mp3"
     },
     {
+      "ru": "Мы здесь",
+      "ing": "Тхо укхаз да",
+      "pron": "tkho ukhaz da",
+      "id": "f_1766024553032_whre",
+      "audio": "f_1766024553032_whre.mp3"
+    },
+    {
       "ru": "Мы там",
-      "ing": "Тхо цугахь",
-      "pron": "tkho tsugakh",
+      "ing": "Тхо цигахь да",
+      "pron": "tkho tsigakh da",
       "id": "f_1766024553032_c2pa",
       "audio": "f_1766024553032_c2pa.mp3"
     },

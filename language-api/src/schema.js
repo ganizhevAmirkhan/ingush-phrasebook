@@ -2,6 +2,7 @@ const SOURCE = {
   DOSH: "dosh",
   GRAMMAR: "grammar",
   HABAR: "habar",
+  PAYDADOSH: "paydadosh",
   CORPUS: "corpus",
   LLM: "llm"
 };
@@ -63,19 +64,25 @@ function toWordRecord(word) {
   };
 }
 
-function toPhraseRecord(item, category) {
+function toColloquialPhraseRecord(item, source, category) {
+  const ru = (item?.ru || "").toString().trim();
+  const ing = (item?.ing || "").toString().trim();
   return {
-    id: item?.id || "",
-    category: category || "",
-    ru: (item?.ru || "").toString().trim(),
-    ruNorm: normalizeText(item?.ru),
-    ruTokens: tokenizeRu(item?.ru),
-    ing: (item?.ing || "").toString().trim(),
+    id: (item?.id || "").toString(),
+    category: (category || item?.category || "").toString(),
+    ru,
+    ruNorm: normalizeText(ru),
+    ruTokens: tokenizeRu(ru),
+    ing,
     pron: (item?.pron || "").toString().trim(),
     audio: (item?.audio || "").toString().trim(),
-    source: SOURCE.HABAR,
-    confidence: 0.95
+    source: source || SOURCE.HABAR,
+    confidence: Number(item?.confidence) || 0.93
   };
+}
+
+function toPhraseRecord(item, category) {
+  return toColloquialPhraseRecord(item, SOURCE.HABAR, category);
 }
 
 function toCorpusRecord(doc, bucket) {
@@ -99,6 +106,7 @@ module.exports = {
   tokenizeRu,
   toWordRecord,
   toPhraseRecord,
+  toColloquialPhraseRecord,
   toCorpusRecord
 };
 

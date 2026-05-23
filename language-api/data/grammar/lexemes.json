@@ -2673,6 +2673,7 @@
       "pos": "pronoun",
       "forms": {
         "base": "мишта",
+        "colloquial": "мшта",
         "dat": "мишта"
       }
     },
@@ -3494,6 +3495,26 @@
         "base": "Дика",
         "dat": "Дика"
       }
+    },
+    {
+      "ru": "вверх",
+      "pos": "adv",
+      "forms": {
+        "base": "урагIа",
+        "imp": "УрагIа гIу"
+      },
+      "notes": "colloquial go up: УрагIа гIу (not гIу урагIа)"
+    },
+    {
+      "ru": "вниз",
+      "pos": "adv",
+      "forms": {
+        "base": "Iо",
+        "full": "Iочu",
+        "imp": "Iо гIу",
+        "imp_2": "Iо къалхa валl"
+      },
+      "notes": "dosh: Iочu (книзu); colloquial go down: Iо гIу / Iо къалхa валl (not гIу Iо)"
     },
     {
       "ru": "назад",
@@ -5236,9 +5257,12 @@
       "pos": "adv",
       "forms": {
         "base": "укхаза",
+        "here": "укхаз",
+        "i_am_here": "Со укхаз ва",
+        "we_are_here": "Тхо укхаз да",
         "dat": "укхаза"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "dosh: укхаза; confirming presence: Со укхаз ва (ва), Тхо укхаз да (да)"
     },
     {
       "ru": "налево",
@@ -5326,9 +5350,11 @@
       "pos": "adv",
       "forms": {
         "base": "цига",
+        "there": "цигахь",
+        "we_are_there": "Тхо цигахь да",
         "dat": "цига"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kur05"
+      "notes": "dosh: цига, цигахь (там); confirming we are there: Тхо цигахь да (not вай дIа = нам туда)"
     },
     {
       "ru": "Болгария",
@@ -5632,9 +5658,10 @@
       "pos": "noun",
       "forms": {
         "base": "чудола",
-        "dat": "чудола"
+        "dat": "чудола",
+        "how_to": "Мшта чудола да {PLACE}"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "dosh: чудола (въесться); how to get there: Мшта чудола да …"
     },
     {
       "ru": "въехать",

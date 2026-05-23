@@ -38,17 +38,26 @@ Optional env:
 
 Pipeline order:
 
-1. `dosh` exact match
+1. `dosh` exact match (single words)
 2. `grammar` pattern/rule/lexeme match
-3. `habar` phrase match
+3. `paydadosh` / `habar` / `corpus` phrase match
 4. `dosh` token composition fallback (for short phrases)
 5. LLM fallback
 6. validation + moderation queue on reject
 
+Import PaydaDosh phrases:
+
+```bash
+node language-api/scripts/import-paydadosh.js
+```
+
 ## Data Sources
 
 - Dictionary: `https://dosh.inghub.ru/public/dictionary.json` (fallback raw GitHub)
-- Phrase store: local `ingush-phrasebook-main/categories/*.json`
+- Phrase store:
+  - local `categories/*.json` (habar)
+  - `language-api/data/colloquial/paydadosh-phrases.json` (PaydaDosh import)
+  - lesson/dialogue pairs from corpus stories
 - Corpus store:
   - `language-api/data/corpus/stories/*.json`
   - `language-api/data/corpus/novellas/*.json`

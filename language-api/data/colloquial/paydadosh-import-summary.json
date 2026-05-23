@@ -1,0 +1,74 @@
+{
+  "importedAt": "2026-05-23T17:15:55.018Z",
+  "total": 4719,
+  "snapshot": 77,
+  "phrasesFetched": 0,
+  "proverbsFetched": 2156,
+  "phraseErrors": 0,
+  "proverbErrors": 0,
+  "phraseSkipped": 0,
+  "proverbSkipped": 0,
+  "categories": 11,
+  "sample": [
+    {
+      "id": "pd_18062",
+      "slug": "18062-церг-иоаллаш-ва",
+      "ru": "-",
+      "ruNorm": "-",
+      "ing": "Церг йоаллаш ва",
+      "category": "idiom_phrase",
+      "source": "paydadosh",
+      "sourceLabel": "PaydaDosh",
+      "url": "https://paydadosh.ru/phrase/18062-церг-иоаллаш-ва",
+      "confidence": 0.93
+    },
+    {
+      "id": "pd_17735",
+      "slug": "17735-барт-болча-ц-аг-а-беркат-хул",
+      "ru": "- В доме (семье) где есть согласие, всегда есть благодать",
+      "ruNorm": "- в доме семье где есть согласие всегда есть благодать",
+      "ing": "Барт болча цӀагӀа беркат хул",
+      "category": "idiom_phrase",
+      "source": "paydadosh",
+      "sourceLabel": "PaydaDosh",
+      "url": "https://paydadosh.ru/phrase/17735-барт-болча-ц-аг-а-беркат-хул",
+      "confidence": 0.93
+    },
+    {
+      "id": "pd_17771",
+      "slug": "17771-воккха-саг-волча-коа-у-эшац",
+      "ru": "- Во дворе где есть старик, раб не нужен",
+      "ruNorm": "- во дворе где есть старик раб не нужен",
+      "ing": "Воккха саг волча коа, Ӏу эшац",
+      "category": "idiom_phrase",
+      "source": "paydadosh",
+      "sourceLabel": "PaydaDosh",
+      "url": "https://paydadosh.ru/phrase/17771-воккха-саг-волча-коа-у-эшац",
+      "confidence": 0.93
+    },
+    {
+      "id": "pd_18047",
+      "slug": "18047-хьиинача-болатах-ваь-ва-цун-во",
+      "ru": "- Его сын сделан из кованной стали",
+      "ruNorm": "- его сын сделан из кованной стали",
+      "ing": "Хьийнача болатах ваь ва цун воӀ",
+      "category": "idiom_phrase",
+      "source": "paydadosh",
+      "sourceLabel": "PaydaDosh",
+      "url": "https://paydadosh.ru/phrase/18047-хьиинача-болатах-ваь-ва-цун-во",
+      "confidence": 0.93
+    },
+    {
+      "id": "pd_17859",
+      "slug": "17859-кхакха-беце-дозалаш-ма-леладе",
+      "ru": "- Ежели нет состояния, не надо выпячиваться",
+      "ruNorm": "- ежели нет состояния не надо выпячиваться",
+      "ing": "Кхакха беце дозалаш ма леладе",
+      "category": "idiom_phrase",
+      "source": "paydadosh",
+      "sourceLabel": "PaydaDosh",
+      "url": "https://paydadosh.ru/phrase/17859-кхакха-беце-дозалаш-ма-леладе",
+      "confidence": 0.93
+    }
+  ]
+}

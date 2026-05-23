@@ -6,14 +6,16 @@ const {
   tokenizeRu,
   toWordRecord,
   toPhraseRecord,
+  toColloquialPhraseRecord,
   toCorpusRecord
 } = require("./schema");
 
 const ROOT = path.resolve(__dirname, "..");
 const WORKSPACE_ROOT = path.resolve(ROOT, "..");
-const HABAR_ROOT = path.resolve(WORKSPACE_ROOT, "ingush-phrasebook-main");
+const HABAR_ROOT = WORKSPACE_ROOT;
 
 const CATEGORY_DIR = path.join(HABAR_ROOT, "categories");
+const PAYDADOSH_PHRASES_FILE = path.join(ROOT, "data", "colloquial", "paydadosh-phrases.json");
 const CORPUS_STORIES_DIR = path.join(ROOT, "data", "corpus", "stories");
 const CORPUS_NOVELLAS_DIR = path.join(ROOT, "data", "corpus", "novellas");
 const BLACKLIST_FILE = path.join(ROOT, "data", "blacklist.json");
@@ -49,6 +51,7 @@ const state = {
     translateFromDosh: 0,
     translateFromGrammar: 0,
     translateFromPhrase: 0,
+    translateFromPaydaDosh: 0,
     translateFromLLM: 0,
     translateRejected: 0
   }
@@ -88,7 +91,7 @@ async function loadDictionary() {
   return [];
 }
 
-async function loadPhrases() {
+async function loadHabarPhrases() {
   const files = await safeListJsonFiles(CATEGORY_DIR);
   const out = [];
   for (const filePath of files) {
@@ -97,7 +100,7 @@ async function loadPhrases() {
       const category = (json?.category || path.basename(filePath, ".json")).toString();
       const items = Array.isArray(json?.items) ? json.items : [];
       items.forEach((item) => {
-        const rec = toPhraseRecord(item, category);
+        const rec = toColloquialPhraseRecord(item, SOURCE.HABAR, category);
         if (rec.ruNorm && rec.ing) out.push(rec);
       });
     } catch {
@@ -105,6 +108,86 @@ async function loadPhrases() {
     }
   }
   return out;
+}
+
+async function loadPaydaDoshPhrases() {
+  try {
+    const json = await readJson(PAYDADOSH_PHRASES_FILE);
+    const items = Array.isArray(json?.items) ? json.items : [];
+    return items
+      .map((item) => toColloquialPhraseRecord(item, SOURCE.PAYDADOSH, item?.category || "paydadosh"))
+      .filter((rec) => rec.ruNorm && rec.ing);
+  } catch {
+    return [];
+  }
+}
+
+async function loadLessonColloquialPhrases() {
+  const storyFiles = await safeListJsonFiles(CORPUS_STORIES_DIR);
+  const out = [];
+  for (const filePath of storyFiles) {
+    try {
+      const json = await readJson(filePath);
+      const genre = (json?.genre || "").toString();
+      if (genre !== "lesson" && genre !== "dialogue") continue;
+      const category = path.basename(filePath, ".json");
+      const paragraphs = Array.isArray(json?.paragraphs) ? json.paragraphs : [];
+      paragraphs.forEach((paragraph, index) => {
+        const ru = (paragraph?.ru || "").toString().trim();
+        const ing = (paragraph?.ing || "").toString().trim();
+        if (!ru || !ing || ru.length > 120) return;
+        out.push(
+          toColloquialPhraseRecord(
+            {
+              id: `${category}_${index + 1}`,
+              ru,
+              ing,
+              confidence: 0.88
+            },
+            SOURCE.CORPUS,
+            category
+          )
+        );
+      });
+    } catch {
+      // ignore bad file
+    }
+  }
+  return out;
+}
+
+const PHRASE_SOURCE_PRIORITY = {
+  [SOURCE.PAYDADOSH]: 4,
+  [SOURCE.HABAR]: 3,
+  [SOURCE.CORPUS]: 2,
+  [SOURCE.GRAMMAR]: 1
+};
+
+function mergePhraseRecords(items) {
+  const byRu = new Map();
+  for (const item of items) {
+    if (!item?.ruNorm || !item?.ing) continue;
+    const prev = byRu.get(item.ruNorm);
+    if (!prev) {
+      byRu.set(item.ruNorm, item);
+      continue;
+    }
+    const prevPriority = PHRASE_SOURCE_PRIORITY[prev.source] || 0;
+    const nextPriority = PHRASE_SOURCE_PRIORITY[item.source] || 0;
+    if (nextPriority > prevPriority || (nextPriority === prevPriority && (item.confidence || 0) > (prev.confidence || 0))) {
+      byRu.set(item.ruNorm, item);
+    }
+  }
+  return [...byRu.values()];
+}
+
+async function loadPhrases() {
+  const [habar, paydadosh, lessons] = await Promise.all([
+    loadHabarPhrases(),
+    loadPaydaDoshPhrases(),
+    loadLessonColloquialPhrases()
+  ]);
+  return mergePhraseRecords([...habar, ...lessons, ...paydadosh]);
 }
 
 async function loadCorpus() {
@@ -468,6 +551,20 @@ function jaccard(aSet, bSet) {
 }
 
 function findPhraseBest(ruText) {
+  const norm = normalizeText(ruText);
+  if (!norm) return null;
+
+  const exactMatches = state.phrases.filter((phrase) => phrase.ruNorm === norm);
+  if (exactMatches.length) {
+    exactMatches.sort((a, b) => {
+      const pa = PHRASE_SOURCE_PRIORITY[a.source] || 0;
+      const pb = PHRASE_SOURCE_PRIORITY[b.source] || 0;
+      if (pb !== pa) return pb - pa;
+      return (b.confidence || 0) - (a.confidence || 0);
+    });
+    return exactMatches[0];
+  }
+
   const target = new Set(tokenizeRu(ruText));
   if (!target.size) return null;
 
@@ -479,6 +576,10 @@ function findPhraseBest(ruText) {
     if (score > bestScore) {
       best = phrase;
       bestScore = score;
+    } else if (score === bestScore && best && score > 0) {
+      const pa = PHRASE_SOURCE_PRIORITY[phrase.source] || 0;
+      const pb = PHRASE_SOURCE_PRIORITY[best.source] || 0;
+      if (pa > pb) best = phrase;
     }
   }
   if (bestScore >= 0.75) return best;
@@ -737,11 +838,12 @@ async function translate(ruText) {
 
   const phrase = findPhraseBest(ru);
   if (phrase) {
-    state.metrics.translateFromPhrase += 1;
+    if (phrase.source === SOURCE.PAYDADOSH) state.metrics.translateFromPaydaDosh += 1;
+    else state.metrics.translateFromPhrase += 1;
     return {
       ok: true,
       translation: phrase.ing,
-      usedSource: SOURCE.HABAR,
+      usedSource: phrase.source === SOURCE.PAYDADOSH ? SOURCE.PAYDADOSH : SOURCE.HABAR,
       confidence: phrase.confidence,
       fallbackUsed: false
     };
@@ -863,6 +965,8 @@ function getMetrics() {
     current: {
       wordsLoaded: state.words.length,
       phrasesLoaded: state.phrases.length,
+      paydaDoshPhrasesLoaded: state.phrases.filter((p) => p.source === SOURCE.PAYDADOSH).length,
+      lessonPhrasesLoaded: state.phrases.filter((p) => p.source === SOURCE.CORPUS).length,
       corpusLoaded: state.corpus.length,
       grammarPatternsLoaded: state.grammar.patterns.length,
       grammarRulesLoaded: state.grammar.rules.length,
