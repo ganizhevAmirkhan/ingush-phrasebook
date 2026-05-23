@@ -1,5 +1,34 @@
 const http = require("node:http");
+const fs = require("node:fs");
+const path = require("node:path");
 const { URL } = require("node:url");
+
+function loadEnvFile(filePath) {
+  try {
+    const text = fs.readFileSync(filePath, "utf8");
+    for (const line of text.split(/\r?\n/)) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith("#")) continue;
+      const eq = trimmed.indexOf("=");
+      if (eq <= 0) continue;
+      const key = trimmed.slice(0, eq).trim();
+      let val = trimmed.slice(eq + 1).trim();
+      if (
+        (val.startsWith('"') && val.endsWith('"'))
+        || (val.startsWith("'") && val.endsWith("'"))
+      ) {
+        val = val.slice(1, -1);
+      }
+      process.env[key] = val;
+    }
+  } catch {
+    // optional .env
+  }
+}
+
+loadEnvFile(path.join(__dirname, ".env"));
+loadEnvFile(path.join(__dirname, "..", ".env"));
+
 const {
   refreshAllSources,
   lookupWord,
@@ -45,7 +74,13 @@ async function route(req, res) {
   const path = url.pathname;
 
   if (req.method === "GET" && path === "/health") {
-    return sendJson(res, 200, { ok: true, service: "language-api" });
+    const geminiKey = (process.env.GEMINI_API_KEY || "").trim();
+    const geminiConfigured = geminiKey.length > 10 && !/вставьте_ключ/i.test(geminiKey);
+    return sendJson(res, 200, {
+      ok: true,
+      service: "language-api",
+      geminiConfigured
+    });
   }
 
   if (req.method === "GET" && path === "/lookup/word") {

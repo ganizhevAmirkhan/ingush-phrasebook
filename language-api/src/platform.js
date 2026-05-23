@@ -798,7 +798,12 @@ async function callGemini(prompt) {
     return { ok: false, text: "", error: "missing_gemini_key" };
   }
 
-  const models = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash-latest"];
+  const models = [
+    "gemini-2.5-flash",
+    "gemini-2.0-flash",
+    "gemini-2.5-flash-latest",
+    "gemini-flash-latest"
+  ];
   const body = {
     contents: [{ role: "user", parts: [{ text: prompt }] }],
     generationConfig: { temperature: 0.2 }

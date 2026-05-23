@@ -765,6 +765,16 @@ function saveAiKey(){
   toast("LanguageAPI URL сохранён ✓", true);
 }
 
+function languageApiErrorMessage(code){
+  const messages = {
+    missing_gemini_key: "В словарях нет перевода. На VPS задайте GEMINI_API_KEY и pm2 restart --update-env",
+    llm_http_404: "Gemini: модель не найдена. Обновите API (git pull) и pm2 restart 0",
+    llm_http_403: "Gemini: ключ не принят. Проверьте GEMINI_API_KEY в .env",
+    llm_failed: "Gemini недоступен. Попробуйте позже"
+  };
+  return messages[code] || code || "Ошибка LanguageAPI";
+}
+
 async function callLanguageApi(path, payload){
   const base = getLanguageApiBase();
   const ctrl = new AbortController();
@@ -779,7 +789,7 @@ async function callLanguageApi(path, payload){
     });
     const json = await res.json().catch(() => null);
     if(!res.ok || !json?.ok){
-      toast(json?.error || "Ошибка LanguageAPI", false);
+      toast(languageApiErrorMessage(json?.error), false);
       return null;
     }
     return json;
