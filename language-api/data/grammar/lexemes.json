@@ -3445,9 +3445,21 @@
       "pos": "noun",
       "gender": "f",
       "forms": {
-        "base": "новкъа",
-        "dat": "новкъа"
-      }
+        "base": "никъа",
+        "dat": "никъа",
+        "drive": "новкъа"
+      },
+      "notes": "dosh: никъ; новкъа in drive-out / adj-road contexts"
+    },
+    {
+      "ru": "тропа",
+      "pos": "noun",
+      "gender": "f",
+      "forms": {
+        "base": "наькъа така",
+        "dat": "наькъа така"
+      },
+      "notes": "dosh: path/trail, not road (новкъа/никъa)"
     },
     {
       "ru": "поездка",
@@ -3482,6 +3494,19 @@
         "base": "Дика",
         "dat": "Дика"
       }
+    },
+    {
+      "ru": "назад",
+      "pos": "adv",
+      "forms": {
+        "base": "юха",
+        "there": "тIехьашкахьа юха",
+        "return_imp": "Юха верза",
+        "go_back_2": "тIехьашкахьа гIу",
+        "go_back_3": "Юха вулла",
+        "returned": "юха веннав"
+      },
+      "notes": "dosh: юха, тIехьашкахьа юха; colloquial imperatives for go back"
     },
     {
       "ru": "место",

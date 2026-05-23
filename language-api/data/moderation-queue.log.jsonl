@@ -248,3 +248,6 @@
 {"id":"mod_1779502715719","createdAt":"2026-05-23T02:18:35.719Z","ru":"Где ты работаешь?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
 {"id":"mod_1779502715722","createdAt":"2026-05-23T02:18:35.722Z","ru":"Я работаю в …","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
 {"id":"mod_1779502715740","createdAt":"2026-05-23T02:18:35.740Z","ru":"ыы","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779545033668","createdAt":"2026-05-23T14:03:53.668Z","ru":"Выехал","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779545977067","createdAt":"2026-05-23T14:19:37.067Z","ru":"Возвратился","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779545977079","createdAt":"2026-05-23T14:19:37.079Z","ru":"вернись обратно","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}

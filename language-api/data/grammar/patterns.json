@@ -114,6 +114,108 @@
       ]
     },
     {
+      "id": "where_is_trail",
+      "ruPattern": "где тропа",
+      "description": "Where is the path/trail (not road)",
+      "slots": [],
+      "ingTemplate": "Мичай наькъа така?",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "где тропа",
+          "ing_expected": "Мичай наькъа така?"
+        }
+      ]
+    },
+    {
+      "id": "where_is_road",
+      "ruPattern": "где дорога",
+      "description": "Where is the road (colloquial: Мичаб никъа)",
+      "slots": [],
+      "ingTemplate": "Мичаб никъа?",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "где дорога",
+          "ing_expected": "Мичаб никъа?"
+        }
+      ]
+    },
+    {
+      "id": "drove_out_left",
+      "ruPattern": "выехал",
+      "description": "Left / drove out (on the road)",
+      "slots": [],
+      "ingTemplate": "новкъа аравяннав.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "выехал",
+          "ing_expected": "новкъа аравяннав."
+        }
+      ]
+    },
+    {
+      "id": "go_forward_imperative",
+      "ruPattern": "иди вперёд",
+      "description": "Go forward (colloquial)",
+      "slots": [],
+      "ingTemplate": "Хьа хьалха валл",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "иди вперёд",
+          "ing_expected": "Хьа хьалха валл"
+        },
+        {
+          "ru": "иди вперед",
+          "ing_expected": "Хьа хьалха валл"
+        }
+      ]
+    },
+    {
+      "id": "go_back_imperative",
+      "ruPattern": "иди назад",
+      "description": "Go back (colloquial variants: верза / тIехьашкахьа гIу / вулла)",
+      "slots": [],
+      "ingTemplate": "Юха верза",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "иди назад",
+          "ing_expected": "Юха верза"
+        }
+      ]
+    },
+    {
+      "id": "come_back_imperative",
+      "ruPattern": "вернись обратно",
+      "description": "Come back / return (same as Юха верза)",
+      "slots": [],
+      "ingTemplate": "Юха верза",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "вернись обратно",
+          "ing_expected": "Юха верза"
+        }
+      ]
+    },
+    {
+      "id": "returned_back",
+      "ruPattern": "возвратился",
+      "description": "Returned / came back",
+      "slots": [],
+      "ingTemplate": "юха веннав.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "возвратился",
+          "ing_expected": "юха веннав."
+        }
+      ]
+    },
+    {
       "id": "show_road_imperative",
       "ruPattern": "покажи дорогу",
       "description": "Show the road/way",

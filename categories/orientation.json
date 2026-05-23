@@ -157,15 +157,15 @@
     },
     {
       "ru": "Где тропа?",
-      "ing": "Даша хьа?",
-      "pron": "dasha kha",
+      "ing": "Мичай наькъа така?",
+      "pron": "michay nyak'a taka",
       "id": "f_1766024553032_c76k",
       "audio": "f_1766024553032_c76k.mp3"
     },
     {
       "ru": "Где дорога?",
-      "ing": "Готта хьа?",
-      "pron": "gotta kha",
+      "ing": "Мичаб никъа?",
+      "pron": "michab nik'a",
       "id": "f_1766024553032_njyz",
       "audio": "f_1766024553032_njyz.mp3"
     },
@@ -178,17 +178,31 @@
     },
     {
       "ru": "Иди вперёд",
-      "ing": "Хьалха вуда",
-      "pron": "khalha vuda",
+      "ing": "Хьа хьалха валл",
+      "pron": "kha khalha vall",
       "id": "f_1766024553032_7jl6",
       "audio": "f_1766024553032_7jl6.mp3"
     },
     {
       "ru": "Иди назад",
-      "ing": "Патахка вуда",
-      "pron": "patakhka vuda",
+      "ing": "Юха верза / тIехьашкахьа гIу / Юха вулла",
+      "pron": "yukha verza / tieh'ashkah'a g1u / yukha vulla",
       "id": "f_1766024553032_g4se",
       "audio": "f_1766024553032_g4se.mp3"
+    },
+    {
+      "ru": "Вернись обратно",
+      "ing": "Юха верза",
+      "pron": "yukha verza",
+      "id": "f_1766024553032_cmbk",
+      "audio": "f_1766024553032_cmbk.mp3"
+    },
+    {
+      "ru": "Возвратился",
+      "ing": "юха веннав",
+      "pron": "yukha vennav",
+      "id": "f_1766024553032_rtnb",
+      "audio": "f_1766024553032_rtnb.mp3"
     },
     {
       "ru": "Иди вверх",
