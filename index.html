@@ -25,9 +25,8 @@
   </div>
 
   <div class="ai-panel">
-    <input id="ai-key" type="text" placeholder="LanguageAPI URL (https://api.inghub.ru)" autocomplete="off" data-lpignore="true" data-1p-ignore="true">
-    <button onclick="saveAiKey()">💾</button>
-    <span id="ai-status"></span>
+    <span id="ai-status" title="Статус LanguageAPI"></span>
+    <button type="button" onclick="openApiAdminPanel()" class="btn btn-ghost">📡 API</button>
   </div>
 </header>
 
@@ -40,6 +39,52 @@
     <h2 id="content-title">Выберите категорию</h2>
     <div id="content"></div>
   </main>
+</div>
+
+<!-- API ADMIN -->
+<div id="api-admin-modal" class="modal hidden">
+  <div class="modal-box api-admin-box">
+    <h3 class="api-admin-title">Панель LanguageAPI</h3>
+
+    <label>
+      URL сервера
+      <input id="ai-key" type="text" placeholder="https://api.inghub.ru" autocomplete="off" data-lpignore="true" data-1p-ignore="true">
+    </label>
+
+    <div id="api-status-grid" class="api-status-grid">
+      <div class="api-status-card" id="api-st-server">Сервер: …</div>
+      <div class="api-status-card" id="api-st-gemini">Gemini ключ: …</div>
+      <div class="api-status-card" id="api-st-test">Gemini тест: …</div>
+    </div>
+
+    <div id="api-metrics" class="api-metrics"></div>
+
+    <label>
+      Тест перевода
+      <div class="api-test-row">
+        <input id="api-test-ru" type="text" placeholder="Мало платят на работе" autocomplete="off">
+        <button type="button" onclick="apiAdminTestTranslate()">Перевести</button>
+      </div>
+    </label>
+    <pre id="api-test-result" class="api-test-result"></pre>
+
+    <div id="api-moderation-section" class="hidden">
+      <h4 class="api-section-title">Очередь модерации</h4>
+      <ul id="api-moderation-list" class="api-moderation-list"></ul>
+    </div>
+
+    <div class="api-help">
+      <a href="https://aistudio.google.com" target="_blank" rel="noopener">Google AI Studio</a>
+      <a href="https://ai.dev/rate-limit" target="_blank" rel="noopener">Квота Gemini</a>
+    </div>
+
+    <div class="modal-actions">
+      <button type="button" onclick="refreshApiAdminPanel()">🔄 Обновить</button>
+      <button type="button" onclick="saveAiKey()">💾 Сохранить URL</button>
+      <button type="button" onclick="apiAdminRefreshData()">♻ Данные API</button>
+      <button type="button" onclick="closeApiAdminPanel()">Закрыть</button>
+    </div>
+  </div>
 </div>
 
 <!-- MODAL -->
@@ -73,7 +118,7 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.0/lame.min.js"></script>
-<script src="script.js?v=20260522a"></script>
+<script src="script.js?v=20260523a"></script>
 <script src="recorder.js?v=20260522a"></script>
 <script>
   // Remove stale SW caches from older builds (OpenAI-era bundle).

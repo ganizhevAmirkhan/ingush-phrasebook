@@ -792,10 +792,85 @@ function validateIngText(ingText, ruText) {
   return { ok: true, blockedReason: "" };
 }
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function parseRetryDelayMs(errText) {
+  try {
+    const json = JSON.parse(errText);
+    for (const d of json?.error?.details || []) {
+      if (String(d?.["@type"] || "").includes("RetryInfo") && d.retryDelay) {
+        const sec = parseFloat(String(d.retryDelay).replace(/s$/i, ""));
+        if (Number.isFinite(sec) && sec > 0) return Math.min(Math.ceil(sec * 1000), 15000);
+      }
+    }
+    const m = /retry in ([0-9.]+)s/i.exec(json?.error?.message || "");
+    if (m) return Math.min(Math.ceil(parseFloat(m[1]) * 1000), 15000);
+  } catch {
+    // ignore
+  }
+  return 8000;
+}
+
+function parseGeminiHttpError(errText, status) {
+  let message = (errText || "").trim();
+  try {
+    const json = JSON.parse(errText);
+    message = json?.error?.message || message;
+  } catch {
+    // keep raw text
+  }
+  const hay = `${message} ${errText || ""}`;
+
+  if (/api key expired|key has expired|expired.*api key/i.test(hay)) {
+    return { error: "gemini_key_expired", detail: message || "API key expired" };
+  }
+  if (/api key not valid|invalid api key|API_KEY_INVALID|API key not valid/i.test(hay)) {
+    return { error: "invalid_gemini_key", detail: message || "Invalid API key" };
+  }
+  if (/FAILED_PRECONDITION|location is not supported|not available in your country|User location/i.test(hay)) {
+    return { error: "gemini_region_blocked", detail: message || "Region blocked" };
+  }
+  if (
+    status === 429
+    || /RESOURCE_EXHAUSTED|exceeded your current quota|Quota exceeded|rate.?limit/i.test(hay)
+  ) {
+    return { error: "gemini_quota_exceeded", detail: message || "Quota exceeded" };
+  }
+  if (/PERMISSION_DENIED|permission denied|API has not been used/i.test(hay)) {
+    return { error: "gemini_permission_denied", detail: message || "Permission denied" };
+  }
+  return { error: `llm_http_${status}`, detail: message || `HTTP ${status}` };
+}
+
+async function requestGeminiModel(key, model, body, allowRetry) {
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(key)}`;
+  const res = await fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body)
+  });
+  if (res.ok) return { res, errText: "" };
+
+  const errText = await res.text().catch(() => "");
+  if (allowRetry && res.status === 429) {
+    await sleep(parseRetryDelayMs(errText));
+    const retryRes = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body)
+    });
+    if (retryRes.ok) return { res: retryRes, errText: "" };
+    return { res: retryRes, errText: await retryRes.text().catch(() => "") };
+  }
+  return { res, errText };
+}
+
 async function callGemini(prompt) {
-  const key = process.env.GEMINI_API_KEY || "";
-  if (!key) {
-    return { ok: false, text: "", error: "missing_gemini_key" };
+  const key = (process.env.GEMINI_API_KEY || "").trim();
+  if (!key || /вставьте_ключ/i.test(key)) {
+    return { ok: false, text: "", error: "missing_gemini_key", detail: "" };
   }
 
   const models = [
@@ -805,32 +880,75 @@ async function callGemini(prompt) {
     "gemini-flash-latest"
   ];
   const body = {
-    contents: [{ role: "user", parts: [{ text: prompt }] }],
+    contents: [{ parts: [{ text: prompt }] }],
     generationConfig: { temperature: 0.2 }
   };
 
   let lastError = "llm_failed";
+  let lastDetail = "";
+  let sawQuotaError = false;
   for (const model of models) {
     try {
-      const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(key)}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body)
-      });
+      const { res, errText } = await requestGeminiModel(key, model, body, true);
       if (!res.ok) {
-        lastError = `llm_http_${res.status}`;
+        const parsed = parseGeminiHttpError(errText, res.status);
+        if (parsed.error === "invalid_gemini_key" || parsed.error === "gemini_key_expired") {
+          return { ok: false, text: "", error: parsed.error, detail: parsed.detail };
+        }
+        if (parsed.error === "gemini_region_blocked") {
+          return { ok: false, text: "", error: parsed.error, detail: parsed.detail };
+        }
+        if (parsed.error === "gemini_quota_exceeded") {
+          sawQuotaError = true;
+          lastError = parsed.error;
+          lastDetail = parsed.detail;
+          continue;
+        }
+        if (parsed.error === "gemini_permission_denied") {
+          return { ok: false, text: "", error: parsed.error, detail: parsed.detail };
+        }
+        lastError = parsed.error;
+        lastDetail = parsed.detail;
         continue;
       }
       const json = await res.json();
       const parts = json?.candidates?.[0]?.content?.parts || [];
       const text = parts.map((x) => x?.text || "").join("").trim();
-      if (text) return { ok: true, text, error: "" };
+      if (text) return { ok: true, text, error: "", detail: "" };
       lastError = "llm_empty";
+      lastDetail = "Empty model response";
     } catch {
       lastError = "llm_fetch_failed";
+      lastDetail = "Network error";
     }
   }
-  return { ok: false, text: "", error: lastError };
+  if (sawQuotaError) {
+    return { ok: false, text: "", error: "gemini_quota_exceeded", detail: lastDetail };
+  }
+  return { ok: false, text: "", error: lastError, detail: lastDetail };
+}
+
+async function testGeminiConnection() {
+  const key = (process.env.GEMINI_API_KEY || "").trim();
+  const geminiConfigured = key.length > 10 && !/вставьте_ключ/i.test(key);
+  if (!geminiConfigured) {
+    return {
+      ok: false,
+      geminiConfigured: false,
+      keyLength: key.length,
+      error: "missing_gemini_key",
+      detail: "GEMINI_API_KEY is empty or placeholder"
+    };
+  }
+
+  const llm = await callGemini("Ответь одним словом: тест");
+  return {
+    ok: llm.ok,
+    geminiConfigured: true,
+    keyLength: key.length,
+    error: llm.error || "",
+    detail: llm.detail || ""
+  };
 }
 
 async function assistTask(task, text) {
@@ -1005,7 +1123,7 @@ async function translate(ruText, options = {}) {
       usedSource: SOURCE.LLM
     };
     await appendModeration(event);
-    return { ok: false, status: 503, error: llm.error };
+    return { ok: false, status: 503, error: llm.error, detail: llm.detail || "" };
   }
 
   const validation = validateIngText(llm.text, ru);
@@ -1125,6 +1243,7 @@ module.exports = {
   translate,
   assistTask,
   getMetrics,
-  getModerationQueue
+  getModerationQueue,
+  testGeminiConnection
 };
 

@@ -37,7 +37,8 @@ const {
   translate,
   assistTask,
   getMetrics,
-  getModerationQueue
+  getModerationQueue,
+  testGeminiConnection
 } = require("./src/platform");
 
 const PORT = Number(process.env.PORT || 8787);
@@ -79,8 +80,15 @@ async function route(req, res) {
     return sendJson(res, 200, {
       ok: true,
       service: "language-api",
-      geminiConfigured
+      geminiConfigured,
+      geminiKeyPrefix: geminiConfigured ? `${geminiKey.slice(0, 8)}…` : "",
+      geminiKeyLength: geminiKey.length
     });
+  }
+
+  if (req.method === "GET" && path === "/health/gemini") {
+    const result = await testGeminiConnection();
+    return sendJson(res, result.ok ? 200 : 503, result);
   }
 
   if (req.method === "GET" && path === "/lookup/word") {
@@ -118,7 +126,11 @@ async function route(req, res) {
       excludeSources: Array.isArray(body?.excludeSources) ? body.excludeSources : []
     });
     if (!result.ok) {
-      return sendJson(res, result.status || 400, { ok: false, error: result.error });
+      return sendJson(res, result.status || 400, {
+        ok: false,
+        error: result.error,
+        detail: result.detail || ""
+      });
     }
     return sendJson(res, 200, {
       ok: true,

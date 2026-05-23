@@ -753,8 +753,256 @@ function initAiUI(){
   if(input && !input.value){
     input.value = getLanguageApiBase();
   }
+  refreshApiStatusBadge();
+}
+
+function setApiStatusBadge(level){
   const st = document.getElementById("ai-status");
-  if(st) st.textContent = getLanguageApiBase() ? "✓ API" : "";
+  if(!st) return;
+  st.classList.remove("bad", "warn");
+  if(level === "ok"){
+    st.textContent = "●";
+    st.title = "LanguageAPI: OK";
+  }else if(level === "warn"){
+    st.textContent = "●";
+    st.classList.add("warn");
+    st.title = "LanguageAPI: Gemini с проблемой";
+  }else if(level === "bad"){
+    st.textContent = "●";
+    st.classList.add("bad");
+    st.title = "LanguageAPI: недоступен";
+  }else{
+    st.textContent = "";
+    st.title = "";
+  }
+}
+
+async function fetchLanguageApiGet(path, timeoutMs=20000){
+  const base = getLanguageApiBase();
+  const ctrl = new AbortController();
+  const timeoutId = setTimeout(() => ctrl.abort(), timeoutMs);
+  try{
+    const res = await fetch(`${base}${path}`, {
+      method: "GET",
+      signal: ctrl.signal,
+      cache: "no-store"
+    });
+    const json = await res.json().catch(() => null);
+    return { ok: res.ok, status: res.status, json };
+  }catch{
+    return { ok: false, status: 0, json: null };
+  }finally{
+    clearTimeout(timeoutId);
+  }
+}
+
+function setApiStatusCard(id, level, title, body){
+  const el = document.getElementById(id);
+  if(!el) return;
+  el.className = `api-status-card ${level}`;
+  el.innerHTML = `<strong>${title}</strong><br>${body}`;
+}
+
+async function refreshApiStatusBadge(){
+  const health = await fetchLanguageApiGet("/health", 8000);
+  if(!health.ok || !health.json?.ok){
+    setApiStatusBadge("bad");
+    return;
+  }
+  if(!health.json.geminiConfigured){
+    setApiStatusBadge("warn");
+    return;
+  }
+  const gemini = await fetchLanguageApiGet("/health/gemini", 35000);
+  if(gemini.json?.ok){
+    setApiStatusBadge("ok");
+  }else{
+    setApiStatusBadge("warn");
+  }
+}
+
+function openApiAdminPanel(){
+  const modal = document.getElementById("api-admin-modal");
+  if(!modal) return;
+  modal.classList.remove("hidden");
+  const input = document.getElementById("ai-key");
+  if(input && !input.value) input.value = getLanguageApiBase();
+  refreshApiAdminPanel();
+}
+
+function closeApiAdminPanel(){
+  document.getElementById("api-admin-modal")?.classList.add("hidden");
+}
+
+async function refreshApiAdminPanel(){
+  const base = getLanguageApiBase();
+  setApiStatusCard("api-st-server", "warn", "Сервер", `${base}<br>проверка…`);
+  setApiStatusCard("api-st-gemini", "warn", "Gemini ключ", "проверка…");
+  setApiStatusCard("api-st-test", "warn", "Gemini тест", "проверка…");
+
+  const health = await fetchLanguageApiGet("/health", 8000);
+  if(!health.ok || !health.json?.ok){
+    setApiStatusCard("api-st-server", "bad", "Сервер", "Недоступен");
+    setApiStatusCard("api-st-gemini", "bad", "Gemini ключ", "—");
+    setApiStatusCard("api-st-test", "bad", "Gemini тест", "—");
+    setApiStatusBadge("bad");
+    return;
+  }
+
+  setApiStatusCard(
+    "api-st-server",
+    "ok",
+    "Сервер",
+    `${base}<br>online ✓`
+  );
+
+  if(!health.json.geminiConfigured){
+    setApiStatusCard(
+      "api-st-gemini",
+      "bad",
+      "Gemini ключ",
+      "Не задан на VPS (.env)"
+    );
+    setApiStatusCard("api-st-test", "bad", "Gemini тест", "Невозможен без ключа");
+    setApiStatusBadge("warn");
+  }else{
+    const prefix = health.json.geminiKeyPrefix || "…";
+    const len = health.json.geminiKeyLength || "?";
+    setApiStatusCard(
+      "api-st-gemini",
+      "ok",
+      "Gemini ключ",
+      `Задан: ${prefix} (${len} симв.)`
+    );
+
+    const gemini = await fetchLanguageApiGet("/health/gemini", 35000);
+    if(gemini.status === 404){
+      setApiStatusCard(
+        "api-st-test",
+        "warn",
+        "Gemini тест",
+        "Обновите API на VPS (git pull + pm2 restart)"
+      );
+      setApiStatusBadge("warn");
+    }else if(gemini.json?.ok){
+      setApiStatusCard("api-st-test", "ok", "Gemini тест", "Работает ✓");
+      setApiStatusBadge("ok");
+    }else{
+      const err = gemini.json?.error || `HTTP ${gemini.status}`;
+      const detail = gemini.json?.detail || "";
+      const msg = languageApiErrorMessage(err);
+      setApiStatusCard(
+        "api-st-test",
+        "bad",
+        "Gemini тест",
+        `${msg}${detail ? `<br><small>${safe(detail).slice(0, 180)}</small>` : ""}`
+      );
+      setApiStatusBadge("warn");
+    }
+  }
+
+  const metrics = await fetchLanguageApiGet("/metrics", 8000);
+  const m = metrics.json?.metrics;
+  const metricsEl = document.getElementById("api-metrics");
+  if(metricsEl){
+    if(!m){
+      metricsEl.textContent = "Метрики недоступны";
+    }else{
+      metricsEl.innerHTML = [
+        `<strong>Статистика переводов</strong>`,
+        `Всего: ${m.translateTotal ?? 0}`,
+        `Из словаря (dosh): ${m.translateFromDosh ?? 0}`,
+        `Из фраз (habar): ${m.translateFromPhrase ?? 0}`,
+        `Из грамматики: ${m.translateFromGrammar ?? 0}`,
+        `Из LLM (Gemini): ${m.translateFromLLM ?? 0}`,
+        `Отклонено: ${m.translateRejected ?? 0}`
+      ].join("<br>");
+    }
+  }
+
+  const modSection = document.getElementById("api-moderation-section");
+  const modList = document.getElementById("api-moderation-list");
+  if(modSection && modList && adminMode){
+    modSection.classList.remove("hidden");
+    const mod = await fetchLanguageApiGet("/moderation/pending", 8000);
+    const items = Array.isArray(mod.json?.items) ? mod.json.items : [];
+    if(!items.length){
+      modList.innerHTML = "<li>Очередь пуста</li>";
+    }else{
+      modList.innerHTML = items.slice(0, 12).map((it) => {
+        const ru = safe(it?.ru).slice(0, 80);
+        const reason = languageApiErrorMessage(it?.reason);
+        return `<li><strong>${ru}</strong> — ${reason}</li>`;
+      }).join("");
+    }
+  }else if(modSection){
+    modSection.classList.add("hidden");
+  }
+}
+
+async function apiAdminTestTranslate(){
+  const ru = safe(document.getElementById("api-test-ru")?.value).trim();
+  const out = document.getElementById("api-test-result");
+  if(!ru){
+    if(out) out.textContent = "Введите русскую фразу";
+    return;
+  }
+  if(out) out.textContent = "Перевод…";
+
+  const base = getLanguageApiBase();
+  const ctrl = new AbortController();
+  const timeoutId = setTimeout(() => ctrl.abort(), 45000);
+  try{
+    const res = await fetch(`${base}/translate`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ru }),
+      signal: ctrl.signal,
+      cache: "no-store"
+    });
+    const json = await res.json().catch(() => null);
+    if(!out) return;
+    if(json?.ok){
+      out.textContent = [
+        `✓ ${json.translation}`,
+        `Источник: ${json.usedSource}`,
+        `Уверенность: ${json.confidence}`,
+        json.fallbackUsed ? "(через fallback)" : ""
+      ].filter(Boolean).join("\n");
+    }else{
+      const msg = languageApiErrorMessage(json?.error);
+      out.textContent = [
+        `✗ ${msg}`,
+        json?.detail ? json.detail : "",
+        `Код: ${json?.error || res.status}`
+      ].filter(Boolean).join("\n");
+    }
+  }catch{
+    if(out) out.textContent = "✗ LanguageAPI недоступен";
+  }finally{
+    clearTimeout(timeoutId);
+  }
+}
+
+async function apiAdminRefreshData(){
+  const base = getLanguageApiBase();
+  const ctrl = new AbortController();
+  const timeoutId = setTimeout(() => ctrl.abort(), 30000);
+  try{
+    const res = await fetch(`${base}/refresh`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: "{}",
+      signal: ctrl.signal
+    });
+    const json = await res.json().catch(() => null);
+    toast(json?.ok ? "Данные API обновлены ✓" : "Не удалось обновить данные", !!json?.ok);
+    if(json?.ok) refreshApiAdminPanel();
+  }catch{
+    toast("LanguageAPI недоступен", false);
+  }finally{
+    clearTimeout(timeoutId);
+  }
 }
 
 function saveAiKey(){
@@ -763,12 +1011,19 @@ function saveAiKey(){
   localStorage.setItem("languageApiBase", base);
   initAiUI();
   toast("LanguageAPI URL сохранён ✓", true);
+  refreshApiAdminPanel();
 }
 
 function languageApiErrorMessage(code){
   const messages = {
     missing_gemini_key: "В словарях нет перевода. На VPS задайте GEMINI_API_KEY и pm2 restart --update-env",
+    invalid_gemini_key: "Ключ Gemini не принят Google. Создайте новый в aistudio.google.com",
+    gemini_key_expired: "Ключ Gemini просрочен. Создайте новый в aistudio.google.com и обновите .env на VPS",
+    gemini_quota_exceeded: "Исчерпана бесплатная квота Gemini. Подождите или включите billing в Google AI Studio",
+    gemini_permission_denied: "Google отклонил ключ. Проверьте проект и billing в Google AI Studio",
+    gemini_region_blocked: "Google блокирует запросы с VPS (РФ). Нужен сервер за рубежом или оплата в Google Cloud",
     llm_http_404: "Gemini: модель не найдена. Обновите API (git pull) и pm2 restart 0",
+    llm_http_400: "Gemini отклонил запрос (400). Откройте панель 📡 API для детали",
     llm_http_403: "Gemini: ключ не принят. Проверьте GEMINI_API_KEY в .env",
     llm_failed: "Gemini недоступен. Попробуйте позже"
   };
@@ -789,7 +1044,9 @@ async function callLanguageApi(path, payload){
     });
     const json = await res.json().catch(() => null);
     if(!res.ok || !json?.ok){
-      toast(languageApiErrorMessage(json?.error), false);
+      const msg = languageApiErrorMessage(json?.error);
+      const extra = json?.detail ? `: ${String(json.detail).slice(0, 120)}` : "";
+      toast(msg + extra, false);
       return null;
     }
     return json;
