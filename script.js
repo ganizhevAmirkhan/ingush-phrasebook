@@ -52,7 +52,6 @@ let editingCategory = null;     // cat при добавлении/редакт�
 
 /* --- AI sources (dosh + habar) --- */
 let dictionaryWords = [];
-let aiTranslateBusy = false;
 
 /* ================= UTILS ================= */
 function genId(){
@@ -738,6 +737,7 @@ function scrollToPhrase(id){
   setTimeout(()=>el.classList.remove("flash"), 900);
 }
 
+<<<<<<< HEAD
 /* ================= AI: LanguageAPI → Gemini fallback ================= */
 const GEMINI_MODELS = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash-latest"];
 const DEFAULT_LANGUAGE_API_BASE =
@@ -752,6 +752,13 @@ function getLanguageApiBase(){
 
 function getGeminiKey(){
   return safe(localStorage.getItem("geminiApiKey")).trim();
+=======
+/* ================= AI (LanguageAPI) ================= */
+const DEFAULT_LANGUAGE_API_BASE = "http://localhost:8787";
+
+function getLanguageApiBase(){
+  return localStorage.getItem("languageApiBase") || DEFAULT_LANGUAGE_API_BASE;
+>>>>>>> 87136bc6a5913d4305f51d2c3d0b2c732de19302
 }
 
 function initAiUI(){
@@ -767,13 +774,20 @@ function initAiUI(){
 }
 
 function saveAiKey(){
+<<<<<<< HEAD
   const key = safe(document.getElementById("ai-key")?.value).trim();
   if(!key) return alert("Введите Gemini API key");
   localStorage.setItem("geminiApiKey", key);
+=======
+  const base = document.getElementById("ai-key")?.value?.trim();
+  if(!base) return alert("Введите URL LanguageAPI");
+  localStorage.setItem("languageApiBase", base);
+>>>>>>> 87136bc6a5913d4305f51d2c3d0b2c732de19302
   initAiUI();
   toast("Gemini key сохранён ✓", true);
 }
 
+<<<<<<< HEAD
 async function callLanguageApiTranslate(ru){
   const base = getLanguageApiBase();
   const ctrl = new AbortController();
@@ -785,6 +799,16 @@ async function callLanguageApiTranslate(ru){
       body: JSON.stringify({ ru, skipHabar: true }),
       signal: ctrl.signal,
       cache: "no-store"
+=======
+async function callLanguageApi(path, payload){
+  const base = getLanguageApiBase().replace(/\/+$/, "");
+  let res;
+  try{
+    res = await fetch(`${base}${path}`,{
+      method:"POST",
+      headers:{ "Content-Type":"application/json" },
+      body:JSON.stringify(payload || {})
+>>>>>>> 87136bc6a5913d4305f51d2c3d0b2c732de19302
     });
     const json = await res.json().catch(() => null);
     if(res.ok && json?.ok && json?.translation){
@@ -792,6 +816,7 @@ async function callLanguageApiTranslate(ru){
     }
     return { ok: false, error: json?.error || `http_${res.status}` };
   }catch{
+<<<<<<< HEAD
     return { ok: false, error: "api_unreachable" };
   }finally{
     clearTimeout(timeoutId);
@@ -903,6 +928,19 @@ function setAiTranslateBusy(isBusy){
   btn.textContent = aiTranslateBusy ? "⏳" : "🤖";
 }
 
+=======
+    toast("LanguageAPI недоступен", false);
+    return null;
+  }
+  const json = await res.json().catch(()=>null);
+  if(!res.ok || !json?.ok){
+    toast("Ошибка LanguageAPI", false);
+    return null;
+  }
+  return json;
+}
+
+>>>>>>> 87136bc6a5913d4305f51d2c3d0b2c732de19302
 function buildDictionaryHints(ruText, limit=12){
   const q = low(ruText).trim();
   if(!q || !Array.isArray(dictionaryWords) || !dictionaryWords.length) return [];
@@ -1125,12 +1163,8 @@ async function aiFixRu(){
 async function aiTranslateIng(){
   const ru = document.getElementById("edit-ru")?.value || "";
   if(!ru.trim()) return;
-  if(aiTranslateBusy){
-    toast("Подождите, перевод уже выполняется...", false);
-    return;
-  }
-  setAiTranslateBusy(true);
 
+<<<<<<< HEAD
   try{
     const api = await callLanguageApiTranslate(ru);
     if(api?.translation){
@@ -1153,6 +1187,13 @@ async function aiTranslateIng(){
     }
   }finally{
     setAiTranslateBusy(false);
+=======
+  const res = await callLanguageApi("/translate", { ru });
+  if(!res) return;
+  document.getElementById("edit-ing").value = safe(res.translation);
+  if(res.usedSource){
+    toast(`Источник: ${res.usedSource}`, true);
+>>>>>>> 87136bc6a5913d4305f51d2c3d0b2c732de19302
   }
 }
 
