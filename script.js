@@ -52,7 +52,6 @@ let editingCategory = null;     // cat при добавлении/редакт�
 
 /* --- AI sources (dosh + habar) --- */
 let dictionaryWords = [];
-let aiTranslateBusy = false;
 
 /* ================= UTILS ================= */
 function genId(){
@@ -739,30 +738,10 @@ function scrollToPhrase(id){
 }
 
 /* ================= AI (LanguageAPI) ================= */
-const DEFAULT_LANGUAGE_API_BASE =
-  location.hostname === "habar.inghub.ru"
-    ? "https://api.inghub.ru"
-    : "http://localhost:8787";
-
-function normalizeLanguageApiBase(rawBase){
-  let base = safe(rawBase).trim();
-  if(!base) return "";
-
-  // If site is HTTPS, force API URL to HTTPS to avoid Mixed Content.
-  if(location.protocol === "https:" && /^http:\/\//i.test(base)){
-    base = base.replace(/^http:\/\//i, "https://");
-  }
-
-  return base.replace(/\/+$/, "");
-}
+const DEFAULT_LANGUAGE_API_BASE = "http://localhost:8787";
 
 function getLanguageApiBase(){
-  const saved = localStorage.getItem("languageApiBase");
-  const normalized = normalizeLanguageApiBase(saved || DEFAULT_LANGUAGE_API_BASE);
-  if(normalized && normalized !== saved){
-    localStorage.setItem("languageApiBase", normalized);
-  }
-  return normalized;
+  return localStorage.getItem("languageApiBase") || DEFAULT_LANGUAGE_API_BASE;
 }
 
 function initAiUI(){
@@ -775,7 +754,7 @@ function initAiUI(){
 }
 
 function saveAiKey(){
-  const base = normalizeLanguageApiBase(document.getElementById("ai-key")?.value);
+  const base = document.getElementById("ai-key")?.value?.trim();
   if(!base) return alert("Введите URL LanguageAPI");
   localStorage.setItem("languageApiBase", base);
   initAiUI();
@@ -783,144 +762,24 @@ function saveAiKey(){
 }
 
 async function callLanguageApi(path, payload){
-  const base = getLanguageApiBase();
-  const ctrl = new AbortController();
-  const timeoutId = setTimeout(() => ctrl.abort(), 12000);
+  const base = getLanguageApiBase().replace(/\/+$/, "");
   let res;
   try{
     res = await fetch(`${base}${path}`,{
       method:"POST",
       headers:{ "Content-Type":"application/json" },
-      body:JSON.stringify(payload || {}),
-      signal: ctrl.signal,
-      cache: "no-store"
+      body:JSON.stringify(payload || {})
     });
   }catch{
-    toast("LanguageAPI недоступен (проверь https://api.inghub.ru)", false);
+    toast("LanguageAPI недоступен", false);
     return null;
-  }finally{
-    clearTimeout(timeoutId);
   }
   const json = await res.json().catch(()=>null);
   if(!res.ok || !json?.ok){
-    const errCode = safe(json?.error) || `http_${safe(res?.status) || "unknown"}`;
-    toast(`Ошибка LanguageAPI: ${errCode}`, false);
+    toast("Ошибка LanguageAPI", false);
     return null;
   }
   return json;
-}
-
-async function callLanguageApiGet(path, params){
-  const base = getLanguageApiBase();
-  const ctrl = new AbortController();
-  const timeoutId = setTimeout(() => ctrl.abort(), 8000);
-
-  const url = new URL(`${base}${path}`);
-  Object.entries(params || {}).forEach(([k, v]) => {
-    if(v == null) return;
-    url.searchParams.set(k, safe(v));
-  });
-
-  let res;
-  try{
-    res = await fetch(url.toString(), {
-      method: "GET",
-      headers: { "Content-Type":"application/json" },
-      signal: ctrl.signal,
-      cache: "no-store"
-    });
-  }catch{
-    return null;
-  }finally{
-    clearTimeout(timeoutId);
-  }
-
-  const json = await res.json().catch(()=>null);
-  if(!res.ok || !json?.ok) return null;
-  return json;
-}
-
-function extractIngFromLookupItems(items, ruText){
-  const list = Array.isArray(items) ? items : [];
-  if(!list.length) return "";
-
-  const targetNorm = normalizeRuForLookup(ruText);
-  const exact = list.find(it => normalizeRuForLookup(it?.ru) === targetNorm) || null;
-  const ordered = exact ? [exact, ...list.filter(it => it !== exact)] : list;
-
-  for(const it of ordered){
-    const phraseIng = safe(it?.ing).trim();
-    if(phraseIng) return phraseIng;
-
-    const vars = Array.isArray(it?.ingVariants) ? it.ingVariants : [];
-    const firstVar = safe(vars[0]).trim();
-    if(firstVar) return firstVar;
-  }
-  return "";
-}
-
-function extractIngFromCorpusItems(items){
-  const list = Array.isArray(items) ? items : [];
-  if(!list.length) return "";
-  for(const it of list){
-    const ing = safe(it?.snippet?.ing).trim();
-    if(ing) return ing;
-  }
-  return "";
-}
-
-async function resolveClientFallbackTranslation(ruText){
-  // 1) LanguageAPI lookup: phrase source
-  const phraseLookup = await callLanguageApiGet("/lookup/phrase", { ru: ruText });
-  const phraseIng = extractIngFromLookupItems(phraseLookup?.items, ruText);
-  if(phraseIng){
-    return { translation: phraseIng, usedSource: "lookup_phrase" };
-  }
-
-  // 2) LanguageAPI lookup: dictionary source
-  const wordLookup = await callLanguageApiGet("/lookup/word", { ru: ruText });
-  const wordIng = extractIngFromLookupItems(wordLookup?.items, ruText);
-  if(wordIng){
-    return { translation: wordIng, usedSource: "lookup_word" };
-  }
-
-  // 3) LanguageAPI lookup: corpus snippet as contextual fallback
-  const corpusLookup = await callLanguageApiGet("/lookup/corpus", { q: ruText });
-  const corpusIng = extractIngFromCorpusItems(corpusLookup?.items);
-  if(corpusIng){
-    return { translation: corpusIng, usedSource: "lookup_corpus" };
-  }
-
-  // 4) Local client hints as last resort (no server error in UI)
-  const exactHabar = findExactNonQuestionPhraseFromHabar(ruText);
-  if(exactHabar?.ing){
-    return { translation: safe(exactHabar.ing), usedSource: "habar_local_exact" };
-  }
-
-  const exactDosh = findExactIngFromDosh(ruText);
-  if(exactDosh){
-    return { translation: exactDosh, usedSource: "dosh_local_exact" };
-  }
-
-  const bestHabar = findBestPhraseFromHabar(ruText);
-  if(bestHabar?.ing){
-    return { translation: safe(bestHabar.ing), usedSource: "habar_local_best" };
-  }
-
-  const template = tryTemplateThisX(ruText);
-  if(template){
-    return { translation: template, usedSource: "template_local" };
-  }
-
-  return null;
-}
-
-function setAiTranslateBusy(isBusy){
-  aiTranslateBusy = !!isBusy;
-  const btn = document.querySelector('button[onclick="aiTranslateIng()"]');
-  if(!btn) return;
-  btn.disabled = aiTranslateBusy;
-  btn.textContent = aiTranslateBusy ? "⏳" : "🤖";
 }
 
 function buildDictionaryHints(ruText, limit=12){
@@ -1143,32 +1002,12 @@ async function aiFixRu(){
 async function aiTranslateIng(){
   const ru = document.getElementById("edit-ru")?.value || "";
   if(!ru.trim()) return;
-  if(aiTranslateBusy){
-    toast("Подождите, перевод уже выполняется...", false);
-    return;
-  }
-  setAiTranslateBusy(true);
 
-  try{
-    const res = await callLanguageApi("/translate", { ru });
-    if(res?.translation){
-      document.getElementById("edit-ing").value = safe(res.translation);
-      if(res.usedSource){
-        toast(`Источник: ${res.usedSource}`, true);
-      }
-      return;
-    }
-
-    const fallback = await resolveClientFallbackTranslation(ru);
-    if(fallback?.translation){
-      document.getElementById("edit-ing").value = safe(fallback.translation);
-      toast(`Источник: ${fallback.usedSource}`, true);
-      return;
-    }
-
-    toast("Перевод не найден. Добавьте фразу в базу.", false);
-  }finally{
-    setAiTranslateBusy(false);
+  const res = await callLanguageApi("/translate", { ru });
+  if(!res) return;
+  document.getElementById("edit-ing").value = safe(res.translation);
+  if(res.usedSource){
+    toast(`Источник: ${res.usedSource}`, true);
   }
 }
 
