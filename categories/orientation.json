@@ -206,36 +206,55 @@
     },
     {
       "ru": "Иди вверх",
+<<<<<<< HEAD
       "ing": "УрагIа гIу",
+=======
+      "ing": "Ураг1а г1у",
+>>>>>>> ac9cd5d2adc71f83ee83430edd3939842d22f304
       "pron": "urag1a g1u",
       "id": "f_1766024553032_u7u8",
       "audio": "f_1766024553032_u7u8.mp3"
     },
     {
       "ru": "Иди вниз",
+<<<<<<< HEAD
       "ing": "Iо гIу / Iо къалхa валl",
       "pron": "io g1u / io qalha vall",
+=======
+      "ing": "Iо г1у",
+      "pron": "io g1u",
+>>>>>>> ac9cd5d2adc71f83ee83430edd3939842d22f304
       "id": "f_1766024553032_15vv",
       "audio": "f_1766024553032_15vv.mp3"
     },
     {
       "ru": "Как пройти в город?",
+<<<<<<< HEAD
       "ing": "Мшта чудола да гIала",
       "pron": "mshta chudola da g1ala",
+=======
+      "ing": "Мшта чудола да г1алахь",
+      "pron": "mshta chudola da g1alah'",
+>>>>>>> ac9cd5d2adc71f83ee83430edd3939842d22f304
       "id": "f_1766024553032_8j02",
       "audio": "f_1766024553032_8j02.mp3"
     },
     {
       "ru": "Как пройти в село?",
-      "ing": "Эль мишта вах веза?",
-      "pron": "el mishta vakh vezza",
+      "ing": "юрта мишта вах веза?",
+      "pron": "yurta mishta vakh veza?",
       "id": "f_1766024553032_0qrg",
       "audio": "f_1766024553032_0qrg.mp3"
     },
     {
       "ru": "Я здесь",
+<<<<<<< HEAD
       "ing": "Со укхаз ва",
       "pron": "so ukhaz va",
+=======
+      "ing": "Со укхаза ва",
+      "pron": "so ukhaza va",
+>>>>>>> ac9cd5d2adc71f83ee83430edd3939842d22f304
       "id": "f_1766024553032_76eo",
       "audio": "f_1766024553032_76eo.mp3"
     },
@@ -249,7 +268,11 @@
     {
       "ru": "Мы там",
       "ing": "Тхо цигахь да",
+<<<<<<< HEAD
       "pron": "tkho tsigakh da",
+=======
+      "pron": "tkho tsigah' da",
+>>>>>>> ac9cd5d2adc71f83ee83430edd3939842d22f304
       "id": "f_1766024553032_c2pa",
       "audio": "f_1766024553032_c2pa.mp3"
     },
