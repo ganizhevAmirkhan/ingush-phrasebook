@@ -178,15 +178,15 @@
     },
     {
       "ru": "Это холодно",
-      "ing": "ЕР ШИЙЛА Я.",
-      "pron": "er shiyla ya.",
+      "ing": "Ха серда",
+      "pron": "kha serda",
       "id": "f_1766030410812_xgnj",
       "audio": "f_1766030410812_xgnj.webm"
     },
     {
       "ru": "Очень холодно",
-      "ing": "Серда йо",
-      "pron": "serda yo",
+      "ing": "тIех шийла",
+      "pron": "tiekh shiyla",
       "id": "f_1766030410812_dogs",
       "audio": "f_1766030410812_dogs.webm"
     },
