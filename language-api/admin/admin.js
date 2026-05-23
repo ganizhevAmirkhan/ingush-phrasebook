@@ -98,21 +98,39 @@ async function loadOverview() {
   const { json } = await api("/inventory");
   const inv = json.inventory || {};
   const m = json.metrics || {};
+  const c = m.current || {};
   const grid = document.getElementById("stats-grid");
   if (grid) {
     const cards = [
-      ["Шаблоны", inv.patterns],
+      ["Шаблоны грамматики", inv.patterns],
       ["Лексемы", inv.lexemes],
-      ["Правила", inv.rules],
-      ["Диалоги/уроки", inv.corpusStories],
-      ["Повести", inv.corpusNovellas],
-      ["Чёрный список", inv.blacklist],
-      ["Переводов", m.translateTotal],
-      ["Из Gemini", m.translateFromLLM]
+      ["Правила слотов", inv.rules],
+      ["Словарь dosh", c.wordsLoaded],
+      ["PaydaDosh", c.paydaDoshPhrasesLoaded],
+      ["Фразы уроков", c.lessonPhrasesLoaded],
+      ["Корпус текстов", c.corpusLoaded],
+      ["Чёрный список", inv.blacklist]
     ];
     grid.innerHTML = cards.map(([l, v]) => `
       <div class="stat-card"><span>${l}</span><strong>${v ?? 0}</strong></div>
     `).join("");
+  }
+
+  const sourcesBox = document.getElementById("sources-box");
+  if (sourcesBox) {
+    sourcesBox.innerHTML = `
+      <strong>Источники перевода (порядок приоритета)</strong><br>
+      1. <b>grammar</b> — шаблоны (${inv.patterns ?? 0}) + лексемы (${inv.lexemes ?? 0})<br>
+      2. <b>dosh</b> — онлайн-словарь (${c.wordsLoaded ?? 0} слов)<br>
+      3. <b>paydadosh</b> — разговорные фразы (${c.paydaDoshPhrasesLoaded ?? 0})<br>
+      4. <b>corpus/lesson</b> — короткие фразы из уроков (${c.lessonPhrasesLoaded ?? 0})<br>
+      5. <b>habar</b> — фразы разговорника (<i>сейчас выключены</i> в /translate)<br>
+      6. <b>gemini</b> — LLM, если словарь не нашёл<br><br>
+      <small>
+        «Правила слотов» (${inv.rules ?? 0}) — это не шаблоны перевода, а технические правила падежей (base/dat/gen).<br>
+        Реальные шаблоны — вкладка <b>Грамматика</b> (${inv.patterns ?? 0} шт.), поле <b>Приоритет</b> у каждого шаблона.
+      </small>
+    `;
   }
 
   const geminiBox = document.getElementById("gemini-box");
