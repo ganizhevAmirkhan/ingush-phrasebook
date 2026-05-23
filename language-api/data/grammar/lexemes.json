@@ -4875,6 +4875,39 @@
       "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 3)"
     },
     {
+      "ru": "здесь",
+      "pos": "adv",
+      "forms": {
+        "base": "укхаза",
+        "here": "укхаз",
+        "i_am_here": "Со укхаз ва",
+        "we_are_here": "Тхо укхаз да",
+        "dat": "укхаза"
+      },
+      "notes": "dosh: укхаза; confirming presence: Со укхаз ва (ва), Тхо укхаз да (да)"
+    },
+    {
+      "ru": "там",
+      "pos": "adv",
+      "forms": {
+        "base": "цига",
+        "there": "цигахь",
+        "we_are_there": "Тхо цигахь да",
+        "dat": "цига"
+      },
+      "notes": "dosh: цига, цигахь (там); confirming we are there: Тхо цигахь да (not вай дIа = нам туда)"
+    },
+    {
+      "ru": "въесться",
+      "pos": "noun",
+      "forms": {
+        "base": "чудола",
+        "dat": "чудола",
+        "how_to": "Мшта чудола да {PLACE}"
+      },
+      "notes": "dosh: чудола (въесться); how to get there: Мшта чудола да …"
+    },
+    {
       "ru": "деньги",
       "pos": "noun",
       "forms": {
@@ -5253,18 +5286,6 @@
       "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
     },
     {
-      "ru": "здесь",
-      "pos": "adv",
-      "forms": {
-        "base": "укхаза",
-        "here": "укхаз",
-        "i_am_here": "Со укхаз ва",
-        "we_are_here": "Тхо укхаз да",
-        "dat": "укхаза"
-      },
-      "notes": "dosh: укхаза; confirming presence: Со укхаз ва (ва), Тхо укхаз да (да)"
-    },
-    {
       "ru": "налево",
       "pos": "adv",
       "forms": {
@@ -5344,17 +5365,6 @@
         "dat": "лоралуш"
       },
       "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
-    },
-    {
-      "ru": "там",
-      "pos": "adv",
-      "forms": {
-        "base": "цига",
-        "there": "цигахь",
-        "we_are_there": "Тхо цигахь да",
-        "dat": "цига"
-      },
-      "notes": "dosh: цига, цигахь (там); confirming we are there: Тхо цигахь да (not вай дIа = нам туда)"
     },
     {
       "ru": "Болгария",
@@ -5652,16 +5662,6 @@
         "dat": "де́ста"
       },
       "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
-    },
-    {
-      "ru": "въесться",
-      "pos": "noun",
-      "forms": {
-        "base": "чудола",
-        "dat": "чудола",
-        "how_to": "Мшта чудола да {PLACE}"
-      },
-      "notes": "dosh: чудола (въесться); how to get there: Мшта чудола да …"
     },
     {
       "ru": "въехать",
@@ -9377,6 +9377,33 @@
       "forms": {
         "base": "диллар",
         "dat": "диллар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "возложить",
+      "pos": "noun",
+      "forms": {
+        "base": "дилла",
+        "dat": "дилла"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "возмужание",
+      "pos": "noun",
+      "forms": {
+        "base": "кха́чар",
+        "dat": "кха́чар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "возмужать",
+      "pos": "noun",
+      "forms": {
+        "base": "кхе",
+        "dat": "кхе"
       },
       "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
     }
