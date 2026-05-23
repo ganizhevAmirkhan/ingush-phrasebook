@@ -1,0 +1,2582 @@
+{
+  "generatedAt": "2026-05-23T23:26:56.688Z",
+  "counts": {
+    "lexemesNow": 1096,
+    "patterns": 799,
+    "doshWords": 32853,
+    "missingInPatternExamples": 839,
+    "missingFromDosh": 21298,
+    "missingFromGhalghay": 42046,
+    "candidatesReady": 21848
+  },
+  "topPatternGaps": [
+    {
+      "ru": "это",
+      "inExamples": 32,
+      "patterns": [
+        "q_who_told_you_this",
+        "q_to_whom_do_you_write_this",
+        "neg_no_not_wanted_to_say",
+        "ancient_this_is_fortress",
+        "daily_how_pronounce_word"
+      ],
+      "sampleRu": [
+        "кто сказал вам это",
+        "кому ты это пишешь",
+        "нет я не это хотел сказать"
+      ]
+    },
+    {
+      "ru": "меня",
+      "inExamples": 27,
+      "patterns": [
+        "my_body_part_hurts",
+        "vac_thanks_for_bringing_me",
+        "summer_soon_vacation",
+        "summer_relatives_invited_for_summer",
+        "hobby_big_collection"
+      ],
+      "sampleRu": [
+        "у меня болит живот",
+        "спасибо тебе за то что привела меня сюда",
+        "у меня скоро будет отпуск"
+      ]
+    },
+    {
+      "ru": "тебя",
+      "inExamples": 15,
+      "patterns": [
+        "q_do_you_have_money",
+        "vac_whats_new",
+        "mood_i_wont_wait_you",
+        "relations_i_love_you_very_much",
+        "relations_i_respect_you"
+      ],
+      "sampleRu": [
+        "у тебя есть деньги",
+        "что у тебя нового",
+        "я не буду тебя ждать"
+      ]
+    },
+    {
+      "ru": "книг",
+      "inExamples": 14,
+      "patterns": [
+        "participle_book_read_by_boy",
+        "participle_reading_book_boy",
+        "participle_book_reading_by_boy",
+        "participle_boy_who_read_book",
+        "participle_book_that_will_be_read"
+      ],
+      "sampleRu": [
+        "книга прочитанная мальчиком хорошая",
+        "мальчик читающий книгу",
+        "книга читаемая мальчиком"
+      ]
+    },
+    {
+      "ru": "друзь",
+      "inExamples": 11,
+      "patterns": [
+        "cafe_i_like_here_often_with_friends",
+        "forest_enough_lets_return_to_friends",
+        "friendship_lesson_title",
+        "friendship_term_friends_plural",
+        "friendship_we_your_friends"
+      ],
+      "sampleRu": [
+        "да я люблю здесь бывать часто захаживаю с друзьями",
+        "хватит давай вернемся к друзьям",
+        "дружба и друзья"
+      ]
+    },
+    {
+      "ru": "идет",
+      "inExamples": 10,
+      "patterns": [
+        "sent_girl_goes_from_spring",
+        "syntax_boy_goes_to_school",
+        "weather_it_is_raining",
+        "weather_it_is_snowing",
+        "mood_girl_goes_for_water"
+      ],
+      "sampleRu": [
+        "девушка идет с родника",
+        "мальчик идет в школу",
+        "идет дождь"
+      ]
+    },
+    {
+      "ru": "врем",
+      "inExamples": 10,
+      "patterns": [
+        "mood_dont_waste_time_sg",
+        "mood_dont_waste_time_pl",
+        "hobby_free_time_what_like",
+        "hobby_what_book_now",
+        "tense_present_title"
+      ],
+      "sampleRu": [
+        "не теряй зря время",
+        "не теряйте зря время",
+        "чем ты любишь заниматься в свободное время"
+      ]
+    },
+    {
+      "ru": "моя",
+      "inExamples": 10,
+      "patterns": [
+        "summer_daughter_wants_village_trip",
+        "place_my_family_lives_nazran",
+        "place_sister_lives_sleptsovsk",
+        "place_my_flat_on_fifteenth_floor",
+        "congrats_dear_mom_i_congratulate"
+      ],
+      "sampleRu": [
+        "моя дочка мечтает о поездке в деревню к бабушке и дедушке",
+        "моя семья живет в назрани",
+        "моя сестра живет в слепцовске"
+      ]
+    },
+    {
+      "ru": "когд",
+      "inExamples": 9,
+      "patterns": [
+        "q_when_go_nazran",
+        "q_when_are_we_leaving",
+        "daily_when_can_we_meet",
+        "clinic_when_therapist_receives",
+        "clinic_when_come_again"
+      ],
+      "sampleRu": [
+        "когда ты поедешь в назрань",
+        "когда мы уезжаем",
+        "когда мы могли бы с вами встретиться"
+      ]
+    },
+    {
+      "ru": "семь",
+      "inExamples": 9,
+      "patterns": [
+        "phone_big_greetings_family",
+        "place_my_family_lives_nazran",
+        "family_lesson_title",
+        "family_lets_talk_about_family_today",
+        "family_welfare_to_your_family"
+      ],
+      "sampleRu": [
+        "большой привет семье",
+        "моя семья живет в назрани",
+        "семья и родственники"
+      ]
+    },
+    {
+      "ru": "сегодн",
+      "inExamples": 8,
+      "patterns": [
+        "q_what_day_today",
+        "weather_how_today_weather",
+        "to_be_will_he_be_at_work_today",
+        "family_lets_talk_about_family_today",
+        "calendar_what_day_today"
+      ],
+      "sampleRu": [
+        "какой сегодня день",
+        "какая сегодня погода",
+        "а сегодня он будет на работе"
+      ]
+    },
+    {
+      "ru": "сестр",
+      "inExamples": 7,
+      "patterns": [
+        "conj_brother_and_sister",
+        "phone_spent_week_moscow_sister",
+        "place_sister_lives_sleptsovsk",
+        "family_your_sister",
+        "family_younger_sister"
+      ],
+      "sampleRu": [
+        "брат и сестра",
+        "я неделю провела в москве в гостях у своей сестры",
+        "моя сестра живет в слепцовске"
+      ]
+    },
+    {
+      "ru": "москв",
+      "inExamples": 7,
+      "patterns": [
+        "mood_i_was_not_in_moscow",
+        "phone_spent_week_moscow_sister",
+        "phone_whats_new_moscow",
+        "transport_moscow_nazran_train_running_again",
+        "friendship_in_moscow_who_friends"
+      ],
+      "sampleRu": [
+        "я не был в москве",
+        "я неделю провела в москве в гостях у своей сестры",
+        "что нового в москве"
+      ]
+    },
+    {
+      "ru": "стоит",
+      "inExamples": 7,
+      "patterns": [
+        "summer_go_to_sea_worth",
+        "transport_ticket_cost_question",
+        "transport_trip_cost_question",
+        "price_how_much_costs",
+        "home_kitchen_has_stove_fridge_table_chairs"
+      ],
+      "sampleRu": [
+        "стоит съездить на море",
+        "сколько стоит билет",
+        "сколько стоит поездка"
+      ]
+    },
+    {
+      "ru": "вас",
+      "inExamples": 7,
+      "patterns": [
+        "daily_i_wont_keep_long",
+        "daily_what_time_wait",
+        "daily_i_did_not_understand_you",
+        "daily_i_understood_you",
+        "store_have_other_color_jackets"
+      ],
+      "sampleRu": [
+        "я не задержу вас долго",
+        "во сколько вас ждать",
+        "я вас не понял"
+      ]
+    },
+    {
+      "ru": "зовут",
+      "inExamples": 7,
+      "patterns": [
+        "acquaintance_my_name_is_yakha",
+        "friendship_my_childhood_friend_murad",
+        "family_what_is_her_name",
+        "family_her_name_maryam_first_grade",
+        "intro_my_name_yakha_variant"
+      ],
+      "sampleRu": [
+        "меня зовут яха",
+        "это мой друг детства его зовут мурад он студент",
+        "как ее зовут"
+      ]
+    },
+    {
+      "ru": "яха",
+      "inExamples": 7,
+      "patterns": [
+        "acquaintance_my_name_is_yakha",
+        "acquaintance_good_day_yakha",
+        "friendship_who_are_your_friends_yakha",
+        "family_how_are_your_affairs",
+        "family_are_you_married_female"
+      ],
+      "sampleRu": [
+        "меня зовут яха",
+        "добрый день яха",
+        "а кто твои друзья яха"
+      ]
+    },
+    {
+      "ru": "иди",
+      "inExamples": 6,
+      "patterns": [
+        "go_forward_imperative",
+        "go_back_imperative",
+        "go_up_imperative",
+        "go_down_imperative",
+        "etiquette_come_here"
+      ],
+      "sampleRu": [
+        "иди вперёд",
+        "иди вперед",
+        "иди назад"
+      ]
+    },
+    {
+      "ru": "девушк",
+      "inExamples": 6,
+      "patterns": [
+        "sent_girl_goes_from_spring",
+        "mood_girl_goes_for_water",
+        "mood_girl_went_for_water",
+        "mood_girl_will_go_for_water",
+        "postposition_girl_carries_pitcher_shoulders"
+      ],
+      "sampleRu": [
+        "девушка идет с родника",
+        "девушка идет за водой",
+        "девушка ходила за водой"
+      ]
+    },
+    {
+      "ru": "алихан",
+      "inExamples": 6,
+      "patterns": [
+        "sent_alikhan_jumped_over_fence",
+        "syntax_alikhan_was_writing",
+        "syntax_alikhan_is_writing",
+        "syntax_alikhan_will_be_writing",
+        "tense_alikhan_was_talking"
+      ],
+      "sampleRu": [
+        "алихан перепрыгнул через забор",
+        "алихан писал",
+        "алихан пишет"
+      ]
+    },
+    {
+      "ru": "работ",
+      "inExamples": 6,
+      "patterns": [
+        "subord_because_taught",
+        "q_are_you_going_to_work",
+        "to_be_he_was_at_work",
+        "to_be_will_he_be_at_work_today",
+        "to_be_when_madina_will_be_at_work"
+      ],
+      "sampleRu": [
+        "он работу делает хорошо потому что его так научили",
+        "ты идешь на работу",
+        "он был на работе"
+      ]
+    },
+    {
+      "ru": "школ",
+      "inExamples": 6,
+      "patterns": [
+        "syntax_boy_goes_to_school",
+        "syntax_boy_went_to_school",
+        "syntax_boy_will_go_to_school",
+        "tense_madina_goes_to_school",
+        "to_be_now_they_are_in_school"
+      ],
+      "sampleRu": [
+        "мальчик идет в школу",
+        "мальчик пошел в школу",
+        "мальчик пойдет в школу"
+      ]
+    },
+    {
+      "ru": "кака",
+      "inExamples": 6,
+      "patterns": [
+        "weather_how_today_weather",
+        "weather_how_weather_general",
+        "weather_how_temperature_general",
+        "weather_how_temperature_general_typo",
+        "forest_what_a_beautiful_she"
+      ],
+      "sampleRu": [
+        "какая сегодня погода",
+        "какая погода",
+        "какая температура"
+      ]
+    },
+    {
+      "ru": "лет",
+      "inExamples": 6,
+      "patterns": [
+        "summer_we_rested_well_there",
+        "phone_how_many_years_study",
+        "phone_five_years",
+        "numbers_how_old_are_you",
+        "home_large_balcony_summer_tea"
+      ],
+      "sampleRu": [
+        "мы прекрасно отдохнули там прошлым летом",
+        "сколько лет им предстоит учиться",
+        "5 лет"
+      ]
+    },
+    {
+      "ru": "чем",
+      "inExamples": 6,
+      "patterns": [
+        "hobby_free_time_what_like",
+        "hobby_what_are_you_into",
+        "relations_how_can_i_help_you",
+        "relations_why_are_you_upset",
+        "intro_what_did_before_enrollment"
+      ],
+      "sampleRu": [
+        "чем ты любишь заниматься в свободное время",
+        "а ты чем увлекаешься",
+        "чем я могу вам помочь"
+      ]
+    },
+    {
+      "ru": "все",
+      "inExamples": 6,
+      "patterns": [
+        "hobby_computer_games_children",
+        "grocery_help_pack_purchases",
+        "tense_let_all_good_come_to_you",
+        "congrats_new_year_dreams_come_true",
+        "congrats_life_luck_dreams_true"
+      ],
+      "sampleRu": [
+        "сейчас все дети увлекаются компьютерными играми",
+        "помогите мне сложить все мои покупки",
+        "пусть к вам придет все хорошее"
+      ]
+    },
+    {
+      "ru": "пожалуйст",
+      "inExamples": 6,
+      "patterns": [
+        "cafe_bring_bill",
+        "daily_speak_slower",
+        "store_show_me_this_suit",
+        "grocery_punch_receipt",
+        "phone_call_leila_please"
+      ],
+      "sampleRu": [
+        "официант принесите пожалуйста счет",
+        "пожалуйста говорите медленнее",
+        "покажите мне пожалуйста этот костюм"
+      ]
+    },
+    {
+      "ru": "находитс",
+      "inExamples": 6,
+      "patterns": [
+        "store_where_fitting_room",
+        "postposition_under_house_cellar",
+        "place_brother_flat_second_floor",
+        "place_my_flat_on_fifteenth_floor",
+        "place_near_us_pond_with_swans"
+      ],
+      "sampleRu": [
+        "где находится примерочная",
+        "под домом находится подвал",
+        "квартира моего брата находится на 2 м этаже"
+      ]
+    },
+    {
+      "ru": "кг",
+      "inExamples": 6,
+      "patterns": [
+        "grocery_weigh_mutton_and_beef",
+        "grocery_i_buy_vegetables_set"
+      ],
+      "sampleRu": [
+        "взвесьте мне 1 кг баранины и 2 кг нежирной говядины",
+        "взвесьте мне 1 кг баранины и 2 кг нежирной говядины",
+        "я куплю 4 кг огурцов 1 кг лука 3 кг помидоров 5 кг картошки"
+      ]
+    },
+    {
+      "ru": "родственник",
+      "inExamples": 6,
+      "patterns": [
+        "tense_said_visited_relatives",
+        "place_relatives_live_other_village",
+        "family_lesson_title",
+        "family_your_relatives",
+        "family_i_have_many_relatives"
+      ],
+      "sampleRu": [
+        "саид ходил в гости к своим родственникам",
+        "мои родственники живут в другом селении",
+        "семья и родственники"
+      ]
+    }
+  ],
+  "topCandidates": [
+    {
+      "ru": "это",
+      "pos": "noun",
+      "forms": {
+        "base": "ер"
+      },
+      "source": "dosh",
+      "priority": 170,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 32,
+      "patterns": [
+        "q_who_told_you_this",
+        "q_to_whom_do_you_write_this",
+        "neg_no_not_wanted_to_say",
+        "ancient_this_is_fortress",
+        "daily_how_pronounce_word"
+      ],
+      "sampleRu": [
+        "кто сказал вам это",
+        "кому ты это пишешь",
+        "нет я не это хотел сказать"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "книг",
+      "pos": "сущ.",
+      "forms": {
+        "base": "книжка"
+      },
+      "source": "dosh+pattern",
+      "priority": 70,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 14,
+      "patterns": [
+        "participle_book_read_by_boy",
+        "participle_reading_book_boy",
+        "participle_book_reading_by_boy",
+        "participle_boy_who_read_book",
+        "participle_book_that_will_be_read"
+      ],
+      "sampleRu": [
+        "книга прочитанная мальчиком хорошая",
+        "мальчик читающий книгу",
+        "книга читаемая мальчиком"
+      ]
+    },
+    {
+      "ru": "моя",
+      "pos": "noun",
+      "forms": {
+        "base": "са"
+      },
+      "source": "dosh",
+      "priority": 60,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 10,
+      "patterns": [
+        "summer_daughter_wants_village_trip",
+        "place_my_family_lives_nazran",
+        "place_sister_lives_sleptsovsk",
+        "place_my_flat_on_fifteenth_floor",
+        "congrats_dear_mom_i_congratulate"
+      ],
+      "sampleRu": [
+        "моя дочка мечтает о поездке в деревню к бабушке и дедушке",
+        "моя семья живет в назрани",
+        "моя сестра живет в слепцовске"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "семь",
+      "pos": "числит.",
+      "forms": {
+        "base": "ворхI"
+      },
+      "source": "dosh",
+      "priority": 55,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 9,
+      "patterns": [
+        "phone_big_greetings_family",
+        "place_my_family_lives_nazran",
+        "family_lesson_title",
+        "family_lets_talk_about_family_today",
+        "family_welfare_to_your_family"
+      ],
+      "sampleRu": [
+        "большой привет семье",
+        "моя семья живет в назрани",
+        "семья и родственники"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "врем",
+      "pos": "сущ.",
+      "forms": {
+        "base": "ха свободное время мукъа хана"
+      },
+      "source": "dosh+pattern",
+      "priority": 50,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 10,
+      "patterns": [
+        "mood_dont_waste_time_sg",
+        "mood_dont_waste_time_pl",
+        "hobby_free_time_what_like",
+        "hobby_what_book_now",
+        "tense_present_title"
+      ],
+      "sampleRu": [
+        "не теряй зря время",
+        "не теряйте зря время",
+        "чем ты любишь заниматься в свободное время"
+      ]
+    },
+    {
+      "ru": "когд",
+      "pos": "нареч.",
+      "forms": {
+        "base": "цкъаза"
+      },
+      "source": "dosh+pattern",
+      "priority": 45,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 9,
+      "patterns": [
+        "q_when_go_nazran",
+        "q_when_are_we_leaving",
+        "daily_when_can_we_meet",
+        "clinic_when_therapist_receives",
+        "clinic_when_come_again"
+      ],
+      "sampleRu": [
+        "когда ты поедешь в назрань",
+        "когда мы уезжаем",
+        "когда мы могли бы с вами встретиться"
+      ]
+    },
+    {
+      "ru": "все",
+      "pos": "noun",
+      "forms": {
+        "base": "деррига"
+      },
+      "source": "dosh",
+      "priority": 40,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 6,
+      "patterns": [
+        "hobby_computer_games_children",
+        "grocery_help_pack_purchases",
+        "tense_let_all_good_come_to_you",
+        "congrats_new_year_dreams_come_true",
+        "congrats_life_luck_dreams_true"
+      ],
+      "sampleRu": [
+        "сейчас все дети увлекаются компьютерными играми",
+        "помогите мне сложить все мои покупки",
+        "пусть к вам придет все хорошее"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "родственник",
+      "pos": "сущ.",
+      "forms": {
+        "base": "гаргара саг"
+      },
+      "source": "dosh",
+      "priority": 40,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 6,
+      "patterns": [
+        "tense_said_visited_relatives",
+        "place_relatives_live_other_village",
+        "family_lesson_title",
+        "family_your_relatives",
+        "family_i_have_many_relatives"
+      ],
+      "sampleRu": [
+        "саид ходил в гости к своим родственникам",
+        "мои родственники живут в другом селении",
+        "семья и родственники"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "иди",
+      "pos": "noun",
+      "forms": {
+        "base": "gho"
+      },
+      "source": "dosh",
+      "priority": 40,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 6,
+      "patterns": [
+        "go_forward_imperative",
+        "go_back_imperative",
+        "go_up_imperative",
+        "go_down_imperative",
+        "etiquette_come_here"
+      ],
+      "sampleRu": [
+        "иди вперёд",
+        "иди вперед",
+        "иди назад"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "чем",
+      "pos": "=чул (вместо того, чтобы) чем торопиться, лучше выйдем пораньше сихлачул дикагiада, хьалхе арадаргда вай",
+      "forms": {
+        "base": "=л"
+      },
+      "source": "dosh",
+      "priority": 40,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 6,
+      "patterns": [
+        "hobby_free_time_what_like",
+        "hobby_what_are_you_into",
+        "relations_how_can_i_help_you",
+        "relations_why_are_you_upset",
+        "intro_what_did_before_enrollment"
+      ],
+      "sampleRu": [
+        "чем ты любишь заниматься в свободное время",
+        "а ты чем увлекаешься",
+        "чем я могу вам помочь"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "сегодн",
+      "pos": "нареч.",
+      "forms": {
+        "base": "тахан"
+      },
+      "source": "dosh+pattern",
+      "priority": 40,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 8,
+      "patterns": [
+        "q_what_day_today",
+        "weather_how_today_weather",
+        "to_be_will_he_be_at_work_today",
+        "family_lets_talk_about_family_today",
+        "calendar_what_day_today"
+      ],
+      "sampleRu": [
+        "какой сегодня день",
+        "какая сегодня погода",
+        "а сегодня он будет на работе"
+      ]
+    },
+    {
+      "ru": "большой",
+      "pos": "прил.",
+      "forms": {
+        "base": "доккха большой город йоккха город"
+      },
+      "source": "dosh",
+      "priority": 35,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 5,
+      "patterns": [
+        "store_big_selection",
+        "phone_big_greetings_family",
+        "home_large_balcony_summer_tea",
+        "home_kitchen_has_stove_fridge_table_chairs",
+        "home_middle_big_table_six_chairs"
+      ],
+      "sampleRu": [
+        "в нашем магазине очень большой выбор продукции",
+        "большой привет семье",
+        "в ней есть также большой балкон где летом можно пить чай"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "рад",
+      "pos": "нареч.",
+      "forms": {
+        "base": "воккха ве"
+      },
+      "source": "dosh",
+      "priority": 35,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 5,
+      "patterns": [
+        "acquaintance_glad_to_see_you",
+        "acquaintance_glad_to_meet_you",
+        "etiquette_glad_to_meet_you",
+        "etiquette_glad_to_meet_acquainted",
+        "etiquette_very_glad"
+      ],
+      "sampleRu": [
+        "рад тебя видеть",
+        "рад был с вами познакомиться",
+        "рад встрече с тобой"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "долго",
+      "pos": "нареч.",
+      "forms": {
+        "base": "дукха"
+      },
+      "source": "dosh",
+      "priority": 35,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 5,
+      "patterns": [
+        "daily_i_wont_keep_long",
+        "phone_why_couldnt_call_long",
+        "greeting_live_long_plural",
+        "greeting_live_long_male",
+        "greeting_live_long_female"
+      ],
+      "sampleRu": [
+        "я не задержу вас долго",
+        "почему до тебя так долго нельзя было дозвониться",
+        "живите долго"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "так",
+      "pos": "нареч.",
+      "forms": {
+        "base": "иштта дIа"
+      },
+      "source": "dosh",
+      "priority": 35,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 5,
+      "patterns": [
+        "subord_because_taught",
+        "subord_comparison_like_you",
+        "phone_why_couldnt_call_long",
+        "transport_fast_and_convenient",
+        "friendship_sometimes_meet_everyone_busy"
+      ],
+      "sampleRu": [
+        "он работу делает хорошо потому что его так научили",
+        "я учусь так же хорошо как и ты",
+        "почему до тебя так долго нельзя было дозвониться"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "класс",
+      "pos": "noun",
+      "forms": {
+        "base": "klass"
+      },
+      "source": "dosh",
+      "priority": 35,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 5,
+      "patterns": [
+        "family_her_name_maryam_first_grade",
+        "intro_male_linking_verb_forms",
+        "intro_female_linking_verb_forms",
+        "greeting_male_class_marker",
+        "greeting_female_class_marker"
+      ],
+      "sampleRu": [
+        "ее зовут марьям она учится в 1 м классе",
+        "в классе мужчин ва вар хургва",
+        "в классе женщин я яр хургья"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "пусть",
+      "pos": "хилча а (допустим)",
+      "forms": {
+        "base": "дале а"
+      },
+      "source": "dosh",
+      "priority": 35,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 5,
+      "patterns": [
+        "tense_let_all_good_come_to_you",
+        "phone_congrats_study_success",
+        "congrats_allah_give_good",
+        "congrats_may_allah_prolong_years",
+        "congrats_allah_reward_you_too"
+      ],
+      "sampleRu": [
+        "пусть к вам придет все хорошее",
+        "поздравляю пусть будет успешной их учеба",
+        "пусть аллах даст тебе добра счастья успеха и здоровья"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "сестр",
+      "pos": "сущ.",
+      "forms": {
+        "base": "йиша"
+      },
+      "source": "dosh+pattern",
+      "priority": 35,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 7,
+      "patterns": [
+        "conj_brother_and_sister",
+        "phone_spent_week_moscow_sister",
+        "place_sister_lives_sleptsovsk",
+        "family_your_sister",
+        "family_younger_sister"
+      ],
+      "sampleRu": [
+        "брат и сестра",
+        "я неделю провела в москве в гостях у своей сестры",
+        "моя сестра живет в слепцовске"
+      ]
+    },
+    {
+      "ru": "москв",
+      "pos": "noun",
+      "forms": {
+        "base": "Моска"
+      },
+      "source": "dosh+pattern",
+      "priority": 35,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 7,
+      "patterns": [
+        "mood_i_was_not_in_moscow",
+        "phone_spent_week_moscow_sister",
+        "phone_whats_new_moscow",
+        "transport_moscow_nazran_train_running_again",
+        "friendship_in_moscow_who_friends"
+      ],
+      "sampleRu": [
+        "я не был в москве",
+        "я неделю провела в москве в гостях у своей сестры",
+        "что нового в москве"
+      ]
+    },
+    {
+      "ru": "ингушский",
+      "pos": "прил.",
+      "forms": {
+        "base": "гIалгIай"
+      },
+      "source": "dosh",
+      "priority": 30,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 4,
+      "patterns": [
+        "daily_i_study_ingush_myself",
+        "daily_translate_sentence_ingush",
+        "daily_where_study_ingush",
+        "greeting_learn_ingush"
+      ],
+      "sampleRu": [
+        "я самостоятельно изучаю ингушский язык",
+        "переведите это предложение на ингушский язык",
+        "где вы изучаете ингушский язык"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "добро",
+      "pos": "сущ.",
+      "forms": {
+        "base": "дикадар"
+      },
+      "source": "dosh",
+      "priority": 30,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 4,
+      "patterns": [
+        "greeting_good_morning_singular",
+        "greeting_good_morning_plural",
+        "etiquette_welcome",
+        "etiquette_good_time_of_day"
+      ],
+      "sampleRu": [
+        "доброе утро к 1 человеку",
+        "доброе утро всем",
+        "добро пожаловать"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "девушк",
+      "pos": "сущ.",
+      "forms": {
+        "base": "йоI-саг"
+      },
+      "source": "dosh+pattern",
+      "priority": 30,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 6,
+      "patterns": [
+        "sent_girl_goes_from_spring",
+        "mood_girl_goes_for_water",
+        "mood_girl_went_for_water",
+        "mood_girl_will_go_for_water",
+        "postposition_girl_carries_pitcher_shoulders"
+      ],
+      "sampleRu": [
+        "девушка идет с родника",
+        "девушка идет за водой",
+        "девушка ходила за водой"
+      ]
+    },
+    {
+      "ru": "работ",
+      "pos": "сущ.",
+      "forms": {
+        "base": "балхаш"
+      },
+      "source": "dosh+pattern",
+      "priority": 30,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 6,
+      "patterns": [
+        "subord_because_taught",
+        "q_are_you_going_to_work",
+        "to_be_he_was_at_work",
+        "to_be_will_he_be_at_work_today",
+        "to_be_when_madina_will_be_at_work"
+      ],
+      "sampleRu": [
+        "он работу делает хорошо потому что его так научили",
+        "ты идешь на работу",
+        "он был на работе"
+      ]
+    },
+    {
+      "ru": "школ",
+      "pos": "noun",
+      "forms": {
+        "base": "ишкол"
+      },
+      "source": "dosh+pattern",
+      "priority": 30,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 6,
+      "patterns": [
+        "syntax_boy_goes_to_school",
+        "syntax_boy_went_to_school",
+        "syntax_boy_will_go_to_school",
+        "tense_madina_goes_to_school",
+        "to_be_now_they_are_in_school"
+      ],
+      "sampleRu": [
+        "мальчик идет в школу",
+        "мальчик пошел в школу",
+        "мальчик пойдет в школу"
+      ]
+    },
+    {
+      "ru": "лет",
+      "pos": "нареч.",
+      "forms": {
+        "base": "аьхкий"
+      },
+      "source": "dosh+pattern",
+      "priority": 30,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 6,
+      "patterns": [
+        "summer_we_rested_well_there",
+        "phone_how_many_years_study",
+        "phone_five_years",
+        "numbers_how_old_are_you",
+        "home_large_balcony_summer_tea"
+      ],
+      "sampleRu": [
+        "мы прекрасно отдохнули там прошлым летом",
+        "сколько лет им предстоит учиться",
+        "5 лет"
+      ]
+    },
+    {
+      "ru": "пожалуйст",
+      "pos": "noun",
+      "forms": {
+        "base": "боккъала"
+      },
+      "source": "dosh+pattern",
+      "priority": 30,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 6,
+      "patterns": [
+        "cafe_bring_bill",
+        "daily_speak_slower",
+        "store_show_me_this_suit",
+        "grocery_punch_receipt",
+        "phone_call_leila_please"
+      ],
+      "sampleRu": [
+        "официант принесите пожалуйста счет",
+        "пожалуйста говорите медленнее",
+        "покажите мне пожалуйста этот костюм"
+      ]
+    },
+    {
+      "ru": "сделать",
+      "pos": "глаг.",
+      "forms": {
+        "base": "де"
+      },
+      "source": "dosh",
+      "priority": 25,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 3,
+      "patterns": [
+        "cafe_come_sit_menu_order",
+        "forest_need_light_fire_for_shashlik",
+        "clinic_need_xray_and_tests"
+      ],
+      "sampleRu": [
+        "проходите садись за этот столик официант покажите нам меню мы хотим сделать заказ",
+        "надо зажечь костер чтобы сделать шашлык",
+        "вам надо сделать рентген сдать анализы"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "стул",
+      "pos": "сущ.",
+      "forms": {
+        "base": "гIанд"
+      },
+      "source": "dosh",
+      "priority": 25,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 3,
+      "patterns": [
+        "sent_i_sit_on_chair",
+        "postposition_brother_sat_on_chair",
+        "home_two_chairs"
+      ],
+      "sampleRu": [
+        "я сижу на стуле",
+        "брат сел на стул",
+        "2 стула"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "урок",
+      "pos": "noun",
+      "forms": {
+        "base": "дарс"
+      },
+      "source": "dosh",
+      "priority": 25,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 3,
+      "patterns": [
+        "intro_lesson3_title",
+        "calendar_lesson_title",
+        "greeting_lesson1_title"
+      ],
+      "sampleRu": [
+        "урок 3 знакомство",
+        "урок 2 календарь",
+        "урок 1 приветствие"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "давно",
+      "pos": "нареч.",
+      "forms": {
+        "base": "дукха ха хьалха"
+      },
+      "source": "dosh",
+      "priority": 25,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 3,
+      "patterns": [
+        "summer_not_seen_long",
+        "acquaintance_we_havent_met_long",
+        "etiquette_long_time_no_see"
+      ],
+      "sampleRu": [
+        "как давно мы не виделись",
+        "мы давно не встречались",
+        "давно не виделись"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "часто",
+      "pos": "нареч.",
+      "forms": {
+        "base": "листа"
+      },
+      "source": "dosh",
+      "priority": 25,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 3,
+      "patterns": [
+        "cafe_do_you_come_here_often",
+        "cafe_i_like_here_often_with_friends",
+        "friendship_do_you_often_meet_them"
+      ],
+      "sampleRu": [
+        "ты здесь часто бываешь",
+        "да я люблю здесь бывать часто захаживаю с друзьями",
+        "ты часто видетесь с ними"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "кино",
+      "pos": "noun",
+      "forms": {
+        "base": "кино"
+      },
+      "source": "dosh",
+      "priority": 25,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 3,
+      "patterns": [
+        "syntax_i_go_to_cinema",
+        "tense_salman_went_to_cinema",
+        "to_be_yesterday_i_was_in_cinema"
+      ],
+      "sampleRu": [
+        "я иду в кино",
+        "салман ходил в кино",
+        "вчера я был в кино"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "замужем",
+      "pos": "noun",
+      "forms": {
+        "base": "маьре"
+      },
+      "source": "dosh",
+      "priority": 25,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 3,
+      "patterns": [
+        "family_are_you_married_female",
+        "family_yes_married_have_daughter"
+      ],
+      "sampleRu": [
+        "а вы замужем яха",
+        "да я замужем у меня есть дочь",
+        "ты замужем"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "магазин",
+      "pos": "сущ.",
+      "forms": {
+        "base": "тика"
+      },
+      "source": "dosh",
+      "priority": 25,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 3,
+      "patterns": [
+        "store_big_selection",
+        "grocery_opened_this_year_nazran",
+        "to_be_they_were_in_shop_morning"
+      ],
+      "sampleRu": [
+        "в нашем магазине очень большой выбор продукции",
+        "в этом году в назрани открылся продовольственный магазин",
+        "утром они были в магазине"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "ждать",
+      "pos": "глаг.",
+      "forms": {
+        "base": "догдаха"
+      },
+      "source": "dosh",
+      "priority": 25,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 3,
+      "patterns": [
+        "mood_i_wont_wait_you",
+        "daily_what_time_wait",
+        "acquaintance_i_will_wait_for_call"
+      ],
+      "sampleRu": [
+        "я не буду тебя ждать",
+        "во сколько вас ждать",
+        "буду ждать твоего звонка"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "туда",
+      "pos": "нареч.",
+      "forms": {
+        "base": "цигахьа"
+      },
+      "source": "dosh",
+      "priority": 25,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 3,
+      "patterns": [
+        "neg_dont_go_there",
+        "phone_how_did_you_get_there",
+        "friendship_proverb_harmony_blessing"
+      ],
+      "sampleRu": [
+        "не ходи туда",
+        "как вы туда добирались",
+        "благодать нисходит туда где есть согласие"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "шашлык",
+      "pos": "noun",
+      "forms": {
+        "base": "шоашилг"
+      },
+      "source": "dosh",
+      "priority": 25,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 3,
+      "patterns": [
+        "forest_need_light_fire_for_shashlik",
+        "forest_shashlik_ready_lets_eat",
+        "forest_very_tasty_shashlik"
+      ],
+      "sampleRu": [
+        "надо зажечь костер чтобы сделать шашлык",
+        "шашлык готов давайте поедим",
+        "какой вкусный шашлык"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "дорог",
+      "pos": "сущ.",
+      "forms": {
+        "base": "никъ большая дорого боккха никъ"
+      },
+      "source": "dosh+pattern",
+      "priority": 25,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 5,
+      "patterns": [
+        "where_is_road",
+        "show_road_imperative",
+        "transport_do_you_spend_lot_time_road",
+        "adj_road_description"
+      ],
+      "sampleRu": [
+        "где дорога",
+        "покажи дорогу",
+        "ты много времени тратишь на дорогу"
+      ]
+    },
+    {
+      "ru": "погод",
+      "pos": "сущ.",
+      "forms": {
+        "base": "хаоттам"
+      },
+      "source": "dosh+pattern",
+      "priority": 25,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 5,
+      "patterns": [
+        "weather_no_bad_weather",
+        "weather_how_today_weather",
+        "weather_how_weather_general",
+        "weather_bad_weather_general",
+        "weather_tomorrow_forecast"
+      ],
+      "sampleRu": [
+        "у природы нет плохой погоды",
+        "какая сегодня погода",
+        "какая погода"
+      ]
+    },
+    {
+      "ru": "сказать",
+      "pos": "глаг.",
+      "forms": {
+        "base": "ала можно сказать ала йиш я"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "neg_no_not_wanted_to_say",
+        "syntax_need_to_say"
+      ],
+      "sampleRu": [
+        "нет я не это хотел сказать",
+        "нужно сказать"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "сказал",
+      "pos": "noun",
+      "forms": {
+        "base": "älyr"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "q_did_you_tell_him",
+        "q_who_told_you_this"
+      ],
+      "sampleRu": [
+        "ты сказал ему",
+        "кто сказал вам это"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "овощной",
+      "pos": "прил.",
+      "forms": {
+        "base": "баьца даарий"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "cafe_i_will_take_salad_fish_juice_icecream",
+        "grocery_vegetable_department"
+      ],
+      "sampleRu": [
+        "я возьму овощной салат рыбу сок и мороженое",
+        "овощной отдел"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "узнал",
+      "pos": "noun",
+      "forms": {
+        "base": "bejzær"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "daily_proverb_thousand_words",
+        "tense_magomed_recognized_friend"
+      ],
+      "sampleRu": [
+        "не знаю нет одно слово узнал увидел тысяча слов",
+        "магомед узнал друга"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "плохой",
+      "pos": "прил.",
+      "forms": {
+        "base": "во"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "weather_no_bad_weather",
+        "relations_bad_peace_better_than_quarrel"
+      ],
+      "sampleRu": [
+        "у природы нет плохой погоды",
+        "плохой мир лучше хорошей ссоры"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "назрань",
+      "pos": "noun",
+      "forms": {
+        "base": "Возгале"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "q_when_go_nazran",
+        "transport_moscow_nazran_train_running_again"
+      ],
+      "sampleRu": [
+        "когда ты поедешь в назрань",
+        "вновь начал ходить поезд москва назрань"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "показатель",
+      "pos": "noun",
+      "forms": {
+        "base": "гойтам"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "greeting_male_class_marker",
+        "greeting_female_class_marker"
+      ],
+      "sampleRu": [
+        "в показатель мужского класса",
+        "й показатель женского класса"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "градус",
+      "pos": "noun",
+      "forms": {
+        "base": "gradus"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "weather_ten_below_zero",
+        "weather_ten_above_zero"
+      ],
+      "sampleRu": [
+        "10 градусов мороза",
+        "10 градусов тепла"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "очевидно",
+      "pos": "noun",
+      "forms": {
+        "base": "гучох"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "tense_past_imperfect_visible_title",
+        "tense_past_perfect_visible_title"
+      ],
+      "sampleRu": [
+        "прошедшее несовершенное очевидное",
+        "прошедшее совершенное очевидное"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "примерить",
+      "pos": "глаг.",
+      "forms": {
+        "base": "гIаьхьа дий хьажа"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "store_can_try_it_on",
+        "store_i_want_try_autumn_winter_shoes"
+      ],
+      "sampleRu": [
+        "можно ли его примерить",
+        "я хотела бы примерить обувь для осени и зимы"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "совершенно",
+      "pos": "noun",
+      "forms": {
+        "base": "дизза́"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "tense_past_perfect_nonvisible_title",
+        "tense_past_perfect_visible_title"
+      ],
+      "sampleRu": [
+        "прошедшее совершенное неочевидное",
+        "прошедшее совершенное очевидное"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "хороший",
+      "pos": "сущ.",
+      "forms": {
+        "base": "хьамсара"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "conj_but_truth_good_person",
+        "store_you_made_good_choice"
+      ],
+      "sampleRu": [
+        "ты его не знаешь но правда он хороший человек",
+        "вы сделали очень хороший выбор"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "зря",
+      "pos": "нареч.",
+      "forms": {
+        "base": "гIулакх доацаш"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "mood_dont_waste_time_sg",
+        "mood_dont_waste_time_pl"
+      ],
+      "sampleRu": [
+        "не теряй зря время",
+        "не теряйте зря время"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "парень",
+      "pos": "сущ.",
+      "forms": {
+        "base": "зIамига саг"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "sent_boy_came_out_of_cave",
+        "postposition_guy_came_out_cave"
+      ],
+      "sampleRu": [
+        "парень вышел из пещеры",
+        "парень вышел из пещеры"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "вид",
+      "pos": "сущ.",
+      "forms": {
+        "base": "гуче"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "transport_metro_most_reliable",
+        "place_view_from_window_question"
+      ],
+      "sampleRu": [
+        "самый надежный вид транспорта метро",
+        "а какой вид из твоего окна"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "свободно",
+      "pos": "нареч.",
+      "forms": {
+        "base": "хийцца"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "hobby_free_time_what_like",
+        "home_free_time_reads_books_on_sofa"
+      ],
+      "sampleRu": [
+        "чем ты любишь заниматься в свободное время",
+        "в свободное время он лежа на диване читает книгу"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "три",
+      "pos": "числит.",
+      "forms": {
+        "base": "кхоъ"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "to_be_lesson_title",
+        "numbers_i_am_twenty_three"
+      ],
+      "sampleRu": [
+        "три времени глагола быть",
+        "мне двадцать три"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "поговорить",
+      "pos": "noun",
+      "forms": {
+        "base": "къамаьл де"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "summer_need_talk_advise",
+        "daily_id_like_to_talk"
+      ],
+      "sampleRu": [
+        "мне надо с тобой о многом поговорить и посоветоваться",
+        "мне бы хотелось с вами поговорить"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "игра",
+      "pos": "сущ.",
+      "forms": {
+        "base": "ловзар детские игры берий ловзараш"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "malsagov_focus_i_play",
+        "malsagov_focus_i_do_not_play"
+      ],
+      "sampleRu": [
+        "я играю",
+        "я не играю"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "быстро",
+      "pos": "нареч.",
+      "forms": {
+        "base": "чехка"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "transport_fast_and_convenient",
+        "transport_do_you_like_driving_fast"
+      ],
+      "sampleRu": [
+        "так быстро и удобно",
+        "ты любишь быстро ездить на машине"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "редко",
+      "pos": "noun",
+      "forms": {
+        "base": "nagæx́"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "hobby_husband_reads_rarely",
+        "transport_i_have_car_rarely_drive"
+      ],
+      "sampleRu": [
+        "мой муж читает книги редко",
+        "у меня есть машина но я на нем редко езжу"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "мама",
+      "pos": "сущ.",
+      "forms": {
+        "base": "нани"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "congrats_dear_mom_i_congratulate",
+        "family_our_mother"
+      ],
+      "sampleRu": [
+        "моя дорогая мама я поздравляю тебя",
+        "наша мама"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "сильный",
+      "pos": "прил.",
+      "forms": {
+        "base": "чIоагIа"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "weather_strong_wind",
+        "weather_very_strong_rain_linked_form"
+      ],
+      "sampleRu": [
+        "дует сильный ветер",
+        "очень сильный дождь"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "мое",
+      "pos": "noun",
+      "forms": {
+        "base": "са"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "postposition_you_entered_my_heart",
+        "postposition_cold_passed_through_body"
+      ],
+      "sampleRu": [
+        "ты вошла в мое сердце",
+        "холод прошел через мое тело"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "со",
+      "pos": "noun",
+      "forms": {
+        "base": "тӀара"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "home_kitchen_has_stove_fridge_table_chairs",
+        "place_from_window_i_see_park"
+      ],
+      "sampleRu": [
+        "там стоит плита большой холодильник а также обеденный стол со стульями",
+        "со своего окна я вижу очень красивый парк"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "прекрасно",
+      "pos": "noun",
+      "forms": {
+        "base": "тӀехдика"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "vac_you_look_great",
+        "summer_we_rested_well_there"
+      ],
+      "sampleRu": [
+        "ты прекрасно выглядишь",
+        "мы прекрасно отдохнули там прошлым летом"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "твоя",
+      "pos": "noun",
+      "forms": {
+        "base": "хьа"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "friendship_i_your_friend_fem",
+        "family_your_sister"
+      ],
+      "sampleRu": [
+        "я твоя подруга",
+        "твоя сестра"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "вкусный",
+      "pos": "прил.",
+      "forms": {
+        "base": "чам болаш"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "grocery_choose_non_alcohol_cake",
+        "forest_very_tasty_shashlik"
+      ],
+      "sampleRu": [
+        "выберите мне вкусный торт без спиртного",
+        "какой вкусный шашлык"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "ваши",
+      "pos": "сущ.",
+      "forms": {
+        "base": "шун бараш"
+      },
+      "source": "dosh",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 2,
+      "patterns": [
+        "friendship_we_your_friends",
+        "family_your_children_plural"
+      ],
+      "sampleRu": [
+        "мы ваши друзья",
+        "ваши дети"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "чтоб",
+      "pos": "союз",
+      "forms": {
+        "base": "духьа"
+      },
+      "source": "dosh+pattern",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 4,
+      "patterns": [
+        "subord_purpose_to_go_theater",
+        "forest_need_light_fire_for_shashlik",
+        "congrats_new_year_dreams_come_true",
+        "congrats_life_luck_dreams_true"
+      ],
+      "sampleRu": [
+        "я остался дома чтобы пойти в театр",
+        "надо зажечь костер чтобы сделать шашлык",
+        "желаем тебе чтобы в новом году сбылись все твои мечты"
+      ]
+    },
+    {
+      "ru": "завтр",
+      "pos": "нареч.",
+      "forms": {
+        "base": "кхоана завтра утром кхоана Iурра"
+      },
+      "source": "dosh+pattern",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 4,
+      "patterns": [
+        "weather_tomorrow_forecast",
+        "mood_question_neg_wedding_tomorrow",
+        "tense_i_would_go_to_madina_tomorrow",
+        "to_be_she_will_be_at_work_tomorrow"
+      ],
+      "sampleRu": [
+        "какой прогноз погоды на завтра",
+        "ты завтра на свадьбу не идешь",
+        "я завтра пойду к мадине"
+      ]
+    },
+    {
+      "ru": "минут",
+      "pos": "noun",
+      "forms": {
+        "base": "минот"
+      },
+      "source": "dosh+pattern",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 4,
+      "patterns": [
+        "cafe_order_accepted_wait",
+        "daily_can_you_spare_minutes",
+        "calendar_hour_is_60_minutes",
+        "calendar_minute_is_60_seconds"
+      ],
+      "sampleRu": [
+        "ваш заказ принят вам придется подождать десять минут",
+        "можете ли вы уделить мне несколько минут",
+        "час это 60 минут"
+      ]
+    },
+    {
+      "ru": "недел",
+      "pos": "сущ.",
+      "forms": {
+        "base": "кIира"
+      },
+      "source": "dosh+pattern",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 4,
+      "patterns": [
+        "phone_spent_week_moscow_sister",
+        "calendar_week_is_7_days",
+        "calendar_weekdays_label",
+        "calendar_month_is_4_weeks"
+      ],
+      "sampleRu": [
+        "я неделю провела в москве в гостях у своей сестры",
+        "неделя это 7 суток",
+        "дни недели"
+      ]
+    },
+    {
+      "ru": "счасть",
+      "pos": "сущ.",
+      "forms": {
+        "base": "ираз"
+      },
+      "source": "dosh+pattern",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 4,
+      "patterns": [
+        "postposition_boy_wrote_on_board",
+        "congrats_wish_happiness",
+        "congrats_peace_luck_happiness",
+        "congrats_allah_give_good"
+      ],
+      "sampleRu": [
+        "мальчик на доске написал счастье",
+        "желаю тебе счастья",
+        "мира удачи и счастья"
+      ]
+    },
+    {
+      "ru": "машин",
+      "pos": "noun",
+      "forms": {
+        "base": "машен"
+      },
+      "source": "dosh+pattern",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 4,
+      "patterns": [
+        "transport_i_have_car_rarely_drive",
+        "transport_do_you_like_driving_fast",
+        "broken_car_intransitive",
+        "smashed_car_transitive"
+      ],
+      "sampleRu": [
+        "у меня есть машина но я на нем редко езжу",
+        "ты любишь быстро ездить на машине",
+        "сломалась машина"
+      ]
+    },
+    {
+      "ru": "жела",
+      "pos": "noun",
+      "forms": {
+        "base": "dijzä"
+      },
+      "source": "dosh+pattern",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 4,
+      "patterns": [
+        "congrats_wish_happiness",
+        "congrats_wish_health",
+        "congrats_wish_success",
+        "congrats_wish_all_good"
+      ],
+      "sampleRu": [
+        "желаю тебе счастья",
+        "желаю тебе крепкого здоровья",
+        "желаю тебе успеха"
+      ]
+    },
+    {
+      "ru": "здоровь",
+      "pos": "сущ.",
+      "forms": {
+        "base": "могашал"
+      },
+      "source": "dosh+pattern",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 4,
+      "patterns": [
+        "congrats_wish_health",
+        "congrats_allah_give_good",
+        "family_wish_health_to_your_relatives",
+        "greeting_how_is_health"
+      ],
+      "sampleRu": [
+        "желаю тебе крепкого здоровья",
+        "пусть аллах даст тебе добра счастья успеха и здоровья",
+        "мы желаем здоровья вашим родным"
+      ]
+    },
+    {
+      "ru": "алл",
+      "pos": "noun",
+      "forms": {
+        "base": "АллахӀ"
+      },
+      "source": "dosh+pattern",
+      "priority": 20,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 4,
+      "patterns": [
+        "congrats_allah_give_good",
+        "congrats_may_allah_protect_you",
+        "congrats_may_allah_prolong_years",
+        "congrats_allah_reward_you_too"
+      ],
+      "sampleRu": [
+        "пусть аллах даст тебе добра счастья успеха и здоровья",
+        "да хранит тебя аллах",
+        "пусть аллах продлит твои годы"
+      ]
+    },
+    {
+      "ru": "автомобиль",
+      "pos": "noun",
+      "forms": {
+        "base": "avtomobil"
+      },
+      "source": "dosh",
+      "priority": 15,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 1,
+      "patterns": [
+        "transport_own_car_term"
+      ],
+      "sampleRu": [
+        "собственный автомобиль"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "огород",
+      "pos": "сущ.",
+      "forms": {
+        "base": "хьасий беш"
+      },
+      "source": "dosh",
+      "priority": 15,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 1,
+      "patterns": [
+        "syntax_i_need_flowers_from_garden"
+      ],
+      "sampleRu": [
+        "мне нужны красивые цветы с огорода"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "сам",
+      "pos": "noun",
+      "forms": {
+        "base": "айса"
+      },
+      "source": "dosh",
+      "priority": 15,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 1,
+      "patterns": [
+        "friendship_name_closest_friend"
+      ],
+      "sampleRu": [
+        "можешь назвать самого близкого друга"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "только",
+      "pos": "междом.",
+      "forms": {
+        "base": "мара"
+      },
+      "source": "dosh",
+      "priority": 15,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 1,
+      "patterns": [
+        "grocery_just_delivered"
+      ],
+      "sampleRu": [
+        "да конечно только что привезли"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "апрель",
+      "pos": "noun",
+      "forms": {
+        "base": "aprel"
+      },
+      "source": "dosh",
+      "priority": 15,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 1,
+      "patterns": [
+        "calendar_now_april"
+      ],
+      "sampleRu": [
+        "сейчас апрель"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "костер",
+      "pos": "noun",
+      "forms": {
+        "base": "цӀ||и"
+      },
+      "source": "dosh",
+      "priority": 15,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 1,
+      "patterns": [
+        "forest_need_light_fire_for_shashlik"
+      ],
+      "sampleRu": [
+        "надо зажечь костер чтобы сделать шашлык"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "легко",
+      "pos": "нареч.",
+      "forms": {
+        "base": "атта"
+      },
+      "source": "dosh",
+      "priority": 15,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 1,
+      "patterns": [
+        "state_it_is_easy_for_me"
+      ],
+      "sampleRu": [
+        "мне легко"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "удобно",
+      "pos": "noun",
+      "forms": {
+        "base": "а́тта"
+      },
+      "source": "dosh",
+      "priority": 15,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 1,
+      "patterns": [
+        "transport_fast_and_convenient"
+      ],
+      "sampleRu": [
+        "так быстро и удобно"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "ходить",
+      "pos": "глаг.",
+      "forms": {
+        "base": "лела"
+      },
+      "source": "dosh",
+      "priority": 15,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 1,
+      "patterns": [
+        "transport_moscow_nazran_train_running_again"
+      ],
+      "sampleRu": [
+        "вновь начал ходить поезд москва назрань"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "ездить",
+      "pos": "глаг.",
+      "forms": {
+        "base": "хахка ха"
+      },
+      "source": "dosh",
+      "priority": 15,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 1,
+      "patterns": [
+        "transport_do_you_like_driving_fast"
+      ],
+      "sampleRu": [
+        "ты любишь быстро ездить на машине"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "дружно",
+      "pos": "нареч.",
+      "forms": {
+        "base": "барт тайна"
+      },
+      "source": "dosh",
+      "priority": 15,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 1,
+      "patterns": [
+        "place_we_live_friendly"
+      ],
+      "sampleRu": [
+        "мы живем очень дружно"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "двор",
+      "pos": "сущ.",
+      "forms": {
+        "base": "ков"
+      },
+      "source": "dosh",
+      "priority": 15,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 1,
+      "patterns": [
+        "postposition_children_play_in_yard"
+      ],
+      "sampleRu": [
+        "во дворе играют дети"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "неочевидно",
+      "pos": "noun",
+      "forms": {
+        "base": "белгалза"
+      },
+      "source": "dosh",
+      "priority": 15,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 1,
+      "patterns": [
+        "tense_past_perfect_nonvisible_title"
+      ],
+      "sampleRu": [
+        "прошедшее совершенное неочевидное"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "ночь",
+      "pos": "сущ.",
+      "forms": {
+        "base": "бийса"
+      },
+      "source": "dosh",
+      "priority": 15,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 1,
+      "patterns": [
+        "calendar_day_parts_night"
+      ],
+      "sampleRu": [
+        "ночь"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "работа",
+      "pos": "сущ.",
+      "forms": {
+        "base": "болх"
+      },
+      "source": "dosh",
+      "priority": 15,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 1,
+      "patterns": [
+        "i_work_at_home"
+      ],
+      "sampleRu": [
+        "я дома работаю"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "наша",
+      "pos": "noun",
+      "forms": {
+        "base": "вай"
+      },
+      "source": "dosh",
+      "priority": 15,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 1,
+      "patterns": [
+        "family_our_mother"
+      ],
+      "sampleRu": [
+        "наша мама"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "съездить",
+      "pos": "noun",
+      "forms": {
+        "base": "ваха́-ва́"
+      },
+      "source": "dosh",
+      "priority": 15,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 1,
+      "patterns": [
+        "summer_go_to_sea_worth"
+      ],
+      "sampleRu": [
+        "стоит съездить на море"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "жизнь",
+      "pos": "сущ.",
+      "forms": {
+        "base": "дахар"
+      },
+      "source": "dosh",
+      "priority": 15,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 1,
+      "patterns": [
+        "etiquette_how_life"
+      ],
+      "sampleRu": [
+        "как жизнь"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "род",
+      "pos": "сущ.",
+      "forms": {
+        "base": "ваьр"
+      },
+      "source": "dosh",
+      "priority": 15,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 1,
+      "patterns": [
+        "q_where_are_you_from"
+      ],
+      "sampleRu": [
+        "откуда ты родом"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "лечь",
+      "pos": "глаг.",
+      "forms": {
+        "base": "дижа"
+      },
+      "source": "dosh",
+      "priority": 15,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 1,
+      "patterns": [
+        "clinic_recommend_hospitalization"
+      ],
+      "sampleRu": [
+        "я рекомендую вам лечь в больницу"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "внук",
+      "pos": "сущ.",
+      "forms": {
+        "base": "йиIий воI"
+      },
+      "source": "dosh",
+      "priority": 15,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 1,
+      "patterns": [
+        "family_their_grandchildren"
+      ],
+      "sampleRu": [
+        "их внуки"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "незнакомый",
+      "pos": "прил.",
+      "forms": {
+        "base": "хIама лайна"
+      },
+      "source": "dosh",
+      "priority": 15,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 1,
+      "patterns": [
+        "acquaintance_stranger_person"
+      ],
+      "sampleRu": [
+        "незнакомый человек"
+      ],
+      "needsDoshLookup": false
+    },
+    {
+      "ru": "познакомить",
+      "pos": "noun",
+      "forms": {
+        "base": "вовзийта"
+      },
+      "source": "dosh",
+      "priority": 15,
+      "reason": "used_in_pattern_examples",
+      "inExamples": 1,
+      "patterns": [
+        "acquaintance_want_introduce_you"
+      ],
+      "sampleRu": [
+        "хочу тебя с ним познакомить"
+      ],
+      "needsDoshLookup": false
+    }
+  ]
+}
