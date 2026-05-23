@@ -4738,6 +4738,4506 @@
         "dat": "мискача"
       },
       "notes": "Malsagov 1963 dictionary batch 101-130 (validated package 3)"
+    },
+    {
+      "ru": "деньги",
+      "pos": "noun",
+      "forms": {
+        "base": "ахча",
+        "dat": "ахча"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "ехать",
+      "pos": "noun",
+      "forms": {
+        "base": "даха",
+        "dat": "даха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "животное",
+      "pos": "noun",
+      "forms": {
+        "base": "вор",
+        "dat": "вор"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "окно",
+      "pos": "noun",
+      "forms": {
+        "base": "чӀагарг",
+        "dat": "чӀагарг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "питьё",
+      "pos": "noun",
+      "forms": {
+        "base": "малар",
+        "dat": "малар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "суп",
+      "pos": "noun",
+      "forms": {
+        "base": "дилла",
+        "dat": "дилла"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "восемь",
+      "pos": "noun",
+      "forms": {
+        "base": "бархӀ",
+        "dat": "бархӀ"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kur05"
+    },
+    {
+      "ru": "верёвка",
+      "pos": "noun",
+      "forms": {
+        "base": "охка",
+        "dat": "охка"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "вперёд",
+      "pos": "noun",
+      "forms": {
+        "base": "хьалха",
+        "dat": "хьалха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "гроза",
+      "pos": "noun",
+      "forms": {
+        "base": "дуӀа",
+        "dat": "дуӀа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "дети",
+      "pos": "noun",
+      "forms": {
+        "base": "бе́раш",
+        "dat": "бе́раш"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "еда",
+      "pos": "noun",
+      "forms": {
+        "base": "даар",
+        "dat": "даар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "кирка",
+      "pos": "noun",
+      "forms": {
+        "base": "барг",
+        "dat": "барг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "лопата",
+      "pos": "noun",
+      "forms": {
+        "base": "бахьа",
+        "dat": "бахьа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "охота",
+      "pos": "noun",
+      "forms": {
+        "base": "догдар",
+        "dat": "догдар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "раз",
+      "pos": "noun",
+      "forms": {
+        "base": "тӀаккха",
+        "dat": "тӀаккха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "след",
+      "pos": "noun",
+      "forms": {
+        "base": "лар",
+        "dat": "лар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "сок",
+      "pos": "noun",
+      "forms": {
+        "base": "мутт",
+        "dat": "мутт"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "спасибо",
+      "pos": "noun",
+      "forms": {
+        "base": "баркал",
+        "dat": "баркал"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "топор",
+      "pos": "noun",
+      "forms": {
+        "base": "тасхам",
+        "dat": "тасхам"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "цвет",
+      "pos": "noun",
+      "forms": {
+        "base": "зиза́ш",
+        "dat": "зиза́ш"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "дорого",
+      "pos": "adv",
+      "forms": {
+        "base": "деза",
+        "dat": "деза"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "много",
+      "pos": "adv",
+      "forms": {
+        "base": "дукха",
+        "dat": "дукха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "плохо",
+      "pos": "adv",
+      "forms": {
+        "base": "во",
+        "dat": "во"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "хорошо",
+      "pos": "adv",
+      "forms": {
+        "base": "дика",
+        "dat": "дика"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "инструмент",
+      "pos": "noun",
+      "forms": {
+        "base": "оатхал",
+        "dat": "оатхал"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "опасность",
+      "pos": "noun",
+      "forms": {
+        "base": "кхе́рам",
+        "dat": "кхе́рам"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "бензин",
+      "pos": "noun",
+      "forms": {
+        "base": "бензин",
+        "dat": "бензин"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kur05"
+    },
+    {
+      "ru": "грузовик",
+      "pos": "noun",
+      "forms": {
+        "base": "грузовик",
+        "dat": "грузовик"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kur05"
+    },
+    {
+      "ru": "один",
+      "pos": "noun",
+      "forms": {
+        "base": "цхьа",
+        "dat": "цхьа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kur05"
+    },
+    {
+      "ru": "быстрее",
+      "pos": "adv",
+      "forms": {
+        "base": "чехкагӀа",
+        "dat": "чехкагӀа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kur05"
+    },
+    {
+      "ru": "мало",
+      "pos": "adv",
+      "forms": {
+        "base": "кӀезига",
+        "dat": "кӀезига"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kur05"
+    },
+    {
+      "ru": "белый",
+      "pos": "adj",
+      "forms": {
+        "base": "кӀай",
+        "dat": "кӀай"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "жёлтый",
+      "pos": "adj",
+      "forms": {
+        "base": "ӀажагӀа",
+        "dat": "ӀажагӀа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "зелёный",
+      "pos": "adj",
+      "forms": {
+        "base": "баьццара",
+        "dat": "баьццара"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "красный",
+      "pos": "adj",
+      "forms": {
+        "base": "цӀе",
+        "dat": "цӀе"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "синий",
+      "pos": "adj",
+      "forms": {
+        "base": "сийна",
+        "dat": "сийна"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "чёрный",
+      "pos": "adj",
+      "forms": {
+        "base": "Ӏаьржа",
+        "dat": "Ӏаьржа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "близко",
+      "pos": "adv",
+      "forms": {
+        "base": "гарга",
+        "dat": "гарга"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "вкусно",
+      "pos": "adv",
+      "forms": {
+        "base": "ча́ме",
+        "dat": "ча́ме"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "грязно",
+      "pos": "adv",
+      "forms": {
+        "base": "бӀе́ха",
+        "dat": "бӀе́ха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "дёшево",
+      "pos": "adv",
+      "forms": {
+        "base": "дай",
+        "dat": "дай"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "здесь",
+      "pos": "adv",
+      "forms": {
+        "base": "укхаза",
+        "dat": "укхаза"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "налево",
+      "pos": "adv",
+      "forms": {
+        "base": "аьрдехьа",
+        "dat": "аьрдехьа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "направо",
+      "pos": "adv",
+      "forms": {
+        "base": "аьттехьа",
+        "dat": "аьттехьа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "опасно",
+      "pos": "adv",
+      "forms": {
+        "base": "кхе́раме",
+        "dat": "кхе́раме"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "потом",
+      "pos": "adv",
+      "forms": {
+        "base": "тӀаккха",
+        "dat": "тӀаккха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "прямо",
+      "pos": "adv",
+      "forms": {
+        "base": "духьал",
+        "dat": "духьал"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "рано",
+      "pos": "adv",
+      "forms": {
+        "base": "хьалха",
+        "dat": "хьалха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "скоро",
+      "pos": "adv",
+      "forms": {
+        "base": "кастлашха",
+        "dat": "кастлашха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "сюда",
+      "pos": "adv",
+      "forms": {
+        "base": "укхаза",
+        "dat": "укхаза"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "осторожно",
+      "pos": "adv",
+      "forms": {
+        "base": "лоралуш",
+        "dat": "лоралуш"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "там",
+      "pos": "adv",
+      "forms": {
+        "base": "цига",
+        "dat": "цига"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kur05"
+    },
+    {
+      "ru": "Болгария",
+      "pos": "noun",
+      "forms": {
+        "base": "Болгарехье",
+        "dat": "Болгарехье"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "Боливия",
+      "pos": "noun",
+      "forms": {
+        "base": "Боливехье",
+        "dat": "Боливехье"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "болото",
+      "pos": "noun",
+      "forms": {
+        "base": "ушал",
+        "dat": "ушал"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "болт",
+      "pos": "noun",
+      "forms": {
+        "base": "юкъаргӀа",
+        "dat": "юкъаргӀа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "боль",
+      "pos": "noun",
+      "forms": {
+        "base": "чӀинг",
+        "dat": "чӀинг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "болячка",
+      "pos": "noun",
+      "forms": {
+        "base": "кӀомарг",
+        "dat": "кӀомарг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "братец",
+      "pos": "noun",
+      "forms": {
+        "base": "вошилг",
+        "dat": "вошилг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "братство",
+      "pos": "noun",
+      "forms": {
+        "base": "вошал",
+        "dat": "вошал"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "брать",
+      "pos": "noun",
+      "forms": {
+        "base": "эца",
+        "dat": "эца"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "браться",
+      "pos": "noun",
+      "forms": {
+        "base": "лаца",
+        "dat": "лаца"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "брезжить",
+      "pos": "noun",
+      "forms": {
+        "base": "къе́да",
+        "dat": "къе́да"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "брожение",
+      "pos": "noun",
+      "forms": {
+        "base": "корзагӀда́лар",
+        "dat": "корзагӀда́лар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "брынза",
+      "pos": "noun",
+      "forms": {
+        "base": "жанахча",
+        "dat": "жанахча"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "бухта",
+      "pos": "noun",
+      "forms": {
+        "base": "хинкулг",
+        "dat": "хинкулг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "быстрота",
+      "pos": "noun",
+      "forms": {
+        "base": "чехкал",
+        "dat": "чехкал"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "ввод",
+      "pos": "noun",
+      "forms": {
+        "base": "чудоаладар",
+        "dat": "чудоаладар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "весть",
+      "pos": "noun",
+      "forms": {
+        "base": "бӀил",
+        "dat": "бӀил"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "вечереть",
+      "pos": "noun",
+      "forms": {
+        "base": "садов",
+        "dat": "садов"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "вжиться",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀаӀама",
+        "dat": "дӀаӀама"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "взимать",
+      "pos": "noun",
+      "forms": {
+        "base": "да́ха",
+        "dat": "да́ха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "взломать",
+      "pos": "noun",
+      "forms": {
+        "base": "до́хаде",
+        "dat": "до́хаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "включить",
+      "pos": "noun",
+      "forms": {
+        "base": "юкъе́дахьа",
+        "dat": "юкъе́дахьа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "вложение",
+      "pos": "noun",
+      "forms": {
+        "base": "до́ллар",
+        "dat": "до́ллар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "вложить",
+      "pos": "noun",
+      "forms": {
+        "base": "чудо́лла",
+        "dat": "чудо́лла"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "вобрать",
+      "pos": "noun",
+      "forms": {
+        "base": "чуо́за",
+        "dat": "чуо́за"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "водитель",
+      "pos": "noun",
+      "forms": {
+        "base": "лехкар",
+        "dat": "лехкар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "водиться",
+      "pos": "noun",
+      "forms": {
+        "base": "хила",
+        "dat": "хила"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "водовоз",
+      "pos": "noun",
+      "forms": {
+        "base": "хийкхухьарг",
+        "dat": "хийкхухьарг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "водоём",
+      "pos": "noun",
+      "forms": {
+        "base": "Ӏам",
+        "dat": "Ӏам"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "волочить",
+      "pos": "noun",
+      "forms": {
+        "base": "те́кхаде",
+        "dat": "те́кхаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "впиться",
+      "pos": "noun",
+      "forms": {
+        "base": "чудо́ла",
+        "dat": "чудо́ла"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "вручить",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀадала",
+        "dat": "дӀадала"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "вспучить",
+      "pos": "noun",
+      "forms": {
+        "base": "де́ста",
+        "dat": "де́ста"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "въесться",
+      "pos": "noun",
+      "forms": {
+        "base": "чудола",
+        "dat": "чудола"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "въехать",
+      "pos": "noun",
+      "forms": {
+        "base": "чуваха",
+        "dat": "чуваха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "вывод",
+      "pos": "noun",
+      "forms": {
+        "base": "соцам",
+        "dat": "соцам"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "выводить",
+      "pos": "noun",
+      "forms": {
+        "base": "а́рада́ха",
+        "dat": "а́рада́ха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "выговор",
+      "pos": "noun",
+      "forms": {
+        "base": "лер",
+        "dat": "лер"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "выехать",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀадаха",
+        "dat": "дӀадаха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "выжимать",
+      "pos": "noun",
+      "forms": {
+        "base": "Ӏо́вда",
+        "dat": "Ӏо́вда"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "вылечить",
+      "pos": "noun",
+      "forms": {
+        "base": "дерзаде",
+        "dat": "дерзаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "выложить",
+      "pos": "noun",
+      "forms": {
+        "base": "хьалдо́тта",
+        "dat": "хьалдо́тта"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "вынимать",
+      "pos": "noun",
+      "forms": {
+        "base": "хьада́ха",
+        "dat": "хьада́ха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "выписать",
+      "pos": "noun",
+      "forms": {
+        "base": "хьатӀаязде",
+        "dat": "хьатӀаязде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "выпить",
+      "pos": "noun",
+      "forms": {
+        "base": "мала",
+        "dat": "мала"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "выпучить",
+      "pos": "noun",
+      "forms": {
+        "base": "тӀакъоарзаде",
+        "dat": "тӀакъоарзаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "вырубить",
+      "pos": "noun",
+      "forms": {
+        "base": "хьакха",
+        "dat": "хьакха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "вырубка",
+      "pos": "noun",
+      "forms": {
+        "base": "хьакхар",
+        "dat": "хьакхар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "выучить",
+      "pos": "noun",
+      "forms": {
+        "base": "Ӏомаде",
+        "dat": "Ӏомаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "вычесть",
+      "pos": "noun",
+      "forms": {
+        "base": "тӀе́рада́ккха",
+        "dat": "тӀе́рада́ккха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "вычитать",
+      "pos": "noun",
+      "forms": {
+        "base": "де́ша",
+        "dat": "де́ша"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "глазеть",
+      "pos": "noun",
+      "forms": {
+        "base": "хьежа",
+        "dat": "хьежа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "глазурь",
+      "pos": "noun",
+      "forms": {
+        "base": "сос",
+        "dat": "сос"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "глухота",
+      "pos": "noun",
+      "forms": {
+        "base": "къорал",
+        "dat": "къорал"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "говор",
+      "pos": "noun",
+      "forms": {
+        "base": "гӀар",
+        "dat": "гӀар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "говорун",
+      "pos": "noun",
+      "forms": {
+        "base": "хабарча",
+        "dat": "хабарча"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "годиться",
+      "pos": "noun",
+      "forms": {
+        "base": "мега",
+        "dat": "мега"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "головка",
+      "pos": "noun",
+      "forms": {
+        "base": "кортилг",
+        "dat": "кортилг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "головня",
+      "pos": "noun",
+      "forms": {
+        "base": "хаьшк",
+        "dat": "хаьшк"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "городище",
+      "pos": "noun",
+      "forms": {
+        "base": "бур-боарз",
+        "dat": "бур-боарз"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "городки",
+      "pos": "noun",
+      "forms": {
+        "base": "таьлг",
+        "dat": "таьлг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "горчить",
+      "pos": "noun",
+      "forms": {
+        "base": "къахьдала",
+        "dat": "къахьдала"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "горячка",
+      "pos": "noun",
+      "forms": {
+        "base": "йӀовхал",
+        "dat": "йӀовхал"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "грубость",
+      "pos": "noun",
+      "forms": {
+        "base": "энжалал",
+        "dat": "энжалал"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "доблесть",
+      "pos": "noun",
+      "forms": {
+        "base": "де́нал",
+        "dat": "де́нал"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "добрать",
+      "pos": "noun",
+      "forms": {
+        "base": "хьатӀаэца",
+        "dat": "хьатӀаэца"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "довод",
+      "pos": "noun",
+      "forms": {
+        "base": "бехказло",
+        "dat": "бехказло"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "договор",
+      "pos": "noun",
+      "forms": {
+        "base": "барт",
+        "dat": "барт"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "доехать",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀакха́ча",
+        "dat": "дӀакха́ча"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "докупить",
+      "pos": "noun",
+      "forms": {
+        "base": "хьатӀаэца",
+        "dat": "хьатӀаэца"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "доложить",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀаха́йта",
+        "dat": "дӀаха́йта"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "домик",
+      "pos": "noun",
+      "forms": {
+        "base": "цӀалг",
+        "dat": "цӀалг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "досмотр",
+      "pos": "noun",
+      "forms": {
+        "base": "чухьажар",
+        "dat": "чухьажар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "другое",
+      "pos": "noun",
+      "forms": {
+        "base": "кхыдар",
+        "dat": "кхыдар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "другой",
+      "pos": "noun",
+      "forms": {
+        "base": "вож",
+        "dat": "вож"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "дурачить",
+      "pos": "noun",
+      "forms": {
+        "base": "Ӏе́хабе",
+        "dat": "Ӏе́хабе"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "духи",
+      "pos": "noun",
+      "forms": {
+        "base": "дуфи",
+        "dat": "дуфи"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "ёжиться",
+      "pos": "noun",
+      "forms": {
+        "base": "гергдала",
+        "dat": "гергдала"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "есть",
+      "pos": "noun",
+      "forms": {
+        "base": "да",
+        "dat": "да"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "жесть",
+      "pos": "noun",
+      "forms": {
+        "base": "кӀала",
+        "dat": "кӀала"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "жжение",
+      "pos": "noun",
+      "forms": {
+        "base": "доагадар",
+        "dat": "доагадар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "животик",
+      "pos": "noun",
+      "forms": {
+        "base": "китилг",
+        "dat": "китилг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "житьё",
+      "pos": "noun",
+      "forms": {
+        "base": "да́хар",
+        "dat": "да́хар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "житься",
+      "pos": "noun",
+      "forms": {
+        "base": "воахавала",
+        "dat": "воахавала"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "заболеть",
+      "pos": "noun",
+      "forms": {
+        "base": "лазада́ла",
+        "dat": "лазада́ла"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "забрать",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀадахьа",
+        "dat": "дӀадахьа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "заведомо",
+      "pos": "noun",
+      "forms": {
+        "base": "ховшше",
+        "dat": "ховшше"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "заговор",
+      "pos": "noun",
+      "forms": {
+        "base": "лер",
+        "dat": "лер"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "задумать",
+      "pos": "noun",
+      "forms": {
+        "base": "дагадо́ха",
+        "dat": "дагадо́ха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "зажить",
+      "pos": "noun",
+      "forms": {
+        "base": "дерза",
+        "dat": "дерза"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "закупить",
+      "pos": "noun",
+      "forms": {
+        "base": "эца",
+        "dat": "эца"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "закурить",
+      "pos": "noun",
+      "forms": {
+        "base": "увза",
+        "dat": "увза"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "залепить",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀадикъа",
+        "dat": "дӀадикъа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "залечить",
+      "pos": "noun",
+      "forms": {
+        "base": "де́рзаде",
+        "dat": "де́рзаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "заложить",
+      "pos": "noun",
+      "forms": {
+        "base": "дилла",
+        "dat": "дилла"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "замочить",
+      "pos": "noun",
+      "forms": {
+        "base": "дошаде",
+        "dat": "дошаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "замучить",
+      "pos": "noun",
+      "forms": {
+        "base": "о́ттаде",
+        "dat": "о́ттаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "занимать",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀала́ца",
+        "dat": "дӀала́ца"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "записать",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀаязде",
+        "dat": "дӀаязде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "записка",
+      "pos": "noun",
+      "forms": {
+        "base": "каьхат",
+        "dat": "каьхат"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "запись",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀаяздар",
+        "dat": "дӀаяздар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "запить",
+      "pos": "noun",
+      "forms": {
+        "base": "тӀамала",
+        "dat": "тӀамала"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "застолье",
+      "pos": "noun",
+      "forms": {
+        "base": "шу",
+        "dat": "шу"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "засучить",
+      "pos": "noun",
+      "forms": {
+        "base": "хьалкорчаде",
+        "dat": "хьалкорчаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "затопить",
+      "pos": "noun",
+      "forms": {
+        "base": "лотае",
+        "dat": "лотае"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "заточить",
+      "pos": "noun",
+      "forms": {
+        "base": "ирде",
+        "dat": "ирде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "затупить",
+      "pos": "noun",
+      "forms": {
+        "base": "аьрхӀде",
+        "dat": "аьрхӀде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "заучить",
+      "pos": "noun",
+      "forms": {
+        "base": "Ӏомаде",
+        "dat": "Ӏомаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "зацепить",
+      "pos": "noun",
+      "forms": {
+        "base": "хьокхадала",
+        "dat": "хьокхадала"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "зачитать",
+      "pos": "noun",
+      "forms": {
+        "base": "Ӏоде́ша",
+        "dat": "Ӏоде́ша"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "зубец",
+      "pos": "noun",
+      "forms": {
+        "base": "гов",
+        "dat": "гов"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "идти",
+      "pos": "noun",
+      "forms": {
+        "base": "ле́ла",
+        "dat": "ле́ла"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "избрать",
+      "pos": "noun",
+      "forms": {
+        "base": "ха́ржа",
+        "dat": "ха́ржа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "известь",
+      "pos": "noun",
+      "forms": {
+        "base": "кӀир",
+        "dat": "кӀир"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "изгородь",
+      "pos": "noun",
+      "forms": {
+        "base": "карт",
+        "dat": "карт"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "изжить",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀада́ккха",
+        "dat": "дӀада́ккха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "излечить",
+      "pos": "noun",
+      "forms": {
+        "base": "де́рзаде",
+        "dat": "де́рзаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "изломать",
+      "pos": "noun",
+      "forms": {
+        "base": "кагде",
+        "dat": "кагде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "измучить",
+      "pos": "noun",
+      "forms": {
+        "base": "о́ттаде",
+        "dat": "о́ттаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "изнежить",
+      "pos": "noun",
+      "forms": {
+        "base": "бо́чада́ккха",
+        "dat": "бо́чада́ккха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "изрубить",
+      "pos": "noun",
+      "forms": {
+        "base": "те́да",
+        "dat": "те́да"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "изучить",
+      "pos": "noun",
+      "forms": {
+        "base": "до́вза",
+        "dat": "до́вза"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "иноверка",
+      "pos": "noun",
+      "forms": {
+        "base": "кераста",
+        "dat": "кераста"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "истолочь",
+      "pos": "noun",
+      "forms": {
+        "base": "а́та",
+        "dat": "а́та"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "калечить",
+      "pos": "noun",
+      "forms": {
+        "base": "чо́лакхда́ккха",
+        "dat": "чо́лакхда́ккха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "Карачай",
+      "pos": "noun",
+      "forms": {
+        "base": "Къаршече",
+        "dat": "Къаршече"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "кичиться",
+      "pos": "noun",
+      "forms": {
+        "base": "сонтада́ла",
+        "dat": "сонтада́ла"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "клянчить",
+      "pos": "noun",
+      "forms": {
+        "base": "де́ха",
+        "dat": "де́ха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "книга",
+      "pos": "noun",
+      "forms": {
+        "base": "тептар",
+        "dat": "тептар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "княжение",
+      "pos": "noun",
+      "forms": {
+        "base": "оалал",
+        "dat": "оалал"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "комнатка",
+      "pos": "noun",
+      "forms": {
+        "base": "цӀалг",
+        "dat": "цӀалг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "коновязь",
+      "pos": "noun",
+      "forms": {
+        "base": "караз",
+        "dat": "караз"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "кончить",
+      "pos": "noun",
+      "forms": {
+        "base": "чакхда́ккха",
+        "dat": "чакхда́ккха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "копиться",
+      "pos": "noun",
+      "forms": {
+        "base": "Ӏа́",
+        "dat": "Ӏа́"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "коровник",
+      "pos": "noun",
+      "forms": {
+        "base": "божал",
+        "dat": "божал"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "косынка",
+      "pos": "noun",
+      "forms": {
+        "base": "делг",
+        "dat": "делг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "кошара",
+      "pos": "noun",
+      "forms": {
+        "base": "жел",
+        "dat": "жел"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "кошелёк",
+      "pos": "noun",
+      "forms": {
+        "base": "бохча",
+        "dat": "бохча"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "кошёлка",
+      "pos": "noun",
+      "forms": {
+        "base": "тускар",
+        "dat": "тускар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "крепить",
+      "pos": "noun",
+      "forms": {
+        "base": "чӀоагӀде",
+        "dat": "чӀоагӀде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "кров",
+      "pos": "noun",
+      "forms": {
+        "base": "фусам",
+        "dat": "фусам"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "кровля",
+      "pos": "noun",
+      "forms": {
+        "base": "кхалар",
+        "dat": "кхалар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "кровник",
+      "pos": "noun",
+      "forms": {
+        "base": "до́вхо",
+        "dat": "до́вхо"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "кружить",
+      "pos": "noun",
+      "forms": {
+        "base": "гобаха",
+        "dat": "гобаха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "крынка",
+      "pos": "noun",
+      "forms": {
+        "base": "зоакилг",
+        "dat": "зоакилг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "купить",
+      "pos": "noun",
+      "forms": {
+        "base": "эца",
+        "dat": "эца"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "лекарь",
+      "pos": "noun",
+      "forms": {
+        "base": "лор",
+        "dat": "лор"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "лепить",
+      "pos": "noun",
+      "forms": {
+        "base": "де",
+        "dat": "де"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "лесть",
+      "pos": "noun",
+      "forms": {
+        "base": "хоастадар",
+        "dat": "хоастадар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "летопись",
+      "pos": "noun",
+      "forms": {
+        "base": "тархьар",
+        "dat": "тархьар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "лженаука",
+      "pos": "noun",
+      "forms": {
+        "base": "харцъӀилма",
+        "dat": "харцъӀилма"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "ложиться",
+      "pos": "noun",
+      "forms": {
+        "base": "дижа",
+        "dat": "дижа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "ломать",
+      "pos": "noun",
+      "forms": {
+        "base": "до́хаде",
+        "dat": "до́хаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "лужение",
+      "pos": "noun",
+      "forms": {
+        "base": "гӀаьледа́ккхар",
+        "dat": "гӀаьледа́ккхар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "лукошко",
+      "pos": "noun",
+      "forms": {
+        "base": "кхизг",
+        "dat": "кхизг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "лупить",
+      "pos": "noun",
+      "forms": {
+        "base": "е́тта",
+        "dat": "е́тта"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "лупиться",
+      "pos": "noun",
+      "forms": {
+        "base": "хьахьа́",
+        "dat": "хьахьа́"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "малость",
+      "pos": "noun",
+      "forms": {
+        "base": "зӀамигал",
+        "dat": "зӀамигал"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "Мальта",
+      "pos": "noun",
+      "forms": {
+        "base": "Ма́льтӀе",
+        "dat": "Ма́льтӀе"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "малявка",
+      "pos": "noun",
+      "forms": {
+        "base": "сагилг",
+        "dat": "сагилг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "мельчить",
+      "pos": "noun",
+      "forms": {
+        "base": "а́та",
+        "dat": "а́та"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "месть",
+      "pos": "noun",
+      "forms": {
+        "base": "пхьале́хар",
+        "dat": "пхьале́хар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "месяцами",
+      "pos": "noun",
+      "forms": {
+        "base": "бетт-бетта",
+        "dat": "бетт-бетта"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "миновать",
+      "pos": "noun",
+      "forms": {
+        "base": "тӀе́хда́ла",
+        "dat": "тӀе́хда́ла"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "многое",
+      "pos": "noun",
+      "forms": {
+        "base": "дукхадар",
+        "dat": "дукхадар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "морочить",
+      "pos": "noun",
+      "forms": {
+        "base": "Ӏе́хаде",
+        "dat": "Ӏе́хаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "мочить",
+      "pos": "noun",
+      "forms": {
+        "base": "дошаде",
+        "dat": "дошаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "мужество",
+      "pos": "noun",
+      "forms": {
+        "base": "де́нал",
+        "dat": "де́нал"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "мужчина",
+      "pos": "noun",
+      "forms": {
+        "base": "къо́нах",
+        "dat": "къо́нах"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "мягчить",
+      "pos": "noun",
+      "forms": {
+        "base": "кӀаьдде",
+        "dat": "кӀаьдде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "мясник",
+      "pos": "noun",
+      "forms": {
+        "base": "хасапхо",
+        "dat": "хасапхо"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "набрать",
+      "pos": "noun",
+      "forms": {
+        "base": "хьагулде",
+        "dat": "хьагулде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "наговор",
+      "pos": "noun",
+      "forms": {
+        "base": "гӀийбат",
+        "dat": "гӀийбат"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "надсмотр",
+      "pos": "noun",
+      "forms": {
+        "base": "тӀахьажар",
+        "dat": "тӀахьажар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "наесться",
+      "pos": "noun",
+      "forms": {
+        "base": "диза",
+        "dat": "диза"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "наехать",
+      "pos": "noun",
+      "forms": {
+        "base": "тӀакхе́та",
+        "dat": "тӀакхе́та"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "нажимать",
+      "pos": "noun",
+      "forms": {
+        "base": "тӀатоӀаде",
+        "dat": "тӀатоӀаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "накопить",
+      "pos": "noun",
+      "forms": {
+        "base": "гулде",
+        "dat": "гулде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "налепить",
+      "pos": "noun",
+      "forms": {
+        "base": "тӀалотаде",
+        "dat": "тӀалотаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "наломать",
+      "pos": "noun",
+      "forms": {
+        "base": "кагде",
+        "dat": "кагде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "намочить",
+      "pos": "noun",
+      "forms": {
+        "base": "дошаде",
+        "dat": "дошаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "написать",
+      "pos": "noun",
+      "forms": {
+        "base": "язде",
+        "dat": "язде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "нарубить",
+      "pos": "noun",
+      "forms": {
+        "base": "да́ккха",
+        "dat": "да́ккха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "насесть",
+      "pos": "noun",
+      "forms": {
+        "base": "ха́",
+        "dat": "ха́"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "наточить",
+      "pos": "noun",
+      "forms": {
+        "base": "ирде",
+        "dat": "ирде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "научить",
+      "pos": "noun",
+      "forms": {
+        "base": "Ӏомаде",
+        "dat": "Ӏомаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "нацепить",
+      "pos": "noun",
+      "forms": {
+        "base": "о́лла",
+        "dat": "о́лла"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "небосвод",
+      "pos": "noun",
+      "forms": {
+        "base": "сигале",
+        "dat": "сигале"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "невзгоды",
+      "pos": "noun",
+      "forms": {
+        "base": "Ӏанз",
+        "dat": "Ӏанз"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "непогода",
+      "pos": "noun",
+      "forms": {
+        "base": "йоачан",
+        "dat": "йоачан"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "новизна",
+      "pos": "noun",
+      "forms": {
+        "base": "ке́рдадар",
+        "dat": "ке́рдадар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "нога",
+      "pos": "noun",
+      "forms": {
+        "base": "ког",
+        "dat": "ког"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "ноговица",
+      "pos": "noun",
+      "forms": {
+        "base": "пезг",
+        "dat": "пезг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "ноготок",
+      "pos": "noun",
+      "forms": {
+        "base": "мӀа́рилг",
+        "dat": "мӀа́рилг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "ночник",
+      "pos": "noun",
+      "forms": {
+        "base": "бусйоагорг",
+        "dat": "бусйоагорг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "нутро",
+      "pos": "noun",
+      "forms": {
+        "base": "кер",
+        "dat": "кер"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "облачить",
+      "pos": "noun",
+      "forms": {
+        "base": "тӀадувха",
+        "dat": "тӀадувха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "облепить",
+      "pos": "noun",
+      "forms": {
+        "base": "лата",
+        "dat": "лата"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "обличить",
+      "pos": "noun",
+      "forms": {
+        "base": "гучада́ккха",
+        "dat": "гучада́ккха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "обломать",
+      "pos": "noun",
+      "forms": {
+        "base": "кагде",
+        "dat": "кагде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "облупить",
+      "pos": "noun",
+      "forms": {
+        "base": "чӀормада́ккха",
+        "dat": "чӀормада́ккха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "обмочить",
+      "pos": "noun",
+      "forms": {
+        "base": "тӀоададе",
+        "dat": "тӀоададе"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "обнажить",
+      "pos": "noun",
+      "forms": {
+        "base": "дерзанда́ккха",
+        "dat": "дерзанда́ккха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "обнимать",
+      "pos": "noun",
+      "forms": {
+        "base": "мархӀабе́хка",
+        "dat": "мархӀабе́хка"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "обновить",
+      "pos": "noun",
+      "forms": {
+        "base": "эргада́ккха",
+        "dat": "эргада́ккха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "обобрать",
+      "pos": "noun",
+      "forms": {
+        "base": "хьада́ха",
+        "dat": "хьада́ха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "оболочка",
+      "pos": "noun",
+      "forms": {
+        "base": "чӀор",
+        "dat": "чӀор"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "обратить",
+      "pos": "noun",
+      "forms": {
+        "base": "тӀаде́рзаде",
+        "dat": "тӀаде́рзаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "обрубить",
+      "pos": "noun",
+      "forms": {
+        "base": "хоададе",
+        "dat": "хоададе"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "обрубок",
+      "pos": "noun",
+      "forms": {
+        "base": "ваьндиг",
+        "dat": "ваьндиг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "обточить",
+      "pos": "noun",
+      "forms": {
+        "base": "хьакха",
+        "dat": "хьакха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "обучить",
+      "pos": "noun",
+      "forms": {
+        "base": "хье́ха",
+        "dat": "хье́ха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "обычай",
+      "pos": "noun",
+      "forms": {
+        "base": "Ӏа́дат",
+        "dat": "Ӏа́дат"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "овцевод",
+      "pos": "noun",
+      "forms": {
+        "base": "жале́ладер",
+        "dat": "жале́ладер"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "огрубеть",
+      "pos": "noun",
+      "forms": {
+        "base": "морсдала",
+        "dat": "морсдала"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "окончить",
+      "pos": "noun",
+      "forms": {
+        "base": "йистеда́ккха",
+        "dat": "йистеда́ккха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "окошко",
+      "pos": "noun",
+      "forms": {
+        "base": "корильг",
+        "dat": "корильг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "описка",
+      "pos": "noun",
+      "forms": {
+        "base": "гӀа́лат",
+        "dat": "гӀа́лат"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "опухнуть",
+      "pos": "noun",
+      "forms": {
+        "base": "де́ста",
+        "dat": "де́ста"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "освежить",
+      "pos": "noun",
+      "forms": {
+        "base": "цӀенде",
+        "dat": "цӀенде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "осесть",
+      "pos": "noun",
+      "forms": {
+        "base": "тӀадижа",
+        "dat": "тӀадижа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "оскопить",
+      "pos": "noun",
+      "forms": {
+        "base": "даӀа",
+        "dat": "даӀа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "осмотр",
+      "pos": "noun",
+      "forms": {
+        "base": "хьажар",
+        "dat": "хьажар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "основа",
+      "pos": "noun",
+      "forms": {
+        "base": "дух",
+        "dat": "дух"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "основать",
+      "pos": "noun",
+      "forms": {
+        "base": "дилла",
+        "dat": "дилла"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "отличить",
+      "pos": "noun",
+      "forms": {
+        "base": "къоастаде",
+        "dat": "къоастаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "отложить",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀадилла",
+        "dat": "дӀадилла"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "отлучить",
+      "pos": "noun",
+      "forms": {
+        "base": "къоастаде",
+        "dat": "къоастаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "отнимать",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀада́ха",
+        "dat": "дӀада́ха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "отобрать",
+      "pos": "noun",
+      "forms": {
+        "base": "хьада́ккха",
+        "dat": "хьада́ккха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "отруби",
+      "pos": "noun",
+      "forms": {
+        "base": "жерж",
+        "dat": "жерж"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "отточить",
+      "pos": "noun",
+      "forms": {
+        "base": "ирде",
+        "dat": "ирде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "отцепить",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀакъоастаде",
+        "dat": "дӀакъоастаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "отъехать",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀадаха",
+        "dat": "дӀадаха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "пазуха",
+      "pos": "noun",
+      "forms": {
+        "base": "че",
+        "dat": "че"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "пастух",
+      "pos": "noun",
+      "forms": {
+        "base": "бежъӀу",
+        "dat": "бежъӀу"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "пережить",
+      "pos": "noun",
+      "forms": {
+        "base": "ва́ха",
+        "dat": "ва́ха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "перепись",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀаяздар",
+        "dat": "дӀаяздар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "писание",
+      "pos": "noun",
+      "forms": {
+        "base": "яздар",
+        "dat": "яздар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "писарь",
+      "pos": "noun",
+      "forms": {
+        "base": "йоазонча",
+        "dat": "йоазонча"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "писатель",
+      "pos": "noun",
+      "forms": {
+        "base": "йоазонхо",
+        "dat": "йоазонхо"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "писк",
+      "pos": "noun",
+      "forms": {
+        "base": "цӀо́взар",
+        "dat": "цӀо́взар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "пискнуть",
+      "pos": "noun",
+      "forms": {
+        "base": "цӀо́вза",
+        "dat": "цӀо́вза"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "пистон",
+      "pos": "noun",
+      "forms": {
+        "base": "пистолг",
+        "dat": "пистолг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "письмо",
+      "pos": "noun",
+      "forms": {
+        "base": "каьхат",
+        "dat": "каьхат"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "пить",
+      "pos": "noun",
+      "forms": {
+        "base": "ме́ла",
+        "dat": "ме́ла"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "плохое",
+      "pos": "noun",
+      "forms": {
+        "base": "во",
+        "dat": "во"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "повод",
+      "pos": "noun",
+      "forms": {
+        "base": "бахьан",
+        "dat": "бахьан"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "поводок",
+      "pos": "noun",
+      "forms": {
+        "base": "журалгӀад",
+        "dat": "журалгӀад"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "погодить",
+      "pos": "noun",
+      "forms": {
+        "base": "сато́ха",
+        "dat": "сато́ха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "подвода",
+      "pos": "noun",
+      "forms": {
+        "base": "гӀудалкх",
+        "dat": "гӀудалкх"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "подпись",
+      "pos": "noun",
+      "forms": {
+        "base": "кулг",
+        "dat": "кулг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "подучить",
+      "pos": "noun",
+      "forms": {
+        "base": "Ӏомаде",
+        "dat": "Ӏомаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "поехать",
+      "pos": "noun",
+      "forms": {
+        "base": "даха",
+        "dat": "даха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "пожить",
+      "pos": "noun",
+      "forms": {
+        "base": "да́ха",
+        "dat": "да́ха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "поймать",
+      "pos": "noun",
+      "forms": {
+        "base": "ла́ца",
+        "dat": "ла́ца"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "покров",
+      "pos": "noun",
+      "forms": {
+        "base": "тилар",
+        "dat": "тилар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "покурить",
+      "pos": "noun",
+      "forms": {
+        "base": "о́за",
+        "dat": "о́за"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "полдень",
+      "pos": "noun",
+      "forms": {
+        "base": "делкъе",
+        "dat": "делкъе"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "полночь",
+      "pos": "noun",
+      "forms": {
+        "base": "ахбийса",
+        "dat": "ахбийса"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "положить",
+      "pos": "noun",
+      "forms": {
+        "base": "тасса",
+        "dat": "тасса"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "поломать",
+      "pos": "noun",
+      "forms": {
+        "base": "до́хаде",
+        "dat": "до́хаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "получить",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀаэца",
+        "dat": "дӀаэца"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "полчаса",
+      "pos": "noun",
+      "forms": {
+        "base": "ахсахьат",
+        "dat": "ахсахьат"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "помочить",
+      "pos": "noun",
+      "forms": {
+        "base": "дошаде",
+        "dat": "дошаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "понимать",
+      "pos": "noun",
+      "forms": {
+        "base": "кхе́та",
+        "dat": "кхе́та"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "попить",
+      "pos": "noun",
+      "forms": {
+        "base": "мала",
+        "dat": "мала"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "порубить",
+      "pos": "noun",
+      "forms": {
+        "base": "те́да",
+        "dat": "те́да"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "порубка",
+      "pos": "noun",
+      "forms": {
+        "base": "те́дар",
+        "dat": "те́дар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "порука",
+      "pos": "noun",
+      "forms": {
+        "base": "доал",
+        "dat": "доал"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "поручить",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀадала",
+        "dat": "дӀадала"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "прибрать",
+      "pos": "noun",
+      "forms": {
+        "base": "цӀенде",
+        "dat": "цӀенде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "приговор",
+      "pos": "noun",
+      "forms": {
+        "base": "кхел",
+        "dat": "кхел"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "приехать",
+      "pos": "noun",
+      "forms": {
+        "base": "кха́ча",
+        "dat": "кха́ча"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "присесть",
+      "pos": "noun",
+      "forms": {
+        "base": "ӀотаӀа",
+        "dat": "ӀотаӀа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "присмотр",
+      "pos": "noun",
+      "forms": {
+        "base": "соакхо",
+        "dat": "соакхо"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "приучить",
+      "pos": "noun",
+      "forms": {
+        "base": "Ӏомаде",
+        "dat": "Ӏомаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "провод",
+      "pos": "noun",
+      "forms": {
+        "base": "саьрг",
+        "dat": "саьрг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "проводы",
+      "pos": "noun",
+      "forms": {
+        "base": "накъада́ккхар",
+        "dat": "накъада́ккхар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "прожить",
+      "pos": "noun",
+      "forms": {
+        "base": "да́ха",
+        "dat": "да́ха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "просмотр",
+      "pos": "noun",
+      "forms": {
+        "base": "хьажар",
+        "dat": "хьажар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "прочесть",
+      "pos": "noun",
+      "forms": {
+        "base": "Ӏоде́ша",
+        "dat": "Ӏоде́ша"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "птица",
+      "pos": "noun",
+      "forms": {
+        "base": "каг-котам",
+        "dat": "каг-котам"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "пух",
+      "pos": "noun",
+      "forms": {
+        "base": "петар",
+        "dat": "петар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "пухнуть",
+      "pos": "noun",
+      "forms": {
+        "base": "деста",
+        "dat": "деста"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "работник",
+      "pos": "noun",
+      "forms": {
+        "base": "хаьсхол",
+        "dat": "хаьсхол"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "развод",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀа-юхадигар",
+        "dat": "дӀа-юхадигар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "разводы",
+      "pos": "noun",
+      "forms": {
+        "base": "догамаш",
+        "dat": "догамаш"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "разруха",
+      "pos": "noun",
+      "forms": {
+        "base": "хӀалакьхилар",
+        "dat": "хӀалакьхилар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "разучить",
+      "pos": "noun",
+      "forms": {
+        "base": "Ӏомаде",
+        "dat": "Ӏомаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "рубаха",
+      "pos": "noun",
+      "forms": {
+        "base": "коч",
+        "dat": "коч"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "рубеж",
+      "pos": "noun",
+      "forms": {
+        "base": "гӀай",
+        "dat": "гӀай"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "рубец",
+      "pos": "noun",
+      "forms": {
+        "base": "муа",
+        "dat": "муа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "рубить",
+      "pos": "noun",
+      "forms": {
+        "base": "даккха",
+        "dat": "даккха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "рубище",
+      "pos": "noun",
+      "forms": {
+        "base": "тӀолхаш",
+        "dat": "тӀолхаш"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "рубка",
+      "pos": "noun",
+      "forms": {
+        "base": "хьакхар",
+        "dat": "хьакхар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "рукавица",
+      "pos": "noun",
+      "forms": {
+        "base": "кулгахйоаллорг",
+        "dat": "кулгахйоаллорг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "рукоять",
+      "pos": "noun",
+      "forms": {
+        "base": "мукъ",
+        "dat": "мукъ"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "рухнуть",
+      "pos": "noun",
+      "forms": {
+        "base": "ха́рца",
+        "dat": "ха́рца"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "саженец",
+      "pos": "noun",
+      "forms": {
+        "base": "галг",
+        "dat": "галг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "свод",
+      "pos": "noun",
+      "forms": {
+        "base": "гуллам",
+        "dat": "гуллам"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "сводить",
+      "pos": "noun",
+      "forms": {
+        "base": "дига",
+        "dat": "дига"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "сглаз",
+      "pos": "noun",
+      "forms": {
+        "base": "бӀаргхилар",
+        "dat": "бӀаргхилар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "сглазить",
+      "pos": "noun",
+      "forms": {
+        "base": "бӀаргхилийта",
+        "dat": "бӀаргхилийта"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "сглупить",
+      "pos": "noun",
+      "forms": {
+        "base": "Ӏо́вдалва́ла",
+        "dat": "Ӏо́вдалва́ла"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "сговор",
+      "pos": "noun",
+      "forms": {
+        "base": "бартбар",
+        "dat": "бартбар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "сжимать",
+      "pos": "noun",
+      "forms": {
+        "base": "теӀаде",
+        "dat": "теӀаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "скопидом",
+      "pos": "noun",
+      "forms": {
+        "base": "пис",
+        "dat": "пис"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "скотовод",
+      "pos": "noun",
+      "forms": {
+        "base": "доаханле́ладархо",
+        "dat": "доаханле́ладархо"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "скрепить",
+      "pos": "noun",
+      "forms": {
+        "base": "вӀа́шагӀхо́тта",
+        "dat": "вӀа́шагӀхо́тта"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "скрючить",
+      "pos": "noun",
+      "forms": {
+        "base": "гергде",
+        "dat": "гергде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "скупить",
+      "pos": "noun",
+      "forms": {
+        "base": "эца",
+        "dat": "эца"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "слепить",
+      "pos": "noun",
+      "forms": {
+        "base": "де",
+        "dat": "де"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "сложить",
+      "pos": "noun",
+      "forms": {
+        "base": "вӀа́шагӀдо́лла",
+        "dat": "вӀа́шагӀдо́лла"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "сломать",
+      "pos": "noun",
+      "forms": {
+        "base": "кагде",
+        "dat": "кагде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "слух",
+      "pos": "noun",
+      "forms": {
+        "base": "хазар",
+        "dat": "хазар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "случай",
+      "pos": "noun",
+      "forms": {
+        "base": "моттиг",
+        "dat": "моттиг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "слушание",
+      "pos": "noun",
+      "forms": {
+        "base": "ладувгӀар",
+        "dat": "ладувгӀар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "слушать",
+      "pos": "noun",
+      "forms": {
+        "base": "ладувгӀа",
+        "dat": "ладувгӀа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "смотр",
+      "pos": "noun",
+      "forms": {
+        "base": "хьажар",
+        "dat": "хьажар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "смотреть",
+      "pos": "noun",
+      "forms": {
+        "base": "хьажа",
+        "dat": "хьажа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "смотрины",
+      "pos": "noun",
+      "forms": {
+        "base": "бӀаргто́хар",
+        "dat": "бӀаргто́хар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "смочить",
+      "pos": "noun",
+      "forms": {
+        "base": "дошаде",
+        "dat": "дошаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "смягчить",
+      "pos": "noun",
+      "forms": {
+        "base": "кӀаьдде",
+        "dat": "кӀаьдде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "снижение",
+      "pos": "noun",
+      "forms": {
+        "base": "лохдар",
+        "dat": "лохдар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "собрать",
+      "pos": "noun",
+      "forms": {
+        "base": "гулде",
+        "dat": "гулде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "совесть",
+      "pos": "noun",
+      "forms": {
+        "base": "эхь",
+        "dat": "эхь"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "сожжение",
+      "pos": "noun",
+      "forms": {
+        "base": "доагадар",
+        "dat": "доагадар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "соседка",
+      "pos": "noun",
+      "forms": {
+        "base": "лоалахо",
+        "dat": "лоалахо"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "сочиться",
+      "pos": "noun",
+      "forms": {
+        "base": "леша",
+        "dat": "леша"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "списать",
+      "pos": "noun",
+      "forms": {
+        "base": "хьаязде",
+        "dat": "хьаязде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "срубить",
+      "pos": "noun",
+      "forms": {
+        "base": "хоададе",
+        "dat": "хоададе"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "старание",
+      "pos": "noun",
+      "forms": {
+        "base": "гӀортар",
+        "dat": "гӀортар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "старение",
+      "pos": "noun",
+      "forms": {
+        "base": "къадалар",
+        "dat": "къадалар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "старина",
+      "pos": "noun",
+      "forms": {
+        "base": "тхьовре",
+        "dat": "тхьовре"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "старить",
+      "pos": "noun",
+      "forms": {
+        "base": "къаде",
+        "dat": "къаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "староста",
+      "pos": "noun",
+      "forms": {
+        "base": "тхьамада",
+        "dat": "тхьамада"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "старость",
+      "pos": "noun",
+      "forms": {
+        "base": "къоанал",
+        "dat": "къоанал"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "стержень",
+      "pos": "noun",
+      "forms": {
+        "base": "гӀад",
+        "dat": "гӀад"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "столбец",
+      "pos": "noun",
+      "forms": {
+        "base": "бӀоагӀилг",
+        "dat": "бӀоагӀилг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "столбняк",
+      "pos": "noun",
+      "forms": {
+        "base": "вувлавалар",
+        "dat": "вувлавалар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "столица",
+      "pos": "noun",
+      "forms": {
+        "base": "на́на-пхье",
+        "dat": "на́на-пхье"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "столяр",
+      "pos": "noun",
+      "forms": {
+        "base": "дахчанпхьар",
+        "dat": "дахчанпхьар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "сточить",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀахьакха",
+        "dat": "дӀахьакха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "строчить",
+      "pos": "noun",
+      "forms": {
+        "base": "те́га",
+        "dat": "те́га"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "судорога",
+      "pos": "noun",
+      "forms": {
+        "base": "лоацадалар",
+        "dat": "лоацадалар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "сужение",
+      "pos": "noun",
+      "forms": {
+        "base": "готдар",
+        "dat": "готдар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "супруга",
+      "pos": "noun",
+      "forms": {
+        "base": "се́саг",
+        "dat": "се́саг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "супруги",
+      "pos": "noun",
+      "forms": {
+        "base": "мар-се́саг",
+        "dat": "мар-се́саг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "сухость",
+      "pos": "noun",
+      "forms": {
+        "base": "йокъал",
+        "dat": "йокъал"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "сцепить",
+      "pos": "noun",
+      "forms": {
+        "base": "вӀа́шагӀтасса",
+        "dat": "вӀа́шагӀтасса"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "счесть",
+      "pos": "noun",
+      "forms": {
+        "base": "ла́рхӀа",
+        "dat": "ла́рхӀа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "счесться",
+      "pos": "noun",
+      "forms": {
+        "base": "лоархӀадала",
+        "dat": "лоархӀадала"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "считалка",
+      "pos": "noun",
+      "forms": {
+        "base": "дагардер",
+        "dat": "дагардер"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "съесть",
+      "pos": "noun",
+      "forms": {
+        "base": "даа",
+        "dat": "даа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "съехать",
+      "pos": "noun",
+      "forms": {
+        "base": "чухо́хкадала",
+        "dat": "чухо́хкадала"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "теплоход",
+      "pos": "noun",
+      "forms": {
+        "base": "кема",
+        "dat": "кема"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "топить",
+      "pos": "noun",
+      "forms": {
+        "base": "лоаладе",
+        "dat": "лоаладе"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "топиться",
+      "pos": "noun",
+      "forms": {
+        "base": "ла́ла",
+        "dat": "ла́ла"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "торопить",
+      "pos": "noun",
+      "forms": {
+        "base": "сихде",
+        "dat": "сихде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "требуха",
+      "pos": "noun",
+      "forms": {
+        "base": "чураш",
+        "dat": "чураш"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "тренога",
+      "pos": "noun",
+      "forms": {
+        "base": "баргал",
+        "dat": "баргал"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "труба",
+      "pos": "noun",
+      "forms": {
+        "base": "тунга",
+        "dat": "тунга"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "трубадур",
+      "pos": "noun",
+      "forms": {
+        "base": "а́шархо",
+        "dat": "а́шархо"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "трубить",
+      "pos": "noun",
+      "forms": {
+        "base": "лакха",
+        "dat": "лакха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "трубка",
+      "pos": "noun",
+      "forms": {
+        "base": "тунгилг",
+        "dat": "тунгилг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "труха",
+      "pos": "noun",
+      "forms": {
+        "base": "йовхаш",
+        "dat": "йовхаш"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "тухнуть",
+      "pos": "noun",
+      "forms": {
+        "base": "дов",
+        "dat": "дов"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "тяжесть",
+      "pos": "noun",
+      "forms": {
+        "base": "дозал",
+        "dat": "дозал"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "убрать",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀада́ккха",
+        "dat": "дӀада́ккха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "убраться",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀадаха",
+        "dat": "дӀадаха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "увод",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀадигар",
+        "dat": "дӀадигар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "угодья",
+      "pos": "noun",
+      "forms": {
+        "base": "цон",
+        "dat": "цон"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "удочка",
+      "pos": "noun",
+      "forms": {
+        "base": "зӀак",
+        "dat": "зӀак"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "уехать",
+      "pos": "noun",
+      "forms": {
+        "base": "даха",
+        "dat": "даха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "ужиться",
+      "pos": "noun",
+      "forms": {
+        "base": "тардала",
+        "dat": "тардала"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "укрепить",
+      "pos": "noun",
+      "forms": {
+        "base": "чӀоагӀде",
+        "dat": "чӀоагӀде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "уложить",
+      "pos": "noun",
+      "forms": {
+        "base": "дужаде",
+        "dat": "дужаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "умаление",
+      "pos": "noun",
+      "forms": {
+        "base": "лохдар",
+        "dat": "лохдар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "умалить",
+      "pos": "noun",
+      "forms": {
+        "base": "лохде",
+        "dat": "лохде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "умножить",
+      "pos": "noun",
+      "forms": {
+        "base": "де́баде",
+        "dat": "де́баде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "унижение",
+      "pos": "noun",
+      "forms": {
+        "base": "доастамава́ккхар",
+        "dat": "доастамава́ккхар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "упрочить",
+      "pos": "noun",
+      "forms": {
+        "base": "чӀоагӀде",
+        "dat": "чӀоагӀде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "усесться",
+      "pos": "noun",
+      "forms": {
+        "base": "Ӏоха",
+        "dat": "Ӏоха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "устареть",
+      "pos": "noun",
+      "forms": {
+        "base": "ширда́ла",
+        "dat": "ширда́ла"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "уступить",
+      "pos": "noun",
+      "forms": {
+        "base": "дала",
+        "dat": "дала"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "усыпить",
+      "pos": "noun",
+      "forms": {
+        "base": "тхьовсаде",
+        "dat": "тхьовсаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "утончить",
+      "pos": "noun",
+      "forms": {
+        "base": "диткъде",
+        "dat": "диткъде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "утрата",
+      "pos": "noun",
+      "forms": {
+        "base": "доадар",
+        "dat": "доадар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "утратить",
+      "pos": "noun",
+      "forms": {
+        "base": "доаде",
+        "dat": "доаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "утроба",
+      "pos": "noun",
+      "forms": {
+        "base": "кер",
+        "dat": "кер"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "утрясти",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀаде́рзаде",
+        "dat": "дӀаде́рзаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "ухватить",
+      "pos": "noun",
+      "forms": {
+        "base": "хьала́ца",
+        "dat": "хьала́ца"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "ухмылка",
+      "pos": "noun",
+      "forms": {
+        "base": "ве́лакъажар",
+        "dat": "ве́лакъажар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "уход",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀадахар",
+        "dat": "дӀадахар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "уходить",
+      "pos": "noun",
+      "forms": {
+        "base": "дӀааха",
+        "dat": "дӀааха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "ухудшить",
+      "pos": "noun",
+      "forms": {
+        "base": "толхаде",
+        "dat": "толхаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "участник",
+      "pos": "noun",
+      "forms": {
+        "base": "доакъашхо",
+        "dat": "доакъашхо"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "участь",
+      "pos": "noun",
+      "forms": {
+        "base": "кхел",
+        "dat": "кхел"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "учесть",
+      "pos": "noun",
+      "forms": {
+        "base": "ла́рхӀа",
+        "dat": "ла́рхӀа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "учитель",
+      "pos": "noun",
+      "forms": {
+        "base": "хье́хархо",
+        "dat": "хье́хархо"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "учить",
+      "pos": "noun",
+      "forms": {
+        "base": "хье́ха",
+        "dat": "хье́ха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "учиться",
+      "pos": "noun",
+      "forms": {
+        "base": "де́ша",
+        "dat": "де́ша"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "фрукт",
+      "pos": "noun",
+      "forms": {
+        "base": "сом",
+        "dat": "сом"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "хлебница",
+      "pos": "noun",
+      "forms": {
+        "base": "маькхъехкарг",
+        "dat": "маькхъехкарг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "холод",
+      "pos": "noun",
+      "forms": {
+        "base": "ше́лал",
+        "dat": "ше́лал"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "холодеть",
+      "pos": "noun",
+      "forms": {
+        "base": "шелдала",
+        "dat": "шелдала"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "холодить",
+      "pos": "noun",
+      "forms": {
+        "base": "шелде",
+        "dat": "шелде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "хорошеть",
+      "pos": "noun",
+      "forms": {
+        "base": "хоздала",
+        "dat": "хоздала"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "чайница",
+      "pos": "noun",
+      "forms": {
+        "base": "чайлеладерг",
+        "dat": "чайлеладерг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "часовня",
+      "pos": "noun",
+      "forms": {
+        "base": "киназ",
+        "dat": "киназ"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "частица",
+      "pos": "noun",
+      "forms": {
+        "base": "зиртилг",
+        "dat": "зиртилг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "частый",
+      "pos": "noun",
+      "forms": {
+        "base": "листа",
+        "dat": "листа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "часы",
+      "pos": "noun",
+      "forms": {
+        "base": "сахьат",
+        "dat": "сахьат"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "чепуха",
+      "pos": "noun",
+      "forms": {
+        "base": "дошдоацар",
+        "dat": "дошдоацар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "честь",
+      "pos": "noun",
+      "forms": {
+        "base": "сий",
+        "dat": "сий"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "читатель",
+      "pos": "noun",
+      "forms": {
+        "base": "де́шархо",
+        "dat": "де́шархо"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "читать",
+      "pos": "noun",
+      "forms": {
+        "base": "де́ша",
+        "dat": "де́ша"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "шелуха",
+      "pos": "noun",
+      "forms": {
+        "base": "чӀибал",
+        "dat": "чӀибал"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "яблоко",
+      "pos": "noun",
+      "forms": {
+        "base": "Ӏаж",
+        "dat": "Ӏаж"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "безработица",
+      "pos": "noun",
+      "forms": {
+        "base": "балхазал",
+        "dat": "балхазал"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "безработная",
+      "pos": "noun",
+      "forms": {
+        "base": "балхазхо",
+        "dat": "балхазхо"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "безработный",
+      "pos": "noun",
+      "forms": {
+        "base": "балхазхо",
+        "dat": "балхазхо"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "бережение",
+      "pos": "noun",
+      "forms": {
+        "base": "лорадалар",
+        "dat": "лорадалар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "бесчестье",
+      "pos": "noun",
+      "forms": {
+        "base": "сийсазал",
+        "dat": "сийсазал"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "благодать",
+      "pos": "noun",
+      "forms": {
+        "base": "беркат",
+        "dat": "беркат"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "благоденствие",
+      "pos": "noun",
+      "forms": {
+        "base": "моаршо",
+        "dat": "моаршо"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "благородство",
+      "pos": "noun",
+      "forms": {
+        "base": "эздел",
+        "dat": "эздел"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "большинство",
+      "pos": "noun",
+      "forms": {
+        "base": "дукхагӀабараш",
+        "dat": "дукхагӀабараш"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "будоражить",
+      "pos": "noun",
+      "forms": {
+        "base": "хьоаде",
+        "dat": "хьоаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "вдохновение",
+      "pos": "noun",
+      "forms": {
+        "base": "асар",
+        "dat": "асар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "вдохновить",
+      "pos": "noun",
+      "forms": {
+        "base": "догъурао́ттаде",
+        "dat": "догъурао́ттаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "вдохновиться",
+      "pos": "noun",
+      "forms": {
+        "base": "догъурао́тта",
+        "dat": "догъурао́тта"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "верховодить",
+      "pos": "noun",
+      "forms": {
+        "base": "кулгалде",
+        "dat": "кулгалде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "вечеринка",
+      "pos": "noun",
+      "forms": {
+        "base": "ло́взар",
+        "dat": "ло́взар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "взаимоуважение",
+      "pos": "noun",
+      "forms": {
+        "base": "дог-бе́зам",
+        "dat": "дог-бе́зам"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "взболтать",
+      "pos": "noun",
+      "forms": {
+        "base": "ке́гаде",
+        "dat": "ке́гаде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "взбудоражить",
+      "pos": "noun",
+      "forms": {
+        "base": "корзагӀда́ккха",
+        "dat": "корзагӀда́ккха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "взбудоражиться",
+      "pos": "noun",
+      "forms": {
+        "base": "хьа",
+        "dat": "хьа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "взволновать",
+      "pos": "noun",
+      "forms": {
+        "base": "корзагӀда́ккха",
+        "dat": "корзагӀда́ккха"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "взобраться",
+      "pos": "noun",
+      "forms": {
+        "base": "тӀада́ла",
+        "dat": "тӀада́ла"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "водораздел",
+      "pos": "noun",
+      "forms": {
+        "base": "хингӀай",
+        "dat": "хингӀай"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "водохранилище",
+      "pos": "noun",
+      "forms": {
+        "base": "Ӏам",
+        "dat": "Ӏам"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "водрузить",
+      "pos": "noun",
+      "forms": {
+        "base": "до́гӀа",
+        "dat": "до́гӀа"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "возвеличить",
+      "pos": "noun",
+      "forms": {
+        "base": "лакхде",
+        "dat": "лакхде"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "воздухоочиститель",
+      "pos": "noun",
+      "forms": {
+        "base": "фоцӀендерг",
+        "dat": "фоцӀендерг"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "возложение",
+      "pos": "noun",
+      "forms": {
+        "base": "диллар",
+        "dat": "диллар"
+      },
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
     }
   ]
 }

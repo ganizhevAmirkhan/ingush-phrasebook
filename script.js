@@ -52,6 +52,7 @@ let editingCategory = null;     // cat при добавлении/редакт�
 
 /* --- AI sources (dosh + habar) --- */
 let dictionaryWords = [];
+let aiTranslateBusy = false;
 
 /* ================= UTILS ================= */
 function genId(){
@@ -784,14 +785,15 @@ function saveAiKey(){
 async function callLanguageApi(path, payload){
   const base = getLanguageApiBase();
   const ctrl = new AbortController();
-  const timeoutId = setTimeout(() => ctrl.abort(), 15000);
+  const timeoutId = setTimeout(() => ctrl.abort(), 12000);
   let res;
   try{
     res = await fetch(`${base}${path}`,{
       method:"POST",
       headers:{ "Content-Type":"application/json" },
       body:JSON.stringify(payload || {}),
-      signal: ctrl.signal
+      signal: ctrl.signal,
+      cache: "no-store"
     });
   }catch{
     toast("LanguageAPI недоступен (проверь https://api.inghub.ru)", false);
@@ -801,10 +803,124 @@ async function callLanguageApi(path, payload){
   }
   const json = await res.json().catch(()=>null);
   if(!res.ok || !json?.ok){
-    toast("Ошибка LanguageAPI", false);
+    const errCode = safe(json?.error) || `http_${safe(res?.status) || "unknown"}`;
+    toast(`Ошибка LanguageAPI: ${errCode}`, false);
     return null;
   }
   return json;
+}
+
+async function callLanguageApiGet(path, params){
+  const base = getLanguageApiBase();
+  const ctrl = new AbortController();
+  const timeoutId = setTimeout(() => ctrl.abort(), 8000);
+
+  const url = new URL(`${base}${path}`);
+  Object.entries(params || {}).forEach(([k, v]) => {
+    if(v == null) return;
+    url.searchParams.set(k, safe(v));
+  });
+
+  let res;
+  try{
+    res = await fetch(url.toString(), {
+      method: "GET",
+      headers: { "Content-Type":"application/json" },
+      signal: ctrl.signal,
+      cache: "no-store"
+    });
+  }catch{
+    return null;
+  }finally{
+    clearTimeout(timeoutId);
+  }
+
+  const json = await res.json().catch(()=>null);
+  if(!res.ok || !json?.ok) return null;
+  return json;
+}
+
+function extractIngFromLookupItems(items, ruText){
+  const list = Array.isArray(items) ? items : [];
+  if(!list.length) return "";
+
+  const targetNorm = normalizeRuForLookup(ruText);
+  const exact = list.find(it => normalizeRuForLookup(it?.ru) === targetNorm) || null;
+  const ordered = exact ? [exact, ...list.filter(it => it !== exact)] : list;
+
+  for(const it of ordered){
+    const phraseIng = safe(it?.ing).trim();
+    if(phraseIng) return phraseIng;
+
+    const vars = Array.isArray(it?.ingVariants) ? it.ingVariants : [];
+    const firstVar = safe(vars[0]).trim();
+    if(firstVar) return firstVar;
+  }
+  return "";
+}
+
+function extractIngFromCorpusItems(items){
+  const list = Array.isArray(items) ? items : [];
+  if(!list.length) return "";
+  for(const it of list){
+    const ing = safe(it?.snippet?.ing).trim();
+    if(ing) return ing;
+  }
+  return "";
+}
+
+async function resolveClientFallbackTranslation(ruText){
+  // 1) LanguageAPI lookup: phrase source
+  const phraseLookup = await callLanguageApiGet("/lookup/phrase", { ru: ruText });
+  const phraseIng = extractIngFromLookupItems(phraseLookup?.items, ruText);
+  if(phraseIng){
+    return { translation: phraseIng, usedSource: "lookup_phrase" };
+  }
+
+  // 2) LanguageAPI lookup: dictionary source
+  const wordLookup = await callLanguageApiGet("/lookup/word", { ru: ruText });
+  const wordIng = extractIngFromLookupItems(wordLookup?.items, ruText);
+  if(wordIng){
+    return { translation: wordIng, usedSource: "lookup_word" };
+  }
+
+  // 3) LanguageAPI lookup: corpus snippet as contextual fallback
+  const corpusLookup = await callLanguageApiGet("/lookup/corpus", { q: ruText });
+  const corpusIng = extractIngFromCorpusItems(corpusLookup?.items);
+  if(corpusIng){
+    return { translation: corpusIng, usedSource: "lookup_corpus" };
+  }
+
+  // 4) Local client hints as last resort (no server error in UI)
+  const exactHabar = findExactNonQuestionPhraseFromHabar(ruText);
+  if(exactHabar?.ing){
+    return { translation: safe(exactHabar.ing), usedSource: "habar_local_exact" };
+  }
+
+  const exactDosh = findExactIngFromDosh(ruText);
+  if(exactDosh){
+    return { translation: exactDosh, usedSource: "dosh_local_exact" };
+  }
+
+  const bestHabar = findBestPhraseFromHabar(ruText);
+  if(bestHabar?.ing){
+    return { translation: safe(bestHabar.ing), usedSource: "habar_local_best" };
+  }
+
+  const template = tryTemplateThisX(ruText);
+  if(template){
+    return { translation: template, usedSource: "template_local" };
+  }
+
+  return null;
+}
+
+function setAiTranslateBusy(isBusy){
+  aiTranslateBusy = !!isBusy;
+  const btn = document.querySelector('button[onclick="aiTranslateIng()"]');
+  if(!btn) return;
+  btn.disabled = aiTranslateBusy;
+  btn.textContent = aiTranslateBusy ? "⏳" : "🤖";
 }
 
 function buildDictionaryHints(ruText, limit=12){
@@ -1027,12 +1143,32 @@ async function aiFixRu(){
 async function aiTranslateIng(){
   const ru = document.getElementById("edit-ru")?.value || "";
   if(!ru.trim()) return;
+  if(aiTranslateBusy){
+    toast("Подождите, перевод уже выполняется...", false);
+    return;
+  }
+  setAiTranslateBusy(true);
 
-  const res = await callLanguageApi("/translate", { ru });
-  if(!res) return;
-  document.getElementById("edit-ing").value = safe(res.translation);
-  if(res.usedSource){
-    toast(`Источник: ${res.usedSource}`, true);
+  try{
+    const res = await callLanguageApi("/translate", { ru });
+    if(res?.translation){
+      document.getElementById("edit-ing").value = safe(res.translation);
+      if(res.usedSource){
+        toast(`Источник: ${res.usedSource}`, true);
+      }
+      return;
+    }
+
+    const fallback = await resolveClientFallbackTranslation(ru);
+    if(fallback?.translation){
+      document.getElementById("edit-ing").value = safe(fallback.translation);
+      toast(`Источник: ${fallback.usedSource}`, true);
+      return;
+    }
+
+    toast("Перевод не найден. Добавьте фразу в базу.", false);
+  }finally{
+    setAiTranslateBusy(false);
   }
 }
 
