@@ -12,6 +12,38 @@ Optional env:
 
 - `PORT` (default: `8787`)
 - `GEMINI_API_KEY` (used only for LLM fallback)
+- `ADMIN_SECRET` (password for web admin panel)
+
+## Admin panel
+
+Web UI for grammar, lexemes, dialogues, blacklist:
+
+```
+http://localhost:8787/admin
+```
+
+Production:
+
+```
+https://api.inghub.ru/admin
+```
+
+Set on VPS in `.env`:
+
+```
+ADMIN_SECRET=your_long_random_password
+```
+
+Then restart PM2. Log in with this password in the admin panel.
+
+Features:
+
+- Grammar patterns (add / edit / delete)
+- Lexemes (word forms)
+- Corpus: dialogues, lessons, stories (edit or upload JSON)
+- Blacklist
+- Translate test
+- Reload data after changes (automatic on save)
 
 ## Contracts
 

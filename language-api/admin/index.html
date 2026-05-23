@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LanguageAPI — админ</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div id="login-screen" class="login-screen">
+  <div class="login-box">
+    <h1>LanguageAPI</h1>
+    <p class="muted">Панель управления: грамматика, лексемы, диалоги</p>
+    <label>
+      Пароль администратора
+      <input id="admin-token" type="password" placeholder="ADMIN_SECRET с VPS" autocomplete="current-password">
+    </label>
+    <button id="btn-login" type="button">Войти</button>
+    <p id="login-hint" class="hint"></p>
+  </div>
+</div>
+
+<div id="app" class="app hidden">
+  <header class="top">
+    <div>
+      <strong>LanguageAPI Admin</strong>
+      <span id="api-base" class="muted"></span>
+    </div>
+    <div class="top-actions">
+      <button type="button" id="btn-reload">♻ Перезагрузить данные</button>
+      <button type="button" id="btn-logout" class="ghost">Выйти</button>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button type="button" class="tab active" data-tab="overview">Обзор</button>
+    <button type="button" class="tab" data-tab="patterns">Грамматика</button>
+    <button type="button" class="tab" data-tab="lexemes">Лексемы</button>
+    <button type="button" class="tab" data-tab="corpus">Диалоги и тексты</button>
+    <button type="button" class="tab" data-tab="blacklist">Чёрный список</button>
+    <button type="button" class="tab" data-tab="test">Тест перевода</button>
+  </nav>
+
+  <main class="main">
+    <section id="panel-overview" class="panel">
+      <div id="stats-grid" class="stats-grid"></div>
+      <div id="gemini-box" class="info-box"></div>
+    </section>
+
+    <section id="panel-patterns" class="panel hidden">
+      <div class="toolbar">
+        <input id="patterns-search" type="search" placeholder="Поиск шаблона…">
+        <button type="button" id="patterns-new">+ Новый шаблон</button>
+      </div>
+      <div class="split">
+        <div id="patterns-list" class="list"></div>
+        <form id="pattern-form" class="editor">
+          <h3>Шаблон грамматики</h3>
+          <label>ID <input name="id" required></label>
+          <label>RU шаблон <input name="ruPattern" placeholder="мне нужно {X}" required></label>
+          <label>ING шаблон <input name="ingTemplate" placeholder="сун {X_BASE} эша" required></label>
+          <label>Описание <input name="description"></label>
+          <label>Приоритет <input name="priority" type="number" value="50"></label>
+          <label>Slots (JSON)
+            <textarea name="slots" rows="4">[{"name":"X","pos":"noun","requiredCase":"base"}]</textarea>
+          </label>
+          <label>Примеры (JSON)
+            <textarea name="examples" rows="3">[{"ru":"","ing_expected":""}]</textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit">💾 Сохранить</button>
+            <button type="button" id="pattern-delete" class="danger">Удалить</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="panel-lexemes" class="panel hidden">
+      <div class="toolbar">
+        <input id="lexemes-search" type="search" placeholder="Поиск слова…">
+        <button type="button" id="lexemes-new">+ Новая лексема</button>
+      </div>
+      <div class="split">
+        <div id="lexemes-list" class="list"></div>
+        <form id="lexeme-form" class="editor">
+          <h3>Лексема</h3>
+          <label>RU <input name="ru" required></label>
+          <label>Часть речи <input name="pos" value="noun"></label>
+          <label>Формы (JSON)
+            <textarea name="forms" rows="5" required>{"base":"","dat":""}</textarea>
+          </label>
+          <label>Заметки <input name="notes"></label>
+          <div class="form-actions">
+            <button type="submit">💾 Сохранить</button>
+            <button type="button" id="lexeme-delete" class="danger">Удалить</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="panel-corpus" class="panel hidden">
+      <div class="toolbar">
+        <input id="corpus-search" type="search" placeholder="Поиск диалога…">
+        <select id="corpus-genre">
+          <option value="">Все жанры</option>
+          <option value="dialogue">dialogue</option>
+          <option value="lesson">lesson</option>
+          <option value="story">story</option>
+          <option value="novella">novella</option>
+        </select>
+        <button type="button" id="corpus-new">+ Новый текст</button>
+        <label class="file-btn">📁 Загрузить JSON
+          <input id="corpus-upload" type="file" accept=".json,application/json" hidden>
+        </label>
+      </div>
+      <div class="split">
+        <div id="corpus-list" class="list"></div>
+        <form id="corpus-form" class="editor">
+          <h3>Диалог / текст</h3>
+          <label>ID <input name="id" required></label>
+          <label>Название <input name="title" required></label>
+          <label>Уровень <input name="level" value="A1"></label>
+          <label>Жанр
+            <select name="genre">
+              <option value="dialogue">dialogue</option>
+              <option value="lesson">lesson</option>
+              <option value="story">story</option>
+              <option value="novella">novella</option>
+            </select>
+          </label>
+          <label>Реплики (JSON: [{ru, ing}, …])
+            <textarea name="paragraphs" rows="12" required>[]</textarea>
+          </label>
+          <label>Glossary (JSON, необязательно)
+            <textarea name="glossary" rows="3">[]</textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit">💾 Сохранить</button>
+            <button type="button" id="corpus-delete" class="danger">Удалить</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="panel-blacklist" class="panel hidden">
+      <div class="toolbar">
+        <input id="blacklist-term" type="text" placeholder="Новое слово для блокировки">
+        <button type="button" id="blacklist-add">+ Добавить</button>
+      </div>
+      <ul id="blacklist-list" class="chip-list"></ul>
+    </section>
+
+    <section id="panel-test" class="panel hidden">
+      <label>
+        Русская фраза
+        <input id="test-ru" type="text" placeholder="Мало платят на работе">
+      </label>
+      <button type="button" id="test-run">Перевести</button>
+      <pre id="test-result" class="test-result"></pre>
+    </section>
+  </main>
+
+  <div id="toast" class="toast hidden"></div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

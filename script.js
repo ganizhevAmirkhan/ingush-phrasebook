@@ -827,6 +827,8 @@ function openApiAdminPanel(){
   modal.classList.remove("hidden");
   const input = document.getElementById("ai-key");
   if(input && !input.value) input.value = getLanguageApiBase();
+  const adminLink = document.getElementById("api-full-admin-link");
+  if(adminLink) adminLink.href = `${getLanguageApiBase()}/admin`;
   refreshApiAdminPanel();
 }
 
