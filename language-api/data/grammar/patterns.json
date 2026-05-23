@@ -31,12 +31,12 @@
           "requiredCase": "base"
         }
       ],
-      "ingTemplate": "сун {X_BASE} деза",
+      "ingTemplate": "сун {X_BASE} {X_WANT}",
       "priority": 90,
       "examples": [
         {
           "ru": "я хочу воду",
-          "ing_expected": "сун хи деза"
+          "ing_expected": "сун хи еза"
         }
       ]
     },
@@ -57,6 +57,87 @@
         {
           "ru": "где больница",
           "ing_expected": "Мичай да́рбанче?"
+        }
+      ]
+    },
+    {
+      "id": "where_superlative_noun",
+      "ruPattern": "где {A} {N}",
+      "description": "Where is the nearest X (эггара + spatial form from dosh)",
+      "slots": [
+        {
+          "name": "A",
+          "pos": "adj",
+          "requiredCase": "base"
+        },
+        {
+          "name": "N",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
+      "ingTemplate": "Мичай {A_BASE} {N_BASE}?",
+      "priority": 97,
+      "examples": [
+        {
+          "ru": "где ближайший дом",
+          "ing_expected": "Мичай эггара гаргагIара цIа?"
+        }
+      ]
+    },
+    {
+      "id": "where_nearest_house",
+      "ruPattern": "где ближайший дом",
+      "description": "Where is the nearest house",
+      "slots": [],
+      "ingTemplate": "Мичай эггара гаргагIара цIа?",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "где ближайший дом",
+          "ing_expected": "Мичай эггара гаргагIара цIа?"
+        }
+      ]
+    },
+    {
+      "id": "where_is_bus_stop",
+      "ruPattern": "где остановка",
+      "description": "Where is the bus stop",
+      "slots": [],
+      "ingTemplate": "Мичай соца моттиг?",
+      "priority": 96,
+      "examples": [
+        {
+          "ru": "где остановка",
+          "ing_expected": "Мичай соца моттиг?"
+        }
+      ]
+    },
+    {
+      "id": "show_road_imperative",
+      "ruPattern": "покажи дорогу",
+      "description": "Show the road/way",
+      "slots": [],
+      "ingTemplate": "хьахокха никъа",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "покажи дорогу",
+          "ing_expected": "хьахокха никъа"
+        }
+      ]
+    },
+    {
+      "id": "show_place_imperative",
+      "ruPattern": "покажи мне место",
+      "description": "Show me the place",
+      "slots": [],
+      "ingTemplate": "хьахокха моттиг",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "покажи мне место",
+          "ing_expected": "хьахокха моттиг"
         }
       ]
     },
@@ -6133,6 +6214,64 @@
       ]
     },
     {
+      "id": "transport_trip_cost_question",
+      "ruPattern": "сколько стоит поездка",
+      "description": "How much does the trip cost (colloquial)",
+      "slots": [],
+      "ingTemplate": "ф дуд някъа?",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "сколько стоит поездка",
+          "ing_expected": "ф дуд някъа?"
+        }
+      ]
+    },
+    {
+      "id": "price_how_much_costs",
+      "ruPattern": "сколько стоит {X}",
+      "description": "How much does X cost",
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
+      "ingTemplate": "Ф дех {X_BASE}?",
+      "priority": 94,
+      "examples": [
+        {
+          "ru": "сколько стоит поездка",
+          "ing_expected": "ф дуд някъа?"
+        }
+      ]
+    },
+    {
+      "id": "adj_road_description",
+      "ruPattern": "{A} дорога",
+      "description": "Adjective + road (новкъа)",
+      "slots": [
+        {
+          "name": "A",
+          "pos": "adj",
+          "requiredCase": "base"
+        }
+      ],
+      "ingTemplate": "{A_BASE} новкъа",
+      "priority": 96,
+      "examples": [
+        {
+          "ru": "опасная дорога",
+          "ing_expected": "Кхерме новкъа"
+        },
+        {
+          "ru": "хорошая дорога",
+          "ing_expected": "Дика новкъа"
+        }
+      ]
+    },
+    {
       "id": "transport_where_should_we_go",
       "ruPattern": "нам куда ехать",
       "description": "Lesson 10 expression",
@@ -8261,6 +8400,100 @@
       ]
     },
     {
+      "id": "intro_i_am_driver",
+      "ruPattern": "я водитель",
+      "description": "Profession: I am a driver",
+      "slots": [],
+      "ingTemplate": "СО ЛЕХКАР ВА.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "я водитель",
+          "ing_expected": "СО ЛЕХКАР ВА."
+        }
+      ]
+    },
+    {
+      "id": "need_go_to_place",
+      "ruPattern": "мне нужно в {X}",
+      "description": "Need to go to a place (ergative + vakh + gendered want)",
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
+      "ingTemplate": "Са {X_GOAL} вах {X_WANT}.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "мне нужно в город",
+          "ing_expected": "Са гIале вах еза."
+        },
+        {
+          "ru": "мне нужно в село",
+          "ing_expected": "Са юрт вах еза."
+        }
+      ]
+    },
+    {
+      "id": "imperative_refuel",
+      "ruPattern": "заправь",
+      "description": "Refuel imperative",
+      "slots": [],
+      "ingTemplate": "Чудотт.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "заправь",
+          "ing_expected": "Чудотт."
+        }
+      ]
+    },
+    {
+      "id": "broken_car_intransitive",
+      "ruPattern": "сломалась машина",
+      "description": "Car broke down (intransitive)",
+      "slots": [],
+      "ingTemplate": "МАШЕН ЙИХАЙ.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "сломалась машина",
+          "ing_expected": "МАШЕН ЙИХАЙ."
+        }
+      ]
+    },
+    {
+      "id": "broken_pencil_transitive",
+      "ruPattern": "сломал карандаш",
+      "description": "Broke a pencil (ergative)",
+      "slots": [],
+      "ingTemplate": "КЪОАЛОМ КАГБЯБ.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "сломал карандаш",
+          "ing_expected": "КЪОАЛОМ КАГБЯБ."
+        }
+      ]
+    },
+    {
+      "id": "smashed_car_transitive",
+      "ruPattern": "разбил машину",
+      "description": "Smashed a car (ergative)",
+      "slots": [],
+      "ingTemplate": "МАШЕН ЙУВХАЯАЙ.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "разбил машину",
+          "ing_expected": "МАШЕН ЙУВХАЯАЙ."
+        }
+      ]
+    },
+    {
       "id": "intro_glad_to_meet_you_said",
       "ruPattern": "очень рада познакомиться с тобой саид",
       "description": "Lesson 3 phrase",
@@ -9999,12 +10232,12 @@
           "requiredCase": "base"
         }
       ],
-      "ingTemplate": "СУН {X_BASE} ДЕЗА.",
+      "ingTemplate": "СУН {X_BASE} ЕЗА.",
       "priority": 86,
       "examples": [
         {
           "ru": "мне нужна польза",
-          "ing_expected": "СУН ПАЙДА ДЕЗА."
+          "ing_expected": "СУН ПАЙДА ЕЗА."
         }
       ]
     },
@@ -10019,7 +10252,7 @@
           "requiredCase": "base"
         }
       ],
-      "ingTemplate": "СУН {X_BASE} ДЕЗА.",
+      "ingTemplate": "СУН {X_BASE} {X_WANT}.",
       "priority": 86,
       "examples": [
         {

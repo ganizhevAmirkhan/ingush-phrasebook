@@ -20,6 +20,7 @@
     {
       "ru": "вода",
       "pos": "noun",
+      "gender": "f",
       "forms": {
         "base": "хи",
         "dat": "хийна"
@@ -481,9 +482,11 @@
     {
       "ru": "деревня",
       "pos": "noun",
+      "gender": "f",
       "forms": {
         "base": "юрт",
-        "dat": "юрта"
+        "dat": "юрта",
+        "goal": "юрт"
       }
     },
     {
@@ -834,7 +837,37 @@
         "ins": "цIенца",
         "mat": "цIенах",
         "loc": "цIенга",
-        "cmp": "цIенал"
+        "cmp": "цIенал",
+        "dwell": "фусам"
+      },
+      "notes": "base=building; фусам=dwelling (dosh)"
+    },
+    {
+      "ru": "ближайший",
+      "pos": "adj",
+      "forms": {
+        "base": "эггара гаргагIара",
+        "time": "эггара хьалхагIара",
+        "kinship": "эггара кхоачарагIа вола"
+      },
+      "notes": "dosh superlative; base=spatial (по месту)"
+    },
+    {
+      "ru": "ближайшая",
+      "pos": "adj",
+      "forms": {
+        "base": "эггара гаргагIара",
+        "time": "эггара хьалхагIара",
+        "kinship": "эггара кхоачарагIа вола"
+      }
+    },
+    {
+      "ru": "ближайшее",
+      "pos": "adj",
+      "forms": {
+        "base": "эггара гаргагIара",
+        "time": "эггара хьалхагIара",
+        "kinship": "эггара кхоачарагIа вола"
       }
     },
     {
@@ -3064,9 +3097,10 @@
       "ru": "остановка",
       "pos": "noun",
       "forms": {
-        "base": "сец",
-        "dat": "сеца"
-      }
+        "base": "соца моттиг",
+        "dat": "соца моттига"
+      },
+      "notes": "bus stop (KOD21: место остановки); was incorrectly сец"
     },
     {
       "ru": "мечеть",
@@ -3399,17 +3433,72 @@
     {
       "ru": "город",
       "pos": "noun",
+      "gender": "f",
       "forms": {
         "base": "гIала",
-        "dat": "гIале"
+        "dat": "гIале",
+        "goal": "гIале"
+      }
+    },
+    {
+      "ru": "дорога",
+      "pos": "noun",
+      "gender": "f",
+      "forms": {
+        "base": "новкъа",
+        "dat": "новкъа"
+      }
+    },
+    {
+      "ru": "поездка",
+      "pos": "noun",
+      "gender": "f",
+      "forms": {
+        "base": "някъа",
+        "dat": "някъа"
+      },
+      "notes": "colloquial; literary/newkha also used"
+    },
+    {
+      "ru": "опасная",
+      "pos": "adj",
+      "forms": {
+        "base": "Кхерме",
+        "dat": "Кхерме"
+      }
+    },
+    {
+      "ru": "опасный",
+      "pos": "adj",
+      "forms": {
+        "base": "Кхерме",
+        "dat": "Кхерме"
+      }
+    },
+    {
+      "ru": "хорошая",
+      "pos": "adj",
+      "forms": {
+        "base": "Дика",
+        "dat": "Дика"
+      }
+    },
+    {
+      "ru": "место",
+      "pos": "noun",
+      "forms": {
+        "base": "моттиг",
+        "dat": "моттиг"
       }
     },
     {
       "ru": "село",
       "pos": "noun",
+      "gender": "f",
       "forms": {
         "base": "юрт",
-        "dat": "юрта"
+        "dat": "юрта",
+        "goal": "юрт"
       }
     },
     {

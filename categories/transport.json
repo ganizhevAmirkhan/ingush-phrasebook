@@ -129,8 +129,8 @@
     },
     {
       "ru": "Сломалась машина",
-      "ing": "Машин йихай",
-      "pron": "mashin yikhay",
+      "ing": "Машен йихай",
+      "pron": "mashen yihay",
       "id": "f_1766023943620_mvag",
       "audio": "f_1766023943620_mvag.mp3"
     },
@@ -185,22 +185,22 @@
     },
     {
       "ru": "Мне нужно в город",
-      "ing": "са г1але вах веза",
-      "pron": "sa g1ale vakh veza",
+      "ing": "Са гIале вах еза",
+      "pron": "sa g1ale vakh eza",
       "id": "f_1766023943620_rgva",
       "audio": "f_1766023943620_rgva.mp3"
     },
     {
       "ru": "Мне нужно в село",
-      "ing": "Са юрт вах веза.",
-      "pron": "sa yurt vakh veza.",
+      "ing": "Са юрт вах еза",
+      "pron": "sa yurt vakh eza",
       "id": "f_1766023943620_wbrq",
       "audio": "f_1766023943620_wbrq.mp3"
     },
     {
       "ru": "Сколько стоит поездка?",
-      "ing": "Вудай ца йа?",
-      "pron": "vuday tsa ya",
+      "ing": "ф дуд някъа?",
+      "pron": "f dud nyak'a",
       "id": "f_1766023943620_s5oi",
       "audio": "f_1766023943620_s5oi.mp3"
     },

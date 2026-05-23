@@ -66,15 +66,15 @@
     },
     {
       "ru": "Мне нужно в город",
-      "ing": "Са шахь вах давах",
-      "pron": "sa shah vakh davakh",
+      "ing": "Са гIале вах еза",
+      "pron": "sa g1ale vakh eza",
       "id": "f_1766025182393_i1qo",
       "audio": "f_1766025182393_i1qo.mp3"
     },
     {
       "ru": "Мне нужно в село",
-      "ing": "Са гӀалачче вах давах",
-      "pron": "sa ghalachche vakh davakh",
+      "ing": "Са юрт вах еза",
+      "pron": "sa yurt vakh eza",
       "id": "f_1766025182393_o3ta",
       "audio": "f_1766025182393_o3ta.mp3"
     },

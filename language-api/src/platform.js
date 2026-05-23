@@ -184,6 +184,19 @@ function findWordForToken(token) {
 function pickBaseVariantFromWord(word) {
   const variants = Array.isArray(word?.ingVariants) ? word.ingVariants : [];
   if (!variants.length) return "";
+
+  const ruNorm = (word?.ruNorm || "").toString();
+  if (/^ближайш/i.test(ruNorm) || (variants.length > 1 && variants.every((v) => /^эггара\s/i.test(v)))) {
+    const spatial = variants.find((v) => /гарг/i.test(v));
+    if (spatial) {
+      return spatial
+        .split(/\*/)[0]
+        .trim()
+        .split(/\(/)[0]
+        .trim();
+    }
+  }
+
   // Prefer shortest compact variant, then keep only first lexical part.
   const sorted = [...variants].sort((a, b) => a.length - b.length);
   const raw = sorted[0] || "";
@@ -254,9 +267,15 @@ function getTargetFormForCase(requiredCase) {
   return byRule || "base";
 }
 
+function wantVerbForLexeme(lexeme) {
+  const g = (lexeme?.gender || "").toString().toLowerCase();
+  if (g === "f" || g === "fem" || g === "female") return "еза";
+  return "деза";
+}
+
 function resolveSlotForms(slotRu) {
   const slotText = (slotRu || "").toString().trim();
-  if (!slotText) return { base: "", dat: "" };
+  if (!slotText) return { base: "", dat: "", goal: "", want: "деза" };
 
   const lexeme = findGrammarLexeme(slotText);
   if (lexeme?.forms) {
@@ -266,6 +285,8 @@ function resolveSlotForms(slotRu) {
     }
     out.base = out.base || "";
     out.dat = out.dat || out.base;
+    out.goal = out.goal || out.dat || out.base;
+    out.want = wantVerbForLexeme(lexeme);
     return out;
   }
 
@@ -273,13 +294,13 @@ function resolveSlotForms(slotRu) {
   if (tokens.length === 1) {
     const w = findWordForToken(tokens[0]);
     const base = pickBaseVariantFromWord(w);
-    return { base, dat: base };
+    return { base, dat: base, goal: base, want: "деза" };
   }
 
   const composed = composeFromDictionaryTokens(slotText);
-  if (composed.ok) return { base: composed.translation, dat: composed.translation };
+  if (composed.ok) return { base: composed.translation, dat: composed.translation, goal: composed.translation, want: "деза" };
 
-  return { base: "", dat: "" };
+  return { base: "", dat: "", goal: "", want: "деза" };
 }
 
 function fillIngTemplate(template, slotValues) {
@@ -670,6 +691,21 @@ async function translate(ruText) {
         translation: base,
         usedSource: SOURCE.GRAMMAR,
         confidence: 0.95,
+        fallbackUsed: false
+      };
+    }
+  }
+
+  const ruTokens = tokenizeRu(ru);
+  if (ruTokens.length >= 2) {
+    const byGrammarPhrase = tryGrammarPatternTranslate(ru);
+    if (byGrammarPhrase.ok) {
+      state.metrics.translateFromGrammar += 1;
+      return {
+        ok: true,
+        translation: byGrammarPhrase.translation,
+        usedSource: SOURCE.GRAMMAR,
+        confidence: 0.9,
         fallbackUsed: false
       };
     }
