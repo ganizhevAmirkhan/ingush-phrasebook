@@ -1410,9 +1410,26 @@ async function aiTranslateIng(){
   const ru = document.getElementById("edit-ru")?.value || "";
   if(!ru.trim()) return;
 
+  const outIng = document.getElementById("edit-ing");
+  const outPron = document.getElementById("edit-pron");
+  outIng && (outIng.value = "");
+  toast("Перевод…", true);
+
+  const local = findPhraseFromHabar(ru);
+  if(local?.ing){
+    outIng && (outIng.value = cleanIngCandidate(local.ing));
+    if(outPron && local.pron) outPron.value = safe(local.pron);
+    toast(`Источник: habar (фраза)`, true);
+    return;
+  }
+
   const res = await callLanguageApi("/translate", { ru });
   if(!res) return;
-  document.getElementById("edit-ing").value = cleanIngCandidate(res.translation);
+  outIng && (outIng.value = cleanIngCandidate(res.translation));
+  if(outPron && !outPron.value.trim()){
+    const pron = findPhrasePronByIng(res.translation) || transliterateIngushToPron(res.translation);
+    if(pron) outPron.value = pron;
+  }
   if(res.usedSource){
     toast(`Источник: ${res.usedSource}`, true);
   }
