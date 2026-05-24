@@ -503,6 +503,9 @@ async function runTranslateTest() {
   if (!out) return;
   if (ok) {
     out.textContent = `✓ ${json.translation}\nИсточник: ${json.usedSource}\nУверенность: ${json.confidence}`;
+  } else if ((json.error || "").startsWith("blocked_form:")) {
+    const form = (json.error || "").slice("blocked_form:".length);
+    out.textContent = `✗ Заблокировано: «${form}» в чёрном списке (чеченский/сомнительный вариант).\nГотовая фраза есть в PaydaDosh — нажми «Перезагрузить данные» и повтори.\n${json.detail || ""}`;
   } else {
     out.textContent = `✗ ${json.error || "ошибка"}\n${json.detail || ""}`;
   }

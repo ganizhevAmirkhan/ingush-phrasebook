@@ -851,6 +851,19 @@ async function translate(ruText, options = {}) {
   }
   const phraseOptions = excludeSources.length ? { excludeSources } : {};
 
+  const exactPhrase = findPhraseBest(ru, phraseOptions);
+  if (exactPhrase && exactPhrase.ruNorm === normalizeText(ru)) {
+    if (exactPhrase.source === SOURCE.PAYDADOSH) state.metrics.translateFromPaydaDosh += 1;
+    else state.metrics.translateFromPhrase += 1;
+    return {
+      ok: true,
+      translation: exactPhrase.ing,
+      usedSource: exactPhrase.source === SOURCE.PAYDADOSH ? SOURCE.PAYDADOSH : SOURCE.HABAR,
+      confidence: exactPhrase.confidence,
+      fallbackUsed: false
+    };
+  }
+
   const ruNormForRouting = ` ${normalizeText(ru)} `;
   const isNegationInput = [" не ", " нет ", " никто ", " ничто ", " ничего ", " никогда "]
     .some((m) => ruNormForRouting.includes(m));
