@@ -1,43 +1,21 @@
-const CACHE_NAME = "ingush-phrasebook-v1";
+// Kill stale caches from older PWA builds (they served outdated script.js).
+const SW_VERSION = "ingush-phrasebook-v2-nocache";
 
-const FILES_TO_CACHE = [
-  "./",
-  "./index.html",
-  "./style.css",
-  "./script.js",
-  "./recorder.js",
-  "./manifest.json",
-
-  // категории
-  "./categories/greetings.json",
-  "./categories/basic_phrases.json",
-
-  // иконки
-  "./icons/icon-192.png",
-  "./icons/icon-512.png"
-];
-
-// Установка
-self.addEventListener("install", e => {
+self.addEventListener("install", (e) => {
+  self.skipWaiting();
   e.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE))
+    caches.keys().then((keys) => Promise.all(keys.map((k) => caches.delete(k))))
   );
 });
 
-// Активация
-self.addEventListener("activate", e => {
+self.addEventListener("activate", (e) => {
   e.waitUntil(
-    caches.keys().then(keys =>
-      Promise.all(
-        keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k))
-      )
-    )
+    caches.keys()
+      .then((keys) => Promise.all(keys.map((k) => caches.delete(k))))
+      .then(() => self.clients.claim())
   );
 });
 
-// Запросы
-self.addEventListener("fetch", e => {
-  e.respondWith(
-    caches.match(e.request).then(resp => resp || fetch(e.request))
-  );
+self.addEventListener("fetch", (e) => {
+  e.respondWith(fetch(e.request));
 });

@@ -1032,7 +1032,7 @@ async function apiAdminTestTranslate(){
     const res = await fetch(`${base}/translate`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ru }),
+      body: JSON.stringify({ ru, skipHabar: DISABLE_HABAR_PHRASE_SOURCE }),
       signal: ctrl.signal,
       cache: "no-store"
     });
@@ -1285,6 +1285,7 @@ function jaccardSet(a, b){
 }
 
 function findPhraseFromHabar(ruText){
+  if(DISABLE_HABAR_PHRASE_SOURCE) return null;
   const needle = normalizeRuForLookup(ruText);
   if(!needle) return null;
 
@@ -1417,7 +1418,7 @@ async function aiTranslateIng(){
   outIng && (outIng.value = "");
   toast("Перевод…", true);
 
-  const local = !DISABLE_HABAR_PHRASE_SOURCE ? findPhraseFromHabar(ru) : null;
+  const local = findPhraseFromHabar(ru);
   if(local?.ing){
     outIng && (outIng.value = cleanIngCandidate(local.ing));
     if(outPron && local.pron) outPron.value = safe(local.pron);

@@ -126,11 +126,12 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.0/lame.min.js"></script>
-<script src="script.js?v=20260523b"></script>
+<script src="script.js?v=20260523c"></script>
 <script src="recorder.js?v=20260522a"></script>
 <script>
-  // Remove stale SW caches from older builds (OpenAI-era bundle).
+  // Remove stale SW caches from older builds (they blocked script updates).
   if ("serviceWorker" in navigator) {
+    caches?.keys?.().then((keys) => Promise.all(keys.map((k) => caches.delete(k))));
     navigator.serviceWorker.getRegistrations().then((regs) => {
       regs.forEach((reg) => reg.unregister());
     });
