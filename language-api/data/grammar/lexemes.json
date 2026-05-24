@@ -2865,6 +2865,128 @@
       "notes": "Genitive of работа → root болх"
     },
     {
+      "ru": "у меня",
+      "pos": "pronoun",
+      "forms": { "base": "суга", "allative": "суга" }
+    },
+    {
+      "ru": "у тебя",
+      "pos": "pronoun",
+      "forms": { "base": "Хьуга", "allative": "Хьуга" }
+    },
+    {
+      "ru": "у нас",
+      "pos": "pronoun",
+      "forms": { "base": "Вайга", "allative": "Вайга" }
+    },
+    {
+      "ru": "у него",
+      "pos": "pronoun",
+      "forms": { "base": "Цунга", "allative": "Цунга" }
+    },
+    {
+      "ru": "у неё",
+      "pos": "pronoun",
+      "forms": { "base": "Цунга", "allative": "Цунга" }
+    },
+    {
+      "ru": "у них",
+      "pos": "pronoun",
+      "forms": { "base": "Царга", "allative": "Царга" }
+    },
+    {
+      "ru": "мой",
+      "pos": "pronoun",
+      "forms": { "base": "са", "genitive": "са" }
+    },
+    {
+      "ru": "наш",
+      "pos": "pronoun",
+      "forms": { "base": "тха", "genitive": "тха" }
+    },
+    {
+      "ru": "ко мне",
+      "pos": "pronoun",
+      "forms": { "base": "Сугахь", "direction": "Сугахь" },
+      "notes": "суг + ахь — направление ко мне"
+    },
+    {
+      "ru": "к тебе",
+      "pos": "pronoun",
+      "forms": { "base": "Хьугахь", "direction": "Хьугахь" }
+    },
+    {
+      "ru": "к нам",
+      "pos": "pronoun",
+      "forms": { "base": "Вайгахь", "direction": "Вайгахь", "formal": "Тхугахь" }
+    },
+    {
+      "ru": "к нему",
+      "pos": "pronoun",
+      "forms": { "base": "Цунгахь", "direction": "Цунгахь" }
+    },
+    {
+      "ru": "к ним",
+      "pos": "pronoun",
+      "forms": { "base": "Царгахь", "direction": "Царгахь" }
+    },
+    {
+      "ru": "у нас здесь",
+      "pos": "pronoun",
+      "forms": { "base": "Вайцига", "locative": "Вайцига", "familiar": "Вайцига", "formal_motion": "Тхацигахь" }
+    },
+    {
+      "ru": "у вас там",
+      "pos": "pronoun",
+      "forms": { "base": "Шунцига", "locative": "Шунцига", "motion": "Шунцигахь" }
+    },
+    {
+      "ru": "у них там",
+      "pos": "pronoun",
+      "forms": { "base": "Царцига", "locative": "Царцига", "motion": "Царцигахь" }
+    },
+    {
+      "ru": "иди",
+      "pos": "verb",
+      "forms": { "base": "Хьвале", "imperative": "Хьвале" }
+    },
+    {
+      "ru": "от меня",
+      "pos": "pronoun",
+      "forms": { "base": "Сугар", "ablative": "Сугар" },
+      "notes": "суга + р"
+    },
+    {
+      "ru": "от тебя",
+      "pos": "pronoun",
+      "forms": { "base": "Хьугар", "ablative": "Хьугар" }
+    },
+    {
+      "ru": "от него",
+      "pos": "pronoun",
+      "forms": { "base": "Цунгар", "ablative": "Цунгар" }
+    },
+    {
+      "ru": "от неё",
+      "pos": "pronoun",
+      "forms": { "base": "Цунгар", "ablative": "Цунгар" }
+    },
+    {
+      "ru": "от нас",
+      "pos": "pronoun",
+      "forms": { "base": "Вайгар", "ablative": "Вайгар", "locative_ablative": "Тхацигар" }
+    },
+    {
+      "ru": "от вас",
+      "pos": "pronoun",
+      "forms": { "base": "Шунгар", "ablative": "Шунгар", "locative_ablative": "Шунцигар" }
+    },
+    {
+      "ru": "от них",
+      "pos": "pronoun",
+      "forms": { "base": "Царгар", "ablative": "Царгар", "locative_ablative": "Царцигар" }
+    },
+    {
       "ru": "на работе",
       "pos": "phrase",
       "forms": {

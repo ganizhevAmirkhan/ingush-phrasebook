@@ -10304,30 +10304,168 @@
       ]
     },
     {
+      "id": "ablative_from_me",
+      "ruPattern": "от меня",
+      "description": "Исход от меня: суга+р → Сугар",
+      "slots": [],
+      "ingTemplate": "Сугар.",
+      "priority": 96,
+      "examples": [{ "ru": "от меня", "ing_expected": "Сугар." }]
+    },
+    {
+      "id": "ablative_from_you",
+      "ruPattern": "от тебя",
+      "description": "От тебя: Хьугар",
+      "slots": [],
+      "ingTemplate": "Хьугар.",
+      "priority": 96,
+      "examples": [{ "ru": "от тебя", "ing_expected": "Хьугар." }]
+    },
+    {
+      "id": "ablative_from_him",
+      "ruPattern": "от него",
+      "description": "От него: Цунгар",
+      "slots": [],
+      "ingTemplate": "Цунгар.",
+      "priority": 96,
+      "examples": [{ "ru": "от него", "ing_expected": "Цунгар." }]
+    },
+    {
+      "id": "ablative_from_us",
+      "ruPattern": "от нас",
+      "description": "От нас: Вайгар",
+      "slots": [],
+      "ingTemplate": "Вайгар.",
+      "priority": 96,
+      "examples": [{ "ru": "от нас", "ing_expected": "Вайгар." }]
+    },
+    {
+      "id": "ablative_from_them",
+      "ruPattern": "от них",
+      "description": "От них: Царгар",
+      "slots": [],
+      "ingTemplate": "Царгар.",
+      "priority": 96,
+      "examples": [{ "ru": "от них", "ing_expected": "Царгар." }]
+    },
+    {
+      "id": "ablative_from_us_here",
+      "ruPattern": "от нас отсюда",
+      "description": "От нас где мы здесь: Тхацигар",
+      "slots": [],
+      "ingTemplate": "Тхацигар.",
+      "priority": 95,
+      "examples": [{ "ru": "от нас отсюда", "ing_expected": "Тхацигар." }]
+    },
+    {
+      "id": "imperative_come_to_us_familiar",
+      "ruPattern": "иди к нам",
+      "description": "Иди к нам — близкому/родственнику: Хьвале вайцига",
+      "slots": [],
+      "ingTemplate": "Хьвале вайцига.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "иди к нам",
+          "ing_expected": "Хьвале вайцига."
+        }
+      ]
+    },
+    {
+      "id": "imperative_come_to_us_formal",
+      "ruPattern": "идите к нам",
+      "description": "Иди к нам — постороннему: Хьвале тхацигахь",
+      "slots": [],
+      "ingTemplate": "Хьвале тхацигахь.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "идите к нам",
+          "ing_expected": "Хьвале тхацигахь."
+        }
+      ]
+    },
+    {
+      "id": "imperative_come_to_them",
+      "ruPattern": "иди к ним",
+      "description": "К направлению к ним: Хьвале царцигахь",
+      "slots": [],
+      "ingTemplate": "Хьвале Царцигахь.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "иди к ним",
+          "ing_expected": "Хьвале Царцигахь."
+        }
+      ]
+    },
+    {
+      "id": "imperative_come_to_you_pl",
+      "ruPattern": "иди к вам",
+      "description": "К направлению к вам: Хьвале шунцигахь",
+      "slots": [],
+      "ingTemplate": "Хьвале Шунцигахь.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "иди к вам",
+          "ing_expected": "Хьвале Шунцигахь."
+        }
+      ]
+    },
+    {
+      "id": "imperative_come_to_me",
+      "ruPattern": "иди ко мне",
+      "description": "К направлению ко мне: Хьвале сугахь",
+      "slots": [],
+      "ingTemplate": "Хьвале Сугахь.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "иди ко мне",
+          "ing_expected": "Хьвале Сугахь."
+        }
+      ]
+    },
+    {
+      "id": "imperative_come_to_you",
+      "ruPattern": "иди к тебе",
+      "description": "К направлению к тебе: Хьвале хьугахь",
+      "slots": [],
+      "ingTemplate": "Хьвале Хьугахь.",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "иди к тебе",
+          "ing_expected": "Хьвале Хьугахь."
+        }
+      ]
+    },
+    {
       "id": "neg_i_have_no_work",
       "ruPattern": "у меня нет работы",
-      "description": "No work — existential negation: болх + бац (ба+ц), not балха дац са",
+      "description": "No work — Суга (у меня) + болх + бац",
       "slots": [],
-      "ingTemplate": "Болх бац.",
+      "ingTemplate": "Суга болх бац.",
       "priority": 100,
       "examples": [
         {
           "ru": "у меня нет работы",
-          "ing_expected": "Болх бац."
+          "ing_expected": "Суга болх бац."
         }
       ]
     },
     {
       "id": "existential_i_have_work",
       "ruPattern": "у меня есть работа",
-      "description": "Have work — болх ба",
+      "description": "Have work — Суга болх ба",
       "slots": [],
-      "ingTemplate": "Болх ба.",
+      "ingTemplate": "Суга болх ба.",
       "priority": 100,
       "examples": [
         {
           "ru": "у меня есть работа",
-          "ing_expected": "Болх ба."
+          "ing_expected": "Суга болх ба."
         }
       ]
     },
@@ -10578,6 +10716,136 @@
           "ing_expected": "МОАСТАГ ДА СА."
         }
       ]
+    },
+    {
+      "id": "neg_u_menia_net_existential",
+      "ruPattern": "у меня нет {X}",
+      "description": "Generic: Суга (у меня) + noun + бац (нет)",
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
+      "ingTemplate": "Суга {X_BASE} бац.",
+      "priority": 94,
+      "examples": [
+        {
+          "ru": "у меня нет работы",
+          "ing_expected": "Суга болх бац."
+        }
+      ]
+    },
+    {
+      "id": "existential_u_menia_est",
+      "ruPattern": "у меня есть {X}",
+      "description": "Generic: Суга (у меня) + noun + ба (есть)",
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
+      "ingTemplate": "Суга {X_BASE} ба.",
+      "priority": 94,
+      "examples": [
+        {
+          "ru": "у меня есть работа",
+          "ing_expected": "Суга болх ба."
+        }
+      ]
+    },
+    {
+      "id": "neg_u_tebya_net_existential",
+      "ruPattern": "у тебя нет {X}",
+      "description": "Хьуга (у тебя) + noun + бац",
+      "slots": [{ "name": "X", "pos": "noun", "requiredCase": "base" }],
+      "ingTemplate": "Хьуга {X_BASE} бац.",
+      "priority": 94,
+      "examples": [{ "ru": "у тебя нет работы", "ing_expected": "Хьуга болх бац." }]
+    },
+    {
+      "id": "existential_u_tebya_est",
+      "ruPattern": "у тебя есть {X}",
+      "description": "Хьуга + noun + ба",
+      "slots": [{ "name": "X", "pos": "noun", "requiredCase": "base" }],
+      "ingTemplate": "Хьуга {X_BASE} ба.",
+      "priority": 94,
+      "examples": [{ "ru": "у тебя есть работа", "ing_expected": "Хьуга болх ба." }]
+    },
+    {
+      "id": "neg_u_nas_net_existential",
+      "ruPattern": "у нас нет {X}",
+      "description": "Вайга (у нас) + noun + бац",
+      "slots": [{ "name": "X", "pos": "noun", "requiredCase": "base" }],
+      "ingTemplate": "Вайга {X_BASE} бац.",
+      "priority": 94,
+      "examples": [{ "ru": "у нас нет работы", "ing_expected": "Вайга болх бац." }]
+    },
+    {
+      "id": "existential_u_nas_est",
+      "ruPattern": "у нас есть {X}",
+      "description": "Вайга + noun + ба",
+      "slots": [{ "name": "X", "pos": "noun", "requiredCase": "base" }],
+      "ingTemplate": "Вайга {X_BASE} ба.",
+      "priority": 94,
+      "examples": [{ "ru": "у нас есть работа", "ing_expected": "Вайга болх ба." }]
+    },
+    {
+      "id": "neg_u_nego_net_existential",
+      "ruPattern": "у него нет {X}",
+      "description": "Цунга (у него) + noun + бац",
+      "slots": [{ "name": "X", "pos": "noun", "requiredCase": "base" }],
+      "ingTemplate": "Цунга {X_BASE} бац.",
+      "priority": 94,
+      "examples": [{ "ru": "у него нет работы", "ing_expected": "Цунга болх бац." }]
+    },
+    {
+      "id": "neg_u_nee_net_existential",
+      "ruPattern": "у неё нет {X}",
+      "description": "Цунга (у неё) + noun + бац",
+      "slots": [{ "name": "X", "pos": "noun", "requiredCase": "base" }],
+      "ingTemplate": "Цунга {X_BASE} бац.",
+      "priority": 94,
+      "examples": [{ "ru": "у неё нет работы", "ing_expected": "Цунга болх бац." }]
+    },
+    {
+      "id": "existential_u_nego_est",
+      "ruPattern": "у него есть {X}",
+      "description": "Цунга + noun + ба",
+      "slots": [{ "name": "X", "pos": "noun", "requiredCase": "base" }],
+      "ingTemplate": "Цунга {X_BASE} ба.",
+      "priority": 94,
+      "examples": [{ "ru": "у него есть работа", "ing_expected": "Цунга болх ба." }]
+    },
+    {
+      "id": "existential_u_nee_est",
+      "ruPattern": "у неё есть {X}",
+      "description": "Цунга + noun + ба",
+      "slots": [{ "name": "X", "pos": "noun", "requiredCase": "base" }],
+      "ingTemplate": "Цунга {X_BASE} ба.",
+      "priority": 94,
+      "examples": [{ "ru": "у неё есть работа", "ing_expected": "Цунга болх ба." }]
+    },
+    {
+      "id": "neg_u_nih_net_existential",
+      "ruPattern": "у них нет {X}",
+      "description": "Царга (у них) + noun + бац",
+      "slots": [{ "name": "X", "pos": "noun", "requiredCase": "base" }],
+      "ingTemplate": "Царга {X_BASE} бац.",
+      "priority": 94,
+      "examples": [{ "ru": "у них нет работы", "ing_expected": "Царга болх бац." }]
+    },
+    {
+      "id": "existential_u_nih_est",
+      "ruPattern": "у них есть {X}",
+      "description": "Царга + noun + ба",
+      "slots": [{ "name": "X", "pos": "noun", "requiredCase": "base" }],
+      "ingTemplate": "Царга {X_BASE} ба.",
+      "priority": 94,
+      "examples": [{ "ru": "у них есть работа", "ing_expected": "Царга болх ба." }]
     },
     {
       "id": "generic_i_have_no_object",
