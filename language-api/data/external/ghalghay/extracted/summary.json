@@ -1,0 +1,49 @@
+{
+  "dictRows": 66389,
+  "parallelRows": 5503,
+  "lexemesFull": 49252,
+  "lexemesCurated": 43923,
+  "lexemesMerged": {
+    "added": 0,
+    "skipped": true
+  },
+  "corpusDocs": 7,
+  "corpusParagraphs": 5480,
+  "topCorpus": [
+    {
+      "id": "ghalghay_pushkin_kapitanskaya",
+      "title": "А. С. Пушкин — Капитанская дочка",
+      "paragraphs": 2929
+    },
+    {
+      "id": "ghalghay_swift_lilliput",
+      "title": "Дж. Свифт — Гулливер у лилипутов",
+      "paragraphs": 713
+    },
+    {
+      "id": "ghalghay_turg_mumu",
+      "title": "И. С. Тургенев — Муму",
+      "paragraphs": 568
+    },
+    {
+      "id": "ghalghay_pushkin_belka",
+      "title": "А. С. Пушкин — Барышня-крестьянка",
+      "paragraphs": 419
+    },
+    {
+      "id": "ghalghay_kipl_rikk",
+      "title": "Р. Киплинг — Рикки-Тикки-Тави (пер. Мальсагова)",
+      "paragraphs": 412
+    },
+    {
+      "id": "ghalghay_pushkin_mozart",
+      "title": "А. С. Пушкин — Моцарт и Сальери",
+      "paragraphs": 220
+    },
+    {
+      "id": "ghalghay_slovo_polku",
+      "title": "Слово о полку Игореве",
+      "paragraphs": 219
+    }
+  ]
+}

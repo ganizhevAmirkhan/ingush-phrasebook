@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Админ-панель — Ингушский разговорник</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Стили -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<!-- Верхняя панель -->
+<header id="top-bar">
+    <div id="title">Админ-панель: Ингушский разговорник</div>
+
+    <div id="github-panel">
+        <input id="gh-token" type="password" placeholder="GitHub Token">
+        <input id="gh-owner" type="text" value="ganizhevAmirkhan">
+        <input id="gh-repo" type="text" value="ingush-phrasebook">
+        <input id="gh-branch" type="text" value="main">
+
+        <button id="save-github">Сохранить в GitHub</button>
+        <button id="download-zip">Скачать ZIP</button>
+    </div>
+</header>
+
+<div id="container">
+
+    <!-- Левая колонка: категории -->
+    <aside id="left-panel">
+        <h2>Категории</h2>
+        <div id="category-list"></div>
+    </aside>
+
+    <!-- Центральная колонка: фразы -->
+    <main id="center-panel">
+        <div id="category-header">
+            <h2 id="category-title">Выберите категорию</h2>
+            <button id="add-phrase">+ Добавить фразу</button>
+            <button id="save-category">Сохранить категорию</button>
+            <button id="download-category">Скачать категорию</button>
+        </div>
+
+        <div id="phrase-list"></div>
+    </main>
+
+    <!-- Правая колонка: редактор -->
+    <aside id="right-panel">
+        <h2>Редактор фразы</h2>
+
+        <div id="editor">
+            <label>Русский:</label>
+            <input id="edit-ru" type="text">
+
+            <label>Ингушский:</label>
+            <input id="edit-ing" type="text">
+
+            <label>Произношение:</label>
+            <input id="edit-pron" type="text">
+
+            <label>Аудио MP3:</label>
+            <input id="edit-audio" type="file" accept="audio/mp3">
+
+            <button id="preview-audio">🔊 Прослушать</button>
+            <button id="delete-audio">Удалить аудио</button>
+
+            <div id="editor-actions">
+                <button id="editor-save">Сохранить</button>
+                <button id="editor-cancel">Отмена</button>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+<!-- Основной скрипт -->
+<script src="admin.js"></script>
+
+</body>
+</html>
+<!-- Шаблон карточки фразы (генерируется скриптом) -->
+<template id="phrase-template">
+    <div class="phrase-card">
+
+        <div class="phrase-text">
+            <div><b>RU:</b> <span class="p-ru"></span></div>
+            <div><b>ING:</b> <span class="p-ing"></span></div>
+            <div><b>PRON:</b> <span class="p-pron"></span></div>
+            <div class="p-audio-status"></div>
+        </div>
+
+        <div class="phrase-buttons">
+            <button class="btn-play">🔊</button>
+            <button class="btn-edit">✏</button>
+            <button class="btn-delete">❌</button>
+        </div>
+
+    </div>
+</template>
+
+<!-- Шаблон категории -->
+<template id="category-template">
+    <div class="category-item"></div>
+</template>
+<!-- Уведомления -->
+<div id="notify" class="hidden"></div>
+
+<!-- Модальное окно подтверждения удаления -->
+<div id="modal-overlay" class="hidden">
+    <div id="modal-window">
+        <h3>Удалить эту фразу?</h3>
+        <p>Это действие нельзя отменить.</p>
+
+        <div id="modal-buttons">
+            <button id="modal-yes">Да, удалить</button>
+            <button id="modal-no">Отмена</button>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно для ошибок -->
+<div id="error-modal" class="hidden">
+    <div id="error-box">
+        <h3>Ошибка</h3>
+        <p id="error-message"></p>
+        <button id="error-ok">OK</button>
+    </div>
+</div>
+
+<!-- Аудио-плеер для воспроизведения фрагментов -->
+<audio id="audio-player" controls style="display:none;"></audio>
+<!-- Панель редактирования фразы -->
+<div id="edit-panel" class="hidden">
+    <h3 id="edit-title">Редактирование фразы</h3>
+
+    <label>Русский текст:</label>
+    <input id="edit-ru" type="text">
+
+    <label>Ингушский текст:</label>
+    <input id="edit-ing" type="text">
+
+    <label>Транскрипция (латиница):</label>
+    <input id="edit-pron" type="text">
+
+    <div class="edit-audio-block">
+        <label>Аудио:</label>
+
+        <button id="btn-record" class="small-btn">🎤 Записать</button>
+        <button id="btn-stop" class="small-btn hidden">⏹ Стоп</button>
+        <button id="btn-play" class="small-btn">▶️ Прослушать</button>
+
+        <input id="file-audio" type="file" accept="audio/*" class="small-btn">
+    </div>
+
+    <div id="record-timer">00:00</div>
+
+    <button id="save-entry" class="save-btn">💾 Сохранить фразу</button>
+    <button id="cancel-edit" class="cancel-btn">Отмена</button>
+</div>
+
+<!-- Панель добавления новой фразы -->
+<div id="add-panel" class="hidden">
+    <h3>Добавить фразу</h3>
+
+    <label>Русский текст:</label>
+    <input id="add-ru" type="text">
+
+    <label>Ингушский текст:</label>
+    <input id="add-ing" type="text">
+
+    <label>Транскрипция:</label>
+    <input id="add-pron" type="text">
+
+    <div class="edit-audio-block">
+        <label>Аудио:</label>
+
+        <button id="add-record" class="small-btn">🎤 Записать</button>
+        <button id="add-stop" class="small-btn hidden">⏹ Стоп</button>
+        <button id="add-play" class="small-btn">▶️ Прослушать</button>
+
+        <input id="add-audio" type="file" accept="audio/*" class="small-btn">
+    </div>
+
+    <div id="add-timer">00:00</div>
+
+    <button id="add-save" class="save-btn">Добавить</button>
+    <button id="add-cancel" class="cancel-btn">Отмена</button>
+</div>
+
+<!-- Панель настроек -->
+<div id="settings-panel" class="hidden">
+    <h3>Настройки</h3>
+
+    <label>GitHub Token:</label>
+    <input id="github-token" type="password" placeholder="ghp_...">
+
+    <label>Репозиторий:</label>
+    <input id="repo-owner" type="text" placeholder="ganizhevAmirkhan">
+    <input id="repo-name" type="text" placeholder="ingush-phrasebook">
+
+    <label>Ветка:</label>
+    <input id="repo-branch" type="text" value="main">
+
+    <button id="save-settings" class="save-btn">Сохранить настройки</button>
+</div>
+
+<!-- Скрытый контейнер для динамической загрузки -->
+<div id="dynamic-content" class="hidden"></div>
+<!-- Панель подтверждения удаления -->
+<div id="delete-confirm" class="hidden confirm-box">
+    <h3>Удалить фразу?</h3>
+    <p id="delete-text"></p>
+
+    <button id="confirm-delete" class="delete-btn">Удалить</button>
+    <button id="cancel-delete" class="cancel-btn">Отмена</button>
+</div>
+
+<!-- Панель успешного сохранения -->
+<div id="success-popup" class="hidden success-box">
+    ✔ Изменения сохранены!
+</div>
+
+<!-- Панель ошибки -->
+<div id="error-popup" class="hidden error-box">
+    ⚠ Ошибка при сохранении!
+</div>
+
+<!-- Затемнение фона -->
+<div id="overlay" class="hidden"></div>
+
+
+<!-- Подключение JS (логика администратора) -->
+<script src="admin.js"></script>
+
+</body>
+</html>
+

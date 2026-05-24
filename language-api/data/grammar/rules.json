@@ -1,0 +1,187 @@
+{
+  "rules": [
+    {
+      "id": "slot_case_dative",
+      "type": "slot_transform",
+      "when": {
+        "requiredCase": "dative"
+      },
+      "apply": "use_lexeme_form",
+      "targetForm": "dat"
+    },
+    {
+      "id": "slot_case_base",
+      "type": "slot_transform",
+      "when": {
+        "requiredCase": "base"
+      },
+      "apply": "use_lexeme_form",
+      "targetForm": "base"
+    },
+    {
+      "id": "slot_case_genitive",
+      "type": "slot_transform",
+      "when": {
+        "requiredCase": "genitive"
+      },
+      "apply": "use_lexeme_form",
+      "targetForm": "gen"
+    },
+    {
+      "id": "slot_case_ergative",
+      "type": "slot_transform",
+      "when": {
+        "requiredCase": "ergative"
+      },
+      "apply": "use_lexeme_form",
+      "targetForm": "erg"
+    },
+    {
+      "id": "slot_case_instrumental",
+      "type": "slot_transform",
+      "when": {
+        "requiredCase": "instrumental"
+      },
+      "apply": "use_lexeme_form",
+      "targetForm": "ins"
+    },
+    {
+      "id": "slot_case_material",
+      "type": "slot_transform",
+      "when": {
+        "requiredCase": "material"
+      },
+      "apply": "use_lexeme_form",
+      "targetForm": "mat"
+    },
+    {
+      "id": "slot_case_locative",
+      "type": "slot_transform",
+      "when": {
+        "requiredCase": "locative"
+      },
+      "apply": "use_lexeme_form",
+      "targetForm": "loc"
+    },
+    {
+      "id": "slot_case_comparative",
+      "type": "slot_transform",
+      "when": {
+        "requiredCase": "comparative"
+      },
+      "apply": "use_lexeme_form",
+      "targetForm": "cmp"
+    },
+    {
+      "id": "fallback_unknown_lexeme",
+      "type": "slot_transform",
+      "when": {
+        "lexemeMissing": true
+      },
+      "apply": "identity_from_dictionary",
+      "targetForm": "base"
+    },
+    {
+      "id": "possession_allative",
+      "type": "possession_allative",
+      "markers": [
+        { "ru": "у меня", "ing": "суга" },
+        { "ru": "у тебя", "ing": "Хьуга" },
+        { "ru": "у нас", "ing": "Вайга" },
+        { "ru": "у него", "ing": "Цунга" },
+        { "ru": "у неё", "ing": "Цунга" },
+        { "ru": "у них", "ing": "Царга" }
+      ],
+      "notes": "Allative «у кого»: Суга болх ба / Суга болх бац"
+    },
+    {
+      "id": "possession_genitive",
+      "type": "possession_genitive",
+      "markers": [
+        { "ru": "мой", "ing": "са" },
+        { "ru": "наш", "ing": "тха" },
+        { "ru": "твой", "ing": "хьа" }
+      ],
+      "notes": "Притяжательные (род. падеж): са=мой, тха=наш — отдельно от «у меня»=суга"
+    },
+    {
+      "id": "direction_allative_h",
+      "type": "direction_allative",
+      "suffix": "ахь",
+      "markers": [
+        { "ru": "ко мне", "ing": "Сугахь" },
+        { "ru": "к тебе", "ing": "Хьугахь" },
+        { "ru": "к нам (с тобой)", "ing": "Вайгахь" },
+        { "ru": "к нам (без тебя)", "ing": "Тхугахь" },
+        { "ru": "к нему/ней", "ing": "Цунгахь" },
+        { "ru": "к ним", "ing": "Царгахь" }
+      ],
+      "notes": "Направление, сторона: суг+ахь → Сугахь"
+    },
+    {
+      "id": "location_ciga",
+      "type": "location_ciga",
+      "suffix": "цига",
+      "markers": [
+        { "ru": "у нас здесь (с тобой)", "ing": "Вайцига" },
+        { "ru": "у нас здесь (без тебя)", "ing": "Тхацига" },
+        { "ru": "у вас там", "ing": "Шунцига" },
+        { "ru": "у них там", "ing": "Царцига" }
+      ],
+      "notes": "Где находятся"
+    },
+    {
+      "id": "motion_cigah",
+      "type": "motion_to_location",
+      "suffix": "цигахь",
+      "rule": "цига + хь",
+      "markers": [
+        { "ru": "к нам (родственнику)", "ing": "Вайцигахь", "register": "familiar" },
+        { "ru": "к нам (не родственнику)", "ing": "Тхацигахь", "register": "formal" },
+        { "ru": "к вам", "ing": "Шунцигахь" },
+        { "ru": "к ним", "ing": "Царцигахь" }
+      ],
+      "notes": "Движение к месту где мы/они"
+    },
+    {
+      "id": "ablative_from_r",
+      "type": "ablative_from",
+      "suffix": "р",
+      "rule": "…га + р → …гар; …цига + р → …цигар",
+      "markers_ga": [
+        { "ru": "от меня", "ing": "Сугар" },
+        { "ru": "от тебя", "ing": "Хьугар" },
+        { "ru": "от него/неё", "ing": "Цунгар" },
+        { "ru": "от нас", "ing": "Вайгар" },
+        { "ru": "от них", "ing": "Царгар" }
+      ],
+      "markers_ciga": [
+        { "ru": "от нас (здесь)", "ing": "Тхацигар" },
+        { "ru": "от нас (с тобой)", "ing": "Вайцигар" },
+        { "ru": "от вас", "ing": "Шунцигар" },
+        { "ru": "от них (там)", "ing": "Царцигар" }
+      ],
+      "notes": "Исход «от»: суга+р=сугар"
+    },
+    {
+      "id": "aux_neg_ba_to_bats",
+      "type": "auxiliary_negation",
+      "positive": "ба",
+      "negative": "бац",
+      "notes": "Existential: болх ба → болх бац (нет работы). Auxiliary ба + ц."
+    },
+    {
+      "id": "aux_neg_da_to_dats",
+      "type": "auxiliary_negation",
+      "positive": "да",
+      "negative": "дац",
+      "notes": "Existential: диг да → диг дац (нет топора). Auxiliary да + ц."
+    },
+    {
+      "id": "aux_definite_va",
+      "type": "auxiliary_definite",
+      "positive": "ва",
+      "notes": "Definite marker (like Arabic ال): къунах ва — the man"
+    }
+  ]
+}

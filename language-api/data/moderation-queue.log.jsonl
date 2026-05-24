@@ -1,0 +1,257 @@
+{"id":"mod_1779461062905","createdAt":"2026-05-22T14:44:22.905Z","ru":"в москве с кем ты дружишь","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779467165778","createdAt":"2026-05-22T16:26:05.778Z","ru":"Какая погода?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779480845130","createdAt":"2026-05-22T20:14:05.130Z","ru":"Какая температура?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779480845148","createdAt":"2026-05-22T20:14:05.148Z","ru":"кака температура?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779481200439","createdAt":"2026-05-22T20:20:00.439Z","ru":"Рад встрече с тобой","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779481870072","createdAt":"2026-05-22T20:31:10.072Z","ru":"Прощай","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779481870082","createdAt":"2026-05-22T20:31:10.082Z","ru":"Увидимся позже","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779481870095","createdAt":"2026-05-22T20:31:10.095Z","ru":"Как прошёл день?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713649","createdAt":"2026-05-23T02:18:33.649Z","ru":"Животные","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713686","createdAt":"2026-05-23T02:18:33.686Z","ru":"След зверя","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713708","createdAt":"2026-05-23T02:18:33.708Z","ru":"Минуту","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713715","createdAt":"2026-05-23T02:18:33.715Z","ru":"Я понял","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713721","createdAt":"2026-05-23T02:18:33.721Z","ru":"Говори медленнее","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713725","createdAt":"2026-05-23T02:18:33.725Z","ru":"Повтори","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713733","createdAt":"2026-05-23T02:18:33.733Z","ru":"Смотри","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713737","createdAt":"2026-05-23T02:18:33.737Z","ru":"Медленнее","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713742","createdAt":"2026-05-23T02:18:33.742Z","ru":"Я хочу","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713748","createdAt":"2026-05-23T02:18:33.748Z","ru":"Тише","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713785","createdAt":"2026-05-23T02:18:33.785Z","ru":"Я приду позже","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713788","createdAt":"2026-05-23T02:18:33.788Z","ru":"ц","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713793","createdAt":"2026-05-23T02:18:33.793Z","ru":"Я в городе","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713813","createdAt":"2026-05-23T02:18:33.813Z","ru":"Подскажите, пожалуйста","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713829","createdAt":"2026-05-23T02:18:33.829Z","ru":"Я жду","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713833","createdAt":"2026-05-23T02:18:33.833Z","ru":"Я опоздал","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713838","createdAt":"2026-05-23T02:18:33.838Z","ru":"Как добраться туда?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713844","createdAt":"2026-05-23T02:18:33.844Z","ru":"ысчы","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713854","createdAt":"2026-05-23T02:18:33.854Z","ru":"ыыыс","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713860","createdAt":"2026-05-23T02:18:33.860Z","ru":"Медленнее!","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713870","createdAt":"2026-05-23T02:18:33.870Z","ru":"Смотри!","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713876","createdAt":"2026-05-23T02:18:33.876Z","ru":"Ляг!","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713884","createdAt":"2026-05-23T02:18:33.884Z","ru":"Не двигайся!","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713893","createdAt":"2026-05-23T02:18:33.893Z","ru":"Не шуми!","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713899","createdAt":"2026-05-23T02:18:33.899Z","ru":"Отойди!","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713904","createdAt":"2026-05-23T02:18:33.904Z","ru":"Вернись!","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713908","createdAt":"2026-05-23T02:18:33.908Z","ru":"й","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713917","createdAt":"2026-05-23T02:18:33.917Z","ru":"Что нового?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713924","createdAt":"2026-05-23T02:18:33.924Z","ru":"Я понял","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713929","createdAt":"2026-05-23T02:18:33.929Z","ru":"Повтори","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713940","createdAt":"2026-05-23T02:18:33.940Z","ru":"Не спеши","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713946","createdAt":"2026-05-23T02:18:33.946Z","ru":"Ты уверен?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713949","createdAt":"2026-05-23T02:18:33.949Z","ru":"Я уверен","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713953","createdAt":"2026-05-23T02:18:33.953Z","ru":"Мне это нравится","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713964","createdAt":"2026-05-23T02:18:33.964Z","ru":"Мне это не нравится","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713970","createdAt":"2026-05-23T02:18:33.970Z","ru":"Я думаю так же","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713975","createdAt":"2026-05-23T02:18:33.975Z","ru":"Пример фразы для conversation","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713987","createdAt":"2026-05-23T02:18:33.987Z","ru":"Он опасен","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713993","createdAt":"2026-05-23T02:18:33.993Z","ru":"Берегись!","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502713997","createdAt":"2026-05-23T02:18:33.997Z","ru":"Берегите его","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714002","createdAt":"2026-05-23T02:18:34.002Z","ru":"Спрячься","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714012","createdAt":"2026-05-23T02:18:34.012Z","ru":"Тише!","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714020","createdAt":"2026-05-23T02:18:34.020Z","ru":"Не шуми!","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714034","createdAt":"2026-05-23T02:18:34.034Z","ru":"Что случилось?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714038","createdAt":"2026-05-23T02:18:34.038Z","ru":"Он ранен","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714058","createdAt":"2026-05-23T02:18:34.058Z","ru":"Жди здесь","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714062","createdAt":"2026-05-23T02:18:34.062Z","ru":"Медленнее!","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714065","createdAt":"2026-05-23T02:18:34.065Z","ru":"Я боюсь","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714075","createdAt":"2026-05-23T02:18:34.075Z","ru":"Не бойся","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714084","createdAt":"2026-05-23T02:18:34.084Z","ru":"Горячая вода","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714099","createdAt":"2026-05-23T02:18:34.099Z","ru":"Я выпил","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714108","createdAt":"2026-05-23T02:18:34.108Z","ru":"Не пей!","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714111","createdAt":"2026-05-23T02:18:34.111Z","ru":"Пей!","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714126","createdAt":"2026-05-23T02:18:34.126Z","ru":"Ты чай будешь?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714132","createdAt":"2026-05-23T02:18:34.132Z","ru":"Ты воду будешь?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714137","createdAt":"2026-05-23T02:18:34.137Z","ru":"Сделай чай","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714142","createdAt":"2026-05-23T02:18:34.142Z","ru":"Сделай кофе","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714158","createdAt":"2026-05-23T02:18:34.158Z","ru":"ыысв","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714163","createdAt":"2026-05-23T02:18:34.163Z","ru":"Как ты себя чувствуешь?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714167","createdAt":"2026-05-23T02:18:34.167Z","ru":"Я чувствую себя хорошо","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714170","createdAt":"2026-05-23T02:18:34.170Z","ru":"Я чувствую себя плохо","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714176","createdAt":"2026-05-23T02:18:34.176Z","ru":"Я счастлив","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714193","createdAt":"2026-05-23T02:18:34.193Z","ru":"Я не боюсь","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714199","createdAt":"2026-05-23T02:18:34.199Z","ru":"Я спокоен","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714202","createdAt":"2026-05-23T02:18:34.202Z","ru":"Я думаю","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714215","createdAt":"2026-05-23T02:18:34.215Z","ru":"Мне нравится","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714227","createdAt":"2026-05-23T02:18:34.227Z","ru":"Мне не нравится","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714231","createdAt":"2026-05-23T02:18:34.231Z","ru":"Я хочу","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714236","createdAt":"2026-05-23T02:18:34.236Z","ru":"Мне хочется","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714245","createdAt":"2026-05-23T02:18:34.245Z","ru":"Я сплю","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714252","createdAt":"2026-05-23T02:18:34.252Z","ru":"Я злюсь","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714273","createdAt":"2026-05-23T02:18:34.273Z","ru":"Старшая сестра","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714320","createdAt":"2026-05-23T02:18:34.320Z","ru":"Горячая вода","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714325","createdAt":"2026-05-23T02:18:34.325Z","ru":"Хочу пить","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714328","createdAt":"2026-05-23T02:18:34.328Z","ru":"Хочу кушать","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714346","createdAt":"2026-05-23T02:18:34.346Z","ru":"Хорошая еда","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714351","createdAt":"2026-05-23T02:18:34.351Z","ru":"Плохая еда","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714356","createdAt":"2026-05-23T02:18:34.356Z","ru":"Я наелся","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714368","createdAt":"2026-05-23T02:18:34.368Z","ru":"Не хочу это","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714383","createdAt":"2026-05-23T02:18:34.383Z","ru":"Я приготовлю","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714387","createdAt":"2026-05-23T02:18:34.387Z","ru":"Приготовь еду","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714392","createdAt":"2026-05-23T02:18:34.392Z","ru":"Я ем","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714398","createdAt":"2026-05-23T02:18:34.398Z","ru":"Ты ешь?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714402","createdAt":"2026-05-23T02:18:34.402Z","ru":"Я пью","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714408","createdAt":"2026-05-23T02:18:34.408Z","ru":"Ты пьёшь?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714414","createdAt":"2026-05-23T02:18:34.414Z","ru":"3","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714418","createdAt":"2026-05-23T02:18:34.418Z","ru":"морковка","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714424","createdAt":"2026-05-23T02:18:34.424Z","ru":"Как твои дела","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714429","createdAt":"2026-05-23T02:18:34.429Z","ru":"Доброе утро","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714436","createdAt":"2026-05-23T02:18:34.436Z","ru":"Как поживаешь?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714449","createdAt":"2026-05-23T02:18:34.449Z","ru":"Входите","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714452","createdAt":"2026-05-23T02:18:34.452Z","ru":"Проходите","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714488","createdAt":"2026-05-23T02:18:34.488Z","ru":"Слава Всевышнему","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714497","createdAt":"2026-05-23T02:18:34.497Z","ru":"С мира пришёл?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714502","createdAt":"2026-05-23T02:18:34.502Z","ru":"С миром иди","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714513","createdAt":"2026-05-23T02:18:34.513Z","ru":"Приятног апитита","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714519","createdAt":"2026-05-23T02:18:34.519Z","ru":"Чувствуй себя как дома","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714523","createdAt":"2026-05-23T02:18:34.523Z","ru":"Присаживайся","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714529","createdAt":"2026-05-23T02:18:34.529Z","ru":"Хочешь чай?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714534","createdAt":"2026-05-23T02:18:34.534Z","ru":"Хочешь поесть?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714544","createdAt":"2026-05-23T02:18:34.544Z","ru":"Мы рады гостям","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714567","createdAt":"2026-05-23T02:18:34.567Z","ru":"Я ранен","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714580","createdAt":"2026-05-23T02:18:34.580Z","ru":"Я в больнице","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714585","createdAt":"2026-05-23T02:18:34.585Z","ru":"Помоги!","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714592","createdAt":"2026-05-23T02:18:34.592Z","ru":"Позови кого-нибудь","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714596","createdAt":"2026-05-23T02:18:34.596Z","ru":"Помоги ему","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714601","createdAt":"2026-05-23T02:18:34.601Z","ru":"Помоги им","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714604","createdAt":"2026-05-23T02:18:34.604Z","ru":"Позвони","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714611","createdAt":"2026-05-23T02:18:34.611Z","ru":"Я потерялся","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714615","createdAt":"2026-05-23T02:18:34.615Z","ru":"Я поранился","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714626","createdAt":"2026-05-23T02:18:34.626Z","ru":"Жди здесь","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714639","createdAt":"2026-05-23T02:18:34.639Z","ru":"Уберите здесь","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714646","createdAt":"2026-05-23T02:18:34.646Z","ru":"Поставь сюда","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714650","createdAt":"2026-05-23T02:18:34.650Z","ru":"Закрой дверь","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714654","createdAt":"2026-05-23T02:18:34.654Z","ru":"Открой дверь","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714683","createdAt":"2026-05-23T02:18:34.683Z","ru":"Я живу здесь","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714687","createdAt":"2026-05-23T02:18:34.687Z","ru":"Почини это","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714692","createdAt":"2026-05-23T02:18:34.692Z","ru":"Сломано","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714695","createdAt":"2026-05-23T02:18:34.695Z","ru":"Работает","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714704","createdAt":"2026-05-23T02:18:34.704Z","ru":"Не работает","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714708","createdAt":"2026-05-23T02:18:34.708Z","ru":"ысыс","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714717","createdAt":"2026-05-23T02:18:34.717Z","ru":"Ты готов?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714720","createdAt":"2026-05-23T02:18:34.720Z","ru":"Я готов","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714725","createdAt":"2026-05-23T02:18:34.725Z","ru":"Тише!","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714756","createdAt":"2026-05-23T02:18:34.756Z","ru":"Не шуми","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714761","createdAt":"2026-05-23T02:18:34.761Z","ru":"Стреляй!","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714770","createdAt":"2026-05-23T02:18:34.770Z","ru":"Не стреляй!","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714774","createdAt":"2026-05-23T02:18:34.774Z","ru":"Готовься стрелять","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714778","createdAt":"2026-05-23T02:18:34.778Z","ru":"Он бежит","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714782","createdAt":"2026-05-23T02:18:34.782Z","ru":"Он остановился","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714796","createdAt":"2026-05-23T02:18:34.796Z","ru":"Он ранен","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714802","createdAt":"2026-05-23T02:18:34.802Z","ru":"Мы нашли след","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714808","createdAt":"2026-05-23T02:18:34.808Z","ru":"Перейдём сюда","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714812","createdAt":"2026-05-23T02:18:34.812Z","ru":"Перейдём туда","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714827","createdAt":"2026-05-23T02:18:34.827Z","ru":"Будь осторожен","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714831","createdAt":"2026-05-23T02:18:34.831Z","ru":"Мы возвращаемся","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714835","createdAt":"2026-05-23T02:18:34.835Z","ru":"Возвращайся","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714844","createdAt":"2026-05-23T02:18:34.844Z","ru":"Стреляй из ружья метко","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714863","createdAt":"2026-05-23T02:18:34.863Z","ru":"Я думаю","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714872","createdAt":"2026-05-23T02:18:34.872Z","ru":"Я приду позже","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714878","createdAt":"2026-05-23T02:18:34.878Z","ru":"Отойди","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714882","createdAt":"2026-05-23T02:18:34.882Z","ru":"Мне нравится","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714892","createdAt":"2026-05-23T02:18:34.892Z","ru":"Мне не нравится","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714896","createdAt":"2026-05-23T02:18:34.896Z","ru":"ы","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714904","createdAt":"2026-05-23T02:18:34.904Z","ru":"Сколько стоит?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714920","createdAt":"2026-05-23T02:18:34.920Z","ru":"Дай сдачу","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714927","createdAt":"2026-05-23T02:18:34.927Z","ru":"Заплати","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714943","createdAt":"2026-05-23T02:18:34.943Z","ru":"Сколько стоит?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714953","createdAt":"2026-05-23T02:18:34.953Z","ru":"ывсвымсывм","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714968","createdAt":"2026-05-23T02:18:34.968Z","ru":"Покажи дорогу","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714972","createdAt":"2026-05-23T02:18:34.972Z","ru":"Покажи мне место","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714987","createdAt":"2026-05-23T02:18:34.987Z","ru":"Я заблудился","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502714991","createdAt":"2026-05-23T02:18:34.991Z","ru":"Мы заблудились","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715037","createdAt":"2026-05-23T02:18:35.037Z","ru":"Определи направление","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715047","createdAt":"2026-05-23T02:18:35.047Z","ru":"ысыс","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715051","createdAt":"2026-05-23T02:18:35.051Z","ru":"Доброе утро","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715058","createdAt":"2026-05-23T02:18:35.058Z","ru":"Как поживаешь?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715070","createdAt":"2026-05-23T02:18:35.070Z","ru":"Входите","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715073","createdAt":"2026-05-23T02:18:35.073Z","ru":"Проходите","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715110","createdAt":"2026-05-23T02:18:35.110Z","ru":"Слава Всевышнему","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715119","createdAt":"2026-05-23T02:18:35.119Z","ru":"С мира пришёл?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715123","createdAt":"2026-05-23T02:18:35.123Z","ru":"С миром иди","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715134","createdAt":"2026-05-23T02:18:35.134Z","ru":"ывсава","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715138","createdAt":"2026-05-23T02:18:35.138Z","ru":"Я в магазине","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715148","createdAt":"2026-05-23T02:18:35.149Z","ru":"Сколько стоит?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715158","createdAt":"2026-05-23T02:18:35.158Z","ru":"Дай подешевле","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715166","createdAt":"2026-05-23T02:18:35.166Z","ru":"Покажи это","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715173","createdAt":"2026-05-23T02:18:35.173Z","ru":"Я беру это","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715189","createdAt":"2026-05-23T02:18:35.189Z","ru":"Где касса?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715193","createdAt":"2026-05-23T02:18:35.193Z","ru":"Заплати","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715205","createdAt":"2026-05-23T02:18:35.205Z","ru":"Я ищу воду","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715213","createdAt":"2026-05-23T02:18:35.213Z","ru":"Мне нравится","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715218","createdAt":"2026-05-23T02:18:35.218Z","ru":"впрапт","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715222","createdAt":"2026-05-23T02:18:35.222Z","ru":"Тепловизор","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715228","createdAt":"2026-05-23T02:18:35.228Z","ru":"Я вижу цель","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715237","createdAt":"2026-05-23T02:18:35.237Z","ru":"Я не вижу","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715241","createdAt":"2026-05-23T02:18:35.241Z","ru":"Он в тепловом следе","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715245","createdAt":"2026-05-23T02:18:35.245Z","ru":"Он движется","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715249","createdAt":"2026-05-23T02:18:35.249Z","ru":"Он стоит","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715273","createdAt":"2026-05-23T02:18:35.273Z","ru":"Расстояние маленькое","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715278","createdAt":"2026-05-23T02:18:35.278Z","ru":"Он движется влево","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715282","createdAt":"2026-05-23T02:18:35.282Z","ru":"Он движется вправо","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715286","createdAt":"2026-05-23T02:18:35.286Z","ru":"Он движется вперёд","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715290","createdAt":"2026-05-23T02:18:35.290Z","ru":"Он движется назад","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715294","createdAt":"2026-05-23T02:18:35.294Z","ru":"Он сел","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715298","createdAt":"2026-05-23T02:18:35.298Z","ru":"Он лёг","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715303","createdAt":"2026-05-23T02:18:35.303Z","ru":"Смотри в тепловизор","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715312","createdAt":"2026-05-23T02:18:35.312Z","ru":"Не моргай","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715321","createdAt":"2026-05-23T02:18:35.321Z","ru":"Пропал след","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715326","createdAt":"2026-05-23T02:18:35.326Z","ru":"Появился след","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715332","createdAt":"2026-05-23T02:18:35.332Z","ru":"Наведи прибор","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715340","createdAt":"2026-05-23T02:18:35.340Z","ru":"Стреляй только по команде","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715345","createdAt":"2026-05-23T02:18:35.345Z","ru":"Жди команды","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715348","createdAt":"2026-05-23T02:18:35.348Z","ru":"ысвуу","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715365","createdAt":"2026-05-23T02:18:35.365Z","ru":"Я приду позже","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715370","createdAt":"2026-05-23T02:18:35.370Z","ru":"уууууу","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715379","createdAt":"2026-05-23T02:18:35.379Z","ru":"Крепкая верёвка","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715386","createdAt":"2026-05-23T02:18:35.386Z","ru":"Включи фонарь","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715393","createdAt":"2026-05-23T02:18:35.393Z","ru":"Где мой телефон?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715401","createdAt":"2026-05-23T02:18:35.402Z","ru":"Прибор","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715405","createdAt":"2026-05-23T02:18:35.405Z","ru":"Тепловизор","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715409","createdAt":"2026-05-23T02:18:35.409Z","ru":"Патроны","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715412","createdAt":"2026-05-23T02:18:35.413Z","ru":"Заряди","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715419","createdAt":"2026-05-23T02:18:35.419Z","ru":"ывысвсм","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715428","createdAt":"2026-05-23T02:18:35.428Z","ru":"Ты едешь?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715431","createdAt":"2026-05-23T02:18:35.431Z","ru":"Поехали!","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715436","createdAt":"2026-05-23T02:18:35.436Z","ru":"Поедем медленно","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715439","createdAt":"2026-05-23T02:18:35.439Z","ru":"Поедем быстрее","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715443","createdAt":"2026-05-23T02:18:35.443Z","ru":"Поверни налево","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715447","createdAt":"2026-05-23T02:18:35.447Z","ru":"Поверни направо","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715451","createdAt":"2026-05-23T02:18:35.451Z","ru":"Остановись здесь","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715454","createdAt":"2026-05-23T02:18:35.454Z","ru":"Остановись там","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715467","createdAt":"2026-05-23T02:18:35.467Z","ru":"Сломалась машина","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715471","createdAt":"2026-05-23T02:18:35.471Z","ru":"Машина работает","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715481","createdAt":"2026-05-23T02:18:35.481Z","ru":"Машина не работает","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715490","createdAt":"2026-05-23T02:18:35.490Z","ru":"Заправь","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715494","createdAt":"2026-05-23T02:18:35.494Z","ru":"Дизель","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715507","createdAt":"2026-05-23T02:18:35.507Z","ru":"Сколько стоит поездка?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715513","createdAt":"2026-05-23T02:18:35.513Z","ru":"Опасная дорога","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715518","createdAt":"2026-05-23T02:18:35.518Z","ru":"Хорошая дорога","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715525","createdAt":"2026-05-23T02:18:35.525Z","ru":"ш","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715531","createdAt":"2026-05-23T02:18:35.531Z","ru":"Я путешествую","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715536","createdAt":"2026-05-23T02:18:35.536Z","ru":"Ты путешествуешь?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715542","createdAt":"2026-05-23T02:18:35.542Z","ru":"Куда ты собираешься?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715566","createdAt":"2026-05-23T02:18:35.566Z","ru":"Я заблудился","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715582","createdAt":"2026-05-23T02:18:35.582Z","ru":"Я приеду завтра","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715588","createdAt":"2026-05-23T02:18:35.588Z","ru":"Я приеду сегодня","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715594","createdAt":"2026-05-23T02:18:35.594Z","ru":"Когда уезжаешь?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715598","createdAt":"2026-05-23T02:18:35.598Z","ru":"Я уезжаю сейчас","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715603","createdAt":"2026-05-23T02:18:35.603Z","ru":"Приведи меня туда","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715616","createdAt":"2026-05-23T02:18:35.616Z","ru":"Сколько стоит дорога?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715625","createdAt":"2026-05-23T02:18:35.625Z","ru":"Я быстро вернусь","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715630","createdAt":"2026-05-23T02:18:35.630Z","ru":"Я скоро приеду","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715634","createdAt":"2026-05-23T02:18:35.634Z","ru":"вамвва","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715646","createdAt":"2026-05-23T02:18:35.646Z","ru":"Кто живёт здесь?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715672","createdAt":"2026-05-23T02:18:35.672Z","ru":"ымпаыв","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715679","createdAt":"2026-05-23T02:18:35.679Z","ru":"Хорошая погода","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715685","createdAt":"2026-05-23T02:18:35.685Z","ru":"Туманно","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715712","createdAt":"2026-05-23T02:18:35.712Z","ru":"уауау","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715719","createdAt":"2026-05-23T02:18:35.719Z","ru":"Где ты работаешь?","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715722","createdAt":"2026-05-23T02:18:35.722Z","ru":"Я работаю в …","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779502715740","createdAt":"2026-05-23T02:18:35.740Z","ru":"ыы","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779545033668","createdAt":"2026-05-23T14:03:53.668Z","ru":"Выехал","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779545977067","createdAt":"2026-05-23T14:19:37.067Z","ru":"Возвратился","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779545977079","createdAt":"2026-05-23T14:19:37.079Z","ru":"вернись обратно","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779558598193","createdAt":"2026-05-23T17:49:58.193Z","ru":"ru","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779558609860","createdAt":"2026-05-23T17:50:09.860Z","ru":"Добрый вечер","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779564038494","createdAt":"2026-05-23T19:20:38.494Z","ru":"Жди здесь","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779564043086","createdAt":"2026-05-23T19:20:43.086Z","ru":"Жди здесь","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}

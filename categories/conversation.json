@@ -1,0 +1,2447 @@
+{
+  "category": "conversation",
+  "items": [
+    {
+      "ru": "1 кровать, 2 кровати, 5 кроватей.",
+      "ing": "ЦХЬА МАЬНГИ, ШИ МАЬНГИ, ПХИ МАЬНГИ.",
+      "pron": "tskha mangi, shi mangi, pkhi mangi.",
+      "id": "imp_home_lesson_8_dialogue_12_1"
+    },
+    {
+      "ru": "1 стол, 2 стула.",
+      "ing": "ЦХЬА ИСТОЛ, ШИ ГIАНД.",
+      "pron": "tskha istol, shi giand.",
+      "id": "imp_home_lesson_8_dialogue_11_1"
+    },
+    {
+      "ru": "100, 1000, миллион, миллиард.",
+      "ing": "БIАЬ, ЭЗАР, МИЛЛИОН, МИЛЛИАРД.",
+      "pron": "bia, ezar, million, milliard.",
+      "id": "imp_numbers_lesson_9_7_1"
+    },
+    {
+      "ru": "19 и 20.",
+      "ing": "ТКЪЕСТА, ТКЪО.",
+      "pron": "tkesta, tko.",
+      "id": "imp_numbers_lesson_9_4_1"
+    },
+    {
+      "ru": "21 это 20 и 1.",
+      "ing": "ТКЪАЬ ЦАI.",
+      "pron": "tka tsai.",
+      "id": "imp_numbers_lesson_9_5_1"
+    },
+    {
+      "ru": "30 в ингушском — это 20 и 10.",
+      "ing": "ТКЪАЬ ИТТ.",
+      "pron": "tka itt.",
+      "id": "imp_numbers_lesson_9_2_1"
+    },
+    {
+      "ru": "5 лет.",
+      "ing": "ПХЕ ШЕРА.",
+      "pron": "pkhe shera.",
+      "id": "imp_telephone_conversation_lesson_14_11_"
+    },
+    {
+      "ru": "А баранина у вас есть?",
+      "ing": "УСТАГIАН ДУЛХ ДИЙ ШУГА?",
+      "pron": "ustagian dulkh diy shuga?",
+      "id": "imp_grocery_store_lesson_19_dialogue_6_1"
+    },
+    {
+      "ru": "А в Москве с кем ты дружишь?",
+      "ing": "ТIАККХА МОСКВЕ БИЙ ХЬА ДОТТАГIИЙ?",
+      "pron": "tiakkkha moskve biy kha dottagiiy?",
+      "id": "imp_friendship_lesson_5_dialogue_7_1"
+    },
+    {
+      "ru": "А вон белка прыгает. Какая она красивая.",
+      "ing": "ХЬАЛ, БIАРАШДУАРГ Я КХУВСЛУШ, МА ХОЗА Я ИЗ.",
+      "pron": "khal, biarashduarg ya kkhuvslush, ma khoza ya iz.",
+      "id": "imp_forest_lesson_18_dialogue_7_1"
+    },
+    {
+      "ru": "А Вы замужем, Яха?",
+      "ing": "ТIАККХА ХЬО МАЬРЕ ЯХАЙИЙ?",
+      "pron": "tiakkkha kho mare yakhayiy?",
+      "id": "imp_family_relatives_lesson_4_dialogue_4"
+    },
+    {
+      "ru": "А где учились вы, Яха?",
+      "ing": "ХЬО МИЧА ДЕШАШ ХИННАЙ, ЯХА?",
+      "pron": "kho micha deshash khinnay, yakha?",
+      "id": "imp_acquaintance_lesson_3_dialogue_10_1"
+    },
+    {
+      "ru": "А как ты выезжаешь загород?",
+      "ing": "ТIАККХА ГIАЛАРА АРА СЕНЦА ЙОАЛ ХЬО?",
+      "pron": "tiakkkha gialara ara sentsa yoal kho?",
+      "id": "imp_transport_lesson_10_dialogue_8_1"
+    },
+    {
+      "ru": "А какую книгу ты читаешь в настоящее время?",
+      "ing": "МАЛАГIА КНИЖКА ДЕШАШ Я ХЬО Х1АНЗ?",
+      "pron": "malagia knizhka deshash ya kho kh1anz?",
+      "id": "imp_hobbies_lesson_25_dialogue_2_1"
+    },
+    {
+      "ru": "А можно пить воду из этого ручья?",
+      "ing": "ЦУ ТОАТОЛГА ЧУРА ХИЙ МАЛА ЙИШ ЙИЙ?",
+      "pron": "tsu toatolga chura khiy mala yish yiy?",
+      "id": "imp_forest_lesson_18_dialogue_11_1"
+    },
+    {
+      "ru": "А сегодня он будет на работе?",
+      "ing": "ТАХАН ХУРГВИЙ ИЗ БАЛХА?",
+      "pron": "takhan khurgviy iz balkha?",
+      "id": "imp_three_tenses_to_be_lesson_12_7_1"
+    },
+    {
+      "ru": "А теперь я живу в Малгобеке.",
+      "ing": "ХIАНЗ СО МОГIАЛБИКЕ ВАХ.",
+      "pron": "khianz so mogialbike vakh.",
+      "id": "imp_place_we_live_lesson_7_7_2"
+    },
+    {
+      "ru": "А ты видела, какой утром был туман?",
+      "ing": "ДАЙРИЙ ХЬОНА, IУЙРАННА МИШТА ДОХК ДОАЛЛАР?",
+      "pron": "dayriy khona, iuyranna mishta dokhk doallar?",
+      "id": "imp_weather_dialogue_yakha_said_5_1"
+    },
+    {
+      "ru": "А ты знаешь их названия?",
+      "ing": "ХЬОНА ХОЙ ЦАР ЦIЕРАШ?",
+      "pron": "khona khoy tsar tsierash?",
+      "id": "imp_forest_lesson_18_dialogue_5_2"
+    },
+    {
+      "ru": "А ты чем увлекаешься?",
+      "ing": "ТIАККХА ХЬА СЕНЦА САКЪЕРДАЛУ?",
+      "pron": "tiakkkha kha sentsa sakerdalu?",
+      "id": "imp_hobbies_lesson_25_dialogue_4_1"
+    },
+    {
+      "ru": "А чем ты занимался до поступления?",
+      "ing": "ДЕША ВАХАЛЕ ФУ ДЕШ ХИННАВ ХЬО?",
+      "pron": "desha vakhale fu desh khinnav kho?",
+      "id": "imp_acquaintance_lesson_3_dialogue_6_1"
+    },
+    {
+      "ru": "А я хожу до метро пешком.",
+      "ing": "СО МЕТРО КХАЧЧАЛЦА ГIАШ ЙОДА.",
+      "pron": "so metro kkhachchaltsa giash yoda.",
+      "id": "imp_transport_lesson_10_dialogue_5_1"
+    },
+    {
+      "ru": "Алихан перепрыгнул через забор.",
+      "ing": "АЛИХАН КАРТА ТIАГIОЛЛА ТIЕХКХОССАВАЛАР.",
+      "pron": "alikhan karta tiagiolla tiekhkkhossavalar.",
+      "id": "imp_postpositions_lesson_13_12_1"
+    },
+    {
+      "ru": "Алихан разговаривал.",
+      "ing": "АЛИХАНА КЪАМАЬЛ ДУВЦАР.",
+      "pron": "alikhana kamal duvtsar.",
+      "id": "imp_tense_forms_lesson_17_6_1"
+    },
+    {
+      "ru": "Алло, это Лейла.",
+      "ing": "АЛЛО, ЛЕЙЛА ЙИЙ ХЬО.",
+      "pron": "allo, leyla yiy kho.",
+      "id": "imp_telephone_conversation_lesson_14_1_1"
+    },
+    {
+      "ru": "Анатомия человека.",
+      "ing": "САГАН АНАТОМИ.",
+      "pron": "sagan anatomi.",
+      "id": "imp_human_anatomy_lesson_15_1_1"
+    },
+    {
+      "ru": "Ассалам алейкум, Ахмед!",
+      "ing": "АССАЛАМ АЛЕЙКУМ, АХЬМАД!",
+      "pron": "assalam aleykum, akhmad!",
+      "id": "imp_acquaintance_lesson_11_dialogue_2_1"
+    },
+    {
+      "ru": "Благодать нисходит туда, где есть согласие.",
+      "ing": "БАРТ БОЛЧА СОЦ БЕРКАТ.",
+      "pron": "bart bolcha sots berkat.",
+      "id": "imp_friendship_lesson_5_dialogue_13_1"
+    },
+    {
+      "ru": "Благополучия вашей семье!",
+      "ing": "ИМАНИ БЕРКАТИ ХИЛДА ШУН ДЕЗАЛА ЮКЪЕ!",
+      "pron": "imani berkati khilda shun dezala yuke!",
+      "id": "imp_family_relatives_lesson_4_dialogue_1"
+    },
+    {
+      "ru": "Бок, нога, бедро, ступня, пятка.",
+      "ing": "ОАГIУВ, КОГ, ВОРУВ, КОГА КIИЙЛЕ, КIОАЖУВ.",
+      "pron": "oagiuv, kog, voruv, koga kiiyle, kioazhuv.",
+      "id": "imp_human_anatomy_lesson_15_4_1"
+    },
+    {
+      "ru": "Большой привет семье!",
+      "ing": "ЦIАГIАРЧАРГА ДОККХА САЛАМ-МОАРШАЛ ДIАЛЕ!",
+      "pron": "tsiagiarcharga dokkkha salam-moarshal diale!",
+      "id": "imp_telephone_conversation_lesson_14_12_"
+    },
+    {
+      "ru": "Брат сел на стул.",
+      "ing": "ВОША ГIАНДА ТIА IОХАЙРА.",
+      "pron": "vosha gianda tia iokhayra.",
+      "id": "imp_postpositions_lesson_13_6_1"
+    },
+    {
+      "ru": "Буду ждать твоего звонка.",
+      "ing": "СО ХЬЕЖАРГВА IА САЙГА ТЕЛЕФОН ТОХАРГА.",
+      "pron": "so khezhargva ia sayga telefon tokharga.",
+      "id": "imp_acquaintance_lesson_11_dialogue_9_3"
+    },
+    {
+      "ru": "Будущее возможное.",
+      "ing": "ХИЛА МЕГА ХА.",
+      "pron": "khila mega kha.",
+      "id": "imp_tense_forms_lesson_17_13_1"
+    },
+    {
+      "ru": "Будущее время.",
+      "ing": "ХУРГЙОЛА ХА.",
+      "pron": "khurgyola kha.",
+      "id": "imp_tense_forms_lesson_17_14_1"
+    },
+    {
+      "ru": "Будьте здоровы!",
+      "ing": "МОГАШ ЛЕЛАЛДА ШО!",
+      "pron": "mogash lelalda sho!",
+      "id": "imp_clinic_visit_lesson_16_dialogue_15_1"
+    },
+    {
+      "ru": "В гостиной диван и кресла.",
+      "ing": "ХЬАЬША-ЦIАГIА ДИВАНИ, КРЕСЛАШИ ДА.",
+      "pron": "khasha-tsiagia divani, kreslashi da.",
+      "id": "imp_home_lesson_8_dialogue_6_1"
+    },
+    {
+      "ru": "В ингушском языке восемь падежей.",
+      "ing": "ГIалгIай мотта ворхIан падеж йисте хинна.",
+      "pron": "gialgiay motta vorkhian padezh yiste khinna.",
+      "id": "imp_noun_lesson_23_dialogue_2_1"
+    },
+    {
+      "ru": "В ингушском языке двадцатеричная система счета.",
+      "ing": "ГIАЛГIАЙ МОТТА ШОВЗТКЪАХ ЛАРХIАРА СИСТЕМА Я.",
+      "pron": "gialgiay motta shovztkakh larkhiara sistema ya.",
+      "id": "imp_numbers_lesson_9_1_1"
+    },
+    {
+      "ru": "В ингушском языке нет предлогов, но есть послелоги.",
+      "ing": "ГIАЛГIАЙ МОТТА ПРЕДЛОГАШ ДАЦ, АММА ПОСЛЕЛОГАШ Я.",
+      "pron": "gialgiay motta predlogash dats, amma poslelogash ya.",
+      "id": "imp_postpositions_lesson_13_1_1"
+    },
+    {
+      "ru": "В ингушском языке семь форм времени.",
+      "ing": "ГIАЛГIАЙ МОТТА ШОА ФОРМА ХА Я.",
+      "pron": "gialgiay motta shoa forma kha ya.",
+      "id": "imp_tense_forms_lesson_17_1_1"
+    },
+    {
+      "ru": "В ней есть большой балкон, где летом можно пить чай.",
+      "ing": "ЦУ ЧУ ЙОККХА БАЛКОН Я, АЬХКИ ЧАЙ МАЛА ЙИШ ЙОЛАШ.",
+      "pron": "tsu chu yokkkha balkon ya, akhki chay mala yish yolash.",
+      "id": "imp_home_lesson_8_dialogue_3_1"
+    },
+    {
+      "ru": "В один из выходных дней Яха и Фатима посетили зоопарк.",
+      "ing": "Цхьан ялхинна дийна Яха а Фатима а зоопарке бахаб.",
+      "pron": "tskhan yalkhinna diyna yakha a fatima a zooparke bakhab.",
+      "id": "imp_zoo_weekend_dialogue_1_1"
+    },
+    {
+      "ru": "В основном, это студенты, с которыми я учусь.",
+      "ing": "ДУКХАГIБАРАШ СОЦА ДЕШАШ БОЛА СТУДЕНТАШ БА.",
+      "pron": "dukkhagibarash sotsa deshash bola studentash ba.",
+      "id": "imp_friendship_lesson_5_dialogue_8_1"
+    },
+    {
+      "ru": "В печке.",
+      "ing": "ПИШКА ЧУ.",
+      "pron": "pishka chu.",
+      "id": "imp_postpositions_lesson_13_2_2"
+    },
+    {
+      "ru": "В свободное время он, лежа на диване, читает книгу.",
+      "ing": "МУКЪА ВОЛЧА ХАНА ДИВАНА ТIА IОВИЖЕ, КНИЖКАШ ДЕШ.",
+      "pron": "muka volcha khana divana tia iovizhe, knizhkash desh.",
+      "id": "imp_home_lesson_8_dialogue_10_1"
+    },
+    {
+      "ru": "В середине стоит большой стол и 6 стульев.",
+      "ing": "ЦIЕН ЮКЪЕ ДОККХА ИСТОЛИ 6 ГIАНДИ ЛАТТ.",
+      "pron": "tsien yuke dokkkha istoli 6 giandi latt.",
+      "id": "imp_home_lesson_8_dialogue_7_1"
+    },
+    {
+      "ru": "В сутках 24 часа.",
+      "ing": "ДИ-БИЙСА ТКЪАЬ ДИЪ САХЬАТ ДА.",
+      "pron": "di-biysa tka di sakhat da.",
+      "id": "imp_calendar_lesson_2_3_1"
+    },
+    {
+      "ru": "В углу стоит огромный цветок.",
+      "ing": "САЬН ЧУ ДОККХА ЗИЗА ЛАТТ.",
+      "pron": "san chu dokkkha ziza latt.",
+      "id": "imp_home_lesson_8_dialogue_8_2"
+    },
+    {
+      "ru": "В этом году в Назрани открылся продовольственный магазин.",
+      "ing": "УКХ ШЕРА НАЗРАНЕ КЕРДА КХАЧАН ТИКА ХЬАЙИЙЛАЙ.",
+      "pron": "ukkh shera nazrane kerda kkhachan tika khayiylay.",
+      "id": "imp_grocery_store_lesson_19_dialogue_1_1"
+    },
+    {
+      "ru": "Вам надо обратиться к хирургу.",
+      "ing": "ХЬА ХИРУРГА ТIАВАХА ВЕЗА.",
+      "pron": "kha khirurga tiavakha veza.",
+      "id": "imp_clinic_visit_lesson_16_dialogue_8_2"
+    },
+    {
+      "ru": "Вам надо сделать рентген, сдать анализы.",
+      "ing": "IА КИЗГА ДАККХА ДЕЗА, АНАЛИЗАШ ДIАЯЛА А ЕЗА.",
+      "pron": "ia kizga dakkkha deza, analizash diayala a eza.",
+      "id": "imp_clinic_visit_lesson_16_dialogue_7_1"
+    },
+    {
+      "ru": "Вам нравится ваша профессия?",
+      "ing": "ХОЗА ХЕТИЙ ХЬОНА ХЬОНА ХЬАЙ БОЛХ?",
+      "pron": "khoza khetiy khona khona khay bolkh?",
+      "id": "imp_acquaintance_lesson_3_dialogue_12_2"
+    },
+    {
+      "ru": "Вам придется подождать десять минут.",
+      "ing": "ИТТ МИНОТА САБАРДЕ ДЕЗАРГДА ШУН.",
+      "pron": "itt minota sabarde dezargda shun.",
+      "id": "imp_cafe_lesson_24_dialogue_4_2"
+    },
+    {
+      "ru": "Вам что-нибудь еще нужно?",
+      "ing": "КХЫ ХIАМА ЕЗИЙ ХЬОНА?",
+      "pron": "kkhy khiama eziy khona?",
+      "id": "imp_grocery_store_lesson_19_dialogue_11_"
+    },
+    {
+      "ru": "Ваш заказ принят.",
+      "ing": "ШУН ЗАКАЗ ХЬАИЙЦАД.",
+      "pron": "shun zakaz khaiytsad.",
+      "id": "imp_cafe_lesson_24_dialogue_4_1"
+    },
+    {
+      "ru": "Ваш сын.",
+      "ing": "ШУН ВОI.",
+      "pron": "shun voi.",
+      "id": "imp_family_relatives_lesson_4_dialogue_1"
+    },
+    {
+      "ru": "Ваша дочь.",
+      "ing": "ШУН ЙОI.",
+      "pron": "shun yoi.",
+      "id": "imp_family_relatives_lesson_4_dialogue_1"
+    },
+    {
+      "ru": "Ваши дети.",
+      "ing": "ШУН БЕРАШ.",
+      "pron": "shun berash.",
+      "id": "imp_family_relatives_lesson_4_dialogue_1"
+    },
+    {
+      "ru": "Весной бывает очень красиво.",
+      "ing": "БIАЬСТИ ЧIОАГIА ХОЗА ХУЛ.",
+      "pron": "biasti chioagia khoza khul.",
+      "id": "imp_weather_dialogue_yakha_said_7_1"
+    },
+    {
+      "ru": "Весь путь занимает около часа.",
+      "ing": "БЕРРИГА НАЬКЪА ЦХЬА САХЬАТ ХА ДIАЙОДА СА.",
+      "pron": "berriga naka tskha sakhat kha diayoda sa.",
+      "id": "imp_transport_lesson_10_dialogue_4_1"
+    },
+    {
+      "ru": "Ветер дует с севера.",
+      "ing": "МУХ ГIИНБУХЬЕРА ХЬЕКХ.",
+      "pron": "mukh giinbukhera khekkh.",
+      "id": "imp_weather_dialogue_yakha_said_4_2"
+    },
+    {
+      "ru": "Взвесьте мне 1 кг баранины и 2 кг нежирной говядины.",
+      "ing": "ЦХЬА КИЙЛА УСТАГIАН ДУЛХИ 2 КИЙЛА ДЕРСТА ДОАЦАРА БЕЖАНА ДУЛХИ ОЗАЛ СОНА.",
+      "pron": "tskha kiyla ustagian dulkhi 2 kiyla dersta doatsara bezhana dulkhi ozal sona.",
+      "id": "imp_grocery_store_lesson_19_dialogue_7_1"
+    },
+    {
+      "ru": "Вздохните глубоко.",
+      "ing": "ДОККХА СА ДАККХАЛ.",
+      "pron": "dokkkha sa dakkkhal.",
+      "id": "imp_clinic_visit_lesson_16_dialogue_6_2"
+    },
+    {
+      "ru": "Вновь начал ходить поезд Москва-Назрань.",
+      "ing": "МОСКВА-НАЗРАНЬ ЯХА ЦIЕРПОШТ ЮХА ЛЕЛА ЙОЛАЕННАЛГА.",
+      "pron": "moskva-nazran yakha tsierposht yukha lela yolaennalga.",
+      "id": "imp_transport_lesson_10_dialogue_6_1"
+    },
+    {
+      "ru": "Внутренние органы: сердце, легкое, печень, желудок.",
+      "ing": "ЧЕ: ДОГ, ПЕХК, ДИЙХК, КЕР.",
+      "pron": "che: dog, pekhk, diykhk, ker.",
+      "id": "imp_human_anatomy_lesson_15_9_1"
+    },
+    {
+      "ru": "Вопросительные местоимения: кто, что, сколько, какой, как.",
+      "ing": "МАЛА, ФУ, МАССА, МАЛАГIА, МИШТА.",
+      "pron": "mala, fu, massa, malagia, mishta.",
+      "id": "imp_telephone_conversation_lesson_14_13_"
+    },
+    {
+      "ru": "Времена года: зима, лето, осень, весна.",
+      "ing": "ШЕРА ХАНАШ: IА, АХКА, ГУЙРЕ, БIАЬСТИ.",
+      "pron": "shera khanash: ia, akhka, guyre, biasti.",
+      "id": "imp_calendar_lesson_2_8_1"
+    },
+    {
+      "ru": "Все заняты: учатся, работают.",
+      "ing": "ИШТТА ВIАШТIЕХЬА ДАЛАЦ БЕРРИГАШ ДЕШАШ А БОЛХ БЕШ А БА.",
+      "pron": "ishtta viashtiekha dalats berrigash deshash a bolkh besh a ba.",
+      "id": "imp_friendship_lesson_5_dialogue_12_2"
+    },
+    {
+      "ru": "Вчера я был в кино.",
+      "ing": "СО СЕЛХАН КИНО ХИННАВ.",
+      "pron": "so selkhan kino khinnav.",
+      "id": "imp_three_tenses_to_be_lesson_12_4_1"
+    },
+    {
+      "ru": "Вы — диктор.",
+      "ing": "ХЬО ДИКТОР Я.",
+      "pron": "kho diktor ya.",
+      "id": "imp_acquaintance_lesson_3_dialogue_12_1"
+    },
+    {
+      "ru": "Вы сделали очень хороший выбор.",
+      "ing": "IА ЧIОАГIА ДИКА ХIАМАШ ХЕРЖАЙ.",
+      "pron": "ia chioagia dika khiamash kherzhay.",
+      "id": "imp_department_store_lesson_20_dialogue_"
+    },
+    {
+      "ru": "Выберите мне вкусный торт без спиртного.",
+      "ing": "ЧХЬАГIАР ТЕХА ЙОАЦАШ ЧАМ БОЛАШ ТОРТ ХАРЖАЛ СОНА.",
+      "pron": "chkhagiar tekha yoatsash cham bolash tort kharzhal sona.",
+      "id": "imp_grocery_store_lesson_19_dialogue_8_1"
+    },
+    {
+      "ru": "Где вы были вечером?",
+      "ing": "МИЧАХЬ ДАР ШО СЕЛХАН САРАХЬА?",
+      "pron": "michakh dar sho selkhan sarakha?",
+      "id": "imp_three_tenses_to_be_lesson_12_9_1"
+    },
+    {
+      "ru": "Где Вы живете?",
+      "ing": "ХЬО МИЧАХЬА ВАХАШ ВА (Я)?",
+      "pron": "kho michakha vakhash va (ya)?",
+      "id": "imp_place_we_live_lesson_7_15_1"
+    },
+    {
+      "ru": "Где Вы изучаете ингушский язык?",
+      "ing": "ГIАЛГIАЙ МОТТ МИЧАХЬА IОМАБУ IА?",
+      "pron": "gialgiay mott michakha iomabu ia?",
+      "id": "imp_daily_expressions_lesson_22_11_1"
+    },
+    {
+      "ru": "Где Вы работаете?",
+      "ing": "ХЬО МИЧАХЬА БОЛХ БЕШ ВА (Я)?",
+      "pron": "kho michakha bolkh besh va (ya)?",
+      "id": "imp_place_we_live_lesson_7_15_3"
+    },
+    {
+      "ru": "Где Вы учитесь?",
+      "ing": "ХЬО МИЧАХЬА ДЕШАШ ВА (Я)?",
+      "pron": "kho michakha deshash va (ya)?",
+      "id": "imp_place_we_live_lesson_7_15_2"
+    },
+    {
+      "ru": "Где находится примерочная?",
+      "ing": "БАРЗКЪА ТIАДУВХА МЕТТИГ МИЧАХЬА Я ШУН?",
+      "pron": "barzka tiaduvkha mettig michakha ya shun?",
+      "id": "imp_department_store_lesson_20_dialogue_"
+    },
+    {
+      "ru": "Где они будут днем?",
+      "ing": "ДИЙНАХЬА МИЧА ХУРГБА УЖ?",
+      "pron": "diynakha micha khurgba uzh?",
+      "id": "imp_three_tenses_to_be_lesson_12_11_2"
+    },
+    {
+      "ru": "Где они были утром?",
+      "ing": "МИЧА БАР УЖ IУЙРАН?",
+      "pron": "micha bar uzh iuyran?",
+      "id": "imp_three_tenses_to_be_lesson_12_10_2"
+    },
+    {
+      "ru": "Где останавливается автобус?",
+      "ing": "АВТОБУС МИЧАХЬА СЕЦ?",
+      "pron": "avtobus michakha sets?",
+      "id": "imp_transport_lesson_10_dialogue_13_1"
+    },
+    {
+      "ru": "Где ты был вчера?",
+      "ing": "СЕЛХАН МИЧАХЬА ХИННАВ ХЬО?",
+      "pron": "selkhan michakha khinnav kho?",
+      "id": "imp_three_tenses_to_be_lesson_12_3_1"
+    },
+    {
+      "ru": "Где ты был?",
+      "ing": "Хьо мичахьа хиннав?",
+      "pron": "kho michakha khinnav?",
+      "id": "imp_vacation_reunion_dialogue_1_1"
+    },
+    {
+      "ru": "Где ты живешь?",
+      "ing": "ХЬО МИЧАХЬА ВАХ?",
+      "pron": "kho michakha vakh?",
+      "id": "imp_place_we_live_lesson_7_6_1"
+    },
+    {
+      "ru": "Говори быстрее.",
+      "ing": "СИХАГIА ДУВЦА.",
+      "pron": "sikhagia duvtsa.",
+      "id": "imp_verb_moods_lesson_dialogue_5_1"
+    },
+    {
+      "ru": "Год — 12 месяцев.",
+      "ing": "ШУ 12 (ШИЙТТА) БУТТА БА.",
+      "pron": "shu 12 (shiytta) butta ba.",
+      "id": "imp_calendar_lesson_2_7_2"
+    },
+    {
+      "ru": "Да хранит тебя Аллах!",
+      "ing": "ДАЛА ЛОРАВОЛВА (ЛОРАЙОЙЛА) ХЬО!",
+      "pron": "dala loravolva (lorayoyla) kho!",
+      "id": "imp_congratulations_lesson_6_9_1"
+    },
+    {
+      "ru": "Да, очень нравится!",
+      "ing": "Ч1ОАГ1А ХОЗА ХЕТ СОНА САЙ ПРОФЕССИ!",
+      "pron": "ch1oag1a khoza khet sona say professi!",
+      "id": "imp_acquaintance_lesson_3_dialogue_13_1"
+    },
+    {
+      "ru": "Да, я замужем.",
+      "ing": "СО МАЬРЕ ЯХА Я.",
+      "pron": "so mare yakha ya.",
+      "id": "imp_family_relatives_lesson_4_dialogue_5"
+    },
+    {
+      "ru": "Давай бросим обезьянкам конфетки.",
+      "ing": "МАЙМАЛАШТА КОНФЕТАШ ТОВСА ВАЙ.",
+      "pron": "maymalashta konfetash tovsa vay.",
+      "id": "imp_zoo_weekend_dialogue_4_1"
+    },
+    {
+      "ru": "Давай сегодня поговорим о семье.",
+      "ing": "ТАХАН ВАЙ ДЕЗАЛАХ ЛАЬЦА ДУВЦИЙТА ВАЙГА.",
+      "pron": "takhan vay dezalakh latsa duvtsiyta vayga.",
+      "id": "imp_family_relatives_lesson_4_dialogue_3"
+    },
+    {
+      "ru": "Давайте здесь остановимся.",
+      "ing": "УКХАЗА СОВЦИЙ ВАЙ.",
+      "pron": "ukkhaza sovtsiy vay.",
+      "id": "imp_forest_lesson_18_dialogue_1_1"
+    },
+    {
+      "ru": "Давайте обменяемся адресами (телефонами).",
+      "ing": "АДРЕСАШ (ТЕЛЕФОНАШ) ДIА-ХЬАЙ ЭЦИЙ ВАЙ?",
+      "pron": "adresash (telefonash) dia-khay etsiy vay?",
+      "id": "imp_acquaintance_lesson_11_dialogue_13_1"
+    },
+    {
+      "ru": "Давайте познакомимся.",
+      "ing": "ХЬОАШАЛ ТАССА ВАЙ?",
+      "pron": "khoashal tassa vay?",
+      "id": "imp_acquaintance_lesson_11_dialogue_10_1"
+    },
+    {
+      "ru": "Давнопрошедшее время.",
+      "ing": "ХЬАЛХА ЯХА ХА.",
+      "pron": "khalkha yakha kha.",
+      "id": "imp_tense_forms_lesson_17_11_1"
+    },
+    {
+      "ru": "Далеко не уходите, можете заблудиться.",
+      "ing": "ГАЬНА ДIА МА ГIОЛАШ, ТУВЛАЛУРГДА ШО.",
+      "pron": "gana dia ma giolash, tuvlalurgda sho.",
+      "id": "imp_forest_lesson_18_dialogue_4_1"
+    },
+    {
+      "ru": "Девушка идет за водой.",
+      "ing": "ЙОI ХИЙ ДА ЙОДА.",
+      "pron": "yoi khiy da yoda.",
+      "id": "imp_verb_moods_lesson_dialogue_2_1"
+    },
+    {
+      "ru": "Девушка идет с родника.",
+      "ing": "ЙОI ХЬАСТА ТIАРА ЙОАГIА.",
+      "pron": "yoi khasta tiara yoagia.",
+      "id": "imp_postpositions_lesson_13_9_1"
+    },
+    {
+      "ru": "Девушка несет на плечах кувшин.",
+      "ing": "ЙОIО БЕЛАЖ ТIА ОТТАЯЬ КIУДАЛ ЯХЬ.",
+      "pron": "yoio belazh tia ottaya kiudal yakh.",
+      "id": "imp_postpositions_lesson_13_5_1"
+    },
+    {
+      "ru": "Девушка пойдет за водой.",
+      "ing": "ЙОI ХИЙ ДА ГIОРГЬЯ.",
+      "pron": "yoi khiy da giorgya.",
+      "id": "imp_verb_moods_lesson_dialogue_4_1"
+    },
+    {
+      "ru": "Девушка ходила за водой.",
+      "ing": "ЙОI ХИЙ ДА ЯХАЯР.",
+      "pron": "yoi khiy da yakhayar.",
+      "id": "imp_verb_moods_lesson_dialogue_3_1"
+    },
+    {
+      "ru": "Днем они будут дома.",
+      "ing": "ДИЙНАХЬА УЖ ЦIАГIА ХУРГБА.",
+      "pron": "diynakha uzh tsiagia khurgba.",
+      "id": "imp_three_tenses_to_be_lesson_12_12_1"
+    },
+    {
+      "ru": "Дни недели.",
+      "ing": "КIИРАН ДЕНОШ.",
+      "pron": "kiiran denosh.",
+      "id": "imp_calendar_lesson_2_5_2"
+    },
+    {
+      "ru": "До встречи.",
+      "ing": "IАДИКА ХИЙЛА!",
+      "pron": "iadika khiyla!",
+      "id": "imp_telephone_conversation_lesson_14_12_"
+    },
+    {
+      "ru": "До метро мне нужно доехать автобусом или троллейбусом.",
+      "ing": "ЦХАБАКЪДА, МЕТРО КХАЧЧАЛЦА АВТОБУСАЦА Е ТРОЛЕЙБУСАЦА ВАХА ВЕЗА СА.",
+      "pron": "tskhabakda, metro kkhachchaltsa avtobusatsa e troleybusatsa vakha veza sa.",
+      "id": "imp_transport_lesson_10_dialogue_2_1"
+    },
+    {
+      "ru": "До свидания, Ахмед!",
+      "ing": "IАДИКА ХИЙЛА ХЬА, АХЬМАД!",
+      "pron": "iadika khiyla kha, akhmad!",
+      "id": "imp_acquaintance_lesson_11_dialogue_9_1"
+    },
+    {
+      "ru": "До свидания!",
+      "ing": "IАДИКА ХИЙЛА ШУН!",
+      "pron": "iadika khiyla shun!",
+      "id": "imp_greetings_lesson_1_9_1"
+    },
+    {
+      "ru": "Доброе утро! Добрый день! Добрый вечер! Спокойной ночи!",
+      "ing": "IУЙРЕ ДИКА ХИЙЛА ХЬА! ДИ ДИКА ХИЛДА ХЬА! САЙРЕ ДИКА ХИЙЛА ХЬА! БИЙСА ДАЬКЪАЛА ХИЙЛА ХЬА!",
+      "pron": "iuyre dika khiyla kha! di dika khilda kha! sayre dika khiyla kha! biysa dakala khiyla kha!",
+      "id": "imp_greetings_lesson_1_2_1"
+    },
+    {
+      "ru": "Добрый вечер всем!",
+      "ing": "САЙРЕ ДИКА ХИЙЛА ШУН!",
+      "pron": "sayre dika khiyla shun!",
+      "id": "imp_greetings_lesson_1_3_3"
+    },
+    {
+      "ru": "Добрый день всем!",
+      "ing": "ДИ ДИКА ХИЛДА ШУН!",
+      "pron": "di dika khilda shun!",
+      "id": "imp_greetings_lesson_1_3_2"
+    },
+    {
+      "ru": "Добрый день, Яха.",
+      "ing": "ДИ ДИКА ХИЛДА ХЬА, ЯХА!",
+      "pron": "di dika khilda kha, yakha!",
+      "id": "imp_acquaintance_lesson_11_dialogue_6_1"
+    },
+    {
+      "ru": "Дождь идет.",
+      "ing": "ДОГIА ДЕЛХ.",
+      "pron": "dogia delkh.",
+      "id": "imp_noun_declension_lesson_22_2_1"
+    },
+    {
+      "ru": "Дом-дома; сосед-соседи; цветок-цветы.",
+      "ing": "ЦIа-цIенош; лоалахо-лоалахой; зиза-зизаш.",
+      "pron": "tsia-tsienosh; loalakho-loalakhoy; ziza-zizash.",
+      "id": "imp_noun_lesson_23_dialogue_8_1"
+    },
+    {
+      "ru": "Его зовут Мурад, он студент.",
+      "ing": "ЦУН ЦIИ МУРАД Я, ИЗ СТУДЕНТ ВА.",
+      "pron": "tsun tsii murad ya, iz student va.",
+      "id": "imp_friendship_lesson_5_dialogue_9_2"
+    },
+    {
+      "ru": "Ее зовут Марьям.",
+      "ing": "ИЗ МАРЕМ ЯХАШ Я.",
+      "pron": "iz marem yakhash ya.",
+      "id": "imp_family_relatives_lesson_4_dialogue_7"
+    },
+    {
+      "ru": "Если честно, мне нравится всякая погода и любое время года.",
+      "ing": "БАКЪДАР АЬЛЧА, СОНА МОЛЛАГIА ХАОТТАМ А ШЕРА ХА А ХОЗАХЕТ.",
+      "pron": "bakdar alcha, sona mollagia khaottam a shera kha a khozakhet.",
+      "id": "imp_weather_dialogue_yakha_said_8_1"
+    },
+    {
+      "ru": "Есть ли у вас куртки другого цвета?",
+      "ing": "КХЫ БОС БОЛА КУРТКАШ ЙИЙ ШУГА?",
+      "pron": "kkhy bos bola kurtkash yiy shuga?",
+      "id": "imp_department_store_lesson_20_dialogue_"
+    },
+    {
+      "ru": "Есть школьные друзья.",
+      "ing": "СОЦА ШКОЛЕ ДЕШАШ ХИННАРАШ БА.",
+      "pron": "sotsa shkole deshash khinnarash ba.",
+      "id": "imp_friendship_lesson_5_dialogue_6_1"
+    },
+    {
+      "ru": "Желаем Вам долгих лет жизни!",
+      "ing": "ДУККХАЧА ШЕРАШКА ДАХАЛДА ШО!",
+      "pron": "dukkkhacha sherashka dakhalda sho!",
+      "id": "imp_congratulations_lesson_6_10_1"
+    },
+    {
+      "ru": "Желаем, чтобы в новом году сбылись все твои мечты!",
+      "ing": "КЕРДАЧА ШЕРА ХЬА ДЕГ ЧУ МЕЛ ЛАТТАР КХОАЧАШХИЛДА!",
+      "pron": "kerdacha shera kha deg chu mel lattar kkhoachashkhilda!",
+      "id": "imp_congratulations_lesson_6_5_1"
+    },
+    {
+      "ru": "Желаю тебе всего хорошего!",
+      "ing": "ДИКА МЕЛ ДАР ХИЛДА ХЬОНА!",
+      "pron": "dika mel dar khilda khona!",
+      "id": "imp_congratulations_lesson_6_4_1"
+    },
+    {
+      "ru": "Желаю тебе крепкого здоровья!",
+      "ing": "МОГАШ-МАЬРША ХИЛВА ХЬО!",
+      "pron": "mogash-marsha khilva kho!",
+      "id": "imp_congratulations_lesson_6_2_1"
+    },
+    {
+      "ru": "Желаю тебе счастья!",
+      "ing": "АЗ ДАЬКЪАЛВУВЦ ХЬО! ИРАЗ ХИЛДА ХЬА!",
+      "pron": "az dakalvuvts kho! iraz khilda kha!",
+      "id": "imp_congratulations_lesson_6_1_1"
+    },
+    {
+      "ru": "Желаю тебе успеха!",
+      "ing": "АЬТТУВ ХИЛБА ХЬА!",
+      "pron": "attuv khilba kha!",
+      "id": "imp_congratulations_lesson_6_3_1"
+    },
+    {
+      "ru": "Железнодорожному транспорту я предпочитаю самолет.",
+      "ing": "ЦIЕРПОШТНАЬКЪА ТРАНСПОРТАЛ ДИКАГIА ФОКЕМА ХЕТ СОНА.",
+      "pron": "tsierposhtnaka transportal dikagia fokema khet sona.",
+      "id": "imp_transport_lesson_10_dialogue_7_1"
+    },
+    {
+      "ru": "Живем потихоньку.",
+      "ing": "ДIА-М ДОАХК ТХО.",
+      "pron": "dia-m doakhk tkho.",
+      "id": "imp_greetings_lesson_1_7_2"
+    },
+    {
+      "ru": "Живите долго! Живи долго!",
+      "ing": "ДУКХА ДАХАЛДА ШО! ДУКХА ВАХАЛВА ХЬО! ДУКХА ЯХИЙЛА ХЬО!",
+      "pron": "dukkha dakhalda sho! dukkha vakhalva kho! dukkha yakhiyla kho!",
+      "id": "imp_greetings_lesson_1_6_1"
+    },
+    {
+      "ru": "Звони мне почаще!",
+      "ing": "КАСТ-КАСТА ТЕЛЕФОН ТОХАЛАХЬ СОГА.",
+      "pron": "kast-kasta telefon tokhalakh soga.",
+      "id": "imp_acquaintance_lesson_11_dialogue_9_2"
+    },
+    {
+      "ru": "Здесь можно очень вкусно поесть.",
+      "ing": "УКХАЗА ЧАМ БОЛАШ ХIАМА ЯА ЙИШ Я.",
+      "pron": "ukkhaza cham bolash khiama yaa yish ya.",
+      "id": "imp_zoo_weekend_dialogue_5_2"
+    },
+    {
+      "ru": "Здравствуй!",
+      "ing": "МОАРШАЛ ДА ХЬОГА!",
+      "pron": "moarshal da khoga!",
+      "id": "imp_greetings_lesson_1_4_1"
+    },
+    {
+      "ru": "Здравствуйте, друзья!",
+      "ing": "МОАРШАЛ ДА ШУГА, ДОТТАГIИЙ!",
+      "pron": "moarshal da shuga, dottagiiy!",
+      "id": "imp_acquaintance_lesson_3_dialogue_1_1"
+    },
+    {
+      "ru": "Здравствуйте!",
+      "ing": "МОАРШАЛ ДА ШУГА!",
+      "pron": "moarshal da shuga!",
+      "id": "imp_greetings_lesson_1_4_2"
+    },
+    {
+      "ru": "Знакомство.",
+      "ing": "ХЬОАШАЛ ТАССАР.",
+      "pron": "khoashal tassar.",
+      "id": "imp_acquaintance_lesson_11_dialogue_1_1"
+    },
+    {
+      "ru": "Игрушки.",
+      "ing": "ЛОВЗОРГАШ.",
+      "pron": "lovzorgash.",
+      "id": "imp_department_store_lesson_20_dialogue_"
+    },
+    {
+      "ru": "Иногда видимся, а так не получается.",
+      "ing": "НАГГАХЬА ГУ ТХО.",
+      "pron": "naggakha gu tkho.",
+      "id": "imp_friendship_lesson_5_dialogue_12_1"
+    },
+    {
+      "ru": "Интересно, какая погода будет зимой?",
+      "ing": "МИШТА ХАОТТАМ ХУРГБА — ХЬОГI IАЙ?",
+      "pron": "mishta khaottam khurgba — khogi iay?",
+      "id": "imp_weather_dialogue_yakha_said_6_1"
+    },
+    {
+      "ru": "Их внуки.",
+      "ing": "ЦАР БЕРИЙ БЕРАШ.",
+      "pron": "tsar beriy berash.",
+      "id": "imp_family_relatives_lesson_4_dialogue_1"
+    },
+    {
+      "ru": "Их здесь много.",
+      "ing": "УКХАЗА ДУКХА Я УЖ.",
+      "pron": "ukkhaza dukkha ya uzh.",
+      "id": "imp_zoo_weekend_dialogue_6_2"
+    },
+    {
+      "ru": "К первому склонению относятся существительные на согласный звук.",
+      "ing": "Хьалхара склонение ду согласный лоаттамца хинна существительни.",
+      "pron": "khalkhara sklonenie du soglasnyy loattamtsa khinna sushchestvitelni.",
+      "id": "imp_noun_declension_lesson_22_7_1"
+    },
+    {
+      "ru": "К сожалению, мне пора идти.",
+      "ing": "БЕХК МА БАККХАЛАШ, СО СИХА ВА.",
+      "pron": "bekhk ma bakkkhalash, so sikha va.",
+      "id": "imp_acquaintance_lesson_11_dialogue_8_1"
+    },
+    {
+      "ru": "К третьему склонению относятся односложные существительные.",
+      "ing": "КхоллагIа склонение ду цхьана слога хьалхараш долаш существительни.",
+      "pron": "kkhollagia sklonenie du tskhana sloga khalkharash dolash sushchestvitelni.",
+      "id": "imp_noun_declension_lesson_22_9_1"
+    },
+    {
+      "ru": "Как вы поживаете?",
+      "ing": "ФУ ДЕШ ДА ШО?",
+      "pron": "fu desh da sho?",
+      "id": "imp_greetings_lesson_1_7_1"
+    },
+    {
+      "ru": "Как Вы себя чувствуете?",
+      "ing": "МИШТА ХЕТ ХЬОНА?",
+      "pron": "mishta khet khona?",
+      "id": "imp_clinic_visit_lesson_16_dialogue_2_2"
+    },
+    {
+      "ru": "Как вы туда добирались?",
+      "ing": "МИШТА ЯХАР ХЬО ЦИГАЧА?",
+      "pron": "mishta yakhar kho tsigacha?",
+      "id": "imp_telephone_conversation_lesson_14_6_1"
+    },
+    {
+      "ru": "Как дела, Яха?",
+      "ing": "МИШТАД ХЬА ГIУЛАКХАШ, ЯХА?",
+      "pron": "mishtad kha giulakkhash, yakha?",
+      "id": "imp_family_relatives_lesson_4_dialogue_2"
+    },
+    {
+      "ru": "Как ее зовут?",
+      "ing": "ЦIИ ФУЙ ЦУН?",
+      "pron": "tsii fuy tsun?",
+      "id": "imp_family_relatives_lesson_4_dialogue_6"
+    },
+    {
+      "ru": "Как здоровье?",
+      "ing": "МОГАШ ДИЙ ШО?",
+      "pron": "mogash diy sho?",
+      "id": "imp_greetings_lesson_1_8_1"
+    },
+    {
+      "ru": "Как много здесь деревьев!",
+      "ing": "МА ДУКХА ГАЬНАШ Я УКХАЗА.",
+      "pron": "ma dukkha ganash ya ukkhaza.",
+      "id": "imp_forest_lesson_18_dialogue_5_1"
+    },
+    {
+      "ru": "Как проехать до мечети?",
+      "ing": "МАЬЖДИГЕ ДIА МИШТА ВАХА ВЕЗА?",
+      "pron": "mazhdige dia mishta vakha veza?",
+      "id": "imp_transport_lesson_10_dialogue_11_1"
+    },
+    {
+      "ru": "Как ты к этому относишься?",
+      "ing": "ХЬОНА ФУ ХЕТ ЦОХ?",
+      "pron": "khona fu khet tsokh?",
+      "id": "imp_hobbies_lesson_25_dialogue_7_1"
+    },
+    {
+      "ru": "Как я рада слышать твой голос.",
+      "ing": "МА ХОЗА ХЕТ СОНА ХЬА ОАЗ ХЕЗА.",
+      "pron": "ma khoza khet sona kha oaz kheza.",
+      "id": "imp_telephone_conversation_lesson_14_3_1"
+    },
+    {
+      "ru": "Какого размера это платье?",
+      "ing": "УКХ КОЧА РАЗМЕР МАЛАГIА Я?",
+      "pron": "ukkh kocha razmer malagia ya?",
+      "id": "imp_department_store_lesson_20_dialogue_"
+    },
+    {
+      "ru": "Какое время года?",
+      "ing": "ХIАНЗ МАЛАГIА ШЕРА ХА Я?",
+      "pron": "khianz malagia shera kha ya?",
+      "id": "imp_calendar_lesson_2_10_1"
+    },
+    {
+      "ru": "Какое лекарство Вы мне порекомендуете?",
+      "ing": "МАЛАГIА МОЛХАШ МЕГАРГЬЯР СОНА?",
+      "pron": "malagia molkhash megargyar sona?",
+      "id": "imp_clinic_visit_lesson_16_dialogue_10_1"
+    },
+    {
+      "ru": "Какой вид из твоего окна?",
+      "ing": "КОРАХ АРАХЬАЖАЧА МАЛАГIА СУРТ ГУ ШОАНА?",
+      "pron": "korakh arakhazhacha malagia surt gu shoana?",
+      "id": "imp_place_we_live_lesson_7_13_1"
+    },
+    {
+      "ru": "Какой диагноз Вы мне поставите?",
+      "ing": "МАЛАГIА ДИАГНОЗ ОТТАЯЬЙ IА СОНА?",
+      "pron": "malagia diagnoz ottayay ia sona?",
+      "id": "imp_clinic_visit_lesson_16_dialogue_9_1"
+    },
+    {
+      "ru": "Какой сегодня день?",
+      "ing": "ТАХАН ФУ ДИ ДА?",
+      "pron": "takhan fu di da?",
+      "id": "imp_calendar_lesson_2_12_1"
+    },
+    {
+      "ru": "Календарь.",
+      "ing": "КАЛЕНДАРЬ.",
+      "pron": "kalendar.",
+      "id": "imp_calendar_lesson_2_1_1"
+    },
+    {
+      "ru": "Квартира моего брата находится на 2-м этаже.",
+      "ing": "СА ВЕШИЙ КВАРТИРА ШОЛЛАГIЧА ЭТАЖА ТIА Я.",
+      "pron": "sa veshiy kvartira shollagicha etazha tia ya.",
+      "id": "imp_place_we_live_lesson_7_5_1"
+    },
+    {
+      "ru": "Кем ты будешь после окончания ВУЗа?",
+      "ing": "ДИЙША ВАЬЛЧА МАЛА ХУРГВА ХЬОХ?",
+      "pron": "diysha valcha mala khurgva khokh?",
+      "id": "imp_acquaintance_lesson_3_dialogue_8_1"
+    },
+    {
+      "ru": "Класс женщин: Я — ЯР — ХУРГЬЯ.",
+      "ing": "Я — ЯР — ХУРГЬЯ.",
+      "pron": "ya — yar — khurgya.",
+      "id": "imp_acquaintance_lesson_3_dialogue_15_1"
+    },
+    {
+      "ru": "Класс мужчин: ВА — ВАР — ХУРГВА.",
+      "ing": "ВА — ВАР — ХУРГВА.",
+      "pron": "va — var — khurgva.",
+      "id": "imp_acquaintance_lesson_3_dialogue_14_1"
+    },
+    {
+      "ru": "Ко второму склонению относятся существительные на гласный звук.",
+      "ing": "ШоллагIа склонение ду гласный лоаттамца хинна существительни.",
+      "pron": "shollagia sklonenie du glasnyy loattamtsa khinna sushchestvitelni.",
+      "id": "imp_noun_declension_lesson_22_8_1"
+    },
+    {
+      "ru": "Когда вы вернулись?",
+      "ing": "ЮХА МАЦА ДАЬХКАР ШО?",
+      "pron": "yukha matsa dakhkar sho?",
+      "id": "imp_telephone_conversation_lesson_14_8_1"
+    },
+    {
+      "ru": "Когда Мадина будет на работе?",
+      "ing": "МАДИНА МАЦА ХУРГЬЯ БАЛХА?",
+      "pron": "madina matsa khurgya balkha?",
+      "id": "imp_three_tenses_to_be_lesson_12_7_2"
+    },
+    {
+      "ru": "Когда мне снова прийти к Вам?",
+      "ing": "ХЬОНА ЮХА ТIА МАЦА ВА ВЕЗА СА?",
+      "pron": "khona yukha tia matsa va veza sa?",
+      "id": "imp_clinic_visit_lesson_16_dialogue_12_1"
+    },
+    {
+      "ru": "Когда мы могли бы с Вами встретиться?",
+      "ing": "МАЦА ВIАШАГIКХЕТА ВIАШТIЕХЬДАРГДА ВАЙ?",
+      "pron": "matsa viashagikkheta viashtiekhdargda vay?",
+      "id": "imp_daily_expressions_lesson_22_5_1"
+    },
+    {
+      "ru": "Когда мы увидимся снова?",
+      "ing": "ВАЙ ЮХА МАЦА ГУРГДА?",
+      "pron": "vay yukha matsa gurgda?",
+      "id": "imp_acquaintance_lesson_11_dialogue_12_1"
+    },
+    {
+      "ru": "Когда принимает терапевт?",
+      "ing": "ТЕРАПЕВТО МАЦА ТIАЭЦАРГВА?",
+      "pron": "terapevto matsa tiaetsargva?",
+      "id": "imp_clinic_visit_lesson_16_dialogue_1_1"
+    },
+    {
+      "ru": "Котенок вылез из-под кровати.",
+      "ing": "ЦИСКА КIОРИГ МАЬНГЕ КIАЛАРА АРАЯЬЛАР.",
+      "pron": "tsiska kiorig mange kialara arayalar.",
+      "id": "imp_postpositions_lesson_13_11_1"
+    },
+    {
+      "ru": "Кошка сидит под столом.",
+      "ing": "ЦИСК ИСТОЛА КIАЛ ДАГIА.",
+      "pron": "tsisk istola kial dagia.",
+      "id": "imp_postpositions_lesson_13_7_1"
+    },
+    {
+      "ru": "Кто дома?",
+      "ing": "МАЛУВ ЦIАГIА?",
+      "pron": "maluv tsiagia?",
+      "id": "imp_telephone_conversation_lesson_14_14_"
+    },
+    {
+      "ru": "Кто они?",
+      "ing": "МАЛАШ БА УЖ?",
+      "pron": "malash ba uzh?",
+      "id": "imp_friendship_lesson_5_dialogue_5_2"
+    },
+    {
+      "ru": "Куда поступили твои дети учиться?",
+      "ing": "МИЧА ДЕША ЭЙТТАД ХЬА БЕРАШ?",
+      "pron": "micha desha eyttad kha berash?",
+      "id": "imp_telephone_conversation_lesson_14_9_1"
+    },
+    {
+      "ru": "Кухня большая и очень уютная.",
+      "ing": "НАНА-ЦIА (ХIАМА ДУА МЕТТИГ) ДОККХА А ПАРГIАТА А ДА.",
+      "pron": "nana-tsia (khiama dua mettig) dokkkha a pargiata a da.",
+      "id": "imp_home_lesson_8_dialogue_4_1"
+    },
+    {
+      "ru": "Лебедь красивая птица.",
+      "ing": "ГIУРГIАЖ ХОЗА ОАЛХАЗАР ДА.",
+      "pron": "giurgiazh khoza oalkhazar da.",
+      "id": "imp_zoo_weekend_dialogue_6_1"
+    },
+    {
+      "ru": "Лейла, как давно мы не виделись!",
+      "ing": "ЛЕЙЛА, МА ДУКХА ХА Я ВАЙ ШИЪ ЦА ГУ!",
+      "pron": "leyla, ma dukkha kha ya vay shi tsa gu!",
+      "id": "imp_summer_vacation_planning_dialogue_2_"
+    },
+    {
+      "ru": "Лоб, череп, брови, волосы, лицо, нос, рот.",
+      "ing": "ХЬАЖ, ТУТИ, ЦIАЦКЪАМ, МОС, ЮХЬ, МЕРАЖ, БАГЕ.",
+      "pron": "khazh, tuti, tsiatskam, mos, yukh, merazh, bage.",
+      "id": "imp_human_anatomy_lesson_15_5_1"
+    },
+    {
+      "ru": "Лучше моей матери никого нет.",
+      "ing": "СА НАЬНАЛ ДИКАГIА САГ ВАЦ.",
+      "pron": "sa nanal dikagia sag vats.",
+      "id": "imp_noun_declension_lesson_22_6_1"
+    },
+    {
+      "ru": "Мадина идет в школу.",
+      "ing": "МАДИНА ШКОЛЕ ЙОДА.",
+      "pron": "madina shkole yoda.",
+      "id": "imp_tense_forms_lesson_17_3_1"
+    },
+    {
+      "ru": "Меня зовут Саид.",
+      "ing": "СА ЦIИ САИД Я.",
+      "pron": "sa tsii said ya.",
+      "id": "imp_acquaintance_lesson_3_dialogue_2_2"
+    },
+    {
+      "ru": "Месяц — 4 недели.",
+      "ing": "БУТТ — 4 (ДИЪ) КIИРА ДА.",
+      "pron": "butt — 4 (di) kiira da.",
+      "id": "imp_calendar_lesson_2_7_1"
+    },
+    {
+      "ru": "Минута — 60 секунд.",
+      "ing": "МИНОТ — (60) КХОВЗТКЪА СЕКУНД Я.",
+      "pron": "minot — (60) kkhovztka sekund ya.",
+      "id": "imp_calendar_lesson_2_4_2"
+    },
+    {
+      "ru": "Мира, удачи и счастья!",
+      "ing": "БАРТИ, АЬТТУВИ, ИРАЗИ ХИЛДА ХЬА!",
+      "pron": "barti, attuvi, irazi khilda kha!",
+      "id": "imp_congratulations_lesson_6_6_1"
+    },
+    {
+      "ru": "Мне бы хотелось с Вами поговорить.",
+      "ing": "ХЬОЦА КЪАМАЬЛ ДУВЦА БЕЗАМ БАР СА.",
+      "pron": "khotsa kamal duvtsa bezam bar sa.",
+      "id": "imp_daily_expressions_lesson_22_4_1"
+    },
+    {
+      "ru": "Мне двадцать пять.",
+      "ing": "СА ТКЪАЬ ПХИ ШУ ДАЬННАД.",
+      "pron": "sa tka pkhi shu dannad.",
+      "id": "imp_numbers_lesson_9_9_1"
+    },
+    {
+      "ru": "Мне двадцать три.",
+      "ing": "СА ТКЪАЬ КХО ШУ ДАЬННАД.",
+      "pron": "sa tka kkho shu dannad.",
+      "id": "imp_numbers_lesson_9_10_1"
+    },
+    {
+      "ru": "Мне здесь нравится.",
+      "ing": "СОНА ХОЗА ХЕТ УКХАЗА.",
+      "pron": "sona khoza khet ukkhaza.",
+      "id": "imp_forest_lesson_18_dialogue_1_2"
+    },
+    {
+      "ru": "Мне надо с тобой о многом поговорить и посоветоваться!",
+      "ing": "ХЬОЦА ДУВЦА ДЕЗАШ А ДАГАЯЛА ЕЗАШ А ДУКХА ХIАМА ДА СА.",
+      "pron": "khotsa duvtsa dezash a dagayala ezash a dukkha khiama da sa.",
+      "id": "imp_summer_vacation_planning_dialogue_2_"
+    },
+    {
+      "ru": "Мне фруктовый салат, пирожное и мороженое.",
+      "ing": "СОНА СОМИЙ САЛАТИ, ПИРОЖЕНИИ, МОРОЖЕНИИ ЕЗА.",
+      "pron": "sona somiy salati, pirozhenii, morozhenii eza.",
+      "id": "imp_cafe_lesson_24_dialogue_3_1"
+    },
+    {
+      "ru": "Многие живут сейчас в Назрани.",
+      "ing": "ХIАНЗ УЖ НАЗРАНЕ БАХ.",
+      "pron": "khianz uzh nazrane bakh.",
+      "id": "imp_friendship_lesson_5_dialogue_6_2"
+    },
+    {
+      "ru": "Многие из нас планируют свой отдых.",
+      "ing": "Дукха нах шой салоIам лаьрхIа.",
+      "pron": "dukkha nakh shoy saloiam larkhia.",
+      "id": "imp_summer_vacation_planning_dialogue_1_"
+    },
+    {
+      "ru": "Можно и пить, и рыбу ловить.",
+      "ing": "ХИЙ МАЛА А ЧКЪАЬРИЙ ЛУВЦА А ЙИШ Я ЦУ ЧУРА.",
+      "pron": "khiy mala a chkariy luvtsa a yish ya tsu chura.",
+      "id": "imp_forest_lesson_18_dialogue_12_1"
+    },
+    {
+      "ru": "Можно ли его примерить?",
+      "ing": "ТIАЙИЙХА ХЬАЖА МЕГАРГДАРИЙ ЦУНГА?",
+      "pron": "tiayiykha khazha megargdariy tsunga?",
+      "id": "imp_department_store_lesson_20_dialogue_"
+    },
+    {
+      "ru": "Мои дети.",
+      "ing": "СА БЕРАШ.",
+      "pron": "sa berash.",
+      "id": "imp_family_relatives_lesson_4_dialogue_8"
+    },
+    {
+      "ru": "Мои родственники живут в другом селении.",
+      "ing": "СА ГАРГАРА НАХ КХЫЧА ЮРТА БАХАШ БА.",
+      "pron": "sa gargara nakh kkhycha yurta bakhash ba.",
+      "id": "imp_place_we_live_lesson_7_3_1"
+    },
+    {
+      "ru": "Мой дядя живет в деревне.",
+      "ing": "СА НАЬН-ВОША ТIОЙ-ЮРТА ВАХАШ ВА.",
+      "pron": "sa nan-vosha tioy-yurta vakhash va.",
+      "id": "imp_place_we_live_lesson_7_2_1"
+    },
+    {
+      "ru": "Мой муж.",
+      "ing": "СА ЦIЕН-ДА.",
+      "pron": "sa tsien-da.",
+      "id": "imp_family_relatives_lesson_4_dialogue_8"
+    },
+    {
+      "ru": "Моя дорогая мама, я поздравляю тебя!",
+      "ing": "СА ХЬАМСАРА НАНА, АЗ ДАЬКЪАЛЪЮВЦ ХЬО!",
+      "pron": "sa khamsara nana, az dakalyuvts kho!",
+      "id": "imp_congratulations_lesson_6_7_1"
+    },
+    {
+      "ru": "Моя дочка мечтает о поездке в деревню к бабушке и дедушке.",
+      "ing": "СА ЙОI ЮРТА ДАЬ-НАНЕИ ДАЬ-ДАИ БОЛЧА ЯХА УЙЛА ЙОЛАШ Я.",
+      "pron": "sa yoi yurta da-nanei da-dai bolcha yakha uyla yolash ya.",
+      "id": "imp_summer_vacation_planning_dialogue_6_"
+    },
+    {
+      "ru": "Моя жена.",
+      "ing": "СА ЦIЕН-НАНА.",
+      "pron": "sa tsien-nana.",
+      "id": "imp_family_relatives_lesson_4_dialogue_8"
+    },
+    {
+      "ru": "Моя квартира находится на 15 этаже.",
+      "ing": "СА КВАРТИРА ПХИИТТЛАГIЧА ЭТАЖА ТIА Я.",
+      "pron": "sa kvartira pkhiittlagicha etazha tia ya.",
+      "id": "imp_place_we_live_lesson_7_11_1"
+    },
+    {
+      "ru": "Моя семья живет в Назрани.",
+      "ing": "СА ДЕЗАЛ НАЗРАНЕ БАХАШ БА.",
+      "pron": "sa dezal nazrane bakhash ba.",
+      "id": "imp_place_we_live_lesson_7_1_1"
+    },
+    {
+      "ru": "Муса написал стихотворение.",
+      "ing": "МУСАС СТИХОТВОРЕНИ ЯЗЪЯЬЙ.",
+      "pron": "musas stikhotvoreni yazyay.",
+      "id": "imp_tense_forms_lesson_17_8_1"
+    },
+    {
+      "ru": "Мы были в Анапе.",
+      "ing": "АНАПЕ хиннад тхо.",
+      "pron": "anape khinnad tkho.",
+      "id": "imp_vacation_reunion_dialogue_7_2"
+    },
+    {
+      "ru": "Мы были в театре.",
+      "ing": "ТХО ТЕАТРЕ ДАР.",
+      "pron": "tkho teatre dar.",
+      "id": "imp_three_tenses_to_be_lesson_12_10_1"
+    },
+    {
+      "ru": "Мы в прошлом году ездили на море с семьей.",
+      "ing": "ДIАДАХАЧА ШЕРА ХЬО ХЬАЙ ДЕЗАЛЦА ФОРДА ТIА ЯХАЯР.",
+      "pron": "diadakhacha shera kho khay dezaltsa forda tia yakhayar.",
+      "id": "imp_summer_vacation_planning_dialogue_4_"
+    },
+    {
+      "ru": "Мы ваши друзья.",
+      "ing": "ТХО ШУН ДОТТАГIИЙ ДА.",
+      "pron": "tkho shun dottagiiy da.",
+      "id": "imp_friendship_lesson_5_dialogue_4_1"
+    },
+    {
+      "ru": "Мы давно не встречались!",
+      "ing": "ДУКХА ХА Я ВАЙ БIАРГА ЦА ГУ.",
+      "pron": "dukkha kha ya vay biarga tsa gu.",
+      "id": "imp_acquaintance_lesson_11_dialogue_2_3"
+    },
+    {
+      "ru": "Мы желаем вам сто настоящих друзей!",
+      "ing": "БIАЬ ДИКА НОВКЪОСТ ХУЛВА ШУН!",
+      "pron": "bia dika novkost khulva shun!",
+      "id": "imp_friendship_lesson_5_dialogue_14_1"
+    },
+    {
+      "ru": "Мы желаем здоровья вашим родным!",
+      "ing": "МОГАШ-МАЬРША ЛЕЛАЛБА ШУН ГАРГАРА НАХ!",
+      "pron": "mogash-marsha lelalba shun gargara nakh!",
+      "id": "imp_family_relatives_lesson_4_dialogue_1"
+    },
+    {
+      "ru": "Мы живем очень дружно.",
+      "ing": "Ч1ОАГIА БАРТТАЙНА ДАХ ТХО.",
+      "pron": "ch1oagia barttayna dakh tkho.",
+      "id": "imp_place_we_live_lesson_7_12_2"
+    },
+    {
+      "ru": "Мы с ним общаемся по электронной почте.",
+      "ing": "ХIАЬТА ОАХА ЭЛЕКТРОННИ ПОЧТЕ ГIОЛЛА КЪАМАЬЛ ДУ.",
+      "pron": "khiata oakha elektronni pochte giolla kamal du.",
+      "id": "imp_friendship_lesson_5_dialogue_10_2"
+    },
+    {
+      "ru": "Мы семьёй отдыхали на море.",
+      "ing": "Со сай дезалца форда юхе салоIаш хиннав.",
+      "pron": "so say dezaltsa forda yukhe saloiash khinnav.",
+      "id": "imp_vacation_reunion_dialogue_7_1"
+    },
+    {
+      "ru": "Мы хорошо отдохнули.",
+      "ing": "ДИКА САЛОIАМ ХИННАБ ВАЙНА.",
+      "pron": "dika saloiam khinnab vayna.",
+      "id": "imp_forest_lesson_18_dialogue_13_1"
+    },
+    {
+      "ru": "Мы хотим рассчитаться и заказать ещё по чашечке чая.",
+      "ing": "АХЧА ДIАДАЛА А КХЫ А ЦХЬАЦЦА ЧАЬ ПЕЛА ЗАКАЗ ДЕ А БЕЗАМ БА ТХА.",
+      "pron": "akhcha diadala a kkhy a tskhatstsa cha pela zakaz de a bezam ba tkha.",
+      "id": "imp_cafe_lesson_24_dialogue_8_1"
+    },
+    {
+      "ru": "Мы.",
+      "ing": "ТХО ДА.",
+      "pron": "tkho da.",
+      "id": "imp_telephone_conversation_lesson_14_15_"
+    },
+    {
+      "ru": "Мясной отдел.",
+      "ing": "ДУЛХ ДОХКА ОТДЕЛ.",
+      "pron": "dulkh dokhka otdel.",
+      "id": "imp_grocery_store_lesson_19_dialogue_2_1"
+    },
+    {
+      "ru": "На каком этаже ты живешь?",
+      "ing": "ХЬО МАЛАГIЧА ЭТАЖА ТIА ЯХАШ ВА?",
+      "pron": "kho malagicha etazha tia yakhash va?",
+      "id": "imp_place_we_live_lesson_7_9_1"
+    },
+    {
+      "ru": "На мой взгляд, стоит съездить на море.",
+      "ing": "СОГА ХАЬТТАЧА, ФОРДА ТIА ВАХА МЕГАРГВА.",
+      "pron": "soga khattacha, forda tia vakha megargva.",
+      "id": "imp_summer_vacation_planning_dialogue_5_"
+    },
+    {
+      "ru": "На нашей улице нет многоэтажных домов.",
+      "ing": "ТХО ДАХАЧА УРАМЕ ВIАШТIАРДАЬ ЦIЕНОШ ДАЦ.",
+      "pron": "tkho dakhacha urame viashtiarda tsienosh dats.",
+      "id": "imp_place_we_live_lesson_7_4_1"
+    },
+    {
+      "ru": "На стене висят 2 ковра.",
+      "ing": "ПЕНАХ ХЬАЛТЕХА ШИ КIУВС БОАЛЛ.",
+      "pron": "penakh khaltekha shi kiuvs boall.",
+      "id": "imp_home_lesson_8_dialogue_8_1"
+    },
+    {
+      "ru": "На столе.",
+      "ing": "ИСТОЛА ТIА.",
+      "pron": "istola tia.",
+      "id": "imp_postpositions_lesson_13_2_1"
+    },
+    {
+      "ru": "На что Вы жалуетесь?",
+      "ing": "СЕВО ЛАЗАР ДУ ХЬОНА?",
+      "pron": "sevo lazar du khona?",
+      "id": "imp_clinic_visit_lesson_16_dialogue_2_1"
+    },
+    {
+      "ru": "На электричке.",
+      "ing": "ЭЛЕКТРИЧКАЦА.",
+      "pron": "elektrichkatsa.",
+      "id": "imp_transport_lesson_10_dialogue_8_2"
+    },
+    {
+      "ru": "Наверное, скоро пойдет снег.",
+      "ing": "ХЕТАРГАХЬА, КАСТТА ЛОА ДЕЛХАРГДА.",
+      "pron": "khetargakha, kastta loa delkhargda.",
+      "id": "imp_weather_dialogue_yakha_said_4_1"
+    },
+    {
+      "ru": "Надо говорить быстрее.",
+      "ing": "СИХАГIА ДУВЦА ДЕЗА.",
+      "pron": "sikhagia duvtsa deza.",
+      "id": "imp_verb_moods_lesson_dialogue_5_2"
+    },
+    {
+      "ru": "Надо зажечь костер, чтобы сделать шашлык.",
+      "ing": "ЦIИ ЮВЗА ЕЗА, ШАШЛЫК ДАТТА.",
+      "pron": "tsii yuvza eza, shashlyk datta.",
+      "id": "imp_forest_lesson_18_dialogue_3_2"
+    },
+    {
+      "ru": "Настоящее время.",
+      "ing": "ЙОЛА ХА.",
+      "pron": "yola kha.",
+      "id": "imp_tense_forms_lesson_17_2_1"
+    },
+    {
+      "ru": "Наш папа.",
+      "ing": "ТХА ДАДА.",
+      "pron": "tkha dada.",
+      "id": "imp_family_relatives_lesson_4_dialogue_1"
+    },
+    {
+      "ru": "Наша мама.",
+      "ing": "ТХА НАНА.",
+      "pron": "tkha nana.",
+      "id": "imp_family_relatives_lesson_4_dialogue_1"
+    },
+    {
+      "ru": "Не знаю — одно слово, узнал — тысяча слов.",
+      "ing": "ХАЦ, ДАЦ — ЦХЬА ДОШ, ХАИРА, ДАЙРА ЭЗАР ДОШ.",
+      "pron": "khats, dats — tskha dosh, khaira, dayra ezar dosh.",
+      "id": "imp_daily_expressions_lesson_22_12_1"
+    },
+    {
+      "ru": "Недалеко от нас находится пруд, в котором плавают лебеди.",
+      "ing": "ТХОНА ГАЬНА ДОАЦЦАШ IАМ БА, ЦУ ЧУ НАЬК ДЕШ ГIУРГIАЖАШ Я.",
+      "pron": "tkhona gana doatstsash iam ba, tsu chu nak desh giurgiazhash ya.",
+      "id": "imp_place_we_live_lesson_7_14_1"
+    },
+    {
+      "ru": "Неделя — 7 суток.",
+      "ing": "КIИРА — (7) ВОРХI ДИ-БИЙСА ДА.",
+      "pron": "kiira — (7) vorkhi di-biysa da.",
+      "id": "imp_calendar_lesson_2_5_1"
+    },
+    {
+      "ru": "Нет, не женат.",
+      "ing": "СО САГ ЙОАЛАЯНЗА ВА.",
+      "pron": "so sag yoalayanza va.",
+      "id": "imp_family_relatives_lesson_4_dialogue_4"
+    },
+    {
+      "ru": "Нет, я не читал этот роман, но прочитаю.",
+      "ing": "АА, АЗ ИЗ РОМАН ДИЙШАДАЦ, ДЕШАРГА-М ДА.",
+      "pron": "aa, az iz roman diyshadats, desharga-m da.",
+      "id": "imp_hobbies_lesson_25_dialogue_3_1"
+    },
+    {
+      "ru": "Ничего нового.",
+      "ing": "КЕРДА ХIАМА ДАЦ.",
+      "pron": "kerda khiama dats.",
+      "id": "imp_telephone_conversation_lesson_14_7_2"
+    },
+    {
+      "ru": "Ноготь, ладонь, локоть.",
+      "ing": "МIАРА, ТIАЬРЪЮКЪ, ГОЛА.",
+      "pron": "miara, tiaryuk, gola.",
+      "id": "imp_human_anatomy_lesson_15_8_1"
+    },
+    {
+      "ru": "Одежда.",
+      "ing": "БАРЗКЪА.",
+      "pron": "barzka.",
+      "id": "imp_department_store_lesson_20_dialogue_"
+    },
+    {
+      "ru": "Окна и двери покрашены лаком.",
+      "ing": "КОРАШИ НАIАРАШИ ЛАК ХЬАКХА ДА.",
+      "pron": "korashi naiarashi lak khakkha da.",
+      "id": "imp_home_lesson_8_dialogue_2_1"
+    },
+    {
+      "ru": "Он был на работе.",
+      "ing": "ИЗ БАЛХА ХИННАВ.",
+      "pron": "iz balkha khinnav.",
+      "id": "imp_three_tenses_to_be_lesson_12_6_1"
+    },
+    {
+      "ru": "Он живет в 5-комнатной квартире.",
+      "ing": "ЦУН КВАРТИРЕ ПХИ ЦIА ДА.",
+      "pron": "tsun kvartire pkhi tsia da.",
+      "id": "imp_home_lesson_8_dialogue_1_1"
+    },
+    {
+      "ru": "Он сдал сессию и на днях приезжает домой.",
+      "ing": "ИЗ СЕССИ ДIАЕННА ВАЬННА УКХ ДЕНОШКА ЦIАВОАГIАШ ВА.",
+      "pron": "iz sessi diaenna vanna ukkh denoshka tsiavoagiash va.",
+      "id": "imp_summer_vacation_planning_dialogue_8_"
+    },
+    {
+      "ru": "Он сейчас учится в Египте.",
+      "ing": "ИЗ ХIАНЗ МИСАРА МЕХКА (ЕГИПЕТ) ДЕШАШ ВА.",
+      "pron": "iz khianz misara mekhka (egipet) deshash va.",
+      "id": "imp_friendship_lesson_5_dialogue_10_1"
+    },
+    {
+      "ru": "Она будет на работе завтра.",
+      "ing": "ИЗ КХОАНА ХУРГЬЯ БАЛХА?",
+      "pron": "iz kkhoana khurgya balkha?",
+      "id": "imp_three_tenses_to_be_lesson_12_8_1"
+    },
+    {
+      "ru": "Она учится в 1-м классе.",
+      "ing": "ЦХЬОАЛАГIЧА КЛАССЕ ДЕШАШ Я ИЗ.",
+      "pron": "tskhoalagicha klasse deshash ya iz.",
+      "id": "imp_family_relatives_lesson_4_dialogue_7"
+    },
+    {
+      "ru": "Она чистая?",
+      "ing": "ЦIЕНА ДИЙ-ХЬОГI ИЗ?",
+      "pron": "tsiena diy-khogi iz?",
+      "id": "imp_forest_lesson_18_dialogue_11_2"
+    },
+    {
+      "ru": "Они мне очень идут.",
+      "ing": "СОГА ЧIОАГIА ХОЗА ТОВ УЖ.",
+      "pron": "soga chioagia khoza tov uzh.",
+      "id": "imp_department_store_lesson_20_dialogue_"
+    },
+    {
+      "ru": "Они наши друзья.",
+      "ing": "УЖ ТХА ДОТТАГIИЙ БА.",
+      "pron": "uzh tkha dottagiiy ba.",
+      "id": "imp_friendship_lesson_5_dialogue_4_2"
+    },
+    {
+      "ru": "Они пригласили меня на лето к себе.",
+      "ing": "ЦАР ШОАЙЦИГА АХКА ДАККХА ХЬОАШАЛГIА ЙИЙХАЙ СО.",
+      "pron": "tsar shoaytsiga akhka dakkkha khoashalgia yiykhay so.",
+      "id": "imp_summer_vacation_planning_dialogue_7_"
+    },
+    {
+      "ru": "Ответ: Ва алейкум салам!",
+      "ing": "ВА IАЛАЙКУМ САЛАМ!",
+      "pron": "va ialaykum salam!",
+      "id": "imp_greetings_lesson_1_5_2"
+    },
+    {
+      "ru": "Отдел молочных продуктов.",
+      "ing": "ШУРАХ ЯЬ ПРОДУКТАШ ЙОХКА ОТДЕЛ.",
+      "pron": "shurakh ya produktash yokhka otdel.",
+      "id": "imp_grocery_store_lesson_19_dialogue_4_1"
+    },
+    {
+      "ru": "Официант, принесите, пожалуйста, счет.",
+      "ing": "ОФИЦИАНТ, СЧЕТ ХЬАЯЛ.",
+      "pron": "ofitsiant, schet khayal.",
+      "id": "imp_cafe_lesson_24_dialogue_7_1"
+    },
+    {
+      "ru": "Очень рада познакомиться с тобой, Саид!",
+      "ing": "ДИКА ХЕТ СОНА ХЬО ВАЙЗА, САIИД!",
+      "pron": "dika khet sona kho vayza, saiid!",
+      "id": "imp_acquaintance_lesson_3_dialogue_3_1"
+    },
+    {
+      "ru": "Пальцы: большой, указательный, средний, безымянный, мизинец.",
+      "ing": "ПIЕЛГАШ: НАНА ПIЕЛГ, ХЬОКХА ПIЕЛГ, ЮКЪЕРА ПIЕЛГ, ЦIИ ЙОАЦА ПIЕЛГ, ЦIАЗА ПIЕЛГ.",
+      "pron": "pielgash: nana pielg, khokkha pielg, yukera pielg, tsii yoatsa pielg, tsiaza pielg.",
+      "id": "imp_human_anatomy_lesson_15_7_1"
+    },
+    {
+      "ru": "Парень вышел из пещеры.",
+      "ing": "ЗIАМИГА САГ ХЬАГIАР ЧУРА АРАВАЬЛАР.",
+      "pron": "ziamiga sag khagiar chura aravalar.",
+      "id": "imp_postpositions_lesson_13_10_1"
+    },
+    {
+      "ru": "Парфюмерия.",
+      "ing": "ПАРФЮМЕРИ.",
+      "pron": "parfyumeri.",
+      "id": "imp_department_store_lesson_20_dialogue_"
+    },
+    {
+      "ru": "Плечо, рука, подмышки, грудь, спина, позвоночник.",
+      "ing": "БЕЛАЖ, КУЛГ, ТIАЬНКIАЛХЕ, НАКХА, БУКЪ, БУКЪТIЕХК.",
+      "pron": "belazh, kulg, tiankialkhe, nakkha, buk, buktiekhk.",
+      "id": "imp_human_anatomy_lesson_15_3_1"
+    },
+    {
+      "ru": "Плохой мир лучше хорошей ссоры.",
+      "ing": "ВО МАШАР ДИКАЧА ДОВНАЛ ТОЛ.",
+      "pron": "vo mashar dikacha dovnal tol.",
+      "id": "imp_relations_lesson_21_dialogue_12_1"
+    },
+    {
+      "ru": "По каким дням летают самолеты?",
+      "ing": "МАЛАГIЧА ДЕНОШКА ЛЕЛ ФОКЕМА?",
+      "pron": "malagicha denoshka lel fokema?",
+      "id": "imp_transport_lesson_10_dialogue_14_1"
+    },
+    {
+      "ru": "Под домом находится подвал.",
+      "ing": "ЦIЕН КIАЛ ПОДВАЛ ЙОАЛ.",
+      "pron": "tsien kial podval yoal.",
+      "id": "imp_postpositions_lesson_13_8_1"
+    },
+    {
+      "ru": "Подарки.",
+      "ing": "СОВГIАТАШ.",
+      "pron": "sovgiatash.",
+      "id": "imp_department_store_lesson_20_dialogue_"
+    },
+    {
+      "ru": "Пожалуйста, говорите медленнее.",
+      "ing": "КIЕЗИГА ШОРТАГIА ДУВЦАЛ.",
+      "pron": "kieziga shortagia duvtsal.",
+      "id": "imp_daily_expressions_lesson_22_8_1"
+    },
+    {
+      "ru": "Поздравляем с окончанием священного месяца Рамадан.",
+      "ing": "МАРХА КЪОАБАЛДОЛДА ШУН, ХЬИЙГА ХАЛО МАЬЛЕХЬА ЯЗЙОЙЛА!",
+      "pron": "markha koabaldolda shun, khiyga khalo malekha yazyoyla!",
+      "id": "imp_congratulations_lesson_6_12_1"
+    },
+    {
+      "ru": "Поздравляю. Пусть будет успешной их учеба.",
+      "ing": "БЕРКАТЕ ХИЛДА ЦАР ДЕШАР.",
+      "pron": "berkate khilda tsar deshar.",
+      "id": "imp_telephone_conversation_lesson_14_10_"
+    },
+    {
+      "ru": "Познакомьтесь, пожалуйста!",
+      "ing": "ХЬОАШАЛ ТАССАЛ ШОАЙ!",
+      "pron": "khoashal tassal shoay!",
+      "id": "imp_acquaintance_lesson_11_dialogue_11_1"
+    },
+    {
+      "ru": "Позовите, пожалуйста, Лейлу.",
+      "ing": "ЛЕЙЛА ХЬАТIАЕХАЛ СОНА.",
+      "pron": "leyla khatiaekhal sona.",
+      "id": "imp_telephone_conversation_lesson_14_1_3"
+    },
+    {
+      "ru": "Покажите мне этот кусок мяса.",
+      "ing": "ИЗ БЕЖАН ДУЛХА ДАКЪА ХЬОКХАЛ СОГА.",
+      "pron": "iz bezhan dulkha daka khokkhal soga.",
+      "id": "imp_grocery_store_lesson_19_dialogue_5_1"
+    },
+    {
+      "ru": "Покажите мне, пожалуйста, этот костюм.",
+      "ing": "ХЬАХЬОКХАЛ СОГА ИЗ КОСТЮМ (КОЧ, ЮБКА, ХАЧИ).",
+      "pron": "khakhokkhal soga iz kostyum (koch, yubka, khachi).",
+      "id": "imp_department_store_lesson_20_dialogue_"
+    },
+    {
+      "ru": "Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье.",
+      "ing": "ОРШОТ, ШИНАРА, КХАЬРА, ЕРА, ПIАЬРАСКА, ШОАТТА, КIИРАНДИ.",
+      "pron": "orshot, shinara, kkhara, era, piaraska, shoatta, kiirandi.",
+      "id": "imp_calendar_lesson_2_6_1"
+    },
+    {
+      "ru": "Посмотрим, как они их съедят.",
+      "ing": "ЦАР МИШТА ЮЪ ХЬОЖАРГДА ВАЙ.",
+      "pron": "tsar mishta yu khozhargda vay.",
+      "id": "imp_zoo_weekend_dialogue_4_2"
+    },
+    {
+      "ru": "Постарайся не опаздывать!",
+      "ing": "ТIЕХЬА ЦА ВИСА ХЬАЖАЛАХЬ!",
+      "pron": "tiekha tsa visa khazhalakh!",
+      "id": "imp_daily_expressions_lesson_22_6_1"
+    },
+    {
+      "ru": "Почему до тебя так долго нельзя было дозвониться?",
+      "ing": "ХЬОГА АЗ ТЕЛЕФОН ЕТТА МЕЛ ДУКХА ХА Я.",
+      "pron": "khoga az telefon etta mel dukkha kha ya.",
+      "id": "imp_telephone_conversation_lesson_14_4_1"
+    },
+    {
+      "ru": "Почка, мочевой пузырь, кровь, сосуды, вены.",
+      "ing": "ЖИМ, АХКАРГ, ЦIИЙ, ПХАЬНАШ, СИНПХАЬНАШ.",
+      "pron": "zhim, akhkarg, tsiiy, pkhanash, sinpkhanash.",
+      "id": "imp_human_anatomy_lesson_15_11_1"
+    },
+    {
+      "ru": "Приветствие: Ассаламу алейкум!",
+      "ing": "АССАЛАМУ IАЛАЙКУМ!",
+      "pron": "assalamu ialaykum!",
+      "id": "imp_greetings_lesson_1_5_1"
+    },
+    {
+      "ru": "Приходите к нам чаще.",
+      "ing": "ДУВЛА ТХО ДОЛЧА КАСТ-КАСТА.",
+      "pron": "duvla tkho dolcha kast-kasta.",
+      "id": "imp_department_store_lesson_20_dialogue_"
+    },
+    {
+      "ru": "Пробейте мне, пожалуйста, чек.",
+      "ing": "ЧЕК ЯККХАЛ СОНА.",
+      "pron": "chek yakkkhal sona.",
+      "id": "imp_grocery_store_lesson_19_dialogue_9_1"
+    },
+    {
+      "ru": "Простите, кто у телефона?",
+      "ing": "БЕХК МА БАККХАЛАХЬ, ТЕЛЕФОН ХЬАИЙЦАР МАЛУВ?",
+      "pron": "bekhk ma bakkkhalakh, telefon khaiytsar maluv?",
+      "id": "imp_telephone_conversation_lesson_14_1_2"
+    },
+    {
+      "ru": "Прошедшее (несовершенное очевидное).",
+      "ing": "ГУШ ЯХА ЯЛАНЗА ХА.",
+      "pron": "gush yakha yalanza kha.",
+      "id": "imp_tense_forms_lesson_17_5_1"
+    },
+    {
+      "ru": "Прошедшее (совершенное неочевидное).",
+      "ing": "ЯХА ХА.",
+      "pron": "yakha kha.",
+      "id": "imp_tense_forms_lesson_17_7_1"
+    },
+    {
+      "ru": "Прошедшее совершенное очевидное время.",
+      "ing": "ГУШ ЯХА ХА.",
+      "pron": "gush yakha kha.",
+      "id": "imp_tense_forms_lesson_17_9_1"
+    },
+    {
+      "ru": "Прошло лето — период массовых отпусков.",
+      "ing": "Аьхки дIадаьннад — дика салоIаман хан я.",
+      "pron": "akhki diadannad — dika saloiaman khan ya.",
+      "id": "imp_summer_vacation_planning_dialogue_1_"
+    },
+    {
+      "ru": "Пусть Аллах даст тебе добра, счастья, успеха и здоровья!",
+      "ing": "ДИКАХЕТАР, ИРАЗ, АЬТТУВ, МОГАШАЛ ЛОЙЛА ХЬОНА ДАЛЛА!",
+      "pron": "dikakhetar, iraz, attuv, mogashal loyla khona dalla!",
+      "id": "imp_congratulations_lesson_6_8_1"
+    },
+    {
+      "ru": "Пусть Аллах продлит твои годы!",
+      "ing": "ДАЛЛА ХА ЙIАЬХЙОЙЛА ХЬА!",
+      "pron": "dalla kha yiakhyoyla kha!",
+      "id": "imp_congratulations_lesson_6_11_1"
+    },
+    {
+      "ru": "Пусть к вам придет все хорошее.",
+      "ing": "ДИКА МЕЛ ДАР ДОАГIАЛДА ШУГА.",
+      "pron": "dika mel dar doagialda shuga.",
+      "id": "imp_tense_forms_lesson_17_16_1"
+    },
+    {
+      "ru": "Рад был с вами познакомиться, Яха!",
+      "ing": "ЧIОАГIА ДИКА ХЕТ СОНА ХЬО ЯЙЗА.",
+      "pron": "chioagia dika khet sona kho yayza.",
+      "id": "imp_acquaintance_lesson_11_dialogue_8_2"
+    },
+    {
+      "ru": "Рад тебя видеть.",
+      "ing": "ДИКА ХЕТ СОНА ХЬО БIАРГАВАЙНА.",
+      "pron": "dika khet sona kho biargavayna.",
+      "id": "imp_acquaintance_lesson_11_dialogue_2_2"
+    },
+    {
+      "ru": "Разденьтесь до пояса.",
+      "ing": "ЮКЪАГА КХАЧАЛЦА БАРЗКЪАШ IОДАХА.",
+      "pron": "yukaga kkhachaltsa barzkash iodakha.",
+      "id": "imp_clinic_visit_lesson_16_dialogue_6_1"
+    },
+    {
+      "ru": "Раньше я жил во Владикавказе.",
+      "ing": "ХЬАЛХА СО БУРО ТIА ВАЬХАВ.",
+      "pron": "khalkha so buro tia vakhav.",
+      "id": "imp_place_we_live_lesson_7_7_1"
+    },
+    {
+      "ru": "Расскажи, как ты отдыхал?",
+      "ing": "Хадувцал, мишта салеIад Iа?",
+      "pron": "khaduvtsal, mishta saleiad ia?",
+      "id": "imp_vacation_reunion_dialogue_3_1"
+    },
+    {
+      "ru": "С удовольствием!",
+      "ing": "ИЗ ЧIОАГIА ДИКА ДА!",
+      "pron": "iz chioagia dika da!",
+      "id": "imp_acquaintance_lesson_11_dialogue_5_1"
+    },
+    {
+      "ru": "Саид ходил в гости к своим родственникам.",
+      "ing": "САИД ШИЙ ГАРГАРА НАХ БОЛЧА ВАХАВАР.",
+      "pron": "said shiy gargara nakh bolcha vakhavar.",
+      "id": "imp_tense_forms_lesson_17_12_1"
+    },
+    {
+      "ru": "Саид, как тебе нравится сегодняшняя погода?",
+      "ing": "САIИД, МИШТА ХЕТ ХЬОНА ТАХАНАРА ХАОТТАМ?",
+      "pron": "saiid, mishta khet khona takhanara khaottam?",
+      "id": "imp_weather_dialogue_yakha_said_2_1"
+    },
+    {
+      "ru": "Саид, кто это?",
+      "ing": "САIИД, МАЛУВ ИЗ?",
+      "pron": "saiid, maluv iz?",
+      "id": "imp_acquaintance_lesson_11_dialogue_3_1"
+    },
+    {
+      "ru": "Сегодня вторник.",
+      "ing": "ТАХАН ШИНАРА ДИ ДА.",
+      "pron": "takhan shinara di da.",
+      "id": "imp_calendar_lesson_2_12_2"
+    },
+    {
+      "ru": "Сейчас апрель.",
+      "ing": "ХIАНЗ ТУШОЛЕ БУТТ БА.",
+      "pron": "khianz tushole butt ba.",
+      "id": "imp_calendar_lesson_2_11_2"
+    },
+    {
+      "ru": "Сейчас все дети увлекаются компьютерными играми.",
+      "ing": "ХIАНЗ ДЕРРИГА БЕРАШ КОМПЬЮТАРА ЛОВЗАРАШЦА САКЪЕРДАЛУШ ДА.",
+      "pron": "khianz derriga berash kompyutara lovzarashtsa sakerdalush da.",
+      "id": "imp_hobbies_lesson_25_dialogue_6_1"
+    },
+    {
+      "ru": "Сейчас какой год?",
+      "ing": "ХIАНЗ МАЛАГIА ШУ ДА?",
+      "pron": "khianz malagia shu da?",
+      "id": "imp_calendar_lesson_2_9_1"
+    },
+    {
+      "ru": "Сейчас они в школе.",
+      "ing": "ХIАНЗ ИШКОЛЕ БА УЖ.",
+      "pron": "khianz ishkole ba uzh.",
+      "id": "imp_three_tenses_to_be_lesson_12_12_2"
+    },
+    {
+      "ru": "Сейчас посмотрим на рыбок и пойдем домой.",
+      "ing": "ХIАНЗ ЧКЪАЬРИЛГАШКА ХЬАЖА ЧУГIОРГДА ВАЙ.",
+      "pron": "khianz chkarilgashka khazha chugiorgda vay.",
+      "id": "imp_zoo_weekend_dialogue_7_1"
+    },
+    {
+      "ru": "Сколько лет им предстоит учиться?",
+      "ing": "МАССА ШЕРА ДЕША ДЕЗА ЦАР?",
+      "pron": "massa shera desha deza tsar?",
+      "id": "imp_telephone_conversation_lesson_14_11_"
+    },
+    {
+      "ru": "Сколько стоит билет?",
+      "ing": "БИЛЕТА ФУ МАХ БА?",
+      "pron": "bileta fu makh ba?",
+      "id": "imp_transport_lesson_10_dialogue_12_2"
+    },
+    {
+      "ru": "Сколько я должна заплатить?",
+      "ing": "ФУ ДАЛА ДЕЗА АЗ?",
+      "pron": "fu dala deza az?",
+      "id": "imp_grocery_store_lesson_19_dialogue_10_"
+    },
+    {
+      "ru": "Слово «год» с любым числом произносится одинаково.",
+      "ing": "ШУ ЛАРХIАРАШЦА ХЬАМАХ ДIАТIЕ ДА.",
+      "pron": "shu larkhiarashtsa khamakh diatie da.",
+      "id": "imp_numbers_lesson_9_11_1"
+    },
+    {
+      "ru": "Спасибо за покупки!",
+      "ing": "БАРКАЛ ХIАМАШ ЭЦАРАХ!",
+      "pron": "barkal khiamash etsarakh!",
+      "id": "imp_grocery_store_lesson_19_dialogue_14_"
+    },
+    {
+      "ru": "Спасибо тебе за то, что привела меня сюда.",
+      "ing": "Баркал хьона со укхаза йоалаярах.",
+      "pron": "barkal khona so ukkhaza yoalayarakh.",
+      "id": "imp_vacation_reunion_dialogue_8_1"
+    },
+    {
+      "ru": "Среди нас нет плохих людей.",
+      "ing": "ТХОНА ЮКЪЕ ВО НАХ БАЦ.",
+      "pron": "tkhona yuke vo nakh bats.",
+      "id": "imp_postpositions_lesson_13_15_1"
+    },
+    {
+      "ru": "Стало холодно.",
+      "ing": "ШЕЛЪЕННАЙ.",
+      "pron": "shelennay.",
+      "id": "imp_weather_dialogue_yakha_said_4_3"
+    },
+    {
+      "ru": "Сутки.",
+      "ing": "ДИ-БИЙСА.",
+      "pron": "di-biysa.",
+      "id": "imp_calendar_lesson_2_2_2"
+    },
+    {
+      "ru": "Существительные в ингушском языке распределяются по шести классам.",
+      "ing": "ГIалгIай мотта цIердош яялла шестта классахьа.",
+      "pron": "gialgiay motta tsierdosh yayalla shestta klassakha.",
+      "id": "imp_noun_lesson_23_dialogue_1_1"
+    },
+    {
+      "ru": "Там можно поторговаться.",
+      "ing": "ЦИГА МАХ БУВЦА ЙИШ Я.",
+      "pron": "tsiga makh buvtsa yish ya.",
+      "id": "imp_grocery_store_lesson_19_dialogue_13_"
+    },
+    {
+      "ru": "Там он работает на компьютере.",
+      "ing": "КОМПЬЮТЕРАЦА БОЛХ БУ ЦО ЦИГА.",
+      "pron": "kompyuteratsa bolkh bu tso tsiga.",
+      "id": "imp_home_lesson_8_dialogue_9_1"
+    },
+    {
+      "ru": "Там стоит плита, большой холодильник, обеденный стол и стулья.",
+      "ing": "ЦУ ЧУ ПЛИТА ЛАТТ, ЙОККХА ХОЛОДИЛЬНИК А, ХIАМА ЮА ИСТОЛ А, ГIАНДАШ А ЛАТТ.",
+      "pron": "tsu chu plita latt, yokkkha kholodilnik a, khiama yua istol a, giandash a latt.",
+      "id": "imp_home_lesson_8_dialogue_5_1"
+    },
+    {
+      "ru": "Тебе понравилось?",
+      "ing": "МИШТА ХИЙТАР ХЬОНА?",
+      "pron": "mishta khiytar khona?",
+      "id": "imp_summer_vacation_planning_dialogue_4_"
+    },
+    {
+      "ru": "Толстая кишка, тонкая кишка, двенадцатиперстная кишка, селезенка.",
+      "ing": "ДАМАГIА, ЧУРАШ, КАЙСАРИЛГ, IИНЖАРИЛГ.",
+      "pron": "damagia, churash, kaysarilg, iinzharilg.",
+      "id": "imp_human_anatomy_lesson_15_10_1"
+    },
+    {
+      "ru": "Туловище, голова, талия, живот, колено, шея.",
+      "ing": "ГIАД, КОРТА, ЮКЪ, ГИЙГ, ГОЛА, ФОАРТ.",
+      "pron": "giad, korta, yuk, giyg, gola, foart.",
+      "id": "imp_human_anatomy_lesson_15_2_1"
+    },
+    {
+      "ru": "Ты был бы хорошим врачом.",
+      "ing": "ДИКА ЛОР ХУРГВАР ХЬОХ.",
+      "pron": "dika lor khurgvar khokh.",
+      "id": "imp_verb_moods_lesson_dialogue_10_1"
+    },
+    {
+      "ru": "Ты вошла в мое сердце.",
+      "ing": "СА ДЕГ ЧУ ЕРА ХЬО!",
+      "pron": "sa deg chu era kho!",
+      "id": "imp_postpositions_lesson_13_3_1"
+    },
+    {
+      "ru": "Ты женат?",
+      "ing": "ХЬО САГ ЙОАЛАЯЬ ВИЙ?",
+      "pron": "kho sag yoalaya viy?",
+      "id": "imp_family_relatives_lesson_4_dialogue_3"
+    },
+    {
+      "ru": "Ты завтра на свадьбу не идешь?",
+      "ing": "ХЬО КХОАНА ХЬОАЛЧАГIА ВОДАЦИЙ?",
+      "pron": "kho kkhoana khoalchagia vodatsiy?",
+      "id": "imp_verb_moods_lesson_dialogue_9_1"
+    },
+    {
+      "ru": "Ты здесь часто бываешь?",
+      "ing": "КАСТ — КАСТА ВОАГIИЙ ХЬО УКХАЗА?",
+      "pron": "kast — kasta voagiiy kho ukkhaza?",
+      "id": "imp_cafe_lesson_24_dialogue_5_1"
+    },
+    {
+      "ru": "Ты много времени тратишь на дорогу?",
+      "ing": "ДУКХА ХА ДIАЙОДИЙ ХЬА НАЬКЪА?",
+      "pron": "dukkha kha diayodiy kha naka?",
+      "id": "imp_transport_lesson_10_dialogue_3_1"
+    },
+    {
+      "ru": "Ты не проголодалась?",
+      "ing": "МЕЦЪЕННАЙИЙ ХЬО?",
+      "pron": "metsennayiy kho?",
+      "id": "imp_zoo_weekend_dialogue_5_1"
+    },
+    {
+      "ru": "Ты прекрасно выглядишь!",
+      "ing": "Бос чIогIа дика ба хьа!",
+      "pron": "bos chiogia dika ba kha!",
+      "id": "imp_vacation_reunion_dialogue_5_1"
+    },
+    {
+      "ru": "Ты читал сегодняшнюю газету?",
+      "ing": "ТАХАНАРА ГАЗЕТА ДИЙШАДИЙ IА?",
+      "pron": "takhanara gazeta diyshadiy ia?",
+      "id": "imp_verb_moods_lesson_dialogue_8_1"
+    },
+    {
+      "ru": "У дочки каникулы.",
+      "ing": "ЙИIИЙ КАНИКУЛАШ Я.",
+      "pron": "yiiiy kanikulash ya.",
+      "id": "imp_summer_vacation_planning_dialogue_3_"
+    },
+    {
+      "ru": "У меня болит сердце.",
+      "ing": "СА ДОГ ЛАЗ.",
+      "pron": "sa dog laz.",
+      "id": "imp_clinic_visit_lesson_16_dialogue_4_2"
+    },
+    {
+      "ru": "У меня есть дочь.",
+      "ing": "СА ЦХЬА ЙОI Я.",
+      "pron": "sa tskha yoi ya.",
+      "id": "imp_family_relatives_lesson_4_dialogue_5"
+    },
+    {
+      "ru": "У меня есть машина, но я на ней редко езжу.",
+      "ing": "СОГА МАШИН Я, БАКЪДА СО ЦУНЦА ДУКХА ЛЕЛАЦ.",
+      "pron": "soga mashin ya, bakda so tsuntsa dukkha lelats.",
+      "id": "imp_transport_lesson_10_dialogue_9_1"
+    },
+    {
+      "ru": "У меня к вам разговор.",
+      "ing": "ХЬОЦА КЪАМАЬЛ ДАР СА.",
+      "pron": "khotsa kamal dar sa.",
+      "id": "imp_daily_expressions_lesson_22_3_1"
+    },
+    {
+      "ru": "У меня кашель.",
+      "ing": "СОНА ЙIОВХАРАШ Я.",
+      "pron": "sona yiovkharash ya.",
+      "id": "imp_clinic_visit_lesson_16_dialogue_4_1"
+    },
+    {
+      "ru": "У меня много друзей ингушей, но есть и русские, и дагестанцы.",
+      "ing": "СА ДУКХАГIБОЛА ДОТТАГIИЙ ГIАЛГIАЙ БА, ХIАЬТА ЭРСИЙ А СЕЛИЙ А БА СА ДОТТАГIИЙ.",
+      "pron": "sa dukkhagibola dottagiiy gialgiay ba, khiata ersiy a seliy a ba sa dottagiiy.",
+      "id": "imp_friendship_lesson_5_dialogue_11_1"
+    },
+    {
+      "ru": "У меня скоро будет отпуск.",
+      "ing": "СО КАСТТА ОТПУСКЕ ГIОРГЬЯ.",
+      "pron": "so kastta otpuske giorgya.",
+      "id": "imp_summer_vacation_planning_dialogue_3_"
+    },
+    {
+      "ru": "У нас шесть комнат и коридор.",
+      "ing": "ЯЛХ ЦIАИ УЙЧЕИ ДА ТХА.",
+      "pron": "yalkh tsiai uychei da tkha.",
+      "id": "imp_place_we_live_lesson_7_8_2"
+    },
+    {
+      "ru": "У природы нет плохой погоды.",
+      "ing": "IАЛАМА ВО ХАОТТАМ ХИЛАЦ.",
+      "pron": "ialama vo khaottam khilats.",
+      "id": "imp_weather_dialogue_yakha_said_1_1"
+    },
+    {
+      "ru": "У тебя много друзей, Саид?",
+      "ing": "САИД, ХЬА ДУКХА БИЙ ДОТТАГIИЙ?",
+      "pron": "said, kha dukkha biy dottagiiy?",
+      "id": "imp_friendship_lesson_5_dialogue_5_1"
+    },
+    {
+      "ru": "Удалить зуб, поставить пломбу.",
+      "ing": "ЦЕРГ ДIАЯККХА, ПЛОМБА ОТТАЕ.",
+      "pron": "tserg diayakkkha, plomba ottae.",
+      "id": "imp_clinic_visit_lesson_16_dialogue_14_1"
+    },
+    {
+      "ru": "Утро, день, вечер, ночь.",
+      "ing": "IУЙРЕ, ДИ, САЙРЕ, БИЙСА.",
+      "pron": "iuyre, di, sayre, biysa.",
+      "id": "imp_calendar_lesson_2_2_1"
+    },
+    {
+      "ru": "Утром они были в магазине.",
+      "ing": "IУЙРАН УЖ ТИКА ТIА БАР.",
+      "pron": "iuyran uzh tika tia bar.",
+      "id": "imp_three_tenses_to_be_lesson_12_11_1"
+    },
+    {
+      "ru": "Ухо, щека, глаз, подбородок, губа, зуб.",
+      "ing": "ЛЕРГ, БАСИЛГ, БIАРГ, ЧIЕНГ, БОРД, ЦЕРГ.",
+      "pron": "lerg, basilg, biarg, chieng, bord, tserg.",
+      "id": "imp_human_anatomy_lesson_15_6_1"
+    },
+    {
+      "ru": "Ученик читает книгу.",
+      "ing": "ДЕШАРХОЧО КНИЖКА ДЕШ.",
+      "pron": "desharkhocho knizhka desh.",
+      "id": "imp_noun_declension_lesson_22_3_1"
+    },
+    {
+      "ru": "Фатима, теперь ты увидишь всех животных.",
+      "ing": "ФАТИМА, ХIАНЗ ХЬОНА ГУРГДА ДЕРРИГА ОАКХАРИЙ.",
+      "pron": "fatima, khianz khona gurgda derriga oakkhariy.",
+      "id": "imp_zoo_weekend_dialogue_2_1"
+    },
+    {
+      "ru": "Холод прошел через мое тело.",
+      "ing": "ШЕЛАЛ ДЕГIА ЧУГIОЛЛА ЧАКХЪЯЬЛЛАР СОНА.",
+      "pron": "shelal degia chugiolla chakkhyallar sona.",
+      "id": "imp_postpositions_lesson_13_13_1"
+    },
+    {
+      "ru": "Хочу тебя с ним познакомить.",
+      "ing": "ШО ДАЙЗАЧА БАКЪАХЬА ХЕТ СОНА.",
+      "pron": "sho dayzacha bakakha khet sona.",
+      "id": "imp_acquaintance_lesson_11_dialogue_4_2"
+    },
+    {
+      "ru": "Час — 60 минут.",
+      "ing": "САХЬАТ — (60) КХОВЗТКЪА МИНОТ Я.",
+      "pron": "sakhat — (60) kkhovztka minot ya.",
+      "id": "imp_calendar_lesson_2_4_1"
+    },
+    {
+      "ru": "Чаще дарите своим близким подарки!",
+      "ing": "КАСТ-КАСТА ТЕЛА ШОАЙ ГАРГАРЧА НАХА СОВГIАТАШ!",
+      "pron": "kast-kasta tela shoay gargarcha nakha sovgiatash!",
+      "id": "imp_department_store_lesson_20_dialogue_"
+    },
+    {
+      "ru": "Чем ты любишь заниматься в свободное от работы и домашних дел время?",
+      "ing": "ЯХА, ХЬЕ БАЛХАХ МУКЪА ЙОЛЧА ХАНА ФУ ДЕШ ХОЗА ХЕТ ХЬОНА?",
+      "pron": "yakha, khe balkhakh muka yolcha khana fu desh khoza khet khona?",
+      "id": "imp_hobbies_lesson_25_dialogue_1_1"
+    },
+    {
+      "ru": "Чем я могу вам помочь?",
+      "ing": "СОГАРА ФУ ГIО-НОВКЪОСТАЛ ХУРГДА ХЬОНА?",
+      "pron": "sogara fu gio-novkostal khurgda khona?",
+      "id": "imp_relations_lesson_21_dialogue_9_1"
+    },
+    {
+      "ru": "Что нового в Москве?",
+      "ing": "КЕРДА ФУД МОСКВЕ?",
+      "pron": "kerda fud moskve?",
+      "id": "imp_telephone_conversation_lesson_14_7_1"
+    },
+    {
+      "ru": "Что означает это слово?",
+      "ing": "ЦУ ДЕША ФУ МАIАН ДА?",
+      "pron": "tsu desha fu maian da?",
+      "id": "imp_daily_expressions_lesson_22_10_1"
+    },
+    {
+      "ru": "Что у тебя нового?",
+      "ing": "Фуд керда?",
+      "pron": "fud kerda?",
+      "id": "imp_vacation_reunion_dialogue_2_1"
+    },
+    {
+      "ru": "Шашлык готов, давайте поедим.",
+      "ing": "ШАШЛЫК КИЙЧА ДА, ДУИЙ ВАЙ.",
+      "pron": "shashlyk kiycha da, duiy vay.",
+      "id": "imp_forest_lesson_18_dialogue_10_1"
+    },
+    {
+      "ru": "Это заразная болезнь?",
+      "ing": "ИЗ ЛАЗАР ДIА-ХЬА ДОАЛАШ-М ДАЦ?",
+      "pron": "iz lazar dia-kha doalash-m dats?",
+      "id": "imp_clinic_visit_lesson_16_dialogue_11_1"
+    },
+    {
+      "ru": "Это какая станция?",
+      "ing": "ЕР МАЛАГIА СТАНЦИ Я?",
+      "pron": "er malagia stantsi ya?",
+      "id": "imp_transport_lesson_10_dialogue_12_1"
+    },
+    {
+      "ru": "Это калина, а это кизил.",
+      "ing": "ИЗ ТОАЧУВ ДА, ЕР ЭСТИ Я.",
+      "pron": "iz toachuv da, er esti ya.",
+      "id": "imp_forest_lesson_18_dialogue_8_1"
+    },
+    {
+      "ru": "Это клен, а рядом с ним тополь.",
+      "ing": "ИЗ КЪОАХК Я, ЦУННА ЮХЕ ЯГIАР МИХА Я.",
+      "pron": "iz koakhk ya, tsunna yukhe yagiar mikha ya.",
+      "id": "imp_forest_lesson_18_dialogue_6_2"
+    },
+    {
+      "ru": "Это крокодил.",
+      "ing": "ИЗ ВОАТАГАР Я.",
+      "pron": "iz voatagar ya.",
+      "id": "imp_zoo_weekend_dialogue_3_1"
+    },
+    {
+      "ru": "Это мой друг детства.",
+      "ing": "ИЗ ВА СА БЕРА ХАНАРА ДЕНЗ ВОЛА ДОТТАГIА.",
+      "pron": "iz va sa bera khanara denz vola dottagia.",
+      "id": "imp_friendship_lesson_5_dialogue_9_1"
+    },
+    {
+      "ru": "Это мой друг.",
+      "ing": "ЕР СА ДОТТАГIА ВА.",
+      "pron": "er sa dottagia va.",
+      "id": "imp_acquaintance_lesson_11_dialogue_4_1"
+    },
+    {
+      "ru": "Это нужная профессия!",
+      "ing": "ИЗ ЭШАШ ПРОФЕССИ Я.",
+      "pron": "iz eshash professi ya.",
+      "id": "imp_acquaintance_lesson_3_dialogue_9_2"
+    },
+    {
+      "ru": "Это орешник, а там яблоня.",
+      "ing": "ИЗ БIАРИНГ Я, ДIАРБАР IАЖ БА.",
+      "pron": "iz biaring ya, diarbar iazh ba.",
+      "id": "imp_forest_lesson_18_dialogue_6_1"
+    },
+    {
+      "ru": "Я — студент.",
+      "ing": "СО СТУДЕНТ ВА.",
+      "pron": "so student va.",
+      "id": "imp_acquaintance_lesson_3_dialogue_2_3"
+    },
+    {
+      "ru": "Я буду врачом.",
+      "ing": "СО ЛОР ХУРГВА.",
+      "pron": "so lor khurgva.",
+      "id": "imp_acquaintance_lesson_3_dialogue_9_1"
+    },
+    {
+      "ru": "Я был школьником.",
+      "ing": "СО ДЕШАРХО ВАР.",
+      "pron": "so desharkho var.",
+      "id": "imp_three_tenses_to_be_lesson_12_1_2"
+    },
+    {
+      "ru": "Я была в музее.",
+      "ing": "СО МУЗЕЕ ХИННАЙ.",
+      "pron": "so muzee khinnay.",
+      "id": "imp_three_tenses_to_be_lesson_12_5_1"
+    },
+    {
+      "ru": "Я была студенткой.",
+      "ing": "СО СТУДЕНТКА ЯР.",
+      "pron": "so studentka yar.",
+      "id": "imp_three_tenses_to_be_lesson_12_2_2"
+    },
+    {
+      "ru": "Я Вам выпишу рецепт.",
+      "ing": "АЗ ХЬОНА РЕЦЕПТ ЯЗДЕРГДА.",
+      "pron": "az khona retsept yazdergda.",
+      "id": "imp_clinic_visit_lesson_16_dialogue_8_1"
+    },
+    {
+      "ru": "Я Вас не понял.",
+      "ing": "СО ХЬОХ КХИЙТАНЗАР.",
+      "pron": "so khokh kkhiytanzar.",
+      "id": "imp_daily_expressions_lesson_22_7_1"
+    },
+    {
+      "ru": "Я возьму овощной салат, рыбу, сок и мороженое.",
+      "ing": "АЗ САЛАТИ, ЧКЪАЬРЕИ, СОКИ, МОРОЖЕНИИ ЭЦАРГЬЯ.",
+      "pron": "az salati, chkarei, soki, morozhenii etsargya.",
+      "id": "imp_cafe_lesson_24_dialogue_2_1"
+    },
+    {
+      "ru": "Я вывихнул ногу (сломал руку, порезал палец).",
+      "ing": "АЗ КОГ ЧУРБАЬККХАБ (КУЛГ КАГДАЬД, ПIЕЛГ ХОАДАБАЬБ).",
+      "pron": "az kog churbakkkhab (kulg kagdad, pielg khoadabab).",
+      "id": "imp_clinic_visit_lesson_16_dialogue_5_1"
+    },
+    {
+      "ru": "Я диктор.",
+      "ing": "СО ДИКТОР Я.",
+      "pron": "so diktor ya.",
+      "id": "imp_three_tenses_to_be_lesson_12_2_1"
+    },
+    {
+      "ru": "Я думаю, этого достаточно.",
+      "ing": "АЗ ИЙЦАР ТОЪАРГЙОЛАШ САННА ХЕТ СОНА.",
+      "pron": "az iytsar toargyolash sanna khet sona.",
+      "id": "imp_grocery_store_lesson_19_dialogue_12_"
+    },
+    {
+      "ru": "Я еще знаю, что это слон, его привезли из Индии.",
+      "ing": "СОНА КХЫ А ХОВ ИЗ ПИЛ ДОЛГА, ХIИНДИ МЕХКАРА ДОАЛАДАЬД ИЗ.",
+      "pron": "sona kkhy a khov iz pil dolga, khiindi mekhkara doaladad iz.",
+      "id": "imp_zoo_weekend_dialogue_3_2"
+    },
+    {
+      "ru": "Я живу в 20-этажном новопостроенном доме.",
+      "ing": "СО ЯХ ТКЪО ЭТАЖ ЙОЛЧА КЕРДА ХЬАЛДАЬЧА ЦIАГIА.",
+      "pron": "so yakh tko etazh yolcha kerda khaldacha tsiagia.",
+      "id": "imp_place_we_live_lesson_7_10_1"
+    },
+    {
+      "ru": "Я живу в кирпичном доме.",
+      "ing": "СО ВАХАШ ВОЛА ЦIА ЦIЕЧА КИРПИШКЕХ ДАЬ ДА.",
+      "pron": "so vakhash vola tsia tsiecha kirpishkekh da da.",
+      "id": "imp_place_we_live_lesson_7_8_1"
+    },
+    {
+      "ru": "Я заболел (простудился).",
+      "ing": "СО ЦАМОГАШ ХИННАВ (ШЕЛВЕННАВ).",
+      "pron": "so tsamogash khinnav (shelvennav).",
+      "id": "imp_clinic_visit_lesson_16_dialogue_3_1"
+    },
+    {
+      "ru": "Я завтра пойду к Мадине.",
+      "ing": "СО КХОАНА МАДИНА ЙОЛЧА ГIОРГЬЯ.",
+      "pron": "so kkhoana madina yolcha giorgya.",
+      "id": "imp_tense_forms_lesson_17_15_1"
+    },
+    {
+      "ru": "Я закончила филологический факультет Ингушского государственного университета.",
+      "ing": "АЗ ЯЬККХАЙ ГIАЛГIАЙ ПАЧЧАХЬАЛКХЕН УНИВЕРСИТЕТА ФИЛОЛОГИЧЕСКИ ФАКУЛЬТЕТ.",
+      "pron": "az yakkkhay gialgiay pachchakhalkkhen universiteta filologicheski fakultet.",
+      "id": "imp_acquaintance_lesson_3_dialogue_11_1"
+    },
+    {
+      "ru": "Я знаю всех своих соседей.",
+      "ing": "СОНА САЙ МЕЛ БОЛА ЛОАЛАХОЙ БОВЗ.",
+      "pron": "sona say mel bola loalakhoy bovz.",
+      "id": "imp_place_we_live_lesson_7_12_1"
+    },
+    {
+      "ru": "Я и в дальнейшем буду диктором.",
+      "ing": "СО ДIАХО ЙОДАЧА ХАНА А ДИКТОР ХУРГЬЯ.",
+      "pron": "so diakho yodacha khana a diktor khurgya.",
+      "id": "imp_three_tenses_to_be_lesson_12_2_3"
+    },
+    {
+      "ru": "Я их покупаю.",
+      "ing": "АЗ ХЬАЭЦ ЕРАШ.",
+      "pron": "az khaets erash.",
+      "id": "imp_department_store_lesson_20_dialogue_"
+    },
+    {
+      "ru": "Я люблю быструю езду.",
+      "ing": "СОНА ХОЗА ХЕТ ЧЕХКА ВАХАР.",
+      "pron": "sona khoza khet chekhka vakhar.",
+      "id": "imp_transport_lesson_10_dialogue_10_1"
+    },
+    {
+      "ru": "Я люблю, когда идет дождь.",
+      "ing": "СОНА ХОЗАХЕТ ДОГIА ДЕЛХАЧА ХАНА.",
+      "pron": "sona khozakhet dogia delkhacha khana.",
+      "id": "imp_weather_dialogue_yakha_said_3_1"
+    },
+    {
+      "ru": "Я много о Вас слышал от своего друга.",
+      "ing": "ДУКХА ДИЙЦАД СОНА САЙ ДОТТАГIЧО ХЬОХ ЛАЬЦА.",
+      "pron": "dukkha diytsad sona say dottagicho khokh latsa.",
+      "id": "imp_acquaintance_lesson_11_dialogue_6_2"
+    },
+    {
+      "ru": "Я нашел ежевику и смородину, давай соберем.",
+      "ing": "СОНА МАНГАЛКОМАРАШИ КХАЗАРАШИ КОРАЬЯЙ, ГУЛЙОЙ ВАЙ.",
+      "pron": "sona mangalkomarashi kkhazarashi korayay, gulyoy vay.",
+      "id": "imp_forest_lesson_18_dialogue_9_1"
+    },
+    {
+      "ru": "Я не был в Москве.",
+      "ing": "СО МОСКВЕ ХИННАВАЦ.",
+      "pron": "so moskve khinnavats.",
+      "id": "imp_verb_moods_lesson_dialogue_7_1"
+    },
+    {
+      "ru": "Я не люблю его.",
+      "ing": "СОНА ВЕЗАЦ (ЕЗАЦ) ИЗ.",
+      "pron": "sona vezats (ezats) iz.",
+      "id": "imp_relations_lesson_21_dialogue_3_1"
+    },
+    {
+      "ru": "Я неделю провела в Москве в гостях у своей сестры.",
+      "ing": "АЗ ЦХЬА КIИРА МОСКВЕ ДАЬККХАД САЙ ЙИША ЙОЛЧА ХЬОАШАЛГIА ЯХА.",
+      "pron": "az tskha kiira moskve dakkkhad say yisha yolcha khoashalgia yakha.",
+      "id": "imp_telephone_conversation_lesson_14_5_1"
+    },
+    {
+      "ru": "Я очень благодарен тебе за приглашение.",
+      "ing": "САIИД, БАРКАЛ ХЬОНА ТХО УКХАЗА ДИЙХА.",
+      "pron": "saiid, barkal khona tkho ukkhaza diykha.",
+      "id": "imp_cafe_lesson_24_dialogue_6_1"
+    },
+    {
+      "ru": "Я понимаю, что без компьютера в данное время обойтись невозможно.",
+      "ing": "СО КХЕТ, КОМПЬЮТЕР ЦА ХИЛЧА ХIАНЗАРЧА ЗАМАГIА ЙИШ ЙОАЦИЛГА.",
+      "pron": "so kkhet, kompyuter tsa khilcha khianzarcha zamagia yish yoatsilga.",
+      "id": "imp_hobbies_lesson_25_dialogue_8_1"
+    },
+    {
+      "ru": "Я рекомендую Вам лечь в больницу.",
+      "ing": "АЗ БОЛЬНИЦЕ IОВИЖА АРГДАР ХЬОГА.",
+      "pron": "az bolnitse iovizha argdar khoga.",
+      "id": "imp_clinic_visit_lesson_16_dialogue_13_1"
+    },
+    {
+      "ru": "Я с братом поехала в горы.",
+      "ing": "СО ВЕШИЙЦА ЛОАМ ЯХАЙ.",
+      "pron": "so veshiytsa loam yakhay.",
+      "id": "imp_noun_declension_lesson_22_4_1"
+    },
+    {
+      "ru": "Я самостоятельно изучаю ингушский язык.",
+      "ing": "АЗ АЙСА IОМАБУ ГIАЛГIАЙ МОТТ.",
+      "pron": "az aysa iomabu gialgiay mott.",
+      "id": "imp_daily_expressions_lesson_22_9_1"
+    },
+    {
+      "ru": "Я свободен (свободна).",
+      "ing": "СО МУКЪА ВА (Я).",
+      "pron": "so muka va (ya).",
+      "id": "imp_daily_expressions_lesson_22_2_1"
+    },
+    {
+      "ru": "Я слушаю.",
+      "ing": "СО ЛАДУВГIАШ Я.",
+      "pron": "so laduvgiash ya.",
+      "id": "imp_telephone_conversation_lesson_14_2_1"
+    },
+    {
+      "ru": "Я соберу сухих дров.",
+      "ing": "АЗ ДЕКЪА ДАХЧА ГУЛДЕРГДА ВАЙНА.",
+      "pron": "az deka dakhcha guldergda vayna.",
+      "id": "imp_forest_lesson_18_dialogue_3_1"
+    },
+    {
+      "ru": "Я согласен, здесь можно хорошо отдохнуть.",
+      "ing": "СО РАЬЗА ВА. ДИКА САЛАIА МОТТИГ Я УКХАЗА.",
+      "pron": "so raza va. dika salaia mottig ya ukkhaza.",
+      "id": "imp_forest_lesson_18_dialogue_2_1"
+    },
+    {
+      "ru": "Я студент.",
+      "ing": "СО СТУДЕНТ ВА.",
+      "pron": "so student va.",
+      "id": "imp_three_tenses_to_be_lesson_12_1_1"
+    },
+    {
+      "ru": "Я считаю, что самый надежный вид транспорта — метро.",
+      "ing": "СОГА ХАЬТТАЧА, МЕТРО ЭГГАРА ТЕШАМЕГIА ТРАНСПОРТ ХЕТ.",
+      "pron": "soga khattacha, metro eggara teshamegia transport khet.",
+      "id": "imp_transport_lesson_10_dialogue_1_1"
+    },
+    {
+      "ru": "Я тебе буду рассказывать о них все, что я знаю.",
+      "ing": "АЗ ДУВЦАРГДА ХЬОНА ЦАРЕХ ЛАЬЦА САЙНА МЕЛ ХОВР.",
+      "pron": "az duvtsargda khona tsarekh latsa sayna mel khovr.",
+      "id": "imp_zoo_weekend_dialogue_2_2"
+    },
+    {
+      "ru": "Я тоже очень рада вашему знакомству.",
+      "ing": "СОНА А ЧIОАГIА ДИКА ХЕТ ХЬО ВАЙЗА.",
+      "pron": "sona a chioagia dika khet kho vayza.",
+      "id": "imp_acquaintance_lesson_11_dialogue_7_1"
+    },
+    {
+      "ru": "Я учился в Назрановской школе.",
+      "ing": "СО НАЗРАНЕРЧА ШКОЛЕ ДЕШАШ ХИННАВ.",
+      "pron": "so nazranercha shkole deshash khinnav.",
+      "id": "imp_acquaintance_lesson_3_dialogue_7_1"
+    },
+    {
+      "ru": "Я учусь в Москве в РГГУ.",
+      "ing": "СО ДЕШАШ ВА МОСКВЕ РОССЕ ПАЧЧАХЬАЛКХЕН ГУМАНИТАРНИ УНИВЕРСИТЕТЕ.",
+      "pron": "so deshash va moskve rosse pachchakhalkkhen gumanitarni universitete.",
+      "id": "imp_acquaintance_lesson_3_dialogue_5_1"
+    },
+    {
+      "ru": "Я, как все мужчины, увлекаюсь спортом.",
+      "ing": "СО, ДУКХАГIА МЕЛ БОЛА МАIА НАХ САННА, СПОРТАЦА САКЪЕРДАЛУШ ВА.",
+      "pron": "so, dukkhagia mel bola maia nakh sanna, sportatsa sakerdalush va.",
+      "id": "imp_hobbies_lesson_25_dialogue_5_1"
+    },
+    {
+      "ru": "Я.",
+      "ing": "СО ВА.",
+      "pron": "so va.",
+      "id": "imp_telephone_conversation_lesson_14_14_"
+    },
+    {
+      "ru": "Яха, сколько тебе лет?",
+      "ing": "ЯХА, МЕЛ ХА ЯЬННАЙ ХЬА?",
+      "pron": "yakha, mel kha yannay kha?",
+      "id": "imp_numbers_lesson_9_8_1"
+    }
+  ]
+}
