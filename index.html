@@ -51,10 +51,17 @@
       <input id="ai-key" type="text" placeholder="https://api.inghub.ru" autocomplete="off" data-lpignore="true" data-1p-ignore="true">
     </label>
 
+    <div id="api-progress-wrap" class="api-progress-wrap hidden">
+      <div class="api-progress-label" id="api-progress-label">Подключение…</div>
+      <div class="api-progress-track">
+        <div class="api-progress-bar" id="api-progress-bar"></div>
+      </div>
+    </div>
+
     <div id="api-status-grid" class="api-status-grid">
       <div class="api-status-card" id="api-st-server">Сервер: …</div>
-      <div class="api-status-card" id="api-st-gemini">Gemini ключ: …</div>
-      <div class="api-status-card" id="api-st-test">Gemini тест: …</div>
+      <div class="api-status-card" id="api-st-llm">LLM: …</div>
+      <div class="api-status-card" id="api-st-test">Тест LLM: …</div>
     </div>
 
     <div id="api-metrics" class="api-metrics"></div>
@@ -75,8 +82,8 @@
 
     <div class="api-help">
       <a id="api-full-admin-link" href="https://api.inghub.ru/admin" target="_blank" rel="noopener">Полная админка API →</a>
-      <a href="https://aistudio.google.com" target="_blank" rel="noopener">Google AI Studio</a>
-      <a href="https://ai.dev/rate-limit" target="_blank" rel="noopener">Квота Gemini</a>
+      <a href="https://openrouter.ai/keys" target="_blank" rel="noopener">OpenRouter ключи</a>
+      <a href="https://openrouter.ai/models" target="_blank" rel="noopener">Модели OpenRouter</a>
     </div>
 
     <div class="modal-actions">

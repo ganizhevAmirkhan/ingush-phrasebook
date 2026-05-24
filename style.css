@@ -164,6 +164,8 @@ body {
 }
 #ai-status.bad{ color:#ff6b6b; }
 #ai-status.warn{ color:#ffd166; }
+#ai-status.loading{ color:#4a90d9; animation:ai-pulse 1s ease-in-out infinite; }
+@keyframes ai-pulse{ 50%{ opacity:.35; } }
 
 .api-admin-box{
   max-width:640px;
@@ -190,6 +192,41 @@ body {
   background:#f8f8f8;
   font-size:13px;
   line-height:1.35;
+}
+.api-progress-wrap{
+  margin:10px 0 12px;
+}
+.api-progress-wrap.hidden{ display:none; }
+.api-progress-label{
+  font-size:13px;
+  color:#444;
+  margin-bottom:6px;
+  min-height:1.2em;
+}
+.api-progress-track{
+  height:8px;
+  border-radius:999px;
+  background:#e8e8e8;
+  overflow:hidden;
+}
+.api-progress-bar{
+  height:100%;
+  width:0%;
+  border-radius:999px;
+  background:linear-gradient(90deg, #4a90d9, #7CFC00);
+  transition:width .35s ease;
+}
+.api-progress-bar.indeterminate{
+  width:40% !important;
+  animation:api-progress-slide 1.2s ease-in-out infinite;
+}
+@keyframes api-progress-slide{
+  0%{ transform:translateX(-120%); }
+  100%{ transform:translateX(320%); }
+}
+.api-status-card.loading{
+  opacity:.85;
+  border-style:dashed;
 }
 .api-status-card.ok{ border-color:#7CFC00; background:#f3fff0; }
 .api-status-card.warn{ border-color:#ffd166; background:#fffbf0; }

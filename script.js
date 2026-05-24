@@ -784,14 +784,18 @@ function initAiUI(){
 function setApiStatusBadge(level){
   const st = document.getElementById("ai-status");
   if(!st) return;
-  st.classList.remove("bad", "warn");
+  st.classList.remove("bad", "warn", "loading");
   if(level === "ok"){
     st.textContent = "●";
-    st.title = "LanguageAPI: OK";
+    st.title = "LanguageAPI: OK (OpenRouter)";
+  }else if(level === "loading"){
+    st.textContent = "◌";
+    st.classList.add("loading");
+    st.title = "LanguageAPI: проверка…";
   }else if(level === "warn"){
     st.textContent = "●";
     st.classList.add("warn");
-    st.title = "LanguageAPI: Gemini с проблемой";
+    st.title = "LanguageAPI: LLM с проблемой";
   }else if(level === "bad"){
     st.textContent = "●";
     st.classList.add("bad");
@@ -799,6 +803,54 @@ function setApiStatusBadge(level){
   }else{
     st.textContent = "";
     st.title = "";
+  }
+}
+
+function setApiProgress(pct, label, visible=true){
+  const wrap = document.getElementById("api-progress-wrap");
+  const bar = document.getElementById("api-progress-bar");
+  const lbl = document.getElementById("api-progress-label");
+  if(wrap) wrap.classList.toggle("hidden", !visible);
+  if(lbl) lbl.textContent = label || "";
+  if(bar){
+    bar.classList.remove("indeterminate");
+    if(pct < 0){
+      bar.classList.add("indeterminate");
+      bar.style.width = "40%";
+    }else{
+      bar.style.width = `${Math.min(100, Math.max(0, pct))}%`;
+    }
+  }
+}
+
+function setApiStatusCard(id, level, title, body){
+  const el = document.getElementById(id);
+  if(!el) return;
+  el.className = `api-status-card ${level}${level === "warn" && /проверка|ожид/i.test(body) ? " loading" : ""}`;
+  el.innerHTML = `<strong>${title}</strong><br>${body}`;
+}
+
+function formatLlmProviderLabel(health){
+  const primary = health?.llmPrimary || health?.primary || "—";
+  if(primary === "openrouter") return "OpenRouter";
+  if(primary === "gemini") return "Gemini";
+  return primary;
+}
+
+async function refreshApiStatusBadge(){
+  setApiStatusBadge("loading");
+  const health = await fetchLanguageApiGet("/health", 8000);
+  if(!health.ok || !health.json?.ok){
+    setApiStatusBadge("bad");
+    return;
+  }
+  const llm = await fetchLanguageApiGet("/health/llm", 45000);
+  if(llm.json?.ok){
+    setApiStatusBadge("ok");
+  }else if(health.json.openrouterConfigured || health.json.geminiConfigured){
+    setApiStatusBadge("warn");
+  }else{
+    setApiStatusBadge("bad");
   }
 }
 
@@ -821,31 +873,6 @@ async function fetchLanguageApiGet(path, timeoutMs=20000){
   }
 }
 
-function setApiStatusCard(id, level, title, body){
-  const el = document.getElementById(id);
-  if(!el) return;
-  el.className = `api-status-card ${level}`;
-  el.innerHTML = `<strong>${title}</strong><br>${body}`;
-}
-
-async function refreshApiStatusBadge(){
-  const health = await fetchLanguageApiGet("/health", 8000);
-  if(!health.ok || !health.json?.ok){
-    setApiStatusBadge("bad");
-    return;
-  }
-  if(!health.json.geminiConfigured){
-    setApiStatusBadge("warn");
-    return;
-  }
-  const gemini = await fetchLanguageApiGet("/health/gemini", 35000);
-  if(gemini.json?.ok){
-    setApiStatusBadge("ok");
-  }else{
-    setApiStatusBadge("warn");
-  }
-}
-
 function openApiAdminPanel(){
   const modal = document.getElementById("api-admin-modal");
   if(!modal) return;
@@ -863,71 +890,79 @@ function closeApiAdminPanel(){
 
 async function refreshApiAdminPanel(){
   const base = getLanguageApiBase();
+  setApiProgress(5, "1/4 — Подключение к серверу…");
   setApiStatusCard("api-st-server", "warn", "Сервер", `${base}<br>проверка…`);
-  setApiStatusCard("api-st-gemini", "warn", "Gemini ключ", "проверка…");
-  setApiStatusCard("api-st-test", "warn", "Gemini тест", "проверка…");
+  setApiStatusCard("api-st-llm", "warn", "LLM", "проверка…");
+  setApiStatusCard("api-st-test", "warn", "Тест LLM", "ожидание…");
 
   const health = await fetchLanguageApiGet("/health", 8000);
   if(!health.ok || !health.json?.ok){
+    setApiProgress(100, "Сервер недоступен", true);
     setApiStatusCard("api-st-server", "bad", "Сервер", "Недоступен");
-    setApiStatusCard("api-st-gemini", "bad", "Gemini ключ", "—");
-    setApiStatusCard("api-st-test", "bad", "Gemini тест", "—");
+    setApiStatusCard("api-st-llm", "bad", "LLM", "—");
+    setApiStatusCard("api-st-test", "bad", "Тест LLM", "—");
     setApiStatusBadge("bad");
     return;
   }
 
-  setApiStatusCard(
-    "api-st-server",
-    "ok",
-    "Сервер",
-    `${base}<br>online ✓`
-  );
+  setApiProgress(30, "2/4 — Сервер online, проверка LLM…");
+  setApiStatusCard("api-st-server", "ok", "Сервер", `${base}<br>online ✓`);
 
-  if(!health.json.geminiConfigured){
-    setApiStatusCard(
-      "api-st-gemini",
-      "bad",
-      "Gemini ключ",
-      "Не задан на VPS (.env)"
-    );
-    setApiStatusCard("api-st-test", "bad", "Gemini тест", "Невозможен без ключа");
-    setApiStatusBadge("warn");
-  }else{
-    const prefix = health.json.geminiKeyPrefix || "…";
-    const len = health.json.geminiKeyLength || "?";
-    setApiStatusCard(
-      "api-st-gemini",
-      "ok",
-      "Gemini ключ",
-      `Задан: ${prefix} (${len} симв.)`
-    );
+  const h = health.json;
+  const provider = formatLlmProviderLabel(h);
+  const model = h.openrouterModel || "—";
+  let llmBody = "";
 
-    const gemini = await fetchLanguageApiGet("/health/gemini", 35000);
-    if(gemini.status === 404){
-      setApiStatusCard(
-        "api-st-test",
-        "warn",
-        "Gemini тест",
-        "Обновите API на VPS (git pull + pm2 restart)"
-      );
-      setApiStatusBadge("warn");
-    }else if(gemini.json?.ok){
-      setApiStatusCard("api-st-test", "ok", "Gemini тест", "Работает ✓");
-      setApiStatusBadge("ok");
-    }else{
-      const err = gemini.json?.error || `HTTP ${gemini.status}`;
-      const detail = gemini.json?.detail || "";
-      const msg = languageApiErrorMessage(err);
-      setApiStatusCard(
-        "api-st-test",
-        "bad",
-        "Gemini тест",
-        `${msg}${detail ? `<br><small>${safe(detail).slice(0, 180)}</small>` : ""}`
-      );
-      setApiStatusBadge("warn");
+  if(h.openrouterConfigured){
+    llmBody = `${provider} ✓<br>Модель: <code>${safe(model)}</code>`;
+    if(h.geminiConfigured){
+      llmBody += `<br><small>Gemini в .env есть, но не используется</small>`;
     }
+    setApiStatusCard("api-st-llm", "ok", "LLM (OpenRouter)", llmBody);
+  }else if(h.geminiConfigured){
+    llmBody = `Gemini (legacy)<br>Задайте OPENROUTER_API_KEY на VPS`;
+    setApiStatusCard("api-st-llm", "warn", "LLM", llmBody);
+  }else{
+    llmBody = `Не настроен<br>OPENROUTER_API_KEY в .env на VPS`;
+    setApiStatusCard("api-st-llm", "bad", "LLM", llmBody);
   }
 
+  setApiProgress(55, "3/4 — Тест LLM (может занять до 30 сек)…", true);
+  setApiStatusCard("api-st-test", "warn", "Тест LLM", "Запрос к /health/llm…");
+
+  const llm = await fetchLanguageApiGet("/health/llm", 45000);
+  if(llm.status === 404){
+    setApiStatusCard(
+      "api-st-test",
+      "warn",
+      "Тест LLM",
+      "Обновите API на VPS (git pull + pm2 restart)"
+    );
+    setApiStatusBadge("warn");
+  }else if(llm.json?.ok){
+    const used = llm.json.provider === "openrouter" ? "OpenRouter" : formatLlmProviderLabel(llm.json);
+    const usedModel = safe(llm.json.model || model).slice(0, 60);
+    setApiStatusCard(
+      "api-st-test",
+      "ok",
+      "Тест LLM",
+      `${used} работает ✓${usedModel ? `<br><small>${usedModel}</small>` : ""}`
+    );
+    setApiStatusBadge("ok");
+  }else{
+    const err = llm.json?.error || `HTTP ${llm.status}`;
+    const detail = llm.json?.detail || "";
+    const msg = languageApiErrorMessage(err);
+    setApiStatusCard(
+      "api-st-test",
+      "bad",
+      "Тест LLM",
+      `${msg}${detail ? `<br><small>${safe(detail).slice(0, 180)}</small>` : ""}`
+    );
+    setApiStatusBadge(h.openrouterConfigured ? "warn" : "bad");
+  }
+
+  setApiProgress(80, "4/4 — Загрузка метрик…");
   const metrics = await fetchLanguageApiGet("/metrics", 8000);
   const m = metrics.json?.metrics;
   const metricsEl = document.getElementById("api-metrics");
@@ -941,12 +976,13 @@ async function refreshApiAdminPanel(){
         `Из словаря (dosh): ${m.translateFromDosh ?? 0}`,
         `Из фраз (habar): ${m.translateFromPhrase ?? 0}`,
         `Из грамматики: ${m.translateFromGrammar ?? 0}`,
-        `Из LLM (Gemini): ${m.translateFromLLM ?? 0}`,
+        `Из LLM: ${m.translateFromLLM ?? 0}`,
         `Отклонено: ${m.translateRejected ?? 0}`
       ].join("<br>");
     }
   }
 
+  setApiProgress(90, "Загрузка очереди модерации…");
   const modSection = document.getElementById("api-moderation-section");
   const modList = document.getElementById("api-moderation-list");
   if(modSection && modList && adminMode){
@@ -965,20 +1001,31 @@ async function refreshApiAdminPanel(){
   }else if(modSection){
     modSection.classList.add("hidden");
   }
+
+  setApiProgress(100, "Готово ✓");
+  setTimeout(() => setApiProgress(100, "", false), 2500);
 }
 
 async function apiAdminTestTranslate(){
   const ru = safe(document.getElementById("api-test-ru")?.value).trim();
   const out = document.getElementById("api-test-result");
+  const btn = document.querySelector(".api-test-row button");
   if(!ru){
     if(out) out.textContent = "Введите русскую фразу";
     return;
   }
-  if(out) out.textContent = "Перевод…";
+  if(btn) btn.disabled = true;
+  if(out) out.textContent = "⏳ Отправка запроса…";
+  setApiProgress(-1, `Перевод: «${ru.slice(0, 40)}${ru.length > 40 ? "…" : ""}»`);
 
   const base = getLanguageApiBase();
   const ctrl = new AbortController();
   const timeoutId = setTimeout(() => ctrl.abort(), 45000);
+  const t0 = Date.now();
+  const tickId = setInterval(() => {
+    const sec = Math.round((Date.now() - t0) / 1000);
+    if(out) out.textContent = `⏳ Перевод… ${sec} сек\n(фразы → грамматика → LLM при необходимости)`;
+  }, 500);
   try{
     const res = await fetch(`${base}/translate`, {
       method: "POST",
@@ -987,31 +1034,42 @@ async function apiAdminTestTranslate(){
       signal: ctrl.signal,
       cache: "no-store"
     });
+    clearInterval(tickId);
     const json = await res.json().catch(() => null);
+    const elapsed = ((Date.now() - t0) / 1000).toFixed(1);
     if(!out) return;
     if(json?.ok){
+      setApiProgress(100, `Готово за ${elapsed} сек`);
       out.textContent = [
         `✓ ${json.translation}`,
         `Источник: ${json.usedSource}`,
         `Уверенность: ${json.confidence}`,
+        `Время: ${elapsed} сек`,
         json.fallbackUsed ? "(через fallback)" : ""
       ].filter(Boolean).join("\n");
     }else{
+      setApiProgress(100, "Ошибка перевода");
       const msg = languageApiErrorMessage(json?.error);
       out.textContent = [
         `✗ ${msg}`,
         json?.detail ? json.detail : "",
-        `Код: ${json?.error || res.status}`
+        `Код: ${json?.error || res.status}`,
+        `Время: ${elapsed} сек`
       ].filter(Boolean).join("\n");
     }
   }catch{
-    if(out) out.textContent = "✗ LanguageAPI недоступен";
+    clearInterval(tickId);
+    setApiProgress(100, "Сервер недоступен");
+    if(out) out.textContent = "✗ LanguageAPI недоступен (таймаут или сеть)";
   }finally{
     clearTimeout(timeoutId);
+    if(btn) btn.disabled = false;
+    setTimeout(() => setApiProgress(100, "", false), 2000);
   }
 }
 
 async function apiAdminRefreshData(){
+  setApiProgress(-1, "Обновление данных API (фразы, словарь, грамматика)…");
   const base = getLanguageApiBase();
   const ctrl = new AbortController();
   const timeoutId = setTimeout(() => ctrl.abort(), 30000);
@@ -1025,10 +1083,13 @@ async function apiAdminRefreshData(){
     const json = await res.json().catch(() => null);
     toast(json?.ok ? "Данные API обновлены ✓" : "Не удалось обновить данные", !!json?.ok);
     if(json?.ok) refreshApiAdminPanel();
+    else setApiProgress(100, "Ошибка обновления");
   }catch{
     toast("LanguageAPI недоступен", false);
+    setApiProgress(100, "Сервер недоступен");
   }finally{
     clearTimeout(timeoutId);
+    setTimeout(() => setApiProgress(100, "", false), 2000);
   }
 }
 
@@ -1043,16 +1104,19 @@ function saveAiKey(){
 
 function languageApiErrorMessage(code){
   const messages = {
-    missing_gemini_key: "В словарях нет перевода. На VPS задайте GEMINI_API_KEY и pm2 restart --update-env",
-    invalid_gemini_key: "Ключ Gemini не принят Google. Создайте новый в aistudio.google.com",
-    gemini_key_expired: "Ключ Gemini просрочен. Создайте новый в aistudio.google.com и обновите .env на VPS",
-    gemini_quota_exceeded: "Исчерпана бесплатная квота Gemini. Подождите или включите billing в Google AI Studio",
-    gemini_permission_denied: "Google отклонил ключ. Проверьте проект и billing в Google AI Studio",
-    gemini_region_blocked: "Google блокирует запросы с VPS (РФ). Нужен сервер за рубежом или оплата в Google Cloud",
-    llm_http_404: "Gemini: модель не найдена. Обновите API (git pull) и pm2 restart 0",
-    llm_http_400: "Gemini отклонил запрос (400). Откройте панель 📡 API для детали",
-    llm_http_403: "Gemini: ключ не принят. Проверьте GEMINI_API_KEY в .env",
-    llm_failed: "Gemini недоступен. Попробуйте позже"
+    missing_gemini_key: "LLM не настроен. На VPS задайте OPENROUTER_API_KEY",
+    missing_openrouter_key: "OpenRouter ключ не задан на VPS (.env)",
+    openrouter_failed: "OpenRouter недоступен. Попробуйте позже",
+    openrouter_http_429: "OpenRouter: лимит запросов (429). Подождите или смените модель",
+    invalid_gemini_key: "Ключ Gemini не принят Google",
+    gemini_key_expired: "Ключ Gemini просрочен",
+    gemini_quota_exceeded: "Исчерпана квота Gemini",
+    gemini_permission_denied: "Google отклонил ключ Gemini",
+    gemini_region_blocked: "Gemini блокирует VPS в РФ (используйте OpenRouter)",
+    llm_http_404: "LLM: модель не найдена. Обновите API (git pull + pm2 restart)",
+    llm_http_400: "LLM отклонил запрос (400)",
+    llm_http_403: "LLM: ключ не принят",
+    llm_failed: "LLM недоступен. Проверьте OpenRouter на VPS"
   };
   return messages[code] || code || "Ошибка LanguageAPI";
 }
