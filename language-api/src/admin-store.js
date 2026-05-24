@@ -8,6 +8,16 @@ const CORPUS_STORIES_DIR = path.join(ROOT, "data", "corpus", "stories");
 const CORPUS_NOVELLAS_DIR = path.join(ROOT, "data", "corpus", "novellas");
 const BLACKLIST_FILE = path.join(ROOT, "data", "blacklist.json");
 
+/** Ингушские служебные слова — нельзя блокировать (ломает «Со … ву» и т.д.) */
+const BLACKLIST_PROTECTED = new Set([
+  "ву", "vu", "ду", "du", "со", "so", "sa", "сa", "из", "iz", "ha", "ха"
+]);
+
+function sanitizeBlacklist(terms) {
+  return [...new Set((terms || []).map((x) => normalizeText(x)).filter(Boolean))]
+    .filter((t) => !BLACKLIST_PROTECTED.has(t));
+}
+
 const GRAMMAR_FILES = {
   patterns: path.join(GRAMMAR_DIR, "patterns.json"),
   rules: path.join(GRAMMAR_DIR, "rules.json"),
@@ -308,8 +318,11 @@ async function getBlacklist() {
 }
 
 async function saveBlacklist(terms) {
-  const blocked = [...new Set((terms || []).map((x) => normalizeText(x)).filter(Boolean))];
-  await writeJson(BLACKLIST_FILE, { blocked });
+  const blocked = sanitizeBlacklist(terms);
+  await writeJson(BLACKLIST_FILE, {
+    blocked,
+    help: "Только чеченские/ошибочные формы в ответах LLM. Не добавляйте ву, со, из — это нормальный ингушский."
+  });
   return { ok: true, blocked };
 }
 
@@ -317,6 +330,9 @@ async function addBlacklistTerm(term) {
   const blocked = await getBlacklist();
   const val = normalizeText(term);
   if (!val) return { ok: false, error: "empty_term" };
+  if (BLACKLIST_PROTECTED.has(val)) {
+    return { ok: false, error: "protected_term", detail: `"${val}" — нормальное ингушское слово, блокировать нельзя` };
+  }
   if (!blocked.includes(val)) blocked.push(val);
   return saveBlacklist(blocked);
 }

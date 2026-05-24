@@ -160,6 +160,12 @@
     </section>
 
     <section id="panel-blacklist" class="panel hidden">
+      <p class="panel-hint">
+        Чёрный список проверяет только <b>ответы LLM</b>, не фразы из Habar (разговорник).
+        Блокируйте чеченские формы: <code>хьоь</code>, <code>нохч</code>…
+        <b>Не добавляйте</b> <code>ву</code>, <code>со</code>, <code>из</code> — это нормальный ингушский
+        («Со магазе <b>ву</b>» = я в магазине).
+      </p>
       <div class="toolbar">
         <input id="blacklist-term" type="text" placeholder="Новое слово для блокировки">
         <button type="button" id="blacklist-add">+ Добавить</button>

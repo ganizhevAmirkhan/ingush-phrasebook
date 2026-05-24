@@ -486,7 +486,11 @@ async function addBlacklistTerm() {
   const input = document.getElementById("blacklist-term");
   const term = input?.value.trim();
   if (!term) return;
-  const { ok } = await api("/blacklist", { method: "POST", body: { term } });
+  const { ok, json } = await api("/blacklist", { method: "POST", body: { term } });
+  if (!ok && json?.error === "protected_term") {
+    toast(json.detail || "Это слово нельзя блокировать", false);
+    return;
+  }
   toast(ok ? "Добавлено ✓" : "Ошибка", ok);
   if (ok) {
     input.value = "";

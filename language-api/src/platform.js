@@ -227,9 +227,14 @@ async function loadCorpus() {
 }
 
 async function loadBlacklist() {
+  const protectedTerms = new Set([
+    "ву", "vu", "ду", "du", "со", "so", "sa", "из", "iz", "ha", "ха"
+  ]);
   try {
     const json = await readJson(BLACKLIST_FILE);
-    return Array.isArray(json?.blocked) ? json.blocked.map((x) => normalizeText(x)).filter(Boolean) : [];
+    const raw = Array.isArray(json?.blocked) ? json.blocked : [];
+    return [...new Set(raw.map((x) => normalizeText(x)).filter(Boolean))]
+      .filter((t) => !protectedTerms.has(t));
   } catch {
     return [];
   }
@@ -790,6 +795,16 @@ function transliterateIngushToPron(ingText) {
   return out.replace(/\s+/g, " ").trim().toLowerCase();
 }
 
+function ingContainsBlockedForm(ingNorm, blocked) {
+  if (!blocked) return false;
+  const b = normalizeText(blocked);
+  if (!b) return false;
+  if (b.includes(" ")) return ingNorm.includes(b);
+  const tokens = ingNorm.split(/\s+/).filter(Boolean);
+  if (tokens.includes(b)) return true;
+  return tokens.some((token) => token.includes(b));
+}
+
 function validateIngText(ingText, ruText) {
   const ingNorm = normalizeText(ingText);
   if (!ingNorm) {
@@ -797,7 +812,7 @@ function validateIngText(ingText, ruText) {
   }
 
   for (const blocked of state.blacklist) {
-    if (blocked && ingNorm.includes(blocked)) {
+    if (ingContainsBlockedForm(ingNorm, blocked)) {
       return { ok: false, blockedReason: `blocked_form:${blocked}` };
     }
   }
