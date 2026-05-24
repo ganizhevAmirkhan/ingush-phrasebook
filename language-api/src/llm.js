@@ -15,22 +15,24 @@ function getGeminiKey() {
 }
 
 function getOpenRouterModel() {
-  return (process.env.OPENROUTER_MODEL || "meta-llama/llama-3.2-3b-instruct:free").trim();
+  return (process.env.OPENROUTER_MODEL || "openrouter/free").trim();
 }
 
 function openRouterFallbackModels() {
   const freeOnly = !/^(0|false|no)$/i.test(String(process.env.OPENROUTER_FREE_ONLY ?? "true").trim());
+  const free = [
+    getOpenRouterModel(),
+    "openrouter/free",
+    "deepseek/deepseek-v4-flash:free",
+    "qwen/qwen3-coder:free",
+    "meta-llama/llama-3.3-70b-instruct:free",
+    "meta-llama/llama-3.2-3b-instruct:free",
+    "openai/gpt-oss-20b:free"
+  ];
   const paid = [
     getOpenRouterModel(),
     "google/gemini-2.5-flash",
     "google/gemini-2.0-flash-001"
-  ];
-  const free = [
-    getOpenRouterModel(),
-    "meta-llama/llama-3.2-3b-instruct:free",
-    "meta-llama/llama-3.3-70b-instruct:free",
-    "qwen/qwen-3-4b:free",
-    "google/gemini-2.0-flash-exp:free"
   ];
   return (freeOnly ? free : [...paid, ...free])
     .filter((value, index, arr) => value && arr.indexOf(value) === index);
@@ -211,6 +213,26 @@ async function callGemini(prompt) {
   return { ok: false, text: "", error: lastError, detail: lastDetail, provider: "gemini" };
 }
 
+async function requestOpenRouterOnce(key, model, prompt, referer, title) {
+  const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${key}`,
+      "Content-Type": "application/json",
+      "HTTP-Referer": referer,
+      "X-Title": title
+    },
+    body: JSON.stringify({
+      model,
+      messages: [{ role: "user", content: prompt }],
+      temperature: 0.2,
+      max_tokens: 512
+    })
+  });
+  const errText = res.ok ? "" : await res.text().catch(() => "");
+  return { res, errText };
+}
+
 async function callOpenRouter(prompt) {
   const key = getOpenRouterKey();
   if (isPlaceholderKey(key)) {
@@ -218,62 +240,70 @@ async function callOpenRouter(prompt) {
   }
 
   const models = openRouterFallbackModels();
-
   const referer = (process.env.OPENROUTER_SITE_URL || "https://api.inghub.ru").trim();
   const title = (process.env.OPENROUTER_APP_NAME || "Ingush LanguageAPI").trim();
+  const retry429Ms = Number(process.env.OPENROUTER_RETRY_MS || 3500);
 
   let lastError = "llm_failed";
   let lastDetail = "";
   const attempts = [];
-  for (const model of models) {
-    try {
-      const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${key}`,
-          "Content-Type": "application/json",
-          "HTTP-Referer": referer,
-          "X-Title": title
-        },
-        body: JSON.stringify({
-          model,
-          messages: [{ role: "user", content: prompt }],
-          temperature: 0.2,
-          max_tokens: 512
-        })
-      });
 
-      if (!res.ok) {
-        const errText = await res.text().catch(() => "");
-        const parsed = parseOpenRouterHttpError(errText, res.status);
-        attempts.push({ model, error: parsed.error, detail: parsed.detail, status: res.status });
-        if (parsed.error === "invalid_openrouter_key") {
+  for (const model of models) {
+    let triedRetry = false;
+    while (true) {
+      try {
+        const { res, errText } = await requestOpenRouterOnce(key, model, prompt, referer, title);
+
+        if (!res.ok) {
+          const parsed = parseOpenRouterHttpError(errText, res.status);
+          attempts.push({ model, error: parsed.error, detail: parsed.detail, status: res.status });
+          if (parsed.error === "invalid_openrouter_key") {
+            return {
+              ok: false,
+              text: "",
+              error: parsed.error,
+              detail: parsed.detail,
+              provider: "openrouter",
+              attempts
+            };
+          }
+          if (parsed.error === "openrouter_rate_limited" && !triedRetry) {
+            triedRetry = true;
+            await sleep(retry429Ms);
+            continue;
+          }
+          lastError = parsed.error;
+          lastDetail = `${model}: ${parsed.detail}`;
+          break;
+        }
+
+        const json = await res.json();
+        const routedModel = (json?.model || model).toString();
+        const text = (json?.choices?.[0]?.message?.content || "").trim();
+        if (text) {
           return {
-            ok: false,
-            text: "",
-            error: parsed.error,
-            detail: parsed.detail,
+            ok: true,
+            text,
+            error: "",
+            detail: routedModel,
             provider: "openrouter",
             attempts
           };
         }
-        lastError = parsed.error;
-        lastDetail = `${model}: ${parsed.detail}`;
-        continue;
+        attempts.push({ model, error: "llm_empty", detail: "Empty response" });
+        lastError = "llm_empty";
+        lastDetail = `Empty response from ${model}`;
+        break;
+      } catch (err) {
+        attempts.push({ model, error: "llm_fetch_failed", detail: err?.message || "Network error" });
+        lastError = "llm_fetch_failed";
+        lastDetail = err?.message || "Network error";
+        break;
       }
+    }
 
-      const json = await res.json();
-      const text = (json?.choices?.[0]?.message?.content || "").trim();
-      if (text) {
-        return { ok: true, text, error: "", detail: model, provider: "openrouter", attempts };
-      }
-      attempts.push({ model, error: "llm_empty", detail: "Empty response" });
-      lastError = "llm_empty";
-      lastDetail = `Empty response from ${model}`;
-    } catch (err) {
-      attempts.push({ model, error: "llm_fetch_failed", detail: err?.message || "Network error" });
-      lastError = "llm_fetch_failed";
-      lastDetail = err?.message || "Network error";
+    if (attempts.length && attempts[attempts.length - 1]?.error === "openrouter_rate_limited") {
+      await sleep(1200);
     }
   }
 
