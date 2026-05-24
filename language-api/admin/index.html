@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LanguageAPI — админ</title>
-  <link rel="stylesheet" href="/admin/admin.css?v=20260524">
+  <link rel="stylesheet" href="/admin/admin.css?v=20260524b">
 </head>
 <body>
 
@@ -26,6 +26,7 @@
     <div>
       <strong>LanguageAPI Admin</strong>
       <span id="api-base" class="muted"></span>
+      <span class="admin-version">v20260524</span>
     </div>
     <div class="top-actions">
       <button type="button" id="btn-reload">♻ Перезагрузить данные</button>
@@ -87,18 +88,14 @@
     </section>
 
     <section id="panel-lexemes" class="panel hidden">
-      <div class="toolbar">
+      <div class="toolbar toolbar-wrap">
         <input id="lexemes-search" type="search" placeholder="Поиск слова…">
         <button type="button" id="lexemes-new">+ Новая лексема</button>
-      </div>
-      <div class="list-meta">
-        <span id="lexemes-meta">…</span>
-        <div class="pager">
-          <button type="button" id="lexemes-prev">◀ Назад</button>
-          <span id="lexemes-page" class="page-num">1 / 1</span>
-          <button type="button" id="lexemes-next">Вперёд ▶</button>
-          <button type="button" id="lexemes-all" class="ghost">Показать все</button>
-        </div>
+        <span id="lexemes-meta" class="meta-inline">…</span>
+        <button type="button" id="lexemes-prev">◀ Назад</button>
+        <span id="lexemes-page" class="page-num">1/1</span>
+        <button type="button" id="lexemes-next">Вперёд ▶</button>
+        <button type="button" id="lexemes-all" class="ghost">Все</button>
       </div>
       <div class="split">
         <div id="lexemes-list" class="list"></div>
@@ -183,6 +180,6 @@
   <div id="toast" class="toast hidden"></div>
 </div>
 
-<script src="/admin/admin.js?v=20260524"></script>
+<script src="/admin/admin.js?v=20260524b"></script>
 </body>
 </html>

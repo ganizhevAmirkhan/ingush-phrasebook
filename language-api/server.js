@@ -64,8 +64,8 @@ function sendJson(res, status, payload) {
   res.end(JSON.stringify(payload, null, 2));
 }
 
-function sendText(res, status, body, contentType = "text/plain; charset=utf-8") {
-  res.writeHead(status, { "Content-Type": contentType });
+function sendText(res, status, body, contentType = "text/plain; charset=utf-8", extraHeaders = {}) {
+  res.writeHead(status, { "Content-Type": contentType, ...extraHeaders });
   res.end(body);
 }
 
@@ -73,6 +73,10 @@ async function sendAdminStatic(req, res, urlPath) {
   let rel = urlPath.replace(/^\/admin\/?/, "") || "index.html";
   if (rel.includes("..")) return sendText(res, 403, "Forbidden");
   const filePath = path.join(ADMIN_DIR, rel);
+  const noCache = {
+    "Cache-Control": "no-store, no-cache, must-revalidate",
+    Pragma: "no-cache"
+  };
   try {
     const stat = await fsp.stat(filePath);
     if (stat.isDirectory()) {
@@ -80,9 +84,9 @@ async function sendAdminStatic(req, res, urlPath) {
     }
     const ext = path.extname(filePath).toLowerCase();
     const data = await fsp.readFile(filePath);
-    sendText(res, 200, data, MIME[ext] || "application/octet-stream");
+    sendText(res, 200, data, MIME[ext] || "application/octet-stream", noCache);
   } catch {
-    sendText(res, 404, "Not found");
+    sendText(res, 404, "Not found", "text/plain; charset=utf-8", noCache);
   }
 }
 

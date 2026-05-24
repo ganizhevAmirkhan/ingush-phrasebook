@@ -61,7 +61,11 @@ function switchTab(name) {
   document.getElementById(`panel-${name}`)?.classList.remove("hidden");
   if (name === "overview") loadOverview();
   if (name === "patterns") loadPatterns();
-  if (name === "lexemes") loadLexemes();
+  if (name === "lexemes") {
+    lexemesPageSize = SHOW_ALL_LIMIT;
+    lexemesOffset = 0;
+    loadLexemes();
+  }
   if (name === "corpus") loadCorpus();
   if (name === "blacklist") loadBlacklist();
 }
