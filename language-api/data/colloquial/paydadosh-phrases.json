@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "importedAt": "2026-05-23T17:15:55.018Z",
+  "importedAt": "2026-05-24T07:20:14.188Z",
   "source": "paydadosh.ru",
-  "count": 4719,
+  "count": 4724,
   "categories": [
     "celebration_phrase",
     "condolence_phrase",
@@ -6918,6 +6918,18 @@
       "confidence": 0.85
     },
     {
+      "id": "pd_17984",
+      "slug": "17984-тунгал-мераж-д-а-а-дег-а",
+      "ru": "Выставив нос, как дымоход",
+      "ruNorm": "выставив нос как дымоход",
+      "ing": "Тунгал мераж дӀа а дегӀа",
+      "category": "idiom_phrase",
+      "source": "paydadosh",
+      "sourceLabel": "PaydaDosh",
+      "url": "https://paydadosh.ru/phrase/17984-тунгал-мераж-д-а-а-дег-а",
+      "confidence": 0.93
+    },
+    {
       "id": "pd_prov_2078",
       "slug": "2078-яьлар-ехар-з1оаке-тапча",
       "ru": "Выстрелил и взорвался пистолет у Заки.",
@@ -11622,6 +11634,18 @@
       "confidence": 0.93
     },
     {
+      "id": "pd_17971",
+      "slug": "17971-рузкъах-доаккхалаш-дича-цунах-валара-кхерам-ба",
+      "ru": "Ежели кичиться богатством, есть опасность его лишиться",
+      "ruNorm": "ежели кичиться богатством есть опасность его лишиться",
+      "ing": "Рузкъах доаккхалаш дича, цунах валара кхерам ба",
+      "category": "idiom_phrase",
+      "source": "paydadosh",
+      "sourceLabel": "PaydaDosh",
+      "url": "https://paydadosh.ru/phrase/17971-рузкъах-доаккхалаш-дича-цунах-валара-кхерам-ба",
+      "confidence": 0.93
+    },
+    {
       "id": "pd_17882",
       "slug": "17882-къонах-вале-сатоха-борз-яле-катоха",
       "ru": "Ежели мужчина терпи, если волк, то вырывай",
@@ -14583,6 +14607,18 @@
       "source": "paydadosh",
       "sourceLabel": "PaydaDosh",
       "url": "https://paydadosh.ru/phrase/16840-матара-кха",
+      "confidence": 0.93
+    },
+    {
+      "id": "pd_17872",
+      "slug": "17872-къаджъуха-и-овхараш-кхиитта-бер-метта-бухь-чу-ца-боллаш-кхаикадора",
+      "ru": "Заразившись коклюшем, ребенок кашлял, высунув язык",
+      "ruNorm": "заразившись коклюшем ребенок кашлял высунув язык",
+      "ing": "Къаджъуха йӀовхараш кхийтта бер, метта бухь чу ца боллаш кхайкадора",
+      "category": "idiom_phrase",
+      "source": "paydadosh",
+      "sourceLabel": "PaydaDosh",
+      "url": "https://paydadosh.ru/phrase/17872-къаджъуха-и-овхараш-кхиитта-бер-метта-бухь-чу-ца-боллаш-кхаикадора",
       "confidence": 0.93
     },
     {
@@ -18027,6 +18063,18 @@
       "source": "paydadosh",
       "sourceLabel": "PaydaDosh",
       "url": "https://paydadosh.ru/phrase/17996-фуъаш-диа-циск-санна",
+      "confidence": 0.93
+    },
+    {
+      "id": "pd_17888",
+      "slug": "17888-к-аи-доаца-яи-санна",
+      "ru": "Как котел без ручки",
+      "ruNorm": "как котел без ручки",
+      "ing": "КӀай доаца яй санна",
+      "category": "idiom_phrase",
+      "source": "paydadosh",
+      "sourceLabel": "PaydaDosh",
+      "url": "https://paydadosh.ru/phrase/17888-к-аи-доаца-яи-санна",
       "confidence": 0.93
     },
     {
@@ -33532,6 +33580,18 @@
       "sourceLabel": "PaydaDosh proverb",
       "url": "https://paydadosh.ru/proverb/818-йоккхача-шахьара-хезад-дег-чура-доаг1а-дош",
       "confidence": 0.85
+    },
+    {
+      "id": "pd_17891",
+      "slug": "17891-к-ома-дувцарах-тоам-булац",
+      "ru": "От жгучего разговора ладит не удается",
+      "ruNorm": "от жгучего разговора ладит не удается",
+      "ing": "КӀома дувцарах тоам булац",
+      "category": "idiom_phrase",
+      "source": "paydadosh",
+      "sourceLabel": "PaydaDosh",
+      "url": "https://paydadosh.ru/phrase/17891-к-ома-дувцарах-тоам-булац",
+      "confidence": 0.93
     },
     {
       "id": "pd_16520",
@@ -51248,14 +51308,14 @@
     {
       "id": "pd_19963",
       "slug": "19963-etiquette-dika-meldar-doagialda-ukh-ciagia",
-      "ru": "Устоявшаяся формула приветствия гостя хозяевам при входе в дом (буквально: «пусть всё хорошее придёт в этот дом",
+      "ru": "Устоявшаяся формула приветствия гостя хозяевам при входе в дом (буквально: «пусть всё хорошее придёт в этот дом»)",
       "ruNorm": "устоявшаяся формула приветствия гостя хозяевам при входе в дом буквально пусть все хорошее придет в этот дом",
       "ing": "Дика мелдар доагӀалда укх цӀагӀа",
-      "category": "snapshot",
+      "category": "tradition_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh snapshot",
+      "sourceLabel": "PaydaDosh",
       "url": "https://paydadosh.ru/phrase/19963-etiquette-dika-meldar-doagialda-ukh-ciagia",
-      "confidence": 0.9
+      "confidence": 0.93
     },
     {
       "id": "pd_16344",

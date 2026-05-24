@@ -16,6 +16,7 @@ const HABAR_ROOT = WORKSPACE_ROOT;
 
 const CATEGORY_DIR = path.join(HABAR_ROOT, "categories");
 const PAYDADOSH_PHRASES_FILE = path.join(ROOT, "data", "colloquial", "paydadosh-phrases.json");
+const { splitRuIngPairs } = require("./phrase-split");
 const CORPUS_STORIES_DIR = path.join(ROOT, "data", "corpus", "stories");
 const CORPUS_NOVELLAS_DIR = path.join(ROOT, "data", "corpus", "novellas");
 const BLACKLIST_FILE = path.join(ROOT, "data", "blacklist.json");
@@ -133,21 +134,21 @@ async function loadLessonColloquialPhrases() {
       const category = path.basename(filePath, ".json");
       const paragraphs = Array.isArray(json?.paragraphs) ? json.paragraphs : [];
       paragraphs.forEach((paragraph, index) => {
-        const ru = (paragraph?.ru || "").toString().trim();
-        const ing = (paragraph?.ing || "").toString().trim();
-        if (!ru || !ing || ru.length > 120) return;
-        out.push(
-          toColloquialPhraseRecord(
-            {
-              id: `${category}_${index + 1}`,
-              ru,
-              ing,
-              confidence: 0.88
-            },
-            SOURCE.CORPUS,
-            category
-          )
-        );
+        const pairs = splitRuIngPairs(paragraph?.ru, paragraph?.ing);
+        pairs.forEach((pair, subIndex) => {
+          out.push(
+            toColloquialPhraseRecord(
+              {
+                id: `${category}_${index + 1}_${subIndex + 1}`,
+                ru: pair.ru,
+                ing: pair.ing,
+                confidence: genre === "dialogue" ? 0.94 : 0.92
+              },
+              SOURCE.CORPUS,
+              category
+            )
+          );
+        });
       });
     } catch {
       // ignore bad file

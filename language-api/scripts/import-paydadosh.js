@@ -8,8 +8,8 @@ const SUMMARY_OUT = path.join(OUT_DIR, "paydadosh-import-summary.json");
 const FAILURES_OUT = path.join(OUT_DIR, "paydadosh-import-failures.json");
 const SNAPSHOT_HTML = path.join(ROOT, "data", "external", "paydadosh", "phrasebook.html");
 
-const SITEMAP_PHRASE_PAGES = 3;
-const SITEMAP_PROVERB_PAGES = 3;
+const SITEMAP_PHRASE_PAGES = Number(process.env.PD_SITEMAP_PHRASE_PAGES || 12);
+const SITEMAP_PROVERB_PAGES = Number(process.env.PD_SITEMAP_PROVERB_PAGES || 6);
 const CONCURRENCY = Number(process.env.PD_IMPORT_CONCURRENCY || 1);
 const FETCH_DELAY_MS = Number(process.env.PD_IMPORT_DELAY_MS || 450);
 const MAX_RETRIES = Number(process.env.PD_IMPORT_RETRIES || 6);
@@ -125,7 +125,7 @@ function parsePhrasePage(html, url) {
   if (!ing || !ru) return null;
 
   ru = cleanRuQuote(ru.replace(/\s*\([^)]{40,}\)\s*$/g, "").trim());
-  if (!ru) return null;
+  if (!ru || ru === "-" || !/[а-яё]/i.test(ru)) return null;
 
   const categoryMatch = html.match(/phrasebook\?category=([^"'&]+)/i);
   const category = categoryMatch ? categoryMatch[1] : "unknown";
@@ -169,6 +169,9 @@ function parseProverbPage(html, url) {
   }
 
   if (!ing || !ru) return null;
+
+  ru = cleanRuQuote(ru);
+  if (!ru || ru === "-" || !/[а-яё]/i.test(ru)) return null;
 
   return {
     id,
