@@ -300,6 +300,20 @@
       ]
     },
     {
+      "id": "i_am_happy",
+      "ruPattern": "я счастлив",
+      "description": "I am happy (male): ираз дола + быть (Ираз долаж ва со)",
+      "slots": [],
+      "ingTemplate": "Ираз долаж ва со",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я счастлив",
+          "ing_expected": "Ираз долаж ва со"
+        }
+      ]
+    },
+    {
       "id": "i_am_here",
       "ruPattern": "я здесь",
       "description": "I am here (confirming presence: Со укхаз ва, not az укхаза / Со хьокха)",

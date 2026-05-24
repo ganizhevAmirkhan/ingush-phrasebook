@@ -164,8 +164,9 @@ async function loadLessonColloquialPhrases() {
   return out;
 }
 
-// Habar phrasebook is excluded from /translate until re-enabled (avoids circular lookups).
-const DISABLE_HABAR_PHRASE_SOURCE = true;
+// Habar categories in /translate (set DISABLE_HABAR_IN_TRANSLATE=true to skip).
+const DISABLE_HABAR_PHRASE_SOURCE =
+  String(process.env.DISABLE_HABAR_IN_TRANSLATE || "false").toLowerCase() === "true";
 
 const PHRASE_SOURCE_PRIORITY = {
   [SOURCE.PAYDADOSH]: 4,
