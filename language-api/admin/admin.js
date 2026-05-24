@@ -153,7 +153,7 @@ async function loadOverview() {
         if (!g.openrouterConfigured && !g.geminiConfigured) {
           parts.push("Нет OPENROUTER_API_KEY / GEMINI_API_KEY в .env");
         }
-        geminiBox.innerHTML = `<strong>LLM:</strong> ${g.error || "ошибка"}<br><small>${parts.join("; ")}${g.detail ? `<br>${g.detail}` : ""}</small>`;
+        geminiBox.innerHTML = `<strong>LLM:</strong> ${g.error || "ошибка"}<br><small>${parts.join("; ")}${g.detail ? `<br>${g.detail}` : ""}${Array.isArray(g.openrouterAttempts) && g.openrouterAttempts.length ? `<br><br>Модели OpenRouter:<br>${g.openrouterAttempts.map((a) => `${a.model}: ${a.detail || a.error}`).join("<br>")}` : ""}</small>`;
       }
     } catch {
       geminiBox.textContent = "Не удалось проверить LLM";

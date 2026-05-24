@@ -15,7 +15,29 @@ function getGeminiKey() {
 }
 
 function getOpenRouterModel() {
-  return (process.env.OPENROUTER_MODEL || "google/gemini-2.0-flash-exp:free").trim();
+  return (process.env.OPENROUTER_MODEL || "meta-llama/llama-3.2-3b-instruct:free").trim();
+}
+
+function openRouterFallbackModels() {
+  const freeOnly = !/^(0|false|no)$/i.test(String(process.env.OPENROUTER_FREE_ONLY ?? "true").trim());
+  const paid = [
+    getOpenRouterModel(),
+    "google/gemini-2.5-flash",
+    "google/gemini-2.0-flash-001"
+  ];
+  const free = [
+    getOpenRouterModel(),
+    "meta-llama/llama-3.2-3b-instruct:free",
+    "meta-llama/llama-3.3-70b-instruct:free",
+    "qwen/qwen-3-4b:free",
+    "google/gemini-2.0-flash-exp:free"
+  ];
+  return (freeOnly ? free : [...paid, ...free])
+    .filter((value, index, arr) => value && arr.indexOf(value) === index);
+}
+
+function geminiFallbackEnabled() {
+  return /^(1|true|yes)$/i.test(String(process.env.LLM_GEMINI_FALLBACK || "").trim());
 }
 
 function getLlmConfig() {
@@ -195,18 +217,14 @@ async function callOpenRouter(prompt) {
     return { ok: false, text: "", error: "missing_openrouter_key", detail: "", provider: "openrouter" };
   }
 
-  const models = [
-    getOpenRouterModel(),
-    "google/gemini-2.0-flash-exp:free",
-    "google/gemini-2.5-flash-preview",
-    "meta-llama/llama-3.3-70b-instruct:free"
-  ].filter((value, index, arr) => value && arr.indexOf(value) === index);
+  const models = openRouterFallbackModels();
 
   const referer = (process.env.OPENROUTER_SITE_URL || "https://api.inghub.ru").trim();
   const title = (process.env.OPENROUTER_APP_NAME || "Ingush LanguageAPI").trim();
 
   let lastError = "llm_failed";
   let lastDetail = "";
+  const attempts = [];
   for (const model of models) {
     try {
       const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
@@ -220,15 +238,24 @@ async function callOpenRouter(prompt) {
         body: JSON.stringify({
           model,
           messages: [{ role: "user", content: prompt }],
-          temperature: 0.2
+          temperature: 0.2,
+          max_tokens: 512
         })
       });
 
       if (!res.ok) {
         const errText = await res.text().catch(() => "");
         const parsed = parseOpenRouterHttpError(errText, res.status);
+        attempts.push({ model, error: parsed.error, detail: parsed.detail, status: res.status });
         if (parsed.error === "invalid_openrouter_key") {
-          return { ok: false, text: "", error: parsed.error, detail: parsed.detail, provider: "openrouter" };
+          return {
+            ok: false,
+            text: "",
+            error: parsed.error,
+            detail: parsed.detail,
+            provider: "openrouter",
+            attempts
+          };
         }
         lastError = parsed.error;
         lastDetail = `${model}: ${parsed.detail}`;
@@ -238,17 +265,26 @@ async function callOpenRouter(prompt) {
       const json = await res.json();
       const text = (json?.choices?.[0]?.message?.content || "").trim();
       if (text) {
-        return { ok: true, text, error: "", detail: model, provider: "openrouter" };
+        return { ok: true, text, error: "", detail: model, provider: "openrouter", attempts };
       }
+      attempts.push({ model, error: "llm_empty", detail: "Empty response" });
       lastError = "llm_empty";
       lastDetail = `Empty response from ${model}`;
-    } catch {
+    } catch (err) {
+      attempts.push({ model, error: "llm_fetch_failed", detail: err?.message || "Network error" });
       lastError = "llm_fetch_failed";
-      lastDetail = "Network error";
+      lastDetail = err?.message || "Network error";
     }
   }
 
-  return { ok: false, text: "", error: lastError, detail: lastDetail, provider: "openrouter" };
+  return {
+    ok: false,
+    text: "",
+    error: lastError,
+    detail: lastDetail,
+    provider: "openrouter",
+    attempts
+  };
 }
 
 async function callLlm(prompt) {
@@ -256,7 +292,9 @@ async function callLlm(prompt) {
   const providers = [];
 
   if (config.openrouterConfigured) providers.push("openrouter");
-  if (config.geminiConfigured) providers.push("gemini");
+  if (config.geminiConfigured && (!config.openrouterConfigured || geminiFallbackEnabled())) {
+    providers.push("gemini");
+  }
 
   if (!providers.length) {
     return { ok: false, text: "", error: "missing_llm_key", detail: "Set OPENROUTER_API_KEY or GEMINI_API_KEY", provider: "" };
@@ -267,15 +305,6 @@ async function callLlm(prompt) {
     const result = provider === "openrouter" ? await callOpenRouter(prompt) : await callGemini(prompt);
     if (result.ok) return result;
     last = result;
-
-    const retryWithFallback = provider === "openrouter"
-      && (
-        result.error === "openrouter_rate_limited"
-        || result.error === "openrouter_no_credits"
-        || result.error === "llm_http_402"
-        || result.error === "llm_http_503"
-      );
-    if (!retryWithFallback && providers.length === 1) break;
   }
 
   return last;
@@ -292,11 +321,49 @@ async function testLlmConnection() {
     };
   }
 
-  const llm = await callLlm("Ответь одним словом: тест");
+  if (config.openrouterConfigured) {
+    const or = await callOpenRouter("Ответь одним словом: тест");
+    if (or.ok) {
+      return {
+        ok: true,
+        ...config,
+        provider: "openrouter",
+        model: or.detail || "",
+        error: "",
+        detail: or.detail || ""
+      };
+    }
+
+    const out = {
+      ok: false,
+      ...config,
+      provider: "openrouter",
+      model: "",
+      error: or.error || "openrouter_failed",
+      detail: or.detail || "",
+      openrouterAttempts: or.attempts || []
+    };
+
+    if (config.geminiConfigured && geminiFallbackEnabled()) {
+      const gem = await callGemini("Ответь одним словом: тест");
+      out.geminiFallback = {
+        ok: gem.ok,
+        error: gem.error || "",
+        detail: gem.detail || ""
+      };
+      if (gem.ok) {
+        return { ok: true, ...config, provider: "gemini", model: "", error: "", detail: "via gemini fallback" };
+      }
+    }
+
+    return out;
+  }
+
+  const llm = await callGemini("Ответь одним словом: тест");
   return {
     ok: llm.ok,
     ...config,
-    provider: llm.provider || config.primary,
+    provider: "gemini",
     model: llm.detail || "",
     error: llm.error || "",
     detail: llm.detail || ""

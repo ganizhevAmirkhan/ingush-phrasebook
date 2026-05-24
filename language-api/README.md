@@ -12,7 +12,7 @@ Optional env:
 
 - `PORT` (default: `8787`)
 - `OPENROUTER_API_KEY` — **recommended on RU VPS** (LLM via openrouter.ai, bypasses Gemini geo block)
-- `OPENROUTER_MODEL` (default: `google/gemini-2.0-flash-exp:free`)
+- `OPENROUTER_MODEL` (default: `google/gemini-2.5-flash`)
 - `OPENROUTER_SITE_URL` (default: `https://api.inghub.ru`)
 - `OPENROUTER_APP_NAME` (default: `Ingush LanguageAPI`)
 - `GEMINI_API_KEY` — fallback LLM if OpenRouter is not set
