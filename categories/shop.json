@@ -3,15 +3,15 @@
   "items": [
     {
       "ru": "Магазин",
-      "ing": "Магаз",
-      "pron": "magaz",
+      "ing": "Тикат1 ва",
+      "pron": "tikat1 va",
       "id": "f_1766025299791_6lt2",
       "audio": "f_1766025299791_6lt2.mp3"
     },
     {
       "ru": "Я в магазине",
-      "ing": "Со магазе ву",
-      "pron": "so magaze vu",
+      "ing": "Со тикат1а ва",
+      "pron": "so tikat1a va",
       "id": "f_1766025299791_bc07",
       "audio": "f_1766025299791_bc07.mp3"
     },
@@ -24,15 +24,15 @@
     },
     {
       "ru": "Мне нужно купить",
-      "ing": "Са безам ба хьа ица",
-      "pron": "sa bezam ba kha itsa",
+      "ing": "Са еза эца",
+      "pron": "sa eza etsa",
       "id": "f_1766025299791_owsw",
       "audio": "f_1766025299791_owsw.mp3"
     },
     {
       "ru": "Сколько стоит?",
-      "ing": "Шун хьила?",
-      "pron": "shun khila",
+      "ing": "Фу мах ба? /  Фу деха",
+      "pron": "fu makh ba? / fu dekha",
       "id": "f_1766025299791_fd8s",
       "audio": "f_1766025299791_fd8s.mp3"
     },
