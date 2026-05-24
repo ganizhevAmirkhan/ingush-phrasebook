@@ -51,6 +51,8 @@ let editingItemId = null;       // id при редактировании
 let editingCategory = null;     // cat при добавлении/редактировании
 
 /* --- AI sources (dosh + habar) --- */
+/** Временно: не подставлять фразы из разговорника при переводе в модалке. */
+const DISABLE_HABAR_PHRASE_SOURCE = true;
 let dictionaryWords = [];
 
 /* ================= UTILS ================= */
@@ -1415,7 +1417,7 @@ async function aiTranslateIng(){
   outIng && (outIng.value = "");
   toast("Перевод…", true);
 
-  const local = findPhraseFromHabar(ru);
+  const local = !DISABLE_HABAR_PHRASE_SOURCE ? findPhraseFromHabar(ru) : null;
   if(local?.ing){
     outIng && (outIng.value = cleanIngCandidate(local.ing));
     if(outPron && local.pron) outPron.value = safe(local.pron);
@@ -1423,7 +1425,10 @@ async function aiTranslateIng(){
     return;
   }
 
-  const res = await callLanguageApi("/translate", { ru });
+  const res = await callLanguageApi("/translate", {
+    ru,
+    skipHabar: DISABLE_HABAR_PHRASE_SOURCE,
+  });
   if(!res) return;
   outIng && (outIng.value = cleanIngCandidate(res.translation));
   if(outPron && !outPron.value.trim()){
