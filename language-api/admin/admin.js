@@ -129,7 +129,7 @@ async function loadOverview() {
       3. <b>paydadosh</b> — разговорные фразы (${c.paydaDoshPhrasesLoaded ?? 0})<br>
       4. <b>corpus/lesson</b> — короткие фразы из уроков (${c.lessonPhrasesLoaded ?? 0})<br>
       5. <b>habar</b> — фразы разговорника (<i>сейчас выключены</i> в /translate)<br>
-      6. <b>gemini</b> — LLM, если словарь не нашёл<br><br>
+      6. <b>LLM</b> — OpenRouter (приоритет) или Gemini fallback<br><br>
       <small>
         «Правила слотов» (${inv.rules ?? 0}) — это не шаблоны перевода, а технические правила падежей (base/dat/gen).<br>
         Реальные шаблоны — вкладка <b>Грамматика</b> (${inv.patterns ?? 0} шт.), поле <b>Приоритет</b> у каждого шаблона.
@@ -140,13 +140,23 @@ async function loadOverview() {
   const geminiBox = document.getElementById("gemini-box");
   if (geminiBox) {
     try {
-      const res = await fetch(`${location.origin}/health/gemini`, { cache: "no-store" });
+      const res = await fetch(`${location.origin}/health/llm`, { cache: "no-store" });
       const g = await res.json();
-      geminiBox.innerHTML = g.ok
-        ? `<strong>Gemini:</strong> работает ✓`
-        : `<strong>Gemini:</strong> ${g.error || "ошибка"}<br><small>${g.detail || ""}</small>`;
+      if (g.ok) {
+        const provider = g.provider === "openrouter" ? "OpenRouter" : "Gemini";
+        const model = g.model ? ` (${g.model})` : "";
+        geminiBox.innerHTML = `<strong>LLM:</strong> ${provider} работает ✓${model}`;
+      } else {
+        const parts = [];
+        if (g.openrouterConfigured) parts.push("OpenRouter настроен, но не отвечает");
+        if (g.geminiConfigured) parts.push("Gemini настроен, но не отвечает");
+        if (!g.openrouterConfigured && !g.geminiConfigured) {
+          parts.push("Нет OPENROUTER_API_KEY / GEMINI_API_KEY в .env");
+        }
+        geminiBox.innerHTML = `<strong>LLM:</strong> ${g.error || "ошибка"}<br><small>${parts.join("; ")}${g.detail ? `<br>${g.detail}` : ""}</small>`;
+      }
     } catch {
-      geminiBox.textContent = "Не удалось проверить Gemini";
+      geminiBox.textContent = "Не удалось проверить LLM";
     }
   }
 }

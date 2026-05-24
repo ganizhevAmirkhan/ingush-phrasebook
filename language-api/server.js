@@ -39,7 +39,9 @@ const {
   assistTask,
   getMetrics,
   getModerationQueue,
-  testGeminiConnection
+  testGeminiConnection,
+  testLlmConnection,
+  getLlmConfig
 } = require("./src/platform");
 
 const adminStore = require("./src/admin-store");
@@ -289,15 +291,20 @@ async function route(req, res) {
   }
 
   if (req.method === "GET" && path === "/health") {
-    const geminiKey = (process.env.GEMINI_API_KEY || "").trim();
-    const geminiConfigured = geminiKey.length > 10 && !/вставьте_ключ/i.test(geminiKey);
+    const llm = getLlmConfig();
     return sendJson(res, 200, {
       ok: true,
       service: "language-api",
-      geminiConfigured,
-      geminiKeyPrefix: geminiConfigured ? `${geminiKey.slice(0, 8)}…` : "",
-      geminiKeyLength: geminiKey.length
+      llmPrimary: llm.primary || null,
+      openrouterConfigured: llm.openrouterConfigured,
+      geminiConfigured: llm.geminiConfigured,
+      openrouterModel: llm.openrouterConfigured ? llm.openrouterModel : null
     });
+  }
+
+  if (req.method === "GET" && path === "/health/llm") {
+    const result = await testLlmConnection();
+    return sendJson(res, result.ok ? 200 : 503, result);
   }
 
   if (req.method === "GET" && path === "/health/gemini") {

@@ -11,7 +11,11 @@ node language-api/server.js
 Optional env:
 
 - `PORT` (default: `8787`)
-- `GEMINI_API_KEY` (used only for LLM fallback)
+- `OPENROUTER_API_KEY` — **recommended on RU VPS** (LLM via openrouter.ai, bypasses Gemini geo block)
+- `OPENROUTER_MODEL` (default: `google/gemini-2.0-flash-exp:free`)
+- `OPENROUTER_SITE_URL` (default: `https://api.inghub.ru`)
+- `OPENROUTER_APP_NAME` (default: `Ingush LanguageAPI`)
+- `GEMINI_API_KEY` — fallback LLM if OpenRouter is not set
 - `ADMIN_SECRET` (password for web admin panel)
 
 ## Admin panel
@@ -48,6 +52,8 @@ Features:
 ## Contracts
 
 - `GET /health`
+- `GET /health/llm` — test OpenRouter/Gemini connection
+- `GET /health/gemini` — test Gemini only (legacy)
 - `GET /lookup/word?ru=<text>`
 - `GET /lookup/phrase?ru=<text>`
 - `GET /lookup/corpus?q=<text>`
