@@ -80,6 +80,26 @@
       },
       "apply": "identity_from_dictionary",
       "targetForm": "base"
+    },
+    {
+      "id": "aux_neg_ba_to_bats",
+      "type": "auxiliary_negation",
+      "positive": "ба",
+      "negative": "бац",
+      "notes": "Existential: болх ба → болх бац (нет работы). Auxiliary ба + ц."
+    },
+    {
+      "id": "aux_neg_da_to_dats",
+      "type": "auxiliary_negation",
+      "positive": "да",
+      "negative": "дац",
+      "notes": "Existential: диг да → диг дац (нет топора). Auxiliary да + ц."
+    },
+    {
+      "id": "aux_definite_va",
+      "type": "auxiliary_definite",
+      "positive": "ва",
+      "notes": "Definite marker (like Arabic ال): къунах ва — the man"
     }
   ]
 }

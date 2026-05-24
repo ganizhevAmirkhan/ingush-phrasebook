@@ -334,7 +334,7 @@ function findGrammarLexeme(ruText) {
   if (targetTokens.length === 1) {
     const token = targetTokens[0];
     const tokenStem = token.length > 3 ? token.replace(/[аеиоуыяю]$/i, "") : token;
-    return state.grammar.lexemes.find((x) => {
+    const candidates = state.grammar.lexemes.filter((x) => {
       const lt = tokenizeRu(x?.ru || "");
       return lt.some((t) => {
         const tStem = t.length > 3 ? t.replace(/[аеиоуыяю]$/i, "") : t;
@@ -345,7 +345,22 @@ function findGrammarLexeme(ruText) {
           || (tokenStem && tStem && tokenStem === tStem)
         );
       });
-    }) || null;
+    });
+    if (!candidates.length) return null;
+    const scoreLexeme = (lex) => {
+      let score = 0;
+      const ruNorm = normalizeText(lex?.ru || "");
+      const pos = (lex?.pos || "").toString().toLowerCase();
+      if (ruNorm === norm) score += 200;
+      if (pos === "noun") score += 40;
+      if (pos === "verb") score += 10;
+      if (pos === "phrase" || pos === "adverb") score -= 25;
+      if ((lex?.ru || "").includes(" ")) score -= 15;
+      if (ruNorm.startsWith("на ") || ruNorm.startsWith("в ") || ruNorm.startsWith("к ")) score -= 20;
+      return score;
+    };
+    candidates.sort((a, b) => scoreLexeme(b) - scoreLexeme(a));
+    return candidates[0];
   }
   return null;
 }

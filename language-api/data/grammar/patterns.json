@@ -10304,6 +10304,34 @@
       ]
     },
     {
+      "id": "neg_i_have_no_work",
+      "ruPattern": "у меня нет работы",
+      "description": "No work — existential negation: болх + бац (ба+ц), not балха дац са",
+      "slots": [],
+      "ingTemplate": "Болх бац.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "у меня нет работы",
+          "ing_expected": "Болх бац."
+        }
+      ]
+    },
+    {
+      "id": "existential_i_have_work",
+      "ruPattern": "у меня есть работа",
+      "description": "Have work — болх ба",
+      "slots": [],
+      "ingTemplate": "Болх ба.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "у меня есть работа",
+          "ing_expected": "Болх ба."
+        }
+      ]
+    },
+    {
       "id": "family_are_you_married_female",
       "ruPattern": "ты замужем",
       "description": "Marriage status question to female",
@@ -10554,7 +10582,7 @@
     {
       "id": "generic_i_have_no_object",
       "ruPattern": "у меня нет {X}",
-      "description": "Generic negative possession phrase",
+      "description": "Generic negative possession (legacy дац+са; prefer specific patterns or бац for existential nouns)",
       "slots": [
         {
           "name": "X",
@@ -10563,7 +10591,7 @@
         }
       ],
       "ingTemplate": "{X_BASE} ДАЦ СА.",
-      "priority": 86,
+      "priority": 82,
       "examples": [
         {
           "ru": "у меня нет колодца",

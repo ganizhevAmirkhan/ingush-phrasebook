@@ -2847,6 +2847,24 @@
       }
     },
     {
+      "ru": "работа",
+      "pos": "noun",
+      "forms": {
+        "base": "болх",
+        "dat": "болх"
+      },
+      "notes": "Existential: болх ба (есть) / болх бац (нет); not locative балха"
+    },
+    {
+      "ru": "работы",
+      "pos": "noun",
+      "forms": {
+        "base": "болх",
+        "dat": "болх"
+      },
+      "notes": "Genitive of работа → root болх"
+    },
+    {
       "ru": "на работе",
       "pos": "phrase",
       "forms": {
