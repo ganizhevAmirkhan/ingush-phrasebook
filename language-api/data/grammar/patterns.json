@@ -314,6 +314,34 @@
       ]
     },
     {
+      "id": "give_cheaper_shop",
+      "ruPattern": "дай подешевле",
+      "description": "Give cheaper (colloquial: хьаяал = дай, чухьна = дешевле)",
+      "slots": [],
+      "ingTemplate": "Хьаяа чухьна",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "дай подешевле",
+          "ing_expected": "Хьаяа чухьна"
+        }
+      ]
+    },
+    {
+      "id": "give_cheaper_shop_spaced",
+      "ruPattern": "дай по дешевле",
+      "description": "Give cheaper (spaced spelling)",
+      "slots": [],
+      "ingTemplate": "Хьаяа чухьна",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "дай по дешевле",
+          "ing_expected": "Хьаяа чухьна"
+        }
+      ]
+    },
+    {
       "id": "i_am_here",
       "ruPattern": "я здесь",
       "description": "I am here (confirming presence: Со укхаз ва, not az укхаза / Со хьокха)",
