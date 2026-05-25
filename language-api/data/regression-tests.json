@@ -35,7 +35,7 @@
       "id": "f_1766017415464_h7ui",
       "category": "animals",
       "ru": "Лиса",
-      "expectedIng": "Кел"
+      "expectedIng": "Цхьугл"
     },
     {
       "id": "f_1766017415464_b23w",
@@ -53,31 +53,31 @@
       "id": "f_1766017415464_livf",
       "category": "animals",
       "ru": "Корова",
-      "expectedIng": "Ц1ан"
+      "expectedIng": "Ет"
     },
     {
       "id": "f_1766017415464_jtbe",
       "category": "animals",
       "ru": "Бык",
-      "expectedIng": "Маъгъ"
+      "expectedIng": "Буг1"
     },
     {
       "id": "f_1766017415464_b5y9",
       "category": "animals",
       "ru": "Овца",
-      "expectedIng": "Бокх"
+      "expectedIng": "Устаг1"
     },
     {
       "id": "f_1766017415464_6bep",
       "category": "animals",
       "ru": "Коза",
-      "expectedIng": "ГIов"
+      "expectedIng": "Газ"
     },
     {
       "id": "f_1766017415464_xnuq",
       "category": "animals",
       "ru": "Курица",
-      "expectedIng": "Курза"
+      "expectedIng": "Котам"
     },
     {
       "id": "f_1766017415464_tmnt",
@@ -149,7 +149,7 @@
       "id": "f_1766022575804_z8r8",
       "category": "basic_phrases",
       "ru": "Я знаю",
-      "expectedIng": "Со кхийтав"
+      "expectedIng": "Со кхийтав 1"
     },
     {
       "id": "f_1766022575804_8080",
@@ -185,19 +185,19 @@
       "id": "f_1766022575804_40v2",
       "category": "basic_phrases",
       "ru": "Поздно",
-      "expectedIng": "Т1ехьана"
+      "expectedIng": "тIехьа"
     },
     {
       "id": "f_1766022575804_72kf",
       "category": "basic_phrases",
       "ru": "Можно?",
-      "expectedIng": "Далуш?"
+      "expectedIng": "Мегарий?"
     },
     {
       "id": "f_1766022575804_z0aq",
       "category": "basic_phrases",
       "ru": "Нельзя",
-      "expectedIng": "Му далуш"
+      "expectedIng": "Мегиг дац"
     },
     {
       "id": "f_1766022575804_01wj",
@@ -215,13 +215,13 @@
       "id": "f_1766022575804_ddzp",
       "category": "basic_phrases",
       "ru": "Говори медленнее",
-      "expectedIng": "Шортиг ладу"
+      "expectedIng": "Шортиг дувцал"
     },
     {
       "id": "f_1766022575804_jrew",
       "category": "basic_phrases",
       "ru": "Повтори",
-      "expectedIng": "Даяккха"
+      "expectedIng": "Йувхвдолдел"
     },
     {
       "id": "f_1766022575804_0dvx",
@@ -257,7 +257,7 @@
       "id": "f_1766022575804_k8o8",
       "category": "basic_phrases",
       "ru": "Осторожно!",
-      "expectedIng": "Хьаьлха да!"
+      "expectedIng": "Лорвлуш!"
     },
     {
       "id": "f_1766022575804_efvj",
@@ -287,19 +287,19 @@
       "id": "f_1766022575804_vbnx",
       "category": "basic_phrases",
       "ru": "Я хочу",
-      "expectedIng": "Со безам ба"
+      "expectedIng": "Са безам ба"
     },
     {
       "id": "f_1766022575804_xvdl",
       "category": "basic_phrases",
       "ru": "Мне нужно",
-      "expectedIng": "Са давах"
+      "expectedIng": "Сун деза"
     },
     {
       "id": "f_1766022575804_aodh",
       "category": "basic_phrases",
       "ru": "Я не хочу",
-      "expectedIng": "Со безам бац"
+      "expectedIng": "Са безам бац"
     },
     {
       "id": "f_1766022575804_hse6",
@@ -317,13 +317,13 @@
       "id": "f_1766022575804_8dwr",
       "category": "basic_phrases",
       "ru": "Я занят",
-      "expectedIng": "Со дӀаякха"
+      "expectedIng": "Со мукъа вац"
     },
     {
       "id": "f_1766022575804_42g5",
       "category": "basic_phrases",
       "ru": "Я свободен",
-      "expectedIng": "Со хьалха ву"
+      "expectedIng": "Со мукъа ва"
     },
     {
       "id": "f_1766022575804_rtkc",
@@ -335,7 +335,7 @@
       "id": "f_1766022575804_ozaw",
       "category": "basic_phrases",
       "ru": "Мне трудно",
-      "expectedIng": "Са кхера"
+      "expectedIng": "Сунна хала е"
     },
     {
       "id": "f_1766022575804_s2m1",
@@ -353,7 +353,7 @@
       "id": "f_1766022575804_gjnx",
       "category": "basic_phrases",
       "ru": "Это неправильно",
-      "expectedIng": "ХӀала му дика"
+      "expectedIng": "ер ха́рцахьа"
     },
     {
       "id": "f_1766022575804_82qi",
@@ -365,7 +365,7 @@
       "id": "f_1766022575804_wewq",
       "category": "basic_phrases",
       "ru": "Я не согласен",
-      "expectedIng": "Со му кхалха ву"
+      "expectedIng": "Со ряза вац"
     },
     {
       "id": "f_1766022575804_61gt",
@@ -377,7 +377,7 @@
       "id": "f_1766022575804_279o",
       "category": "basic_phrases",
       "ru": "Мне хочется спать",
-      "expectedIng": "Са йоаг1 безам ба"
+      "expectedIng": "Са наб е безам ба"
     },
     {
       "id": "f_1766022575804_b7zj",
@@ -395,7 +395,7 @@
       "id": "f_1766022575804_dtl0",
       "category": "basic_phrases",
       "ru": "Я голоден",
-      "expectedIng": "Со хий йа"
+      "expectedIng": "Со мец ва"
     },
     {
       "id": "f_1766022575804_42zo",
@@ -407,7 +407,7 @@
       "id": "f_1766022575804_vnu0",
       "category": "basic_phrases",
       "ru": "Иди сюда",
-      "expectedIng": "Хьокха ца"
+      "expectedIng": "ХЬАВЕЛ СУГАХЬ."
     },
     {
       "id": "f_1766022575804_6d6a",
@@ -419,7 +419,7 @@
       "id": "f_1766022575804_tsy0",
       "category": "basic_phrases",
       "ru": "Стой",
-      "expectedIng": "Тха"
+      "expectedIng": "Латт"
     },
     {
       "id": "f_1766022575804_705p",
@@ -443,7 +443,7 @@
       "id": "f_1766022575804_lltk",
       "category": "basic_phrases",
       "ru": "Где это?",
-      "expectedIng": "Мичай из"
+      "expectedIng": "Мичай ер?"
     },
     {
       "id": "f_1766022575804_fpb5",
@@ -467,7 +467,7 @@
       "id": "f_1766022575804_62jy",
       "category": "basic_phrases",
       "ru": "Кто?",
-      "expectedIng": "Хо?"
+      "expectedIng": "мала"
     },
     {
       "id": "f_1766022575804_37w8",
@@ -479,7 +479,7 @@
       "id": "f_1766022575804_blmm",
       "category": "basic_phrases",
       "ru": "Сколько?",
-      "expectedIng": "Ца йа?"
+      "expectedIng": "масса"
     },
     {
       "id": "f_1766022575804_n0a1",
@@ -719,7 +719,7 @@
       "id": "f_1766023804599_7lh2",
       "category": "commands",
       "ru": "Туда иди!",
-      "expectedIng": "Цугахь вуда!"
+      "expectedIng": "цига gho"
     },
     {
       "id": "f_1766023804599_18oz",
@@ -1085,7 +1085,7 @@
       "id": "f_1766030410812_c68f",
       "category": "drink",
       "ru": "Питьё",
-      "expectedIng": "Мал"
+      "expectedIng": "малар"
     },
     {
       "id": "f_1766030410812_pszt",
@@ -1115,7 +1115,7 @@
       "id": "f_1766030410812_02gi",
       "category": "drink",
       "ru": "Принеси воды",
-      "expectedIng": "Мал дикахь"
+      "expectedIng": "хьада хий"
     },
     {
       "id": "f_1766030410812_8qdb",
@@ -1181,19 +1181,19 @@
       "id": "f_1766030410812_rvgj",
       "category": "drink",
       "ru": "Кипяток",
-      "expectedIng": "Дайхь хи"
+      "expectedIng": "Кхетта мал"
     },
     {
       "id": "f_1766030410812_ur71",
       "category": "drink",
       "ru": "Мне нужен чай",
-      "expectedIng": "Са чай давах"
+      "expectedIng": "СУН чай ДЕЗА."
     },
     {
       "id": "f_1766030410812_s2lk",
       "category": "drink",
       "ru": "Мне нужен кофе",
-      "expectedIng": "Са кофе давах"
+      "expectedIng": "СУН кофи ДЕЗА."
     },
     {
       "id": "f_1766030410812_phgm",
@@ -1205,7 +1205,7 @@
       "id": "f_1766030410812_7q6y",
       "category": "drink",
       "ru": "Ты воду будешь?",
-      "expectedIng": "Хьа мал ю?"
+      "expectedIng": "Хи моли 1а?"
     },
     {
       "id": "f_1766030410812_qh6v",
@@ -1235,13 +1235,13 @@
       "id": "f_1766030410812_dogs",
       "category": "drink",
       "ru": "Очень холодно",
-      "expectedIng": "Серда йо"
+      "expectedIng": "тIех шийла"
     },
     {
       "id": "f_1766030410812_l4cz",
       "category": "drink",
       "ru": "Очень горячо",
-      "expectedIng": "Кхетта йо"
+      "expectedIng": "тIех дӀа́йха"
     },
     {
       "id": "f_1766030410812_5kig",
@@ -1253,7 +1253,7 @@
       "id": "f_1766030410812_df8x",
       "category": "drink",
       "ru": "Я хочу молоко",
-      "expectedIng": "Со бийр безам ба"
+      "expectedIng": "сун шура еза"
     },
     {
       "id": "f_1766030410812_orwc",
@@ -1415,7 +1415,7 @@
       "id": "f_1766024735115_apde",
       "category": "family",
       "ru": "Твоя семья",
-      "expectedIng": "Хьа дошам"
+      "expectedIng": "Хьа дезал"
     },
     {
       "id": "f_1766024735115_u04d",
@@ -1439,7 +1439,7 @@
       "id": "f_1766024735115_3ahf",
       "category": "family",
       "ru": "Мать",
-      "expectedIng": "Нана1"
+      "expectedIng": "Нана"
     },
     {
       "id": "f_1766024735115_2h4w",
@@ -1463,19 +1463,19 @@
       "id": "f_1766024735115_jan1",
       "category": "family",
       "ru": "Младший брат",
-      "expectedIng": "Ваза дитта"
+      "expectedIng": "Замаг1 вош"
     },
     {
       "id": "f_1766024735115_er8f",
       "category": "family",
       "ru": "Сестра",
-      "expectedIng": "Йоьва"
+      "expectedIng": "Йиша"
     },
     {
       "id": "f_1766024735115_vjnb",
       "category": "family",
       "ru": "Старшая сестра",
-      "expectedIng": "Йоьва хьокха"
+      "expectedIng": "Йоакха йиш"
     },
     {
       "id": "f_1766024735115_demi",
@@ -1487,13 +1487,13 @@
       "id": "f_1766024735115_gjst",
       "category": "family",
       "ru": "Сын",
-      "expectedIng": "КIант"
+      "expectedIng": "Во1"
     },
     {
       "id": "f_1766024735115_8jdw",
       "category": "family",
       "ru": "Дочь",
-      "expectedIng": "Керет"
+      "expectedIng": "Йоа1а"
     },
     {
       "id": "f_1766024735115_d6l5",
@@ -1505,43 +1505,43 @@
       "id": "f_1766024735115_daf6",
       "category": "family",
       "ru": "Мой сын",
-      "expectedIng": "Со кIант"
+      "expectedIng": "Са воа1а"
     },
     {
       "id": "f_1766024735115_joc0",
       "category": "family",
       "ru": "Моя дочь",
-      "expectedIng": "Со керет"
+      "expectedIng": "Са йоа1а"
     },
     {
       "id": "f_1766024735115_0ug8",
       "category": "family",
       "ru": "Муж",
-      "expectedIng": "Солжа"
+      "expectedIng": "Мара"
     },
     {
       "id": "f_1766024735115_3a0f",
       "category": "family",
       "ru": "Жена",
-      "expectedIng": "ЙоагI"
+      "expectedIng": "цIен-нана"
     },
     {
       "id": "f_1766024735115_dxje",
       "category": "family",
       "ru": "Бабушка",
-      "expectedIng": "Баб"
+      "expectedIng": "Дя нана"
     },
     {
       "id": "f_1766024735115_uh15",
       "category": "family",
       "ru": "Дедушка",
-      "expectedIng": "Бер"
+      "expectedIng": "Дя да"
     },
     {
       "id": "f_1766024735115_b4ws",
       "category": "family",
       "ru": "Родственники",
-      "expectedIng": "Къонах"
+      "expectedIng": "Гаргр нах"
     },
     {
       "id": "f_1766024735115_ncgr",
@@ -1559,13 +1559,13 @@
       "id": "f_1766024735115_wmba",
       "category": "family",
       "ru": "У меня есть семья",
-      "expectedIng": "Со дошам йо"
+      "expectedIng": "дезал ба са"
     },
     {
       "id": "f_1766024735115_x8u5",
       "category": "family",
       "ru": "У меня нет семьи",
-      "expectedIng": "Со дошам му йо"
+      "expectedIng": "Дезал бац са"
     },
     {
       "id": "f_1766024735115_f655",
@@ -1577,7 +1577,7 @@
       "id": "f_1766024735115_bj7m",
       "category": "family",
       "ru": "Ты замужем?",
-      "expectedIng": "Хьа йоагI?"
+      "expectedIng": "хьо маьре йи?"
     },
     {
       "id": "f_1766024735115_cocf",
@@ -1589,7 +1589,7 @@
       "id": "f_1766024735115_wfd2",
       "category": "family",
       "ru": "Я замужем",
-      "expectedIng": "Со йоагI"
+      "expectedIng": "со маьре е"
     },
     {
       "id": "f_1766024735115_h0z3",
@@ -1601,13 +1601,13 @@
       "id": "f_1766024735115_ky42",
       "category": "family",
       "ru": "У тебя есть дети?",
-      "expectedIng": "Хьа из йой?"
+      "expectedIng": "бераш ди хьа?"
     },
     {
       "id": "f_1766024735115_3ffl",
       "category": "family",
       "ru": "У меня есть дети",
-      "expectedIng": "Со из йо"
+      "expectedIng": "бераш да са"
     },
     {
       "id": "f_1766024735115_621m",
@@ -1625,7 +1625,7 @@
       "id": "f_1766024735115_fsaw",
       "category": "family",
       "ru": "Моя семья дома",
-      "expectedIng": "Со дошам ц1га ву"
+      "expectedIng": "са дезал цӀагӀа ба"
     },
     {
       "id": "f_1766024735115_clmi",
@@ -1637,19 +1637,19 @@
       "id": "f_1766024735115_ansp",
       "category": "family",
       "ru": "Это моя сестра",
-      "expectedIng": "Ха со йоьва"
+      "expectedIng": "ер са йиша"
     },
     {
       "id": "f_1766024735115_efga",
       "category": "family",
       "ru": "Это мои родители",
-      "expectedIng": "Ха сий да-нана"
+      "expectedIng": "Ераж са да-нана"
     },
     {
       "id": "f_1766024735115_5em2",
       "category": "family",
       "ru": "У меня много родственников",
-      "expectedIng": "Со къонах меттиг"
+      "expectedIng": "са дукха гаргара нах ба"
     },
     {
       "id": "f_1766024735115_5493",
@@ -1661,25 +1661,25 @@
       "id": "f_1766024735115_22eg",
       "category": "family",
       "ru": "Сколько у тебя братьев?",
-      "expectedIng": "Хьа ваза ца йа?"
+      "expectedIng": "Масса вош ва хьа"
     },
     {
       "id": "f_1766024735115_hvge",
       "category": "family",
       "ru": "Сколько сестёр?",
-      "expectedIng": "Хьа йоьва ца йа?"
+      "expectedIng": "МАССА ЙИША ЙА?"
     },
     {
       "id": "f_1766024735115_alyn",
       "category": "family",
       "ru": "Я старший в семье",
-      "expectedIng": "Со хьокха дошамаш"
+      "expectedIng": "Ц1аг1ара воакха ва со"
     },
     {
       "id": "f_1766024735115_fbpe",
       "category": "family",
       "ru": "Я младший в семье",
-      "expectedIng": "Со дитта дошамаш"
+      "expectedIng": "Со цаг1ара зама ва"
     },
     {
       "id": "f_1766024735115_6j74",
@@ -1697,7 +1697,7 @@
       "id": "f_1766022476934_xvzd",
       "category": "food",
       "ru": "Питьё",
-      "expectedIng": "Маларннн"
+      "expectedIng": "малар"
     },
     {
       "id": "f_1766022476934_18x6",
@@ -1811,25 +1811,25 @@
       "id": "f_1766022476934_8e6w",
       "category": "food",
       "ru": "Я наелся",
-      "expectedIng": "Со хий йола"
+      "expectedIng": "Со визав"
     },
     {
       "id": "f_1766022476934_4e34",
       "category": "food",
       "ru": "Я хочу ещё",
-      "expectedIng": "Со хьа а безам ба"
+      "expectedIng": "сун кха1 деза"
     },
     {
       "id": "f_1766022476934_8pvl",
       "category": "food",
       "ru": "Не хочу это",
-      "expectedIng": "Со ха безам бац"
+      "expectedIng": "Сун из езац"
     },
     {
       "id": "f_1766022476934_9g0d",
       "category": "food",
       "ru": "Принеси еду",
-      "expectedIng": "Хий дика"
+      "expectedIng": "Хий дал"
     },
     {
       "id": "f_1766022476934_yqu7",
@@ -1841,49 +1841,49 @@
       "id": "f_1766022476934_2tj4",
       "category": "food",
       "ru": "Это вкусно?",
-      "expectedIng": "Ха шор хьо?"
+      "expectedIng": "Чам болаж йи из?"
     },
     {
       "id": "f_1766022476934_pajr",
       "category": "food",
       "ru": "Я приготовлю",
-      "expectedIng": "Со хий дулаа"
+      "expectedIng": "Аз йа1 хьам кичеге"
     },
     {
       "id": "f_1766022476934_c07r",
       "category": "food",
       "ru": "Приготовь еду",
-      "expectedIng": "Хий дуйла"
+      "expectedIng": "Йа1 хьам ел"
     },
     {
       "id": "f_1766022476934_ltu9",
       "category": "food",
       "ru": "Я ем",
-      "expectedIng": "Со хий йуаж"
+      "expectedIng": "Со хьам юаж ва"
     },
     {
       "id": "f_1766022476934_watg",
       "category": "food",
       "ru": "Ты ешь?",
-      "expectedIng": "Хьа хий йуаж?"
+      "expectedIng": "Хьо йуаж ви?"
     },
     {
       "id": "f_1766022476934_aprs",
       "category": "food",
       "ru": "Я пью",
-      "expectedIng": "Со мал ю"
+      "expectedIng": "Со молаж ва"
     },
     {
       "id": "f_1766022476934_uq3t",
       "category": "food",
       "ru": "Ты пьёшь?",
-      "expectedIng": "Хьа мал ю?"
+      "expectedIng": "Хьо молаж ви?"
     },
     {
       "id": "f_1766022476934_n01u",
       "category": "food",
       "ru": "3",
-      "expectedIng": "3"
+      "expectedIng": "Фу1"
     },
     {
       "id": "f_1766185275816_s9tr",
@@ -1931,13 +1931,13 @@
       "id": "f_1766018537464_y98a",
       "category": "greetings",
       "ru": "Рад встрече с тобой",
-      "expectedIng": "Со хьо дог1ийла шун"
+      "expectedIng": "Г1адвахав хьог1а кхийта"
     },
     {
       "id": "f_1766018537464_411m",
       "category": "greetings",
       "ru": "Давно не виделись",
-      "expectedIng": "Дуьйре хьо гац ву"
+      "expectedIng": "Дукха ха е сун хьо барьг ца гу"
     },
     {
       "id": "f_1766018537464_uqqe",
@@ -1955,25 +1955,25 @@
       "id": "f_1766018537464_54sh",
       "category": "greetings",
       "ru": "Входите",
-      "expectedIng": "Чуда!"
+      "expectedIng": "Чудовл"
     },
     {
       "id": "f_1766018537464_tkwe",
       "category": "greetings",
       "ru": "Проходите",
-      "expectedIng": "Воаг1а!"
+      "expectedIng": "Чувала"
     },
     {
       "id": "f_1766018537464_bpfs",
       "category": "greetings",
       "ru": "Как ты?",
-      "expectedIng": "Мишта хьа?22"
+      "expectedIng": "Мишту хьо?"
     },
     {
       "id": "f_1766018537464_9lo2",
       "category": "greetings",
       "ru": "Как вы?",
-      "expectedIng": "Мишта шу?"
+      "expectedIng": "маштад шо"
     },
     {
       "id": "f_1766018537464_21v9",
@@ -1985,7 +1985,7 @@
       "id": "f_1766018537464_ok9m",
       "category": "greetings",
       "ru": "Очень хорошо",
-      "expectedIng": "Дика йо"
+      "expectedIng": "тIех дика"
     },
     {
       "id": "f_1766018537464_4n3l",
@@ -2015,7 +2015,7 @@
       "id": "f_1766018537464_k5f2",
       "category": "greetings",
       "ru": "Прощай",
-      "expectedIng": "Санди аьттув"
+      "expectedIng": "1адикхейл"
     },
     {
       "id": "f_1766018537464_j2mc",
@@ -2027,13 +2027,13 @@
       "id": "f_1766018537464_re4b",
       "category": "greetings",
       "ru": "Увидимся позже",
-      "expectedIng": "Т1ехьа хьа гуйнагва"
+      "expectedIng": "Т1ехьа гуда вай"
     },
     {
       "id": "f_1766018537464_1kwt",
       "category": "greetings",
       "ru": "Спокойной ночи",
-      "expectedIng": "Йоьх маршалла"
+      "expectedIng": "Бийса даькъелхейла"
     },
     {
       "id": "f_1766018537464_wq2y",
@@ -2045,7 +2045,7 @@
       "id": "f_1766018537464_pv5e",
       "category": "greetings",
       "ru": "Как прошёл день?",
-      "expectedIng": "Дев мишта ха?"
+      "expectedIng": "Ди да мишт дахар хьа?"
     },
     {
       "id": "f_1766018537464_de0r",
@@ -2063,25 +2063,25 @@
       "id": "f_1766018537464_09k4",
       "category": "greetings",
       "ru": "Приятно познакомиться",
-      "expectedIng": "Со хьо дог1ийла шун"
+      "expectedIng": "хоза вовза"
     },
     {
       "id": "f_1766018537464_6yz8",
       "category": "greetings",
       "ru": "Рад знакомству",
-      "expectedIng": "Со хьо дог1ийла шун"
+      "expectedIng": "Дк хет вейза"
     },
     {
       "id": "f_1766018537465_rykm",
       "category": "greetings",
       "ru": "Как жизнь?",
-      "expectedIng": "Кхет а хьа?"
+      "expectedIng": "Мишта да вахар?"
     },
     {
       "id": "f_1766018537465_xd1p",
       "category": "greetings",
       "ru": "Нормально",
-      "expectedIng": "Халха"
+      "expectedIng": "Мегаж да"
     },
     {
       "id": "f_1766018537465_1rcb",
@@ -2093,7 +2093,7 @@
       "id": "f_1766018537465_3qkz",
       "category": "greetings",
       "ru": "Очень рад",
-      "expectedIng": "Шун йо11"
+      "expectedIng": "тIех Г1адваха ва"
     },
     {
       "id": "f_1766018537465_cxq8",
@@ -2105,7 +2105,7 @@
       "id": "f_1766018537465_ah0v",
       "category": "greetings",
       "ru": "Пожелаю удачи",
-      "expectedIng": "Къонах хил йу"
+      "expectedIng": "Аьтту боакхалб"
     },
     {
       "id": "f_1766018537465_2qy6",
@@ -2135,7 +2135,7 @@
       "id": "f_1766018537465_cari",
       "category": "greetings",
       "ru": "Заходи",
-      "expectedIng": "Чуда"
+      "expectedIng": "Чудавл"
     },
     {
       "id": "f_1766018537465_5pj3",
@@ -2147,7 +2147,7 @@
       "id": "f_1766018537465_6tze",
       "category": "greetings",
       "ru": "Иди сюда",
-      "expectedIng": "Хьокха ца"
+      "expectedIng": "Хьавел сугахь"
     },
     {
       "id": "f_1766018537465_7dma",
@@ -2237,13 +2237,13 @@
       "id": "f_1766020839248_52dq",
       "category": "health",
       "ru": "У меня болит голова",
-      "expectedIng": "Са ло ма беха"
+      "expectedIng": "Са корт лаз"
     },
     {
       "id": "f_1766020839248_04rn",
       "category": "health",
       "ru": "У меня болит живот",
-      "expectedIng": "Са гIал беха"
+      "expectedIng": "Са че лаз"
     },
     {
       "id": "f_1766020839248_5b5u",
@@ -2261,7 +2261,7 @@
       "id": "f_1766020839248_xl6i",
       "category": "health",
       "ru": "Мне нужно к врачу",
-      "expectedIng": "Са дохача давах"
+      "expectedIng": "сун лор эша"
     },
     {
       "id": "f_1766020839248_uksz",
@@ -2279,13 +2279,13 @@
       "id": "f_1766020839248_8n7s",
       "category": "health",
       "ru": "Мне холодно",
-      "expectedIng": "Са сув"
+      "expectedIng": "сун шийла йи"
     },
     {
       "id": "f_1766020839248_5e48",
       "category": "health",
       "ru": "Мне жарко",
-      "expectedIng": "Са деша"
+      "expectedIng": "СОНА ЙIАЙХА Я"
     },
     {
       "id": "f_1766020839248_zs2d",
@@ -2309,7 +2309,7 @@
       "id": "f_1766020839248_9onf",
       "category": "health",
       "ru": "Мне нужна еда",
-      "expectedIng": "Са гIала давах"
+      "expectedIng": "СУН даар ЕЗА."
     },
     {
       "id": "f_1766020839248_lwcz",
@@ -2375,37 +2375,37 @@
       "id": "f_1766021548159_g0mi",
       "category": "help_requests",
       "ru": "Вызови помощь",
-      "expectedIng": "Г1о ца веза"
+      "expectedIng": "гIо дех"
     },
     {
       "id": "f_1766021548159_g07y",
       "category": "help_requests",
       "ru": "Я потерялся",
-      "expectedIng": "Со седа хинна"
+      "expectedIng": "со вейнав"
     },
     {
       "id": "f_1766021548159_1ev3",
       "category": "help_requests",
       "ru": "Я поранился",
-      "expectedIng": "Со беха хинна"
+      "expectedIng": "Сун чов яй"
     },
     {
       "id": "f_1766021548159_tb85",
       "category": "help_requests",
       "ru": "Поддержи меня",
-      "expectedIng": "Са дог1ийла"
+      "expectedIng": "dhælacæ сога кIал"
     },
     {
       "id": "f_1766021548159_zj28",
       "category": "help_requests",
       "ru": "Подожди меня",
-      "expectedIng": "Са сабар де"
+      "expectedIng": "сакбар де суна"
     },
     {
       "id": "f_1766021548159_4jgm",
       "category": "help_requests",
       "ru": "Жди здесь",
-      "expectedIng": "Хьокха сабар де"
+      "expectedIng": "Сабар де укхаза"
     },
     {
       "id": "f_1766021548159_m6ix",
@@ -2441,7 +2441,7 @@
       "id": "f_1766025491600_1bvj",
       "category": "home",
       "ru": "Кухня",
-      "expectedIng": "Шуьл"
+      "expectedIng": "Нан ц1а"
     },
     {
       "id": "f_1766025491600_ol4z",
@@ -2453,7 +2453,7 @@
       "id": "f_1766025491600_cpdt",
       "category": "home",
       "ru": "Гостиная",
-      "expectedIng": "Дошамаш къам"
+      "expectedIng": "Хьаш ц1а"
     },
     {
       "id": "f_1766025491600_tzv6",
@@ -2477,7 +2477,7 @@
       "id": "f_1766025491600_tkjf",
       "category": "home",
       "ru": "Потолок",
-      "expectedIng": "Байлакх"
+      "expectedIng": "тхов"
     },
     {
       "id": "f_1766025491600_eddy",
@@ -2513,7 +2513,7 @@
       "id": "f_1766025491600_8wu2",
       "category": "home",
       "ru": "Грязно",
-      "expectedIng": "Муса"
+      "expectedIng": "бIеха"
     },
     {
       "id": "f_1766025491600_a5ll",
@@ -2711,7 +2711,7 @@
       "id": "f_1766017407916_xf2b",
       "category": "hunt",
       "ru": "Старый след",
-      "expectedIng": "Дуьйре керд"
+      "expectedIng": "тиша лер"
     },
     {
       "id": "f_1766017407916_lexk",
@@ -2741,7 +2741,7 @@
       "id": "f_1766017407916_33b9",
       "category": "hunt",
       "ru": "Олень",
-      "expectedIng": "Керла"
+      "expectedIng": "сай"
     },
     {
       "id": "f_1766017407916_csm3",
@@ -2759,7 +2759,7 @@
       "id": "f_1766017407916_ezui",
       "category": "hunt",
       "ru": "Он далеко",
-      "expectedIng": "Из долча"
+      "expectedIng": "из гаьна"
     },
     {
       "id": "f_1766017407916_l6mp",
@@ -2891,7 +2891,7 @@
       "id": "f_1766017407916_r99x",
       "category": "hunt",
       "ru": "Очень опасно",
-      "expectedIng": "Кхерме йо"
+      "expectedIng": "тIех унзара"
     },
     {
       "id": "f_1766017407916_k5q3",
@@ -3023,7 +3023,7 @@
       "id": "f_1766025409671_vaj6",
       "category": "money",
       "ru": "Цена",
-      "expectedIng": "Хьила"
+      "expectedIng": "мах цены нет! мах баь варгвац"
     },
     {
       "id": "f_1766025409671_sojn",
@@ -3047,19 +3047,19 @@
       "id": "f_1766025409671_6zbk",
       "category": "money",
       "ru": "Дай скидку",
-      "expectedIng": "Хьила ца хьа"
+      "expectedIng": "x́a тIерабакх"
     },
     {
       "id": "f_1766025409671_35fy",
       "category": "money",
       "ru": "У меня нет денег",
-      "expectedIng": "Со му акхча йо"
+      "expectedIng": "дац сога а шайка"
     },
     {
       "id": "f_1766025409671_li2c",
       "category": "money",
       "ru": "У меня есть деньги",
-      "expectedIng": "Со акхча йо"
+      "expectedIng": "сога да ахча"
     },
     {
       "id": "f_1766025409671_y3hz",
@@ -3077,13 +3077,13 @@
       "id": "f_1766025409671_0un0",
       "category": "money",
       "ru": "Заплати",
-      "expectedIng": "Хила деш!"
+      "expectedIng": "Дале мах"
     },
     {
       "id": "f_1766025409671_jdry",
       "category": "money",
       "ru": "ввыам",
-      "expectedIng": "апв"
+      "expectedIng": "сом"
     },
     {
       "id": "f_1766025451240_dwk0",
@@ -3149,7 +3149,7 @@
       "id": "f_1766025451240_3yk9",
       "category": "numbers",
       "ru": "Сколько?",
-      "expectedIng": "Шун мотт?"
+      "expectedIng": "масса"
     },
     {
       "id": "f_1766025451240_aqgc",
@@ -3167,7 +3167,7 @@
       "id": "f_1766025451240_u6ys",
       "category": "numbers",
       "ru": "Раз",
-      "expectedIng": "Ц1е"
+      "expectedIng": "тӀаккха, Ца1"
     },
     {
       "id": "f_1766025451240_1mmt",
@@ -3179,19 +3179,19 @@
       "id": "f_1766025451240_34y4",
       "category": "numbers",
       "ru": "Много",
-      "expectedIng": "Дар"
+      "expectedIng": "дукха"
     },
     {
       "id": "f_1766025451240_c0jh",
       "category": "numbers",
       "ru": "Мало",
-      "expectedIng": "Керча"
+      "expectedIng": "кӀезига"
     },
     {
       "id": "f_1766025451240_8a2f",
       "category": "numbers",
       "ru": "ывсвымсывм",
-      "expectedIng": "асыуасмыв"
+      "expectedIng": "Са веза даваха"
     },
     {
       "id": "f_1766024553032_op08",
@@ -3227,7 +3227,7 @@
       "id": "f_1766024553032_twbw",
       "category": "orientation",
       "ru": "Близко",
-      "expectedIng": "Гянна"
+      "expectedIng": "гарга"
     },
     {
       "id": "f_1766024553032_3m02",
@@ -3251,7 +3251,7 @@
       "id": "f_1766024553032_j2uj",
       "category": "orientation",
       "ru": "Направо",
-      "expectedIng": "Бархала"
+      "expectedIng": "аьттехьа"
     },
     {
       "id": "f_1766024553032_gbhm",
@@ -3269,37 +3269,37 @@
       "id": "f_1766024553032_f35r",
       "category": "orientation",
       "ru": "Назад",
-      "expectedIng": "Патахка"
+      "expectedIng": "юха / тIехьашкахьа юха"
     },
     {
       "id": "f_1766024553032_cnj6",
       "category": "orientation",
       "ru": "Покажи дорогу",
-      "expectedIng": "Готта хьаьжа"
+      "expectedIng": "хьахокха никъа"
     },
     {
       "id": "f_1766024553032_ppb1",
       "category": "orientation",
       "ru": "Покажи мне место",
-      "expectedIng": "Са мича хьаьжа"
+      "expectedIng": "хьахокха моттиг"
     },
     {
       "id": "f_1766024553032_az09",
       "category": "orientation",
       "ru": "Идём туда",
-      "expectedIng": "Тхо цугахь вудаш"
+      "expectedIng": "Валле цига"
     },
     {
       "id": "f_1766024553032_qq7d",
       "category": "orientation",
       "ru": "Идём сюда",
-      "expectedIng": "Тхо хьокха вудаш"
+      "expectedIng": "Валле укхаза"
     },
     {
       "id": "f_1766024553032_73ei",
       "category": "orientation",
       "ru": "Это правильная дорога?",
-      "expectedIng": "Ха дика готта йо?"
+      "expectedIng": "Ер ба бакъахар никъ."
     },
     {
       "id": "f_1766024553032_o64f",
@@ -3311,61 +3311,61 @@
       "id": "f_1766024553032_c83m",
       "category": "orientation",
       "ru": "Я заблудился",
-      "expectedIng": "Со готта седа хинна"
+      "expectedIng": "Тулвеннав со"
     },
     {
       "id": "f_1766024553032_njdf",
       "category": "orientation",
       "ru": "Мы заблудились",
-      "expectedIng": "Тхо готта седа хинна"
+      "expectedIng": "Тулденад тхо"
     },
     {
       "id": "f_1766024553032_y4tt",
       "category": "orientation",
       "ru": "Где ближайший дом?",
-      "expectedIng": "Гянна ц1а хьа?"
+      "expectedIng": "Мичай эггара гаргагIара цIа?"
     },
     {
       "id": "f_1766024553032_c76k",
       "category": "orientation",
       "ru": "Где тропа?",
-      "expectedIng": "Даша хьа?"
+      "expectedIng": "Мичай наькъа така?"
     },
     {
       "id": "f_1766024553032_njyz",
       "category": "orientation",
       "ru": "Где дорога?",
-      "expectedIng": "Готта хьа?"
+      "expectedIng": "Мичаб никъа?"
     },
     {
       "id": "f_1766024553032_3n1a",
       "category": "orientation",
       "ru": "Где деревня?",
-      "expectedIng": "Эль хьа?"
+      "expectedIng": "Мичай юрт?"
     },
     {
       "id": "f_1766024553032_7jl6",
       "category": "orientation",
       "ru": "Иди вперёд",
-      "expectedIng": "Хьалха вуда"
+      "expectedIng": "Хьа хьалха валл"
     },
     {
       "id": "f_1766024553032_g4se",
       "category": "orientation",
       "ru": "Иди назад",
-      "expectedIng": "Патахка вуда"
+      "expectedIng": "Юха верза / тIехьашкахьа гIу / Юха вулла"
     },
     {
       "id": "f_1766024553032_u7u8",
       "category": "orientation",
       "ru": "Иди вверх",
-      "expectedIng": "БIар вуда"
+      "expectedIng": "УрагIа гIу"
     },
     {
       "id": "f_1766024553032_15vv",
       "category": "orientation",
       "ru": "Иди вниз",
-      "expectedIng": "ЦIара вуда"
+      "expectedIng": "Iо гIу / Iо къалхa валl"
     },
     {
       "id": "f_1766024553032_8j02",
@@ -3377,7 +3377,7 @@
       "id": "f_1766024553032_0qrg",
       "category": "orientation",
       "ru": "Как пройти в село?",
-      "expectedIng": "Эль мишта вах веза?"
+      "expectedIng": "юрта мишта вах веза?"
     },
     {
       "id": "f_1766024553032_76eo",
@@ -3467,13 +3467,13 @@
       "id": "f_1766025348310_p1pi",
       "category": "greetings",
       "ru": "Рад тебя видеть",
-      "expectedIng": "Со хьо гу вах шун"
+      "expectedIng": "ДИКА ХЕТ СОНА ХЬО БIАРГАВАЙНА."
     },
     {
       "id": "f_1766025348310_kfae",
       "category": "greetings",
       "ru": "Рад встрече с тобой",
-      "expectedIng": "Со хьо дог1ийла шун"
+      "expectedIng": "Г1АДВАХАВ ХЬОГ1А КХИЙТА."
     },
     {
       "id": "f_1766025348310_j7sr",
@@ -3491,7 +3491,7 @@
       "id": "f_1766025348310_khbn",
       "category": "greetings",
       "ru": "Добро пожаловать",
-      "expectedIng": "Марша бо!"
+      "expectedIng": "МЯРША ВОАГ1АЛ"
     },
     {
       "id": "f_1766025348310_zwzt",
@@ -3557,7 +3557,7 @@
       "id": "f_1766025348310_176d",
       "category": "greetings",
       "ru": "Прощай",
-      "expectedIng": "Санди аьттув"
+      "expectedIng": "IАДИКХЕЙЛ."
     },
     {
       "id": "f_1766025348310_agkf",
@@ -3599,7 +3599,7 @@
       "id": "f_1766025348310_ek2k",
       "category": "greetings",
       "ru": "Как вечер?",
-      "expectedIng": "Гув мишта ха?"
+      "expectedIng": "ма сайре"
     },
     {
       "id": "f_1766025348310_1ben",
@@ -3623,7 +3623,7 @@
       "id": "f_1766025348310_0678",
       "category": "greetings",
       "ru": "Нормально",
-      "expectedIng": "Халха"
+      "expectedIng": "МЕГАЖ ДА."
     },
     {
       "id": "f_1766025348310_3bxn",
@@ -3635,7 +3635,7 @@
       "id": "f_1766025348310_pvqq",
       "category": "greetings",
       "ru": "Очень рад",
-      "expectedIng": "Шун йо"
+      "expectedIng": "ТIЕХ Г1АДВАХА ВА."
     },
     {
       "id": "f_1766025348310_3mkx",
@@ -3647,7 +3647,7 @@
       "id": "f_1766025348310_zx0c",
       "category": "greetings",
       "ru": "Пожелаю удачи",
-      "expectedIng": "Къонах хил йу"
+      "expectedIng": "АЬТТУ БОАКХАЛБ."
     },
     {
       "id": "f_1766025348310_6ems",
@@ -3665,7 +3665,7 @@
       "id": "f_1766025348310_sm3p",
       "category": "greetings",
       "ru": "Садись",
-      "expectedIng": "Де ца"
+      "expectedIng": "1аха"
     },
     {
       "id": "f_1766025348310_xtw9",
@@ -3677,19 +3677,19 @@
       "id": "f_1766025348310_che2",
       "category": "greetings",
       "ru": "Заходи",
-      "expectedIng": "Чуда"
+      "expectedIng": "ЧУДАВЛ."
     },
     {
       "id": "f_1766025348310_6k2e",
       "category": "greetings",
       "ru": "Заходите",
-      "expectedIng": "Шу чуда"
+      "expectedIng": "Шо чудавла"
     },
     {
       "id": "f_1766025348310_gow1",
       "category": "greetings",
       "ru": "Иди сюда",
-      "expectedIng": "Хьокха ца"
+      "expectedIng": "ХЬАВЕЛ СУГАХЬ."
     },
     {
       "id": "f_1766025348310_kj3q",
@@ -3707,13 +3707,13 @@
       "id": "f_1766025299791_6lt2",
       "category": "shop",
       "ru": "Магазин",
-      "expectedIng": "Магаз"
+      "expectedIng": "Тикат1 ва"
     },
     {
       "id": "f_1766025299791_bc07",
       "category": "shop",
       "ru": "Я в магазине",
-      "expectedIng": "Со магазе ву"
+      "expectedIng": "Со тикат1а ва"
     },
     {
       "id": "f_1766025299791_dm4o",
@@ -3725,31 +3725,31 @@
       "id": "f_1766025299791_owsw",
       "category": "shop",
       "ru": "Мне нужно купить",
-      "expectedIng": "Са безам ба хьа ица"
+      "expectedIng": "Са еза эца"
     },
     {
       "id": "f_1766025299791_fd8s",
       "category": "shop",
       "ru": "Сколько стоит?",
-      "expectedIng": "Шун хьила?"
+      "expectedIng": "Фу мах ба? /  Фу деха"
     },
     {
       "id": "f_1766025299791_8guq",
       "category": "shop",
       "ru": "Это дорого",
-      "expectedIng": "Ха йо хьила"
+      "expectedIng": "ЕР деза да"
     },
     {
       "id": "f_1766025299791_5wsn",
       "category": "shop",
       "ru": "Это дешево",
-      "expectedIng": "Ха ца хьила"
+      "expectedIng": "ЕР дай да"
     },
     {
       "id": "f_1766025299791_oxdj",
       "category": "shop",
       "ru": "Дай скидку",
-      "expectedIng": "Хьила ца хьа"
+      "expectedIng": "мах тIерабаьккха"
     },
     {
       "id": "f_1766025299791_zt3m",
@@ -3761,25 +3761,25 @@
       "id": "f_1766025299791_x2ou",
       "category": "shop",
       "ru": "Могу я посмотреть?",
-      "expectedIng": "Со хьаьжа вох?"
+      "expectedIng": "Мегиг ви со хьаж?"
     },
     {
       "id": "f_1766025299791_f1zj",
       "category": "shop",
       "ru": "Покажи это",
-      "expectedIng": "Ха хьаьжа"
+      "expectedIng": "Хьахьокхал из"
     },
     {
       "id": "f_1766025299791_ruek",
       "category": "shop",
       "ru": "У тебя есть ещё?",
-      "expectedIng": "Хьа т1а хьуна?"
+      "expectedIng": "Кха1 йи хьуга?"
     },
     {
       "id": "f_1766025299791_iv85",
       "category": "shop",
       "ru": "Я беру это",
-      "expectedIng": "Со ха йийла"
+      "expectedIng": "Аз хьаэца из"
     },
     {
       "id": "f_1766025299791_u6ga",
@@ -4175,37 +4175,37 @@
       "id": "f_1766025224975_rpgc",
       "category": "tools",
       "ru": "Инструменты",
-      "expectedIng": "Дехар"
+      "expectedIng": "оатхалаш"
     },
     {
       "id": "f_1766025224975_ijdq",
       "category": "tools",
       "ru": "Инструмент",
-      "expectedIng": "Дех"
+      "expectedIng": "Оатхал"
     },
     {
       "id": "f_1766025224975_h5fn",
       "category": "tools",
       "ru": "Нож",
-      "expectedIng": "Къам"
+      "expectedIng": "Урс"
     },
     {
       "id": "f_1766025224975_57b5",
       "category": "tools",
       "ru": "Дай нож",
-      "expectedIng": "Къам хий!"
+      "expectedIng": "Хьдал урс"
     },
     {
       "id": "f_1766025224975_uz3o",
       "category": "tools",
       "ru": "Топор",
-      "expectedIng": "БIа"
+      "expectedIng": "диг"
     },
     {
       "id": "f_1766025224975_d217",
       "category": "tools",
       "ru": "Пила",
-      "expectedIng": "Сар"
+      "expectedIng": "херх"
     },
     {
       "id": "f_1766025224975_t91e",
@@ -4229,7 +4229,7 @@
       "id": "f_1766025224975_cvs5",
       "category": "tools",
       "ru": "Фонарь",
-      "expectedIng": "Лаппала"
+      "expectedIng": "fanar"
     },
     {
       "id": "f_1766025224975_bb3j",
@@ -4253,7 +4253,7 @@
       "id": "f_1766025224975_zb78",
       "category": "tools",
       "ru": "Лопата",
-      "expectedIng": "Лапп"
+      "expectedIng": "бел / бахьа"
     },
     {
       "id": "f_1766025224975_s027",
@@ -4301,7 +4301,7 @@
       "id": "f_1766025224975_0azv",
       "category": "tools",
       "ru": "Оружие",
-      "expectedIng": "Кош"
+      "expectedIng": "герз"
     },
     {
       "id": "f_1766025224975_r0so",
@@ -4313,7 +4313,7 @@
       "id": "f_1766025224975_l09v",
       "category": "tools",
       "ru": "ывысвсм",
-      "expectedIng": "ысвысву"
+      "expectedIng": "тараз"
     },
     {
       "id": "f_1766023943620_72d6",
@@ -4367,7 +4367,7 @@
       "id": "f_1766023943620_8mdb",
       "category": "transport",
       "ru": "Стой!",
-      "expectedIng": "Сац"
+      "expectedIng": "ЛАТТ."
     },
     {
       "id": "f_1766023943620_p1h7",
@@ -4409,7 +4409,7 @@
       "id": "f_1766023943620_ec8l",
       "category": "transport",
       "ru": "Где остановка?",
-      "expectedIng": "Остановка хьа?"
+      "expectedIng": "Мичай соца моттиг?"
     },
     {
       "id": "f_1766023943620_7g53",
@@ -4421,13 +4421,13 @@
       "id": "f_1766023943620_pbg8",
       "category": "transport",
       "ru": "Он водитель",
-      "expectedIng": "Из лоалаж ва"
+      "expectedIng": "Из лехкар ва"
     },
     {
       "id": "f_1766023943620_mvag",
       "category": "transport",
       "ru": "Сломалась машина",
-      "expectedIng": "Машин т1аккха"
+      "expectedIng": "Машен йихай"
     },
     {
       "id": "f_1766023943620_uh7k",
@@ -4439,25 +4439,25 @@
       "id": "f_1766023943620_f6ri",
       "category": "transport",
       "ru": "Машина не работает",
-      "expectedIng": "Машин му лоца"
+      "expectedIng": "Машен болх беж яац"
     },
     {
       "id": "f_1766023943620_x4wf",
       "category": "transport",
       "ru": "Заправка",
-      "expectedIng": "Заправка"
+      "expectedIng": "доагам чудоттаче"
     },
     {
       "id": "f_1766023943620_wta7",
       "category": "transport",
       "ru": "Где заправка?",
-      "expectedIng": "Заправка хьа?"
+      "expectedIng": "Мичай доагам?"
     },
     {
       "id": "f_1766023943620_vnj1",
       "category": "transport",
       "ru": "Заправь",
-      "expectedIng": "Заправ дуйла"
+      "expectedIng": "Чудотт"
     },
     {
       "id": "f_1766023943620_be4l",
@@ -4475,43 +4475,43 @@
       "id": "f_1766023943620_rgva",
       "category": "transport",
       "ru": "Мне нужно в город",
-      "expectedIng": "Са шахь давах"
+      "expectedIng": "Са гIале вах еза"
     },
     {
       "id": "f_1766023943620_wbrq",
       "category": "transport",
       "ru": "Мне нужно в село",
-      "expectedIng": "Са гӀалачче давах"
+      "expectedIng": "Са юрт вах еза"
     },
     {
       "id": "f_1766023943620_s5oi",
       "category": "transport",
       "ru": "Сколько стоит поездка?",
-      "expectedIng": "Вудай ца йа?"
+      "expectedIng": "ф дуд някъа?"
     },
     {
       "id": "f_1766023943620_uabl",
       "category": "transport",
       "ru": "Дорого",
-      "expectedIng": "Далга"
+      "expectedIng": "деза"
     },
     {
       "id": "f_1766023943620_a5fd",
       "category": "transport",
       "ru": "Дёшево",
-      "expectedIng": "Ца далга"
+      "expectedIng": "дай"
     },
     {
       "id": "f_1766023943620_lfqg",
       "category": "transport",
       "ru": "Опасная дорога",
-      "expectedIng": "Кхерме никъ"
+      "expectedIng": "Кхерме новкъа"
     },
     {
       "id": "f_1766023943620_uim2",
       "category": "transport",
       "ru": "Хорошая дорога",
-      "expectedIng": "Дика гота"
+      "expectedIng": "Дика новкъа"
     },
     {
       "id": "f_1766023943620_6c5s",
@@ -4523,7 +4523,7 @@
       "id": "f_1766023943620_mv3b",
       "category": "transport",
       "ru": "Где машина?",
-      "expectedIng": "Машин хьа?"
+      "expectedIng": "Мичай машин?"
     },
     {
       "id": "f_1766023943620_lwj4",
@@ -4541,7 +4541,7 @@
       "id": "f_1766025182393_3r65",
       "category": "travel",
       "ru": "Я путешествую",
-      "expectedIng": "Со лоацаш ву"
+      "expectedIng": "Со някъа ва"
     },
     {
       "id": "f_1766025182393_bv34",
@@ -4559,7 +4559,7 @@
       "id": "f_1766025182393_3j5t",
       "category": "travel",
       "ru": "Я еду в Магас",
-      "expectedIng": "Со Магасхь вуда"
+      "expectedIng": "Со Магасе вуда"
     },
     {
       "id": "f_1766025182393_pdl5",
@@ -4589,13 +4589,13 @@
       "id": "f_1766025182393_i1qo",
       "category": "travel",
       "ru": "Мне нужно в город",
-      "expectedIng": "Са шахь вах давах"
+      "expectedIng": "Са гIале вах еза"
     },
     {
       "id": "f_1766025182393_o3ta",
       "category": "travel",
       "ru": "Мне нужно в село",
-      "expectedIng": "Са гӀалачче вах давах"
+      "expectedIng": "Са юрт вах еза"
     },
     {
       "id": "f_1766025182393_8ejd",
@@ -4619,13 +4619,13 @@
       "id": "f_1766025182393_nlam",
       "category": "travel",
       "ru": "Мне нужна помощь",
-      "expectedIng": "Са г1о давах"
+      "expectedIng": "СУН гIо-новкъостал ДЕЗА."
     },
     {
       "id": "f_1766025182393_6gsy",
       "category": "travel",
       "ru": "Где дорога?",
-      "expectedIng": "Гота хьа?"
+      "expectedIng": "Мичаб никъа?"
     },
     {
       "id": "f_1766025182393_ev5o",
@@ -4637,7 +4637,7 @@
       "id": "f_1766025182393_cne4",
       "category": "travel",
       "ru": "Это близко?",
-      "expectedIng": "Ха гянна?"
+      "expectedIng": "ЕР гарга."
     },
     {
       "id": "f_1766025182393_y9rh",
@@ -4655,19 +4655,19 @@
       "id": "f_1766025182393_p47i",
       "category": "travel",
       "ru": "Когда уезжаешь?",
-      "expectedIng": "Хьа малха арвуда?"
+      "expectedIng": "Хьо да мас вуда?"
     },
     {
       "id": "f_1766025182393_iwvm",
       "category": "travel",
       "ru": "Я уезжаю сейчас",
-      "expectedIng": "Со хьалха арвуда"
+      "expectedIng": "Со хьанз вуда"
     },
     {
       "id": "f_1766025182393_l6s9",
       "category": "travel",
       "ru": "Приведи меня туда",
-      "expectedIng": "Са цугахь вуда"
+      "expectedIng": "Со цугахь вагал"
     },
     {
       "id": "f_1766025182393_yg61",
@@ -4679,7 +4679,7 @@
       "id": "f_1766025182393_o86a",
       "category": "travel",
       "ru": "Мне нужно такси",
-      "expectedIng": "Са такси давах"
+      "expectedIng": "СУН такси еза."
     },
     {
       "id": "f_1766025182393_wjw6",
@@ -4691,19 +4691,19 @@
       "id": "f_1766025182393_44nh",
       "category": "travel",
       "ru": "Мой багаж",
-      "expectedIng": "Со багажь"
+      "expectedIng": "СА bagaž"
     },
     {
       "id": "f_1766025182393_mfen",
       "category": "travel",
       "ru": "Где мой багаж?",
-      "expectedIng": "Со багажь хьа?"
+      "expectedIng": "Мичай са bagaž?"
     },
     {
       "id": "f_1766025182393_zd0s",
       "category": "travel",
       "ru": "Я быстро вернусь",
-      "expectedIng": "Со мелда хьа виннагва"
+      "expectedIng": "Со сехха юхавог1агва"
     },
     {
       "id": "f_1766025182393_s9pu",
@@ -4763,13 +4763,13 @@
       "id": "f_1766025387472_1nbb",
       "category": "village",
       "ru": "Где колодец?",
-      "expectedIng": "КIил хьа?"
+      "expectedIng": "МИЧАЙ Г1УВ?"
     },
     {
       "id": "f_1766025387472_ckdd",
       "category": "village",
       "ru": "Где дорога?",
-      "expectedIng": "Готта хьа?"
+      "expectedIng": "Мичаб никъа?"
     },
     {
       "id": "f_1766025387472_0acl",
@@ -4781,13 +4781,13 @@
       "id": "f_1766025387472_szii",
       "category": "village",
       "ru": "Я гость",
-      "expectedIng": "Со къонаха"
+      "expectedIng": "Со хьаш"
     },
     {
       "id": "f_1766025387472_gbas",
       "category": "village",
       "ru": "Мы гости",
-      "expectedIng": "Тхо къонаш"
+      "expectedIng": "Тхо хьаши"
     },
     {
       "id": "f_1766025387472_epy5",
@@ -4811,13 +4811,13 @@
       "id": "f_1766025115892_a7t7",
       "category": "weather",
       "ru": "Погода",
-      "expectedIng": "Юьхад"
+      "expectedIng": "хаоттам"
     },
     {
       "id": "f_1766025115892_yh3r",
       "category": "weather",
       "ru": "Какая погода?",
-      "expectedIng": "Юьхад мотт?33"
+      "expectedIng": "МАЛАГIА ХАОТТАМ БА?"
     },
     {
       "id": "f_1766025115892_crfu",
@@ -4847,25 +4847,25 @@
       "id": "f_1766025115892_nkok",
       "category": "weather",
       "ru": "Жарко",
-      "expectedIng": "Деша"
+      "expectedIng": "ЙIАЙХА Я"
     },
     {
       "id": "f_1766025115892_uqdq",
       "category": "weather",
       "ru": "Дождь",
-      "expectedIng": "Ох"
+      "expectedIng": "догIа"
     },
     {
       "id": "f_1766025115892_opjc",
       "category": "weather",
       "ru": "Идёт дождь",
-      "expectedIng": "Ох вуда"
+      "expectedIng": "догIа делх"
     },
     {
       "id": "f_1766025115892_t8zu",
       "category": "weather",
       "ru": "Снег",
-      "expectedIng": "Саг"
+      "expectedIng": "лоа"
     },
     {
       "id": "f_1766025115892_pkt4",
@@ -4883,7 +4883,7 @@
       "id": "f_1766025115892_680p",
       "category": "weather",
       "ru": "Туманно",
-      "expectedIng": "Тха ву"
+      "expectedIng": "Доахк да"
     },
     {
       "id": "f_1766025115892_xs0d",
@@ -4895,31 +4895,31 @@
       "id": "f_1766025115892_9irk",
       "category": "weather",
       "ru": "Сильный ветер",
-      "expectedIng": "Бац йо"
+      "expectedIng": "чIоагIа мух"
     },
     {
       "id": "f_1766025115892_g9li",
       "category": "weather",
       "ru": "Слабый ветер",
-      "expectedIng": "Бац ца"
+      "expectedIng": "уне мух"
     },
     {
       "id": "f_1766025115892_54ld",
       "category": "weather",
       "ru": "Гроза",
-      "expectedIng": "Малх т1ехьаш"
+      "expectedIng": "кхерам / дуIа разразилась гроза дуIа тIадера"
     },
     {
       "id": "f_1766025115892_9k79",
       "category": "weather",
       "ru": "Молния",
-      "expectedIng": "Т1ехь"
+      "expectedIng": "тIоа / ди"
     },
     {
       "id": "f_1766025115892_ml5j",
       "category": "weather",
       "ru": "Гром",
-      "expectedIng": "Т1ехь баха"
+      "expectedIng": "чIоагIа / гIар/ ди"
     },
     {
       "id": "f_1766025115892_uw23",
@@ -4937,43 +4937,43 @@
       "id": "f_1766025115892_a51g",
       "category": "weather",
       "ru": "Вчера",
-      "expectedIng": "Делха"
+      "expectedIng": "селхан"
     },
     {
       "id": "f_1766025115892_5qko",
       "category": "weather",
       "ru": "Сегодня холодно",
-      "expectedIng": "Тахана сув"
+      "expectedIng": "тахан шийла"
     },
     {
       "id": "f_1766025115892_hley",
       "category": "weather",
       "ru": "Завтра будет тепло",
-      "expectedIng": "Кхаца маьна хина"
+      "expectedIng": "кхоана -кх йIайха"
     },
     {
       "id": "f_1766025115892_0fuj",
       "category": "weather",
       "ru": "Какая температура?",
-      "expectedIng": "Температура мотт?"
+      "expectedIng": "МЕЛ Е ТЕМПЕРАТУР?"
     },
     {
       "id": "f_1766025115892_m6ad",
       "category": "weather",
       "ru": "Очень холодно",
-      "expectedIng": "Сув йо"
+      "expectedIng": "тIехянн шийла"
     },
     {
       "id": "f_1766025115892_ofy8",
       "category": "weather",
       "ru": "Очень жарко",
-      "expectedIng": "Деша йо"
+      "expectedIng": "тIехдянна дIайха"
     },
     {
       "id": "f_1766025115892_et6o",
       "category": "weather",
       "ru": "уауау",
-      "expectedIng": "уум"
+      "expectedIng": "йоачан"
     },
     {
       "id": "f_1766024876223_5928",

@@ -13,18 +13,20 @@
       "ru": "молоток",
       "pos": "noun",
       "forms": {
-        "base": "гон",
+        "base": "гон / жIов",
         "dat": "гона"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "вода",
       "pos": "noun",
       "gender": "f",
       "forms": {
-        "base": "хи",
+        "base": "Хий",
         "dat": "хийна"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "больница",
@@ -62,9 +64,10 @@
       "ru": "стол",
       "pos": "noun",
       "forms": {
-        "base": "истола",
+        "base": "Стол",
         "dat": "истола"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "печка",
@@ -126,9 +129,10 @@
       "ru": "мы",
       "pos": "pronoun",
       "forms": {
-        "base": "тхона",
+        "base": "ТХО ДА.",
         "dat": "тхона"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "нас",
@@ -158,17 +162,19 @@
       "ru": "медведь",
       "pos": "noun",
       "forms": {
-        "base": "ча",
+        "base": "Доьх",
         "dat": "ча"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "лиса",
       "pos": "noun",
       "forms": {
-        "base": "цхьогал",
+        "base": "Кел",
         "dat": "цхьогала"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "заяц",
@@ -190,9 +196,10 @@
       "ru": "волк",
       "pos": "noun",
       "forms": {
-        "base": "борз",
+        "base": "Мокх2",
         "dat": "борза"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "лев",
@@ -334,17 +341,19 @@
       "ru": "ветер",
       "pos": "noun",
       "forms": {
-        "base": "мух",
+        "base": "Бац",
         "dat": "муха"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "туман",
       "pos": "noun",
       "forms": {
-        "base": "дохк",
+        "base": "Тха",
         "dat": "дохка"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "зима (variant 1)",
@@ -390,9 +399,10 @@
       "ru": "холодно",
       "pos": "phrase",
       "forms": {
-        "base": "ШИЙЛА Я",
+        "base": "Сув",
         "dat": "ШИЙЛА Я"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "прохладно",
@@ -406,20 +416,23 @@
       "ru": "брат",
       "pos": "noun",
       "forms": {
-        "base": "веший",
+        "base": "Вош",
         "dat": "вешийна",
         "ins": "вешийца",
         "mat": "вешех"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "мать",
       "pos": "noun",
       "forms": {
-        "base": "наьна",
+        "base": "Нана",
         "loc": "наьнага",
-        "cmp": "наьнал"
-      }
+        "cmp": "наьнал",
+        "dat": "Нана"
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "сердце",
@@ -459,9 +472,11 @@
       "ru": "отец",
       "pos": "noun",
       "forms": {
-        "base": "да",
-        "ins": "даьца"
-      }
+        "base": "Да",
+        "ins": "даьца",
+        "dat": "Да"
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "каникулы",
@@ -493,17 +508,19 @@
       "ru": "бабушка",
       "pos": "noun",
       "forms": {
-        "base": "даь-нане",
+        "base": "Дя нана",
         "dat": "даь-нане"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "дедушка",
       "pos": "noun",
       "forms": {
-        "base": "даь-да",
+        "base": "Дя да",
         "dat": "даь-дае"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "путевка",
@@ -733,9 +750,10 @@
       "ru": "нож",
       "pos": "noun",
       "forms": {
-        "base": "урс",
+        "base": "Урс",
         "dat": "урса"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "чашка",
@@ -829,7 +847,7 @@
       "ru": "дом",
       "pos": "noun",
       "forms": {
-        "base": "цIа",
+        "base": "Ц1а",
         "pl": "цIенош",
         "gen": "цIен",
         "dat": "цIенна",
@@ -840,7 +858,7 @@
         "cmp": "цIенал",
         "dwell": "фусам"
       },
-      "notes": "base=building; фусам=dwelling (dosh)"
+      "notes": "base=building; фусам=dwelling (dosh); Habar sync"
     },
     {
       "ru": "ближайший",
@@ -1208,25 +1226,28 @@
       "ru": "утро",
       "pos": "noun",
       "forms": {
-        "base": "Iуйранна",
+        "base": "1ийре",
         "dat": "Iуйранна"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "день",
       "pos": "noun",
       "forms": {
-        "base": "делкъийна",
+        "base": "Ди",
         "dat": "делкъийна"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "вечер",
       "pos": "noun",
       "forms": {
-        "base": "сайранна",
+        "base": "Сейри",
         "dat": "сайранна"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "слово",
@@ -1480,9 +1501,10 @@
       "ru": "мясо",
       "pos": "noun",
       "forms": {
-        "base": "дулх",
+        "base": "Дулх",
         "dat": "дулха"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "баранина",
@@ -1552,9 +1574,10 @@
       "ru": "хлеб",
       "pos": "noun",
       "forms": {
-        "base": "маькх",
+        "base": "Мякх",
         "dat": "маькха"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "мука",
@@ -1608,17 +1631,19 @@
       "ru": "соль",
       "pos": "noun",
       "forms": {
-        "base": "тух",
+        "base": "Тух",
         "dat": "туха"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "чай",
       "pos": "noun",
       "forms": {
-        "base": "чай",
+        "base": "Чай",
         "dat": "чая"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "сыр",
@@ -1640,9 +1665,10 @@
       "ru": "яйцо",
       "pos": "noun",
       "forms": {
-        "base": "фуъ",
+        "base": "Фу1",
         "dat": "фуъа"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "кефир",
@@ -1800,9 +1826,10 @@
       "ru": "время",
       "pos": "noun",
       "forms": {
-        "base": "ха",
+        "base": "Ха",
         "dat": "хана"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "настоящее время",
@@ -2560,9 +2587,10 @@
       "ru": "телефон",
       "pos": "noun",
       "forms": {
-        "base": "телефон",
+        "base": "Телефон",
         "dat": "телефонаца"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "голос",
@@ -2640,9 +2668,10 @@
       "ru": "что",
       "pos": "pronoun",
       "forms": {
-        "base": "фу",
+        "base": "Фо?",
         "dat": "фуна"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "сколько",
@@ -2672,10 +2701,11 @@
       "ru": "как",
       "pos": "pronoun",
       "forms": {
-        "base": "мишта",
+        "base": "Мишта?",
         "colloquial": "мшта",
         "dat": "мишта"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "послелог",
@@ -2769,9 +2799,10 @@
       "ru": "далеко",
       "pos": "postposition",
       "forms": {
-        "base": "гаьна",
+        "base": "Долча",
         "dat": "гаьнна"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "впереди",
@@ -2850,10 +2881,10 @@
       "ru": "работа",
       "pos": "noun",
       "forms": {
-        "base": "болх",
+        "base": "Лоамаш",
         "dat": "болх"
       },
-      "notes": "Existential: болх ба (есть) / болх бац (нет); not locative балха"
+      "notes": "Existential: болх ба (есть) / болх бац (нет); not locative балха; Habar sync"
     },
     {
       "ru": "работы",
@@ -2867,124 +2898,206 @@
     {
       "ru": "у меня",
       "pos": "pronoun",
-      "forms": { "base": "суга", "allative": "суга" }
+      "forms": {
+        "base": "суга",
+        "allative": "суга"
+      }
     },
     {
       "ru": "у тебя",
       "pos": "pronoun",
-      "forms": { "base": "Хьуга", "allative": "Хьуга" }
+      "forms": {
+        "base": "Хьуга",
+        "allative": "Хьуга"
+      }
     },
     {
       "ru": "у нас",
       "pos": "pronoun",
-      "forms": { "base": "Вайга", "allative": "Вайга" }
+      "forms": {
+        "base": "Вайга",
+        "allative": "Вайга"
+      }
     },
     {
       "ru": "у него",
       "pos": "pronoun",
-      "forms": { "base": "Цунга", "allative": "Цунга" }
+      "forms": {
+        "base": "Цунга",
+        "allative": "Цунга"
+      }
     },
     {
       "ru": "у неё",
       "pos": "pronoun",
-      "forms": { "base": "Цунга", "allative": "Цунга" }
+      "forms": {
+        "base": "Цунга",
+        "allative": "Цунга"
+      }
     },
     {
       "ru": "у них",
       "pos": "pronoun",
-      "forms": { "base": "Царга", "allative": "Царга" }
+      "forms": {
+        "base": "Царга",
+        "allative": "Царга"
+      }
     },
     {
       "ru": "мой",
       "pos": "pronoun",
-      "forms": { "base": "са", "genitive": "са" }
+      "forms": {
+        "base": "са",
+        "genitive": "са"
+      }
     },
     {
       "ru": "наш",
       "pos": "pronoun",
-      "forms": { "base": "тха", "genitive": "тха" }
+      "forms": {
+        "base": "тха",
+        "genitive": "тха"
+      }
     },
     {
       "ru": "ко мне",
       "pos": "pronoun",
-      "forms": { "base": "Сугахь", "direction": "Сугахь" },
+      "forms": {
+        "base": "Сугахь",
+        "direction": "Сугахь"
+      },
       "notes": "суг + ахь — направление ко мне"
     },
     {
       "ru": "к тебе",
       "pos": "pronoun",
-      "forms": { "base": "Хьугахь", "direction": "Хьугахь" }
+      "forms": {
+        "base": "Хьугахь",
+        "direction": "Хьугахь"
+      }
     },
     {
       "ru": "к нам",
       "pos": "pronoun",
-      "forms": { "base": "Вайгахь", "direction": "Вайгахь", "formal": "Тхугахь" }
+      "forms": {
+        "base": "Вайгахь",
+        "direction": "Вайгахь",
+        "formal": "Тхугахь"
+      }
     },
     {
       "ru": "к нему",
       "pos": "pronoun",
-      "forms": { "base": "Цунгахь", "direction": "Цунгахь" }
+      "forms": {
+        "base": "Цунгахь",
+        "direction": "Цунгахь"
+      }
     },
     {
       "ru": "к ним",
       "pos": "pronoun",
-      "forms": { "base": "Царгахь", "direction": "Царгахь" }
+      "forms": {
+        "base": "Царгахь",
+        "direction": "Царгахь"
+      }
     },
     {
       "ru": "у нас здесь",
       "pos": "pronoun",
-      "forms": { "base": "Вайцига", "locative": "Вайцига", "familiar": "Вайцига", "formal_motion": "Тхацигахь" }
+      "forms": {
+        "base": "Вайцига",
+        "locative": "Вайцига",
+        "familiar": "Вайцига",
+        "formal_motion": "Тхацигахь"
+      }
     },
     {
       "ru": "у вас там",
       "pos": "pronoun",
-      "forms": { "base": "Шунцига", "locative": "Шунцига", "motion": "Шунцигахь" }
+      "forms": {
+        "base": "Шунцига",
+        "locative": "Шунцига",
+        "motion": "Шунцигахь"
+      }
     },
     {
       "ru": "у них там",
       "pos": "pronoun",
-      "forms": { "base": "Царцига", "locative": "Царцига", "motion": "Царцигахь" }
+      "forms": {
+        "base": "Царцига",
+        "locative": "Царцига",
+        "motion": "Царцигахь"
+      }
     },
     {
       "ru": "иди",
       "pos": "verb",
-      "forms": { "base": "Хьвале", "imperative": "Хьвале" }
+      "forms": {
+        "base": "Валле",
+        "imperative": "Хьвале",
+        "dat": "Валле"
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "от меня",
       "pos": "pronoun",
-      "forms": { "base": "Сугар", "ablative": "Сугар" },
+      "forms": {
+        "base": "Сугар",
+        "ablative": "Сугар"
+      },
       "notes": "суга + р"
     },
     {
       "ru": "от тебя",
       "pos": "pronoun",
-      "forms": { "base": "Хьугар", "ablative": "Хьугар" }
+      "forms": {
+        "base": "Хьугар",
+        "ablative": "Хьугар"
+      }
     },
     {
       "ru": "от него",
       "pos": "pronoun",
-      "forms": { "base": "Цунгар", "ablative": "Цунгар" }
+      "forms": {
+        "base": "Цунгар",
+        "ablative": "Цунгар"
+      }
     },
     {
       "ru": "от неё",
       "pos": "pronoun",
-      "forms": { "base": "Цунгар", "ablative": "Цунгар" }
+      "forms": {
+        "base": "Цунгар",
+        "ablative": "Цунгар"
+      }
     },
     {
       "ru": "от нас",
       "pos": "pronoun",
-      "forms": { "base": "Вайгар", "ablative": "Вайгар", "locative_ablative": "Тхацигар" }
+      "forms": {
+        "base": "Вайгар",
+        "ablative": "Вайгар",
+        "locative_ablative": "Тхацигар"
+      }
     },
     {
       "ru": "от вас",
       "pos": "pronoun",
-      "forms": { "base": "Шунгар", "ablative": "Шунгар", "locative_ablative": "Шунцигар" }
+      "forms": {
+        "base": "Шунгар",
+        "ablative": "Шунгар",
+        "locative_ablative": "Шунцигар"
+      }
     },
     {
       "ru": "от них",
       "pos": "pronoun",
-      "forms": { "base": "Царгар", "ablative": "Царгар", "locative_ablative": "Царцигар" }
+      "forms": {
+        "base": "Царгар",
+        "ablative": "Царгар",
+        "locative_ablative": "Царцигар"
+      }
     },
     {
       "ru": "на работе",
@@ -3006,25 +3119,28 @@
       "ru": "сегодня",
       "pos": "adverb",
       "forms": {
-        "base": "тахан",
+        "base": "Тахана",
         "dat": "тахан"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "завтра",
       "pos": "adverb",
       "forms": {
-        "base": "кхоана",
+        "base": "Кхоан",
         "dat": "кхоана"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "сейчас",
       "pos": "adverb",
       "forms": {
-        "base": "хIанз",
+        "base": "Хьанз",
         "dat": "хIанз"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "утром",
@@ -3070,17 +3186,19 @@
       "ru": "когда",
       "pos": "pronoun",
       "forms": {
-        "base": "маца",
+        "base": "Маца?",
         "dat": "маца"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "знакомство",
       "pos": "noun",
       "forms": {
-        "base": "хьоашал тассар",
+        "base": "ХЬОАШАЛ ТАССАР.",
         "dat": "хьоашал тассара"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "незнакомый человек",
@@ -3150,9 +3268,10 @@
       "ru": "автобус",
       "pos": "noun",
       "forms": {
-        "base": "автобус",
+        "base": "Автобус",
         "dat": "автобусаца"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "троллейбус",
@@ -3182,9 +3301,10 @@
       "ru": "такси",
       "pos": "noun",
       "forms": {
-        "base": "такси",
+        "base": "Такси",
         "dat": "таксица"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "корабль",
@@ -3214,9 +3334,10 @@
       "ru": "машина",
       "pos": "noun",
       "forms": {
-        "base": "машин",
+        "base": "Машен",
         "dat": "машинца"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "билет",
@@ -3463,17 +3584,19 @@
       "ru": "кухня",
       "pos": "noun",
       "forms": {
-        "base": "нана-цIа",
+        "base": "Нан ц1а",
         "dat": "нана-цIагIа"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "гостиная",
       "pos": "noun",
       "forms": {
-        "base": "хьаьша-цIа",
+        "base": "Хьаш ц1а",
         "dat": "хьаьша-цIагIа"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "коридор",
@@ -3495,9 +3618,10 @@
       "ru": "кровать",
       "pos": "noun",
       "forms": {
-        "base": "маьнги",
+        "base": "Къайлякх",
         "dat": "маьнге"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "обеденный стол",
@@ -3527,9 +3651,10 @@
       "ru": "пол",
       "pos": "noun",
       "forms": {
-        "base": "уй",
+        "base": "Йолг",
         "dat": "уй"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "потолок",
@@ -3543,9 +3668,10 @@
       "ru": "стена",
       "pos": "noun",
       "forms": {
-        "base": "пен",
+        "base": "Баг",
         "dat": "пена"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "угол",
@@ -3576,10 +3702,11 @@
       "pos": "noun",
       "gender": "f",
       "forms": {
-        "base": "гIала",
+        "base": "Магас",
         "dat": "гIале",
         "goal": "гIале"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "дорога",
@@ -3660,14 +3787,15 @@
       "ru": "назад",
       "pos": "adv",
       "forms": {
-        "base": "юха",
+        "base": "юха / тIехьашкахьа юха",
         "there": "тIехьашкахьа юха",
         "return_imp": "Юха верза",
         "go_back_2": "тIехьашкахьа гIу",
         "go_back_3": "Юха вулла",
-        "returned": "юха веннав"
+        "returned": "юха веннав",
+        "dat": "юха / тIехьашкахьа юха"
       },
-      "notes": "dosh: юха, тIехьашкахьа юха; colloquial imperatives for go back"
+      "notes": "dosh: юха, тIехьашкахьа юха; colloquial imperatives for go back; Habar sync"
     },
     {
       "ru": "место",
@@ -3682,10 +3810,11 @@
       "pos": "noun",
       "gender": "f",
       "forms": {
-        "base": "юрт",
+        "base": "Эль",
         "dat": "юрта",
         "goal": "юрт"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "улица",
@@ -3819,9 +3948,10 @@
       "ru": "здоровье",
       "pos": "noun",
       "forms": {
-        "base": "могашал",
+        "base": "Magar",
         "dat": "могашала"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "успех",
@@ -4003,17 +4133,19 @@
       "ru": "семья",
       "pos": "noun",
       "forms": {
-        "base": "дезал",
+        "base": "Дезал",
         "dat": "дезала"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "родственники",
       "pos": "noun",
       "forms": {
-        "base": "гаргара нах",
+        "base": "Гаргр нах",
         "dat": "гаргара наха"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "дедушка по отцу",
@@ -4059,9 +4191,10 @@
       "ru": "муж",
       "pos": "noun",
       "forms": {
-        "base": "цIен-да",
+        "base": "Мара",
         "dat": "цIен-даьга"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "жена",
@@ -4075,17 +4208,19 @@
       "ru": "сын",
       "pos": "noun",
       "forms": {
-        "base": "воI",
+        "base": "Во1",
         "dat": "воIа"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "дочь",
       "pos": "noun",
       "forms": {
-        "base": "йоI",
+        "base": "Йоа1а",
         "dat": "йоIа"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "дядя по отцу",
@@ -4277,17 +4412,19 @@
       "ru": "календарь",
       "pos": "noun",
       "forms": {
-        "base": "календарь",
+        "base": "КАЛЕНДАРЬ.",
         "dat": "календара"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "сутки",
       "pos": "noun",
       "forms": {
-        "base": "ди-бийса",
+        "base": "ДИ-БИЙСА.",
         "dat": "ди-бийса"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "час",
@@ -4549,17 +4686,19 @@
       "ru": "здравствуй",
       "pos": "phrase",
       "forms": {
-        "base": "моаршал да хьога",
+        "base": "МОАРШАЛ ДА ХЬОГА!",
         "dat": "моаршал"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "здравствуйте",
       "pos": "phrase",
       "forms": {
-        "base": "моаршал да шуга",
+        "base": "Марша доаг1алд",
         "dat": "моаршал"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "ассаламу алейкум",
@@ -4685,19 +4824,19 @@
       "ru": "шесть",
       "pos": "numeral",
       "forms": {
-        "base": "йалх",
+        "base": "Йи",
         "dat": "йалха"
       },
-      "notes": "Malsagov 1963 high-confidence dictionary layer"
+      "notes": "Malsagov 1963 high-confidence dictionary layer; Habar sync"
     },
     {
       "ru": "сестра",
       "pos": "noun",
       "forms": {
-        "base": "йиша",
+        "base": "Йиша",
         "dat": "йишена"
       },
-      "notes": "Malsagov 1963 high-confidence dictionary layer"
+      "notes": "Malsagov 1963 high-confidence dictionary layer; Habar sync"
     },
     {
       "ru": "коран",
@@ -5018,24 +5157,24 @@
       "ru": "здесь",
       "pos": "adv",
       "forms": {
-        "base": "укхаза",
+        "base": "Хьокха",
         "here": "укхаз",
         "i_am_here": "Со укхаз ва",
         "we_are_here": "Тхо укхаз да",
         "dat": "укхаза"
       },
-      "notes": "dosh: укхаза; confirming presence: Со укхаз ва (ва), Тхо укхаз да (да)"
+      "notes": "dosh: укхаза; confirming presence: Со укхаз ва (ва), Тхо укхаз да (да); Habar sync"
     },
     {
       "ru": "там",
       "pos": "adv",
       "forms": {
-        "base": "цига",
+        "base": "Цугахь",
         "there": "цигахь",
         "we_are_there": "Тхо цигахь да",
         "dat": "цига"
       },
-      "notes": "dosh: цига, цигахь (там); confirming we are there: Тхо цигахь да (not вай дIа = нам туда)"
+      "notes": "dosh: цига, цигахь (там); confirming we are there: Тхо цигахь да (not вай дIа = нам туда); Habar sync"
     },
     {
       "ru": "въесться",
@@ -5051,19 +5190,19 @@
       "ru": "деньги",
       "pos": "noun",
       "forms": {
-        "base": "ахча",
+        "base": "Акхча",
         "dat": "ахча"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "ехать",
       "pos": "noun",
       "forms": {
-        "base": "даха",
+        "base": "Вуда",
         "dat": "даха"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "животное",
@@ -5078,10 +5217,10 @@
       "ru": "окно",
       "pos": "noun",
       "forms": {
-        "base": "чӀагарг",
+        "base": "Тама",
         "dat": "чӀагарг"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "питьё",
@@ -5096,28 +5235,28 @@
       "ru": "суп",
       "pos": "noun",
       "forms": {
-        "base": "дилла",
+        "base": "Коача хьам",
         "dat": "дилла"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "восемь",
       "pos": "noun",
       "forms": {
-        "base": "бархӀ",
+        "base": "Барх",
         "dat": "бархӀ"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kur05"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kur05; Habar sync"
     },
     {
       "ru": "верёвка",
       "pos": "noun",
       "forms": {
-        "base": "охка",
+        "base": "Декха",
         "dat": "охка"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "вперёд",
@@ -5132,109 +5271,109 @@
       "ru": "гроза",
       "pos": "noun",
       "forms": {
-        "base": "дуӀа",
+        "base": "кхерам / дуIа разразилась гроза дуIа тIадера",
         "dat": "дуӀа"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "дети",
       "pos": "noun",
       "forms": {
-        "base": "бе́раш",
+        "base": "Из",
         "dat": "бе́раш"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "еда",
       "pos": "noun",
       "forms": {
-        "base": "даар",
+        "base": "Яа1 хьам",
         "dat": "даар"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "кирка",
       "pos": "noun",
       "forms": {
-        "base": "барг",
+        "base": "Къар",
         "dat": "барг"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "лопата",
       "pos": "noun",
       "forms": {
-        "base": "бахьа",
+        "base": "бел / бахьа",
         "dat": "бахьа"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "охота",
       "pos": "noun",
       "forms": {
-        "base": "догдар",
+        "base": "Чарахь",
         "dat": "догдар"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "раз",
       "pos": "noun",
       "forms": {
-        "base": "тӀаккха",
+        "base": "тӀаккха, Ца1",
         "dat": "тӀаккха"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "след",
       "pos": "noun",
       "forms": {
-        "base": "лар",
+        "base": "Керд лар",
         "dat": "лар"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "сок",
       "pos": "noun",
       "forms": {
-        "base": "мутт",
+        "base": "Соккх",
         "dat": "мутт"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "спасибо",
       "pos": "noun",
       "forms": {
-        "base": "баркал",
+        "base": "Баркалла",
         "dat": "баркал"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "топор",
       "pos": "noun",
       "forms": {
-        "base": "тасхам",
+        "base": "диг",
         "dat": "тасхам"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "цвет",
       "pos": "noun",
       "forms": {
-        "base": "зиза́ш",
+        "base": "Бос",
         "dat": "зиза́ш"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "дорого",
@@ -5258,73 +5397,73 @@
       "ru": "плохо",
       "pos": "adv",
       "forms": {
-        "base": "во",
+        "base": "Му",
         "dat": "во"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "хорошо",
       "pos": "adv",
       "forms": {
-        "base": "дика",
+        "base": "Дика да",
         "dat": "дика"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "инструмент",
       "pos": "noun",
       "forms": {
-        "base": "оатхал",
+        "base": "Оатхал",
         "dat": "оатхал"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "опасность",
       "pos": "noun",
       "forms": {
-        "base": "кхе́рам",
+        "base": "Кхерме",
         "dat": "кхе́рам"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "бензин",
       "pos": "noun",
       "forms": {
-        "base": "бензин",
+        "base": "Бензин",
         "dat": "бензин"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kur05"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kur05; Habar sync"
     },
     {
       "ru": "грузовик",
       "pos": "noun",
       "forms": {
-        "base": "грузовик",
+        "base": "Газик",
         "dat": "грузовик"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kur05"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kur05; Habar sync"
     },
     {
       "ru": "один",
       "pos": "noun",
       "forms": {
-        "base": "цхьа",
+        "base": "Ц1а",
         "dat": "цхьа"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kur05"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kur05; Habar sync"
     },
     {
       "ru": "быстрее",
       "pos": "adv",
       "forms": {
-        "base": "чехкагӀа",
+        "base": "Марсха!",
         "dat": "чехкагӀа"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kur05"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kur05; Habar sync"
     },
     {
       "ru": "мало",
@@ -5339,55 +5478,55 @@
       "ru": "белый",
       "pos": "adj",
       "forms": {
-        "base": "кӀай",
+        "base": "Ян",
         "dat": "кӀай"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "жёлтый",
       "pos": "adj",
       "forms": {
-        "base": "ӀажагӀа",
+        "base": "Ӏажа́гӀа",
         "dat": "ӀажагӀа"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "зелёный",
       "pos": "adj",
       "forms": {
-        "base": "баьццара",
+        "base": "Диг",
         "dat": "баьццара"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "красный",
       "pos": "adj",
       "forms": {
-        "base": "цӀе",
+        "base": "Ц1е́",
         "dat": "цӀе"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "синий",
       "pos": "adj",
       "forms": {
-        "base": "сийна",
+        "base": "Хьала",
         "dat": "сийна"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "чёрный",
       "pos": "adj",
       "forms": {
-        "base": "Ӏаьржа",
+        "base": "арж",
         "dat": "Ӏаьржа"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "близко",
@@ -5402,19 +5541,19 @@
       "ru": "вкусно",
       "pos": "adv",
       "forms": {
-        "base": "ча́ме",
+        "base": "Чам боллаж",
         "dat": "ча́ме"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "грязно",
       "pos": "adv",
       "forms": {
-        "base": "бӀе́ха",
+        "base": "бIеха",
         "dat": "бӀе́ха"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "дёшево",
@@ -5429,10 +5568,10 @@
       "ru": "налево",
       "pos": "adv",
       "forms": {
-        "base": "аьрдехьа",
+        "base": "Чехьала",
         "dat": "аьрдехьа"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "направо",
@@ -5447,64 +5586,64 @@
       "ru": "опасно",
       "pos": "adv",
       "forms": {
-        "base": "кхе́раме",
+        "base": "Кхерме да!",
         "dat": "кхе́раме"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "потом",
       "pos": "adv",
       "forms": {
-        "base": "тӀаккха",
+        "base": "Т1ехьа",
         "dat": "тӀаккха"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "прямо",
       "pos": "adv",
       "forms": {
-        "base": "духьал",
+        "base": "Хьалха",
         "dat": "духьал"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "рано",
       "pos": "adv",
       "forms": {
-        "base": "хьалха",
+        "base": "Хьалха",
         "dat": "хьалха"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "скоро",
       "pos": "adv",
       "forms": {
-        "base": "кастлашха",
+        "base": "Каста",
         "dat": "кастлашха"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "сюда",
       "pos": "adv",
       "forms": {
-        "base": "укхаза",
+        "base": "Хьокха",
         "dat": "укхаза"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "осторожно",
       "pos": "adv",
       "forms": {
-        "base": "лоралуш",
+        "base": "Хьаьлха да!",
         "dat": "лоралуш"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "Болгария",
