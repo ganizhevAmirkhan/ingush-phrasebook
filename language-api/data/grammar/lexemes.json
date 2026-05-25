@@ -171,10 +171,10 @@
       "ru": "лиса",
       "pos": "noun",
       "forms": {
-        "base": "Цхьугл",
+        "base": "Кел",
         "dat": "цхьогала"
       },
-      "notes": "Habar animals sync"
+      "notes": "Habar animals sync; Habar sync"
     },
     {
       "ru": "заяц",
@@ -5478,7 +5478,7 @@
       "ru": "белый",
       "pos": "adj",
       "forms": {
-        "base": "Ян",
+        "base": "К1ей",
         "dat": "кӀай"
       },
       "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
@@ -5487,7 +5487,7 @@
       "ru": "жёлтый",
       "pos": "adj",
       "forms": {
-        "base": "Ӏажа́гӀа",
+        "base": "1аьжаг1а",
         "dat": "ӀажагӀа"
       },
       "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
@@ -5496,7 +5496,7 @@
       "ru": "зелёный",
       "pos": "adj",
       "forms": {
-        "base": "Диг",
+        "base": "Бяцар",
         "dat": "баьццара"
       },
       "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
@@ -5514,7 +5514,7 @@
       "ru": "синий",
       "pos": "adj",
       "forms": {
-        "base": "Хьала",
+        "base": "Сийн",
         "dat": "сийна"
       },
       "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T19:02:11.365Z",
+  "generatedAt": "2026-05-25T21:11:21.554Z",
   "items": [
     {
       "id": "f_1766017415464_5gdw",
@@ -659,25 +659,25 @@
       "id": "f_1766025660255_hynu",
       "category": "colors",
       "ru": "Синий",
-      "expectedIng": "Хьала"
+      "expectedIng": "Сийн"
     },
     {
       "id": "f_1766025660255_rv4w",
       "category": "colors",
       "ru": "Зелёный",
-      "expectedIng": "Диг"
+      "expectedIng": "Бяцар"
     },
     {
       "id": "f_1766025660255_oicj",
       "category": "colors",
       "ru": "Яркий цвет",
-      "expectedIng": "Йо бег"
+      "expectedIng": "Сирда боса"
     },
     {
       "id": "f_1766025660255_sht8",
       "category": "colors",
       "ru": "Тёмный цвет",
-      "expectedIng": "ЧIог бег"
+      "expectedIng": "Бяде бос"
     },
     {
       "id": "f_1766025660255_pirr",
@@ -3137,7 +3137,7 @@
       "id": "f_1766025451240_47ad",
       "category": "numbers",
       "ru": "Девять",
-      "expectedIng": "Иск"
+      "expectedIng": "ийс"
     },
     {
       "id": "f_1766025451240_vfy5",
@@ -3155,7 +3155,7 @@
       "id": "f_1766025451240_aqgc",
       "category": "numbers",
       "ru": "Сколько стоит?",
-      "expectedIng": "Шун хьа хила?"
+      "expectedIng": "Фу доаккх укхох? / фу дех укхох?"
     },
     {
       "id": "f_1766025451240_72ut",
@@ -4223,7 +4223,7 @@
       "id": "f_1766025224975_p7lf",
       "category": "tools",
       "ru": "Крепкая верёвка",
-      "expectedIng": "Декха йо"
+      "expectedIng": "Ч1оаг1а т1ерьг"
     },
     {
       "id": "f_1766025224975_cvs5",
@@ -4247,7 +4247,7 @@
       "id": "f_1766025224975_aglj",
       "category": "tools",
       "ru": "Где мой телефон?",
-      "expectedIng": "Со телефони халха хьа?"
+      "expectedIng": "Мичай са телефон ?"
     },
     {
       "id": "f_1766025224975_zb78",
@@ -4265,13 +4265,13 @@
       "id": "f_1766025224975_gyyv",
       "category": "tools",
       "ru": "Рюкзак",
-      "expectedIng": "Торба"
+      "expectedIng": "гибехка тӀорм||и"
     },
     {
       "id": "f_1766025224975_ptct",
       "category": "tools",
       "ru": "Возьми рюкзак",
-      "expectedIng": "Торба хий"
+      "expectedIng": "Хьица гибека т1ормий"
     },
     {
       "id": "f_1766025224975_wbrt",
@@ -4283,7 +4283,7 @@
       "id": "f_1766025224975_r3xe",
       "category": "tools",
       "ru": "Тепловизор",
-      "expectedIng": "Т1ан йолча"
+      "expectedIng": "Йохал гойта турмал"
     },
     {
       "id": "f_1766025224975_4b14",
@@ -5040,6 +5040,2838 @@
       "category": "work",
       "ru": "ыы",
       "expectedIng": "я"
+    },
+    {
+      "id": "f_1779742401824_27zb",
+      "category": "colors",
+      "ru": "Белый",
+      "expectedIng": "К1ей"
+    },
+    {
+      "id": "f_1779742508208_7jmp",
+      "category": "colors",
+      "ru": "Жёлтый",
+      "expectedIng": "1аьжаг1а"
+    },
+    {
+      "id": "f_1779742550898_lebp",
+      "category": "colors",
+      "ru": "Серый",
+      "expectedIng": "1овкъара"
+    },
+    {
+      "id": "ph_communication_0_cp5w8n",
+      "category": "communication",
+      "ru": "Как дела?",
+      "expectedIng": "Миштад г1улкаж?"
+    },
+    {
+      "id": "ph_communication_1_1pspbr0",
+      "category": "communication",
+      "ru": "Хорошо",
+      "expectedIng": "Дика"
+    },
+    {
+      "id": "ph_communication_2_olwh4x",
+      "category": "communication",
+      "ru": "Плохо",
+      "expectedIng": "Му"
+    },
+    {
+      "id": "ph_communication_3_cv5odl",
+      "category": "communication",
+      "ru": "Что нового?",
+      "expectedIng": "Фо хьаца?"
+    },
+    {
+      "id": "ph_communication_4_ynhfj4",
+      "category": "communication",
+      "ru": "Ничего нового",
+      "expectedIng": "Ца хьаца"
+    },
+    {
+      "id": "ph_communication_5_8vj4n5",
+      "category": "communication",
+      "ru": "Я понял",
+      "expectedIng": "Со кхийтав"
+    },
+    {
+      "id": "ph_communication_6_wy80rc",
+      "category": "communication",
+      "ru": "Я не понял",
+      "expectedIng": "Со кхитвац"
+    },
+    {
+      "id": "ph_communication_7_17pnv00",
+      "category": "communication",
+      "ru": "Повтори",
+      "expectedIng": "Йувхвдолдел"
+    },
+    {
+      "id": "ph_communication_8_orhkyf",
+      "category": "communication",
+      "ru": "Говори медленно",
+      "expectedIng": "Шортиг дувца"
+    },
+    {
+      "id": "ph_communication_9_1wpei5l",
+      "category": "communication",
+      "ru": "Не спеши",
+      "expectedIng": "Сих ма ле"
+    },
+    {
+      "id": "ph_communication_10_12sj4it",
+      "category": "communication",
+      "ru": "Ты уверен?",
+      "expectedIng": "Бокъонца хой хьона?"
+    },
+    {
+      "id": "ph_communication_11_1q4jyhv",
+      "category": "communication",
+      "ru": "Я уверен",
+      "expectedIng": "Со дог1ийла"
+    },
+    {
+      "id": "ph_communication_12_1h3iydn",
+      "category": "communication",
+      "ru": "Мне это нравится",
+      "expectedIng": "Сун из хозхет"
+    },
+    {
+      "id": "ph_communication_13_194mr9g",
+      "category": "communication",
+      "ru": "Мне это не нравится",
+      "expectedIng": "Сун ер хо��хетац"
+    },
+    {
+      "id": "ph_communication_14_1ki3ttg",
+      "category": "communication",
+      "ru": "Ты прав",
+      "expectedIng": "Хьа дика мотт"
+    },
+    {
+      "id": "ph_communication_15_vsq941",
+      "category": "communication",
+      "ru": "Я думаю так же",
+      "expectedIng": "Суна хет ишта"
+    },
+    {
+      "id": "ph_communication_16_uiip7b",
+      "category": "communication",
+      "ru": "Подожди",
+      "expectedIng": "Сабар де"
+    },
+    {
+      "id": "ph_communication_17_13s29fo",
+      "category": "communication",
+      "ru": "Пойдём",
+      "expectedIng": "Тхо вудаш"
+    },
+    {
+      "id": "imp_home_lesson_8_dialogue_12_1",
+      "category": "conversation",
+      "ru": "1 кровать, 2 кровати, 5 кроватей.",
+      "expectedIng": "ЦХЬА МАЬНГИ, ШИ МАЬНГИ, ПХИ МАЬНГИ."
+    },
+    {
+      "id": "imp_home_lesson_8_dialogue_11_1",
+      "category": "conversation",
+      "ru": "1 стол, 2 стула.",
+      "expectedIng": "ЦХЬА ИСТОЛ, ШИ ГIАНД."
+    },
+    {
+      "id": "imp_numbers_lesson_9_7_1",
+      "category": "conversation",
+      "ru": "100, 1000, миллион, миллиард.",
+      "expectedIng": "БIАЬ, ЭЗАР, МИЛЛИОН, МИЛЛИАРД."
+    },
+    {
+      "id": "imp_numbers_lesson_9_4_1",
+      "category": "conversation",
+      "ru": "19 и 20.",
+      "expectedIng": "ТКЪЕСТА, ТКЪО."
+    },
+    {
+      "id": "imp_numbers_lesson_9_5_1",
+      "category": "conversation",
+      "ru": "21 это 20 и 1.",
+      "expectedIng": "ТКЪАЬ ЦАI."
+    },
+    {
+      "id": "imp_numbers_lesson_9_2_1",
+      "category": "conversation",
+      "ru": "30 в ингушском — это 20 и 10.",
+      "expectedIng": "ТКЪАЬ ИТТ."
+    },
+    {
+      "id": "imp_telephone_conversation_lesson_14_11_",
+      "category": "conversation",
+      "ru": "Сколько лет им предстоит учиться?",
+      "expectedIng": "МАССА ШЕРА ДЕША ДЕЗА ЦАР?"
+    },
+    {
+      "id": "imp_grocery_store_lesson_19_dialogue_6_1",
+      "category": "conversation",
+      "ru": "А баранина у вас есть?",
+      "expectedIng": "УСТАГIАН ДУЛХ ДИЙ ШУГА?"
+    },
+    {
+      "id": "imp_friendship_lesson_5_dialogue_7_1",
+      "category": "conversation",
+      "ru": "А в Москве с кем ты дружишь?",
+      "expectedIng": "ТIАККХА МОСКВЕ БИЙ ХЬА ДОТТАГIИЙ?"
+    },
+    {
+      "id": "imp_forest_lesson_18_dialogue_7_1",
+      "category": "conversation",
+      "ru": "А вон белка прыгает. Какая она красивая.",
+      "expectedIng": "ХЬАЛ, БIАРАШДУАРГ Я КХУВСЛУШ, МА ХОЗА Я ИЗ."
+    },
+    {
+      "id": "imp_family_relatives_lesson_4_dialogue_4",
+      "category": "conversation",
+      "ru": "Нет, не женат.",
+      "expectedIng": "СО САГ ЙОАЛАЯНЗА ВА."
+    },
+    {
+      "id": "imp_acquaintance_lesson_3_dialogue_10_1",
+      "category": "conversation",
+      "ru": "А где учились вы, Яха?",
+      "expectedIng": "ХЬО МИЧА ДЕШАШ ХИННАЙ, ЯХА?"
+    },
+    {
+      "id": "imp_transport_lesson_10_dialogue_8_1",
+      "category": "conversation",
+      "ru": "А как ты выезжаешь загород?",
+      "expectedIng": "ТIАККХА ГIАЛАРА АРА СЕНЦА ЙОАЛ ХЬО?"
+    },
+    {
+      "id": "imp_hobbies_lesson_25_dialogue_2_1",
+      "category": "conversation",
+      "ru": "А какую книгу ты читаешь в настоящее время?",
+      "expectedIng": "МАЛАГIА КНИЖКА ДЕШАШ Я ХЬО Х1АНЗ?"
+    },
+    {
+      "id": "imp_forest_lesson_18_dialogue_11_1",
+      "category": "conversation",
+      "ru": "А можно пить воду из этого ручья?",
+      "expectedIng": "ЦУ ТОАТОЛГА ЧУРА ХИЙ МАЛА ЙИШ ЙИЙ?"
+    },
+    {
+      "id": "imp_three_tenses_to_be_lesson_12_7_1",
+      "category": "conversation",
+      "ru": "А сегодня он будет на работе?",
+      "expectedIng": "ТАХАН ХУРГВИЙ ИЗ БАЛХА?"
+    },
+    {
+      "id": "imp_place_we_live_lesson_7_7_2",
+      "category": "conversation",
+      "ru": "А теперь я живу в Малгобеке.",
+      "expectedIng": "ХIАНЗ СО МОГIАЛБИКЕ ВАХ."
+    },
+    {
+      "id": "imp_weather_dialogue_yakha_said_5_1",
+      "category": "conversation",
+      "ru": "А ты видела, какой утром был туман?",
+      "expectedIng": "ДАЙРИЙ ХЬОНА, IУЙРАННА МИШТА ДОХК ДОАЛЛАР?"
+    },
+    {
+      "id": "imp_forest_lesson_18_dialogue_5_2",
+      "category": "conversation",
+      "ru": "А ты знаешь их названия?",
+      "expectedIng": "ХЬОНА ХОЙ ЦАР ЦIЕРАШ?"
+    },
+    {
+      "id": "imp_hobbies_lesson_25_dialogue_4_1",
+      "category": "conversation",
+      "ru": "А ты чем увлекаешься?",
+      "expectedIng": "ТIАККХА ХЬА СЕНЦА САКЪЕРДАЛУ?"
+    },
+    {
+      "id": "imp_acquaintance_lesson_3_dialogue_6_1",
+      "category": "conversation",
+      "ru": "А чем ты занимался до поступления?",
+      "expectedIng": "ДЕША ВАХАЛЕ ФУ ДЕШ ХИННАВ ХЬО?"
+    },
+    {
+      "id": "imp_transport_lesson_10_dialogue_5_1",
+      "category": "conversation",
+      "ru": "А я хожу до метро пешком.",
+      "expectedIng": "СО МЕТРО КХАЧЧАЛЦА ГIАШ ЙОДА."
+    },
+    {
+      "id": "imp_postpositions_lesson_13_12_1",
+      "category": "conversation",
+      "ru": "Алихан перепрыгнул через забор.",
+      "expectedIng": "АЛИХАН КАРТА ТIАГIОЛЛА ТIЕХКХОССАВАЛАР."
+    },
+    {
+      "id": "imp_tense_forms_lesson_17_6_1",
+      "category": "conversation",
+      "ru": "Алихан разговаривал.",
+      "expectedIng": "АЛИХАНА КЪАМАЬЛ ДУВЦАР."
+    },
+    {
+      "id": "imp_telephone_conversation_lesson_14_1_1",
+      "category": "conversation",
+      "ru": "Алло, это Лейла.",
+      "expectedIng": "АЛЛО, ЛЕЙЛА ЙИЙ ХЬО."
+    },
+    {
+      "id": "imp_human_anatomy_lesson_15_1_1",
+      "category": "conversation",
+      "ru": "Анатомия человека.",
+      "expectedIng": "САГАН АНАТОМИ."
+    },
+    {
+      "id": "imp_acquaintance_lesson_11_dialogue_2_1",
+      "category": "conversation",
+      "ru": "Ассалам алейкум, Ахмед!",
+      "expectedIng": "АССАЛАМ АЛЕЙКУМ, АХЬМАД!"
+    },
+    {
+      "id": "imp_friendship_lesson_5_dialogue_13_1",
+      "category": "conversation",
+      "ru": "Благодать нисходит туда, где есть согласие.",
+      "expectedIng": "БАРТ БОЛЧА СОЦ БЕРКАТ."
+    },
+    {
+      "id": "imp_family_relatives_lesson_4_dialogue_1",
+      "category": "conversation",
+      "ru": "Наша мама.",
+      "expectedIng": "ТХА НАНА."
+    },
+    {
+      "id": "imp_human_anatomy_lesson_15_4_1",
+      "category": "conversation",
+      "ru": "Бок, нога, бедро, ступня, пятка.",
+      "expectedIng": "ОАГIУВ, КО��, ВОРУВ, КОГА КIИЙЛЕ, КIОАЖУВ."
+    },
+    {
+      "id": "imp_telephone_conversation_lesson_14_12_",
+      "category": "conversation",
+      "ru": "До встречи.",
+      "expectedIng": "IАДИКА ХИЙЛА!"
+    },
+    {
+      "id": "imp_postpositions_lesson_13_6_1",
+      "category": "conversation",
+      "ru": "Брат сел на стул.",
+      "expectedIng": "ВОША ГIАНДА ТIА IОХАЙРА."
+    },
+    {
+      "id": "imp_acquaintance_lesson_11_dialogue_9_3",
+      "category": "conversation",
+      "ru": "Буду ждать твоего звонка.",
+      "expectedIng": "СО ХЬЕЖАРГВА IА САЙГА ТЕЛЕФОН ТОХАРГА."
+    },
+    {
+      "id": "imp_tense_forms_lesson_17_13_1",
+      "category": "conversation",
+      "ru": "Будущее возможное.",
+      "expectedIng": "ХИЛА МЕГА ХА."
+    },
+    {
+      "id": "imp_tense_forms_lesson_17_14_1",
+      "category": "conversation",
+      "ru": "Будущее время.",
+      "expectedIng": "ХУРГЙОЛА ХА."
+    },
+    {
+      "id": "imp_clinic_visit_lesson_16_dialogue_15_1",
+      "category": "conversation",
+      "ru": "Будьте здоровы!",
+      "expectedIng": "МОГАШ ЛЕЛАЛДА ШО!"
+    },
+    {
+      "id": "imp_home_lesson_8_dialogue_6_1",
+      "category": "conversation",
+      "ru": "В гостиной диван и кресла.",
+      "expectedIng": "ХЬАЬША-ЦIАГIА ДИВАНИ, КРЕСЛАШИ ДА."
+    },
+    {
+      "id": "imp_noun_lesson_23_dialogue_2_1",
+      "category": "conversation",
+      "ru": "В ингушском языке восемь падежей.",
+      "expectedIng": "ГIалгIай мотта ворхIан падеж йисте хинна."
+    },
+    {
+      "id": "imp_numbers_lesson_9_1_1",
+      "category": "conversation",
+      "ru": "В ингушском языке двадцатеричная система счета.",
+      "expectedIng": "ГIАЛГIАЙ МОТТА ШОВЗТКЪАХ ЛАРХIАРА СИСТЕМА Я."
+    },
+    {
+      "id": "imp_postpositions_lesson_13_1_1",
+      "category": "conversation",
+      "ru": "В ингушском языке нет предлогов, но есть послелоги.",
+      "expectedIng": "ГIАЛГIАЙ МОТТА ПРЕДЛОГАШ ДАЦ, АММА ПОСЛЕЛОГАШ Я."
+    },
+    {
+      "id": "imp_tense_forms_lesson_17_1_1",
+      "category": "conversation",
+      "ru": "В ингушском языке семь форм времени.",
+      "expectedIng": "ГIАЛГIАЙ МОТТА ШОА ФОРМА ХА Я."
+    },
+    {
+      "id": "imp_home_lesson_8_dialogue_3_1",
+      "category": "conversation",
+      "ru": "В ней есть большой балкон, где летом можно пить чай.",
+      "expectedIng": "ЦУ ЧУ ЙОККХА БАЛКОН Я, АЬХКИ ЧАЙ МАЛА ЙИШ ЙОЛАШ."
+    },
+    {
+      "id": "imp_zoo_weekend_dialogue_1_1",
+      "category": "conversation",
+      "ru": "В один из выходных дней Яха и Фатима посетили зоопарк.",
+      "expectedIng": "Цхьан ялхинна дийна Яха а Фатима а зоопарке бахаб."
+    },
+    {
+      "id": "imp_friendship_lesson_5_dialogue_8_1",
+      "category": "conversation",
+      "ru": "В основном, это студенты, с которыми я учусь.",
+      "expectedIng": "ДУКХАГIБАРАШ СОЦА ДЕШАШ БОЛА СТУДЕНТАШ БА."
+    },
+    {
+      "id": "imp_postpositions_lesson_13_2_2",
+      "category": "conversation",
+      "ru": "В печке.",
+      "expectedIng": "ПИШКА ЧУ."
+    },
+    {
+      "id": "imp_home_lesson_8_dialogue_10_1",
+      "category": "conversation",
+      "ru": "В свободное ��ремя он, лежа на диване, читает книгу.",
+      "expectedIng": "МУКЪА ВОЛЧА ХАНА ДИВАНА ТIА IОВИЖЕ, КНИЖКАШ ДЕШ."
+    },
+    {
+      "id": "imp_home_lesson_8_dialogue_7_1",
+      "category": "conversation",
+      "ru": "В середине стоит большой стол и 6 стульев.",
+      "expectedIng": "ЦIЕН ЮКЪЕ ДОККХА ИСТОЛИ 6 ГIАНДИ ЛАТТ."
+    },
+    {
+      "id": "imp_calendar_lesson_2_3_1",
+      "category": "conversation",
+      "ru": "В сутках 24 часа.",
+      "expectedIng": "ДИ-БИЙСА ТКЪАЬ ДИЪ САХЬАТ ДА."
+    },
+    {
+      "id": "imp_home_lesson_8_dialogue_8_2",
+      "category": "conversation",
+      "ru": "В углу стоит огромный цветок.",
+      "expectedIng": "САЬН ЧУ ДОККХА ЗИЗА ЛАТТ."
+    },
+    {
+      "id": "imp_grocery_store_lesson_19_dialogue_1_1",
+      "category": "conversation",
+      "ru": "В этом году в Назрани открылся продовольственный магазин.",
+      "expectedIng": "УКХ ШЕРА НАЗРАНЕ КЕРДА КХАЧАН ТИКА ХЬАЙИЙЛАЙ."
+    },
+    {
+      "id": "imp_clinic_visit_lesson_16_dialogue_8_2",
+      "category": "conversation",
+      "ru": "Вам надо обратиться к хирургу.",
+      "expectedIng": "ХЬА ХИРУРГА ТIАВАХА ВЕЗА."
+    },
+    {
+      "id": "imp_clinic_visit_lesson_16_dialogue_7_1",
+      "category": "conversation",
+      "ru": "Вам надо сделать рентген, сдать анализы.",
+      "expectedIng": "IА КИЗГА ДАККХА ДЕЗА, АНАЛИЗАШ ДIАЯЛА А ЕЗА."
+    },
+    {
+      "id": "imp_acquaintance_lesson_3_dialogue_12_2",
+      "category": "conversation",
+      "ru": "Вам нравится ваша профессия?",
+      "expectedIng": "ХОЗА ХЕТИЙ ХЬОНА ХЬОНА ХЬАЙ БОЛХ?"
+    },
+    {
+      "id": "imp_cafe_lesson_24_dialogue_4_2",
+      "category": "conversation",
+      "ru": "Вам придется подождать десять минут.",
+      "expectedIng": "ИТТ МИНОТА САБАРДЕ ДЕЗАРГДА ШУН."
+    },
+    {
+      "id": "imp_grocery_store_lesson_19_dialogue_11_",
+      "category": "conversation",
+      "ru": "Вам что-нибудь еще нужно?",
+      "expectedIng": "КХЫ ХIАМА ЕЗИЙ ХЬОНА?"
+    },
+    {
+      "id": "imp_cafe_lesson_24_dialogue_4_1",
+      "category": "conversation",
+      "ru": "Ваш заказ принят.",
+      "expectedIng": "ШУН ЗАКАЗ ХЬАИЙЦАД."
+    },
+    {
+      "id": "imp_weather_dialogue_yakha_said_7_1",
+      "category": "conversation",
+      "ru": "Весной бывает очень красиво.",
+      "expectedIng": "БIАЬСТИ ЧIОАГIА ХОЗА ХУЛ."
+    },
+    {
+      "id": "imp_transport_lesson_10_dialogue_4_1",
+      "category": "conversation",
+      "ru": "Весь путь занимает около часа.",
+      "expectedIng": "БЕРРИГА НАЬКЪА ЦХЬА САХЬАТ ХА ДIАЙОДА СА."
+    },
+    {
+      "id": "imp_weather_dialogue_yakha_said_4_2",
+      "category": "conversation",
+      "ru": "Ветер дует с севера.",
+      "expectedIng": "МУХ ГIИНБУХЬЕРА ХЬЕКХ."
+    },
+    {
+      "id": "imp_grocery_store_lesson_19_dialogue_7_1",
+      "category": "conversation",
+      "ru": "Взвесьте мне 1 кг баранины и 2 кг нежирной говядины.",
+      "expectedIng": "ЦХЬА КИЙЛА УСТАГIАН ДУЛХИ 2 КИЙЛА ДЕРСТА ДОАЦАРА БЕЖАНА ДУЛХИ ОЗАЛ СОНА."
+    },
+    {
+      "id": "imp_clinic_visit_lesson_16_dialogue_6_2",
+      "category": "conversation",
+      "ru": "Вздохните глубоко.",
+      "expectedIng": "ДОККХА СА ДАККХАЛ."
+    },
+    {
+      "id": "imp_transport_lesson_10_dialogue_6_1",
+      "category": "conversation",
+      "ru": "Вновь начал ходить поезд Москва-Назрань.",
+      "expectedIng": "МОСКВА-НАЗРАНЬ ЯХА ЦIЕРПОШТ ЮХА ЛЕЛА ЙОЛАЕННАЛГА."
+    },
+    {
+      "id": "imp_human_anatomy_lesson_15_9_1",
+      "category": "conversation",
+      "ru": "Внутренние органы: сердце, легкое, печень, желудок.",
+      "expectedIng": "ЧЕ: ДОГ, ПЕХК, ДИЙХК, КЕР."
+    },
+    {
+      "id": "imp_telephone_conversation_lesson_14_13_",
+      "category": "conversation",
+      "ru": "Вопросительные местоимения: кто, что, сколько, какой, как.",
+      "expectedIng": "МАЛА, ФУ, МАССА, МАЛАГIА, МИШТА."
+    },
+    {
+      "id": "imp_calendar_lesson_2_8_1",
+      "category": "conversation",
+      "ru": "Времена года: зима, лето, осень, весна.",
+      "expectedIng": "ШЕРА ХАНАШ: IА, АХКА, ГУЙРЕ, БIАЬСТИ."
+    },
+    {
+      "id": "imp_friendship_lesson_5_dialogue_12_2",
+      "category": "conversation",
+      "ru": "Все заняты: учатся, работают.",
+      "expectedIng": "ИШТТА ВIАШТIЕХЬА ДАЛАЦ БЕРРИГАШ ДЕШАШ А БОЛХ БЕШ А БА."
+    },
+    {
+      "id": "imp_three_tenses_to_be_lesson_12_4_1",
+      "category": "conversation",
+      "ru": "Вчера я был в кино.",
+      "expectedIng": "СО СЕЛХАН КИНО ХИННАВ."
+    },
+    {
+      "id": "imp_acquaintance_lesson_3_dialogue_12_1",
+      "category": "conversation",
+      "ru": "Вы — диктор.",
+      "expectedIng": "ХЬО ДИКТОР Я."
+    },
+    {
+      "id": "imp_department_store_lesson_20_dialogue_",
+      "category": "conversation",
+      "ru": "Я их покупаю.",
+      "expectedIng": "АЗ ХЬАЭЦ ЕРАШ."
+    },
+    {
+      "id": "imp_grocery_store_lesson_19_dialogue_8_1",
+      "category": "conversation",
+      "ru": "Выберите мне вкусный торт без спиртного.",
+      "expectedIng": "ЧХЬАГIАР ТЕХА ЙОАЦАШ ЧАМ БОЛАШ ТОРТ ХАРЖАЛ СОНА."
+    },
+    {
+      "id": "imp_three_tenses_to_be_lesson_12_9_1",
+      "category": "conversation",
+      "ru": "Где вы были вечером?",
+      "expectedIng": "МИЧАХЬ ДАР ШО СЕЛХАН САРАХЬА?"
+    },
+    {
+      "id": "imp_place_we_live_lesson_7_15_1",
+      "category": "conversation",
+      "ru": "Где Вы живете?",
+      "expectedIng": "ХЬО МИЧАХЬА ВАХАШ ВА (Я)?"
+    },
+    {
+      "id": "imp_daily_expressions_lesson_22_11_1",
+      "category": "conversation",
+      "ru": "Где Вы изучаете ингушский язык?",
+      "expectedIng": "ГIАЛГIАЙ МОТТ МИЧАХЬА IОМАБУ IА?"
+    },
+    {
+      "id": "imp_place_we_live_lesson_7_15_3",
+      "category": "conversation",
+      "ru": "Где Вы работаете?",
+      "expectedIng": "ХЬО МИЧАХЬА БОЛХ БЕШ ВА (Я)?"
+    },
+    {
+      "id": "imp_place_we_live_lesson_7_15_2",
+      "category": "conversation",
+      "ru": "Где Вы учитесь?",
+      "expectedIng": "ХЬО МИЧАХЬА ДЕШАШ ВА (Я)?"
+    },
+    {
+      "id": "imp_three_tenses_to_be_lesson_12_11_2",
+      "category": "conversation",
+      "ru": "Где они будут днем?",
+      "expectedIng": "ДИЙНАХЬА МИЧА ХУРГБА УЖ?"
+    },
+    {
+      "id": "imp_three_tenses_to_be_lesson_12_10_2",
+      "category": "conversation",
+      "ru": "Где они были утром?",
+      "expectedIng": "МИЧА БАР УЖ IУЙРАН?"
+    },
+    {
+      "id": "imp_transport_lesson_10_dialogue_13_1",
+      "category": "conversation",
+      "ru": "Где останавливается автобус?",
+      "expectedIng": "АВТОБУС МИЧАХЬА СЕЦ?"
+    },
+    {
+      "id": "imp_three_tenses_to_be_lesson_12_3_1",
+      "category": "conversation",
+      "ru": "Где ты был вчера?",
+      "expectedIng": "СЕЛХАН МИЧАХЬА ХИННАВ ХЬО?"
+    },
+    {
+      "id": "imp_vacation_reunion_dialogue_1_1",
+      "category": "conversation",
+      "ru": "Где ты был?",
+      "expectedIng": "Хьо мичахьа хиннав?"
+    },
+    {
+      "id": "imp_place_we_live_lesson_7_6_1",
+      "category": "conversation",
+      "ru": "Где ты живешь?",
+      "expectedIng": "ХЬО МИЧАХЬА ВАХ?"
+    },
+    {
+      "id": "imp_verb_moods_lesson_dialogue_5_1",
+      "category": "conversation",
+      "ru": "Говори быстрее.",
+      "expectedIng": "СИХАГIА ДУВЦА."
+    },
+    {
+      "id": "imp_calendar_lesson_2_7_2",
+      "category": "conversation",
+      "ru": "Год — 12 месяцев.",
+      "expectedIng": "ШУ 12 (ШИЙТТА) БУТТА БА."
+    },
+    {
+      "id": "imp_congratulations_lesson_6_9_1",
+      "category": "conversation",
+      "ru": "Да хранит тебя Аллах!",
+      "expectedIng": "ДАЛА ЛОРАВОЛВА (ЛОРАЙОЙЛА) ХЬО!"
+    },
+    {
+      "id": "imp_acquaintance_lesson_3_dialogue_13_1",
+      "category": "conversation",
+      "ru": "Да, очень нравится!",
+      "expectedIng": "Ч1ОАГ1А ХОЗА ХЕТ СОНА САЙ ПРОФЕССИ!"
+    },
+    {
+      "id": "imp_family_relatives_lesson_4_dialogue_5",
+      "category": "conversation",
+      "ru": "У меня есть дочь.",
+      "expectedIng": "СА ЦХЬА ЙОI Я."
+    },
+    {
+      "id": "imp_zoo_weekend_dialogue_4_1",
+      "category": "conversation",
+      "ru": "Давай бросим обезьянкам конфетки.",
+      "expectedIng": "МАЙМАЛАШТА КОНФЕТАШ ТОВСА ВАЙ."
+    },
+    {
+      "id": "imp_family_relatives_lesson_4_dialogue_3",
+      "category": "conversation",
+      "ru": "Ты женат?",
+      "expectedIng": "ХЬО САГ ЙОАЛАЯЬ ВИЙ?"
+    },
+    {
+      "id": "imp_forest_lesson_18_dialogue_1_1",
+      "category": "conversation",
+      "ru": "Давайте здесь остановимся.",
+      "expectedIng": "УКХАЗА СОВЦИЙ ВАЙ."
+    },
+    {
+      "id": "imp_acquaintance_lesson_11_dialogue_13_1",
+      "category": "conversation",
+      "ru": "Давайте обменяемся адресами (телефонами).",
+      "expectedIng": "АДРЕСАШ (ТЕЛЕФОНАШ) ДIА-ХЬАЙ ЭЦИЙ ВАЙ?"
+    },
+    {
+      "id": "imp_acquaintance_lesson_11_dialogue_10_1",
+      "category": "conversation",
+      "ru": "Давайте познакомимся.",
+      "expectedIng": "ХЬОАШАЛ ТАССА ВАЙ?"
+    },
+    {
+      "id": "imp_tense_forms_lesson_17_11_1",
+      "category": "conversation",
+      "ru": "Давнопрошедшее время.",
+      "expectedIng": "ХЬАЛХА ЯХА ХА."
+    },
+    {
+      "id": "imp_forest_lesson_18_dialogue_4_1",
+      "category": "conversation",
+      "ru": "Далеко не уходите, можете заблудиться.",
+      "expectedIng": "ГАЬНА ДIА МА ГIОЛАШ, ТУВЛАЛУРГДА ШО."
+    },
+    {
+      "id": "imp_verb_moods_lesson_dialogue_2_1",
+      "category": "conversation",
+      "ru": "Девушка идет за водой.",
+      "expectedIng": "ЙОI ХИЙ ДА ЙОДА."
+    },
+    {
+      "id": "imp_postpositions_lesson_13_9_1",
+      "category": "conversation",
+      "ru": "Девушка идет с родника.",
+      "expectedIng": "ЙОI ХЬАСТА ТIАРА ЙОАГIА."
+    },
+    {
+      "id": "imp_postpositions_lesson_13_5_1",
+      "category": "conversation",
+      "ru": "Девушка несет на плечах кувшин.",
+      "expectedIng": "ЙОIО БЕЛАЖ ТIА ОТТАЯЬ КIУДАЛ ЯХЬ."
+    },
+    {
+      "id": "imp_verb_moods_lesson_dialogue_4_1",
+      "category": "conversation",
+      "ru": "Девушка пойдет за водой.",
+      "expectedIng": "ЙОI ХИЙ ДА ГIОРГЬЯ."
+    },
+    {
+      "id": "imp_verb_moods_lesson_dialogue_3_1",
+      "category": "conversation",
+      "ru": "Девушка ходила за водой.",
+      "expectedIng": "ЙОI ХИЙ ДА ЯХАЯР."
+    },
+    {
+      "id": "imp_three_tenses_to_be_lesson_12_12_1",
+      "category": "conversation",
+      "ru": "Днем они будут дома.",
+      "expectedIng": "ДИЙНАХЬА УЖ ЦIАГIА ХУРГБА."
+    },
+    {
+      "id": "imp_calendar_lesson_2_5_2",
+      "category": "conversation",
+      "ru": "Дни недели.",
+      "expectedIng": "КIИРАН ДЕНОШ."
+    },
+    {
+      "id": "imp_transport_lesson_10_dialogue_2_1",
+      "category": "conversation",
+      "ru": "До метро мне нужно доехать автобусом или троллейбусом.",
+      "expectedIng": "ЦХАБАКЪДА, МЕТРО КХАЧЧАЛЦА АВТОБУСАЦА Е ТРОЛЕЙБУСАЦА ВАХА ВЕЗА СА."
+    },
+    {
+      "id": "imp_acquaintance_lesson_11_dialogue_9_1",
+      "category": "conversation",
+      "ru": "До свидания, Ахмед!",
+      "expectedIng": "IАДИКА ХИЙЛА ХЬА, АХЬМАД!"
+    },
+    {
+      "id": "imp_greetings_lesson_1_9_1",
+      "category": "conversation",
+      "ru": "До свидания!",
+      "expectedIng": "IАДИКА ХИЙЛА ШУН!"
+    },
+    {
+      "id": "imp_greetings_lesson_1_2_1",
+      "category": "conversation",
+      "ru": "Доброе утро! Добрый день! Добрый вечер! Спокойной ночи!",
+      "expectedIng": "IУЙРЕ ДИКА ХИЙЛА ХЬА! ДИ ДИКА ХИЛДА ХЬА! САЙРЕ ДИКА ХИЙЛА ХЬА! БИЙСА ДАЬКЪАЛА ХИЙЛА ХЬА!"
+    },
+    {
+      "id": "imp_greetings_lesson_1_3_3",
+      "category": "conversation",
+      "ru": "Добрый вечер всем!",
+      "expectedIng": "САЙРЕ ДИКА ХИЙЛА ШУН!"
+    },
+    {
+      "id": "imp_greetings_lesson_1_3_2",
+      "category": "conversation",
+      "ru": "Добрый день всем!",
+      "expectedIng": "ДИ ДИКА ХИЛДА ШУН!"
+    },
+    {
+      "id": "imp_acquaintance_lesson_11_dialogue_6_1",
+      "category": "conversation",
+      "ru": "Добрый день, Яха.",
+      "expectedIng": "ДИ ДИКА ХИЛДА ХЬА, ЯХА!"
+    },
+    {
+      "id": "imp_noun_declension_lesson_22_2_1",
+      "category": "conversation",
+      "ru": "Дождь идет.",
+      "expectedIng": "ДОГIА ДЕЛХ."
+    },
+    {
+      "id": "imp_noun_lesson_23_dialogue_8_1",
+      "category": "conversation",
+      "ru": "Дом-дома; сосед-соседи; цветок-цветы.",
+      "expectedIng": "ЦIа-цIенош; лоалахо-лоалахой; зиза-зизаш."
+    },
+    {
+      "id": "imp_friendship_lesson_5_dialogue_9_2",
+      "category": "conversation",
+      "ru": "Его зовут Мурад, он студент.",
+      "expectedIng": "ЦУН ЦIИ МУРАД Я, ИЗ СТУДЕНТ ВА."
+    },
+    {
+      "id": "imp_family_relatives_lesson_4_dialogue_7",
+      "category": "conversation",
+      "ru": "Она учится в 1-м классе.",
+      "expectedIng": "ЦХЬОАЛАГIЧА КЛАССЕ ДЕШАШ Я ИЗ."
+    },
+    {
+      "id": "imp_weather_dialogue_yakha_said_8_1",
+      "category": "conversation",
+      "ru": "Если честно, мне нравится всякая погода и любое время года.",
+      "expectedIng": "БАКЪДАР АЬЛЧА, СОНА МОЛЛАГIА ХАОТТАМ А ШЕРА ХА А ХОЗАХЕТ."
+    },
+    {
+      "id": "imp_friendship_lesson_5_dialogue_6_1",
+      "category": "conversation",
+      "ru": "Есть школьные друзья.",
+      "expectedIng": "СОЦА ШКОЛЕ ДЕШАШ ХИННАРАШ БА."
+    },
+    {
+      "id": "imp_congratulations_lesson_6_10_1",
+      "category": "conversation",
+      "ru": "Желаем Вам долгих лет жизни!",
+      "expectedIng": "ДУККХАЧА ШЕРАШКА ДАХАЛДА ШО!"
+    },
+    {
+      "id": "imp_congratulations_lesson_6_5_1",
+      "category": "conversation",
+      "ru": "Желаем, чтобы в новом году сбылись все твои мечты!",
+      "expectedIng": "КЕРДАЧА ШЕРА ХЬА ДЕГ ЧУ МЕЛ ЛАТТАР КХОАЧАШХИЛДА!"
+    },
+    {
+      "id": "imp_congratulations_lesson_6_4_1",
+      "category": "conversation",
+      "ru": "Желаю тебе всего хорошего!",
+      "expectedIng": "ДИКА МЕЛ ДАР ХИЛДА ХЬОНА!"
+    },
+    {
+      "id": "imp_congratulations_lesson_6_2_1",
+      "category": "conversation",
+      "ru": "Желаю тебе крепкого здоровья!",
+      "expectedIng": "МОГАШ-МАЬРША ХИЛВА ХЬО!"
+    },
+    {
+      "id": "imp_congratulations_lesson_6_1_1",
+      "category": "conversation",
+      "ru": "Желаю тебе счастья!",
+      "expectedIng": "АЗ ДАЬКЪАЛВУВЦ ХЬО! ИРАЗ ХИЛДА ХЬА!"
+    },
+    {
+      "id": "imp_congratulations_lesson_6_3_1",
+      "category": "conversation",
+      "ru": "Желаю тебе успеха!",
+      "expectedIng": "АЬТТУВ ХИЛБА ХЬА!"
+    },
+    {
+      "id": "imp_transport_lesson_10_dialogue_7_1",
+      "category": "conversation",
+      "ru": "Железнодорожному транспорту я предпочитаю самолет.",
+      "expectedIng": "ЦIЕРПОШТНАЬКЪА ТРАНСПОРТАЛ ДИКАГIА ФОКЕМА ХЕТ СОНА."
+    },
+    {
+      "id": "imp_greetings_lesson_1_7_2",
+      "category": "conversation",
+      "ru": "Живем потихоньку.",
+      "expectedIng": "ДIА-М ДОАХК ТХО."
+    },
+    {
+      "id": "imp_greetings_lesson_1_6_1",
+      "category": "conversation",
+      "ru": "Живите долго! Живи долго!",
+      "expectedIng": "ДУКХА ДАХАЛДА ШО! ДУКХА ВАХАЛВА ХЬО! ДУКХА ЯХИЙЛА ХЬО!"
+    },
+    {
+      "id": "imp_acquaintance_lesson_11_dialogue_9_2",
+      "category": "conversation",
+      "ru": "Звони мне почаще!",
+      "expectedIng": "КАСТ-КАСТА ТЕЛЕФОН ТОХАЛАХЬ СОГА."
+    },
+    {
+      "id": "imp_zoo_weekend_dialogue_5_2",
+      "category": "conversation",
+      "ru": "Здесь можно очень вкусно поесть.",
+      "expectedIng": "УКХАЗА ЧАМ БОЛАШ ХIАМА ЯА ЙИШ Я."
+    },
+    {
+      "id": "imp_greetings_lesson_1_4_1",
+      "category": "conversation",
+      "ru": "Здравствуй!",
+      "expectedIng": "МОАРШАЛ ДА ХЬОГА!"
+    },
+    {
+      "id": "imp_acquaintance_lesson_3_dialogue_1_1",
+      "category": "conversation",
+      "ru": "Здравствуйте, друзья!",
+      "expectedIng": "МОАРШАЛ ДА ШУГА, ДОТТАГIИЙ!"
+    },
+    {
+      "id": "imp_greetings_lesson_1_4_2",
+      "category": "conversation",
+      "ru": "Здравствуйте!",
+      "expectedIng": "МОАРШАЛ ДА ШУГА!"
+    },
+    {
+      "id": "imp_acquaintance_lesson_11_dialogue_1_1",
+      "category": "conversation",
+      "ru": "Знакомство.",
+      "expectedIng": "ХЬОАШАЛ ТАССАР."
+    },
+    {
+      "id": "imp_friendship_lesson_5_dialogue_12_1",
+      "category": "conversation",
+      "ru": "Иногда видимся, а так не получается.",
+      "expectedIng": "НАГГАХЬА ГУ ТХО."
+    },
+    {
+      "id": "imp_weather_dialogue_yakha_said_6_1",
+      "category": "conversation",
+      "ru": "Интересно, какая погода будет зимой?",
+      "expectedIng": "МИШТА ХАОТТАМ ХУРГБА — ХЬОГI IАЙ?"
+    },
+    {
+      "id": "imp_zoo_weekend_dialogue_6_2",
+      "category": "conversation",
+      "ru": "Их здесь много.",
+      "expectedIng": "УКХАЗА ДУКХА Я УЖ."
+    },
+    {
+      "id": "imp_noun_declension_lesson_22_7_1",
+      "category": "conversation",
+      "ru": "К первому склонению относятся существительные на согласный звук.",
+      "expectedIng": "Хьалхара склонение ду согласный лоаттамца хинна существительни."
+    },
+    {
+      "id": "imp_acquaintance_lesson_11_dialogue_8_1",
+      "category": "conversation",
+      "ru": "К сожалению, мне пора идти.",
+      "expectedIng": "БЕХК МА БАККХАЛАШ, СО СИХА ВА."
+    },
+    {
+      "id": "imp_noun_declension_lesson_22_9_1",
+      "category": "conversation",
+      "ru": "К третьему склонению относятся односложные существительные.",
+      "expectedIng": "КхоллагIа склонение ду цхьана слога хьалхараш долаш существительни."
+    },
+    {
+      "id": "imp_greetings_lesson_1_7_1",
+      "category": "conversation",
+      "ru": "Как вы поживаете?",
+      "expectedIng": "ФУ ДЕШ ДА ШО?"
+    },
+    {
+      "id": "imp_clinic_visit_lesson_16_dialogue_2_2",
+      "category": "conversation",
+      "ru": "Как Вы себя чувствуете?",
+      "expectedIng": "МИШТА ХЕТ ХЬОНА?"
+    },
+    {
+      "id": "imp_telephone_conversation_lesson_14_6_1",
+      "category": "conversation",
+      "ru": "Как вы туда добирались?",
+      "expectedIng": "МИШТА ЯХАР ХЬО ЦИГАЧА?"
+    },
+    {
+      "id": "imp_family_relatives_lesson_4_dialogue_2",
+      "category": "conversation",
+      "ru": "Как дела, Яха?",
+      "expectedIng": "МИШТАД ХЬА ГIУЛАКХАШ, ЯХА?"
+    },
+    {
+      "id": "imp_family_relatives_lesson_4_dialogue_6",
+      "category": "conversation",
+      "ru": "Как ее зовут?",
+      "expectedIng": "ЦIИ ФУЙ ЦУН?"
+    },
+    {
+      "id": "imp_greetings_lesson_1_8_1",
+      "category": "conversation",
+      "ru": "Как здоровье?",
+      "expectedIng": "МОГАШ ДИЙ ШО?"
+    },
+    {
+      "id": "imp_forest_lesson_18_dialogue_5_1",
+      "category": "conversation",
+      "ru": "Как много здесь деревьев!",
+      "expectedIng": "МА ДУКХА ГАЬНАШ Я УКХАЗА."
+    },
+    {
+      "id": "imp_transport_lesson_10_dialogue_11_1",
+      "category": "conversation",
+      "ru": "Как проехать до мечети?",
+      "expectedIng": "МАЬЖДИГЕ ДIА МИШТА ВАХА ВЕЗА?"
+    },
+    {
+      "id": "imp_hobbies_lesson_25_dialogue_7_1",
+      "category": "conversation",
+      "ru": "Как ты к этому относишься?",
+      "expectedIng": "ХЬОНА ФУ ХЕТ ЦОХ?"
+    },
+    {
+      "id": "imp_telephone_conversation_lesson_14_3_1",
+      "category": "conversation",
+      "ru": "Как я рада слышать твой голос.",
+      "expectedIng": "МА ХОЗА ХЕТ СОНА ХЬА ОАЗ ХЕЗА."
+    },
+    {
+      "id": "imp_calendar_lesson_2_10_1",
+      "category": "conversation",
+      "ru": "Какое время года?",
+      "expectedIng": "ХIАНЗ МАЛАГIА ШЕРА ХА Я?"
+    },
+    {
+      "id": "imp_clinic_visit_lesson_16_dialogue_10_1",
+      "category": "conversation",
+      "ru": "Какое лекарство Вы мне порекомендуете?",
+      "expectedIng": "МАЛАГIА МОЛХАШ МЕГАРГЬЯР СОНА?"
+    },
+    {
+      "id": "imp_place_we_live_lesson_7_13_1",
+      "category": "conversation",
+      "ru": "Какой вид из твоего окна?",
+      "expectedIng": "КОРАХ АРАХЬАЖАЧА МАЛАГIА СУРТ ГУ ШОАНА?"
+    },
+    {
+      "id": "imp_clinic_visit_lesson_16_dialogue_9_1",
+      "category": "conversation",
+      "ru": "Какой диагноз Вы мне поставите?",
+      "expectedIng": "МАЛАГIА ДИАГНОЗ ОТТАЯЬЙ IА СОНА?"
+    },
+    {
+      "id": "imp_calendar_lesson_2_12_1",
+      "category": "conversation",
+      "ru": "Какой сегодня день?",
+      "expectedIng": "ТАХАН ФУ ДИ ДА?"
+    },
+    {
+      "id": "imp_calendar_lesson_2_1_1",
+      "category": "conversation",
+      "ru": "Календарь.",
+      "expectedIng": "КАЛЕНДАРЬ."
+    },
+    {
+      "id": "imp_place_we_live_lesson_7_5_1",
+      "category": "conversation",
+      "ru": "Квартира моего брата находится на 2-м этаже.",
+      "expectedIng": "СА ВЕШИЙ КВАРТИРА ШОЛЛАГIЧА ЭТАЖА ТIА Я."
+    },
+    {
+      "id": "imp_acquaintance_lesson_3_dialogue_8_1",
+      "category": "conversation",
+      "ru": "Кем ты будешь после окончания ВУЗа?",
+      "expectedIng": "ДИЙША ВАЬЛЧА МАЛА ХУРГВА ХЬОХ?"
+    },
+    {
+      "id": "imp_acquaintance_lesson_3_dialogue_15_1",
+      "category": "conversation",
+      "ru": "Класс женщин: Я — ЯР — ХУРГЬЯ.",
+      "expectedIng": "Я — ЯР — ХУРГЬЯ."
+    },
+    {
+      "id": "imp_acquaintance_lesson_3_dialogue_14_1",
+      "category": "conversation",
+      "ru": "Класс мужчин: ВА — ВАР — ХУРГВА.",
+      "expectedIng": "ВА — ВАР — ХУРГВА."
+    },
+    {
+      "id": "imp_noun_declension_lesson_22_8_1",
+      "category": "conversation",
+      "ru": "Ко второму склонению относятся существительные на гласный звук.",
+      "expectedIng": "ШоллагIа склонение ду гласный лоаттамца хинна существительни."
+    },
+    {
+      "id": "imp_telephone_conversation_lesson_14_8_1",
+      "category": "conversation",
+      "ru": "Когда вы вернулись?",
+      "expectedIng": "ЮХА МАЦА ДАЬХКАР ШО?"
+    },
+    {
+      "id": "imp_three_tenses_to_be_lesson_12_7_2",
+      "category": "conversation",
+      "ru": "Когда Мадина будет на работе?",
+      "expectedIng": "МАДИНА МАЦА ХУРГЬЯ БАЛХА?"
+    },
+    {
+      "id": "imp_clinic_visit_lesson_16_dialogue_12_1",
+      "category": "conversation",
+      "ru": "Когда мне снова прийти к Вам?",
+      "expectedIng": "ХЬОНА ЮХА ТIА МАЦА ВА ВЕЗА СА?"
+    },
+    {
+      "id": "imp_daily_expressions_lesson_22_5_1",
+      "category": "conversation",
+      "ru": "Когда мы могли бы с Вами встретиться?",
+      "expectedIng": "МАЦА ВIАШАГIКХЕТА ВIАШТIЕХЬДАРГДА ВАЙ?"
+    },
+    {
+      "id": "imp_acquaintance_lesson_11_dialogue_12_1",
+      "category": "conversation",
+      "ru": "Когда мы увидимся снова?",
+      "expectedIng": "ВАЙ ЮХА МАЦА ГУРГДА?"
+    },
+    {
+      "id": "imp_clinic_visit_lesson_16_dialogue_1_1",
+      "category": "conversation",
+      "ru": "Когда принимает терапевт?",
+      "expectedIng": "ТЕРАПЕВТО МАЦА ТIАЭЦАРГВА?"
+    },
+    {
+      "id": "imp_postpositions_lesson_13_11_1",
+      "category": "conversation",
+      "ru": "Котенок вылез из-под кровати.",
+      "expectedIng": "ЦИСКА КIОРИГ МАЬНГЕ КIАЛАРА АРАЯЬЛАР."
+    },
+    {
+      "id": "imp_postpositions_lesson_13_7_1",
+      "category": "conversation",
+      "ru": "Кошка сидит под столом.",
+      "expectedIng": "ЦИСК ИСТОЛА КIАЛ ДАГIА."
+    },
+    {
+      "id": "imp_telephone_conversation_lesson_14_14_",
+      "category": "conversation",
+      "ru": "Я.",
+      "expectedIng": "СО ВА."
+    },
+    {
+      "id": "imp_friendship_lesson_5_dialogue_5_2",
+      "category": "conversation",
+      "ru": "Кто они?",
+      "expectedIng": "МАЛАШ БА УЖ?"
+    },
+    {
+      "id": "imp_telephone_conversation_lesson_14_9_1",
+      "category": "conversation",
+      "ru": "Куда поступили твои дети учиться?",
+      "expectedIng": "МИЧА ДЕША ЭЙТТАД ХЬА БЕРАШ?"
+    },
+    {
+      "id": "imp_home_lesson_8_dialogue_4_1",
+      "category": "conversation",
+      "ru": "Кухня большая и очень уютная.",
+      "expectedIng": "НАНА-ЦIА (ХIАМА ДУА МЕТТИГ) ДОККХА А ПАРГIАТА А ДА."
+    },
+    {
+      "id": "imp_zoo_weekend_dialogue_6_1",
+      "category": "conversation",
+      "ru": "Лебедь красивая птица.",
+      "expectedIng": "ГIУРГIАЖ ХОЗА ОАЛХАЗАР ДА."
+    },
+    {
+      "id": "imp_summer_vacation_planning_dialogue_2_",
+      "category": "conversation",
+      "ru": "Мне надо с тобой о многом поговорить и посоветоваться!",
+      "expectedIng": "ХЬОЦА ДУВЦА ДЕЗАШ А ДАГАЯЛА ЕЗАШ А ДУКХА ХIАМА ДА СА."
+    },
+    {
+      "id": "imp_human_anatomy_lesson_15_5_1",
+      "category": "conversation",
+      "ru": "Лоб, череп, брови, волосы, лицо, нос, рот.",
+      "expectedIng": "ХЬАЖ, ТУТИ, ЦIАЦКЪАМ, МОС, ЮХЬ, МЕРАЖ, БАГЕ."
+    },
+    {
+      "id": "imp_noun_declension_lesson_22_6_1",
+      "category": "conversation",
+      "ru": "Лучше моей матери никого нет.",
+      "expectedIng": "СА НАЬНАЛ ДИКАГIА САГ ВАЦ."
+    },
+    {
+      "id": "imp_tense_forms_lesson_17_3_1",
+      "category": "conversation",
+      "ru": "Мадина идет в школу.",
+      "expectedIng": "МАДИНА ШКОЛЕ ЙОДА."
+    },
+    {
+      "id": "imp_acquaintance_lesson_3_dialogue_2_2",
+      "category": "conversation",
+      "ru": "Меня зовут Саид.",
+      "expectedIng": "СА ЦIИ САИД Я."
+    },
+    {
+      "id": "imp_calendar_lesson_2_7_1",
+      "category": "conversation",
+      "ru": "Месяц — 4 недели.",
+      "expectedIng": "БУТТ — 4 (ДИЪ) КIИРА ДА."
+    },
+    {
+      "id": "imp_calendar_lesson_2_4_2",
+      "category": "conversation",
+      "ru": "Минута — 60 секунд.",
+      "expectedIng": "МИНОТ — (60) КХОВЗТКЪА СЕКУНД Я."
+    },
+    {
+      "id": "imp_congratulations_lesson_6_6_1",
+      "category": "conversation",
+      "ru": "Мира, удачи и счастья!",
+      "expectedIng": "БАРТИ, АЬТТУВИ, ИРАЗИ ХИЛДА ХЬА!"
+    },
+    {
+      "id": "imp_daily_expressions_lesson_22_4_1",
+      "category": "conversation",
+      "ru": "Мне бы хотелось с Вами поговорить.",
+      "expectedIng": "ХЬОЦА КЪАМАЬЛ ДУВЦА БЕЗАМ БАР СА."
+    },
+    {
+      "id": "imp_numbers_lesson_9_9_1",
+      "category": "conversation",
+      "ru": "Мне двадцать пять.",
+      "expectedIng": "СА ТКЪАЬ ПХИ ШУ ДАЬННАД."
+    },
+    {
+      "id": "imp_numbers_lesson_9_10_1",
+      "category": "conversation",
+      "ru": "Мне двадцать три.",
+      "expectedIng": "СА ТКЪАЬ КХО ШУ ДАЬННАД."
+    },
+    {
+      "id": "imp_forest_lesson_18_dialogue_1_2",
+      "category": "conversation",
+      "ru": "Мне здесь нравится.",
+      "expectedIng": "СОНА ХОЗА ХЕТ УКХАЗА."
+    },
+    {
+      "id": "imp_cafe_lesson_24_dialogue_3_1",
+      "category": "conversation",
+      "ru": "Мне фруктовый салат, пирожное и мороженое.",
+      "expectedIng": "СОНА СОМИЙ САЛАТИ, ПИРОЖЕНИИ, МОРОЖЕНИИ ЕЗА."
+    },
+    {
+      "id": "imp_friendship_lesson_5_dialogue_6_2",
+      "category": "conversation",
+      "ru": "Многие живут сейчас в Назрани.",
+      "expectedIng": "ХIАНЗ УЖ НАЗРАНЕ БАХ."
+    },
+    {
+      "id": "imp_summer_vacation_planning_dialogue_1_",
+      "category": "conversation",
+      "ru": "Прошло лето — период массовых отпусков.",
+      "expectedIng": "Аьхки дIадаьннад — дика салоIаман хан я."
+    },
+    {
+      "id": "imp_forest_lesson_18_dialogue_12_1",
+      "category": "conversation",
+      "ru": "Можно и пить, и рыбу ловить.",
+      "expectedIng": "ХИЙ МАЛА А ЧКЪАЬРИЙ ЛУВЦА А ЙИШ Я ЦУ ЧУРА."
+    },
+    {
+      "id": "imp_family_relatives_lesson_4_dialogue_8",
+      "category": "conversation",
+      "ru": "Моя жена.",
+      "expectedIng": "СА ЦIЕН-НАНА."
+    },
+    {
+      "id": "imp_place_we_live_lesson_7_3_1",
+      "category": "conversation",
+      "ru": "Мои родственники живут в другом селении.",
+      "expectedIng": "СА ГАРГАРА НАХ КХЫЧА ЮРТА БАХАШ БА."
+    },
+    {
+      "id": "imp_place_we_live_lesson_7_2_1",
+      "category": "conversation",
+      "ru": "Мой дядя живет в деревне.",
+      "expectedIng": "СА НАЬН-ВОША ТIОЙ-ЮРТА ВАХАШ ВА."
+    },
+    {
+      "id": "imp_congratulations_lesson_6_7_1",
+      "category": "conversation",
+      "ru": "Моя дорогая мама, я поздравляю тебя!",
+      "expectedIng": "СА ХЬАМСАРА НАНА, АЗ ДАЬКЪАЛЪЮВЦ ХЬО!"
+    },
+    {
+      "id": "imp_summer_vacation_planning_dialogue_6_",
+      "category": "conversation",
+      "ru": "Моя дочка мечтает о поездке в деревню к бабушке и дедушке.",
+      "expectedIng": "СА ЙОI ЮРТА ДАЬ-НАНЕИ ДАЬ-ДАИ БОЛЧА ЯХА УЙЛА ЙОЛАШ Я."
+    },
+    {
+      "id": "imp_place_we_live_lesson_7_11_1",
+      "category": "conversation",
+      "ru": "Моя квартира находится на 15 этаже.",
+      "expectedIng": "СА КВАРТИРА ПХИИТТЛАГIЧА ЭТАЖА ТIА Я."
+    },
+    {
+      "id": "imp_place_we_live_lesson_7_1_1",
+      "category": "conversation",
+      "ru": "Моя семья живет в Назрани.",
+      "expectedIng": "СА ДЕЗАЛ НАЗРАНЕ БАХАШ БА."
+    },
+    {
+      "id": "imp_tense_forms_lesson_17_8_1",
+      "category": "conversation",
+      "ru": "Муса написал стихотворение.",
+      "expectedIng": "МУСАС СТИХОТВОРЕНИ ЯЗЪЯЬЙ."
+    },
+    {
+      "id": "imp_vacation_reunion_dialogue_7_2",
+      "category": "conversation",
+      "ru": "Мы были в Анапе.",
+      "expectedIng": "АНАПЕ хиннад тхо."
+    },
+    {
+      "id": "imp_three_tenses_to_be_lesson_12_10_1",
+      "category": "conversation",
+      "ru": "Мы были в театре.",
+      "expectedIng": "ТХО ТЕАТРЕ ДАР."
+    },
+    {
+      "id": "imp_summer_vacation_planning_dialogue_4_",
+      "category": "conversation",
+      "ru": "Тебе понравилось?",
+      "expectedIng": "МИШТА ХИЙТАР ХЬОНА?"
+    },
+    {
+      "id": "imp_friendship_lesson_5_dialogue_4_1",
+      "category": "conversation",
+      "ru": "Мы ваши друзья.",
+      "expectedIng": "ТХО ШУН ДОТТАГIИЙ ДА."
+    },
+    {
+      "id": "imp_acquaintance_lesson_11_dialogue_2_3",
+      "category": "conversation",
+      "ru": "Мы давно не встречались!",
+      "expectedIng": "ДУКХА ХА Я ВАЙ БIАРГА ЦА ГУ."
+    },
+    {
+      "id": "imp_friendship_lesson_5_dialogue_14_1",
+      "category": "conversation",
+      "ru": "Мы желаем вам сто настоящих друзей!",
+      "expectedIng": "БIАЬ ДИКА НОВКЪОСТ ХУЛВА ШУН!"
+    },
+    {
+      "id": "imp_place_we_live_lesson_7_12_2",
+      "category": "conversation",
+      "ru": "Мы живем очень дружно.",
+      "expectedIng": "Ч1ОАГIА БАРТТАЙНА ДАХ ТХО."
+    },
+    {
+      "id": "imp_friendship_lesson_5_dialogue_10_2",
+      "category": "conversation",
+      "ru": "Мы с ним общаемся по электронной почте.",
+      "expectedIng": "ХIАЬТА ОАХА ЭЛЕКТРОННИ ПОЧТЕ ГIОЛЛА КЪАМАЬЛ ДУ."
+    },
+    {
+      "id": "imp_vacation_reunion_dialogue_7_1",
+      "category": "conversation",
+      "ru": "Мы семьёй отдыхали на море.",
+      "expectedIng": "Со сай дезалца форда юхе салоIаш хиннав."
+    },
+    {
+      "id": "imp_forest_lesson_18_dialogue_13_1",
+      "category": "conversation",
+      "ru": "Мы хорошо отдохнули.",
+      "expectedIng": "ДИКА САЛОIАМ ХИННАБ ВАЙНА."
+    },
+    {
+      "id": "imp_cafe_lesson_24_dialogue_8_1",
+      "category": "conversation",
+      "ru": "Мы хотим рассчитаться и заказать ещё по чашечке чая.",
+      "expectedIng": "АХЧА ДIАДАЛА А КХЫ А ЦХЬАЦЦА ЧАЬ ПЕЛА ЗАКАЗ ДЕ А БЕЗАМ БА ТХА."
+    },
+    {
+      "id": "imp_telephone_conversation_lesson_14_15_",
+      "category": "conversation",
+      "ru": "Мы.",
+      "expectedIng": "ТХО ДА."
+    },
+    {
+      "id": "imp_grocery_store_lesson_19_dialogue_2_1",
+      "category": "conversation",
+      "ru": "Мясной отдел.",
+      "expectedIng": "ДУЛХ ДОХКА ОТДЕЛ."
+    },
+    {
+      "id": "imp_place_we_live_lesson_7_9_1",
+      "category": "conversation",
+      "ru": "На каком этаже ты живешь?",
+      "expectedIng": "ХЬО МАЛАГIЧА ЭТАЖА ТIА ЯХАШ ВА?"
+    },
+    {
+      "id": "imp_summer_vacation_planning_dialogue_5_",
+      "category": "conversation",
+      "ru": "На мой взгляд, стоит съездить на море.",
+      "expectedIng": "СОГА ХАЬТТАЧА, ФОРДА ТIА ВАХА МЕГАРГВА."
+    },
+    {
+      "id": "imp_place_we_live_lesson_7_4_1",
+      "category": "conversation",
+      "ru": "На нашей улице нет многоэтажных домов.",
+      "expectedIng": "ТХО ДАХАЧА УРАМЕ ВIАШТIАРДАЬ ЦIЕНОШ ДАЦ."
+    },
+    {
+      "id": "imp_home_lesson_8_dialogue_8_1",
+      "category": "conversation",
+      "ru": "На стене висят 2 ковра.",
+      "expectedIng": "ПЕНАХ ХЬАЛТЕХА ШИ КIУВС БОАЛЛ."
+    },
+    {
+      "id": "imp_postpositions_lesson_13_2_1",
+      "category": "conversation",
+      "ru": "На столе.",
+      "expectedIng": "ИСТОЛА ТIА."
+    },
+    {
+      "id": "imp_clinic_visit_lesson_16_dialogue_2_1",
+      "category": "conversation",
+      "ru": "На что Вы жалуетесь?",
+      "expectedIng": "СЕВО ЛАЗАР ДУ ХЬОНА?"
+    },
+    {
+      "id": "imp_transport_lesson_10_dialogue_8_2",
+      "category": "conversation",
+      "ru": "На электричке.",
+      "expectedIng": "ЭЛЕКТРИЧКАЦА."
+    },
+    {
+      "id": "imp_weather_dialogue_yakha_said_4_1",
+      "category": "conversation",
+      "ru": "Наверное, скоро пойдет снег.",
+      "expectedIng": "ХЕТАРГАХЬА, КАСТТА ЛОА ДЕЛХАРГДА."
+    },
+    {
+      "id": "imp_verb_moods_lesson_dialogue_5_2",
+      "category": "conversation",
+      "ru": "Надо говорить быстрее.",
+      "expectedIng": "СИХАГIА ДУВЦА ДЕЗА."
+    },
+    {
+      "id": "imp_forest_lesson_18_dialogue_3_2",
+      "category": "conversation",
+      "ru": "Надо зажечь костер, чтобы сделать шашлык.",
+      "expectedIng": "ЦIИ ЮВЗА ЕЗА, ШАШЛЫК ДАТТА."
+    },
+    {
+      "id": "imp_tense_forms_lesson_17_2_1",
+      "category": "conversation",
+      "ru": "Настоящее время.",
+      "expectedIng": "ЙОЛА ХА."
+    },
+    {
+      "id": "imp_daily_expressions_lesson_22_12_1",
+      "category": "conversation",
+      "ru": "Не знаю — одно слово, узнал — тысяча слов.",
+      "expectedIng": "ХАЦ, ДАЦ — ЦХЬА ДОШ, ХАИРА, ДАЙРА ЭЗАР ДОШ."
+    },
+    {
+      "id": "imp_place_we_live_lesson_7_14_1",
+      "category": "conversation",
+      "ru": "Недалеко от нас находится пруд, в котором плавают лебеди.",
+      "expectedIng": "ТХОНА ГАЬНА ДОАЦЦАШ IАМ БА, ЦУ ЧУ НАЬК ДЕШ ГIУРГIАЖАШ Я."
+    },
+    {
+      "id": "imp_calendar_lesson_2_5_1",
+      "category": "conversation",
+      "ru": "Неделя — 7 суток.",
+      "expectedIng": "КIИРА — (7) ВОРХI ДИ-БИЙСА ДА."
+    },
+    {
+      "id": "imp_hobbies_lesson_25_dialogue_3_1",
+      "category": "conversation",
+      "ru": "Нет, я не читал этот роман, но прочитаю.",
+      "expectedIng": "АА, АЗ ИЗ РОМАН ДИЙШАДАЦ, ДЕШАРГА-М ДА."
+    },
+    {
+      "id": "imp_telephone_conversation_lesson_14_7_2",
+      "category": "conversation",
+      "ru": "Ничего нового.",
+      "expectedIng": "КЕРДА ХIАМА ДАЦ."
+    },
+    {
+      "id": "imp_human_anatomy_lesson_15_8_1",
+      "category": "conversation",
+      "ru": "Ноготь, ладонь, локоть.",
+      "expectedIng": "МIАРА, ТIАЬРЪЮКЪ, ГОЛА."
+    },
+    {
+      "id": "imp_home_lesson_8_dialogue_2_1",
+      "category": "conversation",
+      "ru": "Окна и двери покрашены лаком.",
+      "expectedIng": "КОРАШИ НАIАРАШИ ЛАК ХЬАКХА ДА."
+    },
+    {
+      "id": "imp_three_tenses_to_be_lesson_12_6_1",
+      "category": "conversation",
+      "ru": "Он был на работе.",
+      "expectedIng": "ИЗ БАЛХА ХИННАВ."
+    },
+    {
+      "id": "imp_home_lesson_8_dialogue_1_1",
+      "category": "conversation",
+      "ru": "Он живет в 5-комнатной квартире.",
+      "expectedIng": "ЦУН КВАРТИРЕ ПХИ ЦIА ДА."
+    },
+    {
+      "id": "imp_summer_vacation_planning_dialogue_8_",
+      "category": "conversation",
+      "ru": "Он сдал сессию и на днях приезжает домой.",
+      "expectedIng": "ИЗ СЕССИ ДIАЕННА ВАЬННА УКХ ДЕНОШКА ЦIАВОАГIАШ ВА."
+    },
+    {
+      "id": "imp_friendship_lesson_5_dialogue_10_1",
+      "category": "conversation",
+      "ru": "Он сейчас учится в Египте.",
+      "expectedIng": "ИЗ ХIАНЗ МИСАРА МЕХКА (ЕГИПЕТ) ДЕШАШ ВА."
+    },
+    {
+      "id": "imp_three_tenses_to_be_lesson_12_8_1",
+      "category": "conversation",
+      "ru": "Она будет на работе завтра.",
+      "expectedIng": "ИЗ КХОАНА ХУРГЬЯ БАЛХА?"
+    },
+    {
+      "id": "imp_forest_lesson_18_dialogue_11_2",
+      "category": "conversation",
+      "ru": "Она чистая?",
+      "expectedIng": "ЦIЕНА ДИЙ-ХЬОГI ИЗ?"
+    },
+    {
+      "id": "imp_friendship_lesson_5_dialogue_4_2",
+      "category": "conversation",
+      "ru": "Они наши друзья.",
+      "expectedIng": "УЖ ТХА ДОТТАГIИЙ БА."
+    },
+    {
+      "id": "imp_summer_vacation_planning_dialogue_7_",
+      "category": "conversation",
+      "ru": "Они пригласили меня на лето к себе.",
+      "expectedIng": "ЦАР ШОАЙЦИГА АХКА ДАККХА ХЬОАШАЛГIА ЙИЙХАЙ СО."
+    },
+    {
+      "id": "imp_greetings_lesson_1_5_2",
+      "category": "conversation",
+      "ru": "Ответ: Ва алейкум салам!",
+      "expectedIng": "ВА IАЛАЙКУМ САЛАМ!"
+    },
+    {
+      "id": "imp_grocery_store_lesson_19_dialogue_4_1",
+      "category": "conversation",
+      "ru": "Отдел молочных продуктов.",
+      "expectedIng": "ШУРАХ ЯЬ ПРОДУКТАШ ЙОХКА ОТДЕЛ."
+    },
+    {
+      "id": "imp_cafe_lesson_24_dialogue_7_1",
+      "category": "conversation",
+      "ru": "Официант, принесите, пожалуйста, счет.",
+      "expectedIng": "ОФИЦИАНТ, СЧЕТ ХЬАЯЛ."
+    },
+    {
+      "id": "imp_acquaintance_lesson_3_dialogue_3_1",
+      "category": "conversation",
+      "ru": "Очень рада познакомиться с тобой, Саид!",
+      "expectedIng": "ДИКА ХЕТ СОНА ХЬО ВАЙЗА, САIИД!"
+    },
+    {
+      "id": "imp_human_anatomy_lesson_15_7_1",
+      "category": "conversation",
+      "ru": "Пальцы: большой, указательный, средний, безымянный, мизинец.",
+      "expectedIng": "ПIЕЛГАШ: НАНА ПIЕЛГ, ХЬОКХА ПIЕЛГ, ЮКЪЕРА ПIЕЛГ, ЦIИ ЙОАЦА ПIЕЛГ, ЦIАЗА ПIЕЛГ."
+    },
+    {
+      "id": "imp_postpositions_lesson_13_10_1",
+      "category": "conversation",
+      "ru": "Парень вышел из пещеры.",
+      "expectedIng": "ЗIАМИГА САГ ХЬАГIАР ЧУРА АРАВАЬЛАР."
+    },
+    {
+      "id": "imp_human_anatomy_lesson_15_3_1",
+      "category": "conversation",
+      "ru": "Плечо, рука, подмышки, грудь, спина, позвоночник.",
+      "expectedIng": "БЕЛАЖ, КУЛГ, ТIАЬНКIАЛХЕ, НАКХА, БУКЪ, БУКЪТIЕХК."
+    },
+    {
+      "id": "imp_relations_lesson_21_dialogue_12_1",
+      "category": "conversation",
+      "ru": "Плохой мир лучше хорошей ссоры.",
+      "expectedIng": "ВО МАШАР ДИКАЧА ДОВНАЛ ТОЛ."
+    },
+    {
+      "id": "imp_transport_lesson_10_dialogue_14_1",
+      "category": "conversation",
+      "ru": "По каким дням летают самолеты?",
+      "expectedIng": "МАЛАГIЧА ДЕНОШКА ЛЕЛ ФОКЕМА?"
+    },
+    {
+      "id": "imp_postpositions_lesson_13_8_1",
+      "category": "conversation",
+      "ru": "Под домом находится подвал.",
+      "expectedIng": "ЦIЕН КIАЛ ПОДВАЛ ЙОАЛ."
+    },
+    {
+      "id": "imp_daily_expressions_lesson_22_8_1",
+      "category": "conversation",
+      "ru": "Пожалуйста, говорите медленнее.",
+      "expectedIng": "КIЕЗИГА ШОРТАГIА ДУВЦАЛ."
+    },
+    {
+      "id": "imp_congratulations_lesson_6_12_1",
+      "category": "conversation",
+      "ru": "Поздравляем с окончанием священного месяца Рамадан.",
+      "expectedIng": "МАРХА КЪОАБАЛДОЛДА ШУН, ХЬИЙГА ХАЛО МАЬЛЕХЬА ЯЗЙОЙЛА!"
+    },
+    {
+      "id": "imp_telephone_conversation_lesson_14_10_",
+      "category": "conversation",
+      "ru": "Поздравляю. Пусть будет успешной их учеба.",
+      "expectedIng": "БЕРКАТЕ ХИЛДА ЦАР ДЕШАР."
+    },
+    {
+      "id": "imp_acquaintance_lesson_11_dialogue_11_1",
+      "category": "conversation",
+      "ru": "Познакомьтесь, пожалуйста!",
+      "expectedIng": "ХЬОАШАЛ ТАССАЛ ШОАЙ!"
+    },
+    {
+      "id": "imp_telephone_conversation_lesson_14_1_3",
+      "category": "conversation",
+      "ru": "Позовите, пожалуйста, Лейлу.",
+      "expectedIng": "ЛЕЙЛА ХЬАТIАЕХАЛ СОНА."
+    },
+    {
+      "id": "imp_grocery_store_lesson_19_dialogue_5_1",
+      "category": "conversation",
+      "ru": "Покажите мне этот кусок мяса.",
+      "expectedIng": "ИЗ БЕЖАН ДУЛХА ДАКЪА ХЬОКХАЛ СОГА."
+    },
+    {
+      "id": "imp_calendar_lesson_2_6_1",
+      "category": "conversation",
+      "ru": "Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье.",
+      "expectedIng": "ОРШОТ, ШИНАРА, КХАЬРА, ЕРА, ПIАЬРАСКА, ШОАТТА, КIИРАНДИ."
+    },
+    {
+      "id": "imp_zoo_weekend_dialogue_4_2",
+      "category": "conversation",
+      "ru": "Посмотрим, как они их съедят.",
+      "expectedIng": "ЦАР МИШТА ЮЪ ХЬОЖАРГДА ВАЙ."
+    },
+    {
+      "id": "imp_daily_expressions_lesson_22_6_1",
+      "category": "conversation",
+      "ru": "Постарайся не опаздывать!",
+      "expectedIng": "ТIЕХЬА ЦА ВИСА ХЬАЖАЛАХЬ!"
+    },
+    {
+      "id": "imp_telephone_conversation_lesson_14_4_1",
+      "category": "conversation",
+      "ru": "Почему до тебя так долго нельзя было дозвониться?",
+      "expectedIng": "ХЬОГА АЗ ТЕЛЕФОН ЕТТА МЕЛ ДУКХА ХА Я."
+    },
+    {
+      "id": "imp_human_anatomy_lesson_15_11_1",
+      "category": "conversation",
+      "ru": "Почка, мочевой пузырь, кровь, сосуды, вены.",
+      "expectedIng": "ЖИМ, АХКАРГ, ЦIИЙ, ПХАЬНАШ, СИНПХАЬНАШ."
+    },
+    {
+      "id": "imp_greetings_lesson_1_5_1",
+      "category": "conversation",
+      "ru": "Приветствие: Ассаламу алейкум!",
+      "expectedIng": "АССАЛАМУ IАЛАЙКУМ!"
+    },
+    {
+      "id": "imp_grocery_store_lesson_19_dialogue_9_1",
+      "category": "conversation",
+      "ru": "Пробейте мне, пожалуйста, чек.",
+      "expectedIng": "ЧЕК ЯККХАЛ СОНА."
+    },
+    {
+      "id": "imp_telephone_conversation_lesson_14_1_2",
+      "category": "conversation",
+      "ru": "Простите, кто у телефона?",
+      "expectedIng": "БЕХК МА БАККХАЛАХЬ, ТЕЛЕФОН ХЬАИЙЦАР МАЛУВ?"
+    },
+    {
+      "id": "imp_tense_forms_lesson_17_5_1",
+      "category": "conversation",
+      "ru": "Прошедшее (несовершенное очевидное).",
+      "expectedIng": "ГУШ ЯХА ЯЛАНЗА ХА."
+    },
+    {
+      "id": "imp_tense_forms_lesson_17_7_1",
+      "category": "conversation",
+      "ru": "Прошедшее (совершенное неочевидное).",
+      "expectedIng": "ЯХА ХА."
+    },
+    {
+      "id": "imp_tense_forms_lesson_17_9_1",
+      "category": "conversation",
+      "ru": "Прошедшее совершенное очевидное время.",
+      "expectedIng": "ГУШ ЯХА ХА."
+    },
+    {
+      "id": "imp_congratulations_lesson_6_8_1",
+      "category": "conversation",
+      "ru": "Пусть Аллах даст тебе добра, счастья, успеха и здоровья!",
+      "expectedIng": "ДИКАХЕТАР, ИРАЗ, АЬТТУВ, МОГАШАЛ ЛОЙЛА ХЬОНА ДАЛЛА!"
+    },
+    {
+      "id": "imp_congratulations_lesson_6_11_1",
+      "category": "conversation",
+      "ru": "Пусть Аллах продлит твои годы!",
+      "expectedIng": "ДАЛЛА ХА ЙIАЬХЙОЙЛА ХЬА!"
+    },
+    {
+      "id": "imp_tense_forms_lesson_17_16_1",
+      "category": "conversation",
+      "ru": "Пусть к вам придет все хорошее.",
+      "expectedIng": "ДИКА МЕЛ ДАР ДОАГIАЛДА ШУГА."
+    },
+    {
+      "id": "imp_acquaintance_lesson_11_dialogue_8_2",
+      "category": "conversation",
+      "ru": "Рад был с вами познакомиться, Яха!",
+      "expectedIng": "ЧIОАГIА ДИКА ХЕТ СОНА ХЬО ЯЙЗА."
+    },
+    {
+      "id": "imp_acquaintance_lesson_11_dialogue_2_2",
+      "category": "conversation",
+      "ru": "Рад тебя видеть.",
+      "expectedIng": "ДИКА ХЕТ СОНА ХЬО БIАРГАВАЙНА."
+    },
+    {
+      "id": "imp_clinic_visit_lesson_16_dialogue_6_1",
+      "category": "conversation",
+      "ru": "Разденьтесь до пояса.",
+      "expectedIng": "ЮКЪАГА КХАЧАЛЦА БАРЗКЪАШ IОДАХА."
+    },
+    {
+      "id": "imp_place_we_live_lesson_7_7_1",
+      "category": "conversation",
+      "ru": "Раньше я жил во Владикавказе.",
+      "expectedIng": "ХЬАЛХА СО БУРО ТIА ВАЬХАВ."
+    },
+    {
+      "id": "imp_vacation_reunion_dialogue_3_1",
+      "category": "conversation",
+      "ru": "Расскажи, как ты отдыхал?",
+      "expectedIng": "Хадувцал, мишта салеIад Iа?"
+    },
+    {
+      "id": "imp_acquaintance_lesson_11_dialogue_5_1",
+      "category": "conversation",
+      "ru": "С удовольствием!",
+      "expectedIng": "ИЗ ЧIОАГIА ДИКА ДА!"
+    },
+    {
+      "id": "imp_tense_forms_lesson_17_12_1",
+      "category": "conversation",
+      "ru": "Саид ходил в гости к своим родственникам.",
+      "expectedIng": "САИД ШИЙ ГАРГАРА НАХ БОЛЧА ВАХАВАР."
+    },
+    {
+      "id": "imp_weather_dialogue_yakha_said_2_1",
+      "category": "conversation",
+      "ru": "Саид, как тебе нравится сегодняшняя погода?",
+      "expectedIng": "САIИД, МИШТА ХЕТ ХЬОНА ТАХАНАРА ХАОТТАМ?"
+    },
+    {
+      "id": "imp_acquaintance_lesson_11_dialogue_3_1",
+      "category": "conversation",
+      "ru": "Саид, кто это?",
+      "expectedIng": "САIИД, МАЛУВ ИЗ?"
+    },
+    {
+      "id": "imp_calendar_lesson_2_12_2",
+      "category": "conversation",
+      "ru": "Сегодня вторник.",
+      "expectedIng": "ТАХАН ШИНАРА ДИ ДА."
+    },
+    {
+      "id": "imp_calendar_lesson_2_11_2",
+      "category": "conversation",
+      "ru": "Сейчас апрель.",
+      "expectedIng": "ХIАНЗ ТУШОЛЕ БУТТ БА."
+    },
+    {
+      "id": "imp_hobbies_lesson_25_dialogue_6_1",
+      "category": "conversation",
+      "ru": "Сейчас все дети увлекаются компьютерными играми.",
+      "expectedIng": "ХIАНЗ ДЕРРИГА БЕРАШ КОМПЬЮТАРА ЛОВЗАРАШЦА САКЪЕРДАЛУШ ДА."
+    },
+    {
+      "id": "imp_calendar_lesson_2_9_1",
+      "category": "conversation",
+      "ru": "Сейчас какой год?",
+      "expectedIng": "ХIАНЗ МАЛАГIА ШУ ДА?"
+    },
+    {
+      "id": "imp_three_tenses_to_be_lesson_12_12_2",
+      "category": "conversation",
+      "ru": "Сейчас они в школе.",
+      "expectedIng": "ХIАНЗ ИШКОЛЕ БА УЖ."
+    },
+    {
+      "id": "imp_zoo_weekend_dialogue_7_1",
+      "category": "conversation",
+      "ru": "Сейчас посмотрим на рыбок и пойдем домой.",
+      "expectedIng": "ХIАНЗ ЧКЪАЬРИЛГАШКА ХЬАЖА ЧУГIОРГДА ВАЙ."
+    },
+    {
+      "id": "imp_transport_lesson_10_dialogue_12_2",
+      "category": "conversation",
+      "ru": "Сколько стоит билет?",
+      "expectedIng": "БИЛЕТА ФУ МАХ БА?"
+    },
+    {
+      "id": "imp_grocery_store_lesson_19_dialogue_10_",
+      "category": "conversation",
+      "ru": "Сколько я должна заплатить?",
+      "expectedIng": "ФУ ДАЛА ДЕЗА АЗ?"
+    },
+    {
+      "id": "imp_numbers_lesson_9_11_1",
+      "category": "conversation",
+      "ru": "Слово «год» с любым числом произносится одинаково.",
+      "expectedIng": "ШУ ЛАРХIАРАШЦА ХЬАМАХ ДIАТIЕ ДА."
+    },
+    {
+      "id": "imp_grocery_store_lesson_19_dialogue_14_",
+      "category": "conversation",
+      "ru": "Спасибо за покупки!",
+      "expectedIng": "БАРКАЛ ХIАМАШ ЭЦАРАХ!"
+    },
+    {
+      "id": "imp_vacation_reunion_dialogue_8_1",
+      "category": "conversation",
+      "ru": "Спасибо тебе за то, что привела меня сюда.",
+      "expectedIng": "Баркал хьона со укхаза йоалаярах."
+    },
+    {
+      "id": "imp_postpositions_lesson_13_15_1",
+      "category": "conversation",
+      "ru": "Среди нас нет плохих людей.",
+      "expectedIng": "ТХОНА ЮКЪЕ ВО НАХ БАЦ."
+    },
+    {
+      "id": "imp_weather_dialogue_yakha_said_4_3",
+      "category": "conversation",
+      "ru": "Стало холодно.",
+      "expectedIng": "ШЕЛЪЕННАЙ."
+    },
+    {
+      "id": "imp_calendar_lesson_2_2_2",
+      "category": "conversation",
+      "ru": "Сутки.",
+      "expectedIng": "ДИ-БИЙСА."
+    },
+    {
+      "id": "imp_noun_lesson_23_dialogue_1_1",
+      "category": "conversation",
+      "ru": "Существительные в ингушском языке распределяются по шести классам.",
+      "expectedIng": "ГIалгIай мотта цIердош яялла шестта классахьа."
+    },
+    {
+      "id": "imp_grocery_store_lesson_19_dialogue_13_",
+      "category": "conversation",
+      "ru": "Там можно поторговаться.",
+      "expectedIng": "ЦИГА МАХ БУВЦА ЙИШ Я."
+    },
+    {
+      "id": "imp_home_lesson_8_dialogue_9_1",
+      "category": "conversation",
+      "ru": "Там он работает на компьютере.",
+      "expectedIng": "КОМПЬЮТЕРАЦА БОЛХ БУ ЦО ЦИГА."
+    },
+    {
+      "id": "imp_home_lesson_8_dialogue_5_1",
+      "category": "conversation",
+      "ru": "Там стоит плита, большой холодильник, обеденный стол и стулья.",
+      "expectedIng": "ЦУ ЧУ ПЛИТА ЛАТТ, ЙОККХА ХОЛОДИЛЬНИК А, ХIАМА ЮА ИСТОЛ А, ГIАНДАШ А ЛАТТ."
+    },
+    {
+      "id": "imp_human_anatomy_lesson_15_10_1",
+      "category": "conversation",
+      "ru": "Толстая кишка, тонкая кишка, двенадцатиперстная кишка, селезенка.",
+      "expectedIng": "ДАМАГIА, ЧУРАШ, КАЙСАРИЛГ, IИНЖАРИЛГ."
+    },
+    {
+      "id": "imp_human_anatomy_lesson_15_2_1",
+      "category": "conversation",
+      "ru": "Туловище, голова, талия, живот, колено, шея.",
+      "expectedIng": "ГIАД, КОРТА, ЮКЪ, ГИЙГ, ГОЛА, ФОАРТ."
+    },
+    {
+      "id": "imp_verb_moods_lesson_dialogue_10_1",
+      "category": "conversation",
+      "ru": "Ты был бы хорошим врачом.",
+      "expectedIng": "ДИКА ЛОР ХУРГВАР ХЬОХ."
+    },
+    {
+      "id": "imp_postpositions_lesson_13_3_1",
+      "category": "conversation",
+      "ru": "Ты вошла в мое сердце.",
+      "expectedIng": "СА ДЕГ ЧУ ЕРА ХЬО!"
+    },
+    {
+      "id": "imp_verb_moods_lesson_dialogue_9_1",
+      "category": "conversation",
+      "ru": "Ты завтра на свадьбу не идешь?",
+      "expectedIng": "ХЬО КХОАНА ХЬОАЛЧАГIА ВОДАЦИЙ?"
+    },
+    {
+      "id": "imp_cafe_lesson_24_dialogue_5_1",
+      "category": "conversation",
+      "ru": "Ты здесь часто бываешь?",
+      "expectedIng": "КАСТ — КАСТА ВОАГIИЙ ХЬО УКХАЗА?"
+    },
+    {
+      "id": "imp_transport_lesson_10_dialogue_3_1",
+      "category": "conversation",
+      "ru": "Ты много времени тратишь на дорогу?",
+      "expectedIng": "ДУКХА ХА ДIАЙОДИЙ ХЬА НАЬКЪА?"
+    },
+    {
+      "id": "imp_zoo_weekend_dialogue_5_1",
+      "category": "conversation",
+      "ru": "Ты не проголодалась?",
+      "expectedIng": "МЕЦЪЕННАЙИЙ ХЬО?"
+    },
+    {
+      "id": "imp_vacation_reunion_dialogue_5_1",
+      "category": "conversation",
+      "ru": "Ты прекрасно выглядишь!",
+      "expectedIng": "Бос чIогIа дика ба хьа!"
+    },
+    {
+      "id": "imp_verb_moods_lesson_dialogue_8_1",
+      "category": "conversation",
+      "ru": "Ты читал сегодняшнюю газету?",
+      "expectedIng": "ТАХАНАРА ГАЗЕТА ДИЙШАДИЙ IА?"
+    },
+    {
+      "id": "imp_summer_vacation_planning_dialogue_3_",
+      "category": "conversation",
+      "ru": "У меня скоро будет отпуск.",
+      "expectedIng": "СО КАСТТА ОТПУСКЕ ГIОРГЬЯ."
+    },
+    {
+      "id": "imp_clinic_visit_lesson_16_dialogue_4_2",
+      "category": "conversation",
+      "ru": "У меня болит сердце.",
+      "expectedIng": "СА ДОГ ЛАЗ."
+    },
+    {
+      "id": "imp_transport_lesson_10_dialogue_9_1",
+      "category": "conversation",
+      "ru": "У меня есть машина, но я на ней редко езжу.",
+      "expectedIng": "СОГА МАШИН Я, БАКЪДА СО ЦУНЦА ДУКХА ЛЕЛАЦ."
+    },
+    {
+      "id": "imp_daily_expressions_lesson_22_3_1",
+      "category": "conversation",
+      "ru": "У меня к вам разговор.",
+      "expectedIng": "ХЬОЦА КЪАМАЬЛ ДАР СА."
+    },
+    {
+      "id": "imp_clinic_visit_lesson_16_dialogue_4_1",
+      "category": "conversation",
+      "ru": "У меня кашель.",
+      "expectedIng": "СОНА ЙIОВХАРАШ Я."
+    },
+    {
+      "id": "imp_friendship_lesson_5_dialogue_11_1",
+      "category": "conversation",
+      "ru": "У меня много друзей ингушей, но есть и русские, и дагестанцы.",
+      "expectedIng": "СА ДУКХАГIБОЛА ДОТТАГIИЙ ГIАЛГIАЙ БА, ХIАЬТА ЭРСИЙ А СЕЛИЙ А БА СА ДОТТАГIИЙ."
+    },
+    {
+      "id": "imp_place_we_live_lesson_7_8_2",
+      "category": "conversation",
+      "ru": "У нас шесть комнат и коридор.",
+      "expectedIng": "ЯЛХ ЦIАИ УЙЧЕИ ДА ТХА."
+    },
+    {
+      "id": "imp_weather_dialogue_yakha_said_1_1",
+      "category": "conversation",
+      "ru": "У природы нет плохой погоды.",
+      "expectedIng": "IАЛАМА ВО ХАОТТАМ ХИЛАЦ."
+    },
+    {
+      "id": "imp_friendship_lesson_5_dialogue_5_1",
+      "category": "conversation",
+      "ru": "У тебя много друзей, Саид?",
+      "expectedIng": "САИД, ХЬА ДУКХА БИЙ ДОТТАГIИЙ?"
+    },
+    {
+      "id": "imp_clinic_visit_lesson_16_dialogue_14_1",
+      "category": "conversation",
+      "ru": "Удалить зуб, поставить пломбу.",
+      "expectedIng": "ЦЕРГ ДIАЯККХА, ПЛОМБА ОТТАЕ."
+    },
+    {
+      "id": "imp_calendar_lesson_2_2_1",
+      "category": "conversation",
+      "ru": "Утро, день, вечер, ночь.",
+      "expectedIng": "IУЙРЕ, ДИ, САЙРЕ, БИЙСА."
+    },
+    {
+      "id": "imp_three_tenses_to_be_lesson_12_11_1",
+      "category": "conversation",
+      "ru": "Утром они были в магазине.",
+      "expectedIng": "IУЙРАН УЖ ТИКА ТIА БАР."
+    },
+    {
+      "id": "imp_human_anatomy_lesson_15_6_1",
+      "category": "conversation",
+      "ru": "Ухо, щека, глаз, подбородок, губа, зуб.",
+      "expectedIng": "ЛЕРГ, БАСИЛГ, БIАРГ, ЧIЕНГ, БОРД, ЦЕРГ."
+    },
+    {
+      "id": "imp_noun_declension_lesson_22_3_1",
+      "category": "conversation",
+      "ru": "Ученик читает книгу.",
+      "expectedIng": "ДЕШАРХОЧО КНИЖКА ДЕШ."
+    },
+    {
+      "id": "imp_zoo_weekend_dialogue_2_1",
+      "category": "conversation",
+      "ru": "Фатима, теперь ты увидишь всех животных.",
+      "expectedIng": "ФАТИМА, ХIАНЗ ХЬОНА ГУРГДА ДЕРРИГА ОАКХАРИЙ."
+    },
+    {
+      "id": "imp_postpositions_lesson_13_13_1",
+      "category": "conversation",
+      "ru": "Холод прошел через мое тело.",
+      "expectedIng": "ШЕЛАЛ ДЕГIА ЧУГIОЛЛА ЧАКХЪЯЬЛЛАР СОНА."
+    },
+    {
+      "id": "imp_acquaintance_lesson_11_dialogue_4_2",
+      "category": "conversation",
+      "ru": "Хочу тебя с ним познакомить.",
+      "expectedIng": "ШО ДАЙЗАЧА БАКЪАХЬА ХЕТ СОНА."
+    },
+    {
+      "id": "imp_calendar_lesson_2_4_1",
+      "category": "conversation",
+      "ru": "Час — 60 минут.",
+      "expectedIng": "САХЬАТ — (60) КХОВЗТКЪА МИНОТ Я."
+    },
+    {
+      "id": "imp_hobbies_lesson_25_dialogue_1_1",
+      "category": "conversation",
+      "ru": "Чем ты любишь заниматься в свободное от работы и домашних дел время?",
+      "expectedIng": "ЯХА, ХЬЕ БАЛХАХ МУКЪА ЙОЛЧА ХАНА ФУ ДЕШ ХОЗА ХЕТ ХЬОНА?"
+    },
+    {
+      "id": "imp_relations_lesson_21_dialogue_9_1",
+      "category": "conversation",
+      "ru": "Чем я могу вам помочь?",
+      "expectedIng": "СОГАРА ФУ ГIО-НОВКЪОСТАЛ ХУРГДА ХЬОНА?"
+    },
+    {
+      "id": "imp_telephone_conversation_lesson_14_7_1",
+      "category": "conversation",
+      "ru": "Что нового в Москве?",
+      "expectedIng": "КЕРДА ФУД МОСКВЕ?"
+    },
+    {
+      "id": "imp_daily_expressions_lesson_22_10_1",
+      "category": "conversation",
+      "ru": "Что означает это слово?",
+      "expectedIng": "ЦУ ДЕША ФУ МАIАН ДА?"
+    },
+    {
+      "id": "imp_vacation_reunion_dialogue_2_1",
+      "category": "conversation",
+      "ru": "Что у тебя нового?",
+      "expectedIng": "Фуд керда?"
+    },
+    {
+      "id": "imp_forest_lesson_18_dialogue_10_1",
+      "category": "conversation",
+      "ru": "Шашлык готов, давайте поедим.",
+      "expectedIng": "ШАШЛЫК КИЙЧА ДА, ДУИЙ ВАЙ."
+    },
+    {
+      "id": "imp_clinic_visit_lesson_16_dialogue_11_1",
+      "category": "conversation",
+      "ru": "Это заразная болезнь?",
+      "expectedIng": "ИЗ ЛАЗАР ДIА-ХЬА ДОАЛАШ-М ДАЦ?"
+    },
+    {
+      "id": "imp_transport_lesson_10_dialogue_12_1",
+      "category": "conversation",
+      "ru": "Это какая станция?",
+      "expectedIng": "ЕР МАЛАГIА СТАНЦИ Я?"
+    },
+    {
+      "id": "imp_forest_lesson_18_dialogue_8_1",
+      "category": "conversation",
+      "ru": "Это калина, а это кизил.",
+      "expectedIng": "ИЗ ТОАЧУВ ДА, ЕР ЭСТИ Я."
+    },
+    {
+      "id": "imp_forest_lesson_18_dialogue_6_2",
+      "category": "conversation",
+      "ru": "Это клен, а рядом с ним тополь.",
+      "expectedIng": "ИЗ КЪОАХК Я, ЦУННА ЮХЕ ЯГIАР МИХА Я."
+    },
+    {
+      "id": "imp_zoo_weekend_dialogue_3_1",
+      "category": "conversation",
+      "ru": "Это крокодил.",
+      "expectedIng": "ИЗ ВОАТАГАР Я."
+    },
+    {
+      "id": "imp_friendship_lesson_5_dialogue_9_1",
+      "category": "conversation",
+      "ru": "Это мой друг детства.",
+      "expectedIng": "ИЗ ВА СА БЕРА ХАНАРА ДЕНЗ ВОЛА ДОТТАГIА."
+    },
+    {
+      "id": "imp_acquaintance_lesson_11_dialogue_4_1",
+      "category": "conversation",
+      "ru": "Это мой друг.",
+      "expectedIng": "ЕР СА ДОТТАГIА ВА."
+    },
+    {
+      "id": "imp_acquaintance_lesson_3_dialogue_9_2",
+      "category": "conversation",
+      "ru": "Это нужная профессия!",
+      "expectedIng": "ИЗ ЭШАШ ПРОФЕССИ Я."
+    },
+    {
+      "id": "imp_forest_lesson_18_dialogue_6_1",
+      "category": "conversation",
+      "ru": "Это орешник, а там яблоня.",
+      "expectedIng": "ИЗ БIАРИНГ Я, ДIАРБАР IАЖ БА."
+    },
+    {
+      "id": "imp_acquaintance_lesson_3_dialogue_2_3",
+      "category": "conversation",
+      "ru": "Я — студент.",
+      "expectedIng": "СО СТУДЕНТ ВА."
+    },
+    {
+      "id": "imp_acquaintance_lesson_3_dialogue_9_1",
+      "category": "conversation",
+      "ru": "Я буду врачом.",
+      "expectedIng": "СО ЛОР ХУРГВА."
+    },
+    {
+      "id": "imp_three_tenses_to_be_lesson_12_1_2",
+      "category": "conversation",
+      "ru": "Я был школьником.",
+      "expectedIng": "СО ДЕШАРХО ВАР."
+    },
+    {
+      "id": "imp_three_tenses_to_be_lesson_12_5_1",
+      "category": "conversation",
+      "ru": "Я была в музее.",
+      "expectedIng": "СО МУЗЕЕ ХИННАЙ."
+    },
+    {
+      "id": "imp_three_tenses_to_be_lesson_12_2_2",
+      "category": "conversation",
+      "ru": "Я была студенткой.",
+      "expectedIng": "СО СТУДЕНТКА ЯР."
+    },
+    {
+      "id": "imp_clinic_visit_lesson_16_dialogue_8_1",
+      "category": "conversation",
+      "ru": "Я Вам выпишу рецепт.",
+      "expectedIng": "АЗ ХЬОНА РЕЦЕПТ ЯЗДЕРГДА."
+    },
+    {
+      "id": "imp_daily_expressions_lesson_22_7_1",
+      "category": "conversation",
+      "ru": "Я Вас не понял.",
+      "expectedIng": "СО ХЬОХ КХИЙТАНЗАР."
+    },
+    {
+      "id": "imp_cafe_lesson_24_dialogue_2_1",
+      "category": "conversation",
+      "ru": "Я возьму овощной салат, рыбу, сок и мороженое.",
+      "expectedIng": "АЗ САЛАТИ, ЧКЪАЬРЕИ, СОКИ, МОРОЖЕНИИ ЭЦАРГЬЯ."
+    },
+    {
+      "id": "imp_clinic_visit_lesson_16_dialogue_5_1",
+      "category": "conversation",
+      "ru": "Я вывихнул ногу (сломал руку, порезал палец).",
+      "expectedIng": "АЗ КОГ ЧУРБАЬККХАБ (КУЛГ КАГДАЬД, ПIЕЛГ ХОАДАБАЬБ)."
+    },
+    {
+      "id": "imp_three_tenses_to_be_lesson_12_2_1",
+      "category": "conversation",
+      "ru": "Я диктор.",
+      "expectedIng": "СО ДИКТОР Я."
+    },
+    {
+      "id": "imp_grocery_store_lesson_19_dialogue_12_",
+      "category": "conversation",
+      "ru": "Я думаю, этого достаточно.",
+      "expectedIng": "АЗ ИЙЦАР ТОЪАРГЙОЛАШ САННА ХЕТ СОНА."
+    },
+    {
+      "id": "imp_zoo_weekend_dialogue_3_2",
+      "category": "conversation",
+      "ru": "Я еще знаю, что это слон, его привезли из Индии.",
+      "expectedIng": "СОНА КХЫ А ХОВ ИЗ ПИЛ ДОЛГА, ХIИНДИ МЕХКАРА ДОАЛАДАЬД ИЗ."
+    },
+    {
+      "id": "imp_place_we_live_lesson_7_10_1",
+      "category": "conversation",
+      "ru": "Я живу в 20-этажном новопостроенном доме.",
+      "expectedIng": "СО ЯХ ТКЪО ЭТАЖ ЙОЛЧА КЕРДА ХЬАЛДАЬЧА ЦIАГIА."
+    },
+    {
+      "id": "imp_place_we_live_lesson_7_8_1",
+      "category": "conversation",
+      "ru": "Я живу в кирпичном доме.",
+      "expectedIng": "СО ВАХАШ ВОЛА ЦIА ЦIЕЧА КИРПИШКЕХ ДАЬ ДА."
+    },
+    {
+      "id": "imp_clinic_visit_lesson_16_dialogue_3_1",
+      "category": "conversation",
+      "ru": "Я заболел (простудился).",
+      "expectedIng": "СО ЦАМОГАШ ХИННАВ (ШЕЛВЕННАВ)."
+    },
+    {
+      "id": "imp_tense_forms_lesson_17_15_1",
+      "category": "conversation",
+      "ru": "Я завтра пойду к Мадине.",
+      "expectedIng": "СО КХОАНА МАДИНА ЙОЛЧА ГIОРГЬЯ."
+    },
+    {
+      "id": "imp_acquaintance_lesson_3_dialogue_11_1",
+      "category": "conversation",
+      "ru": "Я закончила филологический факультет Ингушского государственного университета.",
+      "expectedIng": "АЗ ЯЬККХАЙ ГIАЛГIАЙ ПАЧЧАХЬАЛКХЕН УНИВЕРСИТЕТА ФИЛОЛОГИЧЕСКИ ФАКУЛЬТЕТ."
+    },
+    {
+      "id": "imp_place_we_live_lesson_7_12_1",
+      "category": "conversation",
+      "ru": "Я знаю всех своих соседей.",
+      "expectedIng": "СОНА САЙ МЕЛ БОЛА ЛОАЛАХОЙ БОВЗ."
+    },
+    {
+      "id": "imp_three_tenses_to_be_lesson_12_2_3",
+      "category": "conversation",
+      "ru": "Я и в дальнейшем буду диктором.",
+      "expectedIng": "СО ДIАХО ЙОДАЧА ХАНА А ДИКТОР ХУРГЬЯ."
+    },
+    {
+      "id": "imp_transport_lesson_10_dialogue_10_1",
+      "category": "conversation",
+      "ru": "Я люблю быструю езду.",
+      "expectedIng": "СОНА ХОЗА ХЕТ ЧЕХКА ВАХАР."
+    },
+    {
+      "id": "imp_weather_dialogue_yakha_said_3_1",
+      "category": "conversation",
+      "ru": "Я люблю, когда идет дождь.",
+      "expectedIng": "СОНА ХОЗАХЕТ ДОГIА ДЕЛХАЧА ХАНА."
+    },
+    {
+      "id": "imp_acquaintance_lesson_11_dialogue_6_2",
+      "category": "conversation",
+      "ru": "Я много о Вас слышал от своего друга.",
+      "expectedIng": "ДУКХА ДИЙЦАД СОНА САЙ ДОТТАГIЧО ХЬОХ ЛАЬЦА."
+    },
+    {
+      "id": "imp_forest_lesson_18_dialogue_9_1",
+      "category": "conversation",
+      "ru": "Я нашел ежевику и смородину, давай соберем.",
+      "expectedIng": "СОНА МАНГАЛКОМАРАШИ КХАЗАРАШИ КОРАЬЯЙ, ГУЛЙОЙ ВАЙ."
+    },
+    {
+      "id": "imp_verb_moods_lesson_dialogue_7_1",
+      "category": "conversation",
+      "ru": "Я не был в Москве.",
+      "expectedIng": "СО МОСКВЕ ХИННАВАЦ."
+    },
+    {
+      "id": "imp_relations_lesson_21_dialogue_3_1",
+      "category": "conversation",
+      "ru": "Я не люблю его.",
+      "expectedIng": "СОНА ВЕЗАЦ (ЕЗАЦ) ИЗ."
+    },
+    {
+      "id": "imp_telephone_conversation_lesson_14_5_1",
+      "category": "conversation",
+      "ru": "Я неделю провела в Москве в гостях у своей сестры.",
+      "expectedIng": "АЗ ЦХЬА КIИРА МОСКВЕ ДАЬККХАД САЙ ЙИША ЙОЛЧА ХЬОАШАЛГIА ЯХА."
+    },
+    {
+      "id": "imp_cafe_lesson_24_dialogue_6_1",
+      "category": "conversation",
+      "ru": "Я очень благодарен тебе за приглашение.",
+      "expectedIng": "САIИД, БАРКАЛ ХЬОНА ТХО УКХАЗА ДИЙХА."
+    },
+    {
+      "id": "imp_hobbies_lesson_25_dialogue_8_1",
+      "category": "conversation",
+      "ru": "Я понимаю, что без компьютера в данное время обойтись невозможно.",
+      "expectedIng": "СО КХЕТ, КОМПЬЮТЕР ЦА ХИЛЧА ХIАНЗАРЧА ЗАМАГIА ЙИШ ЙОАЦИЛГА."
+    },
+    {
+      "id": "imp_clinic_visit_lesson_16_dialogue_13_1",
+      "category": "conversation",
+      "ru": "Я рекомендую Вам лечь в больницу.",
+      "expectedIng": "АЗ БОЛЬНИЦЕ IОВИЖА АРГДАР ХЬОГА."
+    },
+    {
+      "id": "imp_noun_declension_lesson_22_4_1",
+      "category": "conversation",
+      "ru": "Я с братом поехала в горы.",
+      "expectedIng": "СО ВЕШИЙЦА ЛОАМ ЯХАЙ."
+    },
+    {
+      "id": "imp_daily_expressions_lesson_22_9_1",
+      "category": "conversation",
+      "ru": "Я самостоятельно изучаю ингушский язык.",
+      "expectedIng": "АЗ АЙСА IОМАБУ ГIАЛГIАЙ МОТТ."
+    },
+    {
+      "id": "imp_daily_expressions_lesson_22_2_1",
+      "category": "conversation",
+      "ru": "Я свободен (свободна).",
+      "expectedIng": "СО МУКЪА ВА (Я)."
+    },
+    {
+      "id": "imp_telephone_conversation_lesson_14_2_1",
+      "category": "conversation",
+      "ru": "Я слушаю.",
+      "expectedIng": "СО ЛАДУВГIАШ Я."
+    },
+    {
+      "id": "imp_forest_lesson_18_dialogue_3_1",
+      "category": "conversation",
+      "ru": "Я соберу сухих дров.",
+      "expectedIng": "АЗ ДЕКЪА ДАХЧА ГУЛДЕРГДА ВАЙНА."
+    },
+    {
+      "id": "imp_forest_lesson_18_dialogue_2_1",
+      "category": "conversation",
+      "ru": "Я согласен, здесь можно хорошо отдохнуть.",
+      "expectedIng": "СО РАЬЗА ВА. ДИКА САЛАIА МОТТИГ Я УКХАЗА."
+    },
+    {
+      "id": "imp_three_tenses_to_be_lesson_12_1_1",
+      "category": "conversation",
+      "ru": "Я студент.",
+      "expectedIng": "СО СТУДЕНТ ВА."
+    },
+    {
+      "id": "imp_transport_lesson_10_dialogue_1_1",
+      "category": "conversation",
+      "ru": "Я считаю, что самый надежный вид транспорта — метро.",
+      "expectedIng": "СОГА ХАЬТТАЧА, МЕТРО ЭГГАРА ТЕШАМЕГIА ТРАНСПОРТ ХЕТ."
+    },
+    {
+      "id": "imp_zoo_weekend_dialogue_2_2",
+      "category": "conversation",
+      "ru": "Я тебе буду рассказывать о них все, что я знаю.",
+      "expectedIng": "АЗ ДУВЦАРГДА ХЬОНА ЦАРЕХ ЛАЬЦА САЙНА МЕЛ ХОВР."
+    },
+    {
+      "id": "imp_acquaintance_lesson_11_dialogue_7_1",
+      "category": "conversation",
+      "ru": "Я тоже очень рада вашему знакомству.",
+      "expectedIng": "СОНА А ЧIОАГIА ДИКА ХЕТ ХЬО ВАЙЗА."
+    },
+    {
+      "id": "imp_acquaintance_lesson_3_dialogue_7_1",
+      "category": "conversation",
+      "ru": "Я учился в Назрановской школе.",
+      "expectedIng": "СО НАЗРАНЕРЧА ШКОЛЕ ДЕШАШ ХИННАВ."
+    },
+    {
+      "id": "imp_acquaintance_lesson_3_dialogue_5_1",
+      "category": "conversation",
+      "ru": "Я учусь в Москве в РГГУ.",
+      "expectedIng": "СО ДЕШАШ ВА МОСКВЕ РОССЕ ПАЧЧАХЬАЛКХЕН ГУМАНИТАРНИ УНИВЕРСИТЕТЕ."
+    },
+    {
+      "id": "imp_hobbies_lesson_25_dialogue_5_1",
+      "category": "conversation",
+      "ru": "Я, как все мужчины, увлекаюсь спортом.",
+      "expectedIng": "СО, ДУКХАГIА МЕЛ БОЛА МАIА НАХ САННА, СПОРТАЦА САКЪЕРДАЛУШ ВА."
+    },
+    {
+      "id": "imp_numbers_lesson_9_8_1",
+      "category": "conversation",
+      "ru": "Яха, сколько тебе лет?",
+      "expectedIng": "ЯХА, МЕЛ ХА ЯЬННАЙ ХЬА?"
+    },
+    {
+      "id": "ph_danger_0_enlkxd",
+      "category": "danger",
+      "ru": "Опасность",
+      "expectedIng": "Кхерме"
+    },
+    {
+      "id": "ph_danger_1_1hfn7m4",
+      "category": "danger",
+      "ru": "Опасно!",
+      "expectedIng": "Кхерме да!"
+    },
+    {
+      "id": "ph_danger_2_1hjjt59",
+      "category": "danger",
+      "ru": "Осторожно!",
+      "expectedIng": "Хьаьлха да!"
+    },
+    {
+      "id": "ph_danger_3_e10j5e",
+      "category": "danger",
+      "ru": "Не подходи!",
+      "expectedIng": "Хьат1а ма вулла!"
+    },
+    {
+      "id": "ph_danger_4_1xykddf",
+      "category": "danger",
+      "ru": "Стой!",
+      "expectedIng": "Тха!"
+    },
+    {
+      "id": "ph_danger_5_r3uj1r",
+      "category": "danger",
+      "ru": "Он опасен",
+      "expectedIng": "Из кхерме"
+    },
+    {
+      "id": "ph_danger_6_10kh8cg",
+      "category": "danger",
+      "ru": "Это опасно",
+      "expectedIng": "Ха кхерме"
+    },
+    {
+      "id": "ph_danger_7_bdwztm",
+      "category": "danger",
+      "ru": "Берегись!",
+      "expectedIng": "Йолча!"
+    },
+    {
+      "id": "ph_danger_8_kq8enb",
+      "category": "danger",
+      "ru": "Берегите его",
+      "expectedIng": "Из йолча"
+    },
+    {
+      "id": "ph_danger_9_1gc3qy",
+      "category": "danger",
+      "ru": "Беги!",
+      "expectedIng": "Уда!"
+    },
+    {
+      "id": "ph_danger_10_nsfv1v",
+      "category": "danger",
+      "ru": "Спрячься",
+      "expectedIng": "Лоч1къа"
+    },
+    {
+      "id": "ph_danger_11_ftphss",
+      "category": "danger",
+      "ru": "Помоги мне!",
+      "expectedIng": "Са г1о де!"
+    },
+    {
+      "id": "ph_danger_12_7dj797",
+      "category": "danger",
+      "ru": "Мне нужна помощь",
+      "expectedIng": "Са г1о давах"
+    },
+    {
+      "id": "ph_danger_13_mzdltk",
+      "category": "danger",
+      "ru": "Внимательно смотри",
+      "expectedIng": "Дикка хьаьжа"
+    },
+    {
+      "id": "ph_danger_14_putwt2",
+      "category": "danger",
+      "ru": "Тише!",
+      "expectedIng": "Шортиг!"
+    },
+    {
+      "id": "ph_danger_15_12rpzqq",
+      "category": "danger",
+      "ru": "Не шуми!",
+      "expectedIng": "Муса хьа!"
+    },
+    {
+      "id": "ph_danger_16_ls0hfb",
+      "category": "danger",
+      "ru": "Он там",
+      "expectedIng": "Из цугахь"
+    },
+    {
+      "id": "ph_danger_17_1lbplvn",
+      "category": "danger",
+      "ru": "Он здесь",
+      "expectedIng": "Из хьокха"
+    },
+    {
+      "id": "ph_danger_18_15u4qcc",
+      "category": "danger",
+      "ru": "Он рядом",
+      "expectedIng": "Из гянна йолча"
+    },
+    {
+      "id": "ph_danger_19_17u5kso",
+      "category": "danger",
+      "ru": "Где опасность?",
+      "expectedIng": "Кхерме хьа?"
+    },
+    {
+      "id": "ph_danger_20_90jixk",
+      "category": "danger",
+      "ru": "Что случилось?",
+      "expectedIng": "Фо ханнад?"
+    },
+    {
+      "id": "ph_danger_21_tv489a",
+      "category": "danger",
+      "ru": "Он ранен",
+      "expectedIng": "Из беха"
+    },
+    {
+      "id": "ph_danger_23_7qmyku",
+      "category": "danger",
+      "ru": "Не иди туда",
+      "expectedIng": "Цугахь вудац!"
+    },
+    {
+      "id": "ph_danger_24_179cm9d",
+      "category": "danger",
+      "ru": "Не иди сюда",
+      "expectedIng": "Хьокха вудац!"
+    },
+    {
+      "id": "ph_danger_25_q7qmmo",
+      "category": "danger",
+      "ru": "Жди здесь",
+      "expectedIng": "Хьокха сабар де"
+    },
+    {
+      "id": "ph_danger_26_mmbh1t",
+      "category": "danger",
+      "ru": "Быстрее!",
+      "expectedIng": "Марсха!"
+    },
+    {
+      "id": "ph_danger_27_1dxt3xi",
+      "category": "danger",
+      "ru": "Медленнее!",
+      "expectedIng": "Шортиг!"
+    },
+    {
+      "id": "ph_danger_28_1pfkrso",
+      "category": "danger",
+      "ru": "Я боюсь",
+      "expectedIng": "со кхера"
+    },
+    {
+      "id": "ph_danger_29_1ia5l2i",
+      "category": "danger",
+      "ru": "Не бойся",
+      "expectedIng": "Хьа му хьоала"
+    },
+    {
+      "id": "ph_danger_30_px8qcj",
+      "category": "danger",
+      "ru": "Сюда!",
+      "expectedIng": "Укхазахь"
+    },
+    {
+      "id": "ph_danger_31_12otqv4",
+      "category": "danger",
+      "ru": "Туда!",
+      "expectedIng": "Цугахь!"
+    },
+    {
+      "id": "f_1766328880859_feh5",
+      "category": "drink",
+      "ru": "Водка",
+      "expectedIng": "Чаг1р"
+    },
+    {
+      "id": "noid_emotions.json_0",
+      "category": "emotions",
+      "ru": "Как ты себя чувствуешь?",
+      "expectedIng": "Хьа хьоалч мотт?"
+    },
+    {
+      "id": "noid_emotions.json_1",
+      "category": "emotions",
+      "ru": "Я чувствую себя хорошо",
+      "expectedIng": "Со дика ву"
+    },
+    {
+      "id": "noid_emotions.json_2",
+      "category": "emotions",
+      "ru": "Я чувствую себя плохо",
+      "expectedIng": "Со му ву"
+    },
+    {
+      "id": "noid_emotions.json_3",
+      "category": "emotions",
+      "ru": "Я рад",
+      "expectedIng": "Со дог1ала"
+    },
+    {
+      "id": "noid_emotions.json_4",
+      "category": "emotions",
+      "ru": "Я счастлив",
+      "expectedIng": "Ираз долаж ва со"
+    },
+    {
+      "id": "noid_emotions.json_5",
+      "category": "emotions",
+      "ru": "Я устал",
+      "expectedIng": "Со къяд ваннув"
+    },
+    {
+      "id": "noid_emotions.json_6",
+      "category": "emotions",
+      "ru": "Я очень устал",
+      "expectedIng": "Со къяд йо ваннув"
+    },
+    {
+      "id": "noid_emotions.json_7",
+      "category": "emotions",
+      "ru": "Мне больно",
+      "expectedIng": "Са беха"
+    },
+    {
+      "id": "noid_emotions.json_8",
+      "category": "emotions",
+      "ru": "Мне страшно",
+      "expectedIng": "Са хьоала"
+    },
+    {
+      "id": "noid_emotions.json_9",
+      "category": "emotions",
+      "ru": "Я не боюсь",
+      "expectedIng": "Со му хьоала"
+    },
+    {
+      "id": "noid_emotions.json_10",
+      "category": "emotions",
+      "ru": "Я злой",
+      "expectedIng": "Со къайра"
+    },
+    {
+      "id": "noid_emotions.json_11",
+      "category": "emotions",
+      "ru": "Я спокоен",
+      "expectedIng": "Со лерда"
+    },
+    {
+      "id": "noid_emotions.json_12",
+      "category": "emotions",
+      "ru": "Я думаю",
+      "expectedIng": "Со ил еж"
+    },
+    {
+      "id": "noid_emotions.json_13",
+      "category": "emotions",
+      "ru": "Я не знаю",
+      "expectedIng": "Сун хац"
+    },
+    {
+      "id": "noid_emotions.json_14",
+      "category": "emotions",
+      "ru": "Мне нравится",
+      "expectedIng": "Сун хозхет"
+    },
+    {
+      "id": "noid_emotions.json_15",
+      "category": "emotions",
+      "ru": "Мне не нравится",
+      "expectedIng": "Сун му хозхет"
+    },
+    {
+      "id": "noid_emotions.json_16",
+      "category": "emotions",
+      "ru": "Я хочу",
+      "expectedIng": "Со безам ба"
+    },
+    {
+      "id": "noid_emotions.json_17",
+      "category": "emotions",
+      "ru": "Мне хочется",
+      "expectedIng": "Са безам ба"
+    },
+    {
+      "id": "noid_emotions.json_18",
+      "category": "emotions",
+      "ru": "Мне скучно",
+      "expectedIng": "Са цаьрга"
+    },
+    {
+      "id": "noid_emotions.json_19",
+      "category": "emotions",
+      "ru": "Мне весело",
+      "expectedIng": "Са дог1ала"
+    },
+    {
+      "id": "noid_emotions.json_20",
+      "category": "emotions",
+      "ru": "Я сплю",
+      "expectedIng": "Со кхеташ ву"
+    },
+    {
+      "id": "noid_emotions.json_21",
+      "category": "emotions",
+      "ru": "Я хочу спать",
+      "expectedIng": "Са кхеташ безам ба"
+    },
+    {
+      "id": "noid_emotions.json_22",
+      "category": "emotions",
+      "ru": "Я злюсь",
+      "expectedIng": "Со къайра йола"
+    },
+    {
+      "id": "f_1779266412057_zn8d",
+      "category": "food",
+      "ru": "Это еда очень вкусная",
+      "expectedIng": "Ер я1хьм чоаг1 чам болаж е"
+    },
+    {
+      "id": "f_1779271716354_cytd",
+      "category": "food",
+      "ru": "Я бы мучное покушал",
+      "expectedIng": "Хьоара я хьам йуаг ер азам"
+    },
+    {
+      "id": "f_1779271971936_2u3t",
+      "category": "food",
+      "ru": "Где здесь можно покушать",
+      "expectedIng": "Мичахь хьам йуаг ер укхача"
+    },
+    {
+      "id": "f_1779272753670_nk3o",
+      "category": "food",
+      "ru": "Большая картошка",
+      "expectedIng": "Йоккха коартол"
+    },
+    {
+      "id": "f_1779272934464_fvyq",
+      "category": "food",
+      "ru": "Налей чаю",
+      "expectedIng": "Чей 1а доттал"
+    },
+    {
+      "id": "f_1779273103836_xps1",
+      "category": "food",
+      "ru": "Сколько стоит варенная кукуруза",
+      "expectedIng": "Ф дех кхехкая хьажкашт?"
+    },
+    {
+      "id": "f_1779273208883_swtp",
+      "category": "food",
+      "ru": "сколько стоит бананы",
+      "expectedIng": "Фу дех хинпаста?"
+    },
+    {
+      "id": "f_1779273373797_qb64",
+      "category": "food",
+      "ru": "Я кушаю банан",
+      "expectedIng": "Со хинпаст йуаш ва"
+    },
+    {
+      "id": "f_1779273676078_7uw6",
+      "category": "food",
+      "ru": "Я собираю землянику",
+      "expectedIng": "Со бяцкомарж гулеж воал"
+    },
+    {
+      "id": "f_1779277616561_7otx",
+      "category": "food",
+      "ru": "Сколько стоят бананы",
+      "expectedIng": "Хин паста фу дех??"
+    },
+    {
+      "id": "f_1779278011957_06jx",
+      "category": "food",
+      "ru": "Вкусные бананы",
+      "expectedIng": "Мерза хинпасташ"
+    },
+    {
+      "id": "f_1779278926687_mpu6",
+      "category": "food",
+      "ru": "давай позавтракаем",
+      "expectedIng": "Мартта даа вай"
+    },
+    {
+      "id": "f_1779279501129_e1a5",
+      "category": "food",
+      "ru": "Давай обедать",
+      "expectedIng": "Делкъийга хIама йу1"
+    },
+    {
+      "id": "f_1779279669631_o1vy",
+      "category": "food",
+      "ru": "Пойдём в кафе покушаем",
+      "expectedIng": "Кафе чу гӀоргда хӀума яа1."
+    },
+    {
+      "id": "f_1779279779353_gc5p",
+      "category": "food",
+      "ru": "Плов был вкусным",
+      "expectedIng": "Плов мерза дар."
+    },
+    {
+      "id": "f_1766020839248_0dr4",
+      "category": "health",
+      "ru": "Здоровье",
+      "expectedIng": "Magar"
+    },
+    {
+      "id": "f_1779570770576_ax0r",
+      "category": "hunt",
+      "ru": "волк на охоте 1",
+      "expectedIng": "борз чарахье"
+    },
+    {
+      "id": "f_1766024853692_nado_idti",
+      "category": "misc",
+      "ru": "Мне надо идти",
+      "expectedIng": "Са веза даваха"
+    },
+    {
+      "id": "f_1766024553032_cmbk",
+      "category": "orientation",
+      "ru": "Вернись обратно",
+      "expectedIng": "Юха верза"
+    },
+    {
+      "id": "f_1766024553032_rtnb",
+      "category": "orientation",
+      "ru": "Возвратился",
+      "expectedIng": "юха веннав"
+    },
+    {
+      "id": "f_1779344436687_hraw",
+      "category": "tools",
+      "ru": "Молоток",
+      "expectedIng": "гон / жIов"
+    },
+    {
+      "id": "f_1766023943620_drvout",
+      "category": "transport",
+      "ru": "Выехал",
+      "expectedIng": "новкъа аравяннав"
     }
   ]
 }
