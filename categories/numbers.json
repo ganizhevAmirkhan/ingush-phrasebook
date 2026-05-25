@@ -80,15 +80,19 @@
     },
     {
       "ru": "Сколько стоит?",
-      "ing": "Шун хьа хила?",
-      "pron": "shun kha hila",
+      "ing": "Фу доаккх укхох? / фу дех укхох?",
+      "pron": "fu doakkh ukhokh? / fu dekh ukhokh?",
       "id": "f_1766025451240_aqgc",
       "audio": "f_1766025451240_aqgc.mp3"
     },
     {
       "ru": "Сколько километров?",
       "ing": "Масса километр?",
+<<<<<<< HEAD
       "pron": "massa kilometr",
+=======
+      "pron": "massa kilometr?",
+>>>>>>> 4cf0d4d54cb497b4e6e979318e405d26432d564c
       "id": "f_1766025451240_72ut",
       "audio": "f_1766025451240_72ut.mp3"
     },
