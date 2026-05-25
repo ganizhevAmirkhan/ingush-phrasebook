@@ -1754,14 +1754,14 @@
     {
       "id": "weather_bad_weather_general",
       "ruPattern": "плохая погода",
-      "description": "Bad weather (phrasebook: Юьхад му)",
+      "description": "Bad weather: му (плохая) + хаоттам (погода)",
       "slots": [],
-      "ingTemplate": "Юьхад му",
+      "ingTemplate": "Му хаоттам",
       "priority": 100,
       "examples": [
         {
           "ru": "плохая погода",
-          "ing_expected": "Юьхад му"
+          "ing_expected": "Му хаоттам"
         }
       ]
     },
@@ -1776,6 +1776,34 @@
         {
           "ru": "хорошая погода",
           "ing_expected": "Дика хаоттам"
+        }
+      ]
+    },
+    {
+      "id": "water_hot",
+      "ruPattern": "горячая вода",
+      "description": "Hot water: дайхь (горячая) + хи (вода)",
+      "slots": [],
+      "ingTemplate": "Дайхь хи",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "горячая вода",
+          "ing_expected": "Дайхь хи"
+        }
+      ]
+    },
+    {
+      "id": "water_cold",
+      "ruPattern": "холодная вода",
+      "description": "Cold water: шийла (холодная) + хи (вода)",
+      "slots": [],
+      "ingTemplate": "Шийла хи",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "холодная вода",
+          "ing_expected": "Шийла хи"
         }
       ]
     },

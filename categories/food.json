@@ -52,15 +52,15 @@
     },
     {
       "ru": "Горячая вода",
-      "ing": "Дайхьа хий",
-      "pron": "Daikha khi",
+      "ing": "Дайхь хи",
+      "pron": "daikh hi",
       "id": "f_1766022476934_rcud",
       "audio": "f_1766022476934_rcud.mp3"
     },
     {
       "ru": "Холодная вода",
-      "ing": "Шийла хий",
-      "pron": "Shila khi",
+      "ing": "Шийла хи",
+      "pron": "shila hi",
       "id": "f_1766022476934_twzw",
       "audio": "f_1766022476934_twzw.mp3"
     },

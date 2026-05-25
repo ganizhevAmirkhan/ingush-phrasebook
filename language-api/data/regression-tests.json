@@ -1103,13 +1103,13 @@
       "id": "f_1766030410812_307p",
       "category": "drink",
       "ru": "Горячая вода",
-      "expectedIng": "Кхетта мал"
+      "expectedIng": "Дайхь хи"
     },
     {
       "id": "f_1766030410812_ilev",
       "category": "drink",
       "ru": "Холодная вода",
-      "expectedIng": "Серда мал"
+      "expectedIng": "Шийла хи"
     },
     {
       "id": "f_1766030410812_02gi",
@@ -1181,7 +1181,7 @@
       "id": "f_1766030410812_rvgj",
       "category": "drink",
       "ru": "Кипяток",
-      "expectedIng": "Кхетта мал"
+      "expectedIng": "Дайхь хи"
     },
     {
       "id": "f_1766030410812_ur71",
@@ -1733,13 +1733,13 @@
       "id": "f_1766022476934_rcud",
       "category": "food",
       "ru": "Горячая вода",
-      "expectedIng": "Дайхьа хий"
+      "expectedIng": "Дайхь хи"
     },
     {
       "id": "f_1766022476934_twzw",
       "category": "food",
       "ru": "Холодная вода",
-      "expectedIng": "Шийла хий"
+      "expectedIng": "Шийла хи"
     },
     {
       "id": "f_1766022476934_mfot",
@@ -4829,7 +4829,7 @@
       "id": "f_1766025115892_y31i",
       "category": "weather",
       "ru": "Плохая погода",
-      "expectedIng": "Юьхад му"
+      "expectedIng": "Му хаоттам"
     },
     {
       "id": "f_1766025115892_8l9c",
