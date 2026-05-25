@@ -171,10 +171,10 @@
       "ru": "лиса",
       "pos": "noun",
       "forms": {
-        "base": "Кел",
+        "base": "Цхьугл",
         "dat": "цхьогала"
       },
-      "notes": "Habar sync"
+      "notes": "Habar animals sync"
     },
     {
       "ru": "заяц",
@@ -196,10 +196,10 @@
       "ru": "волк",
       "pos": "noun",
       "forms": {
-        "base": "Мокх2",
+        "base": "Борз",
         "dat": "борза"
       },
-      "notes": "Habar sync"
+      "notes": "Habar sync; animals category (not Мокх2)"
     },
     {
       "ru": "лев",
