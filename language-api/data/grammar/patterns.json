@@ -1768,14 +1768,14 @@
     {
       "id": "weather_good_weather",
       "ruPattern": "хорошая погода",
-      "description": "Good weather (phrasebook: Юьхад дика)",
+      "description": "Good weather: дика (хорошая) + хаоттам (погода)",
       "slots": [],
-      "ingTemplate": "Юьхад дика",
+      "ingTemplate": "Дика хаоттам",
       "priority": 100,
       "examples": [
         {
           "ru": "хорошая погода",
-          "ing_expected": "Юьхад дика"
+          "ing_expected": "Дика хаоттам"
         }
       ]
     },
