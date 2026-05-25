@@ -213,15 +213,15 @@
     },
     {
       "ru": "Где ты живёшь?",
-      "ing": "ХЬО МИЧАХЬА ВАХ?",
-      "pron": "h'o michah'a vakh?",
+      "ing": "Хьа дакъош ву?",
+      "pron": "kha dakosh vu",
       "id": "f_1766025491600_7elq",
       "audio": "f_1766025491600_7elq.mp3"
     },
     {
       "ru": "Я живу здесь",
-      "ing": "Со хьокха дакъош ву",
-      "pron": "so khyokha dakosh vu",
+      "ing": "Со укхаза ваха",
+      "pron": "so ukhaza vakha",
       "id": "f_1766025491600_5vgf",
       "audio": "f_1766025491600_5vgf.mp3"
     },
