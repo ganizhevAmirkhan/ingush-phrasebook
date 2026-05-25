@@ -108,8 +108,15 @@
     <label>
       Ингушский:
       <textarea id="edit-ing"></textarea>
-      <button onclick="aiTranslateIng()">🤖</button>
+      <button type="button" id="edit-translate-btn" onclick="aiTranslateIng()">🤖</button>
     </label>
+
+    <div id="edit-translate-progress-wrap" class="api-progress-wrap hidden">
+      <div class="api-progress-label" id="edit-translate-progress-label">Перевод…</div>
+      <div class="api-progress-track">
+        <div class="api-progress-bar" id="edit-translate-progress-bar"></div>
+      </div>
+    </div>
 
     <label>
       PRON:
@@ -126,7 +133,7 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.0/lame.min.js"></script>
-<script src="script.js?v=20260523c"></script>
+<script src="script.js?v=20260525a"></script>
 <script src="recorder.js?v=20260522a"></script>
 <script>
   // Remove stale SW caches from older builds (they blocked script updates).

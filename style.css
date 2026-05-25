@@ -193,8 +193,8 @@ body {
   font-size:13px;
   line-height:1.35;
 }
-.api-progress-wrap{
-  margin:10px 0 12px;
+.modal-box .api-progress-wrap{
+  margin:4px 0 12px;
 }
 .api-progress-wrap.hidden{ display:none; }
 .api-progress-label{

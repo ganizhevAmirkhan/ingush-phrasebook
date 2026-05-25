@@ -1754,14 +1754,28 @@
     {
       "id": "weather_bad_weather_general",
       "ruPattern": "плохая погода",
-      "description": "General statement about bad weather",
+      "description": "Bad weather (phrasebook: Юьхад му)",
       "slots": [],
-      "ingTemplate": "ВО ХАОТТАМ",
-      "priority": 99,
+      "ingTemplate": "Юьхад му",
+      "priority": 100,
       "examples": [
         {
           "ru": "плохая погода",
-          "ing_expected": "ВО ХАОТТАМ"
+          "ing_expected": "Юьхад му"
+        }
+      ]
+    },
+    {
+      "id": "weather_good_weather",
+      "ruPattern": "хорошая погода",
+      "description": "Good weather (phrasebook: Юьхад дика)",
+      "slots": [],
+      "ingTemplate": "Юьхад дика",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "хорошая погода",
+          "ing_expected": "Юьхад дика"
         }
       ]
     },

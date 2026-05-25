@@ -808,10 +808,10 @@ function setApiStatusBadge(level){
   }
 }
 
-function setApiProgress(pct, label, visible=true){
-  const wrap = document.getElementById("api-progress-wrap");
-  const bar = document.getElementById("api-progress-bar");
-  const lbl = document.getElementById("api-progress-label");
+function setProgressBar(wrapId, barId, labelId, pct, label, visible=true){
+  const wrap = document.getElementById(wrapId);
+  const bar = document.getElementById(barId);
+  const lbl = document.getElementById(labelId);
   if(wrap) wrap.classList.toggle("hidden", !visible);
   if(lbl) lbl.textContent = label || "";
   if(bar){
@@ -823,6 +823,21 @@ function setApiProgress(pct, label, visible=true){
       bar.style.width = `${Math.min(100, Math.max(0, pct))}%`;
     }
   }
+}
+
+function setApiProgress(pct, label, visible=true){
+  setProgressBar("api-progress-wrap", "api-progress-bar", "api-progress-label", pct, label, visible);
+}
+
+function setEditTranslateProgress(pct, label, visible=true){
+  setProgressBar(
+    "edit-translate-progress-wrap",
+    "edit-translate-progress-bar",
+    "edit-translate-progress-label",
+    pct,
+    label,
+    visible
+  );
 }
 
 function setApiStatusCard(id, level, title, body){
@@ -1415,29 +1430,75 @@ async function aiTranslateIng(){
 
   const outIng = document.getElementById("edit-ing");
   const outPron = document.getElementById("edit-pron");
+  const btn = document.getElementById("edit-translate-btn");
   outIng && (outIng.value = "");
-  toast("Перевод…", true);
+  setEditTranslateProgress(-1, `Перевод: «${ru.slice(0, 36)}${ru.length > 36 ? "…" : ""}»`);
+  if(btn) btn.disabled = true;
 
   const local = findPhraseFromHabar(ru);
   if(local?.ing){
     outIng && (outIng.value = cleanIngCandidate(local.ing));
     if(outPron && local.pron) outPron.value = safe(local.pron);
+    setEditTranslateProgress(100, "Источник: habar (фраза)");
     toast(`Источник: habar (фраза)`, true);
+    if(btn) btn.disabled = false;
+    setTimeout(() => setEditTranslateProgress(100, "", false), 2000);
     return;
   }
 
-  const res = await callLanguageApi("/translate", {
-    ru,
-    skipHabar: DISABLE_HABAR_PHRASE_SOURCE,
-  });
-  if(!res) return;
-  outIng && (outIng.value = cleanIngCandidate(res.translation));
-  if(outPron && !outPron.value.trim()){
-    const pron = findPhrasePronByIng(res.translation) || transliterateIngushToPron(res.translation);
-    if(pron) outPron.value = pron;
-  }
-  if(res.usedSource){
-    toast(`Источник: ${res.usedSource}`, true);
+  const base = getLanguageApiBase();
+  const ctrl = new AbortController();
+  const timeoutId = setTimeout(() => ctrl.abort(), 45000);
+  const t0 = Date.now();
+  const tickId = setInterval(() => {
+    const sec = Math.round((Date.now() - t0) / 1000);
+    setEditTranslateProgress(-1, `Перевод… ${sec} сек (грамматика → словарь → LLM)`);
+  }, 500);
+
+  let res = null;
+  try{
+    const httpRes = await fetch(`${base}/translate`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ru, skipHabar: DISABLE_HABAR_PHRASE_SOURCE }),
+      signal: ctrl.signal,
+      cache: "no-store"
+    });
+    res = await httpRes.json().catch(() => null);
+    const elapsed = ((Date.now() - t0) / 1000).toFixed(1);
+    if(!httpRes.ok || !res?.ok){
+      const msg = languageApiErrorMessage(res?.error);
+      const extra = res?.detail ? `: ${String(res.detail).slice(0, 120)}` : "";
+      setEditTranslateProgress(100, `✗ ${msg}`);
+      toast(msg + extra, false);
+      setTimeout(() => setEditTranslateProgress(100, "", false), 3000);
+      return;
+    }
+    const ing = cleanIngCandidate(res.translation);
+    if(!ing){
+      setEditTranslateProgress(100, "✗ Пустой перевод от API");
+      toast("Пустой перевод — проверьте LLM на VPS", false);
+      setTimeout(() => setEditTranslateProgress(100, "", false), 3000);
+      return;
+    }
+    outIng && (outIng.value = ing);
+    if(outPron && !outPron.value.trim()){
+      const pron = findPhrasePronByIng(ing) || transliterateIngushToPron(ing);
+      if(pron) outPron.value = pron;
+    }
+    setEditTranslateProgress(100, `✓ ${res.usedSource || "ok"} · ${elapsed} сек`);
+    if(res.usedSource){
+      toast(`Источник: ${res.usedSource}`, true);
+    }
+    setTimeout(() => setEditTranslateProgress(100, "", false), 2500);
+  }catch{
+    setEditTranslateProgress(100, "✗ LanguageAPI недоступен");
+    toast("LanguageAPI недоступен", false);
+    setTimeout(() => setEditTranslateProgress(100, "", false), 3000);
+  }finally{
+    clearInterval(tickId);
+    clearTimeout(timeoutId);
+    if(btn) btn.disabled = false;
   }
 }
 
@@ -1461,6 +1522,7 @@ function openModal(){
 function closeEdit(){
   const m = document.getElementById("edit-modal");
   if(m) m.classList.add("hidden");
+  setEditTranslateProgress(100, "", false);
   editMode = null;
   editingItemId = null;
   editingCategory = null;
