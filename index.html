@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <title>Хабар - Ингушский разговорник</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111111">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Хабар">
+<link rel="manifest" href="manifest.json?v=20260524">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png?v=20260524">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png?v=20260524">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png?v=20260524">
 <link rel="stylesheet" href="style.css?v=20260523b">
 </head>
 
@@ -135,11 +143,9 @@
 <script src="script.js?v=20260523b"></script>
 <script src="recorder.js?v=20260522a"></script>
 <script>
-  // Remove stale SW caches from older builds (they blocked script updates).
   if ("serviceWorker" in navigator) {
-    caches?.keys?.().then((keys) => Promise.all(keys.map((k) => caches.delete(k))));
-    navigator.serviceWorker.getRegistrations().then((regs) => {
-      regs.forEach((reg) => reg.unregister());
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("./sw.js?v=20260524").catch(() => {});
     });
   }
 </script>
