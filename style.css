@@ -41,10 +41,19 @@ body {
 }
 
 .sidebar {
-  width:260px;
+  flex:0 0 auto;
+  width:max-content;
+  max-width:min(220px, 38vw);
   background:#eee;
   padding:10px;
   overflow:auto;
+}
+
+#category-list {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:6px;
 }
 
 .content {
@@ -56,10 +65,13 @@ body {
 
 .category {
   background:#fff;
-  padding:8px;
-  margin-bottom:6px;
+  padding:8px 10px;
   cursor:pointer;
   border-radius:6px;
+  white-space:nowrap;
+  width:max-content;
+  max-width:100%;
+  box-sizing:border-box;
 }
 
 .category:hover { background:#f0f0f0; }
