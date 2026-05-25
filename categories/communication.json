@@ -1,31 +1,131 @@
 {
   "category": "communication",
   "items": [
-    { "ru": "Как дела?", "ing": "Миштад г1улкаж?", "pron": "mishtad g1ulkazh" },
-    { "ru": "Хорошо", "ing": "Дика", "pron": "dika" },
-    { "ru": "Плохо", "ing": "Му", "pron": "mu" },
-
-    { "ru": "Что нового?", "ing": "Фо хьаца?", "pron": "fo khatsa" },
-    { "ru": "Ничего нового", "ing": "Ца хьаца", "pron": "tsa khatsa" },
-
-    { "ru": "Я понял", "ing": "Со кхийтав", "pron": "so khittav" },
-    { "ru": "Я не понял", "ing": "Со кхитвац", "pron": "so khitvats" },
-
-    { "ru": "Повтори", "ing": "Ил ел!", "pron": "il el" },
-    { "ru": "Говори медленно", "ing": "Шортиг лоца", "pron": "shortig lotsa" },
-
-    { "ru": "Не спеши", "ing": "Му марсха", "pron": "mu marsha" },
-
-    { "ru": "Ты уверен?", "ing": "Хьа дог1ийла?", "pron": "kha dog1iyla" },
-    { "ru": "Я уверен", "ing": "Со дог1ийла", "pron": "so dog1iyla" },
-
-    { "ru": "Мне это нравится", "ing": "Сун ха хозхет", "pron": "sun kha khozkhet" },
-    { "ru": "Мне это не нравится", "ing": "Сун ха му хозхет", "pron": "sun kha mu khozkhet" },
-
-    { "ru": "Ты прав", "ing": "Хьа дика мотт", "pron": "kha dika mott" },
-    { "ru": "Я думаю так же", "ing": "Со хилахча", "pron": "so khilakhcha" },
-
-    { "ru": "Подожди", "ing": "Сабар де", "pron": "sabar de" },
-    { "ru": "Пойдём", "ing": "Тхо вудаш", "pron": "tkho vudash" }
+    {
+      "ru": "Как дела?",
+      "ing": "Миштад г1улкаж?",
+      "pron": "mishtad g1ulkazh",
+      "id": "ph_communication_0_cp5w8n",
+      "audio": "ph_communication_0_cp5w8n.mp3"
+    },
+    {
+      "ru": "Хорошо",
+      "ing": "Дика",
+      "pron": "dika",
+      "id": "ph_communication_1_1pspbr0",
+      "audio": "ph_communication_1_1pspbr0.mp3"
+    },
+    {
+      "ru": "Плохо",
+      "ing": "Му",
+      "pron": "mu",
+      "id": "ph_communication_2_olwh4x",
+      "audio": "ph_communication_2_olwh4x.mp3"
+    },
+    {
+      "ru": "Что нового?",
+      "ing": "Фо хьаца?",
+      "pron": "fo khatsa",
+      "id": "ph_communication_3_cv5odl",
+      "audio": "ph_communication_3_cv5odl.mp3"
+    },
+    {
+      "ru": "Ничего нового",
+      "ing": "Ца хьаца",
+      "pron": "tsa khatsa",
+      "id": "ph_communication_4_ynhfj4",
+      "audio": "ph_communication_4_ynhfj4.mp3"
+    },
+    {
+      "ru": "Я понял",
+      "ing": "Со кхийтав",
+      "pron": "so khittav",
+      "id": "ph_communication_5_8vj4n5",
+      "audio": "ph_communication_5_8vj4n5.mp3"
+    },
+    {
+      "ru": "Я не понял",
+      "ing": "Со кхитвац",
+      "pron": "so khitvats",
+      "id": "ph_communication_6_wy80rc",
+      "audio": "ph_communication_6_wy80rc.mp3"
+    },
+    {
+      "ru": "Повтори",
+      "ing": "Ил ел!",
+      "pron": "il el",
+      "id": "ph_communication_7_17pnv00",
+      "audio": "ph_communication_7_17pnv00.mp3"
+    },
+    {
+      "ru": "Говори медленно",
+      "ing": "Шортиг лоца",
+      "pron": "shortig lotsa",
+      "id": "ph_communication_8_orhkyf",
+      "audio": "ph_communication_8_orhkyf.mp3"
+    },
+    {
+      "ru": "Не спеши",
+      "ing": "Сих ма ле",
+      "pron": "sikh ma le",
+      "id": "ph_communication_9_1wpei5l",
+      "audio": "ph_communication_9_1wpei5l.mp3"
+    },
+    {
+      "ru": "Ты уверен?",
+      "ing": "Хьа дог1ийла?",
+      "pron": "kha dog1iyla",
+      "id": "ph_communication_10_12sj4it",
+      "audio": "ph_communication_10_12sj4it.mp3"
+    },
+    {
+      "ru": "Я уверен",
+      "ing": "Со дог1ийла",
+      "pron": "so dog1iyla",
+      "id": "ph_communication_11_1q4jyhv",
+      "audio": "ph_communication_11_1q4jyhv.mp3"
+    },
+    {
+      "ru": "Мне это нравится",
+      "ing": "Сун ха хозхет",
+      "pron": "sun kha khozkhet",
+      "id": "ph_communication_12_1h3iydn",
+      "audio": "ph_communication_12_1h3iydn.mp3"
+    },
+    {
+      "ru": "Мне это не нравится",
+      "ing": "Сун ха му хозхет",
+      "pron": "sun kha mu khozkhet",
+      "id": "ph_communication_13_194mr9g",
+      "audio": "ph_communication_13_194mr9g.mp3"
+    },
+    {
+      "ru": "Ты прав",
+      "ing": "Хьа дика мотт",
+      "pron": "kha dika mott",
+      "id": "ph_communication_14_1ki3ttg",
+      "audio": "ph_communication_14_1ki3ttg.mp3"
+    },
+    {
+      "ru": "Я думаю так же",
+      "ing": "Со хилахча",
+      "pron": "so khilakhcha",
+      "id": "ph_communication_15_vsq941",
+      "audio": "ph_communication_15_vsq941.mp3"
+    },
+    {
+      "ru": "Подожди",
+      "ing": "Сабар де",
+      "pron": "sabar de",
+      "id": "ph_communication_16_uiip7b",
+      "audio": "ph_communication_16_uiip7b.mp3"
+    },
+    {
+      "ru": "Пойдём",
+      "ing": "Тхо вудаш",
+      "pron": "tkho vudash",
+      "id": "ph_communication_17_13s29fo",
+      "audio": "ph_communication_17_13s29fo.mp3"
+    }
   ]
 }
