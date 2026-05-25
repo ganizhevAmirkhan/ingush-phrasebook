@@ -7316,12 +7316,12 @@
       "ruPattern": "21",
       "description": "Lesson 9 numeral",
       "slots": [],
-      "ingTemplate": "ТКЪАЬ ЦАI",
+      "ingTemplate": "ТКЪАЬ ЦАI.",
       "priority": 100,
       "examples": [
         {
           "ru": "21",
-          "ing_expected": "ТКЪАЬ ЦАI"
+          "ing_expected": "ТКЪАЬ ЦАI."
         }
       ]
     },
@@ -8954,12 +8954,12 @@
       "ruPattern": "мой муж",
       "description": "Lesson 4 vocabulary phrase",
       "slots": [],
-      "ingTemplate": "СА ЦIЕН-ДА.",
+      "ingTemplate": "СА ЦIЕ��-ДА.",
       "priority": 100,
       "examples": [
         {
           "ru": "мой муж",
-          "ing_expected": "СА ЦIЕН-ДА."
+          "ing_expected": "СА ЦIЕ��-ДА."
         }
       ]
     },
@@ -14428,12 +14428,12 @@
       "ruPattern": "мне это не нравится",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Сун ер хо��хетац",
+      "ingTemplate": "Сун ер хо����хетац",
       "priority": 100,
       "examples": [
         {
           "ru": "мне это не нравится",
-          "ing_expected": "Сун ер хо��хетац"
+          "ing_expected": "Сун ер хо����хетац"
         }
       ]
     },
@@ -14904,12 +14904,12 @@
       "ruPattern": "бок нога бедро ступня пятка",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "ОАГIУВ, КО��, ВОРУВ, КОГА КIИЙЛЕ, КIОАЖУВ.",
+      "ingTemplate": "ОАГIУВ, КО����, ВОРУВ, КОГА КIИЙЛЕ, КIОАЖУВ.",
       "priority": 100,
       "examples": [
         {
           "ru": "бок нога бедро ступня пятка",
-          "ing_expected": "ОАГIУВ, КО��, ВОРУВ, КОГА КIИЙЛЕ, КIОАЖУВ."
+          "ing_expected": "ОАГIУВ, КО����, ВОРУВ, КОГА КIИЙЛЕ, КIОАЖУВ."
         }
       ]
     },
@@ -15265,14 +15265,14 @@
     },
     {
       "id": "habar_imp_cafe_lesson_24_dialogue_4_1",
-      "ruPattern": "ваш заказ принят",
+      "ruPattern": "ваш заказ пр��нят",
       "description": "Habar phrasebook sync",
       "slots": [],
       "ingTemplate": "ШУН ЗАКАЗ ХЬАИЙЦАД.",
       "priority": 100,
       "examples": [
         {
-          "ru": "ваш заказ принят",
+          "ru": "ваш заказ пр��нят",
           "ing_expected": "ШУН ЗАКАЗ ХЬАИЙЦАД."
         }
       ]
@@ -17270,12 +17270,12 @@
       "ruPattern": "мой муж",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "СА ЦIЕН-ДА.",
+      "ingTemplate": "СА ЦIЕ��-ДА.",
       "priority": 100,
       "examples": [
         {
           "ru": "мой муж",
-          "ing_expected": "СА ЦIЕН-ДА."
+          "ing_expected": "СА ЦIЕ��-ДА."
         }
       ]
     },
@@ -25820,6 +25820,34 @@
       ]
     },
     {
+      "id": "habar_api_numbers_30_is_20_and_10",
+      "ruPattern": "тридцать",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ТКЪАЬ ИТТ",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "тридцать",
+          "ing_expected": "ТКЪАЬ ИТТ"
+        }
+      ]
+    },
+    {
+      "id": "habar_imp_numbers_lesson_9_2_1",
+      "ruPattern": "30 в ингушском — это 20 и 10",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ТКЪАЬ ИТТ.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "30 в ингушском — это 20 и 10",
+          "ing_expected": "ТКЪАЬ ИТТ."
+        }
+      ]
+    },
+    {
       "id": "habar_api_numbers_40",
       "ruPattern": "40",
       "description": "Habar phrasebook sync",
@@ -25947,43 +25975,15 @@
     },
     {
       "id": "habar_imp_numbers_lesson_9_5_1",
-      "ruPattern": "21 это 20 и 1",
+      "ruPattern": "21",
       "description": "Habar phrasebook sync",
       "slots": [],
       "ingTemplate": "ТКЪАЬ ЦАI.",
       "priority": 100,
       "examples": [
         {
-          "ru": "21 это 20 и 1",
+          "ru": "21",
           "ing_expected": "ТКЪАЬ ЦАI."
-        }
-      ]
-    },
-    {
-      "id": "habar_api_numbers_30_is_20_and_10",
-      "ruPattern": "30 это 20 и 10",
-      "description": "Habar phrasebook sync",
-      "slots": [],
-      "ingTemplate": "ТКЪАЬ ИТТ",
-      "priority": 100,
-      "examples": [
-        {
-          "ru": "30 это 20 и 10",
-          "ing_expected": "ТКЪАЬ ИТТ"
-        }
-      ]
-    },
-    {
-      "id": "habar_imp_numbers_lesson_9_2_1",
-      "ruPattern": "30 в ингушском — это 20 и 10",
-      "description": "Habar phrasebook sync",
-      "slots": [],
-      "ingTemplate": "ТКЪАЬ ИТТ.",
-      "priority": 100,
-      "examples": [
-        {
-          "ru": "30 в ингушском — это 20 и 10",
-          "ing_expected": "ТКЪАЬ ИТТ."
         }
       ]
     },

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T21:21:49.614Z",
+  "generatedAt": "2026-05-25T21:33:48.151Z",
   "items": [
     {
       "id": "f_1766017415464_5gdw",
@@ -5141,7 +5141,7 @@
       "id": "ph_communication_13_194mr9g",
       "category": "communication",
       "ru": "Мне это не нравится",
-      "expectedIng": "Сун ер хо��хетац"
+      "expectedIng": "Сун ер хо����хетац"
     },
     {
       "id": "ph_communication_14_1ki3ttg",
@@ -5345,7 +5345,7 @@
       "id": "imp_human_anatomy_lesson_15_4_1",
       "category": "conversation",
       "ru": "Бок, нога, бедро, ступня, пятка.",
-      "expectedIng": "ОАГIУВ, КО��, ВОРУВ, КОГА КIИЙЛЕ, КIОАЖУВ."
+      "expectedIng": "ОАГIУВ, КО����, ВОРУВ, КОГА КIИЙЛЕ, КIОАЖУВ."
     },
     {
       "id": "imp_telephone_conversation_lesson_14_12_",
