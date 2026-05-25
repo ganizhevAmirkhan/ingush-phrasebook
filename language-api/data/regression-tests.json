@@ -2645,7 +2645,7 @@
       "id": "f_1766017407916_e9ah",
       "category": "hunt",
       "ru": "Мы идём на охоту",
-      "expectedIng": "Тхо чарахьи долх"
+      "expectedIng": "Вай аькхе долх"
     },
     {
       "id": "f_1766017407916_uyjh",
@@ -2663,7 +2663,7 @@
       "id": "f_1766017407916_ag8j",
       "category": "hunt",
       "ru": "Вперёд!",
-      "expectedIng": "Бокхта!"
+      "expectedIng": "хьалха"
     },
     {
       "id": "f_1766017407916_v1ah",
@@ -2687,7 +2687,7 @@
       "id": "f_1766017407916_b5an",
       "category": "hunt",
       "ru": "Смотри туда",
-      "expectedIng": "Цугахь хьажа"
+      "expectedIng": "Цигахь хьажал"
     },
     {
       "id": "f_1766017407916_6rjn",
@@ -2747,7 +2747,7 @@
       "id": "f_1766017407916_csm3",
       "category": "hunt",
       "ru": "Он там",
-      "expectedIng": "Из цугахь"
+      "expectedIng": "Из цига"
     },
     {
       "id": "f_1766017407916_ynfc",
@@ -2771,7 +2771,7 @@
       "id": "f_1766017407916_0n4c",
       "category": "hunt",
       "ru": "Не шуми",
-      "expectedIng": "Муса хьа!"
+      "expectedIng": "ГӀар ма е"
     },
     {
       "id": "f_1766017407916_lkm3",
@@ -2783,91 +2783,91 @@
       "id": "f_1766017407916_rry7",
       "category": "hunt",
       "ru": "Не стреляй!",
-      "expectedIng": "Ца тухаж!"
+      "expectedIng": "Матуха"
     },
     {
       "id": "f_1766017407916_qm1i",
       "category": "hunt",
       "ru": "Готовься стрелять",
-      "expectedIng": "Тухалахь тайпа"
+      "expectedIng": "Кечлелахь туха"
     },
     {
       "id": "f_1766017407916_e9k6",
       "category": "hunt",
       "ru": "Он бежит",
-      "expectedIng": "Из удаж"
+      "expectedIng": "Из удаж дуд"
     },
     {
       "id": "f_1766017407916_a3gk",
       "category": "hunt",
       "ru": "Он остановился",
-      "expectedIng": "Из тха хина"
+      "expectedIng": "Из 1асацав"
     },
     {
       "id": "f_1766017407916_gdmg",
       "category": "hunt",
       "ru": "Береги оружие",
-      "expectedIng": "Кош дуйла"
+      "expectedIng": "Лорде герз"
     },
     {
       "id": "f_1766017407916_h39e",
       "category": "hunt",
       "ru": "Заряди оружие",
-      "expectedIng": "Кош теша"
+      "expectedIng": "Туха кичем бе герза"
     },
     {
       "id": "f_1766017407916_xca1",
       "category": "hunt",
       "ru": "Где цель?",
-      "expectedIng": "Хьам хьа?"
+      "expectedIng": "Мичай хьежорг"
     },
     {
       "id": "f_1766017407916_p7dl",
       "category": "hunt",
       "ru": "Вот цель",
-      "expectedIng": "Ха хьам"
+      "expectedIng": "Ер я хьежорг"
     },
     {
       "id": "f_1766017407916_sbro",
       "category": "hunt",
       "ru": "Он ранен",
-      "expectedIng": "Из беха"
+      "expectedIng": "Чов яй цун"
     },
     {
       "id": "f_1766017407916_58kf",
       "category": "hunt",
       "ru": "Он упал",
-      "expectedIng": "Из т1аккха"
+      "expectedIng": "Из 1авежав"
     },
     {
       "id": "f_1766017407916_lsyz",
       "category": "hunt",
       "ru": "Мы нашли след",
-      "expectedIng": "Тхо керд лар йола"
+      "expectedIng": "Тхун лар коряй"
     },
     {
       "id": "f_1766017407916_aev1",
       "category": "hunt",
       "ru": "Мы потеряли след",
-      "expectedIng": "Тхо керд седа хинна"
+      "expectedIng": "Оах йоаер лар"
     },
     {
       "id": "f_1766017407916_98rs",
       "category": "hunt",
       "ru": "Перейдём сюда",
-      "expectedIng": "Тхо хьокха вудаш"
+      "expectedIng": "Хьасехьдовла вай уг1азахь"
     },
     {
       "id": "f_1766017407916_ku4a",
       "category": "hunt",
       "ru": "Перейдём туда",
-      "expectedIng": "Тхо цугахь вудаш"
+      "expectedIng": "Цигахь дадехьдовла вай"
     },
     {
       "id": "f_1766017407916_pb76",
       "category": "hunt",
       "ru": "Он рядом",
-      "expectedIng": "Из гянна йолча"
+      "expectedIng": "Из гарага я"
     },
     {
       "id": "f_1766017407916_z9yw",
@@ -2879,7 +2879,7 @@
       "id": "f_1766017407916_rzcw",
       "category": "hunt",
       "ru": "Он ниже",
-      "expectedIng": "Из цIара"
+      "expectedIng": "Из къалахь"
     },
     {
       "id": "f_1766017407916_oezz",
@@ -2897,7 +2897,7 @@
       "id": "f_1766017407916_k5q3",
       "category": "hunt",
       "ru": "Береги себя",
-      "expectedIng": "Хьо йолча"
+      "expectedIng": "Лорлелахь"
     },
     {
       "id": "f_1766017407916_iu7w",
@@ -2909,13 +2909,13 @@
       "id": "f_1766017407916_79ys",
       "category": "hunt",
       "ru": "Мы возвращаемся",
-      "expectedIng": "Тхо виннагаш"
+      "expectedIng": "Юхадог1а тхо"
     },
     {
       "id": "f_1766017407916_d24c",
       "category": "hunt",
       "ru": "Возвращайся",
-      "expectedIng": "Хьа виннаг!"
+      "expectedIng": "Юхавел"
     },
     {
       "id": "f_1766017407916_bh0a",

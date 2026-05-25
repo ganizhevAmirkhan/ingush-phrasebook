@@ -1814,7 +1814,348 @@
       "slots": [],
       "ingTemplate": "Хьайб",
       "priority": 100,
-      "examples": [{ "ru": "животное", "ing_expected": "Хьайб" }]
+      "examples": [
+        {
+          "ru": "животное",
+          "ing_expected": "Хьайб"
+        }
+      ]
+    },
+    {
+      "id": "hunt_мы_ид_м_на_охоту",
+      "ruPattern": "мы идём на охоту",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "Вай аькхе долх",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мы идём на охоту",
+          "ing_expected": "Вай аькхе долх"
+        }
+      ]
+    },
+    {
+      "id": "hunt_смотри_туда",
+      "ruPattern": "смотри туда",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "Цигахь хьажал",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "смотри туда",
+          "ing_expected": "Цигахь хьажал"
+        }
+      ]
+    },
+    {
+      "id": "hunt_он_там",
+      "ruPattern": "он там",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "Из цига",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "он там",
+          "ing_expected": "Из цига"
+        }
+      ]
+    },
+    {
+      "id": "hunt_не_шуми",
+      "ruPattern": "не шуми",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "ГӀар ма е",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "не шуми",
+          "ing_expected": "ГӀар ма е"
+        }
+      ]
+    },
+    {
+      "id": "hunt_стреляй",
+      "ruPattern": "стреляй",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "Туха!",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "стреляй",
+          "ing_expected": "Туха!"
+        }
+      ]
+    },
+    {
+      "id": "hunt_не_стреляй",
+      "ruPattern": "не стреляй",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "Матуха",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "не стреляй",
+          "ing_expected": "Матуха"
+        }
+      ]
+    },
+    {
+      "id": "hunt_готовься_стрелять",
+      "ruPattern": "готовься стрелять",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "Кечлелахь туха",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "готовься стрелять",
+          "ing_expected": "Кечлелахь туха"
+        }
+      ]
+    },
+    {
+      "id": "hunt_он_бежит",
+      "ruPattern": "он бежит",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "Из удаж дуд",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "он бежит",
+          "ing_expected": "Из удаж дуд"
+        }
+      ]
+    },
+    {
+      "id": "hunt_он_остановился",
+      "ruPattern": "он остановился",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "Из 1асацав",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "он остановился",
+          "ing_expected": "Из 1асацав"
+        }
+      ]
+    },
+    {
+      "id": "hunt_береги_оружие",
+      "ruPattern": "береги оружие",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "Лорде герз",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "береги оружие",
+          "ing_expected": "Лорде герз"
+        }
+      ]
+    },
+    {
+      "id": "hunt_заряди_оружие",
+      "ruPattern": "заряди оружие",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "Туха кичем бе герза",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "заряди оружие",
+          "ing_expected": "Туха кичем бе герза"
+        }
+      ]
+    },
+    {
+      "id": "hunt_где_цель",
+      "ruPattern": "где цель",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "Мичай хьежорг",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "где цель",
+          "ing_expected": "Мичай хьежорг"
+        }
+      ]
+    },
+    {
+      "id": "hunt_вот_цель",
+      "ruPattern": "вот цель",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "Ер я хьежорг",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "вот цель",
+          "ing_expected": "Ер я хьежорг"
+        }
+      ]
+    },
+    {
+      "id": "hunt_он_ранен",
+      "ruPattern": "он ранен",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "Чов яй цун",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "он ранен",
+          "ing_expected": "Чов яй цун"
+        }
+      ]
+    },
+    {
+      "id": "hunt_он_упал",
+      "ruPattern": "он упал",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "Из 1авежав",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "он упал",
+          "ing_expected": "Из 1авежав"
+        }
+      ]
+    },
+    {
+      "id": "hunt_мы_нашли_след",
+      "ruPattern": "мы нашли след",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "Тхун лар коряй",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мы нашли след",
+          "ing_expected": "Тхун лар коряй"
+        }
+      ]
+    },
+    {
+      "id": "hunt_мы_потеряли_след",
+      "ruPattern": "мы потеряли след",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "Оах йоаер лар",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мы потеряли след",
+          "ing_expected": "Оах йоаер лар"
+        }
+      ]
+    },
+    {
+      "id": "hunt_перейд_м_сюда",
+      "ruPattern": "перейдём сюда",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "Хьасехьдовла вай уг1азахь",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "перейдём сюда",
+          "ing_expected": "Хьасехьдовла вай уг1азахь"
+        }
+      ]
+    },
+    {
+      "id": "hunt_перейд_м_туда",
+      "ruPattern": "перейдём туда",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "Цигахь дадехьдовла вай",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "перейдём туда",
+          "ing_expected": "Цигахь дадехьдовла вай"
+        }
+      ]
+    },
+    {
+      "id": "hunt_он_рядом",
+      "ruPattern": "он рядом",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "Из гарага я",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "он рядом",
+          "ing_expected": "Из гарага я"
+        }
+      ]
+    },
+    {
+      "id": "hunt_он_ниже",
+      "ruPattern": "он ниже",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "Из къалахь",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "он ниже",
+          "ing_expected": "Из къалахь"
+        }
+      ]
+    },
+    {
+      "id": "hunt_береги_себя",
+      "ruPattern": "береги себя",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "Лорлелахь",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "береги себя",
+          "ing_expected": "Лорлелахь"
+        }
+      ]
+    },
+    {
+      "id": "hunt_мы_возвращаемся",
+      "ruPattern": "мы возвращаемся",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "Юхадог1а тхо",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мы возвращаемся",
+          "ing_expected": "Юхадог1а тхо"
+        }
+      ]
+    },
+    {
+      "id": "hunt_возвращайся",
+      "ruPattern": "возвращайся",
+      "description": "Hunting phrasebook (native speaker)",
+      "slots": [],
+      "ingTemplate": "Юхавел",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "возвращайся",
+          "ing_expected": "Юхавел"
+        }
+      ]
     },
     {
       "id": "drink_you_have_water",
@@ -1823,7 +2164,12 @@
       "slots": [],
       "ingTemplate": "Хьуга хи ди?",
       "priority": 100,
-      "examples": [{ "ru": "у тебя есть вода", "ing_expected": "Хьуга хи ди?" }]
+      "examples": [
+        {
+          "ru": "у тебя есть вода",
+          "ing_expected": "Хьуга хи ди?"
+        }
+      ]
     },
     {
       "id": "drink_i_have_water",
@@ -1832,7 +2178,12 @@
       "slots": [],
       "ingTemplate": "Суга хи да",
       "priority": 100,
-      "examples": [{ "ru": "у меня есть вода", "ing_expected": "Суга хи да" }]
+      "examples": [
+        {
+          "ru": "у меня есть вода",
+          "ing_expected": "Суга хи да"
+        }
+      ]
     },
     {
       "id": "drink_i_drank",
@@ -1841,7 +2192,12 @@
       "slots": [],
       "ingTemplate": "Аз манад",
       "priority": 100,
-      "examples": [{ "ru": "я выпил", "ing_expected": "Аз манад" }]
+      "examples": [
+        {
+          "ru": "я выпил",
+          "ing_expected": "Аз манад"
+        }
+      ]
     },
     {
       "id": "drink_dont_drink",
@@ -1850,7 +2206,12 @@
       "slots": [],
       "ingTemplate": "Ма малахь",
       "priority": 100,
-      "examples": [{ "ru": "не пей", "ing_expected": "Ма малахь" }]
+      "examples": [
+        {
+          "ru": "не пей",
+          "ing_expected": "Ма малахь"
+        }
+      ]
     },
     {
       "id": "drink_drink_imperative",
@@ -1859,7 +2220,12 @@
       "slots": [],
       "ingTemplate": "Дамал",
       "priority": 100,
-      "examples": [{ "ru": "пей", "ing_expected": "Дамал" }]
+      "examples": [
+        {
+          "ru": "пей",
+          "ing_expected": "Дамал"
+        }
+      ]
     },
     {
       "id": "drink_will_you_have_tea",
@@ -1868,7 +2234,12 @@
       "slots": [],
       "ingTemplate": "Хьун чай дези?",
       "priority": 100,
-      "examples": [{ "ru": "ты чай будешь", "ing_expected": "Хьун чай дези?" }]
+      "examples": [
+        {
+          "ru": "ты чай будешь",
+          "ing_expected": "Хьун чай дези?"
+        }
+      ]
     },
     {
       "id": "drink_make_tea",
@@ -1877,7 +2248,12 @@
       "slots": [],
       "ingTemplate": "Чай дел",
       "priority": 100,
-      "examples": [{ "ru": "сделай чай", "ing_expected": "Чай дел" }]
+      "examples": [
+        {
+          "ru": "сделай чай",
+          "ing_expected": "Чай дел"
+        }
+      ]
     },
     {
       "id": "drink_make_coffee",
@@ -1886,7 +2262,12 @@
       "slots": [],
       "ingTemplate": "Кофе дел",
       "priority": 100,
-      "examples": [{ "ru": "сделай кофе", "ing_expected": "Кофе дел" }]
+      "examples": [
+        {
+          "ru": "сделай кофе",
+          "ing_expected": "Кофе дел"
+        }
+      ]
     },
     {
       "id": "weather_it_is_raining",
@@ -10489,7 +10870,12 @@
       "slots": [],
       "ingTemplate": "Сугар.",
       "priority": 96,
-      "examples": [{ "ru": "от меня", "ing_expected": "Сугар." }]
+      "examples": [
+        {
+          "ru": "от меня",
+          "ing_expected": "Сугар."
+        }
+      ]
     },
     {
       "id": "ablative_from_you",
@@ -10498,7 +10884,12 @@
       "slots": [],
       "ingTemplate": "Хьугар.",
       "priority": 96,
-      "examples": [{ "ru": "от тебя", "ing_expected": "Хьугар." }]
+      "examples": [
+        {
+          "ru": "от тебя",
+          "ing_expected": "Хьугар."
+        }
+      ]
     },
     {
       "id": "ablative_from_him",
@@ -10507,7 +10898,12 @@
       "slots": [],
       "ingTemplate": "Цунгар.",
       "priority": 96,
-      "examples": [{ "ru": "от него", "ing_expected": "Цунгар." }]
+      "examples": [
+        {
+          "ru": "от него",
+          "ing_expected": "Цунгар."
+        }
+      ]
     },
     {
       "id": "ablative_from_us",
@@ -10516,7 +10912,12 @@
       "slots": [],
       "ingTemplate": "Вайгар.",
       "priority": 96,
-      "examples": [{ "ru": "от нас", "ing_expected": "Вайгар." }]
+      "examples": [
+        {
+          "ru": "от нас",
+          "ing_expected": "Вайгар."
+        }
+      ]
     },
     {
       "id": "ablative_from_them",
@@ -10525,7 +10926,12 @@
       "slots": [],
       "ingTemplate": "Царгар.",
       "priority": 96,
-      "examples": [{ "ru": "от них", "ing_expected": "Царгар." }]
+      "examples": [
+        {
+          "ru": "от них",
+          "ing_expected": "Царгар."
+        }
+      ]
     },
     {
       "id": "ablative_from_us_here",
@@ -10534,7 +10940,12 @@
       "slots": [],
       "ingTemplate": "Тхацигар.",
       "priority": 95,
-      "examples": [{ "ru": "от нас отсюда", "ing_expected": "Тхацигар." }]
+      "examples": [
+        {
+          "ru": "от нас отсюда",
+          "ing_expected": "Тхацигар."
+        }
+      ]
     },
     {
       "id": "imperative_come_to_us_familiar",
@@ -10940,91 +11351,201 @@
       "id": "neg_u_tebya_net_existential",
       "ruPattern": "у тебя нет {X}",
       "description": "Хьуга (у тебя) + noun + бац",
-      "slots": [{ "name": "X", "pos": "noun", "requiredCase": "base" }],
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
       "ingTemplate": "Хьуга {X_BASE} бац.",
       "priority": 94,
-      "examples": [{ "ru": "у тебя нет работы", "ing_expected": "Хьуга болх бац." }]
+      "examples": [
+        {
+          "ru": "у тебя нет работы",
+          "ing_expected": "Хьуга болх бац."
+        }
+      ]
     },
     {
       "id": "existential_u_tebya_est",
       "ruPattern": "у тебя есть {X}",
       "description": "Хьуга + noun + ба",
-      "slots": [{ "name": "X", "pos": "noun", "requiredCase": "base" }],
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
       "ingTemplate": "Хьуга {X_BASE} ба.",
       "priority": 94,
-      "examples": [{ "ru": "у тебя есть работа", "ing_expected": "Хьуга болх ба." }]
+      "examples": [
+        {
+          "ru": "у тебя есть работа",
+          "ing_expected": "Хьуга болх ба."
+        }
+      ]
     },
     {
       "id": "neg_u_nas_net_existential",
       "ruPattern": "у нас нет {X}",
       "description": "Вайга (у нас) + noun + бац",
-      "slots": [{ "name": "X", "pos": "noun", "requiredCase": "base" }],
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
       "ingTemplate": "Вайга {X_BASE} бац.",
       "priority": 94,
-      "examples": [{ "ru": "у нас нет работы", "ing_expected": "Вайга болх бац." }]
+      "examples": [
+        {
+          "ru": "у нас нет работы",
+          "ing_expected": "Вайга болх бац."
+        }
+      ]
     },
     {
       "id": "existential_u_nas_est",
       "ruPattern": "у нас есть {X}",
       "description": "Вайга + noun + ба",
-      "slots": [{ "name": "X", "pos": "noun", "requiredCase": "base" }],
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
       "ingTemplate": "Вайга {X_BASE} ба.",
       "priority": 94,
-      "examples": [{ "ru": "у нас есть работа", "ing_expected": "Вайга болх ба." }]
+      "examples": [
+        {
+          "ru": "у нас есть работа",
+          "ing_expected": "Вайга болх ба."
+        }
+      ]
     },
     {
       "id": "neg_u_nego_net_existential",
       "ruPattern": "у него нет {X}",
       "description": "Цунга (у него) + noun + бац",
-      "slots": [{ "name": "X", "pos": "noun", "requiredCase": "base" }],
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
       "ingTemplate": "Цунга {X_BASE} бац.",
       "priority": 94,
-      "examples": [{ "ru": "у него нет работы", "ing_expected": "Цунга болх бац." }]
+      "examples": [
+        {
+          "ru": "у него нет работы",
+          "ing_expected": "Цунга болх бац."
+        }
+      ]
     },
     {
       "id": "neg_u_nee_net_existential",
       "ruPattern": "у неё нет {X}",
       "description": "Цунга (у неё) + noun + бац",
-      "slots": [{ "name": "X", "pos": "noun", "requiredCase": "base" }],
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
       "ingTemplate": "Цунга {X_BASE} бац.",
       "priority": 94,
-      "examples": [{ "ru": "у неё нет работы", "ing_expected": "Цунга болх бац." }]
+      "examples": [
+        {
+          "ru": "у неё нет работы",
+          "ing_expected": "Цунга болх бац."
+        }
+      ]
     },
     {
       "id": "existential_u_nego_est",
       "ruPattern": "у него есть {X}",
       "description": "Цунга + noun + ба",
-      "slots": [{ "name": "X", "pos": "noun", "requiredCase": "base" }],
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
       "ingTemplate": "Цунга {X_BASE} ба.",
       "priority": 94,
-      "examples": [{ "ru": "у него есть работа", "ing_expected": "Цунга болх ба." }]
+      "examples": [
+        {
+          "ru": "у него есть работа",
+          "ing_expected": "Цунга болх ба."
+        }
+      ]
     },
     {
       "id": "existential_u_nee_est",
       "ruPattern": "у неё есть {X}",
       "description": "Цунга + noun + ба",
-      "slots": [{ "name": "X", "pos": "noun", "requiredCase": "base" }],
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
       "ingTemplate": "Цунга {X_BASE} ба.",
       "priority": 94,
-      "examples": [{ "ru": "у неё есть работа", "ing_expected": "Цунга болх ба." }]
+      "examples": [
+        {
+          "ru": "у неё есть работа",
+          "ing_expected": "Цунга болх ба."
+        }
+      ]
     },
     {
       "id": "neg_u_nih_net_existential",
       "ruPattern": "у них нет {X}",
       "description": "Царга (у них) + noun + бац",
-      "slots": [{ "name": "X", "pos": "noun", "requiredCase": "base" }],
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
       "ingTemplate": "Царга {X_BASE} бац.",
       "priority": 94,
-      "examples": [{ "ru": "у них нет работы", "ing_expected": "Царга болх бац." }]
+      "examples": [
+        {
+          "ru": "у них нет работы",
+          "ing_expected": "Царга болх бац."
+        }
+      ]
     },
     {
       "id": "existential_u_nih_est",
       "ruPattern": "у них есть {X}",
       "description": "Царга + noun + ба",
-      "slots": [{ "name": "X", "pos": "noun", "requiredCase": "base" }],
+      "slots": [
+        {
+          "name": "X",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
       "ingTemplate": "Царга {X_BASE} ба.",
       "priority": 94,
-      "examples": [{ "ru": "у них есть работа", "ing_expected": "Царга болх ба." }]
+      "examples": [
+        {
+          "ru": "у них есть работа",
+          "ing_expected": "Царга болх ба."
+        }
+      ]
     },
     {
       "id": "generic_i_have_no_object",

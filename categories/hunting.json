@@ -10,8 +10,8 @@
     },
     {
       "ru": "Мы идём на охоту",
-      "ing": "Тхо чарахьи долх",
-      "pron": "tkho charhi dolh",
+      "ing": "Вай аькхе долх",
+      "pron": "vay akkhe dolh",
       "id": "f_1766017407916_e9ah",
       "audio": "f_1766017407916_e9ah.mp3"
     },
@@ -59,8 +59,8 @@
     },
     {
       "ru": "Смотри туда",
-      "ing": "Цугахь хьажа",
-      "pron": "tsugakh khyazha",
+      "ing": "Цигахь хьажал",
+      "pron": "tsigakh khazhal",
       "id": "f_1766017407916_b5an",
       "audio": "f_1766017407916_b5an.mp3"
     },
@@ -129,8 +129,8 @@
     },
     {
       "ru": "Он там",
-      "ing": "Из цугахь",
-      "pron": "iz tsugakh",
+      "ing": "Из цига",
+      "pron": "iz tsiga",
       "id": "f_1766017407916_csm3",
       "audio": "f_1766017407916_csm3.mp3"
     },
@@ -157,8 +157,8 @@
     },
     {
       "ru": "Не шуми",
-      "ing": "Муса хьа!",
-      "pron": "musa kha",
+      "ing": "ГӀар ма е",
+      "pron": "g1ar ma ye",
       "id": "f_1766017407916_0n4c",
       "audio": "f_1766017407916_0n4c.mp3"
     },
@@ -171,106 +171,106 @@
     },
     {
       "ru": "Не стреляй!",
-      "ing": "Ца тухаж!",
-      "pron": "tsa tukhazh",
+      "ing": "Матуха",
+      "pron": "matukha",
       "id": "f_1766017407916_rry7",
       "audio": "f_1766017407916_rry7.mp3"
     },
     {
       "ru": "Готовься стрелять",
-      "ing": "Тухалахь тайпа",
-      "pron": "tukhalakh taypa",
+      "ing": "Кечлелахь туха",
+      "pron": "kechlelakh tukha",
       "id": "f_1766017407916_qm1i",
       "audio": "f_1766017407916_qm1i.mp3"
     },
     {
       "ru": "Он бежит",
-      "ing": "Из удаж",
-      "pron": "iz udazh",
+      "ing": "Из удаж дуд",
+      "pron": "iz udazh dud",
       "id": "f_1766017407916_e9k6",
       "audio": "f_1766017407916_e9k6.mp3"
     },
     {
       "ru": "Он остановился",
-      "ing": "Из тха хина",
-      "pron": "iz tcha khina",
+      "ing": "Из 1асацав",
+      "pron": "iz 1asatsav",
       "id": "f_1766017407916_a3gk",
       "audio": "f_1766017407916_a3gk.mp3"
     },
     {
       "ru": "Береги оружие",
-      "ing": "Кош дуйла",
-      "pron": "kosh duyla",
+      "ing": "Лорде герз",
+      "pron": "lorde gerz",
       "id": "f_1766017407916_gdmg",
       "audio": "f_1766017407916_gdmg.mp3"
     },
     {
       "ru": "Заряди оружие",
-      "ing": "Кош теша",
-      "pron": "kosh tesh",
+      "ing": "Туха кичем бе герза",
+      "pron": "tukha kichem be gerza",
       "id": "f_1766017407916_h39e",
       "audio": "f_1766017407916_h39e.mp3"
     },
     {
       "ru": "Где цель?",
-      "ing": "Хьам хьа?",
-      "pron": "khyam kha",
+      "ing": "Мичай хьежорг",
+      "pron": "michay khyezhorg",
       "id": "f_1766017407916_xca1",
       "audio": "f_1766017407916_xca1.mp3"
     },
     {
       "ru": "Вот цель",
-      "ing": "Ха хьам",
-      "pron": "kha khyam",
+      "ing": "Ер я хьежорг",
+      "pron": "er ya khyezhorg",
       "id": "f_1766017407916_p7dl",
       "audio": "f_1766017407916_p7dl.mp3"
     },
     {
       "ru": "Он ранен",
-      "ing": "Из беха",
-      "pron": "iz bekha",
+      "ing": "Чов яй цун",
+      "pron": "chov yai tsun",
       "id": "f_1766017407916_sbro",
       "audio": "f_1766017407916_sbro.mp3"
     },
     {
       "ru": "Он упал",
-      "ing": "Из т1аккха",
-      "pron": "iz t1akkha",
+      "ing": "Из 1авежав",
+      "pron": "iz 1avezhav",
       "id": "f_1766017407916_58kf",
       "audio": "f_1766017407916_58kf.mp3"
     },
     {
       "ru": "Мы нашли след",
-      "ing": "Тхо керд лар йола",
-      "pron": "tkho kerd lar yola",
+      "ing": "Тхун лар коряй",
+      "pron": "tkhun lar koryai",
       "id": "f_1766017407916_lsyz",
       "audio": "f_1766017407916_lsyz.mp3"
     },
     {
       "ru": "Мы потеряли след",
-      "ing": "Тхо керд седа хинна",
-      "pron": "tkho kerd seda khinna",
+      "ing": "Оах йоаер лар",
+      "pron": "oakh yoaler lar",
       "id": "f_1766017407916_aev1",
       "audio": "f_1766017407916_aev1.mp3"
     },
     {
       "ru": "Перейдём сюда",
-      "ing": "Тхо хьокха вудаш",
-      "pron": "tkho khyokha vudash",
+      "ing": "Хьасехьдовла вай уг1азахь",
+      "pron": "khasekh dovla vay ug1azakh",
       "id": "f_1766017407916_98rs",
       "audio": "f_1766017407916_98rs.mp3"
     },
     {
       "ru": "Перейдём туда",
-      "ing": "Тхо цугахь вудаш",
-      "pron": "tkho tsugakh vudash",
+      "ing": "Цигахь дадехьдовла вай",
+      "pron": "tsigakh dadekh dovla vay",
       "id": "f_1766017407916_ku4a",
       "audio": "f_1766017407916_ku4a.mp3"
     },
     {
       "ru": "Он рядом",
-      "ing": "Из гянна йолча",
-      "pron": "iz gyanna yolcha",
+      "ing": "Из гарага я",
+      "pron": "iz garaga ya",
       "id": "f_1766017407916_pb76",
       "audio": "f_1766017407916_pb76.mp3"
     },
@@ -283,8 +283,8 @@
     },
     {
       "ru": "Он ниже",
-      "ing": "Из цIара",
-      "pron": "iz ts1ara",
+      "ing": "Из къалахь",
+      "pron": "iz qalakh",
       "id": "f_1766017407916_rzcw",
       "audio": "f_1766017407916_rzcw.mp3"
     },
@@ -304,8 +304,8 @@
     },
     {
       "ru": "Береги себя",
-      "ing": "Хьо йолча",
-      "pron": "kho yolcha",
+      "ing": "Лорлелахь",
+      "pron": "lorlelakh",
       "id": "f_1766017407916_k5q3",
       "audio": "f_1766017407916_k5q3.mp3"
     },
@@ -318,15 +318,15 @@
     },
     {
       "ru": "Мы возвращаемся",
-      "ing": "Тхо виннагаш",
-      "pron": "tkho vinnagash",
+      "ing": "Юхадог1а тхо",
+      "pron": "yukhadog1a tkho",
       "id": "f_1766017407916_79ys",
       "audio": "f_1766017407916_79ys.mp3"
     },
     {
       "ru": "Возвращайся",
-      "ing": "Хьа виннаг!",
-      "pron": "kha vinnag",
+      "ing": "Юхавел",
+      "pron": "yukhavel",
       "id": "f_1766017407916_d24c",
       "audio": "f_1766017407916_d24c.mp3"
     },
