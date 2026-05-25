@@ -23276,12 +23276,12 @@
       "ruPattern": "садись",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Де ца",
+      "ingTemplate": "1аха",
       "priority": 100,
       "examples": [
         {
           "ru": "садись",
-          "ing_expected": "Де ца"
+          "ing_expected": "1аха"
         }
       ]
     },
@@ -24060,12 +24060,12 @@
       "ruPattern": "дверь",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Богам",
+      "ingTemplate": "ниI",
       "priority": 100,
       "examples": [
         {
           "ru": "дверь",
-          "ing_expected": "Богам"
+          "ing_expected": "ниI"
         }
       ]
     },
@@ -24088,12 +24088,12 @@
       "ruPattern": "пол",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Йолг",
+      "ingTemplate": "ийнаш",
       "priority": 100,
       "examples": [
         {
           "ru": "пол",
-          "ing_expected": "Йолг"
+          "ing_expected": "ийнаш"
         }
       ]
     },
@@ -24172,12 +24172,12 @@
       "ruPattern": "чисто",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Чиста",
+      "ingTemplate": "цIена",
       "priority": 100,
       "examples": [
         {
           "ru": "чисто",
-          "ing_expected": "Чиста"
+          "ing_expected": "цIена"
         }
       ]
     },
@@ -24200,12 +24200,12 @@
       "ruPattern": "уберите здесь",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Хьокха деж де!",
+      "ingTemplate": "Даякха укхаза!",
       "priority": 100,
       "examples": [
         {
           "ru": "уберите здесь",
-          "ing_expected": "Хьокха деж де!"
+          "ing_expected": "Даякха укхаза!"
         }
       ]
     },
@@ -24214,12 +24214,12 @@
       "ruPattern": "принеси это",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Ха дика!",
+      "ingTemplate": "хьая ер",
       "priority": 100,
       "examples": [
         {
           "ru": "принеси это",
-          "ing_expected": "Ха дика!"
+          "ing_expected": "хьая ер"
         }
       ]
     },
@@ -24256,12 +24256,12 @@
       "ruPattern": "открой дверь",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Богам теша",
+      "ingTemplate": "Хьаела ня1",
       "priority": 100,
       "examples": [
         {
           "ru": "открой дверь",
-          "ing_expected": "Богам теша"
+          "ing_expected": "Хьаела ня1"
         }
       ]
     },
@@ -24284,12 +24284,12 @@
       "ruPattern": "принеси воды",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Мал дика",
+      "ingTemplate": "хьада хий",
       "priority": 100,
       "examples": [
         {
           "ru": "принеси воды",
-          "ing_expected": "Мал дика"
+          "ing_expected": "хьада хий"
         }
       ]
     },
@@ -24312,12 +24312,12 @@
       "ruPattern": "где туалет",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Туалет хьа?",
+      "ingTemplate": "Мичай хьштаг1?",
       "priority": 100,
       "examples": [
         {
           "ru": "где туалет",
-          "ing_expected": "Туалет хьа?"
+          "ing_expected": "Мичай хьштаг1?"
         }
       ]
     },
@@ -24340,12 +24340,12 @@
       "ruPattern": "заходи",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Чуда",
+      "ingTemplate": "ЧУДАВЛ.",
       "priority": 100,
       "examples": [
         {
           "ru": "заходи",
-          "ing_expected": "Чуда"
+          "ing_expected": "ЧУДАВЛ."
         }
       ]
     },
@@ -24354,12 +24354,12 @@
       "ruPattern": "мне нужно отдохнуть",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Са т1акха вез",
+      "ingTemplate": "Са сала1а деза",
       "priority": 100,
       "examples": [
         {
           "ru": "мне нужно отдохнуть",
-          "ing_expected": "Са т1акха вез"
+          "ing_expected": "Са сала1а деза"
         }
       ]
     },
@@ -24396,12 +24396,12 @@
       "ruPattern": "я живу здесь",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Со хьокха дакъош ву",
+      "ingTemplate": "Со укхаза ваха",
       "priority": 100,
       "examples": [
         {
           "ru": "я живу здесь",
-          "ing_expected": "Со хьокха дакъош ву"
+          "ing_expected": "Со укхаза ваха"
         }
       ]
     },
@@ -24410,12 +24410,12 @@
       "ruPattern": "почини это",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Ха дуйле",
+      "ingTemplate": "Тоери 1а ер",
       "priority": 100,
       "examples": [
         {
           "ru": "почини это",
-          "ing_expected": "Ха дуйле"
+          "ing_expected": "Тоери 1а ер"
         }
       ]
     },
@@ -24452,12 +24452,12 @@
       "ruPattern": "не работает",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Му лоца",
+      "ingTemplate": "Болхбеж яц",
       "priority": 100,
       "examples": [
         {
           "ru": "не работает",
-          "ing_expected": "Му лоца"
+          "ing_expected": "Болхбеж яц"
         }
       ]
     },

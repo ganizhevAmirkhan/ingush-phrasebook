@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T22:00:45.993Z",
+  "generatedAt": "2026-05-25T22:24:43.932Z",
   "items": [
     {
       "id": "f_1766017415464_5gdw",
@@ -2123,7 +2123,7 @@
       "id": "f_1766018537465_l5ih",
       "category": "greetings",
       "ru": "Садись",
-      "expectedIng": "Де ца"
+      "expectedIng": "1аха"
     },
     {
       "id": "f_1766018537465_uorb",
@@ -2459,7 +2459,7 @@
       "id": "f_1766025491600_tzv6",
       "category": "home",
       "ru": "Дверь",
-      "expectedIng": "Богам"
+      "expectedIng": "ниI"
     },
     {
       "id": "f_1766025491600_npmf",
@@ -2471,7 +2471,7 @@
       "id": "f_1766025491600_pzoz",
       "category": "home",
       "ru": "Пол",
-      "expectedIng": "Йолг"
+      "expectedIng": "ийнаш"
     },
     {
       "id": "f_1766025491600_tkjf",
@@ -2507,7 +2507,7 @@
       "id": "f_1766025491600_u6c5",
       "category": "home",
       "ru": "Чисто",
-      "expectedIng": "Чиста"
+      "expectedIng": "цIена"
     },
     {
       "id": "f_1766025491600_8wu2",
@@ -2519,13 +2519,13 @@
       "id": "f_1766025491600_a5ll",
       "category": "home",
       "ru": "Уберите здесь",
-      "expectedIng": "Хьокха деж де!"
+      "expectedIng": "Даякха укхаза!"
     },
     {
       "id": "f_1766025491600_wt1r",
       "category": "home",
       "ru": "Принеси это",
-      "expectedIng": "Ха дика!"
+      "expectedIng": "хьая ер"
     },
     {
       "id": "f_1766025491600_t8jo",
@@ -2543,7 +2543,7 @@
       "id": "f_1766025491600_4qtt",
       "category": "home",
       "ru": "Открой дверь",
-      "expectedIng": "Богам теша"
+      "expectedIng": "Хьаела ня1"
     },
     {
       "id": "f_1766025491600_i561",
@@ -2555,7 +2555,7 @@
       "id": "f_1766025491600_bt3d",
       "category": "home",
       "ru": "Принеси воды",
-      "expectedIng": "Мал дика"
+      "expectedIng": "хьада хий"
     },
     {
       "id": "f_1766025491600_cm4b",
@@ -2567,7 +2567,7 @@
       "id": "f_1766025491600_eo0h",
       "category": "home",
       "ru": "Где туалет?",
-      "expectedIng": "Туалет хьа?"
+      "expectedIng": "Мичай хьштаг1?"
     },
     {
       "id": "f_1766025491600_ie4p",
@@ -2579,13 +2579,13 @@
       "id": "f_1766025491600_akgx",
       "category": "home",
       "ru": "Заходи",
-      "expectedIng": "Чуда"
+      "expectedIng": "ЧУДАВЛ."
     },
     {
       "id": "f_1766025491600_8uxq",
       "category": "home",
       "ru": "Мне нужно отдохнуть",
-      "expectedIng": "Са т1акха вез"
+      "expectedIng": "Са сала1а деза"
     },
     {
       "id": "f_1766025491600_n2gw",
@@ -2603,13 +2603,13 @@
       "id": "f_1766025491600_5vgf",
       "category": "home",
       "ru": "Я живу здесь",
-      "expectedIng": "Со хьокха дакъош ву"
+      "expectedIng": "Со укхаза ваха"
     },
     {
       "id": "f_1766025491600_d3qr",
       "category": "home",
       "ru": "Почини это",
-      "expectedIng": "Ха дуйле"
+      "expectedIng": "Тоери 1а ер"
     },
     {
       "id": "f_1766025491600_a9wq",
@@ -2627,7 +2627,7 @@
       "id": "f_1766025491600_kgcz",
       "category": "home",
       "ru": "Не работает",
-      "expectedIng": "Му лоца"
+      "expectedIng": "Болхбеж яц"
     },
     {
       "id": "f_1766025491600_adjn",
