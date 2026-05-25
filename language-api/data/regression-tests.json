@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T21:33:48.151Z",
+  "generatedAt": "2026-05-25T22:00:45.993Z",
   "items": [
     {
       "id": "f_1766017415464_5gdw",
@@ -8016,6 +8016,18 @@
       "category": "numbers",
       "ru": "мне двадцать три",
       "expectedIng": "СА ТКЪАЬ КХО ШУ ДАЬННАД."
+    },
+    {
+      "id": "api_greeting_assalamu_alaikum",
+      "category": "greetings",
+      "ru": "Ассаламу алейкум",
+      "expectedIng": "АССАЛАМУ IАЛАЙКУМ!"
+    },
+    {
+      "id": "api_greeting_wa_alaikum_salam",
+      "category": "greetings",
+      "ru": "Ва алейкум салам",
+      "expectedIng": "ВА IАЛАЙКУМ САЛАМ!"
     }
   ]
 }

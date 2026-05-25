@@ -10113,7 +10113,7 @@
       "description": "Lesson 1 arabic greeting",
       "slots": [],
       "ingTemplate": "АССАЛАМУ IАЛАЙКУМ!",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "ассаламу алейкум",
@@ -10127,7 +10127,7 @@
       "description": "Lesson 1 greeting response",
       "slots": [],
       "ingTemplate": "ВА IАЛАЙКУМ САЛАМ!",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "ва алейкум салам",
@@ -23356,30 +23356,30 @@
       ]
     },
     {
-      "id": "habar_f_1766018537465_hdke",
-      "ruPattern": "палец",
+      "id": "habar_api_greeting_assalamu_alaikum",
+      "ruPattern": "ассаламу алейкум",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "П1елг",
+      "ingTemplate": "АССАЛАМУ IАЛАЙКУМ!",
       "priority": 100,
       "examples": [
         {
-          "ru": "палец",
-          "ing_expected": "П1елг"
+          "ru": "ассаламу алейкум",
+          "ing_expected": "АССАЛАМУ IАЛАЙКУМ!"
         }
       ]
     },
     {
-      "id": "habar_f_1766182090702_3bvd",
-      "ruPattern": "1",
+      "id": "habar_api_greeting_wa_alaikum_salam",
+      "ruPattern": "ва алейкум салам",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "1",
+      "ingTemplate": "ВА IАЛАЙКУМ САЛАМ!",
       "priority": 100,
       "examples": [
         {
-          "ru": "1",
-          "ing_expected": "1"
+          "ru": "ва алейкум салам",
+          "ing_expected": "ВА IАЛАЙКУМ САЛАМ!"
         }
       ]
     },

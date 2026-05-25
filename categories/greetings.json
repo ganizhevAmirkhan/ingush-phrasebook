@@ -310,18 +310,20 @@
       "audio": "f_1766018537465_4t1n.mp3"
     },
     {
-      "id": "f_1766018537465_hdke",
-      "ru": "Палец",
-      "ing": "П1елг",
-      "pron": "palg",
-      "audio": "f_1766018537465_hdke.mp3"
+      "ru": "Ассаламу алейкум",
+      "ing": "АССАЛАМУ IАЛАЙКУМ!",
+      "pron": "assalamu ialaykum!",
+      "id": "api_greeting_assalamu_alaikum",
+      "audio": "api_greeting_assalamu_alaikum.mp3"
     },
     {
-      "id": "f_1766182090702_3bvd",
-      "ru": "1",
-      "ing": "1",
-      "pron": "1",
-      "audio": "f_1766182090702_3bvd.mp3"
+      "ru": "Ва алейкум салам",
+      "ing": "ВА IАЛАЙКУМ САЛАМ!",
+      "pron": "va ialaykum salam!",
+      "id": "api_greeting_wa_alaikum_salam",
+      "audio": "api_greeting_wa_alaikum_salam.mp3"
     }
-  ]
+  ],
+  "version": 1,
+  "itemCount": 46
 }
