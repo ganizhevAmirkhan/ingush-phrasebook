@@ -136,10 +136,12 @@ async function loadCategory(cat){
   currentCategory = cat;
   document.getElementById("content-title").textContent = categoryTitles[cat];
 
-  const r = await fetch(`categories/${cat}.json`);
+  const r = await fetch(`categories/${cat}.json?v=${Date.now()}`, { cache: "no-store" });
   currentData = await r.json();
 
   migrateItems(currentData, cat);
+  document.getElementById("content-title").textContent =
+    `${categoryTitles[cat]} (${currentData.items?.length || 0})`;
 
   // пересканим аудио для текущей категории
   await scanAudioForItems(currentData.items.map(it => ({...it, category: cat})));

@@ -1,5 +1,7 @@
 {
   "category": "numbers",
+  "version": 2,
+  "itemCount": 48,
   "items": [
     {
       "ru": "Один",
@@ -70,76 +72,6 @@
       "pron": "itt",
       "id": "f_1766025451240_vfy5",
       "audio": "f_1766025451240_vfy5.mp3"
-    },
-    {
-      "ru": "Сколько?",
-      "ing": "масса",
-      "pron": "massa",
-      "id": "f_1766025451240_3yk9",
-      "audio": "f_1766025451240_3yk9.mp3"
-    },
-    {
-      "ru": "Сколько стоит?",
-      "ing": "Фу доаккх укхох? / фу дех укхох?",
-      "pron": "fu doakkh ukhokh? / fu dekh ukhokh?",
-      "id": "f_1766025451240_aqgc",
-      "audio": "f_1766025451240_aqgc.mp3"
-    },
-    {
-      "ru": "Сколько километров?",
-      "ing": "Масса километр?",
-      "pron": "massa kilometr?",
-      "id": "f_1766025451240_72ut",
-      "audio": "f_1766025451240_72ut.mp3"
-    },
-    {
-      "ru": "Раз",
-      "ing": "тӀаккха, Ца1",
-      "pron": "t1akkha, tsa1",
-      "id": "f_1766025451240_u6ys",
-      "audio": "f_1766025451240_u6ys.mp3"
-    },
-    {
-      "ru": "Два раза",
-      "ing": "Шов ц1е",
-      "pron": "shov ts1e",
-      "id": "f_1766025451240_1mmt",
-      "audio": "f_1766025451240_1mmt.mp3"
-    },
-    {
-      "ru": "Много",
-      "ing": "дукха",
-      "pron": "dukha",
-      "id": "f_1766025451240_34y4",
-      "audio": "f_1766025451240_34y4.mp3"
-    },
-    {
-      "ru": "Мало",
-      "ing": "кӀезига",
-      "pron": "k1eziga",
-      "id": "f_1766025451240_c0jh",
-      "audio": "f_1766025451240_c0jh.mp3"
-    },
-    {
-      "id": "f_1766025451240_8a2f",
-      "ru": "Мне надо идти",
-      "ing": "Са веза даваха",
-      "pron": "sa veza davakha",
-      "audio": "f_1766025451240_8a2f.mp3"
-    },
-    {
-      "ru": "Как считать по ингушски",
-      "ing": "КАК СЧИТАТЬ ПО – ИНГУШСКИ?",
-      "pron": "kak schitatь po – ingushski?",
-      "id": "api_numbers_lesson_title",
-      "audio": "api_numbers_lesson_title.mp3"
-    },
-    {
-      "ru": "30 это 20 и 10",
-      "ing": "ТКЪАЬ ИТТ",
-      "pron": "tkъaь itt",
-      "id": "api_numbers_30_is_20_and_10",
-      "audio": "api_numbers_30_is_20_and_10.mp3"
     },
     {
       "ru": "11",
@@ -275,34 +207,6 @@
       "audio": "api_numbers_1000.mp3"
     },
     {
-      "ru": "Сколько тебе лет",
-      "ing": "МЕЛ ХА ЯЬННАЙ ХЬА?",
-      "pron": "mel kha yaьnnay khьa?",
-      "id": "api_numbers_how_old_are_you",
-      "audio": "api_numbers_how_old_are_you.mp3"
-    },
-    {
-      "ru": "Мне двадцать пять",
-      "ing": "СА ТКЪАЬ ПХИ ШУ ДАЬННАД.",
-      "pron": "sa tkъaь pkhi shu daьnnad.",
-      "id": "api_numbers_i_am_twenty_five",
-      "audio": "api_numbers_i_am_twenty_five.mp3"
-    },
-    {
-      "ru": "Мне двадцать три",
-      "ing": "СА ТКЪАЬ КХО ШУ ДАЬННАД.",
-      "pron": "sa tkъaь kkho shu daьnnad.",
-      "id": "api_numbers_i_am_twenty_three",
-      "audio": "api_numbers_i_am_twenty_three.mp3"
-    },
-    {
-      "ru": "100, 1000, миллион, миллиард.",
-      "ing": "БIАЬ, ЭЗАР, МИЛЛИОН, МИЛЛИАРД.",
-      "pron": "bia, ezar, million, milliard.",
-      "id": "imp_numbers_lesson_9_7_1",
-      "audio": "imp_numbers_lesson_9_7_1.mp3"
-    },
-    {
       "ru": "19 и 20.",
       "ing": "ТКЪЕСТА, ТКЪО.",
       "pron": "tkesta, tko.",
@@ -317,11 +221,25 @@
       "audio": "imp_numbers_lesson_9_5_1.mp3"
     },
     {
+      "ru": "30 это 20 и 10",
+      "ing": "ТКЪАЬ ИТТ",
+      "pron": "tkъaь itt",
+      "id": "api_numbers_30_is_20_and_10",
+      "audio": "api_numbers_30_is_20_and_10.mp3"
+    },
+    {
       "ru": "30 в ингушском — это 20 и 10.",
       "ing": "ТКЪАЬ ИТТ.",
       "pron": "tka itt.",
       "id": "imp_numbers_lesson_9_2_1",
       "audio": "imp_numbers_lesson_9_2_1.mp3"
+    },
+    {
+      "ru": "100, 1000, миллион, миллиард.",
+      "ing": "БIАЬ, ЭЗАР, МИЛЛИОН, МИЛЛИАРД.",
+      "pron": "bia, ezar, million, milliard.",
+      "id": "imp_numbers_lesson_9_7_1",
+      "audio": "imp_numbers_lesson_9_7_1.mp3"
     },
     {
       "ru": "В ингушском языке двадцатеричная система счета.",
@@ -338,11 +256,88 @@
       "audio": "imp_numbers_lesson_9_11_1.mp3"
     },
     {
+      "ru": "Как считать по ингушски",
+      "ing": "КАК СЧИТАТЬ ПО – ИНГУШСКИ?",
+      "pron": "kak schitatь po – ingushski?",
+      "id": "api_numbers_lesson_title",
+      "audio": "api_numbers_lesson_title.mp3"
+    },
+    {
+      "ru": "Сколько?",
+      "ing": "масса",
+      "pron": "massa",
+      "id": "f_1766025451240_3yk9",
+      "audio": "f_1766025451240_3yk9.mp3"
+    },
+    {
+      "ru": "Сколько стоит?",
+      "ing": "Фу доаккх укхох? / фу дех укхох?",
+      "pron": "fu doakkh ukhokh? / fu dekh ukhokh?",
+      "id": "f_1766025451240_aqgc",
+      "audio": "f_1766025451240_aqgc.mp3"
+    },
+    {
+      "ru": "Сколько километров?",
+      "ing": "Масса километр?",
+      "pron": "massa kilometr?",
+      "id": "f_1766025451240_72ut",
+      "audio": "f_1766025451240_72ut.mp3"
+    },
+    {
+      "ru": "Сколько тебе лет",
+      "ing": "МЕЛ ХА ЯЬННАЙ ХЬА?",
+      "pron": "mel kha yaьnnay khьa?",
+      "id": "api_numbers_how_old_are_you",
+      "audio": "api_numbers_how_old_are_you.mp3"
+    },
+    {
       "ru": "Яха, сколько тебе лет?",
       "ing": "ЯХА, МЕЛ ХА ЯЬННАЙ ХЬА?",
       "pron": "yakha, mel kha yannay kha?",
       "id": "imp_numbers_lesson_9_8_1",
       "audio": "imp_numbers_lesson_9_8_1.mp3"
+    },
+    {
+      "ru": "Мне двадцать три",
+      "ing": "СА ТКЪАЬ КХО ШУ ДАЬННАД.",
+      "pron": "sa tkъaь kkho shu daьnnad.",
+      "id": "api_numbers_i_am_twenty_three",
+      "audio": "api_numbers_i_am_twenty_three.mp3"
+    },
+    {
+      "ru": "Мне двадцать пять",
+      "ing": "СА ТКЪАЬ ПХИ ШУ ДАЬННАД.",
+      "pron": "sa tkъaь pkhi shu daьnnad.",
+      "id": "api_numbers_i_am_twenty_five",
+      "audio": "api_numbers_i_am_twenty_five.mp3"
+    },
+    {
+      "ru": "Раз",
+      "ing": "тӀаккха, Ца1",
+      "pron": "t1akkha, tsa1",
+      "id": "f_1766025451240_u6ys",
+      "audio": "f_1766025451240_u6ys.mp3"
+    },
+    {
+      "ru": "Два раза",
+      "ing": "Шов ц1е",
+      "pron": "shov ts1e",
+      "id": "f_1766025451240_1mmt",
+      "audio": "f_1766025451240_1mmt.mp3"
+    },
+    {
+      "ru": "Много",
+      "ing": "дукха",
+      "pron": "dukha",
+      "id": "f_1766025451240_34y4",
+      "audio": "f_1766025451240_34y4.mp3"
+    },
+    {
+      "ru": "Мало",
+      "ing": "кӀезига",
+      "pron": "k1eziga",
+      "id": "f_1766025451240_c0jh",
+      "audio": "f_1766025451240_c0jh.mp3"
     }
   ]
 }

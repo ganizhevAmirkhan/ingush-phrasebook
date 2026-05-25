@@ -25666,146 +25666,6 @@
       ]
     },
     {
-      "id": "habar_f_1766025451240_3yk9",
-      "ruPattern": "сколько",
-      "description": "Habar phrasebook sync",
-      "slots": [],
-      "ingTemplate": "масса",
-      "priority": 100,
-      "examples": [
-        {
-          "ru": "сколько",
-          "ing_expected": "масса"
-        }
-      ]
-    },
-    {
-      "id": "habar_f_1766025451240_aqgc",
-      "ruPattern": "сколько стоит",
-      "description": "Habar phrasebook sync",
-      "slots": [],
-      "ingTemplate": "Фу доаккх укхох? / фу дех укхох?",
-      "priority": 100,
-      "examples": [
-        {
-          "ru": "сколько стоит",
-          "ing_expected": "Фу доаккх укхох? / фу дех укхох?"
-        }
-      ]
-    },
-    {
-      "id": "habar_f_1766025451240_72ut",
-      "ruPattern": "сколько километров",
-      "description": "Habar phrasebook sync",
-      "slots": [],
-      "ingTemplate": "Масса километр?",
-      "priority": 100,
-      "examples": [
-        {
-          "ru": "сколько километров",
-          "ing_expected": "Масса километр?"
-        }
-      ]
-    },
-    {
-      "id": "habar_f_1766025451240_u6ys",
-      "ruPattern": "раз",
-      "description": "Habar phrasebook sync",
-      "slots": [],
-      "ingTemplate": "тӀаккха, Ца1",
-      "priority": 100,
-      "examples": [
-        {
-          "ru": "раз",
-          "ing_expected": "тӀаккха, Ца1"
-        }
-      ]
-    },
-    {
-      "id": "habar_f_1766025451240_1mmt",
-      "ruPattern": "два раза",
-      "description": "Habar phrasebook sync",
-      "slots": [],
-      "ingTemplate": "Шов ц1е",
-      "priority": 100,
-      "examples": [
-        {
-          "ru": "два раза",
-          "ing_expected": "Шов ц1е"
-        }
-      ]
-    },
-    {
-      "id": "habar_f_1766025451240_34y4",
-      "ruPattern": "много",
-      "description": "Habar phrasebook sync",
-      "slots": [],
-      "ingTemplate": "дукха",
-      "priority": 100,
-      "examples": [
-        {
-          "ru": "много",
-          "ing_expected": "дукха"
-        }
-      ]
-    },
-    {
-      "id": "habar_f_1766025451240_c0jh",
-      "ruPattern": "мало",
-      "description": "Habar phrasebook sync",
-      "slots": [],
-      "ingTemplate": "кӀезига",
-      "priority": 100,
-      "examples": [
-        {
-          "ru": "мало",
-          "ing_expected": "кӀезига"
-        }
-      ]
-    },
-    {
-      "id": "habar_f_1766025451240_8a2f",
-      "ruPattern": "мне надо идти",
-      "description": "Habar phrasebook sync",
-      "slots": [],
-      "ingTemplate": "Са веза даваха",
-      "priority": 100,
-      "examples": [
-        {
-          "ru": "мне надо идти",
-          "ing_expected": "Са веза даваха"
-        }
-      ]
-    },
-    {
-      "id": "habar_api_numbers_lesson_title",
-      "ruPattern": "как считать по ингушски",
-      "description": "Habar phrasebook sync",
-      "slots": [],
-      "ingTemplate": "КАК СЧИТАТЬ ПО – ИНГУШСКИ?",
-      "priority": 100,
-      "examples": [
-        {
-          "ru": "как считать по ингушски",
-          "ing_expected": "КАК СЧИТАТЬ ПО – ИНГУШСКИ?"
-        }
-      ]
-    },
-    {
-      "id": "habar_api_numbers_30_is_20_and_10",
-      "ruPattern": "30 это 20 и 10",
-      "description": "Habar phrasebook sync",
-      "slots": [],
-      "ingTemplate": "ТКЪАЬ ИТТ",
-      "priority": 100,
-      "examples": [
-        {
-          "ru": "30 это 20 и 10",
-          "ing_expected": "ТКЪАЬ ИТТ"
-        }
-      ]
-    },
-    {
       "id": "habar_api_numbers_11",
       "ruPattern": "11",
       "description": "Habar phrasebook sync",
@@ -26072,62 +25932,6 @@
       ]
     },
     {
-      "id": "habar_api_numbers_how_old_are_you",
-      "ruPattern": "сколько тебе лет",
-      "description": "Habar phrasebook sync",
-      "slots": [],
-      "ingTemplate": "МЕЛ ХА ЯЬННАЙ ХЬА?",
-      "priority": 100,
-      "examples": [
-        {
-          "ru": "сколько тебе лет",
-          "ing_expected": "МЕЛ ХА ЯЬННАЙ ХЬА?"
-        }
-      ]
-    },
-    {
-      "id": "habar_api_numbers_i_am_twenty_five",
-      "ruPattern": "мне двадцать пять",
-      "description": "Habar phrasebook sync",
-      "slots": [],
-      "ingTemplate": "СА ТКЪАЬ ПХИ ШУ ДАЬННАД.",
-      "priority": 100,
-      "examples": [
-        {
-          "ru": "мне двадцать пять",
-          "ing_expected": "СА ТКЪАЬ ПХИ ШУ ДАЬННАД."
-        }
-      ]
-    },
-    {
-      "id": "habar_api_numbers_i_am_twenty_three",
-      "ruPattern": "мне двадцать три",
-      "description": "Habar phrasebook sync",
-      "slots": [],
-      "ingTemplate": "СА ТКЪАЬ КХО ШУ ДАЬННАД.",
-      "priority": 100,
-      "examples": [
-        {
-          "ru": "мне двадцать три",
-          "ing_expected": "СА ТКЪАЬ КХО ШУ ДАЬННАД."
-        }
-      ]
-    },
-    {
-      "id": "habar_imp_numbers_lesson_9_7_1",
-      "ruPattern": "100 1000 миллион миллиард",
-      "description": "Habar phrasebook sync",
-      "slots": [],
-      "ingTemplate": "БIАЬ, ЭЗАР, МИЛЛИОН, МИЛЛИАРД.",
-      "priority": 100,
-      "examples": [
-        {
-          "ru": "100 1000 миллион миллиард",
-          "ing_expected": "БIАЬ, ЭЗАР, МИЛЛИОН, МИЛЛИАРД."
-        }
-      ]
-    },
-    {
       "id": "habar_imp_numbers_lesson_9_4_1",
       "ruPattern": "19 и 20",
       "description": "Habar phrasebook sync",
@@ -26156,6 +25960,20 @@
       ]
     },
     {
+      "id": "habar_api_numbers_30_is_20_and_10",
+      "ruPattern": "30 это 20 и 10",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ТКЪАЬ ИТТ",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "30 это 20 и 10",
+          "ing_expected": "ТКЪАЬ ИТТ"
+        }
+      ]
+    },
+    {
       "id": "habar_imp_numbers_lesson_9_2_1",
       "ruPattern": "30 в ингушском — это 20 и 10",
       "description": "Habar phrasebook sync",
@@ -26166,6 +25984,20 @@
         {
           "ru": "30 в ингушском — это 20 и 10",
           "ing_expected": "ТКЪАЬ ИТТ."
+        }
+      ]
+    },
+    {
+      "id": "habar_imp_numbers_lesson_9_7_1",
+      "ruPattern": "100 1000 миллион миллиард",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "БIАЬ, ЭЗАР, МИЛЛИОН, МИЛЛИАРД.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "100 1000 миллион миллиард",
+          "ing_expected": "БIАЬ, ЭЗАР, МИЛЛИОН, МИЛЛИАРД."
         }
       ]
     },
@@ -26198,6 +26030,76 @@
       ]
     },
     {
+      "id": "habar_api_numbers_lesson_title",
+      "ruPattern": "как считать по ингушски",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "КАК СЧИТАТЬ ПО – ИНГУШСКИ?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "как считать по ингушски",
+          "ing_expected": "КАК СЧИТАТЬ ПО – ИНГУШСКИ?"
+        }
+      ]
+    },
+    {
+      "id": "habar_f_1766025451240_3yk9",
+      "ruPattern": "сколько",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "масса",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "сколько",
+          "ing_expected": "масса"
+        }
+      ]
+    },
+    {
+      "id": "habar_f_1766025451240_aqgc",
+      "ruPattern": "сколько стоит",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Фу доаккх укхох? / фу дех укхох?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "сколько стоит",
+          "ing_expected": "Фу доаккх укхох? / фу дех укхох?"
+        }
+      ]
+    },
+    {
+      "id": "habar_f_1766025451240_72ut",
+      "ruPattern": "сколько километров",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Масса километр?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "сколько километров",
+          "ing_expected": "Масса километр?"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_how_old_are_you",
+      "ruPattern": "сколько тебе лет",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "МЕЛ ХА ЯЬННАЙ ХЬА?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "сколько тебе лет",
+          "ing_expected": "МЕЛ ХА ЯЬННАЙ ХЬА?"
+        }
+      ]
+    },
+    {
       "id": "habar_imp_numbers_lesson_9_8_1",
       "ruPattern": "яха сколько тебе лет",
       "description": "Habar phrasebook sync",
@@ -26208,6 +26110,90 @@
         {
           "ru": "яха сколько тебе лет",
           "ing_expected": "ЯХА, МЕЛ ХА ЯЬННАЙ ХЬА?"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_i_am_twenty_three",
+      "ruPattern": "мне двадцать три",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "СА ТКЪАЬ КХО ШУ ДАЬННАД.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мне двадцать три",
+          "ing_expected": "СА ТКЪАЬ КХО ШУ ДАЬННАД."
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_i_am_twenty_five",
+      "ruPattern": "мне двадцать пять",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "СА ТКЪАЬ ПХИ ШУ ДАЬННАД.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мне двадцать пять",
+          "ing_expected": "СА ТКЪАЬ ПХИ ШУ ДАЬННАД."
+        }
+      ]
+    },
+    {
+      "id": "habar_f_1766025451240_u6ys",
+      "ruPattern": "раз",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "тӀаккха, Ца1",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "раз",
+          "ing_expected": "тӀаккха, Ца1"
+        }
+      ]
+    },
+    {
+      "id": "habar_f_1766025451240_1mmt",
+      "ruPattern": "два раза",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Шов ц1е",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "два раза",
+          "ing_expected": "Шов ц1е"
+        }
+      ]
+    },
+    {
+      "id": "habar_f_1766025451240_34y4",
+      "ruPattern": "много",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "дукха",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "много",
+          "ing_expected": "дукха"
+        }
+      ]
+    },
+    {
+      "id": "habar_f_1766025451240_c0jh",
+      "ruPattern": "мало",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "кӀезига",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мало",
+          "ing_expected": "кӀезига"
         }
       ]
     },
