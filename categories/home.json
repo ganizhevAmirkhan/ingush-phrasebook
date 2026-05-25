@@ -185,15 +185,15 @@
     },
     {
       "ru": "Можно войти?",
-      "ing": "Чувала мегиг ви?",
-      "pron": "chuvala megig vi?",
+      "ing": "Чуда далуш?",
+      "pron": "chuda dalush",
       "id": "f_1766025491600_ie4p",
       "audio": "f_1766025491600_ie4p.mp3"
     },
     {
       "ru": "Заходи",
-      "ing": "Чуда",
-      "pron": "chuda",
+      "ing": "ЧУДАВЛ.",
+      "pron": "chudavl.",
       "id": "f_1766025491600_akgx",
       "audio": "f_1766025491600_akgx.mp3"
     },
