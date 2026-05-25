@@ -241,15 +241,15 @@
     },
     {
       "ru": "Работает",
-      "ing": "Болхбеж я",
-      "pron": "bolkhbezh ya",
+      "ing": "Лоца",
+      "pron": "lotsa",
       "id": "f_1766025491600_zduz",
       "audio": "f_1766025491600_zduz.mp3"
     },
     {
       "ru": "Не работает",
-      "ing": "Му лоца",
-      "pron": "mu lotsa",
+      "ing": "Болхбеж яц",
+      "pron": "bolkhbezh yats",
       "id": "f_1766025491600_kgcz",
       "audio": "f_1766025491600_kgcz.mp3"
     },
