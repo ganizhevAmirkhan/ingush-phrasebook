@@ -74,6 +74,79 @@
       "audio": "f_1766025451240_vfy5.mp3"
     },
     {
+<<<<<<< HEAD
+=======
+      "ru": "Сколько?",
+      "ing": "масса",
+      "pron": "massa",
+      "id": "f_1766025451240_3yk9",
+      "audio": "f_1766025451240_3yk9.mp3"
+    },
+    {
+      "ru": "Сколько стоит?",
+      "ing": "Фу доаккх укхох? / фу дех укхох?",
+      "pron": "fu doakkh ukhokh? / fu dekh ukhokh?",
+      "id": "f_1766025451240_aqgc",
+      "audio": "f_1766025451240_aqgc.mp3"
+    },
+    {
+      "ru": "Сколько километров?",
+      "ing": "Масса километр?",
+      "pron": "massa kilometr?",
+      "id": "f_1766025451240_72ut",
+      "audio": "f_1766025451240_72ut.mp3"
+    },
+    {
+      "ru": "Раз",
+      "ing": "тӀаккха, Ца1",
+      "pron": "t1akkha, tsa1",
+      "id": "f_1766025451240_u6ys",
+      "audio": "f_1766025451240_u6ys.mp3"
+    },
+    {
+      "ru": "Два раза",
+      "ing": "Шов ц1е",
+      "pron": "shov ts1e",
+      "id": "f_1766025451240_1mmt",
+      "audio": "f_1766025451240_1mmt.mp3"
+    },
+    {
+      "ru": "Много",
+      "ing": "дукха",
+      "pron": "dukha",
+      "id": "f_1766025451240_34y4",
+      "audio": "f_1766025451240_34y4.mp3"
+    },
+    {
+      "ru": "Мало",
+      "ing": "кӀезига",
+      "pron": "k1eziga",
+      "id": "f_1766025451240_c0jh",
+      "audio": "f_1766025451240_c0jh.mp3"
+    },
+    {
+      "id": "f_1766025451240_8a2f",
+      "ru": "Мне надо идти",
+      "ing": "Са веза даваха",
+      "pron": "sa veza davakha",
+      "audio": "f_1766025451240_8a2f.mp3"
+    },
+    {
+      "ru": "Как считать по ингушски",
+      "ing": "КАК СЧИТАТЬ ПО – ИНГУШСКИ?",
+      "pron": "kak schitatь po – ingushski?",
+      "id": "api_numbers_lesson_title",
+      "audio": "api_numbers_lesson_title.mp3"
+    },
+    {
+      "ru": "тридцать",
+      "ing": "ТКЪАЬ ИТТ",
+      "pron": "tkъaь itt",
+      "id": "api_numbers_30_is_20_and_10",
+      "audio": "api_numbers_30_is_20_and_10.mp3"
+    },
+    {
+>>>>>>> d894b4c7e1d68abe17b73371b373abc34e2c9490
       "ru": "11",
       "ing": "ЦХЬАЙТТА",
       "pron": "tskhьaytta",
@@ -214,7 +287,7 @@
       "audio": "imp_numbers_lesson_9_4_1.mp3"
     },
     {
-      "ru": "21 это 20 и 1.",
+      "ru": "21",
       "ing": "ТКЪАЬ ЦАI.",
       "pron": "tka tsai.",
       "id": "imp_numbers_lesson_9_5_1",
