@@ -129,13 +129,13 @@
     },
     {
       "ru": "Как считать по ингушски",
-      "ing": "мишта ларха деза Г1алг1ай меттал?",
-      "pron": "mishta larkha deza g1alg1ay mettal?",
+      "ing": "КАК СЧИТАТЬ ПО – ИНГУШСКИ?",
+      "pron": "kak schitatь po – ingushski?",
       "id": "api_numbers_lesson_title",
       "audio": "api_numbers_lesson_title.mp3"
     },
     {
-      "ru": "30 это 20 и 10",
+      "ru": "тридцать",
       "ing": "ТКЪАЬ ИТТ",
       "pron": "tkъaь itt",
       "id": "api_numbers_30_is_20_and_10",
