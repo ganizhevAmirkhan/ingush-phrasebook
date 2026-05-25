@@ -1,50 +1,229 @@
 {
   "category": "danger",
   "items": [
-    { "ru": "Опасность", "ing": "Кхерме", "pron": "kherme" },
-    { "ru": "Опасно!", "ing": "Кхерме да!", "pron": "kherme da" },
-
-    { "ru": "Осторожно!", "ing": "Хьаьлха да!", "pron": "khalha da" },
-    { "ru": "Не подходи!", "ing": "Ца яккха!", "pron": "tsa yakkha" },
-    { "ru": "Стой!", "ing": "Тха!", "pron": "tcha" },
-
-    { "ru": "Он опасен", "ing": "Из кхерме", "pron": "iz kherme" },
-    { "ru": "Это опасно", "ing": "Ха кхерме", "pron": "kha kherme" },
-
-    { "ru": "Берегись!", "ing": "Йолча!", "pron": "yolcha" },
-    { "ru": "Берегите его", "ing": "Из йолча", "pron": "iz yolcha" },
-
-    { "ru": "Беги!", "ing": "Уда!", "pron": "uda" },
-    { "ru": "Спрячься", "ing": "Лоч1къа", "pron": "loch1kqa" },
-
-    { "ru": "Помоги мне!", "ing": "Са г1о де!", "pron": "sa g1o de" },
-    { "ru": "Мне нужна помощь", "ing": "Са г1о давах", "pron": "sa g1o davakh" },
-
-    { "ru": "Внимательно смотри", "ing": "Дикка хьаьжа", "pron": "dikka khyazha" },
-    { "ru": "Тише!", "ing": "Шортиг!", "pron": "shortig" },
-    { "ru": "Не шуми!", "ing": "Муса хьа!", "pron": "musa kha" },
-
-    { "ru": "Он там", "ing": "Из цугахь", "pron": "iz tsugakh" },
-    { "ru": "Он здесь", "ing": "Из хьокха", "pron": "iz khyokha" },
-    { "ru": "Он рядом", "ing": "Из гянна йолча", "pron": "iz gyanna yolcha" },
-
-    { "ru": "Где опасность?", "ing": "Кхерме хьа?", "pron": "kherme kha" },
-    { "ru": "Что случилось?", "ing": "Фо ханнад?", "pron": "fo khannad" },
-
-    { "ru": "Он ранен", "ing": "Из беха", "pron": "iz bekha" },
-    { "ru": "Он погиб", "Ing": "Из моха хинна", "pron": "iz mokha khinna" },
-
-    { "ru": "Не иди туда", "ing": "Цугахь вудац!", "pron": "tsugakh vudats" },
-    { "ru": "Не иди сюда", "ing": "Хьокха вудац!", "pron": "khyokha vudats" },
-
-    { "ru": "Жди здесь", "ing": "Хьокха сабар де", "pron": "khyokha sabar de" },
-    { "ru": "Быстрее!", "ing": "Марсха!", "pron": "marsha" },
-    { "ru": "Медленнее!", "ing": "Шортиг!", "pron": "shortig" },
-
-    { "ru": "Я боюсь", "ing": "Со хьоала", "pron": "so khoala" },
-    { "ru": "Не бойся", "ing": "Хьа му хьоала", "pron": "kha mu khoala" },
-
-    { "ru": "Сюда!", "ing": "Хьокха!", "pron": "khyokha" },
-    { "ru": "Туда!", "ing": "Цугахь!", "pron": "tsugakh" }
+    {
+      "ru": "Опасность",
+      "ing": "Кхерме",
+      "pron": "kherme",
+      "id": "ph_danger_0_enlkxd",
+      "audio": "ph_danger_0_enlkxd.mp3"
+    },
+    {
+      "ru": "Опасно!",
+      "ing": "Кхерме да!",
+      "pron": "kherme da",
+      "id": "ph_danger_1_1hfn7m4",
+      "audio": "ph_danger_1_1hfn7m4.mp3"
+    },
+    {
+      "ru": "Осторожно!",
+      "ing": "Хьаьлха да!",
+      "pron": "khalha da",
+      "id": "ph_danger_2_1hjjt59",
+      "audio": "ph_danger_2_1hjjt59.mp3"
+    },
+    {
+      "ru": "Не подходи!",
+      "ing": "Хьат1а ма вулла!",
+      "pron": "h'at1a ma vulla!",
+      "id": "ph_danger_3_e10j5e",
+      "audio": "ph_danger_3_e10j5e.mp3"
+    },
+    {
+      "ru": "Стой!",
+      "ing": "Тха!",
+      "pron": "tcha",
+      "id": "ph_danger_4_1xykddf",
+      "audio": "ph_danger_4_1xykddf.mp3"
+    },
+    {
+      "ru": "Он опасен",
+      "ing": "Из кхерме",
+      "pron": "iz kherme",
+      "id": "ph_danger_5_r3uj1r",
+      "audio": "ph_danger_5_r3uj1r.mp3"
+    },
+    {
+      "ru": "Это опасно",
+      "ing": "Ха кхерме",
+      "pron": "kha kherme",
+      "id": "ph_danger_6_10kh8cg",
+      "audio": "ph_danger_6_10kh8cg.mp3"
+    },
+    {
+      "ru": "Берегись!",
+      "ing": "Йолча!",
+      "pron": "yolcha",
+      "id": "ph_danger_7_bdwztm",
+      "audio": "ph_danger_7_bdwztm.mp3"
+    },
+    {
+      "ru": "Берегите его",
+      "ing": "Из йолча",
+      "pron": "iz yolcha",
+      "id": "ph_danger_8_kq8enb",
+      "audio": "ph_danger_8_kq8enb.mp3"
+    },
+    {
+      "ru": "Беги!",
+      "ing": "Уда!",
+      "pron": "uda",
+      "id": "ph_danger_9_1gc3qy",
+      "audio": "ph_danger_9_1gc3qy.mp3"
+    },
+    {
+      "ru": "Спрячься",
+      "ing": "Лоч1къа",
+      "pron": "loch1kqa",
+      "id": "ph_danger_10_nsfv1v",
+      "audio": "ph_danger_10_nsfv1v.mp3"
+    },
+    {
+      "ru": "Помоги мне!",
+      "ing": "Са г1о де!",
+      "pron": "sa g1o de",
+      "id": "ph_danger_11_ftphss",
+      "audio": "ph_danger_11_ftphss.mp3"
+    },
+    {
+      "ru": "Мне нужна помощь",
+      "ing": "Са г1о давах",
+      "pron": "sa g1o davakh",
+      "id": "ph_danger_12_7dj797",
+      "audio": "ph_danger_12_7dj797.mp3"
+    },
+    {
+      "ru": "Внимательно смотри",
+      "ing": "Дикка хьаьжа",
+      "pron": "dikka khyazha",
+      "id": "ph_danger_13_mzdltk",
+      "audio": "ph_danger_13_mzdltk.mp3"
+    },
+    {
+      "ru": "Тише!",
+      "ing": "Шортиг!",
+      "pron": "shortig",
+      "id": "ph_danger_14_putwt2",
+      "audio": "ph_danger_14_putwt2.mp3"
+    },
+    {
+      "ru": "Не шуми!",
+      "ing": "Муса хьа!",
+      "pron": "musa kha",
+      "id": "ph_danger_15_12rpzqq",
+      "audio": "ph_danger_15_12rpzqq.mp3"
+    },
+    {
+      "ru": "Он там",
+      "ing": "Из цугахь",
+      "pron": "iz tsugakh",
+      "id": "ph_danger_16_ls0hfb",
+      "audio": "ph_danger_16_ls0hfb.mp3"
+    },
+    {
+      "ru": "Он здесь",
+      "ing": "Из хьокха",
+      "pron": "iz khyokha",
+      "id": "ph_danger_17_1lbplvn",
+      "audio": "ph_danger_17_1lbplvn.mp3"
+    },
+    {
+      "ru": "Он рядом",
+      "ing": "Из гянна йолча",
+      "pron": "iz gyanna yolcha",
+      "id": "ph_danger_18_15u4qcc",
+      "audio": "ph_danger_18_15u4qcc.mp3"
+    },
+    {
+      "ru": "Где опасность?",
+      "ing": "Кхерме хьа?",
+      "pron": "kherme kha",
+      "id": "ph_danger_19_17u5kso",
+      "audio": "ph_danger_19_17u5kso.mp3"
+    },
+    {
+      "ru": "Что случилось?",
+      "ing": "Фо ханнад?",
+      "pron": "fo khannad",
+      "id": "ph_danger_20_90jixk",
+      "audio": "ph_danger_20_90jixk.mp3"
+    },
+    {
+      "ru": "Он ранен",
+      "ing": "Из беха",
+      "pron": "iz bekha",
+      "id": "ph_danger_21_tv489a",
+      "audio": "ph_danger_21_tv489a.mp3"
+    },
+    {
+      "ru": "Он погиб",
+      "Ing": "Из моха хинна",
+      "pron": "iz mokha khinna",
+      "id": "ph_danger_22_n6v1t6",
+      "audio": "ph_danger_22_n6v1t6.mp3"
+    },
+    {
+      "ru": "Не иди туда",
+      "ing": "Цугахь вудац!",
+      "pron": "tsugakh vudats",
+      "id": "ph_danger_23_7qmyku",
+      "audio": "ph_danger_23_7qmyku.mp3"
+    },
+    {
+      "ru": "Не иди сюда",
+      "ing": "Хьокха вудац!",
+      "pron": "khyokha vudats",
+      "id": "ph_danger_24_179cm9d",
+      "audio": "ph_danger_24_179cm9d.mp3"
+    },
+    {
+      "ru": "Жди здесь",
+      "ing": "Хьокха сабар де",
+      "pron": "khyokha sabar de",
+      "id": "ph_danger_25_q7qmmo",
+      "audio": "ph_danger_25_q7qmmo.mp3"
+    },
+    {
+      "ru": "Быстрее!",
+      "ing": "Марсха!",
+      "pron": "marsha",
+      "id": "ph_danger_26_mmbh1t",
+      "audio": "ph_danger_26_mmbh1t.mp3"
+    },
+    {
+      "ru": "Медленнее!",
+      "ing": "Шортиг!",
+      "pron": "shortig",
+      "id": "ph_danger_27_1dxt3xi",
+      "audio": "ph_danger_27_1dxt3xi.mp3"
+    },
+    {
+      "ru": "Я боюсь",
+      "ing": "Со хьоала",
+      "pron": "so khoala",
+      "id": "ph_danger_28_1pfkrso",
+      "audio": "ph_danger_28_1pfkrso.mp3"
+    },
+    {
+      "ru": "Не бойся",
+      "ing": "Хьа му хьоала",
+      "pron": "kha mu khoala",
+      "id": "ph_danger_29_1ia5l2i",
+      "audio": "ph_danger_29_1ia5l2i.mp3"
+    },
+    {
+      "ru": "Сюда!",
+      "ing": "Хьокха!",
+      "pron": "khyokha",
+      "id": "ph_danger_30_px8qcj",
+      "audio": "ph_danger_30_px8qcj.mp3"
+    },
+    {
+      "ru": "Туда!",
+      "ing": "Цугахь!",
+      "pron": "tsugakh",
+      "id": "ph_danger_31_12otqv4",
+      "audio": "ph_danger_31_12otqv4.mp3"
+    }
   ]
 }
