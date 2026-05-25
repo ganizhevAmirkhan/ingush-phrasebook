@@ -19370,12 +19370,12 @@
       "ruPattern": "сколько километров",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Шун километраш?",
+      "ingTemplate": "Масса километр?",
       "priority": 100,
       "examples": [
         {
           "ru": "сколько километров",
-          "ing_expected": "Шун километраш?"
+          "ing_expected": "Масса километр?"
         }
       ]
     },
