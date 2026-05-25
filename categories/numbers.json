@@ -89,7 +89,6 @@
       "ru": "Сколько километров?",
       "ing": "Масса километр?",
       "pron": "massa kilometr?",
-
       "id": "f_1766025451240_72ut",
       "audio": "f_1766025451240_72ut.mp3"
     },
@@ -123,10 +122,227 @@
     },
     {
       "id": "f_1766025451240_8a2f",
-      "ru": "мне надо идти",
+      "ru": "Мне надо идти",
       "ing": "Са веза даваха",
       "pron": "sa veza davakha",
       "audio": "f_1766025451240_8a2f.mp3"
+    },
+    {
+      "ru": "Как считать по ингушски",
+      "ing": "КАК СЧИТАТЬ ПО – ИНГУШСКИ?",
+      "pron": "kak schitatь po – ingushski?",
+      "id": "api_numbers_lesson_title",
+      "audio": "api_numbers_lesson_title.mp3"
+    },
+    {
+      "ru": "30 это 20 и 10",
+      "ing": "ТКЪАЬ ИТТ",
+      "pron": "tkъaь itt",
+      "id": "api_numbers_30_is_20_and_10",
+      "audio": "api_numbers_30_is_20_and_10.mp3"
+    },
+    {
+      "ru": "11",
+      "ing": "ЦХЬАЙТТА",
+      "pron": "tskhьaytta",
+      "id": "api_numbers_11",
+      "audio": "api_numbers_11.mp3"
+    },
+    {
+      "ru": "12",
+      "ing": "ШИЙТТА",
+      "pron": "shiytta",
+      "id": "api_numbers_12",
+      "audio": "api_numbers_12.mp3"
+    },
+    {
+      "ru": "13",
+      "ing": "КХОЙТТА",
+      "pron": "kkhoytta",
+      "id": "api_numbers_13",
+      "audio": "api_numbers_13.mp3"
+    },
+    {
+      "ru": "14",
+      "ing": "ДИЙТТА",
+      "pron": "diytta",
+      "id": "api_numbers_14",
+      "audio": "api_numbers_14.mp3"
+    },
+    {
+      "ru": "15",
+      "ing": "ПХИЙТТА",
+      "pron": "pkhiytta",
+      "id": "api_numbers_15",
+      "audio": "api_numbers_15.mp3"
+    },
+    {
+      "ru": "16",
+      "ing": "ЯЛХАЙТТА",
+      "pron": "yalkhaytta",
+      "id": "api_numbers_16",
+      "audio": "api_numbers_16.mp3"
+    },
+    {
+      "ru": "17",
+      "ing": "ВУРИЙТТА",
+      "pron": "vuriytta",
+      "id": "api_numbers_17",
+      "audio": "api_numbers_17.mp3"
+    },
+    {
+      "ru": "18",
+      "ing": "БАРАЙТТА",
+      "pron": "baraytta",
+      "id": "api_numbers_18",
+      "audio": "api_numbers_18.mp3"
+    },
+    {
+      "ru": "19",
+      "ing": "ТКЪЕСТА",
+      "pron": "tkъesta",
+      "id": "api_numbers_19",
+      "audio": "api_numbers_19.mp3"
+    },
+    {
+      "ru": "20",
+      "ing": "ТКЪО",
+      "pron": "tkъo",
+      "id": "api_numbers_20",
+      "audio": "api_numbers_20.mp3"
+    },
+    {
+      "ru": "21",
+      "ing": "ТКЪАЬ ЦАI",
+      "pron": "tkъaь tsai",
+      "id": "api_numbers_21",
+      "audio": "api_numbers_21.mp3"
+    },
+    {
+      "ru": "40",
+      "ing": "ШОВЗТКЪА",
+      "pron": "shovztkъa",
+      "id": "api_numbers_40",
+      "audio": "api_numbers_40.mp3"
+    },
+    {
+      "ru": "50",
+      "ing": "ШОВЗТКЪА ИТТ",
+      "pron": "shovztkъa itt",
+      "id": "api_numbers_50",
+      "audio": "api_numbers_50.mp3"
+    },
+    {
+      "ru": "60",
+      "ing": "КХОЗТКЪА",
+      "pron": "kkhoztkъa",
+      "id": "api_numbers_60",
+      "audio": "api_numbers_60.mp3"
+    },
+    {
+      "ru": "70",
+      "ing": "КХОВЗТКЪА ИТТ",
+      "pron": "kkhovztkъa itt",
+      "id": "api_numbers_70",
+      "audio": "api_numbers_70.mp3"
+    },
+    {
+      "ru": "80",
+      "ing": "ДЕЗТКЪА",
+      "pron": "deztkъa",
+      "id": "api_numbers_80",
+      "audio": "api_numbers_80.mp3"
+    },
+    {
+      "ru": "90",
+      "ing": "ДЕЗТКЪА ИТТ",
+      "pron": "deztkъa itt",
+      "id": "api_numbers_90",
+      "audio": "api_numbers_90.mp3"
+    },
+    {
+      "ru": "100",
+      "ing": "БIАЬ",
+      "pron": "biaь",
+      "id": "api_numbers_100",
+      "audio": "api_numbers_100.mp3"
+    },
+    {
+      "ru": "1000",
+      "ing": "ЭЗАР",
+      "pron": "ezar",
+      "id": "api_numbers_1000",
+      "audio": "api_numbers_1000.mp3"
+    },
+    {
+      "ru": "Сколько тебе лет",
+      "ing": "МЕЛ ХА ЯЬННАЙ ХЬА?",
+      "pron": "mel kha yaьnnay khьa?",
+      "id": "api_numbers_how_old_are_you",
+      "audio": "api_numbers_how_old_are_you.mp3"
+    },
+    {
+      "ru": "Мне двадцать пять",
+      "ing": "СА ТКЪАЬ ПХИ ШУ ДАЬННАД.",
+      "pron": "sa tkъaь pkhi shu daьnnad.",
+      "id": "api_numbers_i_am_twenty_five",
+      "audio": "api_numbers_i_am_twenty_five.mp3"
+    },
+    {
+      "ru": "Мне двадцать три",
+      "ing": "СА ТКЪАЬ КХО ШУ ДАЬННАД.",
+      "pron": "sa tkъaь kkho shu daьnnad.",
+      "id": "api_numbers_i_am_twenty_three",
+      "audio": "api_numbers_i_am_twenty_three.mp3"
+    },
+    {
+      "ru": "100, 1000, миллион, миллиард.",
+      "ing": "БIАЬ, ЭЗАР, МИЛЛИОН, МИЛЛИАРД.",
+      "pron": "bia, ezar, million, milliard.",
+      "id": "imp_numbers_lesson_9_7_1",
+      "audio": "imp_numbers_lesson_9_7_1.mp3"
+    },
+    {
+      "ru": "19 и 20.",
+      "ing": "ТКЪЕСТА, ТКЪО.",
+      "pron": "tkesta, tko.",
+      "id": "imp_numbers_lesson_9_4_1",
+      "audio": "imp_numbers_lesson_9_4_1.mp3"
+    },
+    {
+      "ru": "21 это 20 и 1.",
+      "ing": "ТКЪАЬ ЦАI.",
+      "pron": "tka tsai.",
+      "id": "imp_numbers_lesson_9_5_1",
+      "audio": "imp_numbers_lesson_9_5_1.mp3"
+    },
+    {
+      "ru": "30 в ингушском — это 20 и 10.",
+      "ing": "ТКЪАЬ ИТТ.",
+      "pron": "tka itt.",
+      "id": "imp_numbers_lesson_9_2_1",
+      "audio": "imp_numbers_lesson_9_2_1.mp3"
+    },
+    {
+      "ru": "В ингушском языке двадцатеричная система счета.",
+      "ing": "ГIАЛГIАЙ МОТТА ШОВЗТКЪАХ ЛАРХIАРА СИСТЕМА Я.",
+      "pron": "gialgiay motta shovztkakh larkhiara sistema ya.",
+      "id": "imp_numbers_lesson_9_1_1",
+      "audio": "imp_numbers_lesson_9_1_1.mp3"
+    },
+    {
+      "ru": "Слово «год» с любым числом произносится одинаково.",
+      "ing": "ШУ ЛАРХIАРАШЦА ХЬАМАХ ДIАТIЕ ДА.",
+      "pron": "shu larkhiarashtsa khamakh diatie da.",
+      "id": "imp_numbers_lesson_9_11_1",
+      "audio": "imp_numbers_lesson_9_11_1.mp3"
+    },
+    {
+      "ru": "Яха, сколько тебе лет?",
+      "ing": "ЯХА, МЕЛ ХА ЯЬННАЙ ХЬА?",
+      "pron": "yakha, mel kha yannay kha?",
+      "id": "imp_numbers_lesson_9_8_1",
+      "audio": "imp_numbers_lesson_9_8_1.mp3"
     }
   ]
 }

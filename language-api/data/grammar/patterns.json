@@ -7149,7 +7149,7 @@
       "description": "Lesson 9 title phrase",
       "slots": [],
       "ingTemplate": "КАК СЧИТАТЬ ПО – ИНГУШСКИ?",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "как считать по ингушски",
@@ -7163,7 +7163,7 @@
       "description": "Lesson 9 vigesimal explanation",
       "slots": [],
       "ingTemplate": "ТКЪАЬ ИТТ",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "30 это 20 и 10",
@@ -7177,7 +7177,7 @@
       "description": "Lesson 9 numeral",
       "slots": [],
       "ingTemplate": "ЦХЬАЙТТА",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "11",
@@ -7191,7 +7191,7 @@
       "description": "Lesson 9 numeral",
       "slots": [],
       "ingTemplate": "ШИЙТТА",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "12",
@@ -7205,7 +7205,7 @@
       "description": "Lesson 9 numeral",
       "slots": [],
       "ingTemplate": "КХОЙТТА",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "13",
@@ -7219,7 +7219,7 @@
       "description": "Lesson 9 numeral",
       "slots": [],
       "ingTemplate": "ДИЙТТА",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "14",
@@ -7233,7 +7233,7 @@
       "description": "Lesson 9 numeral",
       "slots": [],
       "ingTemplate": "ПХИЙТТА",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "15",
@@ -7247,7 +7247,7 @@
       "description": "Lesson 9 numeral",
       "slots": [],
       "ingTemplate": "ЯЛХАЙТТА",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "16",
@@ -7261,7 +7261,7 @@
       "description": "Lesson 9 numeral",
       "slots": [],
       "ingTemplate": "ВУРИЙТТА",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "17",
@@ -7275,7 +7275,7 @@
       "description": "Lesson 9 numeral",
       "slots": [],
       "ingTemplate": "БАРАЙТТА",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "18",
@@ -7289,7 +7289,7 @@
       "description": "Lesson 9 numeral",
       "slots": [],
       "ingTemplate": "ТКЪЕСТА",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "19",
@@ -7303,7 +7303,7 @@
       "description": "Lesson 9 numeral",
       "slots": [],
       "ingTemplate": "ТКЪО",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "20",
@@ -7317,7 +7317,7 @@
       "description": "Lesson 9 numeral",
       "slots": [],
       "ingTemplate": "ТКЪАЬ ЦАI",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "21",
@@ -7331,7 +7331,7 @@
       "description": "Lesson 9 numeral",
       "slots": [],
       "ingTemplate": "ШОВЗТКЪА",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "40",
@@ -7345,7 +7345,7 @@
       "description": "Lesson 9 numeral",
       "slots": [],
       "ingTemplate": "ШОВЗТКЪА ИТТ",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "50",
@@ -7359,7 +7359,7 @@
       "description": "Lesson 9 numeral",
       "slots": [],
       "ingTemplate": "КХОЗТКЪА",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "60",
@@ -7373,7 +7373,7 @@
       "description": "Lesson 9 numeral",
       "slots": [],
       "ingTemplate": "КХОВЗТКЪА ИТТ",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "70",
@@ -7387,7 +7387,7 @@
       "description": "Lesson 9 numeral",
       "slots": [],
       "ingTemplate": "ДЕЗТКЪА",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "80",
@@ -7401,7 +7401,7 @@
       "description": "Lesson 9 numeral",
       "slots": [],
       "ingTemplate": "ДЕЗТКЪА ИТТ",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "90",
@@ -7415,7 +7415,7 @@
       "description": "Lesson 9 numeral",
       "slots": [],
       "ingTemplate": "БIАЬ",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "100",
@@ -7429,7 +7429,7 @@
       "description": "Lesson 9 numeral",
       "slots": [],
       "ingTemplate": "ЭЗАР",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "1000",
@@ -7443,7 +7443,7 @@
       "description": "Lesson 9 dialogue question",
       "slots": [],
       "ingTemplate": "МЕЛ ХА ЯЬННАЙ ХЬА?",
-      "priority": 98,
+      "priority": 100,
       "examples": [
         {
           "ru": "сколько тебе лет",
@@ -25774,6 +25774,440 @@
         {
           "ru": "мне надо идти",
           "ing_expected": "Са веза даваха"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_lesson_title",
+      "ruPattern": "как считать по ингушски",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "КАК СЧИТАТЬ ПО – ИНГУШСКИ?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "как считать по ингушски",
+          "ing_expected": "КАК СЧИТАТЬ ПО – ИНГУШСКИ?"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_30_is_20_and_10",
+      "ruPattern": "30 это 20 и 10",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ТКЪАЬ ИТТ",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "30 это 20 и 10",
+          "ing_expected": "ТКЪАЬ ИТТ"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_11",
+      "ruPattern": "11",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ЦХЬАЙТТА",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "11",
+          "ing_expected": "ЦХЬАЙТТА"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_12",
+      "ruPattern": "12",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ШИЙТТА",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "12",
+          "ing_expected": "ШИЙТТА"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_13",
+      "ruPattern": "13",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "КХОЙТТА",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "13",
+          "ing_expected": "КХОЙТТА"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_14",
+      "ruPattern": "14",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ДИЙТТА",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "14",
+          "ing_expected": "ДИЙТТА"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_15",
+      "ruPattern": "15",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ПХИЙТТА",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "15",
+          "ing_expected": "ПХИЙТТА"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_16",
+      "ruPattern": "16",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ЯЛХАЙТТА",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "16",
+          "ing_expected": "ЯЛХАЙТТА"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_17",
+      "ruPattern": "17",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ВУРИЙТТА",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "17",
+          "ing_expected": "ВУРИЙТТА"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_18",
+      "ruPattern": "18",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "БАРАЙТТА",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "18",
+          "ing_expected": "БАРАЙТТА"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_19",
+      "ruPattern": "19",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ТКЪЕСТА",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "19",
+          "ing_expected": "ТКЪЕСТА"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_20",
+      "ruPattern": "20",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ТКЪО",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "20",
+          "ing_expected": "ТКЪО"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_21",
+      "ruPattern": "21",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ТКЪАЬ ЦАI",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "21",
+          "ing_expected": "ТКЪАЬ ЦАI"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_40",
+      "ruPattern": "40",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ШОВЗТКЪА",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "40",
+          "ing_expected": "ШОВЗТКЪА"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_50",
+      "ruPattern": "50",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ШОВЗТКЪА ИТТ",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "50",
+          "ing_expected": "ШОВЗТКЪА ИТТ"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_60",
+      "ruPattern": "60",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "КХОЗТКЪА",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "60",
+          "ing_expected": "КХОЗТКЪА"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_70",
+      "ruPattern": "70",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "КХОВЗТКЪА ИТТ",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "70",
+          "ing_expected": "КХОВЗТКЪА ИТТ"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_80",
+      "ruPattern": "80",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ДЕЗТКЪА",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "80",
+          "ing_expected": "ДЕЗТКЪА"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_90",
+      "ruPattern": "90",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ДЕЗТКЪА ИТТ",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "90",
+          "ing_expected": "ДЕЗТКЪА ИТТ"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_100",
+      "ruPattern": "100",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "БIАЬ",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "100",
+          "ing_expected": "БIАЬ"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_1000",
+      "ruPattern": "1000",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ЭЗАР",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "1000",
+          "ing_expected": "ЭЗАР"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_how_old_are_you",
+      "ruPattern": "сколько тебе лет",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "МЕЛ ХА ЯЬННАЙ ХЬА?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "сколько тебе лет",
+          "ing_expected": "МЕЛ ХА ЯЬННАЙ ХЬА?"
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_i_am_twenty_five",
+      "ruPattern": "мне двадцать пять",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "СА ТКЪАЬ ПХИ ШУ ДАЬННАД.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мне двадцать пять",
+          "ing_expected": "СА ТКЪАЬ ПХИ ШУ ДАЬННАД."
+        }
+      ]
+    },
+    {
+      "id": "habar_api_numbers_i_am_twenty_three",
+      "ruPattern": "мне двадцать три",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "СА ТКЪАЬ КХО ШУ ДАЬННАД.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мне двадцать три",
+          "ing_expected": "СА ТКЪАЬ КХО ШУ ДАЬННАД."
+        }
+      ]
+    },
+    {
+      "id": "habar_imp_numbers_lesson_9_7_1",
+      "ruPattern": "100 1000 миллион миллиард",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "БIАЬ, ЭЗАР, МИЛЛИОН, МИЛЛИАРД.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "100 1000 миллион миллиард",
+          "ing_expected": "БIАЬ, ЭЗАР, МИЛЛИОН, МИЛЛИАРД."
+        }
+      ]
+    },
+    {
+      "id": "habar_imp_numbers_lesson_9_4_1",
+      "ruPattern": "19 и 20",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ТКЪЕСТА, ТКЪО.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "19 и 20",
+          "ing_expected": "ТКЪЕСТА, ТКЪО."
+        }
+      ]
+    },
+    {
+      "id": "habar_imp_numbers_lesson_9_5_1",
+      "ruPattern": "21 это 20 и 1",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ТКЪАЬ ЦАI.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "21 это 20 и 1",
+          "ing_expected": "ТКЪАЬ ЦАI."
+        }
+      ]
+    },
+    {
+      "id": "habar_imp_numbers_lesson_9_2_1",
+      "ruPattern": "30 в ингушском — это 20 и 10",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ТКЪАЬ ИТТ.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "30 в ингушском — это 20 и 10",
+          "ing_expected": "ТКЪАЬ ИТТ."
+        }
+      ]
+    },
+    {
+      "id": "habar_imp_numbers_lesson_9_1_1",
+      "ruPattern": "в ингушском языке двадцатеричная система счета",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ГIАЛГIАЙ МОТТА ШОВЗТКЪАХ ЛАРХIАРА СИСТЕМА Я.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "в ингушском языке двадцатеричная система счета",
+          "ing_expected": "ГIАЛГIАЙ МОТТА ШОВЗТКЪАХ ЛАРХIАРА СИСТЕМА Я."
+        }
+      ]
+    },
+    {
+      "id": "habar_imp_numbers_lesson_9_11_1",
+      "ruPattern": "слово «год» с любым числом произносится одинаково",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ШУ ЛАРХIАРАШЦА ХЬАМАХ ДIАТIЕ ДА.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "слово «год» с любым числом произносится одинаково",
+          "ing_expected": "ШУ ЛАРХIАРАШЦА ХЬАМАХ ДIАТIЕ ДА."
+        }
+      ]
+    },
+    {
+      "id": "habar_imp_numbers_lesson_9_8_1",
+      "ruPattern": "яха сколько тебе лет",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ЯХА, МЕЛ ХА ЯЬННАЙ ХЬА?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "яха сколько тебе лет",
+          "ing_expected": "ЯХА, МЕЛ ХА ЯЬННАЙ ХЬА?"
         }
       ]
     },

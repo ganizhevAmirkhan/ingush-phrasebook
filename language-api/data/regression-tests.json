@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T21:11:21.554Z",
+  "generatedAt": "2026-05-25T21:17:13.757Z",
   "items": [
     {
       "id": "f_1766017415464_5gdw",
@@ -7872,6 +7872,150 @@
       "category": "transport",
       "ru": "Выехал",
       "expectedIng": "новкъа аравяннав"
+    },
+    {
+      "id": "api_numbers_lesson_title",
+      "category": "numbers",
+      "ru": "как считать по ингушски",
+      "expectedIng": "КАК СЧИТАТЬ ПО – ИНГУШСКИ?"
+    },
+    {
+      "id": "api_numbers_30_is_20_and_10",
+      "category": "numbers",
+      "ru": "30 это 20 и 10",
+      "expectedIng": "ТКЪАЬ ИТТ"
+    },
+    {
+      "id": "api_numbers_11",
+      "category": "numbers",
+      "ru": "11",
+      "expectedIng": "ЦХЬАЙТТА"
+    },
+    {
+      "id": "api_numbers_12",
+      "category": "numbers",
+      "ru": "12",
+      "expectedIng": "ШИЙТТА"
+    },
+    {
+      "id": "api_numbers_13",
+      "category": "numbers",
+      "ru": "13",
+      "expectedIng": "КХОЙТТА"
+    },
+    {
+      "id": "api_numbers_14",
+      "category": "numbers",
+      "ru": "14",
+      "expectedIng": "ДИЙТТА"
+    },
+    {
+      "id": "api_numbers_15",
+      "category": "numbers",
+      "ru": "15",
+      "expectedIng": "ПХИЙТТА"
+    },
+    {
+      "id": "api_numbers_16",
+      "category": "numbers",
+      "ru": "16",
+      "expectedIng": "ЯЛХАЙТТА"
+    },
+    {
+      "id": "api_numbers_17",
+      "category": "numbers",
+      "ru": "17",
+      "expectedIng": "ВУРИЙТТА"
+    },
+    {
+      "id": "api_numbers_18",
+      "category": "numbers",
+      "ru": "18",
+      "expectedIng": "БАРАЙТТА"
+    },
+    {
+      "id": "api_numbers_19",
+      "category": "numbers",
+      "ru": "19",
+      "expectedIng": "ТКЪЕСТА"
+    },
+    {
+      "id": "api_numbers_20",
+      "category": "numbers",
+      "ru": "20",
+      "expectedIng": "ТКЪО"
+    },
+    {
+      "id": "api_numbers_21",
+      "category": "numbers",
+      "ru": "21",
+      "expectedIng": "ТКЪАЬ ЦАI"
+    },
+    {
+      "id": "api_numbers_40",
+      "category": "numbers",
+      "ru": "40",
+      "expectedIng": "ШОВЗТКЪА"
+    },
+    {
+      "id": "api_numbers_50",
+      "category": "numbers",
+      "ru": "50",
+      "expectedIng": "ШОВЗТКЪА ИТТ"
+    },
+    {
+      "id": "api_numbers_60",
+      "category": "numbers",
+      "ru": "60",
+      "expectedIng": "КХОЗТКЪА"
+    },
+    {
+      "id": "api_numbers_70",
+      "category": "numbers",
+      "ru": "70",
+      "expectedIng": "КХОВЗТКЪА ИТТ"
+    },
+    {
+      "id": "api_numbers_80",
+      "category": "numbers",
+      "ru": "80",
+      "expectedIng": "ДЕЗТКЪА"
+    },
+    {
+      "id": "api_numbers_90",
+      "category": "numbers",
+      "ru": "90",
+      "expectedIng": "ДЕЗТКЪА ИТТ"
+    },
+    {
+      "id": "api_numbers_100",
+      "category": "numbers",
+      "ru": "100",
+      "expectedIng": "БIАЬ"
+    },
+    {
+      "id": "api_numbers_1000",
+      "category": "numbers",
+      "ru": "1000",
+      "expectedIng": "ЭЗАР"
+    },
+    {
+      "id": "api_numbers_how_old_are_you",
+      "category": "numbers",
+      "ru": "сколько тебе лет",
+      "expectedIng": "МЕЛ ХА ЯЬННАЙ ХЬА?"
+    },
+    {
+      "id": "api_numbers_i_am_twenty_five",
+      "category": "numbers",
+      "ru": "мне двадцать пять",
+      "expectedIng": "СА ТКЪАЬ ПХИ ШУ ДАЬННАД."
+    },
+    {
+      "id": "api_numbers_i_am_twenty_three",
+      "category": "numbers",
+      "ru": "мне двадцать три",
+      "expectedIng": "СА ТКЪАЬ КХО ШУ ДАЬННАД."
     }
   ]
 }
