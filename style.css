@@ -196,6 +196,40 @@ body {
 .modal-box .api-progress-wrap{
   margin:4px 0 12px;
 }
+.edit-translate-progress{
+  margin-top:8px;
+  padding:10px 12px;
+  border-radius:8px;
+  background:#f0f7ff;
+  border:1px solid #b8d4f0;
+}
+.edit-translate-progress .api-progress-track{
+  height:12px;
+  background:#d8e8f8;
+}
+.edit-translate-progress .api-progress-label{
+  font-weight:600;
+  color:#1a4a7a;
+}
+.edit-ai-btn.busy{
+  opacity:.65;
+  cursor:wait;
+}
+.edit-ai-btn.busy::after{
+  content:"";
+  display:inline-block;
+  width:10px;
+  height:10px;
+  margin-left:6px;
+  border:2px solid #888;
+  border-top-color:transparent;
+  border-radius:50%;
+  vertical-align:middle;
+  animation:edit-btn-spin .7s linear infinite;
+}
+@keyframes edit-btn-spin{
+  to{ transform:rotate(360deg); }
+}
 .api-progress-wrap.hidden{ display:none; }
 .api-progress-label{
   font-size:13px;

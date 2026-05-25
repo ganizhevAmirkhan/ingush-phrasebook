@@ -829,7 +829,40 @@ function setApiProgress(pct, label, visible=true){
   setProgressBar("api-progress-wrap", "api-progress-bar", "api-progress-label", pct, label, visible);
 }
 
+function ensureEditTranslateProgressDom(){
+  let wrap = document.getElementById("edit-translate-progress-wrap");
+  if(wrap) return wrap;
+  const anchor = document.getElementById("edit-translate-btn")
+    || document.getElementById("edit-ing")?.closest("label");
+  if(!anchor) return null;
+  wrap = document.createElement("div");
+  wrap.id = "edit-translate-progress-wrap";
+  wrap.className = "api-progress-wrap edit-translate-progress hidden";
+  wrap.setAttribute("role", "status");
+  wrap.setAttribute("aria-live", "polite");
+  wrap.innerHTML =
+    '<div class="api-progress-label" id="edit-translate-progress-label">Перевод…</div>' +
+    '<div class="api-progress-track"><div class="api-progress-bar" id="edit-translate-progress-bar"></div></div>';
+  anchor.insertAdjacentElement("afterend", wrap);
+  return wrap;
+}
+
+function setEditTranslateBtnBusy(busy){
+  const btn = document.getElementById("edit-translate-btn");
+  if(!btn) return;
+  btn.disabled = !!busy;
+  btn.classList.toggle("busy", !!busy);
+  btn.setAttribute("aria-busy", busy ? "true" : "false");
+}
+
+function nextPaint(){
+  return new Promise((resolve) => {
+    requestAnimationFrame(() => requestAnimationFrame(resolve));
+  });
+}
+
 function setEditTranslateProgress(pct, label, visible=true){
+  ensureEditTranslateProgressDom();
   setProgressBar(
     "edit-translate-progress-wrap",
     "edit-translate-progress-bar",
@@ -1430,10 +1463,10 @@ async function aiTranslateIng(){
 
   const outIng = document.getElementById("edit-ing");
   const outPron = document.getElementById("edit-pron");
-  const btn = document.getElementById("edit-translate-btn");
   outIng && (outIng.value = "");
   setEditTranslateProgress(-1, `Перевод: «${ru.slice(0, 36)}${ru.length > 36 ? "…" : ""}»`);
-  if(btn) btn.disabled = true;
+  setEditTranslateBtnBusy(true);
+  await nextPaint();
 
   const local = findPhraseFromHabar(ru);
   if(local?.ing){
@@ -1441,7 +1474,7 @@ async function aiTranslateIng(){
     if(outPron && local.pron) outPron.value = safe(local.pron);
     setEditTranslateProgress(100, "Источник: habar (фраза)");
     toast(`Источник: habar (фраза)`, true);
-    if(btn) btn.disabled = false;
+    setEditTranslateBtnBusy(false);
     setTimeout(() => setEditTranslateProgress(100, "", false), 2000);
     return;
   }
@@ -1498,7 +1531,7 @@ async function aiTranslateIng(){
   }finally{
     clearInterval(tickId);
     clearTimeout(timeoutId);
-    if(btn) btn.disabled = false;
+    setEditTranslateBtnBusy(false);
   }
 }
 
@@ -1516,6 +1549,8 @@ async function aiMakePron(){
 
 /* ================= EDIT MODAL (REPLACES PROMPT EDIT) ================= */
 function openModal(){
+  setEditTranslateProgress(100, "", false);
+  setEditTranslateBtnBusy(false);
   const m = document.getElementById("edit-modal");
   if(m) m.classList.remove("hidden");
 }
@@ -1523,6 +1558,7 @@ function closeEdit(){
   const m = document.getElementById("edit-modal");
   if(m) m.classList.add("hidden");
   setEditTranslateProgress(100, "", false);
+  setEditTranslateBtnBusy(false);
   editMode = null;
   editingItemId = null;
   editingCategory = null;
