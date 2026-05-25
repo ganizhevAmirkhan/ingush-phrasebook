@@ -342,6 +342,20 @@
       ]
     },
     {
+      "id": "i_dont_need_this",
+      "ruPattern": "мне не нужно это",
+      "description": "I don't need this: сун (мне) + дезац (не нужно) + ер (это)",
+      "slots": [],
+      "ingTemplate": "Сун дезац ер",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мне не нужно это",
+          "ing_expected": "Сун дезац ер"
+        }
+      ]
+    },
+    {
       "id": "i_am_here",
       "ruPattern": "я здесь",
       "description": "I am here (confirming presence: Со укхаз ва, not az укхаза / Со хьокха)",

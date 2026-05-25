@@ -9546,6 +9546,24 @@
         "dat": "кхе"
       },
       "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "мне",
+      "pos": "pron",
+      "forms": {
+        "base": "сун",
+        "dat": "сун"
+      },
+      "notes": "to me (not са = my); native speaker: Сун дезац ер"
+    },
+    {
+      "ru": "не нужно",
+      "pos": "verb",
+      "forms": {
+        "base": "дезац",
+        "dat": "дезац"
+      },
+      "notes": "negative need/want; corpus: чай дезац сона"
     }
   ]
 }
