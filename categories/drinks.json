@@ -59,22 +59,37 @@
     },
     {
       "ru": "У тебя есть вода?",
+<<<<<<< HEAD
       "ing": "Хьуга хи ди?",
       "pron": "hyuga hi di?",
+=======
+      "ing": "Хьуга хи ди.",
+      "pron": "h'uga khi di.",
+>>>>>>> ac1c5d5d8fcb6e28c1dedd2c463e232442639cd7
       "id": "f_1766030410812_9bg3",
       "audio": "f_1766030410812_9bg3.webm"
     },
     {
       "ru": "У меня есть вода",
+<<<<<<< HEAD
       "ing": "Суга хи да",
       "pron": "suga hi da",
+=======
+      "ing": "Суга хи да.",
+      "pron": "suga khi da.",
+>>>>>>> ac1c5d5d8fcb6e28c1dedd2c463e232442639cd7
       "id": "f_1766030410812_pb9q",
       "audio": "f_1766030410812_pb9q.webm"
     },
     {
       "ru": "Я выпил",
+<<<<<<< HEAD
       "ing": "Аз манад",
       "pron": "az manad",
+=======
+      "ing": "Аз манад.",
+      "pron": "az manad.",
+>>>>>>> ac1c5d5d8fcb6e28c1dedd2c463e232442639cd7
       "id": "f_1766030410812_r7bp",
       "audio": "f_1766030410812_r7bp.webm"
     },
@@ -87,8 +102,13 @@
     },
     {
       "ru": "Пей!",
+<<<<<<< HEAD
       "ing": "Дамал",
       "pron": "damal",
+=======
+      "ing": "Дамал!",
+      "pron": "damal!",
+>>>>>>> ac1c5d5d8fcb6e28c1dedd2c463e232442639cd7
       "id": "f_1766030410812_ye0n",
       "audio": "f_1766030410812_ye0n.webm"
     },
@@ -129,8 +149,8 @@
     },
     {
       "ru": "Мне нужен чай",
-      "ing": "Са чай давах",
-      "pron": "sa chai davakh",
+      "ing": "СУН чай ДЕЗА.",
+      "pron": "sun chay deza.",
       "id": "f_1766030410812_ur71",
       "audio": "f_1766030410812_ur71.webm"
     },
@@ -144,7 +164,11 @@
     {
       "ru": "Ты чай будешь?",
       "ing": "Хьун чай дези?",
+<<<<<<< HEAD
       "pron": "khun chai dezi?",
+=======
+      "pron": "h'un chay dezi?",
+>>>>>>> ac1c5d5d8fcb6e28c1dedd2c463e232442639cd7
       "id": "f_1766030410812_phgm",
       "audio": "f_1766030410812_phgm.webm"
     },
@@ -158,7 +182,11 @@
     {
       "ru": "Сделай чай",
       "ing": "Чай дел",
+<<<<<<< HEAD
       "pron": "chai del",
+=======
+      "pron": "chay del",
+>>>>>>> ac1c5d5d8fcb6e28c1dedd2c463e232442639cd7
       "id": "f_1766030410812_qh6v",
       "audio": "f_1766030410812_qh6v.webm"
     },
