@@ -1127,31 +1127,31 @@
       "id": "f_1766030410812_9bg3",
       "category": "drink",
       "ru": "У тебя есть вода?",
-      "expectedIng": "Хьа мал йой?"
+      "expectedIng": "Хьуга хи ди?"
     },
     {
       "id": "f_1766030410812_pb9q",
       "category": "drink",
       "ru": "У меня есть вода",
-      "expectedIng": "Со мал йо"
+      "expectedIng": "Суга хи да"
     },
     {
       "id": "f_1766030410812_r7bp",
       "category": "drink",
       "ru": "Я выпил",
-      "expectedIng": "Со мал йола"
+      "expectedIng": "Аз манад"
     },
     {
       "id": "f_1766030410812_lmar",
       "category": "drink",
       "ru": "Не пей!",
-      "expectedIng": "Мал юц!"
+      "expectedIng": "Ма малахь"
     },
     {
       "id": "f_1766030410812_ye0n",
       "category": "drink",
       "ru": "Пей!",
-      "expectedIng": "Мал ю!"
+      "expectedIng": "Дамал"
     },
     {
       "id": "f_1766030410812_8zqd",
@@ -1199,7 +1199,7 @@
       "id": "f_1766030410812_phgm",
       "category": "drink",
       "ru": "Ты чай будешь?",
-      "expectedIng": "Хьа чай ю?"
+      "expectedIng": "Хьун чай дези?"
     },
     {
       "id": "f_1766030410812_7q6y",
@@ -1211,13 +1211,13 @@
       "id": "f_1766030410812_qh6v",
       "category": "drink",
       "ru": "Сделай чай",
-      "expectedIng": "Чай дуйла"
+      "expectedIng": "Чай дел"
     },
     {
       "id": "f_1766030410812_w3hu",
       "category": "drink",
       "ru": "Сделай кофе",
-      "expectedIng": "Кофе дуйла"
+      "expectedIng": "Кофе дел"
     },
     {
       "id": "f_1766030410812_kgke",

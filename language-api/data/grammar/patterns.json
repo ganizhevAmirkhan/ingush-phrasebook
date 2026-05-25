@@ -1808,6 +1808,78 @@
       ]
     },
     {
+      "id": "drink_you_have_water",
+      "ruPattern": "у тебя есть вода",
+      "description": "Do you have water: хьуга (у тебя) + хи + ди",
+      "slots": [],
+      "ingTemplate": "Хьуга хи ди?",
+      "priority": 100,
+      "examples": [{ "ru": "у тебя есть вода", "ing_expected": "Хьуга хи ди?" }]
+    },
+    {
+      "id": "drink_i_have_water",
+      "ruPattern": "у меня есть вода",
+      "description": "I have water: суга (у меня) + хи + да",
+      "slots": [],
+      "ingTemplate": "Суга хи да",
+      "priority": 100,
+      "examples": [{ "ru": "у меня есть вода", "ing_expected": "Суга хи да" }]
+    },
+    {
+      "id": "drink_i_drank",
+      "ruPattern": "я выпил",
+      "description": "I drank: аз манад",
+      "slots": [],
+      "ingTemplate": "Аз манад",
+      "priority": 100,
+      "examples": [{ "ru": "я выпил", "ing_expected": "Аз манад" }]
+    },
+    {
+      "id": "drink_dont_drink",
+      "ruPattern": "не пей",
+      "description": "Don't drink: ма малахь",
+      "slots": [],
+      "ingTemplate": "Ма малахь",
+      "priority": 100,
+      "examples": [{ "ru": "не пей", "ing_expected": "Ма малахь" }]
+    },
+    {
+      "id": "drink_drink_imperative",
+      "ruPattern": "пей",
+      "description": "Drink (imperative): дамал",
+      "slots": [],
+      "ingTemplate": "Дамал",
+      "priority": 100,
+      "examples": [{ "ru": "пей", "ing_expected": "Дамал" }]
+    },
+    {
+      "id": "drink_will_you_have_tea",
+      "ruPattern": "ты чай будешь",
+      "description": "Will you have tea: хьун чай дези",
+      "slots": [],
+      "ingTemplate": "Хьун чай дези?",
+      "priority": 100,
+      "examples": [{ "ru": "ты чай будешь", "ing_expected": "Хьун чай дези?" }]
+    },
+    {
+      "id": "drink_make_tea",
+      "ruPattern": "сделай чай",
+      "description": "Make tea: чай дел",
+      "slots": [],
+      "ingTemplate": "Чай дел",
+      "priority": 100,
+      "examples": [{ "ru": "сделай чай", "ing_expected": "Чай дел" }]
+    },
+    {
+      "id": "drink_make_coffee",
+      "ruPattern": "сделай кофе",
+      "description": "Make coffee: кофе дел",
+      "slots": [],
+      "ingTemplate": "Кофе дел",
+      "priority": 100,
+      "examples": [{ "ru": "сделай кофе", "ing_expected": "Кофе дел" }]
+    },
+    {
       "id": "weather_it_is_raining",
       "ruPattern": "идет дождь",
       "description": "Weather event rain",
