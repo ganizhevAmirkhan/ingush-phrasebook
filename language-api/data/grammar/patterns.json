@@ -1808,6 +1808,15 @@
       ]
     },
     {
+      "id": "animal_singular",
+      "ruPattern": "животное",
+      "description": "Animal (singular): хьайб",
+      "slots": [],
+      "ingTemplate": "Хьайб",
+      "priority": 100,
+      "examples": [{ "ru": "животное", "ing_expected": "Хьайб" }]
+    },
+    {
       "id": "drink_you_have_water",
       "ruPattern": "у тебя есть вода",
       "description": "Do you have water: хьуга (у тебя) + хи + ди",

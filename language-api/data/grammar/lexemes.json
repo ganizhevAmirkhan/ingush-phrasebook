@@ -5069,10 +5069,10 @@
       "ru": "животное",
       "pos": "noun",
       "forms": {
-        "base": "вор",
-        "dat": "вор"
+        "base": "Хьайб",
+        "dat": "Хьайб"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "native speaker; not вор (crow)"
     },
     {
       "ru": "окно",
