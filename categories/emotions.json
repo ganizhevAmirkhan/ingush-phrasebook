@@ -1,38 +1,166 @@
 {
   "category": "emotions",
   "items": [
-    { "ru": "Как ты себя чувствуешь?", "ing": "Хьа хьоалч мотт?", "pron": "kha khoalch mott" },
-    { "ru": "Я чувствую себя хорошо", "ing": "Со дика ву", "pron": "so dika vu" },
-    { "ru": "Я чувствую себя плохо", "ing": "Со му ву", "pron": "so mu vu" },
-
-    { "ru": "Я рад", "ing": "Со дог1ала", "pron": "so dog1ala" },
-    { "ru": "Я счастлив", "ing": "Ираз долаж ва со", "pron": "iraz dolazh va so" },
-
-    { "ru": "Я устал", "ing": "Со къяд ваннув", "pron": "so kyad vannuv" },
-    { "ru": "Я очень устал", "ing": "Со къяд йо ваннув", "pron": "so kyad yo vannuv" },
-
-    { "ru": "Мне больно", "ing": "Са беха", "pron": "sa bekha" },
-    { "ru": "Мне страшно", "ing": "Са хьоала", "pron": "sa khoala" },
-    { "ru": "Я не боюсь", "ing": "Со му хьоала", "pron": "so mu khoala" },
-
-    { "ru": "Я злой", "ing": "Со къайра", "pron": "so qayra" },
-    { "ru": "Я спокоен", "ing": "Со лерда", "pron": "so lerda" },
-
-    { "ru": "Я думаю", "ing": "Со ил еж", "pron": "so il yezh" },
-    { "ru": "Я не знаю", "ing": "Сун хац", "pron": "sun khats" },
-
-    { "ru": "Мне нравится", "ing": "Сун хозхет", "pron": "sun khozkhet" },
-    { "ru": "Мне не нравится", "ing": "Сун му хозхет", "pron": "sun mu khozkhet" },
-
-    { "ru": "Я хочу", "ing": "Со безам ба", "pron": "so bezam ba" },
-    { "ru": "Мне хочется", "ing": "Са безам ба", "pron": "sa bezam ba" },
-
-    { "ru": "Мне скучно", "ing": "Са цаьрга", "pron": "sa tsa'rga" },
-    { "ru": "Мне весело", "ing": "Са дог1ала", "pron": "sa dog1ala" },
-
-    { "ru": "Я сплю", "ing": "Со кхеташ ву", "pron": "so khetash vu" },
-    { "ru": "Я хочу спать", "ing": "Са кхеташ безам ба", "pron": "sa khetash bezam ba" },
-
-    { "ru": "Я злюсь", "ing": "Со къайра йола", "pron": "so qayra yola" }
+    {
+      "ru": "Как ты себя чувствуешь?",
+      "ing": "Хьа хьоалч мотт?",
+      "pron": "kha khoalch mott",
+      "id": "ph_emotions_0_1dk0in",
+      "audio": "ph_emotions_0_1dk0in.mp3"
+    },
+    {
+      "ru": "Я чувствую себя хорошо",
+      "ing": "Со дика ву",
+      "pron": "so dika vu",
+      "id": "ph_emotions_1_uidpd5",
+      "audio": "ph_emotions_1_uidpd5.mp3"
+    },
+    {
+      "ru": "Я чувствую себя плохо",
+      "ing": "Со му ву",
+      "pron": "so mu vu",
+      "id": "ph_emotions_2_3ffvdc",
+      "audio": "ph_emotions_2_3ffvdc.mp3"
+    },
+    {
+      "ru": "Я рад",
+      "ing": "Со г1ажвахав",
+      "pron": "so g1azhvakhav",
+      "id": "ph_emotions_3_10dpl7w",
+      "audio": "ph_emotions_3_10dpl7w.mp3"
+    },
+    {
+      "ru": "Я счастлив",
+      "ing": "Ираз долаж ва со",
+      "pron": "iraz dolazh va so",
+      "id": "ph_emotions_4_9yirst",
+      "audio": "ph_emotions_4_9yirst.mp3"
+    },
+    {
+      "ru": "Я устал",
+      "ing": "Со къяд ваннув",
+      "pron": "so kyad vannuv",
+      "id": "ph_emotions_5_1md40pk",
+      "audio": "ph_emotions_5_1md40pk.mp3"
+    },
+    {
+      "ru": "Я очень устал",
+      "ing": "Со къяд йо ваннув",
+      "pron": "so kyad yo vannuv",
+      "id": "ph_emotions_6_1d2057c",
+      "audio": "ph_emotions_6_1d2057c.mp3"
+    },
+    {
+      "ru": "Мне больно",
+      "ing": "Са беха",
+      "pron": "sa bekha",
+      "id": "ph_emotions_7_67q2i0",
+      "audio": "ph_emotions_7_67q2i0.mp3"
+    },
+    {
+      "ru": "Мне страшно",
+      "ing": "Са хьоала",
+      "pron": "sa khoala",
+      "id": "ph_emotions_8_1qrl4ug",
+      "audio": "ph_emotions_8_1qrl4ug.mp3"
+    },
+    {
+      "ru": "Я не боюсь",
+      "ing": "Со му хьоала",
+      "pron": "so mu khoala",
+      "id": "ph_emotions_9_77q02",
+      "audio": "ph_emotions_9_77q02.mp3"
+    },
+    {
+      "ru": "Я злой",
+      "ing": "Со къайра",
+      "pron": "so qayra",
+      "id": "ph_emotions_10_17kvspb",
+      "audio": "ph_emotions_10_17kvspb.mp3"
+    },
+    {
+      "ru": "Я спокоен",
+      "ing": "Со лерда",
+      "pron": "so lerda",
+      "id": "ph_emotions_11_n4u9ox",
+      "audio": "ph_emotions_11_n4u9ox.mp3"
+    },
+    {
+      "ru": "Я думаю",
+      "ing": "Со ил еж",
+      "pron": "so il yezh",
+      "id": "ph_emotions_12_1kypfee",
+      "audio": "ph_emotions_12_1kypfee.mp3"
+    },
+    {
+      "ru": "Я не знаю",
+      "ing": "Сун хац",
+      "pron": "sun khats",
+      "id": "ph_emotions_13_k6ilpo",
+      "audio": "ph_emotions_13_k6ilpo.mp3"
+    },
+    {
+      "ru": "Мне нравится",
+      "ing": "Сун хозхет",
+      "pron": "sun khozkhet",
+      "id": "ph_emotions_14_mjlgzn",
+      "audio": "ph_emotions_14_mjlgzn.mp3"
+    },
+    {
+      "ru": "Мне не нравится",
+      "ing": "Сун му хозхет",
+      "pron": "sun mu khozkhet",
+      "id": "ph_emotions_15_1n5ih0a",
+      "audio": "ph_emotions_15_1n5ih0a.mp3"
+    },
+    {
+      "ru": "Я хочу",
+      "ing": "Со безам ба",
+      "pron": "so bezam ba",
+      "id": "ph_emotions_16_zyx8oa",
+      "audio": "ph_emotions_16_zyx8oa.mp3"
+    },
+    {
+      "ru": "Мне хочется",
+      "ing": "Са безам ба",
+      "pron": "sa bezam ba",
+      "id": "ph_emotions_17_1nra4ch",
+      "audio": "ph_emotions_17_1nra4ch.mp3"
+    },
+    {
+      "ru": "Мне скучно",
+      "ing": "Са цаьрга",
+      "pron": "sa tsa'rga",
+      "id": "ph_emotions_18_le6rzn",
+      "audio": "ph_emotions_18_le6rzn.mp3"
+    },
+    {
+      "ru": "Мне весело",
+      "ing": "Са дог1ала",
+      "pron": "sa dog1ala",
+      "id": "ph_emotions_19_1f56crj",
+      "audio": "ph_emotions_19_1f56crj.mp3"
+    },
+    {
+      "ru": "Я сплю",
+      "ing": "Со кхеташ ву",
+      "pron": "so khetash vu",
+      "id": "ph_emotions_20_9b23rv",
+      "audio": "ph_emotions_20_9b23rv.mp3"
+    },
+    {
+      "ru": "Я хочу спать",
+      "ing": "Са кхеташ безам ба",
+      "pron": "sa khetash bezam ba",
+      "id": "ph_emotions_21_4k2n1o",
+      "audio": "ph_emotions_21_4k2n1o.mp3"
+    },
+    {
+      "ru": "Я злюсь",
+      "ing": "Со къайра йола",
+      "pron": "so qayra yola",
+      "id": "ph_emotions_22_1n1a9nn",
+      "audio": "ph_emotions_22_1n1a9nn.mp3"
+    }
   ]
 }
