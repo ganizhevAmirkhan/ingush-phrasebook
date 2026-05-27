@@ -17,6 +17,31 @@ function normalizeText(value) {
     .trim();
 }
 
+/** Агрессивный ключ для поиска готовых фраз (пунктуация, префиксы «Ответ:» и т.д.) */
+function normalizePhraseKey(value) {
+  let t = normalizeText(value);
+  if (!t) return "";
+  t = t
+    .replace(/^(приветствие|ответ|вопрос|фраза|пример)\s*:\s*/i, "")
+    .replace(/[!?.,…«»":;()]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  return t;
+}
+
+function phraseLookupKeys(ru) {
+  const keys = new Set();
+  const full = normalizeText(ru);
+  const compact = normalizePhraseKey(ru);
+  if (full) keys.add(full);
+  if (compact) keys.add(compact);
+  if (full) {
+    const noTail = full.replace(/\s+(к\s+1\s+человеку|всем|мужчине|женщине)$/i, "").trim();
+    if (noTail && noTail !== full) keys.add(noTail);
+  }
+  return [...keys];
+}
+
 function normalizeWordToken(token) {
   let t = normalizeText(token);
   if (!t) return "";
@@ -102,6 +127,8 @@ function toCorpusRecord(doc, bucket) {
 module.exports = {
   SOURCE,
   normalizeText,
+  normalizePhraseKey,
+  phraseLookupKeys,
   normalizeWordToken,
   tokenizeRu,
   toWordRecord,

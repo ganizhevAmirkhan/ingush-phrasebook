@@ -128,7 +128,7 @@ async function loadOverview() {
       2. <b>dosh</b> — онлайн-словарь (${c.wordsLoaded ?? 0} слов)<br>
       3. <b>paydadosh</b> — разговорные фразы (${c.paydaDoshPhrasesLoaded ?? 0})<br>
       4. <b>corpus/lesson</b> — короткие фразы из уроков (${c.lessonPhrasesLoaded ?? 0})<br>
-      5. <b>habar</b> — фразы разговорника (<i>сейчас выключены</i> в /translate)<br>
+      5. <b>habar</b> — фразы разговорника (включены, если DISABLE_HABAR_IN_TRANSLATE=false)<br>
       6. <b>LLM</b> — OpenRouter (приоритет) или Gemini fallback<br><br>
       <small>
         «Правила слотов» (${inv.rules ?? 0}) — это не шаблоны перевода, а технические правила падежей (base/dat/gen).<br>

@@ -3,6 +3,8 @@ const path = require("node:path");
 const {
   SOURCE,
   normalizeText,
+  normalizePhraseKey,
+  phraseLookupKeys,
   tokenizeRu,
   toWordRecord,
   toPhraseRecord,
@@ -62,7 +64,8 @@ const state = {
     translateFromPaydaDosh: 0,
     translateFromLLM: 0,
     translateRejected: 0
-  }
+  },
+  phraseIndex: new Map()
 };
 
 function nowIso() {
@@ -164,10 +167,10 @@ async function loadLessonColloquialPhrases() {
   return out;
 }
 
-// Habar categories in /translate (default off — avoids circular lookups from Habar UI).
-// Set DISABLE_HABAR_IN_TRANSLATE=false to include phrasebook phrases again.
+// Habar UI sends skipHabar:true to avoid circular lookup. Public /translate uses Habar by default.
+// Set DISABLE_HABAR_IN_TRANSLATE=true on VPS only if you need to turn phrasebook off globally.
 const DISABLE_HABAR_PHRASE_SOURCE =
-  String(process.env.DISABLE_HABAR_IN_TRANSLATE ?? "true").toLowerCase() === "true";
+  String(process.env.DISABLE_HABAR_IN_TRANSLATE ?? "false").toLowerCase() === "true";
 
 const PHRASE_SOURCE_PRIORITY = {
   [SOURCE.PAYDADOSH]: 4,
@@ -192,6 +195,61 @@ function mergePhraseRecords(items) {
     }
   }
   return [...byRu.values()];
+}
+
+function phrasesFromGrammarPatterns(patterns) {
+  const out = [];
+  const seen = new Set();
+  for (const pattern of patterns || []) {
+    const ing = (pattern?.ingTemplate || "").toString().trim();
+    if (!ing) continue;
+    const ruCandidates = [
+      pattern?.examples?.[0]?.ru,
+      pattern?.ruPattern
+    ]
+      .map((x) => (x || "").toString().trim())
+      .filter(Boolean);
+    for (const ru of ruCandidates) {
+      const key = normalizePhraseKey(ru);
+      if (!key || seen.has(key)) continue;
+      seen.add(key);
+      const isHabar = (pattern?.id || "").startsWith("habar_");
+      out.push(
+        toColloquialPhraseRecord(
+          {
+            id: pattern.id,
+            ru,
+            ing,
+            confidence: isHabar ? 0.99 : Number(pattern?.priority) >= 98 ? 0.95 : 0.88
+          },
+          SOURCE.GRAMMAR,
+          isHabar ? "habar_pattern" : "grammar_pattern"
+        )
+      );
+    }
+  }
+  return out;
+}
+
+function pickBetterPhrase(prev, next) {
+  if (!prev) return next;
+  if (!next) return prev;
+  const prevPriority = PHRASE_SOURCE_PRIORITY[prev.source] || 0;
+  const nextPriority = PHRASE_SOURCE_PRIORITY[next.source] || 0;
+  if (nextPriority !== prevPriority) return nextPriority > prevPriority ? next : prev;
+  return (next.confidence || 0) >= (prev.confidence || 0) ? next : prev;
+}
+
+function rebuildPhraseIndex() {
+  const index = new Map();
+  for (const phrase of state.phrases) {
+    const keys = new Set([phrase.ruNorm, normalizePhraseKey(phrase.ru), ...phraseLookupKeys(phrase.ru)]);
+    for (const key of keys) {
+      if (!key) continue;
+      index.set(key, pickBetterPhrase(index.get(key), phrase));
+    }
+  }
+  state.phraseIndex = index;
 }
 
 async function loadPhrases() {
@@ -680,25 +738,32 @@ function jaccard(aSet, bSet) {
   return union ? intersection / union : 0;
 }
 
+function phraseSourceAllowed(phrase, exclude) {
+  return phrase && !exclude.has((phrase.source || "").toLowerCase());
+}
+
+function findPhraseExact(ruText, options = {}) {
+  const exclude = new Set((options.excludeSources || []).map((s) => s.toLowerCase()));
+  let best = null;
+  for (const key of phraseLookupKeys(ruText)) {
+    const hit = state.phraseIndex.get(key);
+    if (!phraseSourceAllowed(hit, exclude)) continue;
+    best = pickBetterPhrase(best, hit);
+  }
+  return best;
+}
+
 function findPhraseBest(ruText, options = {}) {
   const exclude = new Set((options.excludeSources || []).map((s) => s.toLowerCase()));
+  const exact = findPhraseExact(ruText, options);
+  if (exact) return exact;
+
   const phrases = exclude.size
     ? state.phrases.filter((phrase) => !exclude.has((phrase.source || "").toLowerCase()))
     : state.phrases;
 
-  const norm = normalizeText(ruText);
+  const norm = normalizePhraseKey(ruText);
   if (!norm) return null;
-
-  const exactMatches = phrases.filter((phrase) => phrase.ruNorm === norm);
-  if (exactMatches.length) {
-    exactMatches.sort((a, b) => {
-      const pa = PHRASE_SOURCE_PRIORITY[a.source] || 0;
-      const pb = PHRASE_SOURCE_PRIORITY[b.source] || 0;
-      if (pb !== pa) return pb - pa;
-      return (b.confidence || 0) - (a.confidence || 0);
-    });
-    return exactMatches[0];
-  }
 
   const target = new Set(tokenizeRu(ruText));
   if (!target.size) return null;
@@ -712,13 +777,45 @@ function findPhraseBest(ruText, options = {}) {
       best = phrase;
       bestScore = score;
     } else if (score === bestScore && best && score > 0) {
-      const pa = PHRASE_SOURCE_PRIORITY[phrase.source] || 0;
-      const pb = PHRASE_SOURCE_PRIORITY[best.source] || 0;
-      if (pa > pb) best = phrase;
+      best = pickBetterPhrase(best, phrase);
     }
   }
   if (bestScore >= 0.75) return best;
+
+  // Короткие фразы: те же слова, другой порядок / лишний «!»
+  if (target.size <= 6) {
+    const targetKey = [...target].sort().join("|");
+    let tokenBest = null;
+    for (const phrase of phrases) {
+      if (!phrase.ruTokens.length || phrase.ruTokens.length !== target.size) continue;
+      const phraseKey = [...new Set(phrase.ruTokens)].sort().join("|");
+      if (phraseKey === targetKey) {
+        tokenBest = pickBetterPhrase(tokenBest, phrase);
+      }
+    }
+    if (tokenBest) return tokenBest;
+  }
+
   return null;
+}
+
+function phraseTranslateResult(phrase) {
+  if (phrase.source === SOURCE.PAYDADOSH) state.metrics.translateFromPaydaDosh += 1;
+  else if (phrase.source === SOURCE.GRAMMAR) state.metrics.translateFromGrammar += 1;
+  else state.metrics.translateFromPhrase += 1;
+  const usedSource =
+    phrase.source === SOURCE.PAYDADOSH
+      ? SOURCE.PAYDADOSH
+      : phrase.source === SOURCE.GRAMMAR
+        ? SOURCE.GRAMMAR
+        : SOURCE.HABAR;
+  return {
+    ok: true,
+    translation: phrase.ing,
+    usedSource,
+    confidence: phrase.confidence,
+    fallbackUsed: false
+  };
 }
 
 function buildDictionaryHints(ruText, limit = 12) {
@@ -883,17 +980,10 @@ async function translate(ruText, options = {}) {
   }
   const phraseOptions = excludeSources.length ? { excludeSources } : {};
 
-  const exactPhrase = findPhraseBest(ru, phraseOptions);
-  if (exactPhrase && exactPhrase.ruNorm === normalizeText(ru)) {
-    if (exactPhrase.source === SOURCE.PAYDADOSH) state.metrics.translateFromPaydaDosh += 1;
-    else state.metrics.translateFromPhrase += 1;
-    return {
-      ok: true,
-      translation: exactPhrase.ing,
-      usedSource: exactPhrase.source === SOURCE.PAYDADOSH ? SOURCE.PAYDADOSH : SOURCE.HABAR,
-      confidence: exactPhrase.confidence,
-      fallbackUsed: false
-    };
+  // 1) Готовые фразы: Habar, PaydaDosh, уроки, шаблоны grammar (индекс по всем формам написания)
+  const exactPhrase = findPhraseExact(ru, phraseOptions) || findPhraseBest(ru, phraseOptions);
+  if (exactPhrase) {
+    return phraseTranslateResult(exactPhrase);
   }
 
   const ruNormForRouting = ` ${normalizeText(ru)} `;
@@ -965,19 +1055,6 @@ async function translate(ruText, options = {}) {
       translation: byGrammar.translation,
       usedSource: SOURCE.GRAMMAR,
       confidence: 0.9,
-      fallbackUsed: false
-    };
-  }
-
-  const phrase = findPhraseBest(ru, phraseOptions);
-  if (phrase) {
-    if (phrase.source === SOURCE.PAYDADOSH) state.metrics.translateFromPaydaDosh += 1;
-    else state.metrics.translateFromPhrase += 1;
-    return {
-      ok: true,
-      translation: phrase.ing,
-      usedSource: phrase.source === SOURCE.PAYDADOSH ? SOURCE.PAYDADOSH : SOURCE.HABAR,
-      confidence: phrase.confidence,
       fallbackUsed: false
     };
   }
@@ -1098,8 +1175,11 @@ function getMetrics() {
     current: {
       wordsLoaded: state.words.length,
       phrasesLoaded: state.phrases.length,
+      phraseIndexKeys: state.phraseIndex.size,
+      habarPhrasesLoaded: state.phrases.filter((p) => p.source === SOURCE.HABAR).length,
       paydaDoshPhrasesLoaded: state.phrases.filter((p) => p.source === SOURCE.PAYDADOSH).length,
       lessonPhrasesLoaded: state.phrases.filter((p) => p.source === SOURCE.CORPUS).length,
+      grammarPhraseKeys: state.phrases.filter((p) => p.source === SOURCE.GRAMMAR).length,
       corpusLoaded: state.corpus.length,
       grammarPatternsLoaded: state.grammar.patterns.length,
       grammarRulesLoaded: state.grammar.rules.length,
@@ -1123,10 +1203,11 @@ async function refreshAllSources() {
     loadGrammarData()
   ]);
   state.words = words;
-  state.phrases = phrases;
+  state.grammar = grammar;
+  state.phrases = mergePhraseRecords([...phrases, ...phrasesFromGrammarPatterns(grammar.patterns)]);
   state.corpus = corpus;
   state.blacklist = blacklist;
-  state.grammar = grammar;
+  rebuildPhraseIndex();
 }
 
 module.exports = {

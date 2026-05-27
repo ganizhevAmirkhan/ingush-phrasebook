@@ -76,12 +76,14 @@ Features:
 
 Pipeline order:
 
-1. `dosh` exact match (single words)
-2. `grammar` pattern/rule/lexeme match
-3. `paydadosh` / `habar` / `corpus` phrase match
-4. `dosh` token composition fallback (for short phrases)
+1. **Exact phrase index** — Habar, PaydaDosh, lessons, grammar templates (normalized keys, `!`, «Ответ:» и т.д.)
+2. **Fuzzy phrase** — те же источники, похожие слова (Jaccard)
+3. `grammar` pattern slots / lexeme (если фраза не найдена)
+4. `dosh` exact word / token composition
 5. LLM fallback
 6. validation + moderation queue on reject
+
+Habar phrases are **on by default**. UI sends `skipHabar: true` only to avoid circular lookup. On VPS set `DISABLE_HABAR_IN_TRANSLATE=false` (or remove `=true` from `.env`).
 
 Import PaydaDosh phrases:
 
