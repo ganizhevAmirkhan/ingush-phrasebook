@@ -66,8 +66,8 @@
     },
     {
       "ru": "Беги!",
-      "ing": "Давад!",
-      "pron": "davad!",
+      "ing": "Уда!",
+      "pron": "uda",
       "id": "ph_danger_9_1gc3qy",
       "audio": "ph_danger_9_1gc3qy.mp3"
     },
@@ -80,8 +80,8 @@
     },
     {
       "ru": "Помоги мне!",
-      "ing": "Са г1о де!",
-      "pron": "sa g1o de",
+      "ing": "г1о де суна!",
+      "pron": "g1o de suna!",
       "id": "ph_danger_11_ftphss",
       "audio": "ph_danger_11_ftphss.mp3"
     },
