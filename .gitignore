@@ -1,0 +1,5 @@
+.env
+.env.*
+language-api/.env
+language-api/data/moderation-queue.log.jsonl
+node_modules/

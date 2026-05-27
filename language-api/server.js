@@ -348,6 +348,9 @@ async function route(req, res) {
   }
 
   if (req.method === "POST" && path === "/translate") {
+    if (!dataReady) {
+      return sendJson(res, 503, { ok: false, error: "data_loading", detail: "Подождите несколько секунд после перезапуска" });
+    }
     const body = await readBody(req);
     const result = await translate(body?.ru || "", {
       skipHabar: !!body?.skipHabar,
@@ -381,8 +384,9 @@ async function route(req, res) {
   return sendJson(res, 404, { ok: false, error: "not_found" });
 }
 
+let dataReady = false;
+
 async function start() {
-  await refreshAllSources();
   const server = http.createServer((req, res) => {
     route(req, res).catch((err) => {
       sendJson(res, 500, { ok: false, error: "internal_error", details: err?.message || "unknown" });
@@ -393,6 +397,14 @@ async function start() {
     process.stdout.write(`LanguageAPI listening on http://localhost:${PORT}\n`);
     process.stdout.write(`Admin panel: http://localhost:${PORT}/admin\n`);
   });
+
+  try {
+    await refreshAllSources();
+    dataReady = true;
+    process.stdout.write("LanguageAPI data loaded\n");
+  } catch (err) {
+    process.stderr.write(`LanguageAPI data load failed: ${err?.message || err}\n`);
+  }
 }
 
 start().catch((err) => {
