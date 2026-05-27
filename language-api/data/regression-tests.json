@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T17:38:25.452Z",
+  "generatedAt": "2026-05-27T18:15:37.328Z",
   "items": [
     {
       "id": "f_1766017415464_5gdw",
@@ -8190,6 +8190,18 @@
       "category": "misc",
       "ru": "Пожалуйста",
       "expectedIng": "боккъала"
+    },
+    {
+      "id": "ph_food_apples_price",
+      "category": "food",
+      "ru": "Сколько стоят яблоки",
+      "expectedIng": "Ф дех 1ажашт"
+    },
+    {
+      "id": "ph_shop_go_to_store",
+      "category": "shop",
+      "ru": "Я иду в магазин",
+      "expectedIng": "Со вилхавар"
     }
   ]
 }

@@ -161,6 +161,13 @@
       "pron": "sun khozkhet",
       "id": "f_1766025299791_ushy",
       "audio": "f_1766025299791_ushy.mp3"
+    },
+    {
+      "ru": "Я иду в магазин",
+      "ing": "Со вилхавар",
+      "pron": "so vilkharvar",
+      "id": "ph_shop_go_to_store",
+      "audio": "ph_shop_go_to_store.mp3"
     }
   ]
 }

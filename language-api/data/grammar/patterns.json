@@ -22698,6 +22698,20 @@
       ]
     },
     {
+      "id": "habar_ph_food_apples_price",
+      "ruPattern": "сколько стоят яблоки",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Ф дех 1ажашт",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "сколько стоят яблоки",
+          "ing_expected": "Ф дех 1ажашт"
+        }
+      ]
+    },
+    {
       "id": "habar_f_1779278011957_06jx",
       "ruPattern": "вкусные бананы",
       "description": "Habar phrasebook sync",
@@ -27790,6 +27804,20 @@
         {
           "ru": "мне нравится",
           "ing_expected": "Сун хозхет"
+        }
+      ]
+    },
+    {
+      "id": "habar_ph_shop_go_to_store",
+      "ruPattern": "я иду в магазин",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Со вилхавар",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я иду в магазин",
+          "ing_expected": "Со вилхавар"
         }
       ]
     },

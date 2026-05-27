@@ -681,6 +681,12 @@ function tryComposeCannotInfinitive(ruText) {
   return { ok: true, translation };
 }
 
+const RU_GLUE_STOPWORDS = new Set([
+  "я", "ты", "он", "она", "мы", "вы", "они",
+  "в", "на", "к", "с", "по", "из", "у", "за", "о", "об", "от", "до", "при", "без", "для",
+  "и", "а", "но", "что", "как", "это", "то", "не", "ни"
+]);
+
 function composeFromDictionaryTokens(ruText) {
   const atHome = tryComposeAtHomePhrase(ruText);
   if (atHome.ok) {
@@ -698,6 +704,11 @@ function composeFromDictionaryTokens(ruText) {
   }
 
   const tokens = tokenizeRu(ruText);
+  // Не склеивать «я иду в магазин» → az se =a тика — только отдельные слова без предлогов
+  if (tokens.length > 3 || tokens.some((t) => RU_GLUE_STOPWORDS.has(t))) {
+    return { ok: false, translation: "", covered: 0, total: tokens.length };
+  }
+
   if (!tokens.length || tokens.length < 2) {
     return { ok: false, translation: "", covered: 0, total: tokens.length };
   }
