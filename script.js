@@ -1082,7 +1082,7 @@ async function apiAdminTestTranslate(){
     const res = await fetch(`${base}/translate`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ru, skipHabar: DISABLE_HABAR_PHRASE_SOURCE }),
+      body: JSON.stringify({ ru }),
       signal: ctrl.signal,
       cache: "no-store"
     });
@@ -1170,6 +1170,10 @@ function languageApiErrorMessage(code){
     llm_http_403: "LLM: ключ не принят",
     llm_failed: "LLM недоступен. Проверьте OpenRouter на VPS"
   };
+  if ((code || "").startsWith("blocked_form:")) {
+    const form = code.slice("blocked_form:".length);
+    return `LLM заблокирован (чёрный список: «${form}»). Проверьте опечатку или уберите «хьоб»/«хьо» из blacklist в админке API`;
+  }
   return messages[code] || code || "Ошибка LanguageAPI";
 }
 

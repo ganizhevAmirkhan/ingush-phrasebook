@@ -897,10 +897,70 @@ function ingContainsBlockedForm(ingNorm, blocked) {
   if (!blocked) return false;
   const b = normalizeText(blocked);
   if (!b) return false;
-  if (b.includes(" ")) return ingNorm.includes(b);
   const tokens = ingNorm.split(/\s+/).filter(Boolean);
-  if (tokens.includes(b)) return true;
-  return tokens.some((token) => token.includes(b));
+  // Только целое слово/фраза — иначе режет ингушское «хьога», «хьоб» из‑за «хьоь» в списке
+  if (b.includes(" ")) return ingNorm.includes(b);
+  return tokens.includes(b);
+}
+
+const COMMON_RU_TYPOS = {
+  чпать: "спать",
+  спаь: "спать",
+  пит: "пить",
+  кушаь: "кушать"
+};
+
+function fixCommonRuTypos(ruText) {
+  const words = normalizeText(ruText).split(" ").filter(Boolean);
+  if (!words.length) return "";
+  const fixed = words.map((w) => COMMON_RU_TYPOS[w] || w);
+  if (fixed.join(" ") === words.join(" ")) return "";
+  return fixed.join(" ");
+}
+
+function levenshteinAtMost(a, b, maxDist) {
+  if (a === b) return 0;
+  if (Math.abs(a.length - b.length) > maxDist) return maxDist + 1;
+  const dp = Array.from({ length: a.length + 1 }, (_, i) => [i]);
+  for (let j = 1; j <= b.length; j += 1) dp[0][j] = j;
+  for (let i = 1; i <= a.length; i += 1) {
+    let rowMin = maxDist + 1;
+    for (let j = 1; j <= b.length; j += 1) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      dp[i][j] = Math.min(dp[i - 1][j] + 1, dp[i][j - 1] + 1, dp[i - 1][j - 1] + cost);
+      rowMin = Math.min(rowMin, dp[i][j]);
+    }
+    if (rowMin > maxDist) return maxDist + 1;
+  }
+  return dp[a.length][b.length];
+}
+
+function findPhraseNearTypo(ruText, options = {}) {
+  const exclude = new Set((options.excludeSources || []).map((s) => s.toLowerCase()));
+  const words = normalizePhraseKey(ruText).split(" ").filter(Boolean);
+  if (words.length < 2 || words.length > 6) return null;
+
+  let best = null;
+  let bestEdits = 99;
+  for (const [key, phrase] of state.phraseIndex) {
+    if (!phraseSourceAllowed(phrase, exclude)) continue;
+    const keyWords = key.split(" ").filter(Boolean);
+    if (keyWords.length !== words.length) continue;
+    let edits = 0;
+    for (let i = 0; i < words.length; i += 1) {
+      if (words[i] === keyWords[i]) continue;
+      if (levenshteinAtMost(words[i], keyWords[i], 1) <= 1) edits += 1;
+      else {
+        edits = 99;
+        break;
+      }
+    }
+    if (edits > 0 && edits < bestEdits) {
+      bestEdits = edits;
+      best = phrase;
+    }
+  }
+  return bestEdits === 1 ? best : null;
 }
 
 function validateIngText(ingText, ruText) {
@@ -980,8 +1040,16 @@ async function translate(ruText, options = {}) {
   }
   const phraseOptions = excludeSources.length ? { excludeSources } : {};
 
-  // 1) Готовые фразы: Habar, PaydaDosh, уроки, шаблоны grammar (индекс по всем формам написания)
-  const exactPhrase = findPhraseExact(ru, phraseOptions) || findPhraseBest(ru, phraseOptions);
+  // 1) Готовые фразы: Habar, PaydaDosh, уроки, шаблоны (+ опечатка в 1 слове, напр. «чпать»→«спать»)
+  const ruTry = [ru, fixCommonRuTypos(ru)].filter((v, i, arr) => v && arr.indexOf(v) === i);
+  let exactPhrase = null;
+  for (const variant of ruTry) {
+    exactPhrase =
+      findPhraseExact(variant, phraseOptions) ||
+      findPhraseNearTypo(variant, phraseOptions) ||
+      findPhraseBest(variant, phraseOptions);
+    if (exactPhrase) break;
+  }
   if (exactPhrase) {
     return phraseTranslateResult(exactPhrase);
   }

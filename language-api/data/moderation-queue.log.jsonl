@@ -255,3 +255,4 @@
 {"id":"mod_1779558609860","createdAt":"2026-05-23T17:50:09.860Z","ru":"Добрый вечер","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
 {"id":"mod_1779564038494","createdAt":"2026-05-23T19:20:38.494Z","ru":"Жди здесь","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
 {"id":"mod_1779564043086","createdAt":"2026-05-23T19:20:43.086Z","ru":"Жди здесь","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
+{"id":"mod_1779904270544","createdAt":"2026-05-27T17:51:10.544Z","ru":"я хочу чпать","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}

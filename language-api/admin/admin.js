@@ -509,7 +509,11 @@ async function runTranslateTest() {
     out.textContent = `✓ ${json.translation}\nИсточник: ${json.usedSource}\nУверенность: ${json.confidence}`;
   } else if ((json.error || "").startsWith("blocked_form:")) {
     const form = (json.error || "").slice("blocked_form:".length);
-    out.textContent = `✗ Заблокировано: «${form}» в чёрном списке (чеченский/сомнительный вариант).\nГотовая фраза есть в PaydaDosh — нажми «Перезагрузить данные» и повтори.\n${json.detail || ""}`;
+    out.textContent =
+      `✗ LLM предложил форму с «${form}», сработал чёрный список.\n` +
+      `Проверьте опечатку в русском (напр. «спать», не «чпать») — тогда ответ из Habar без LLM.\n` +
+      `В админке → Чёрный список: уберите «хьоб»/«хьо», если добавляли — это нормальный ингушский.\n` +
+      `${json.detail || ""}`;
   } else {
     out.textContent = `✗ ${json.error || "ошибка"}\n${json.detail || ""}`;
   }
