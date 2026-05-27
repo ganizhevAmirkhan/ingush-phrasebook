@@ -52,15 +52,15 @@
     },
     {
       "ru": "Берегись!",
-      "ing": "лорле!",
-      "pron": "lorle!",
+      "ing": "Йолча!",
+      "pron": "yolcha",
       "id": "ph_danger_7_bdwztm",
       "audio": "ph_danger_7_bdwztm.mp3"
     },
     {
       "ru": "Берегите его",
-      "ing": "Из йолча",
-      "pron": "iz yolcha",
+      "ing": "Лорве из",
+      "pron": "lorve iz",
       "id": "ph_danger_8_kq8enb",
       "audio": "ph_danger_8_kq8enb.mp3"
     },
