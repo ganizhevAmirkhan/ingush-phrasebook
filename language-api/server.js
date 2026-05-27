@@ -336,8 +336,15 @@ async function route(req, res) {
   }
 
   if (req.method === "POST" && path === "/refresh") {
-    await refreshAllSources();
-    return sendJson(res, 200, { ok: true, refreshed: true });
+    const body = await readBody(req);
+    const pullCategories =
+      !!body?.pullCategories ||
+      String(process.env.PULL_CATEGORIES_ON_REFRESH ?? "").toLowerCase() === "true";
+    const result = await refreshAllSources({ pullCategories });
+    if (!result?.ok) {
+      return sendJson(res, 503, { ok: false, error: result.error, detail: result.detail || "" });
+    }
+    return sendJson(res, 200, { ok: true, refreshed: true, ...result });
   }
 
   if (req.method === "POST" && path === "/translate") {

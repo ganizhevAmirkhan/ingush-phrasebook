@@ -1,4 +1,5 @@
 const fs = require("node:fs/promises");
+const https = require("node:https");
 const path = require("node:path");
 const {
   SOURCE,
@@ -24,6 +25,8 @@ const WORKSPACE_ROOT = path.resolve(ROOT, "..");
 const HABAR_ROOT = WORKSPACE_ROOT;
 
 const CATEGORY_DIR = path.join(HABAR_ROOT, "categories");
+const GITHUB_CATEGORIES_API =
+  "https://api.github.com/repos/ganizhevAmirkhan/ingush-phrasebook/contents/categories?ref=main";
 const PAYDADOSH_PHRASES_FILE = path.join(ROOT, "data", "colloquial", "paydadosh-phrases.json");
 const { splitRuIngPairs } = require("./phrase-split");
 const CORPUS_STORIES_DIR = path.join(ROOT, "data", "corpus", "stories");
@@ -1273,7 +1276,57 @@ function getModerationQueue() {
   return state.moderationQueue;
 }
 
-async function refreshAllSources() {
+function fetchGithubText(url) {
+  return new Promise((resolve, reject) => {
+    https
+      .get(url, { headers: { "User-Agent": "ingush-language-api" } }, (res) => {
+        let data = "";
+        res.on("data", (chunk) => (data += chunk));
+        res.on("end", () => {
+          if (res.statusCode && res.statusCode >= 400) {
+            reject(new Error(`HTTP ${res.statusCode}`));
+            return;
+          }
+          resolve(data);
+        });
+      })
+      .on("error", reject);
+  });
+}
+
+/** Подтянуть categories/*.json с GitHub (после правок в Habar на сайте). */
+async function pullCategoriesFromGitHub() {
+  const raw = await fetchGithubText(GITHUB_CATEGORIES_API);
+  const list = JSON.parse(raw);
+  let pulled = 0;
+  for (const entry of list) {
+    if (entry.type !== "file" || !entry.name.endsWith(".json") || !entry.download_url) continue;
+    const content = await fetchGithubText(entry.download_url);
+    const cleaned = content.replace(
+      /<<<<<<< HEAD[\s\S]*?=======\n([\s\S]*?)>>>>>>>[^\n]*/g,
+      "$1"
+    );
+    JSON.parse(cleaned);
+    await fs.writeFile(path.join(CATEGORY_DIR, entry.name), cleaned, "utf8");
+    pulled += 1;
+  }
+  return pulled;
+}
+
+async function refreshAllSources({ pullCategories = false } = {}) {
+  let categoriesPulled = 0;
+  if (pullCategories) {
+    try {
+      categoriesPulled = await pullCategoriesFromGitHub();
+    } catch (err) {
+      return {
+        ok: false,
+        error: "github_pull_failed",
+        detail: err?.message || String(err)
+      };
+    }
+  }
+
   const [words, phrases, corpus, blacklist, grammar] = await Promise.all([
     loadDictionary(),
     loadPhrases(),
@@ -1287,10 +1340,12 @@ async function refreshAllSources() {
   state.corpus = corpus;
   state.blacklist = blacklist;
   rebuildPhraseIndex();
+  return { ok: true, categoriesPulled, phrasesLoaded: state.phrases.length, phraseIndexKeys: state.phraseIndex.size };
 }
 
 module.exports = {
   refreshAllSources,
+  pullCategoriesFromGitHub,
   lookupWord,
   lookupPhrase,
   lookupCorpus,

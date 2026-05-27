@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T18:15:37.328Z",
+  "generatedAt": "2026-05-27T18:26:12.290Z",
   "items": [
     {
       "id": "f_1766017415464_5gdw",
@@ -8195,7 +8195,7 @@
       "id": "ph_food_apples_price",
       "category": "food",
       "ru": "Сколько стоят яблоки",
-      "expectedIng": "Ф дех 1ажашт"
+      "expectedIng": "Мелла дех 1ажашт?"
     },
     {
       "id": "ph_shop_go_to_store",

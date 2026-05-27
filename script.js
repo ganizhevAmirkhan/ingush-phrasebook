@@ -1129,11 +1129,14 @@ async function apiAdminRefreshData(){
     const res = await fetch(`${base}/refresh`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: "{}",
+      body: JSON.stringify({ pullCategories: true }),
       signal: ctrl.signal
     });
     const json = await res.json().catch(() => null);
-    toast(json?.ok ? "Данные API обновлены ✓" : "Не удалось обновить данные", !!json?.ok);
+    const pullMsg = json?.categoriesPulled
+      ? ` (с GitHub: ${json.categoriesPulled} файлов, ${json.phraseIndexKeys || "?"} ключей)`
+      : "";
+    toast(json?.ok ? `Данные API обновлены ✓${pullMsg}` : "Не удалось обновить данные", !!json?.ok);
     if(json?.ok) refreshApiAdminPanel();
     else setApiProgress(100, "Ошибка обновления");
   }catch{
@@ -1168,7 +1171,8 @@ function languageApiErrorMessage(code){
     llm_http_404: "LLM: модель не найдена. Обновите API (git pull + pm2 restart)",
     llm_http_400: "LLM отклонил запрос (400)",
     llm_http_403: "LLM: ключ не принят",
-    llm_failed: "LLM недоступен. Проверьте OpenRouter на VPS"
+    llm_failed: "LLM недоступен. Проверьте OpenRouter на VPS",
+    openrouter_rate_limited: "Лимит OpenRouter — фраза не в API, пошёл LLM. Нажмите «Данные API» после Push в GitHub"
   };
   if ((code || "").startsWith("blocked_form:")) {
     const form = code.slice("blocked_form:".length);

@@ -312,8 +312,8 @@
     {
       "id": "ph_food_apples_price",
       "ru": "Сколько стоят яблоки",
-      "ing": "Ф дех 1ажашт",
-      "pron": "f dekh 1azhasht",
+      "ing": "Мелла дех 1ажашт?",
+      "pron": "mella dekh 1azhasht?",
       "audio": "ph_food_apples_price.mp3"
     },
     {

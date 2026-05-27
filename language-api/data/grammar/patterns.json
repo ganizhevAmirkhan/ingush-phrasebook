@@ -22702,12 +22702,12 @@
       "ruPattern": "сколько стоят яблоки",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Ф дех 1ажашт",
+      "ingTemplate": "Мелла дех 1ажашт?",
       "priority": 100,
       "examples": [
         {
           "ru": "сколько стоят яблоки",
-          "ing_expected": "Ф дех 1ажашт"
+          "ing_expected": "Мелла дех 1ажашт?"
         }
       ]
     },
