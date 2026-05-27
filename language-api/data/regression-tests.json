@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T22:24:43.932Z",
+  "generatedAt": "2026-05-27T17:38:25.452Z",
   "items": [
     {
       "id": "f_1766017415464_5gdw",
@@ -83,37 +83,37 @@
       "id": "f_1766017415464_tmnt",
       "category": "animals",
       "ru": "Петух",
-      "expectedIng": "Курза к1онг"
+      "expectedIng": "боргIал"
     },
     {
       "id": "f_1766017415464_m1j2",
       "category": "animals",
       "ru": "Медведь",
-      "expectedIng": "Доьх"
+      "expectedIng": "Чо"
     },
     {
       "id": "f_1766017415464_f6b9",
       "category": "animals",
       "ru": "Барс",
-      "expectedIng": "Ирх"
+      "expectedIng": "цIокъ"
     },
     {
       "id": "f_1766017415464_jxa4",
       "category": "animals",
       "ru": "Он опасный зверь",
-      "expectedIng": "Из аькъа йо"
+      "expectedIng": "Из кхераме аькъа е"
     },
     {
       "id": "f_1766017415464_kdki",
       "category": "animals",
       "ru": "Большой зверь",
-      "expectedIng": "Ларча аькъа"
+      "expectedIng": "Доакха аькъа"
     },
     {
       "id": "f_1766017415464_ndae",
       "category": "animals",
       "ru": "Маленький зверь",
-      "expectedIng": "Керча аькъа"
+      "expectedIng": "Замигь аькъа"
     },
     {
       "id": "f_1766017415464_a31r",
@@ -575,7 +575,7 @@
       "id": "f_1766025643492_fdt5",
       "category": "city",
       "ru": "Где полиция?",
-      "expectedIng": "Полиция хьа?"
+      "expectedIng": "Мичай полици?"
     },
     {
       "id": "f_1766025643492_ctdj",
@@ -629,7 +629,7 @@
       "id": "f_1766025660255_y3mp",
       "category": "colors",
       "ru": "Какой цвет?",
-      "expectedIng": "Бег мотт?"
+      "expectedIng": "Малаг1 бос?"
     },
     {
       "id": "f_1766025660255_k3le",
@@ -731,13 +731,13 @@
       "id": "f_1766023804599_3lvd",
       "category": "commands",
       "ru": "Сядь!",
-      "expectedIng": "Деча!"
+      "expectedIng": "1аха!"
     },
     {
       "id": "f_1766023804599_8cxm",
       "category": "commands",
       "ru": "Ляг!",
-      "expectedIng": "Къайла!"
+      "expectedIng": "1авж!"
     },
     {
       "id": "f_1766023804599_kn5a",
@@ -749,7 +749,7 @@
       "id": "f_1766023804599_jek4",
       "category": "commands",
       "ru": "Не шуми!",
-      "expectedIng": "Муса!"
+      "expectedIng": "Г1ар ма е!"
     },
     {
       "id": "f_1766023804599_z8wv",
@@ -761,7 +761,7 @@
       "id": "f_1766023804599_3oev",
       "category": "commands",
       "ru": "Принеси!",
-      "expectedIng": "Т1ехьа!"
+      "expectedIng": "Хьдал!"
     },
     {
       "id": "f_1766023804599_4c6p",
@@ -773,7 +773,7 @@
       "id": "f_1766023804599_9wc3",
       "category": "commands",
       "ru": "Вернись!",
-      "expectedIng": "Виннаг!"
+      "expectedIng": "Юхавула!"
     },
     {
       "id": "f_1766023804599_ip1g",
@@ -2483,7 +2483,7 @@
       "id": "f_1766025491600_eddy",
       "category": "home",
       "ru": "Стена",
-      "expectedIng": "Баг"
+      "expectedIng": "Пен"
     },
     {
       "id": "f_1766025491600_b3ey",
@@ -2573,7 +2573,7 @@
       "id": "f_1766025491600_ie4p",
       "category": "home",
       "ru": "Можно войти?",
-      "expectedIng": "Чуда далуш?"
+      "expectedIng": "Чувал мег вий?"
     },
     {
       "id": "f_1766025491600_akgx",
@@ -3005,13 +3005,13 @@
       "id": "f_1766024853692_s9en",
       "category": "misc",
       "ru": "Мне не нравится",
-      "expectedIng": "Сун му хозхет"
+      "expectedIng": "Сун хозхетац"
     },
     {
       "id": "f_1766024853692_uenr",
       "category": "misc",
-      "ru": "ы",
-      "expectedIng": "в"
+      "ru": "Я большой человек",
+      "expectedIng": "Со воккха саг ва"
     },
     {
       "id": "f_1766025409671_ku7a",
@@ -3233,7 +3233,7 @@
       "id": "f_1766024553032_3m02",
       "category": "orientation",
       "ru": "Далеко",
-      "expectedIng": "Долча"
+      "expectedIng": "Гяна"
     },
     {
       "id": "f_1766024553032_ige7",
@@ -3257,7 +3257,7 @@
       "id": "f_1766024553032_gbhm",
       "category": "orientation",
       "ru": "Налево",
-      "expectedIng": "Чехьала"
+      "expectedIng": "Аьрдяхь"
     },
     {
       "id": "f_1766024553032_tpd4",
@@ -3293,7 +3293,7 @@
       "id": "f_1766024553032_qq7d",
       "category": "orientation",
       "ru": "Идём сюда",
-      "expectedIng": "Валле укхаза"
+      "expectedIng": "Валле укхазахь"
     },
     {
       "id": "f_1766024553032_73ei",
@@ -3323,13 +3323,13 @@
       "id": "f_1766024553032_y4tt",
       "category": "orientation",
       "ru": "Где ближайший дом?",
-      "expectedIng": "Мичай эггара гаргагIара цIа?"
+      "expectedIng": "Мичад эггара гаргагIара цIа?"
     },
     {
       "id": "f_1766024553032_c76k",
       "category": "orientation",
       "ru": "Где тропа?",
-      "expectedIng": "Мичай наькъа така?"
+      "expectedIng": "Мичад наькъа така?"
     },
     {
       "id": "f_1766024553032_njyz",
@@ -4163,7 +4163,7 @@
       "id": "f_1766025044136_3y7m",
       "category": "time",
       "ru": "Мы идём сейчас",
-      "expectedIng": "Тхо т1а вудаш"
+      "expectedIng": "Тхо Хьанз довх"
     },
     {
       "id": "f_1766025044136_mhq0",
@@ -4745,13 +4745,13 @@
       "id": "f_1766025387472_szyq",
       "category": "village",
       "ru": "Гора рядом",
-      "expectedIng": "Хьекха хьалг1"
+      "expectedIng": "Лоам гарга"
     },
     {
       "id": "f_1766025387472_88ra",
       "category": "village",
       "ru": "Лес рядом",
-      "expectedIng": "Хьекха т1ар"
+      "expectedIng": "Хьу юхе"
     },
     {
       "id": "f_1766025387472_zh5i",
@@ -4775,7 +4775,7 @@
       "id": "f_1766025387472_0acl",
       "category": "village",
       "ru": "Где пастбище?",
-      "expectedIng": "Дехар хьа?"
+      "expectedIng": "Мича е даьг1е?"
     },
     {
       "id": "f_1766025387472_szii",
@@ -4799,7 +4799,7 @@
       "id": "f_1766025387472_8z9z",
       "category": "village",
       "ru": "Мы идём к реке",
-      "expectedIng": "Тхо хьаьл вудаш"
+      "expectedIng": "Тхо долхаж да дуда хит1а"
     },
     {
       "id": "f_1766025387472_43ej",
@@ -4991,25 +4991,25 @@
       "id": "f_1766024876223_5440",
       "category": "work",
       "ru": "Я работаю в …",
-      "expectedIng": "Со … лоца"
+      "expectedIng": "Со болхбеж ва"
     },
     {
       "id": "f_1766024876223_cohr",
       "category": "work",
       "ru": "Мне нужно на работу",
-      "expectedIng": "Са лоамаш давах"
+      "expectedIng": "Са балх вах вез"
     },
     {
       "id": "f_1766024876223_dt76",
       "category": "work",
       "ru": "Коллега",
-      "expectedIng": "ДацIа"
+      "expectedIng": "Белхар нокъасти"
     },
     {
       "id": "f_1766024876223_utsa",
       "category": "work",
       "ru": "У меня много работы",
-      "expectedIng": "Со лоамаш дар йо"
+      "expectedIng": "Суга дукха болх ба"
     },
     {
       "id": "f_1766024876223_wvnd",
@@ -5021,7 +5021,7 @@
       "id": "f_1766024876223_a7mf",
       "category": "work",
       "ru": "Я занят",
-      "expectedIng": "Со дӀаякха"
+      "expectedIng": "Со мукъа вац"
     },
     {
       "id": "f_1766024876223_1jbb",
@@ -5033,7 +5033,7 @@
       "id": "f_1766024876223_xldu",
       "category": "work",
       "ru": "Мне нужен отдых",
-      "expectedIng": "Са делахь давах"
+      "expectedIng": "Сала1 дез са"
     },
     {
       "id": "f_1766024876223_8orb",
@@ -5147,7 +5147,7 @@
       "id": "ph_communication_14_1ki3ttg",
       "category": "communication",
       "ru": "Ты прав",
-      "expectedIng": "Хьа дика мотт"
+      "expectedIng": "Хьо бакъ ва"
     },
     {
       "id": "ph_communication_15_vsq941",
@@ -5165,7 +5165,7 @@
       "id": "ph_communication_17_13s29fo",
       "category": "communication",
       "ru": "Пойдём",
-      "expectedIng": "Тхо вудаш"
+      "expectedIng": "dovlæ"
     },
     {
       "id": "imp_home_lesson_8_dialogue_12_1",
@@ -8028,6 +8028,168 @@
       "category": "greetings",
       "ru": "Ва алейкум салам",
       "expectedIng": "ВА IАЛАЙКУМ САЛАМ!"
+    },
+    {
+      "id": "f_1779774077580_3n3o",
+      "category": "colors",
+      "ru": "Голубой",
+      "expectedIng": "Сигле бес"
+    },
+    {
+      "id": "f_1766023804599_kp5e",
+      "category": "commands",
+      "ru": "Слушай!",
+      "expectedIng": "Ладувх"
+    },
+    {
+      "id": "ph_emotions_0_1dk0in",
+      "category": "emotions",
+      "ru": "Как ты себя чувствуешь?",
+      "expectedIng": "Хьа хьоалч мотт?"
+    },
+    {
+      "id": "ph_emotions_1_uidpd5",
+      "category": "emotions",
+      "ru": "Я чувствую себя хорошо",
+      "expectedIng": "Со дика ву"
+    },
+    {
+      "id": "ph_emotions_2_3ffvdc",
+      "category": "emotions",
+      "ru": "Я чувствую себя плохо",
+      "expectedIng": "Со му ву"
+    },
+    {
+      "id": "ph_emotions_3_10dpl7w",
+      "category": "emotions",
+      "ru": "Я рад",
+      "expectedIng": "Со г1ажвахав"
+    },
+    {
+      "id": "ph_emotions_4_9yirst",
+      "category": "emotions",
+      "ru": "Я счастлив",
+      "expectedIng": "Ираз долаж ва со"
+    },
+    {
+      "id": "ph_emotions_5_1md40pk",
+      "category": "emotions",
+      "ru": "Я устал",
+      "expectedIng": "Со къяд ваннув"
+    },
+    {
+      "id": "ph_emotions_6_1d2057c",
+      "category": "emotions",
+      "ru": "Я очень устал",
+      "expectedIng": "Со къяд йо ваннув"
+    },
+    {
+      "id": "ph_emotions_7_67q2i0",
+      "category": "emotions",
+      "ru": "Мне больно",
+      "expectedIng": "Са беха"
+    },
+    {
+      "id": "ph_emotions_8_1qrl4ug",
+      "category": "emotions",
+      "ru": "Мне страшно",
+      "expectedIng": "Са хьоала"
+    },
+    {
+      "id": "ph_emotions_9_77q02",
+      "category": "emotions",
+      "ru": "Я не боюсь",
+      "expectedIng": "Со кхерац"
+    },
+    {
+      "id": "ph_emotions_10_17kvspb",
+      "category": "emotions",
+      "ru": "Я злой",
+      "expectedIng": "Со къайра"
+    },
+    {
+      "id": "ph_emotions_11_n4u9ox",
+      "category": "emotions",
+      "ru": "Я спокоен",
+      "expectedIng": "Со лерда"
+    },
+    {
+      "id": "ph_emotions_12_1kypfee",
+      "category": "emotions",
+      "ru": "Я думаю",
+      "expectedIng": "Со ил еж"
+    },
+    {
+      "id": "ph_emotions_13_k6ilpo",
+      "category": "emotions",
+      "ru": "Я не знаю",
+      "expectedIng": "Сун хац"
+    },
+    {
+      "id": "ph_emotions_14_mjlgzn",
+      "category": "emotions",
+      "ru": "Мне нравится",
+      "expectedIng": "Сун хозхет"
+    },
+    {
+      "id": "ph_emotions_15_1n5ih0a",
+      "category": "emotions",
+      "ru": "Мне не нравится",
+      "expectedIng": "Сун му хозхет"
+    },
+    {
+      "id": "ph_emotions_16_zyx8oa",
+      "category": "emotions",
+      "ru": "Я хочу",
+      "expectedIng": "Со безам ба"
+    },
+    {
+      "id": "ph_emotions_17_1nra4ch",
+      "category": "emotions",
+      "ru": "Мне хочется",
+      "expectedIng": "Са безам ба"
+    },
+    {
+      "id": "ph_emotions_18_le6rzn",
+      "category": "emotions",
+      "ru": "Мне скучно",
+      "expectedIng": "Сун салат я"
+    },
+    {
+      "id": "ph_emotions_19_1f56crj",
+      "category": "emotions",
+      "ru": "Мне весело",
+      "expectedIng": "Са дог1ала"
+    },
+    {
+      "id": "ph_emotions_20_9b23rv",
+      "category": "emotions",
+      "ru": "Я сплю",
+      "expectedIng": "Со кхеташ ву"
+    },
+    {
+      "id": "ph_emotions_21_4k2n1o",
+      "category": "emotions",
+      "ru": "Я хочу спать",
+      "expectedIng": "Са кхеташ безам ба"
+    },
+    {
+      "id": "ph_emotions_22_1n1a9nn",
+      "category": "emotions",
+      "ru": "Я злюсь",
+      "expectedIng": "Со къайра йола"
+    },
+    {
+      "id": "f_1779833632674_mo1l",
+      "category": "food",
+      "ru": "Я хочу кушать",
+      "expectedIng": "Са йа1хьм яа1 безам ба"
+    },
+    {
+      "id": "f_1766024853692_c25j",
+      "category": "misc",
+      "ru": "Пожалуйста",
+      "expectedIng": "боккъала"
     }
   ]
 }

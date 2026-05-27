@@ -162,7 +162,7 @@
       "ru": "медведь",
       "pos": "noun",
       "forms": {
-        "base": "Доьх",
+        "base": "Чо",
         "dat": "ча"
       },
       "notes": "Habar sync"
@@ -2799,7 +2799,7 @@
       "ru": "далеко",
       "pos": "postposition",
       "forms": {
-        "base": "Долча",
+        "base": "Гяна",
         "dat": "гаьнна"
       },
       "notes": "Habar sync"
@@ -3669,7 +3669,7 @@
       "ru": "стена",
       "pos": "noun",
       "forms": {
-        "base": "Баг",
+        "base": "Пен",
         "dat": "пена"
       },
       "notes": "Habar sync"
@@ -5569,7 +5569,7 @@
       "ru": "налево",
       "pos": "adv",
       "forms": {
-        "base": "Чехьала",
+        "base": "Аьрдяхь",
         "dat": "аьрдехьа"
       },
       "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
