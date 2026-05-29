@@ -257,3 +257,6 @@
 {"id":"mod_1779564043086","createdAt":"2026-05-23T19:20:43.086Z","ru":"Жди здесь","proposedIng":"","reason":"missing_gemini_key","usedSource":"llm"}
 {"id":"mod_1779904270544","createdAt":"2026-05-27T17:51:10.544Z","ru":"я хочу чпать","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
 {"id":"mod_1779905744017","createdAt":"2026-05-27T18:15:44.017Z","ru":"я плакал","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1780041027116","createdAt":"2026-05-29T07:50:27.116Z","ru":"дикие животные","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1780041027144","createdAt":"2026-05-29T07:50:27.144Z","ru":"животные дикие","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1780041162267","createdAt":"2026-05-29T07:52:42.267Z","ru":"чпать хочу","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}

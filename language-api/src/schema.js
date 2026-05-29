@@ -62,6 +62,42 @@ function normalizeWordToken(token) {
   return t;
 }
 
+/** Варианты русского слова для поиска в Dosh (падежи, мн. ч., опечатка в 1 букве). */
+function tokenLookupVariants(token) {
+  const raw = normalizeText(token);
+  if (!raw) return [];
+
+  const variants = new Set([raw]);
+  const norm = normalizeWordToken(raw);
+  if (norm) variants.add(norm);
+
+  if (raw.endsWith("ие") && raw.length > 4) {
+    variants.add(`${raw.slice(0, -2)}ые`);
+    variants.add(`${raw.slice(0, -2)}ое`);
+  }
+  if (raw.endsWith("ые") && raw.length > 4) {
+    variants.add(`${raw.slice(0, -2)}ое`);
+  }
+
+  const morphRules = [
+    ["ие", "ий"], ["ые", "ое"], ["ая", "ий"], ["яя", "ий"],
+    ["ое", "ий"], ["ее", "ий"], ["ей", "ий"], ["ий", "ие"],
+    ["ого", "ий"], ["ому", "ий"], ["ых", "ий"], ["их", "ий"],
+    ["ами", ""], ["ями", ""], ["ов", ""], ["ев", ""]
+  ];
+
+  for (const src of [...variants]) {
+    if (src.length < 4) continue;
+    for (const [from, to] of morphRules) {
+      if (!src.endsWith(from) || src.length <= from.length + 2) continue;
+      const stem = src.slice(0, -from.length);
+      if (to) variants.add(stem + to);
+    }
+  }
+
+  return [...variants].filter(Boolean);
+}
+
 function tokenizeRu(text) {
   return normalizeText(text)
     .split(" ")
@@ -130,6 +166,7 @@ module.exports = {
   normalizePhraseKey,
   phraseLookupKeys,
   normalizeWordToken,
+  tokenLookupVariants,
   tokenizeRu,
   toWordRecord,
   toPhraseRecord,

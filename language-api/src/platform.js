@@ -7,6 +7,7 @@ const {
   normalizePhraseKey,
   phraseLookupKeys,
   tokenizeRu,
+  tokenLookupVariants,
   toWordRecord,
   toPhraseRecord,
   toColloquialPhraseRecord,
@@ -328,19 +329,75 @@ function findWordExact(ruText) {
   return state.words.find((w) => w.ruNorm === norm) || null;
 }
 
-function findWordForToken(token) {
+function scoreWordForTokenMatch(word, variant, allTokens, tokenIndex) {
+  let score = 0;
+  if (word.ruNorm === variant) score += 120;
+  if (Array.isArray(word.ruTokens) && word.ruTokens.includes(variant)) score += 80;
+  score -= Math.min((word.ruNorm || "").length, 40);
+
+  const neighbor = `${allTokens[tokenIndex + 1] || ""} ${allTokens[tokenIndex - 1] || ""}`.toLowerCase();
+  const ru = (word.ruNorm || "").toLowerCase();
+  if (ru.includes("о животном") && /живот|звер|скот|кот|соб|птиц|акха/.test(neighbor)) score += 45;
+  if (ru.includes("о растени") && /растен|цвет|дерев|трав|плод|фрукт/.test(neighbor)) score += 45;
+  return score;
+}
+
+function findWordForToken(token, context = {}) {
   if (!token) return null;
-  // Prefer exact normalized match first.
-  const exact = state.words.find((w) => w.ruNorm === token);
-  if (exact) return exact;
+  const { allTokens = [], tokenIndex = 0 } = context;
+  const variants = tokenLookupVariants(token);
+  let best = null;
+  let bestScore = -1;
 
-  // Then allow token match inside dictionary tokenization.
-  const byToken = state.words.filter((w) => Array.isArray(w.ruTokens) && w.ruTokens.includes(token));
-  if (!byToken.length) return null;
+  for (const variant of variants) {
+    const exact = state.words.find((w) => w.ruNorm === variant);
+    if (exact) {
+      const score = scoreWordForTokenMatch(exact, variant, allTokens, tokenIndex) + 10;
+      if (score > bestScore) {
+        best = exact;
+        bestScore = score;
+      }
+    }
 
-  // Prefer shorter entries (usually closer to a base lemma).
-  byToken.sort((a, b) => (a.ruNorm.length - b.ruNorm.length));
-  return byToken[0] || null;
+    const byToken = state.words.filter((w) => {
+      if (!Array.isArray(w.ruTokens) || !w.ruTokens.includes(variant)) return false;
+      if (variant.length < 5) return w.ruNorm === variant;
+      return true;
+    });
+    for (const word of byToken) {
+      const score = scoreWordForTokenMatch(word, variant, allTokens, tokenIndex);
+      if (score > bestScore) {
+        best = word;
+        bestScore = score;
+      }
+    }
+  }
+
+  if (best) return best;
+
+  if (token.length >= 5) {
+    let fuzzyBest = null;
+    let fuzzyScore = -1;
+    for (const word of state.words) {
+      const candidates = new Set([
+        (word.ruNorm || "").split(" ")[0],
+        ...(word.ruTokens || [])
+      ]);
+      for (const candidate of candidates) {
+        if (!candidate || candidate.length < 4) continue;
+        if (Math.abs(candidate.length - token.length) > 1) continue;
+        if (levenshteinAtMost(token, candidate, 1) > 1) continue;
+        const score = scoreWordForTokenMatch(word, candidate, allTokens, tokenIndex);
+        if (score > fuzzyScore) {
+          fuzzyScore = score;
+          fuzzyBest = word;
+        }
+      }
+    }
+    if (fuzzyBest) return fuzzyBest;
+  }
+
+  return null;
 }
 
 function pickBaseVariantFromWord(word) {
@@ -706,7 +763,7 @@ function composeFromDictionaryTokens(ruText) {
     return cannotInf;
   }
 
-  const tokens = tokenizeRu(ruText);
+  const tokens = normalizeText(ruText).split(" ").filter(Boolean);
   // Не склеивать «я иду в магазин» → az se =a тика — только отдельные слова без предлогов
   if (tokens.length > 3 || tokens.some((t) => RU_GLUE_STOPWORDS.has(t))) {
     return { ok: false, translation: "", covered: 0, total: tokens.length };
@@ -718,8 +775,9 @@ function composeFromDictionaryTokens(ruText) {
 
   const ingTokens = [];
   let covered = 0;
-  for (const token of tokens) {
-    const word = findWordForToken(token);
+  for (let i = 0; i < tokens.length; i += 1) {
+    const token = tokens[i];
+    const word = findWordForToken(token, { allTokens: tokens, tokenIndex: i });
     const firstVariant = pickBaseVariantFromWord(word);
     if (!firstVariant) continue;
     covered += 1;
@@ -974,7 +1032,59 @@ function findPhraseNearTypo(ruText, options = {}) {
       best = phrase;
     }
   }
-  return bestEdits === 1 ? best : null;
+  return bestEdits <= 2 ? best : null;
+}
+
+function findPhraseBagMatch(ruText, options = {}) {
+  const exclude = new Set((options.excludeSources || []).map((s) => s.toLowerCase()));
+  const words = normalizePhraseKey(ruText).split(" ").filter(Boolean);
+  if (words.length < 2 || words.length > 8) return null;
+
+  const targetKey = [...words].sort().join("|");
+  let best = null;
+  for (const phrase of state.phrases) {
+    if (!phraseSourceAllowed(phrase, exclude)) continue;
+    const phraseWords = (phrase.ruNorm || "").split(" ").filter(Boolean);
+    if (phraseWords.length !== words.length) continue;
+    if ([...phraseWords].sort().join("|") !== targetKey) continue;
+    best = pickBetterPhrase(best, phrase);
+  }
+  return best;
+}
+
+function findPhraseBagNearTypo(ruText, options = {}) {
+  const exclude = new Set((options.excludeSources || []).map((s) => s.toLowerCase()));
+  const words = normalizePhraseKey(ruText).split(" ").filter(Boolean);
+  if (words.length < 2 || words.length > 6) return null;
+
+  const sortedTarget = [...words].sort();
+  let best = null;
+  let bestEdits = 99;
+
+  for (const phrase of state.phrases) {
+    if (!phraseSourceAllowed(phrase, exclude)) continue;
+    const phraseWords = (phrase.ruNorm || "").split(" ").filter(Boolean);
+    if (phraseWords.length !== words.length) continue;
+
+    const sortedPhrase = [...phraseWords].sort();
+    let edits = 0;
+    for (let i = 0; i < sortedTarget.length; i += 1) {
+      const a = sortedTarget[i];
+      const b = sortedPhrase[i];
+      if (a === b) continue;
+      if (levenshteinAtMost(a, b, 1) <= 1) edits += 1;
+      else {
+        edits = 99;
+        break;
+      }
+    }
+    if (edits > 0 && edits < bestEdits) {
+      bestEdits = edits;
+      best = phrase;
+    }
+  }
+  const maxEdits = words.length <= 3 ? 1 : 2;
+  return bestEdits <= maxEdits ? best : null;
 }
 
 function validateIngText(ingText, ruText) {
@@ -1060,12 +1170,30 @@ async function translate(ruText, options = {}) {
   for (const variant of ruTry) {
     exactPhrase =
       findPhraseExact(variant, phraseOptions) ||
+      findPhraseBagMatch(variant, phraseOptions) ||
       findPhraseNearTypo(variant, phraseOptions) ||
+      findPhraseBagNearTypo(variant, phraseOptions) ||
       findPhraseBest(variant, phraseOptions);
     if (exactPhrase) break;
   }
   if (exactPhrase) {
     return phraseTranslateResult(exactPhrase);
+  }
+
+  // Короткие фразы из слов Dosh — до грамматики и LLM (быстрее, без таймаута)
+  const ruWordsEarly = normalizeText(ru).split(" ").filter(Boolean);
+  if (ruWordsEarly.length >= 2 && ruWordsEarly.length <= 4) {
+    const composedEarly = composeFromDictionaryTokens(ru);
+    if (composedEarly.ok) {
+      state.metrics.translateFromDosh += 1;
+      return {
+        ok: true,
+        translation: composedEarly.translation,
+        usedSource: SOURCE.DOSH,
+        confidence: 0.82,
+        fallbackUsed: true
+      };
+    }
   }
 
   const ruNormForRouting = ` ${normalizeText(ru)} `;
