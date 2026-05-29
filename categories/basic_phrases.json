@@ -462,6 +462,946 @@
       "ing": "ы",
       "pron": "w",
       "audio": "f_1766022575804_8k39.mp3"
+    },
+    {
+      "ru": "А ты откуда?",
+      "ing": "Хьо мичахьара ва / я?",
+      "pron": "khьo michakhьara va / ya?",
+      "id": "paydadosh_pd_1208",
+      "audio": "paydadosh_pd_1208.mp3"
+    },
+    {
+      "ru": "Большое спасибо за внимание и уважение!",
+      "ing": "Доккха баркал хилда хьона, сона теркам барах (со ларх1арах)!",
+      "pron": "dokkkha barkal khilda khьona, sona terkam barakh (so larkh1arakh)!",
+      "id": "paydadosh_pd_1214",
+      "audio": "paydadosh_pd_1214.mp3"
+    },
+    {
+      "ru": "В горах воздух свежий",
+      "ing": "Лоамашка ц1ена фо да",
+      "pron": "loamashka ts1ena fo da",
+      "id": "paydadosh_pd_1227",
+      "audio": "paydadosh_pd_1227.mp3"
+    },
+    {
+      "ru": "В свободное время я приду, если будет возможность",
+      "ing": "Мукъа ха йолча ханахьа, хьо волча воаг1аргва со, аьттув хуле",
+      "pron": "mukъa kha yolcha khanakhьa, khьo volcha voag1argva so, aьttuv khule",
+      "id": "paydadosh_pd_1223",
+      "audio": "paydadosh_pd_1223.mp3"
+    },
+    {
+      "ru": "Вежливая просьба подождать (буквально: «терпение сделаешь ли мне?",
+      "ing": "Сабр дергдарий Ӏа сона",
+      "pron": "sabr dergdariy ӏa sona",
+      "id": "paydadosh_pd_19955",
+      "audio": "paydadosh_pd_19955.mp3"
+    },
+    {
+      "ru": "Вежливая, развёрнутая форма благодарности (буквально: «тебе спасибо сказать хочу я",
+      "ing": "Хьона баркал ала ловра сона",
+      "pron": "khьona barkal ala lovra sona",
+      "id": "paydadosh_pd_19952",
+      "audio": "paydadosh_pd_19952.mp3"
+    },
+    {
+      "ru": "Вежливый вопрос-просьба о помощи (буквально: «помощь дашь ли мне?",
+      "ing": "Новкъостал деддарий Ӏа сона?",
+      "pron": "novkъostal deddariy ӏa sona?",
+      "id": "paydadosh_pd_19953",
+      "audio": "paydadosh_pd_19953.mp3"
+    },
+    {
+      "ru": "Вопрос о местонахождении знакомому. К мужчине — «Мича хиннав хьо?",
+      "ing": "Мича хиннав хьо?",
+      "pron": "micha khinnav khьo?",
+      "id": "paydadosh_pd_19942",
+      "audio": "paydadosh_pd_19942.mp3"
+    },
+    {
+      "ru": "Вопрос-укор при встрече после долгого перерыва. Дружеская реплика, не требует развернутого ответа",
+      "ing": "Дукха ха май йий хьо бӀарг ца гу",
+      "pron": "dukkha kha may yiy khьo bӏarg tsa gu",
+      "id": "paydadosh_pd_19943",
+      "audio": "paydadosh_pd_19943.mp3"
+    },
+    {
+      "ru": "Вы меня понимаете?",
+      "ing": "Хьо кхетий сох?",
+      "pron": "khьo kkhetiy sokh?",
+      "id": "paydadosh_pd_1345",
+      "audio": "paydadosh_pd_1345.mp3"
+    },
+    {
+      "ru": "Вы не понимаете",
+      "ing": "Шо кхетац",
+      "pron": "sho kkhetats",
+      "id": "paydadosh_pd_1244",
+      "audio": "paydadosh_pd_1244.mp3"
+    },
+    {
+      "ru": "Выражение тоски при расставании, к одному человеку. К нескольким — «Аз сагот дергда шоана",
+      "ing": "Аз сагот дергда хьона",
+      "pron": "az sagot dergda khьona",
+      "id": "paydadosh_pd_19935",
+      "audio": "paydadosh_pd_19935.mp3"
+    },
+    {
+      "ru": "Где вы изучаете ингушский язык?",
+      "ing": "ГIалгIай мотт мичахьа Iомабу Iа?",
+      "pron": "gialgiay mott michakhьa iomabu ia?",
+      "id": "paydadosh_pd_1355",
+      "audio": "paydadosh_pd_1355.mp3"
+    },
+    {
+      "ru": "Где я могу найти ее (его)?",
+      "ing": "Мича корайог1аргяр (коравог1аргвар)?",
+      "pron": "micha korayog1argyar (koravog1argvar)?",
+      "id": "paydadosh_pd_1362",
+      "audio": "paydadosh_pd_1362.mp3"
+    },
+    {
+      "ru": "Говори без намеков",
+      "ing": "Къодамаш ца беш дувцал",
+      "pron": "kъodamash tsa besh duvtsal",
+      "id": "paydadosh_pd_1211",
+      "audio": "paydadosh_pd_1211.mp3"
+    },
+    {
+      "ru": "Говорит ли он / она?",
+      "ing": "Оалий - хьог1 цо?",
+      "pron": "oaliy - khьog1 tso?",
+      "id": "paydadosh_pd_1194",
+      "audio": "paydadosh_pd_1194.mp3"
+    },
+    {
+      "ru": "Да пребудете вы на добром пути!",
+      "ing": "Дикача наькъа тӀа хилда шо",
+      "pron": "dikacha naьkъa tӏa khilda sho",
+      "id": "paydadosh_pd_679",
+      "audio": "paydadosh_pd_679.mp3"
+    },
+    {
+      "ru": "Да пребудешь ты на добром пути!",
+      "ing": "Дикача наькъа тӀа хилва (хийла) хьо",
+      "pron": "dikacha naьkъa tӏa khilva (khiyla) khьo",
+      "id": "paydadosh_pd_676",
+      "audio": "paydadosh_pd_676.mp3"
+    },
+    {
+      "ru": "Да, пожалуйста",
+      "ing": "Х1а, мегаргда",
+      "pron": "kh1a, megargda",
+      "id": "paydadosh_pd_1364",
+      "audio": "paydadosh_pd_1364.mp3"
+    },
+    {
+      "ru": "Давай помиримся",
+      "ing": "Та вай шиъ",
+      "pron": "ta vay shiъ",
+      "id": "paydadosh_pd_1326",
+      "audio": "paydadosh_pd_1326.mp3"
+    },
+    {
+      "ru": "Девочка поправила свою постель",
+      "ing": "ЙиIигас ший мотт дIанийсабар",
+      "pron": "yiiigas shiy mott dianiysabar",
+      "id": "paydadosh_pd_1239",
+      "audio": "paydadosh_pd_1239.mp3"
+    },
+    {
+      "ru": "Для меня это очень важно",
+      "ing": "Сона ч1оаг1а лоарх1аме х1ама да из",
+      "pron": "sona ch1oag1a loarkh1ame kh1ama da iz",
+      "id": "paydadosh_pd_1216",
+      "audio": "paydadosh_pd_1216.mp3"
+    },
+    {
+      "ru": "Доброе утро!",
+      "ing": "Iуйре дика хийла!",
+      "pron": "iuyre dika khiyla!",
+      "id": "paydadosh_pd_660",
+      "audio": "paydadosh_pd_660.mp3"
+    },
+    {
+      "ru": "Добрый вечер",
+      "ing": "Сайре дика хийла.",
+      "pron": "sayre dika khiyla.",
+      "id": "paydadosh_pd_701",
+      "audio": "paydadosh_pd_701.mp3"
+    },
+    {
+      "ru": "Дружеское пожелание при прощании, призывает поддерживать связь. Часто говорят давнему другу или родственнику",
+      "ing": "Вайна дӀамавалалахь",
+      "pron": "vayna dӏamavalalakhь",
+      "id": "paydadosh_pd_19934",
+      "audio": "paydadosh_pd_19934.mp3"
+    },
+    {
+      "ru": "Если Бог даст (дословно: если Бог сказал)",
+      "ing": "Дала аьннадале",
+      "pron": "dala aьnnadale",
+      "id": "paydadosh_pd_410",
+      "audio": "paydadosh_pd_410.mp3"
+    },
+    {
+      "ru": "Если не затруднит, скажите, пожалуйста, где (когда, кто, как)?",
+      "ing": "Хала деций, ала сога мичахьа (маца, мала, мишта)",
+      "pron": "khala detsiy, ala soga michakhьa (matsa, mala, mishta)",
+      "id": "paydadosh_pd_1361",
+      "audio": "paydadosh_pd_1361.mp3"
+    },
+    {
+      "ru": "Если сможете, постарайтесь прийти пораньше",
+      "ing": "Хьай вIаштIехьдоале, хьалхагIа хьавола (хьайола, хьадувла) хьажалахь",
+      "pron": "khьay viashtiekhьdoale, khьalkhagia khьavola (khьayola, khьaduvla) khьazhalakhь",
+      "id": "paydadosh_pd_1339",
+      "audio": "paydadosh_pd_1339.mp3"
+    },
+    {
+      "ru": "Здоровья ему/ей/им!",
+      "ing": "Моаршал хилда цунна/царна",
+      "pron": "moarshal khilda tsunna/tsarna",
+      "id": "paydadosh_pd_671",
+      "audio": "paydadosh_pd_671.mp3"
+    },
+    {
+      "ru": "Здоровья тебе/вам!",
+      "ing": "Моаршал хилда хьона/шоана",
+      "pron": "moarshal khilda khьona/shoana",
+      "id": "paydadosh_pd_670",
+      "audio": "paydadosh_pd_670.mp3"
+    },
+    {
+      "ru": "И тебе доброго вечера",
+      "ing": "Хьа а хийла сайре дика",
+      "pron": "khьa a khiyla sayre dika",
+      "id": "paydadosh_pd_1236",
+      "audio": "paydadosh_pd_1236.mp3"
+    },
+    {
+      "ru": "И тебе доброго дня",
+      "ing": "Хьа а хийла ди дика",
+      "pron": "khьa a khiyla di dika",
+      "id": "paydadosh_pd_1237",
+      "audio": "paydadosh_pd_1237.mp3"
+    },
+    {
+      "ru": "И тебе доброго утра",
+      "ing": "Хьа а хийла 1уйре дика",
+      "pron": "khьa a khiyla 1uyre dika",
+      "id": "paydadosh_pd_1238",
+      "audio": "paydadosh_pd_1238.mp3"
+    },
+    {
+      "ru": "К сожалению, нет / нельзя",
+      "ing": "Халахете а, йиш яц",
+      "pron": "khalakhete a, yish yats",
+      "id": "paydadosh_pd_1365",
+      "audio": "paydadosh_pd_1365.mp3"
+    },
+    {
+      "ru": "Как все прошло?",
+      "ing": "Мишта д1адахар деррига?",
+      "pron": "mishta d1adakhar derriga?",
+      "id": "paydadosh_pd_1199",
+      "audio": "paydadosh_pd_1199.mp3"
+    },
+    {
+      "ru": "Как вы произнесете это слово?",
+      "ing": "Из дош мишта аргдар Iа?",
+      "pron": "iz dosh mishta argdar ia?",
+      "id": "paydadosh_pd_1347",
+      "audio": "paydadosh_pd_1347.mp3"
+    },
+    {
+      "ru": "Как вы скажете это по-ингушски?",
+      "ing": "ГIалгIай метта мишта аргда Iа из?",
+      "pron": "gialgiay metta mishta argda ia iz?",
+      "id": "paydadosh_pd_1351",
+      "audio": "paydadosh_pd_1351.mp3"
+    },
+    {
+      "ru": "Как он много вопросов задавал",
+      "ing": "Ма дукха хаттараш телар цо",
+      "pron": "ma dukkha khattarash telar tso",
+      "id": "paydadosh_pd_1249",
+      "audio": "paydadosh_pd_1249.mp3"
+    },
+    {
+      "ru": "Как тебе погода сегодня?",
+      "ing": "Мишта хет хьона таханара хаоттам?",
+      "pron": "mishta khet khьona takhanara khaottam?",
+      "id": "paydadosh_pd_1225",
+      "audio": "paydadosh_pd_1225.mp3"
+    },
+    {
+      "ru": "Как тебя зовут?",
+      "ing": "ЦIи мишта я хьа?",
+      "pron": "tsii mishta ya khьa?",
+      "id": "paydadosh_pd_1531",
+      "audio": "paydadosh_pd_1531.mp3"
+    },
+    {
+      "ru": "Как часто употребляется это слово в речи?",
+      "ing": "Къамаьла юкъе мел дукха леладу из дош?",
+      "pron": "kъamaьla yukъe mel dukkha leladu iz dosh?",
+      "id": "paydadosh_pd_1350",
+      "audio": "paydadosh_pd_1350.mp3"
+    },
+    {
+      "ru": "Какого цвета это платье / рубашка?",
+      "ing": "Малаг1ча беса я из коч?",
+      "pron": "malag1cha besa ya iz koch?",
+      "id": "paydadosh_pd_1192",
+      "audio": "paydadosh_pd_1192.mp3"
+    },
+    {
+      "ru": "Когда мы встретимся?",
+      "ing": "Вай в1ашаг1 маца кхет?",
+      "pron": "vay v1ashag1 matsa kkhet?",
+      "id": "paydadosh_pd_1190",
+      "audio": "paydadosh_pd_1190.mp3"
+    },
+    {
+      "ru": "Когда мы могли бы с вами встретиться?",
+      "ing": "Маца вIашагIкхета вIаштIехьдаргда вай?",
+      "pron": "matsa viashagikkheta viashtiekhьdargda vay?",
+      "id": "paydadosh_pd_1336",
+      "audio": "paydadosh_pd_1336.mp3"
+    },
+    {
+      "ru": "Который час?",
+      "ing": "Масса сахьат даьннад?",
+      "pron": "massa sakhьat daьnnad?",
+      "id": "paydadosh_pd_1231",
+      "audio": "paydadosh_pd_1231.mp3"
+    },
+    {
+      "ru": "Краткий вопрос о здоровье/самочувствии. Ответ: «дика да",
+      "ing": "Магар миштад?",
+      "pron": "magar mishtad?",
+      "id": "paydadosh_pd_19941",
+      "audio": "paydadosh_pd_19941.mp3"
+    },
+    {
+      "ru": "Лечить",
+      "ing": "Дарба де",
+      "pron": "darba de",
+      "id": "paydadosh_pd_1252",
+      "audio": "paydadosh_pd_1252.mp3"
+    },
+    {
+      "ru": "Мама делает оладьи (пустышки)",
+      "ing": "Нана локъамаш еш йоал",
+      "pron": "nana lokъamash esh yoal",
+      "id": "paydadosh_pd_1206",
+      "audio": "paydadosh_pd_1206.mp3"
+    },
+    {
+      "ru": "Мама научила сына говорить",
+      "ing": "Нанас ший кIаьнка мотт Iомабар",
+      "pron": "nanas shiy kiaьnka mott iomabar",
+      "id": "paydadosh_pd_1240",
+      "audio": "paydadosh_pd_1240.mp3"
+    },
+    {
+      "ru": "Мне бы хотелось с вами поговорить",
+      "ing": "Хьоца къамаьл дувца безам бар са",
+      "pron": "khьotsa kъamaьl duvtsa bezam bar sa",
+      "id": "paydadosh_pd_1332",
+      "audio": "paydadosh_pd_1332.mp3"
+    },
+    {
+      "ru": "Мне надоело это",
+      "ing": "сона кӀордадаьд ер",
+      "pron": "sona kӏordadaьd er",
+      "id": "paydadosh_pd_20199",
+      "audio": "paydadosh_pd_20199.mp3"
+    },
+    {
+      "ru": "Мне не страшно",
+      "ing": "Со кхерац",
+      "pron": "so kkherats",
+      "id": "paydadosh_pd_1323",
+      "audio": "paydadosh_pd_1323.mp3"
+    },
+    {
+      "ru": "Мне нравится, когда идет дождь",
+      "ing": "Сона дог1а делхача (доаг1ача) ханахьа хоза хет",
+      "pron": "sona dog1a delkhacha (doag1acha) khanakhьa khoza khet",
+      "id": "paydadosh_pd_1226",
+      "audio": "paydadosh_pd_1226.mp3"
+    },
+    {
+      "ru": "Можно ли примерить?",
+      "ing": "Т1айийха хьажа мегаргвий?",
+      "pron": "t1ayiykha khьazha megargviy?",
+      "id": "paydadosh_pd_1234",
+      "audio": "paydadosh_pd_1234.mp3"
+    },
+    {
+      "ru": "Можно сказать по-другому?",
+      "ing": "Кхыча тайпара ала йиш йий?",
+      "pron": "kkhycha taypara ala yish yiy?",
+      "id": "paydadosh_pd_1352",
+      "audio": "paydadosh_pd_1352.mp3"
+    },
+    {
+      "ru": "Мой руки с мылом",
+      "ing": "Кулгаш сапаца дила",
+      "pron": "kulgash sapatsa dila",
+      "id": "paydadosh_pd_22388",
+      "audio": "paydadosh_pd_22388.mp3"
+    },
+    {
+      "ru": "Мы не понимаем",
+      "ing": "Тхо / вай кхетац",
+      "pron": "tkho / vay kkhetats",
+      "id": "paydadosh_pd_1246",
+      "audio": "paydadosh_pd_1246.mp3"
+    },
+    {
+      "ru": "Не за что",
+      "ing": "Доккха х1ама дацар из",
+      "pron": "dokkkha kh1ama datsar iz",
+      "id": "paydadosh_pd_1359",
+      "audio": "paydadosh_pd_1359.mp3"
+    },
+    {
+      "ru": "Не забывайте нас",
+      "ing": "Тхо диц ма де",
+      "pron": "tkho dits ma de",
+      "id": "paydadosh_pd_1318",
+      "audio": "paydadosh_pd_1318.mp3"
+    },
+    {
+      "ru": "Не опаздывайте",
+      "ing": "Т1ехьа ма дисалаш",
+      "pron": "t1ekhьa ma disalash",
+      "id": "paydadosh_pd_1219",
+      "audio": "paydadosh_pd_1219.mp3"
+    },
+    {
+      "ru": "Не переживай, все будет хорошо!",
+      "ing": "Сагот ма де, деррига дика хургда!",
+      "pron": "sagot ma de, derriga dika khurgda!",
+      "id": "paydadosh_pd_1202",
+      "audio": "paydadosh_pd_1202.mp3"
+    },
+    {
+      "ru": "Не разочаруйся в своей работе!",
+      "ing": "Хьай белха дог ма эккхалахь",
+      "pron": "khьay belkha dog ma ekkkhalakhь",
+      "id": "paydadosh_pd_1201",
+      "audio": "paydadosh_pd_1201.mp3"
+    },
+    {
+      "ru": "Не хитри / не проворачивай махинации",
+      "ing": "Киловзал ма лелае",
+      "pron": "kilovzal ma lelae",
+      "id": "paydadosh_pd_1191",
+      "audio": "paydadosh_pd_1191.mp3"
+    },
+    {
+      "ru": "Неформальная форма прощания между друзьями, близкими (буквально: «глазами увидимся ещё",
+      "ing": "БӀаргагургда вай",
+      "pron": "bӏargagurgda vay",
+      "id": "paydadosh_pd_19933",
+      "audio": "paydadosh_pd_19933.mp3"
+    },
+    {
+      "ru": "Неформальный вопрос знакомому при встрече. Стандартный ответ — «Керда хӀама дац",
+      "ing": "Керда хӀама дий цига?",
+      "pron": "kerda khӏama diy tsiga?",
+      "id": "paydadosh_pd_19940",
+      "audio": "paydadosh_pd_19940.mp3"
+    },
+    {
+      "ru": "Он (она) мне безразличен",
+      "ing": "Сона бе-башха вац (яц) из",
+      "pron": "sona be-bashkha vats (yats) iz",
+      "id": "paydadosh_pd_1313",
+      "audio": "paydadosh_pd_1313.mp3"
+    },
+    {
+      "ru": "Он / она не понимает",
+      "ing": "Из кхетац",
+      "pron": "iz kkhetats",
+      "id": "paydadosh_pd_1243",
+      "audio": "paydadosh_pd_1243.mp3"
+    },
+    {
+      "ru": "Он всегда бывает недоволен",
+      "ing": "Из ц1аккъа раьза хилац",
+      "pron": "iz ts1akkъa raьza khilats",
+      "id": "paydadosh_pd_1195",
+      "audio": "paydadosh_pd_1195.mp3"
+    },
+    {
+      "ru": "Он жалуется",
+      "ing": "Латкъаш ва из",
+      "pron": "latkъash va iz",
+      "id": "paydadosh_pd_1210",
+      "audio": "paydadosh_pd_1210.mp3"
+    },
+    {
+      "ru": "Он мне сказал",
+      "ing": "Цо сога аьннад",
+      "pron": "tso soga aьnnad",
+      "id": "paydadosh_pd_1251",
+      "audio": "paydadosh_pd_1251.mp3"
+    },
+    {
+      "ru": "Он пишет жалобу",
+      "ing": "Из лоткъам язбеш ва",
+      "pron": "iz lotkъam yazbesh va",
+      "id": "paydadosh_pd_1207",
+      "audio": "paydadosh_pd_1207.mp3"
+    },
+    {
+      "ru": "Они не понимают",
+      "ing": "Уж кхетац",
+      "pron": "uzh kkhetats",
+      "id": "paydadosh_pd_1247",
+      "audio": "paydadosh_pd_1247.mp3"
+    },
+    {
+      "ru": "Оставь меня в покое (говорит мужчина) / оставь меня в покое (говорит женщина)",
+      "ing": "паргIата витал со / паргIата йитал со",
+      "pron": "pargiata vital so / pargiata yital so",
+      "id": "paydadosh_pd_6422",
+      "audio": "paydadosh_pd_6422.mp3"
+    },
+    {
+      "ru": "Переведите это предложение на ингушский (русский) язык",
+      "ing": "Цу предложенена гIалгIай (эрсий) метта таржам дел",
+      "pron": "tsu predlozhenena gialgiay (ersiy) metta tarzham del",
+      "id": "paydadosh_pd_1349",
+      "audio": "paydadosh_pd_1349.mp3"
+    },
+    {
+      "ru": "Поближе покажите мне",
+      "ing": "Йистег1а хьахьокха сога",
+      "pron": "yisteg1a khьakhьokkha soga",
+      "id": "paydadosh_pd_1235",
+      "audio": "paydadosh_pd_1235.mp3"
+    },
+    {
+      "ru": "Подай тарелку",
+      "ing": "Оаркхилг хьакховдаде",
+      "pron": "oarkkhilg khьakkhovdade",
+      "id": "paydadosh_pd_1212",
+      "audio": "paydadosh_pd_1212.mp3"
+    },
+    {
+      "ru": "Подскажите, если не трудно",
+      "ing": "Хьаал сога, хала деце",
+      "pron": "khьaal soga, khala detse",
+      "id": "paydadosh_pd_1991",
+      "audio": "paydadosh_pd_1991.mp3"
+    },
+    {
+      "ru": "Пожалуйста, говорите медленнее",
+      "ing": "КIезига шортагIа дувцал",
+      "pron": "kieziga shortagia duvtsal",
+      "id": "paydadosh_pd_1342",
+      "audio": "paydadosh_pd_1342.mp3"
+    },
+    {
+      "ru": "Пожалуйста, спрашивайте",
+      "ing": "Хьахаттал",
+      "pron": "khьakhattal",
+      "id": "paydadosh_pd_1354",
+      "audio": "paydadosh_pd_1354.mp3"
+    },
+    {
+      "ru": "Позвольте спросить",
+      "ing": "Хатта мегаргдий...",
+      "pron": "khatta megargdiy...",
+      "id": "paydadosh_pd_1360",
+      "audio": "paydadosh_pd_1360.mp3"
+    },
+    {
+      "ru": "Понимаю, не стесняйтесь",
+      "ing": "Кхет, эхь ма хеталахь",
+      "pron": "kkhet, ekhь ma khetalakhь",
+      "id": "paydadosh_pd_1346",
+      "audio": "paydadosh_pd_1346.mp3"
+    },
+    {
+      "ru": "Поторопитесь",
+      "ing": "Сихлелаш",
+      "pron": "sikhlelash",
+      "id": "paydadosh_pd_1222",
+      "audio": "paydadosh_pd_1222.mp3"
+    },
+    {
+      "ru": "Почему ты не идешь завтра на учебу?",
+      "ing": "Х1ана яг1ац хьо кхоана деша?",
+      "pron": "kh1ana yag1ats khьo kkhoana desha?",
+      "id": "paydadosh_pd_1241",
+      "audio": "paydadosh_pd_1241.mp3"
+    },
+    {
+      "ru": "Поэтому / по этой причине",
+      "ing": "Из бахьан долаш",
+      "pron": "iz bakhьan dolash",
+      "id": "paydadosh_pd_1204",
+      "audio": "paydadosh_pd_1204.mp3"
+    },
+    {
+      "ru": "Просьба разрешения войти в помещение, к мужчине. К женщине — «Чуяла мегаргйий?",
+      "ing": "Чувала мегаргвий?",
+      "pron": "chuvala megargviy?",
+      "id": "paydadosh_pd_19954",
+      "audio": "paydadosh_pd_19954.mp3"
+    },
+    {
+      "ru": "Прощание, которое говорит тот, кто уходит. Часть устоявшегося ингушского этикета прощания: уходящий — «Ӏадика хийла",
+      "ing": "Ӏадика хийла",
+      "pron": "ӏadika khiyla",
+      "id": "paydadosh_pd_19931",
+      "audio": "paydadosh_pd_19931.mp3"
+    },
+    {
+      "ru": "Пусть ваш путь будет добрым!",
+      "ing": "Никъ дика хилба шун",
+      "pron": "nikъ dika khilba shun",
+      "id": "paydadosh_pd_680",
+      "audio": "paydadosh_pd_680.mp3"
+    },
+    {
+      "ru": "Пусть Всевышний одарит его/её/их здоровьем!",
+      "ing": "Дала моаршал лулда цунна/царна",
+      "pron": "dala moarshal lulda tsunna/tsarna",
+      "id": "paydadosh_pd_673",
+      "audio": "paydadosh_pd_673.mp3"
+    },
+    {
+      "ru": "Пусть Всевышний одарит тебя здоровьем!",
+      "ing": "Дала моаршал лулда хьона",
+      "pron": "dala moarshal lulda khьona",
+      "id": "paydadosh_pd_672",
+      "audio": "paydadosh_pd_672.mp3"
+    },
+    {
+      "ru": "Пусть Всевышний сделает ваш путь добрым!",
+      "ing": "Дала дикача наькъа тӀа долда шо",
+      "pron": "dala dikacha naьkъa tӏa dolda sho",
+      "id": "paydadosh_pd_681",
+      "audio": "paydadosh_pd_681.mp3"
+    },
+    {
+      "ru": "Пусть Всевышний сделает твой путь добрым!",
+      "ing": "Дала дикача наькъа тӀа волва (йойла) хьо",
+      "pron": "dala dikacha naьkъa tӏa volva (yoyla) khьo",
+      "id": "paydadosh_pd_678",
+      "audio": "paydadosh_pd_678.mp3"
+    },
+    {
+      "ru": "Пусть твой путь будет добрым!",
+      "ing": "Никъ дика хилба хьа",
+      "pron": "nikъ dika khilba khьa",
+      "id": "paydadosh_pd_677",
+      "audio": "paydadosh_pd_677.mp3"
+    },
+    {
+      "ru": "Развёрнутая, эмоциональная форма благодарности (буквально: «я от сердца спасибо говорю тебе",
+      "ing": "Аз дег тӀара баркал оал хьога",
+      "pron": "az deg tӏara barkal oal khьoga",
+      "id": "paydadosh_pd_19951",
+      "audio": "paydadosh_pd_19951.mp3"
+    },
+    {
+      "ru": "Расскажи мне подробно",
+      "ing": "Ма дарра дувцал сога",
+      "pron": "ma darra duvtsal soga",
+      "id": "paydadosh_pd_1205",
+      "audio": "paydadosh_pd_1205.mp3"
+    },
+    {
+      "ru": "Самая короткая и употребимая форма благодарности. В развёрнутой форме — «Баркал хилда хьона",
+      "ing": "Баркал",
+      "pron": "barkal",
+      "id": "paydadosh_pd_19949",
+      "audio": "paydadosh_pd_19949.mp3"
+    },
+    {
+      "ru": "Сколько времени?",
+      "ing": "Фу ха яьннай? / Мел ха яьннай",
+      "pron": "fu kha yaьnnay? / mel kha yaьnnay",
+      "id": "paydadosh_pd_1230",
+      "audio": "paydadosh_pd_1230.mp3"
+    },
+    {
+      "ru": "Сколько стоит?",
+      "ing": "Фу доаккх укхох? / фу дех укхох?",
+      "pron": "fu doakkkh ukkhokh? / fu dekh ukkhokh?",
+      "id": "paydadosh_pd_1233",
+      "audio": "paydadosh_pd_1233.mp3"
+    },
+    {
+      "ru": "Смягчающая формула при просьбе (буквально: «тебе если не трудно",
+      "ing": "Хьайна хала деце",
+      "pron": "khьayna khala detse",
+      "id": "paydadosh_pd_19956",
+      "audio": "paydadosh_pd_19956.mp3"
+    },
+    {
+      "ru": "Спасибо за подарок!",
+      "ing": "Баркал хьона совг1ат даларах!",
+      "pron": "barkal khьona sovg1at dalarakh!",
+      "id": "paydadosh_pd_1215",
+      "audio": "paydadosh_pd_1215.mp3"
+    },
+    {
+      "ru": "Спасибо за прекрасный подарок",
+      "ing": "Баркала 1а деннача хоза совг1ата",
+      "pron": "barkala 1a dennacha khoza sovg1ata",
+      "id": "paydadosh_pd_1358",
+      "audio": "paydadosh_pd_1358.mp3"
+    },
+    {
+      "ru": "Спокойной ночи (доброй ночи)",
+      "ing": "бийса даькъала хийла",
+      "pron": "biysa daьkъala khiyla",
+      "id": "paydadosh_pd_699",
+      "audio": "paydadosh_pd_699.mp3"
+    },
+    {
+      "ru": "Стандартный ответ на вопрос «как дела",
+      "ing": "Шедар дика да",
+      "pron": "shedar dika da",
+      "id": "paydadosh_pd_19944",
+      "audio": "paydadosh_pd_19944.mp3"
+    },
+    {
+      "ru": "Стандартный ответ на вопрос «что нового?",
+      "ing": "Керда хӀама дац",
+      "pron": "kerda khӏama dats",
+      "id": "paydadosh_pd_19945",
+      "audio": "paydadosh_pd_19945.mp3"
+    },
+    {
+      "ru": "Тут можно курить?",
+      "ing": "Укхаза г1али увза йиш йий?",
+      "pron": "ukkhaza g1ali uvza yish yiy?",
+      "id": "paydadosh_pd_1363",
+      "audio": "paydadosh_pd_1363.mp3"
+    },
+    {
+      "ru": "Ты ему ответил(а)?",
+      "ing": "1а цунна жоп деннадий?",
+      "pron": "1a tsunna zhop dennadiy?",
+      "id": "paydadosh_pd_1229",
+      "audio": "paydadosh_pd_1229.mp3"
+    },
+    {
+      "ru": "Ты не понимаешь",
+      "ing": "Хьо кхетац",
+      "pron": "khьo kkhetats",
+      "id": "paydadosh_pd_1245",
+      "audio": "paydadosh_pd_1245.mp3"
+    },
+    {
+      "ru": "У меня к вам вопрос",
+      "ing": "Цхьа хаттар дар са хьога",
+      "pron": "tskhьa khattar dar sa khьoga",
+      "id": "paydadosh_pd_1353",
+      "audio": "paydadosh_pd_1353.mp3"
+    },
+    {
+      "ru": "У меня нет времени",
+      "ing": "Сога ха яц",
+      "pron": "soga kha yats",
+      "id": "paydadosh_pd_1221",
+      "audio": "paydadosh_pd_1221.mp3"
+    },
+    {
+      "ru": "У тебя есть с ним связь / контакт?",
+      "ing": "Цунца бувзам бий хьа?",
+      "pron": "tsuntsa buvzam biy khьa?",
+      "id": "paydadosh_pd_1193",
+      "audio": "paydadosh_pd_1193.mp3"
+    },
+    {
+      "ru": "Уйди, отойди, отстань (по отношению к женщине)",
+      "ing": "дӀаяла",
+      "pron": "dӏayala",
+      "id": "paydadosh_pd_6421",
+      "audio": "paydadosh_pd_6421.mp3"
+    },
+    {
+      "ru": "Уйди, отойди, отстань (по отношению к мужчине)",
+      "ing": "дӀавала",
+      "pron": "dӏavala",
+      "id": "paydadosh_pd_6420",
+      "audio": "paydadosh_pd_6420.mp3"
+    },
+    {
+      "ru": "Чем ты расстроен (расстроена)?",
+      "ing": "Сево дохадаьд хьа дог?",
+      "pron": "sevo dokhadaьd khьa dog?",
+      "id": "paydadosh_pd_1324",
+      "audio": "paydadosh_pd_1324.mp3"
+    },
+    {
+      "ru": "Что здесь происходит?",
+      "ing": "Фуд укхаза доалар?",
+      "pron": "fud ukkhaza doalar?",
+      "id": "paydadosh_pd_1198",
+      "audio": "paydadosh_pd_1198.mp3"
+    },
+    {
+      "ru": "Что означает это слово?",
+      "ing": "Цу деша фу маIан да?",
+      "pron": "tsu desha fu maian da?",
+      "id": "paydadosh_pd_1348",
+      "audio": "paydadosh_pd_1348.mp3"
+    },
+    {
+      "ru": "Что случилось / в чем дело?",
+      "ing": "Фу хиннад?",
+      "pron": "fu khinnad?",
+      "id": "paydadosh_pd_1197",
+      "audio": "paydadosh_pd_1197.mp3"
+    },
+    {
+      "ru": "Что-то наш друг пропал в последние дни",
+      "ing": "Вай шинне доттаг1а вайна д1а ма ваьннавий, т1еххьарча деношка",
+      "pron": "vay shinne dottag1a vayna d1a ma vaьnnaviy, t1ekhkhьarcha denoshka",
+      "id": "paydadosh_pd_1224",
+      "audio": "paydadosh_pd_1224.mp3"
+    },
+    {
+      "ru": "Это очень известная книга",
+      "ing": "Ч1оаг1а ц1ихеза кинижка да ер",
+      "pron": "ch1oag1a ts1ikheza kinizhka da er",
+      "id": "paydadosh_pd_1232",
+      "audio": "paydadosh_pd_1232.mp3"
+    },
+    {
+      "ru": "Это серьезный разговор",
+      "ing": "ЦIенхашта къамаьл да ер",
+      "pron": "tsienkhashta kъamaьl da er",
+      "id": "paydadosh_pd_1253",
+      "audio": "paydadosh_pd_1253.mp3"
+    },
+    {
+      "ru": "Это случается редко",
+      "ing": "Наггахьа хулаш х1ама да из",
+      "pron": "naggakhьa khulash kh1ama da iz",
+      "id": "paydadosh_pd_1250",
+      "audio": "paydadosh_pd_1250.mp3"
+    },
+    {
+      "ru": "Я буду вовремя",
+      "ing": "Со сай ханахьа хургва",
+      "pron": "so say khanakhьa khurgva",
+      "id": "paydadosh_pd_1220",
+      "audio": "paydadosh_pd_1220.mp3"
+    },
+    {
+      "ru": "Я был занят последние две недели",
+      "ing": "Т1еххьара шин к1ира мукъа вацар со",
+      "pron": "t1ekhkhьara shin k1ira mukъa vatsar so",
+      "id": "paydadosh_pd_1228",
+      "audio": "paydadosh_pd_1228.mp3"
+    },
+    {
+      "ru": "Я вас не понял (не поняла)",
+      "ing": "Со хьох кхийтанзар",
+      "pron": "so khьokh kkhiytanzar",
+      "id": "paydadosh_pd_1340",
+      "audio": "paydadosh_pd_1340.mp3"
+    },
+    {
+      "ru": "Я надеюсь",
+      "ing": "Догдоах аз",
+      "pron": "dogdoakh az",
+      "id": "paydadosh_pd_1248",
+      "audio": "paydadosh_pd_1248.mp3"
+    },
+    {
+      "ru": "Я не задержу вас долго",
+      "ing": "Аз дукха гоавергвац хьо",
+      "pron": "az dukkha goavergvats khьo",
+      "id": "paydadosh_pd_1334",
+      "audio": "paydadosh_pd_1334.mp3"
+    },
+    {
+      "ru": "Я не задержу тебя надолго",
+      "ing": "Аз дукха гоавергвац (гоаергъяц) хьо",
+      "pron": "az dukkha goavergvats (goaergъyats) khьo",
+      "id": "paydadosh_pd_1217",
+      "audio": "paydadosh_pd_1217.mp3"
+    },
+    {
+      "ru": "Я не люблю его (ее)",
+      "ing": "Сона везац (езац) из",
+      "pron": "sona vezats (ezats) iz",
+      "id": "paydadosh_pd_1309",
+      "audio": "paydadosh_pd_1309.mp3"
+    },
+    {
+      "ru": "Я не понимаю",
+      "ing": "Со кхетац",
+      "pron": "so kkhetats",
+      "id": "paydadosh_pd_1242",
+      "audio": "paydadosh_pd_1242.mp3"
+    },
+    {
+      "ru": "Я никогда там не был",
+      "ing": "Ц1аккха а хиннавац со цига",
+      "pron": "ts1akkkha a khinnavats so tsiga",
+      "id": "paydadosh_pd_1209",
+      "audio": "paydadosh_pd_1209.mp3"
+    },
+    {
+      "ru": "Я никогда этого не говорил(а)",
+      "ing": "Аз цIаккха а аьннадац из",
+      "pron": "az tsiakkkha a aьnnadats iz",
+      "id": "paydadosh_pd_1203",
+      "audio": "paydadosh_pd_1203.mp3"
+    },
+    {
+      "ru": "Я плохо говорю по-ингушски и не всё понимаю",
+      "ing": "Аз гIалгIай мотт дика бувцац, дерриганех кхета а кхетац",
+      "pron": "az gialgiay mott dika buvtsats, derriganekh kkheta a kkhetats",
+      "id": "paydadosh_pd_1344",
+      "audio": "paydadosh_pd_1344.mp3"
+    },
+    {
+      "ru": "Я правильно тебя поняла?",
+      "ing": "Со нийса кхийттарий хьох?",
+      "pron": "so niysa kkhiyttariy khьokh?",
+      "id": "paydadosh_pd_1200",
+      "audio": "paydadosh_pd_1200.mp3"
+    },
+    {
+      "ru": "Я рада (рад) нашему знакомству",
+      "ing": "Сона дика хет вай дайза",
+      "pron": "sona dika khet vay dayza",
+      "id": "paydadosh_pd_1315",
+      "audio": "paydadosh_pd_1315.mp3"
+    },
+    {
+      "ru": "Я самостоятельно изучаю ингушский язык",
+      "ing": "Аз айса Iомабу гIалгIай мотт",
+      "pron": "az aysa iomabu gialgiay mott",
+      "id": "paydadosh_pd_1343",
+      "audio": "paydadosh_pd_1343.mp3"
+    },
+    {
+      "ru": "Я собираюсь покататься на качелях",
+      "ing": "Бурчолгах хоахкале воал со",
+      "pron": "burcholgakh khoakhkale voal so",
+      "id": "paydadosh_pd_1218",
+      "audio": "paydadosh_pd_1218.mp3"
     }
-  ]
+  ],
+  "version": 1,
+  "itemCount": 200
 }
