@@ -1435,8 +1435,29 @@
       "ing": "ала",
       "pron": "ala",
       "audio": "f_1780043837990_mnlr.mp3"
+    },
+    {
+      "ru": "Я хотел(а) бы задать вам несколько вопросов",
+      "ing": "Цхьа масехк хаттар дар са хьога",
+      "pron": "tskhьa masekhk khattar dar sa khьoga",
+      "id": "paydadosh_pd_1335",
+      "audio": "paydadosh_pd_1335.mp3"
+    },
+    {
+      "ru": "Я хочу попить воды",
+      "ing": "Хий мал дог эттад са",
+      "pron": "khiy mal dog ettad sa",
+      "id": "paydadosh_pd_350",
+      "audio": "paydadosh_pd_350.mp3"
+    },
+    {
+      "ru": "Я часто хожу к тете (дяци - тетя по отцу)",
+      "ing": "Каст-каста ух со даьци йолча",
+      "pron": "kast-kasta ukh so daьtsi yolcha",
+      "id": "paydadosh_pd_1196",
+      "audio": "paydadosh_pd_1196.mp3"
     }
   ],
-  "version": 4,
-  "itemCount": 205
+  "version": 5,
+  "itemCount": 208
 }

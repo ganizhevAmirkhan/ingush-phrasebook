@@ -364,6 +364,43 @@
       "ing": "Мелла дех 1ажашт?",
       "pron": "mella dekh 1azhasht?",
       "audio": "f_1779906038312_w59s.mp3"
+    },
+    {
+      "ru": "Алхьам Ӏодеша",
+      "ing": "Прочти «АлхьамдулиллахӀ» (Почетное пожелание завершить трапезу с восхвалением (благодарением) Аллаха)",
+      "pron": "prochti «alkhьamdulillakhӏ» (pochetnoe pozhelanie zavershitь trapezu s voskhvaleniem (blagodareniem) allakha)",
+      "id": "paydadosh_pd_696",
+      "audio": "paydadosh_pd_696.mp3"
+    },
+    {
+      "ru": "Бисмал Ӏодеша",
+      "ing": "Прочти «БисмиллахӀ» (Почетное пожелание начать трапезу с Именем Аллаха)",
+      "pron": "prochti «bismillakhӏ» (pochetnoe pozhelanie nachatь trapezu s imenem allakha)",
+      "id": "paydadosh_pd_694",
+      "audio": "paydadosh_pd_694.mp3"
+    },
+    {
+      "ru": "Приятного аппетита!",
+      "ing": "ГӀоза юийла/дуалда",
+      "pron": "gӏoza yuiyla/dualda",
+      "id": "paydadosh_pd_695",
+      "audio": "paydadosh_pd_695.mp3"
+    },
+    {
+      "ru": "Пусть благословенным будет оставшееся!",
+      "ing": "Диссачох беркат хилда",
+      "pron": "dissachokh berkat khilda",
+      "id": "paydadosh_pd_698",
+      "audio": "paydadosh_pd_698.mp3"
+    },
+    {
+      "ru": "Пусть милостыней будет съеденное!",
+      "ing": "Йиачох сагӀа хилда",
+      "pron": "yiachokh sagӏa khilda",
+      "id": "paydadosh_pd_697",
+      "audio": "paydadosh_pd_697.mp3"
     }
-  ]
+  ],
+  "itemCount": 57,
+  "version": 1
 }

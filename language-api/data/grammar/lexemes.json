@@ -1373,9 +1373,10 @@
       "ru": "обувь",
       "pos": "noun",
       "forms": {
-        "base": "КОГАГIИРС (МАЬЧЕШ)",
+        "base": "КогагIирс (маьчеш)",
         "dat": "КОГАГIИРС (МАЬЧЕШ)"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "костюм",
@@ -3178,9 +3179,10 @@
       "ru": "где",
       "pos": "pronoun",
       "forms": {
-        "base": "мичахьа",
+        "base": "Запомните вопросительное слово МИЧАХЬА?",
         "dat": "мичахьа"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "когда",
@@ -4259,17 +4261,19 @@
       "ru": "свекор",
       "pos": "noun",
       "forms": {
-        "base": "маьр-да",
+        "base": "Маьр-да",
         "dat": "маьр-даьга"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "свекровь",
       "pos": "noun",
       "forms": {
-        "base": "маьр-нана",
+        "base": "Маьр-нана",
         "dat": "маьр-нане"
-      }
+      },
+      "notes": "Habar sync"
     },
     {
       "ru": "тесть",
@@ -6703,10 +6707,10 @@
       "ru": "измучить",
       "pos": "noun",
       "forms": {
-        "base": "о́ттаде",
+        "base": "Са кхоачадаьд",
         "dat": "о́ттаде"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "изнежить",
@@ -7756,10 +7760,10 @@
       "ru": "пастух",
       "pos": "noun",
       "forms": {
-        "base": "бежъӀу",
+        "base": "Бежа гӀоккхаз",
         "dat": "бежъӀу"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "пережить",
@@ -9340,10 +9344,10 @@
       "ru": "частица",
       "pos": "noun",
       "forms": {
-        "base": "зиртилг",
+        "base": "ЦА употребляется в причастно-деепричастных формах: ца вахача магац сона — не пойти я не могу",
         "dat": "зиртилг"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "частый",
@@ -9367,10 +9371,10 @@
       "ru": "чепуха",
       "pos": "noun",
       "forms": {
-        "base": "дошдоацар",
+        "base": "Даьсса тӀурилг",
         "dat": "дошдоацар"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
     },
     {
       "ru": "честь",

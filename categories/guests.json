@@ -70,6 +70,106 @@
       "ing": "ысвсыу",
       "pron": "scscd",
       "audio": "f_1766025546637_k36u.mp3"
+    },
+    {
+      "ru": "Да будет милостыней!» (за подарок, угощение и вообще за что-нибудь материальное)",
+      "ing": "СагIа хилда!",
+      "pron": "sagia khilda!",
+      "id": "paydadosh_pd_661",
+      "audio": "paydadosh_pd_661.mp3"
+    },
+    {
+      "ru": "Живи свободным",
+      "ing": "Кортамукъа ваха (яха)",
+      "pron": "kortamukъa vakha (yakha)",
+      "id": "paydadosh_pd_1357",
+      "audio": "paydadosh_pd_1357.mp3"
+    },
+    {
+      "ru": "Короткое благопожелание счастья",
+      "ing": "Ираз хилда хьа!",
+      "pron": "iraz khilda khьa!",
+      "id": "paydadosh_pd_19959",
+      "audio": "paydadosh_pd_19959.mp3"
+    },
+    {
+      "ru": "Пусть будет он братом семерых братьев",
+      "ing": "ВорхӀ веший воша хилва цох! ВорхӀ веший йиша хийла цох! Дала даькъала волва (йойла) хьо!",
+      "pron": "vorkhӏ veshiy vosha khilva tsokh! vorkhӏ veshiy yisha khiyla tsokh! dala daьkъala volva (yoyla) khьo!",
+      "id": "paydadosh_pd_700",
+      "audio": "paydadosh_pd_700.mp3"
+    },
+    {
+      "ru": "Пусть будет она сестрой семерых братьев!",
+      "ing": "ВорхӀ веший йиша хийла цох",
+      "pron": "vorkhӏ veshiy yisha khiyla tsokh",
+      "id": "paydadosh_pd_691",
+      "audio": "paydadosh_pd_691.mp3"
+    },
+    {
+      "ru": "Пусть будут здоровы твои родители, счастливы дети, а ты сам окружен любовью!",
+      "ing": "Да-нана могаш хилда хьа, иразе хилда бераш, хьона-хьайн гонахьа безам хилба!",
+      "pron": "da-nana mogash khilda khьa, iraze khilda berash, khьona-khьayn gonakhьa bezam khilba!",
+      "id": "paydadosh_pd_1286",
+      "audio": "paydadosh_pd_1286.mp3"
+    },
+    {
+      "ru": "Пусть Всевышний сделает вас счастливыми!",
+      "ing": "Дала даькъала долда шо!",
+      "pron": "dala daьkъala dolda sho!",
+      "id": "paydadosh_pd_663",
+      "audio": "paydadosh_pd_663.mp3"
+    },
+    {
+      "ru": "Пусть Всевышний сделает его счастливым!",
+      "ing": "Дала даькъала волва из",
+      "pron": "dala daьkъala volva iz",
+      "id": "paydadosh_pd_688",
+      "audio": "paydadosh_pd_688.mp3"
+    },
+    {
+      "ru": "Пусть Всевышний сделает её счастливой!",
+      "ing": "Дала даькъала йойла из",
+      "pron": "dala daьkъala yoyla iz",
+      "id": "paydadosh_pd_690",
+      "audio": "paydadosh_pd_690.mp3"
+    },
+    {
+      "ru": "Пусть Всевышний сделает тебя счастливым (счастливой)!",
+      "ing": "Дала даькъала волва (йойла) хьо!",
+      "pron": "dala daьkъala volva (yoyla) khьo!",
+      "id": "paydadosh_pd_662",
+      "audio": "paydadosh_pd_662.mp3"
+    },
+    {
+      "ru": "Развёрнутое благопожелание",
+      "ing": "Хьа дег мел латтар кхоачаш хилда",
+      "pron": "khьa deg mel lattar kkhoachash khilda",
+      "id": "paydadosh_pd_19958",
+      "audio": "paydadosh_pd_19958.mp3"
+    },
+    {
+      "ru": "С днем рождения! Пусть Всевышний дарует тебе счастье, здоровье и добрые дни!",
+      "ing": "Ваь ди даькъала хилда! Дала ираз, моаршал а, дика ха а лулда хьона!",
+      "pron": "vaь di daьkъala khilda! dala iraz, moarshal a, dika kha a lulda khьona!",
+      "id": "paydadosh_pd_702",
+      "audio": "paydadosh_pd_702.mp3"
+    },
+    {
+      "ru": "Счастья и радости вашей семье!",
+      "ing": "Ираз а беркат а хилда хьа дезалах!",
+      "pron": "iraz a berkat a khilda khьa dezalakh!",
+      "id": "paydadosh_pd_1285",
+      "audio": "paydadosh_pd_1285.mp3"
+    },
+    {
+      "ru": "Универсальное поздравление, к мужчине",
+      "ing": "Аз даькъала вувц хьо!",
+      "pron": "az daьkъala vuvts khьo!",
+      "id": "paydadosh_pd_19957",
+      "audio": "paydadosh_pd_19957.mp3"
     }
-  ]
+  ],
+  "itemCount": 24,
+  "version": 1
 }
