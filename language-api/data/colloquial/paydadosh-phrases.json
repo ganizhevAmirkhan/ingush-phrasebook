@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "importedAt": "2026-05-24T07:20:14.188Z",
+  "importedAt": "2026-05-29T07:59:22.398Z",
   "source": "paydadosh.ru",
-  "count": 4724,
+  "count": 4705,
   "categories": [
     "celebration_phrase",
     "condolence_phrase",
@@ -121,7 +121,7 @@
       "ing": "Яха, мел ха яьннай хьа?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/108-ghalghay-lesson-09-36a8dc5a47",
       "confidence": 0.98
     },
@@ -433,7 +433,7 @@
       "ing": "Цхьа маьнги",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/85-ghalghay-lesson-08-40caf717f7",
       "confidence": 0.98
     },
@@ -445,32 +445,8 @@
       "ing": "БIаь",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/103-ghalghay-lesson-09-5b83e46f11",
-      "confidence": 0.98
-    },
-    {
-      "id": "pd_104",
-      "slug": "104-ghalghay-lesson-09-19c55405c8",
-      "ru": "130",
-      "ruNorm": "130",
-      "ing": "Цхьа бIаьи ткъаь итт (100+20+10)",
-      "category": "lesson_phrase",
-      "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
-      "url": "https://paydadosh.ru/phrase/104-ghalghay-lesson-09-19c55405c8",
-      "confidence": 0.98
-    },
-    {
-      "id": "pd_105",
-      "slug": "105-ghalghay-lesson-09-fb0bd3f813",
-      "ru": "146",
-      "ruNorm": "146",
-      "ing": "Цхьа бIаьи шовзткъе ялх (100+40+6)",
-      "category": "lesson_phrase",
-      "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
-      "url": "https://paydadosh.ru/phrase/105-ghalghay-lesson-09-fb0bd3f813",
       "confidence": 0.98
     },
     {
@@ -481,20 +457,8 @@
       "ing": "Ши маьнги",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/86-ghalghay-lesson-08-f7bd4b7a12",
-      "confidence": 0.98
-    },
-    {
-      "id": "pd_106",
-      "slug": "106-ghalghay-lesson-09-ec2ddcb265",
-      "ru": "200",
-      "ruNorm": "200",
-      "ing": "ШИ БIАЬ (2 раза по 100)",
-      "category": "lesson_phrase",
-      "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
-      "url": "https://paydadosh.ru/phrase/106-ghalghay-lesson-09-ec2ddcb265",
       "confidence": 0.98
     },
     {
@@ -505,32 +469,8 @@
       "ing": "хьай (-шоай мн. ч.). Например: хьажал хьай (посмотри), хьажал шоай (посмотрите), яздел хьай (пиши) яздел шоай (пишите).",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/271-ghalghay-lesson-28-0ddc9d3fd0",
-      "confidence": 0.98
-    },
-    {
-      "id": "pd_100",
-      "slug": "100-ghalghay-lesson-09-7eedc2f176",
-      "ru": "40",
-      "ruNorm": "40",
-      "ing": "это дважды двадцать ШОВЗТКЪА",
-      "category": "lesson_phrase",
-      "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
-      "url": "https://paydadosh.ru/phrase/100-ghalghay-lesson-09-7eedc2f176",
-      "confidence": 0.98
-    },
-    {
-      "id": "pd_147",
-      "slug": "147-ghalghay-lesson-17-e7e61122a8",
-      "ru": "5",
-      "ruNorm": "5",
-      "ing": "Хьалха яха ха.",
-      "category": "lesson_phrase",
-      "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
-      "url": "https://paydadosh.ru/phrase/147-ghalghay-lesson-17-e7e61122a8",
       "confidence": 0.98
     },
     {
@@ -541,32 +481,20 @@
       "ing": "Пхи маьнги",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/87-ghalghay-lesson-08-581f6dcd3d",
       "confidence": 0.98
     },
     {
-      "id": "pd_101",
-      "slug": "101-ghalghay-lesson-09-5a1997b5be",
-      "ru": "50",
-      "ruNorm": "50",
-      "ing": "это 40 и 10 ШОВЗТКЪА ИТТ",
+      "id": "pd_147",
+      "slug": "147-ghalghay-lesson-17-e7e61122a8",
+      "ru": "5. Давнопрошедшее время",
+      "ruNorm": "5 давнопрошедшее время",
+      "ing": "Хьалха яха ха.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
-      "url": "https://paydadosh.ru/phrase/101-ghalghay-lesson-09-5a1997b5be",
-      "confidence": 0.98
-    },
-    {
-      "id": "pd_102",
-      "slug": "102-ghalghay-lesson-09-1aaa776b65",
-      "ru": "60",
-      "ruNorm": "60",
-      "ing": "3 раза по 20 КХОЗТКЪА",
-      "category": "lesson_phrase",
-      "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
-      "url": "https://paydadosh.ru/phrase/102-ghalghay-lesson-09-1aaa776b65",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
+      "url": "https://paydadosh.ru/phrase/147-ghalghay-lesson-17-e7e61122a8",
       "confidence": 0.98
     },
     {
@@ -577,7 +505,7 @@
       "ing": "Ц1и фуй хьа?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/32-ghalghay-lesson-03-c2f0f78c16",
       "confidence": 0.98
     },
@@ -601,9 +529,9 @@
       "ing": "Хьо мичахьара ва / я?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1208-хьо-мичахьара-ва-я",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_2015",
@@ -625,7 +553,7 @@
       "ing": "Автобус хьаенайий? Енаяц",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/338-ghalghay-lesson-36-04aa4672fc",
       "confidence": 0.98
     },
@@ -649,7 +577,7 @@
       "ing": "Алихан карта тIагIолла тIехкхоссавалар.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/122-ghalghay-lesson-13-d3e9f19352",
       "confidence": 0.98
     },
@@ -661,7 +589,7 @@
       "ing": "Алихан яздеш воалл",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/319-ghalghay-lesson-32-9ef2cd898a",
       "confidence": 0.98
     },
@@ -673,7 +601,7 @@
       "ing": "Алихана къамаьл дувцар",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/143-ghalghay-lesson-17-3c229394de",
       "confidence": 0.98
     },
@@ -740,12 +668,12 @@
     {
       "id": "pd_112",
       "slug": "112-ghalghay-lesson-11-4e8da036ee",
-      "ru": "Ахмед: Добрый день, Яха",
-      "ruNorm": "ахмед добрый день яха",
+      "ru": "Ахмед: Добрый день, Яха. Я много о Вас слышал от своего друга",
+      "ruNorm": "ахмед добрый день яха я много о вас слышал от своего друга",
       "ing": "Ди дика хилда хьа, яха! дукха дийцад сона сай доттагIчо хьох лаьца.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/112-ghalghay-lesson-11-4e8da036ee",
       "confidence": 0.98
     },
@@ -757,7 +685,7 @@
       "ing": "Наьн-нана",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/52-ghalghay-lesson-04-1cc22b3973",
       "confidence": 0.98
     },
@@ -769,7 +697,7 @@
       "ing": "Даь-нана",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/50-ghalghay-lesson-04-b886ed91d4",
       "confidence": 0.98
     },
@@ -829,19 +757,19 @@
       "ing": "СаIид, аз салати, чкъаьреи, соки, морожении эцаргья",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/239-ghalghay-lesson-24-5c721292e5",
       "confidence": 0.98
     },
     {
       "id": "pd_242",
       "slug": "242-ghalghay-lesson-24-b39e30884f",
-      "ru": "Башир: Саид, я очень благодарен тебе за приглашение",
-      "ruNorm": "башир саид я очень благодарен тебе за приглашение",
+      "ru": "Башир: Саид, я очень благодарен тебе за приглашение. Я давно так не отдыхал. Обязательно порекомендую это кафе своим друзьям",
+      "ruNorm": "башир саид я очень благодарен тебе за приглашение я давно так не отдыхал обязательно порекомендую это кафе своим друзьям",
       "ing": "СаIид, баркал хьона тхо укхаза дийха. дукха ха яр аз иштта са ца лоIа. сай доттагIашка ювцаргья аз ер кафе.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/242-ghalghay-lesson-24-b39e30884f",
       "confidence": 0.98
     },
@@ -1465,7 +1393,7 @@
       "ing": "ЦIи йоаца пIелг",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/138-ghalghay-lesson-15-9fc36b44ac",
       "confidence": 0.98
     },
@@ -1645,7 +1573,7 @@
       "ing": "Беслани, Султани, Вахеи хьунагIа бахаб.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/342-ghalghay-lesson-37-97a01c30f3",
       "confidence": 0.98
     },
@@ -2701,9 +2629,9 @@
       "ing": "Доккха баркал хилда хьона, сона теркам барах (со ларх1арах)!",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1214-доккха-баркал-хилда-хьона-сона-теркам-барах-со-ларх1арах",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_128",
@@ -2869,7 +2797,7 @@
       "ing": "ЦIацкъам(-аш)",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/135-ghalghay-lesson-15-ae9f2c63df",
       "confidence": 0.98
     },
@@ -3961,7 +3889,7 @@
       "ing": "Юкъе",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/124-ghalghay-lesson-13-e843c01662",
       "confidence": 0.98
     },
@@ -4021,9 +3949,9 @@
       "ing": "Лоамашка ц1ена фо да",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1227-лоамашка-ц1ена-фо-да",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_1756",
@@ -4297,9 +4225,9 @@
       "ing": "Мукъа ха йолча ханахьа, хьо волча воаг1аргва со, аьттув хуле",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1223-мукъа-ха-йолча-ханахьа-хьо-волча-воаг1аргва-со-аьттув-хуле",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_1943",
@@ -4429,7 +4357,7 @@
       "ing": "Цу тика тIа укх тайпара отделаш я:",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/166-ghalghay-lesson-19-6553ad4c60",
       "confidence": 0.98
     },
@@ -4477,19 +4405,19 @@
       "ing": "Шо кIезига нах да, хIаьта а шо гора-м эттадац мостагIчоа.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/345-ghalghay-lesson-37-7b9b15fb42",
       "confidence": 0.98
     },
     {
       "id": "pd_298",
       "slug": "298-ghalghay-lesson-30-3c8acb3835",
-      "ru": "Ваха: Время даром не терял, видимо, ты хорошо отдохнул",
-      "ruNorm": "ваха время даром не терял видимо ты хорошо отдохнул",
+      "ru": "Ваха: Время даром не терял, видимо, ты хорошо отдохнул. Да, мне хочется посмотреть фотографии",
+      "ruNorm": "ваха время даром не терял видимо ты хорошо отдохнул да мне хочется посмотреть фотографии",
       "ing": "Хьо зехьа ха йоаеш хиннавац. хетаргахьа, Iа дика салеIад. хIаа, сурташка хьажа безам ба са.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/298-ghalghay-lesson-30-3c8acb3835",
       "confidence": 0.98
     },
@@ -4501,7 +4429,7 @@
       "ing": "Со Iа дувцачунна раьза ва.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/299-ghalghay-lesson-30-11db66e19b",
       "confidence": 0.98
     },
@@ -4568,38 +4496,38 @@
     {
       "id": "pd_19955",
       "slug": "19955-etiquette-sabr-dergdariy-ia-sona",
-      "ru": "Вежливая просьба подождать (буквально: «терпение сделаешь ли мне?»)",
+      "ru": "Вежливая просьба подождать (буквально: «терпение сделаешь ли мне?",
       "ruNorm": "вежливая просьба подождать буквально терпение сделаешь ли мне",
       "ing": "Сабр дергдарий Ӏа сона",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Полонкоева А.А., Оздоева Э.Г. Речевой этикет",
       "url": "https://paydadosh.ru/phrase/19955-etiquette-sabr-dergdariy-ia-sona",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_19952",
       "slug": "19952-etiquette-hona-barkal-ala-lovra-sona",
-      "ru": "Вежливая, развёрнутая форма благодарности",
-      "ruNorm": "вежливая развернутая форма благодарности",
+      "ru": "Вежливая, развёрнутая форма благодарности (буквально: «тебе спасибо сказать хочу я",
+      "ruNorm": "вежливая развернутая форма благодарности буквально тебе спасибо сказать хочу я",
       "ing": "Хьона баркал ала ловра сона",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Полонкоева А.А., Оздоева Э.Г. Речевой этикет",
       "url": "https://paydadosh.ru/phrase/19952-etiquette-hona-barkal-ala-lovra-sona",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_19953",
       "slug": "19953-etiquette-novkostal-deddariy-ia-sona",
-      "ru": "Вежливый вопрос-просьба о помощи (буквально: «помощь дашь ли мне?»)",
+      "ru": "Вежливый вопрос-просьба о помощи (буквально: «помощь дашь ли мне?",
       "ruNorm": "вежливый вопрос-просьба о помощи буквально помощь дашь ли мне",
       "ing": "Новкъостал деддарий Ӏа сона?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Полонкоева А.А., Оздоева Э.Г. Речевой этикет",
       "url": "https://paydadosh.ru/phrase/19953-etiquette-novkostal-deddariy-ia-sona",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_17937",
@@ -5209,7 +5137,7 @@
       "ing": "Коа юкъе бераш ловзаш доахк",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/125-ghalghay-lesson-13-1b45e26285",
       "confidence": 0.98
     },
@@ -5780,26 +5708,26 @@
     {
       "id": "pd_19942",
       "slug": "19942-etiquette-micha-hinnav-ho",
-      "ru": "Вопрос о местонахождении знакомому",
-      "ruNorm": "вопрос о местонахождении знакомому",
+      "ru": "Вопрос о местонахождении знакомому. К мужчине — «Мича хиннав хьо?",
+      "ruNorm": "вопрос о местонахождении знакомому к мужчине — мича хиннав хьо",
       "ing": "Мича хиннав хьо?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Полонкоева А.А., Оздоева Э.Г. Речевой этикет",
       "url": "https://paydadosh.ru/phrase/19942-etiquette-micha-hinnav-ho",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_19943",
       "slug": "19943-etiquette-dukha-ha-may-yiy-ho-biarg-ca-gu",
-      "ru": "Вопрос-укор при встрече после долгого перерыва",
-      "ruNorm": "вопрос-укор при встрече после долгого перерыва",
+      "ru": "Вопрос-укор при встрече после долгого перерыва. Дружеская реплика, не требует развернутого ответа",
+      "ruNorm": "вопрос-укор при встрече после долгого перерыва дружеская реплика не требует развернутого ответа",
       "ing": "Дукха ха май йий хьо бӀарг ца гу",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Полонкоева А.А., Оздоева Э.Г. Речевой этикет",
       "url": "https://paydadosh.ru/phrase/19943-etiquette-dukha-ha-may-yiy-ho-biarg-ca-gu",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_987",
@@ -6541,9 +6469,9 @@
       "ing": "Хьо кхетий сох?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1345-хьо-кхетий-сох",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1244",
@@ -6553,9 +6481,9 @@
       "ing": "Шо кхетац",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1244-шо-кхетац",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_215",
@@ -6565,7 +6493,7 @@
       "ing": "Хьо мукъа вий (йий)?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/215-ghalghay-lesson-22-a3d1a6a371",
       "confidence": 0.98
     },
@@ -6752,14 +6680,14 @@
     {
       "id": "pd_19935",
       "slug": "19935-etiquette-az-sagot-dergda-hona",
-      "ru": "Выражение тоски при расставании, к одному человеку",
-      "ruNorm": "выражение тоски при расставании к одному человеку",
+      "ru": "Выражение тоски при расставании, к одному человеку. К нескольким — «Аз сагот дергда шоана",
+      "ruNorm": "выражение тоски при расставании к одному человеку к нескольким — аз сагот дергда шоана",
       "ing": "Аз сагот дергда хьона",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Полонкоева А.А., Оздоева Э.Г. Речевой этикет",
       "url": "https://paydadosh.ru/phrase/19935-etiquette-az-sagot-dergda-hona",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_16384",
@@ -6973,7 +6901,7 @@
       "ing": "ТIерадаккхар",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/107-ghalghay-lesson-09-5557144033",
       "confidence": 0.98
     },
@@ -7057,9 +6985,9 @@
       "ing": "ГIалгIай мотт мичахьа Iомабу Iа?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1355-гiалгiай-мотт-мичахьа-iомабу-iа",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_2072",
@@ -7105,7 +7033,7 @@
       "ing": "Барзкъа тIадувха меттиг мичахьа я шун?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/192-ghalghay-lesson-20-bc95bf093f",
       "confidence": 0.98
     },
@@ -7153,7 +7081,7 @@
       "ing": "Мичахьа хиннав хьо салоIаш?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/294-ghalghay-lesson-30-b4ff02d378",
       "confidence": 0.98
     },
@@ -7165,7 +7093,7 @@
       "ing": "Хьо мичахьа дешаш ва?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/33-ghalghay-lesson-03-84ed20f0dd",
       "confidence": 0.98
     },
@@ -7189,9 +7117,9 @@
       "ing": "Мича корайог1аргяр (коравог1аргвар)?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1362-мича-корайог1аргяр-коравог1аргвар",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_79",
@@ -7201,7 +7129,7 @@
       "ing": "Запомните вопросительное слово МИЧАХЬА?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/79-ghalghay-lesson-07-7d5e5b231f",
       "confidence": 0.98
     },
@@ -7585,9 +7513,9 @@
       "ing": "Къодамаш ца беш дувцал",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1211-къодамаш-ца-беш-дувцал",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_929",
@@ -7600,6 +7528,18 @@
       "sourceLabel": "PaydaDosh proverb",
       "url": "https://paydadosh.ru/proverb/929-къамаьл-даьчоа-баркал-йист-ца-хинначоа-шиъ",
       "confidence": 0.85
+    },
+    {
+      "id": "pd_1194",
+      "slug": "1194-оалий-хьог1-цо",
+      "ru": "Говорит ли он / она?",
+      "ruNorm": "говорит ли он / она",
+      "ing": "Оалий - хьог1 цо?",
+      "category": "everyday_phrase",
+      "source": "paydadosh",
+      "sourceLabel": "ishkola.com",
+      "url": "https://paydadosh.ru/phrase/1194-оалий-хьог1-цо",
+      "confidence": 0.95
     },
     {
       "id": "pd_16507",
@@ -8197,7 +8137,7 @@
       "ing": "Хьаьша цIа",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/89-ghalghay-lesson-08-7242ccebe5",
       "confidence": 0.98
     },
@@ -8569,9 +8509,9 @@
       "ing": "Дикача наькъа тӀа хилда шо",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Словарь PaydaDosh",
       "url": "https://paydadosh.ru/phrase/679-entry-phrase-66424",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_676",
@@ -8581,9 +8521,9 @@
       "ing": "Дикача наькъа тӀа хилва (хийла) хьо",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Словарь PaydaDosh",
       "url": "https://paydadosh.ru/phrase/676-entry-phrase-66421",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_16627",
@@ -8641,9 +8581,9 @@
       "ing": "Х1а, мегаргда",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1364-х1а-мегаргда",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_1804",
@@ -8665,9 +8605,9 @@
       "ing": "Та вай шиъ",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1326-та-вай-шиъ",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_2097",
@@ -9565,9 +9505,9 @@
       "ing": "ЙиIигас ший мотт дIанийсабар",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1239-йиiигас-ший-мотт-дiанийсабар",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_509",
@@ -9589,7 +9529,7 @@
       "ing": "ЙоI хьаста тIара йоагIа",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/120-ghalghay-lesson-13-8560a9b27d",
       "confidence": 0.98
     },
@@ -9601,7 +9541,7 @@
       "ing": "ЙоIо белаж тIа оттаяь кIудал яхь",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/117-ghalghay-lesson-13-7518a21894",
       "confidence": 0.98
     },
@@ -9661,7 +9601,7 @@
       "ing": "Наьн-да",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/51-ghalghay-lesson-04-195cb7bffc",
       "confidence": 0.98
     },
@@ -9673,7 +9613,7 @@
       "ing": "Даь-да",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/49-ghalghay-lesson-04-4db0edfd9e",
       "confidence": 0.98
     },
@@ -10105,9 +10045,9 @@
       "ing": "Сона ч1оаг1а лоарх1аме х1ама да из",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1216-сона-ч1оаг1а-лоарх1аме-х1ама-да-из",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_691",
@@ -10441,7 +10381,7 @@
       "ing": "1Уйре дика хийла шун!",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/9-ghalghay-lesson-01-a4f67aa441",
       "confidence": 0.98
     },
@@ -10451,11 +10391,11 @@
       "ru": "Доброе утро!",
       "ruNorm": "доброе утро",
       "ing": "Iуйре дика хийла!",
-      "category": "snapshot",
+      "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh snapshot",
+      "sourceLabel": "@paydamu",
       "url": "https://paydadosh.ru/phrase/660-entry-phrase-66391",
-      "confidence": 0.9
+      "confidence": 0.95
     },
     {
       "id": "pd_6",
@@ -10465,21 +10405,9 @@
       "ing": "1Уйре дика хийла хьа!",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/6-ghalghay-lesson-01-c6879ee4bb",
       "confidence": 0.98
-    },
-    {
-      "id": "pd_660",
-      "slug": "660-entry-phrase-66391",
-      "ru": "Доброе утро!» (буквально «Утро хорошим пусть будет!»)",
-      "ruNorm": "доброе утро буквально утро хорошим пусть будет",
-      "ing": "Iуйре дика хийла!",
-      "category": "everyday_phrase",
-      "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
-      "url": "https://paydadosh.ru/phrase/660-entry-phrase-66391",
-      "confidence": 0.93
     },
     {
       "id": "pd_701",
@@ -10489,9 +10417,9 @@
       "ing": "Сайре дика хийла.",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Словарь PaydaDosh",
       "url": "https://paydadosh.ru/phrase/701-good-evening-dictionary",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_8",
@@ -10501,21 +10429,9 @@
       "ing": "Сайре дика хийла хьа!",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/8-ghalghay-lesson-01-2d1b303a38",
       "confidence": 0.98
-    },
-    {
-      "id": "pd_19928",
-      "slug": "19928-etiquette-di-dika-hiyla",
-      "ru": "Добрый день (буквально: пусть будет хорошим день)",
-      "ruNorm": "добрый день буквально пусть будет хорошим день",
-      "ing": "Ди дика хийла",
-      "category": "everyday_phrase",
-      "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
-      "url": "https://paydadosh.ru/phrase/19928-etiquette-di-dika-hiyla",
-      "confidence": 0.93
     },
     {
       "id": "pd_7",
@@ -10525,7 +10441,7 @@
       "ing": "Ди дика хилда хьа!",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/7-ghalghay-lesson-01-7ee97d56cf",
       "confidence": 0.98
     },
@@ -11168,14 +11084,14 @@
     {
       "id": "pd_19934",
       "slug": "19934-etiquette-vayna-diamavalalah",
-      "ru": "Дружеское пожелание при прощании, призывает поддерживать связь",
-      "ruNorm": "дружеское пожелание при прощании призывает поддерживать связь",
+      "ru": "Дружеское пожелание при прощании, призывает поддерживать связь. Часто говорят давнему другу или родственнику",
+      "ruNorm": "дружеское пожелание при прощании призывает поддерживать связь часто говорят давнему другу или родственнику",
       "ing": "Вайна дӀамавалалахь",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Полонкоева А.А., Оздоева Э.Г. Речевой этикет",
       "url": "https://paydadosh.ru/phrase/19934-etiquette-vayna-diamavalalah",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_115",
@@ -11269,7 +11185,7 @@
       "ing": "ЧIоагIа (лаьгIо) мух хьекх.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/292-ghalghay-lesson-29-ab95648905",
       "confidence": 0.98
     },
@@ -11497,7 +11413,7 @@
       "ing": "Наьна-воша",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/54-ghalghay-lesson-04-e089252838",
       "confidence": 0.98
     },
@@ -11509,7 +11425,7 @@
       "ing": "Даь-воша",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/53-ghalghay-lesson-04-57d1fb7423",
       "confidence": 0.98
     },
@@ -11809,9 +11725,9 @@
       "ing": "Дала аьннадале",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Словарь PaydaDosh",
       "url": "https://paydadosh.ru/phrase/410-entry-phrase-12664",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_1704",
@@ -12541,9 +12457,9 @@
       "ing": "Хала деций, ала сога мичахьа (маца, мала, мишта)",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1361-хала-деций-ала-сога-мичахьа-маца-мала-мишта",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_1650",
@@ -12757,7 +12673,7 @@
       "ing": "Хьай вIаштIехьдоале, хьалхагIа хьавола (хьайола, хьадувла) хьажалахь (хьажалаш мн. ч.).",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/222-ghalghay-lesson-22-810be9f7ee",
       "confidence": 0.98
     },
@@ -12769,9 +12685,9 @@
       "ing": "Хьай вIаштIехьдоале, хьалхагIа хьавола (хьайола, хьадувла) хьажалахь",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1339-хьай-вiаштiехьдоале-хьалхагiа-хьавола-хьайола-хьадувла-хьажалахь",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_322",
@@ -13033,7 +12949,7 @@
       "ing": "Нагахьа санна Хьасан гой, вай гIоргда.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/347-ghalghay-lesson-37-4ffaece89e",
       "confidence": 0.98
     },
@@ -13393,20 +13309,20 @@
       "ing": "МоллагIа хаоттам мара ца хиларах аьттув хилба шун!",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/293-ghalghay-lesson-29-541989a796",
       "confidence": 0.98
     },
     {
-      "id": "pd_341",
-      "slug": "341-ghalghay-lesson-36-4ad5c794c6",
+      "id": "pd_22",
+      "slug": "22-ghalghay-lesson-01-d563dff183",
       "ru": "ЖЕЛАЕМ УСПЕХА!",
       "ruNorm": "желаем успеха",
       "ing": "Аьттув хилба шун!",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
-      "url": "https://paydadosh.ru/phrase/341-ghalghay-lesson-36-4ad5c794c6",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
+      "url": "https://paydadosh.ru/phrase/22-ghalghay-lesson-01-d563dff183",
       "confidence": 0.98
     },
     {
@@ -13417,7 +13333,7 @@
       "ing": "Дикдар мара ма хозалда шоана телефона гIолла!",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/133-ghalghay-lesson-14-6023cbb2a1",
       "confidence": 0.98
     },
@@ -13453,7 +13369,7 @@
       "ing": "Дика мел дар хилда хьона ( шоана)!",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/69-ghalghay-lesson-06-5f8ad3381f",
       "confidence": 0.98
     },
@@ -13705,7 +13621,7 @@
       "ing": "Могаш доахк",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/19-ghalghay-lesson-01-7555d93b42",
       "confidence": 0.98
     },
@@ -13741,7 +13657,7 @@
       "ing": "Дукха яхийла хьо!",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/18-ghalghay-lesson-01-f2f5d3f7c2",
       "confidence": 0.98
     },
@@ -13753,7 +13669,7 @@
       "ing": "Дукха вахалва хьо!",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/17-ghalghay-lesson-01-3fe5c16499",
       "confidence": 0.98
     },
@@ -13813,7 +13729,7 @@
       "ing": "Дукха дахалда шо!",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/16-ghalghay-lesson-01-4aea374a26",
       "confidence": 0.98
     },
@@ -14929,9 +14845,9 @@
       "ing": "Моаршал хилда цунна/царна",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Словарь PaydaDosh",
       "url": "https://paydadosh.ru/phrase/671-entry-phrase-66416",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_670",
@@ -14941,9 +14857,9 @@
       "ing": "Моаршал хилда хьона/шоана",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Словарь PaydaDosh",
       "url": "https://paydadosh.ru/phrase/670-entry-phrase-66415",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_11",
@@ -14953,7 +14869,7 @@
       "ing": "МОАРШАЛ ДА ХЬОГА! (тебе)",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/11-ghalghay-lesson-01-f8cfebe18a",
       "confidence": 0.98
     },
@@ -15781,9 +15697,9 @@
       "ing": "Хьа а хийла сайре дика",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1236-хьа-а-хийла-сайре-дика",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1237",
@@ -15793,9 +15709,9 @@
       "ing": "Хьа а хийла ди дика",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1237-хьа-а-хийла-ди-дика",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1238",
@@ -15805,9 +15721,9 @@
       "ing": "Хьа а хийла 1уйре дика",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1238-хьа-а-хийла-1уйре-дика",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_160",
@@ -15901,7 +15817,7 @@
       "ing": "ДогIа (лоа) делх?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/290-ghalghay-lesson-29-3505cfca4a",
       "confidence": 0.98
     },
@@ -16585,7 +16501,7 @@
       "ing": "Е Фатима е Роза яхийта еза маькх эца.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/343-ghalghay-lesson-37-6faceca85c",
       "confidence": 0.98
     },
@@ -16801,19 +16717,19 @@
       "ing": "Цу тоатолга чура хий мала йиш йий? цIена дий-хьогI из?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/162-ghalghay-lesson-18-3f0eee517f",
       "confidence": 0.98
     },
     {
       "id": "pd_157",
       "slug": "157-ghalghay-lesson-18-9dd075bbbc",
-      "ru": "Иса: Не знаю",
-      "ruNorm": "иса не знаю",
+      "ru": "Иса: Не знаю. А ты знаешь?",
+      "ruNorm": "иса не знаю а ты знаешь",
       "ing": "Хац. хьона хой тIаккха?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/157-ghalghay-lesson-18-9dd075bbbc",
       "confidence": 0.98
     },
@@ -16825,7 +16741,7 @@
       "ing": "Сона мангалкомараши кхазараши кораьяй, гулйой вай, доттагIашца юаргья вай.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/159-ghalghay-lesson-18-a3d225753a",
       "confidence": 0.98
     },
@@ -17257,9 +17173,9 @@
       "ing": "Халахете а, йиш яц",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1365-халахете-а-йиш-яц",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_1658",
@@ -17773,9 +17689,9 @@
       "ing": "Мишта д1адахар деррига?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1199-мишта-д1адахар-деррига",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_17554",
@@ -17797,9 +17713,9 @@
       "ing": "Из дош мишта аргдар Iа?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1347-из-дош-мишта-аргдар-iа",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1351",
@@ -17809,9 +17725,9 @@
       "ing": "ГIалгIай метта мишта аргда Iа из?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1351-гiалгiай-метта-мишта-аргда-iа-из",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_18057",
@@ -18385,9 +18301,9 @@
       "ing": "Ма дукха хаттараш телар цо",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1249-ма-дукха-хаттараш-телар-цо",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_1016",
@@ -18625,9 +18541,9 @@
       "ing": "Мишта хет хьона таханара хаоттам?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1225-мишта-хет-хьона-таханара-хаоттам",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1531",
@@ -18639,7 +18555,7 @@
       "source": "paydadosh",
       "sourceLabel": "PaydaDosh",
       "url": "https://paydadosh.ru/phrase/1531-цiи-мишта-я-хьа",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_1355",
@@ -18685,7 +18601,7 @@
       "ing": "Мишта дIаехьар Iа отпуск?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/296-ghalghay-lesson-30-8fdec9d932",
       "confidence": 0.98
     },
@@ -18721,9 +18637,9 @@
       "ing": "Къамаьла юкъе мел дукха леладу из дош?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1350-къамаьла-юкъе-мел-дукха-леладу-из-дош",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_1993",
@@ -18805,7 +18721,7 @@
       "ing": "МалагIа компьютерни ловзараш хоза хета хьона?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/254-ghalghay-lesson-25-75b2477e9b",
       "confidence": 0.98
     },
@@ -18889,9 +18805,9 @@
       "ing": "Малаг1ча беса я из коч?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1192-малаг1ча-беса-я-из-коч",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_16836",
@@ -18913,7 +18829,7 @@
       "ing": "Тахан малагIа таьрахь да?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/26-ghalghay-lesson-02-bba2865c87",
       "confidence": 0.98
     },
@@ -18925,7 +18841,7 @@
       "ing": "МалагIа размер еза хьона?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/193-ghalghay-lesson-20-9f984790e0",
       "confidence": 0.98
     },
@@ -18973,7 +18889,7 @@
       "ing": "Жамарашка кхерий хилар",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/141-ghalghay-lesson-16-1e613006d4",
       "confidence": 0.98
     },
@@ -19057,7 +18973,7 @@
       "ing": "творительный. Хьанца?- кем? с кем?Сенца?- чем? с чем?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/226-ghalghay-lesson-23-825b15b2f6",
       "confidence": 0.98
     },
@@ -19225,7 +19141,7 @@
       "ing": "КIаьнко дийша книжка",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/328-ghalghay-lesson-34-22fb4d0d1e",
       "confidence": 0.98
     },
@@ -19561,9 +19477,9 @@
       "ing": "Вай в1ашаг1 маца кхет?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1190-вай-в1ашаг1-маца-кхет",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1336",
@@ -19573,9 +19489,9 @@
       "ing": "Маца вIашагIкхета вIаштIехьдаргда вай?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1336-маца-вiашагiкхета-вiаштiехьдаргда-вай",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_17602",
@@ -20322,18 +20238,6 @@
       "confidence": 0.93
     },
     {
-      "id": "pd_19936",
-      "slug": "19936-etiquette-loralelah",
-      "ru": "Короткая форма заботливого прощания",
-      "ruNorm": "короткая форма заботливого прощания",
-      "ing": "Лоралелахь",
-      "category": "everyday_phrase",
-      "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
-      "url": "https://paydadosh.ru/phrase/19936-etiquette-loralelah",
-      "confidence": 0.93
-    },
-    {
       "id": "pd_19959",
       "slug": "19959-etiquette-iraz-hilda-ha",
       "ru": "Короткое благопожелание счастья",
@@ -20461,9 +20365,9 @@
       "ing": "Масса сахьат даьннад?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1231-масса-сахьат-даьннад",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_28",
@@ -20473,7 +20377,7 @@
       "ing": "Масса сахьат даьннад?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/28-ghalghay-lesson-02-fd3cdce020",
       "confidence": 0.98
     },
@@ -20792,14 +20696,14 @@
     {
       "id": "pd_19941",
       "slug": "19941-etiquette-magar-mishtad",
-      "ru": "Краткий вопрос о здоровье/самочувствии",
-      "ruNorm": "краткий вопрос о здоровье/самочувствии",
+      "ru": "Краткий вопрос о здоровье/самочувствии. Ответ: «дика да",
+      "ruNorm": "краткий вопрос о здоровье/самочувствии ответ дика да",
       "ing": "Магар миштад?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Полонкоева А.А., Оздоева Э.Г. Речевой этикет",
       "url": "https://paydadosh.ru/phrase/19941-etiquette-magar-mishtad",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_16874",
@@ -22417,7 +22321,7 @@
       "ing": "Нана-цIа (хIама дуа меттиг) доккха а паргIата а да.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/83-ghalghay-lesson-08-d475974119",
       "confidence": 0.98
     },
@@ -22789,7 +22693,7 @@
       "ing": "Москве кхаччалца фокеманца дахар тхо, юхадоагIаш цIерпоштаца даьхкар.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/130-ghalghay-lesson-14-bce15d36e8",
       "confidence": 0.98
     },
@@ -22801,31 +22705,31 @@
       "ing": "Керда дешара шу дIадолалехьа.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/131-ghalghay-lesson-14-9e819a317a",
       "confidence": 0.98
     },
     {
       "id": "pd_258",
       "slug": "258-ghalghay-lesson-26-d69e069709",
-      "ru": "Лейла: Как я рада тебя видеть, Лейла! Я готова тебя выслушать",
-      "ruNorm": "лейла как я рада тебя видеть лейла я готова тебя выслушать",
+      "ru": "Лейла: Как я рада тебя видеть, Лейла! Я готова тебя выслушать. Мне тоже есть, что тебе рассказать",
+      "ruNorm": "лейла как я рада тебя видеть лейла я готова тебя выслушать мне тоже есть что тебе рассказать",
       "ing": "Ма дика хет сона хьо бIаргаяйна, лейла! со кийча я хьога ладувгIа. са а да хьога дувца хIама",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/258-ghalghay-lesson-26-d69e069709",
       "confidence": 0.98
     },
     {
       "id": "pd_261",
       "slug": "261-ghalghay-lesson-26-ed5bd0ccdf",
-      "ru": "Лейла: Он сдал сессию и на днях приезжает домой",
-      "ruNorm": "лейла он сдал сессию и на днях приезжает домой",
+      "ru": "Лейла: Он сдал сессию и на днях приезжает домой. Я возьму его с собой к родственникам. Он давно у них не бывал",
+      "ruNorm": "лейла он сдал сессию и на днях приезжает домой я возьму его с собой к родственникам он давно у них не бывал",
       "ing": "Из сесси дIаенна ваьнна укх деношка цIавоагIаш ва. аз сайца гаргара нах болча вугаргва из. из царга ца хула дукха ха я.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/261-ghalghay-lesson-26-ed5bd0ccdf",
       "confidence": 0.98
     },
@@ -22993,9 +22897,9 @@
       "ing": "Дарба де",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1252-дарба-де",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_1561",
@@ -24169,7 +24073,7 @@
       "ing": "ДоттагIа вайзар мохьмада",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/146-ghalghay-lesson-17-8c7fd6817f",
       "confidence": 0.98
     },
@@ -24265,7 +24169,7 @@
       "ing": "КIаьнк школе вода",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/315-ghalghay-lesson-32-b670b6984a",
       "confidence": 0.98
     },
@@ -24277,7 +24181,7 @@
       "ing": "КIаьнко улга тIа ираз яздаьд.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/119-ghalghay-lesson-13-cfc7a5e07a",
       "confidence": 0.98
     },
@@ -24289,7 +24193,7 @@
       "ing": "КIаьнк школе гIоргва",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/317-ghalghay-lesson-32-6d816bfcd2",
       "confidence": 0.98
     },
@@ -24301,7 +24205,7 @@
       "ing": "КIаьнк школе вахав",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/316-ghalghay-lesson-32-7c946e7f92",
       "confidence": 0.98
     },
@@ -24313,7 +24217,7 @@
       "ing": "КIаьнк хи чу вежар.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/116-ghalghay-lesson-13-1b68dcffd6",
       "confidence": 0.98
     },
@@ -24325,7 +24229,7 @@
       "ing": "Книжка деша (действительное значение) кIаьнк.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/327-ghalghay-lesson-34-35f6a62acf",
       "confidence": 0.98
     },
@@ -24337,9 +24241,9 @@
       "ing": "Нана локъамаш еш йоал",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1206-нана-локъамаш-еш-йоал",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1240",
@@ -24349,9 +24253,9 @@
       "ing": "Нанас ший кIаьнка мотт Iомабар",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1240-нанас-ший-кiаьнка-мотт-iомабар",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_17189",
@@ -24589,7 +24493,7 @@
       "ing": "Са ц1и яха я",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/31-ghalghay-lesson-03-95ccce59a5",
       "confidence": 0.98
     },
@@ -24805,9 +24709,9 @@
       "ing": "Хьоца къамаьл дувца безам бар са",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1332-хьоца-къамаьл-дувца-безам-бар-са",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_210",
@@ -24817,7 +24721,7 @@
       "ing": "Сона халахет хьона гIо-новкъостал де сай вIаштIехь ца доалаш.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/210-ghalghay-lesson-21-8a33b175eb",
       "confidence": 0.98
     },
@@ -24831,7 +24735,7 @@
       "source": "paydadosh",
       "sourceLabel": "PaydaDosh",
       "url": "https://paydadosh.ru/phrase/20199-сона-кӏордадаьд-ер-мне-надоело-это",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1323",
@@ -24841,9 +24745,9 @@
       "ing": "Со кхерац",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1323-со-кхерац",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1226",
@@ -24853,9 +24757,9 @@
       "ing": "Сона дог1а делхача (доаг1ача) ханахьа хоза хет",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1226-сона-дог1а-делхача-доаг1ача-ханахьа-хоза-хет",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_17979",
@@ -24877,7 +24781,7 @@
       "ing": "Со кхер.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/212-ghalghay-lesson-21-ee1bb51aa0",
       "confidence": 0.98
     },
@@ -25069,7 +24973,7 @@
       "ing": "ВIаштIардаь цIа",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/80-ghalghay-lesson-07-d764bb84cf",
       "confidence": 0.98
     },
@@ -25141,7 +25045,7 @@
       "ing": "Цхьан массехк минота сога ладувгIаргдарий Iа?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/219-ghalghay-lesson-22-c83b743228",
       "confidence": 0.98
     },
@@ -25165,7 +25069,7 @@
       "ing": "Эггара хьамсарагIвар малув хьа доттагIашта юкъе?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/65-ghalghay-lesson-05-1457b89b13",
       "confidence": 0.98
     },
@@ -25189,7 +25093,7 @@
       "ing": "ТIайийха хьажа мегаргдарий цунга?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/191-ghalghay-lesson-20-d912bb3fd2",
       "confidence": 0.98
     },
@@ -25201,9 +25105,9 @@
       "ing": "Т1айийха хьажа мегаргвий?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1234-т1айийха-хьажа-мегаргвий",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_203",
@@ -25225,7 +25129,7 @@
       "ing": "Кхыча тайпара ала йиш йий?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/224-ghalghay-lesson-22-ceacebc3fe",
       "confidence": 0.98
     },
@@ -25237,9 +25141,9 @@
       "ing": "Кхыча тайпара ала йиш йий?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1352-кхыча-тайпара-ала-йиш-йий",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_1998",
@@ -25285,7 +25189,7 @@
       "ing": "Са гаргара нах кхыча юрта бахаш ба",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/72-ghalghay-lesson-07-ba1e153e69",
       "confidence": 0.98
     },
@@ -25309,9 +25213,9 @@
       "ing": "Кулгаш сапаца дила",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Сообщество",
       "url": "https://paydadosh.ru/phrase/22388-local-example-45656",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_17130",
@@ -25813,7 +25717,7 @@
       "ing": "Гаьна дIа ма гIолаш, тувлалургда шо.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/154-ghalghay-lesson-18-b67f38fa7c",
       "confidence": 0.98
     },
@@ -25825,7 +25729,7 @@
       "ing": "Со раьза ва. дика салаIа моттиг я укхаза.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/151-ghalghay-lesson-18-a2a31ce578",
       "confidence": 0.98
     },
@@ -25849,7 +25753,7 @@
       "ing": "Тхона хозахетаргда хьо тхоай тика тIа еча.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/186-ghalghay-lesson-19-f48d429035",
       "confidence": 0.98
     },
@@ -25861,7 +25765,7 @@
       "ing": "Маьрша лелалба шун гаргара нах!",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/60-ghalghay-lesson-04-9a7c8b2cf8",
       "confidence": 0.98
     },
@@ -25873,7 +25777,7 @@
       "ing": "Вай шиъ са цIагIа вIашгIкхета йиш йолаш да.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/220-ghalghay-lesson-22-177cd96681",
       "confidence": 0.98
     },
@@ -25897,9 +25801,9 @@
       "ing": "Тхо / вай кхетац",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1246-тхо-вай-кхетац",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_1789",
@@ -25933,7 +25837,7 @@
       "ing": "КIаьда мебель",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/88-ghalghay-lesson-08-639226a6e1",
       "confidence": 0.98
     },
@@ -26737,7 +26641,7 @@
       "ing": "Вай мичахьа даха деза?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/96-ghalghay-lesson-10-578f5d0993",
       "confidence": 0.98
     },
@@ -26881,7 +26785,7 @@
       "ing": "КIаьнка ломаш гу.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/318-ghalghay-lesson-32-d53c005739",
       "confidence": 0.98
     },
@@ -27241,7 +27145,7 @@
       "ing": "Тха дай-ноаной",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/48-ghalghay-lesson-04-fdf3861138",
       "confidence": 0.98
     },
@@ -28129,9 +28033,9 @@
       "ing": "Доккха х1ама дацар из",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1359-доккха-х1ама-дацар-из",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1318",
@@ -28141,9 +28045,9 @@
       "ing": "Тхо диц ма де",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1318-тхо-диц-ма-де",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_1327",
@@ -28489,9 +28393,9 @@
       "ing": "Т1ехьа ма дисалаш",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1219-т1ехьа-ма-дисалаш",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1269",
@@ -28621,9 +28525,9 @@
       "ing": "Сагот ма де, деррига дика хургда!",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1202-сагот-ма-де-деррига-дика-хургда",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_1666",
@@ -28945,9 +28849,9 @@
       "ing": "Хьай белха дог ма эккхалахь",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1201-хьай-белха-дог-ма-эккхалахь",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_17523",
@@ -29233,7 +29137,7 @@
       "ing": "Зехьа ха ма йоаелахь.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/268-ghalghay-lesson-28-aa1826c461",
       "confidence": 0.98
     },
@@ -29269,7 +29173,7 @@
       "ing": "Зехьа ха ма йоаелаш.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/269-ghalghay-lesson-28-9815117d48",
       "confidence": 0.98
     },
@@ -29401,9 +29305,9 @@
       "ing": "Киловзал ма лелае",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1191-киловзал-ма-лелае",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_16047",
@@ -29425,7 +29329,7 @@
       "ing": "Ма гIолахь цига",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/330-ghalghay-lesson-35-7f038b2af9",
       "confidence": 0.98
     },
@@ -30318,18 +30222,6 @@
       "confidence": 0.85
     },
     {
-      "id": "pd_326",
-      "slug": "326-ghalghay-lesson-34-454baf11a0",
-      "ru": "Несамостоятельное причастие образуется следующим образом: архаичная форма причастия + причастие настоящего времени, образованное от вспомогательного глагола",
-      "ruNorm": "несамостоятельное причастие образуется следующим образом архаичная форма причастия + причастие настоящего времени образованное от вспомогательного глагола",
-      "ing": "да (-ва, -ба, -я): яздерг+дола=яздергдола каьхат (письмо, которое будет написано), дешарг+дола=дешаргдола книжка (книга, которая будет прочитана) и т.д.",
-      "category": "lesson_phrase",
-      "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
-      "url": "https://paydadosh.ru/phrase/326-ghalghay-lesson-34-454baf11a0",
-      "confidence": 0.98
-    },
-    {
       "id": "pd_prov_1418",
       "slug": "1418-сихал-1овдал-сабар-кхетам-хьаькъал",
       "ru": "Несдержанность – глупость, сдержанность – разумность (ум).",
@@ -31076,26 +30968,26 @@
     {
       "id": "pd_19933",
       "slug": "19933-etiquette-biargagurgda-vay",
-      "ru": "Неформальная форма прощания между друзьями, близкими (буквально: «глазами увидимся ещё»)",
+      "ru": "Неформальная форма прощания между друзьями, близкими (буквально: «глазами увидимся ещё",
       "ruNorm": "неформальная форма прощания между друзьями близкими буквально глазами увидимся еще",
       "ing": "БӀаргагургда вай",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Полонкоева А.А., Оздоева Э.Г. Речевой этикет",
       "url": "https://paydadosh.ru/phrase/19933-etiquette-biargagurgda-vay",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_19940",
       "slug": "19940-etiquette-kerda-hiama-diy-ciga",
-      "ru": "Неформальный вопрос знакомому при встрече",
-      "ruNorm": "неформальный вопрос знакомому при встрече",
+      "ru": "Неформальный вопрос знакомому при встрече. Стандартный ответ — «Керда хӀама дац",
+      "ruNorm": "неформальный вопрос знакомому при встрече стандартный ответ — керда хӏама дац",
       "ing": "Керда хӀама дий цига?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Полонкоева А.А., Оздоева Э.Г. Речевой этикет",
       "url": "https://paydadosh.ru/phrase/19940-etiquette-kerda-hiama-diy-ciga",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_1048",
@@ -31688,12 +31580,12 @@
     {
       "id": "pd_310",
       "slug": "310-ghalghay-lesson-31-f25013c8f1",
-      "ru": "Но это были домашние утки, а здесь дикие",
-      "ruNorm": "но это были домашние утки а здесь дикие",
+      "ru": "Но это были домашние утки, а здесь дикие. А ты видела ворон? Вот сидит одна. Ну все, пора домой",
+      "ruNorm": "но это были домашние утки а здесь дикие а ты видела ворон вот сидит одна ну все пора домой",
       "ing": "Уж цIагIа лелаю боабашкаш я, хIаьта укхазаръяраш акха я. къайгаш яйнайий хьона? ер ягIа цаI. хIанз тоъаргда. чудаха деза вай.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/310-ghalghay-lesson-31-f25013c8f1",
       "confidence": 0.98
     },
@@ -31705,7 +31597,7 @@
       "ing": "Ткъеста",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/98-ghalghay-lesson-09-20f5518184",
       "confidence": 0.98
     },
@@ -32257,7 +32149,7 @@
       "ing": "Моаршал хаттар",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/15-ghalghay-lesson-01-2cc94c928c",
       "confidence": 0.98
     },
@@ -32389,7 +32281,7 @@
       "ing": "КогагIирс (маьчеш)",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/190-ghalghay-lesson-20-845578d3cd",
       "confidence": 0.98
     },
@@ -32437,7 +32329,7 @@
       "ing": "Баьцадаараш дохка отдел",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/169-ghalghay-lesson-19-de0be6b38e",
       "confidence": 0.98
     },
@@ -32869,9 +32761,9 @@
       "ing": "Сона бе-башха вац (яц) из",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1313-сона-бе-башха-вац-яц-из",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1243",
@@ -32881,9 +32773,9 @@
       "ing": "Из кхетац",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1243-из-кхетац",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_17938",
@@ -32905,9 +32797,9 @@
       "ing": "Из ц1аккъа раьза хилац",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1195-из-ц1аккъа-раьза-хилац",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_17921",
@@ -32929,9 +32821,9 @@
       "ing": "Латкъаш ва из",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1210-латкъаш-ва-из",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1251",
@@ -32941,9 +32833,9 @@
       "ing": "Цо сога аьннад",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1251-цо-сога-аьннад",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_17975",
@@ -32965,7 +32857,7 @@
       "ing": "Цунна из чIоагIа веза (еза).",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/203-ghalghay-lesson-21-2bfbe0c6b0",
       "confidence": 0.98
     },
@@ -32977,9 +32869,9 @@
       "ing": "Из лоткъам язбеш ва",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1207-из-лоткъам-язбеш-ва",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_17974",
@@ -33013,7 +32905,7 @@
       "ing": "Болх дика бу цу, хIана аьлча иштта Iомаваьв из.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/348-ghalghay-lesson-37-4a154964c4",
       "confidence": 0.98
     },
@@ -33049,9 +32941,9 @@
       "ing": "Уж кхетац",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1247-уж-кхетац",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_1456",
@@ -33375,7 +33267,7 @@
       "source": "paydadosh",
       "sourceLabel": "PaydaDosh",
       "url": "https://paydadosh.ru/phrase/6422-паргiата-витал-со-паргiата-йитал-со",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_17208",
@@ -33985,7 +33877,7 @@
       "ing": "Хьоарах яь хIама йохка отдел",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/168-ghalghay-lesson-19-089687eb36",
       "confidence": 0.98
     },
@@ -34220,12 +34112,12 @@
     {
       "id": "pd_240",
       "slug": "240-ghalghay-lesson-24-bd565d311f",
-      "ru": "Официант: Ваш заказ принят",
-      "ruNorm": "официант ваш заказ принят",
+      "ru": "Официант: Ваш заказ принят. Вам придется подождать десять минут",
+      "ruNorm": "официант ваш заказ принят вам придется подождать десять минут",
       "ing": "Шун заказ хьаийцад. итт минота сабарде дезаргда шун.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/240-ghalghay-lesson-24-bd565d311f",
       "confidence": 0.98
     },
@@ -34489,7 +34381,7 @@
       "ing": "ЗIамига саг хьагIар чура араваьлар",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/121-ghalghay-lesson-13-34b6cce25b",
       "confidence": 0.98
     },
@@ -34561,9 +34453,9 @@
       "ing": "Цу предложенена гIалгIай (эрсий) метта таржам дел",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1349-цу-предложенена-гiалгiай-эрсий-метта-таржам-дел",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_16341",
@@ -34741,7 +34633,7 @@
       "ing": "Яздаьдалара аз, Iохайна ца ягIаш.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/274-ghalghay-lesson-28-c1b9b0d929",
       "confidence": 0.98
     },
@@ -35353,9 +35245,9 @@
       "ing": "Йистег1а хьахьокха сога",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1235-йистег1а-хьахьокха-сога",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_145",
@@ -35365,7 +35257,7 @@
       "ing": "Поваро чкъаьра кхерзар",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/145-ghalghay-lesson-17-c8d8ca3ea9",
       "confidence": 0.98
     },
@@ -35473,7 +35365,7 @@
       "ing": "ЦIен кIал подвал йоал.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/118-ghalghay-lesson-13-cac87742ca",
       "confidence": 0.98
     },
@@ -35545,9 +35437,9 @@
       "ing": "Оаркхилг хьакховдаде",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1212-оаркхилг-хьакховдаде",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_1809",
@@ -35847,7 +35739,7 @@
       "source": "paydadosh",
       "sourceLabel": "PaydaDosh",
       "url": "https://paydadosh.ru/phrase/1991-хьаал-сога-хала-деце",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_188",
@@ -35857,7 +35749,7 @@
       "ing": "Генарий даьтта",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/188-ghalghay-lesson-19-739ae936c4",
       "confidence": 0.98
     },
@@ -35929,9 +35821,9 @@
       "ing": "КIезига шортагIа дувцал",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1342-кiезига-шортагiа-дувцал",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1354",
@@ -35941,9 +35833,9 @@
       "ing": "Хьахаттал",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1354-хьахаттал",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_17815",
@@ -35955,18 +35847,6 @@
       "source": "paydadosh",
       "sourceLabel": "PaydaDosh",
       "url": "https://paydadosh.ru/phrase/17815-дукха-ха-г-ииртар-твох-долчох-ваьннав",
-      "confidence": 0.93
-    },
-    {
-      "id": "pd_19932",
-      "slug": "19932-etiquette-dikacha-naka-tia-hiyla",
-      "ru": "Пожелание счастливого пути (буквально: пусть будет на хорошем пути)",
-      "ruNorm": "пожелание счастливого пути буквально пусть будет на хорошем пути",
-      "ing": "Дикача наькъа тӀа хийла",
-      "category": "everyday_phrase",
-      "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
-      "url": "https://paydadosh.ru/phrase/19932-etiquette-dikacha-naka-tia-hiyla",
       "confidence": 0.93
     },
     {
@@ -36013,9 +35893,9 @@
       "ing": "Хатта мегаргдий...",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1360-хатта-мегаргдий",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_17162",
@@ -36085,7 +35965,7 @@
       "ing": "ГIол хьай лораш болча, верзаргва хьо.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/272-ghalghay-lesson-28-a8011c7160",
       "confidence": 0.98
     },
@@ -36097,7 +35977,7 @@
       "ing": "ГIол шоай лораш болча, дерзаргда шо.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/273-ghalghay-lesson-28-15f29a4e06",
       "confidence": 0.98
     },
@@ -36553,9 +36433,9 @@
       "ing": "Кхет, эхь ма хеталахь",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1346-кхет-эхь-ма-хеталахь",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_65",
@@ -36817,7 +36697,7 @@
       "ing": "Ткъаь цаI, 22 20 и 2 ткъаь шиъ и т д.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/99-ghalghay-lesson-09-35404f8a81",
       "confidence": 0.98
     },
@@ -36985,7 +36865,7 @@
       "ing": "ТIехьа ца виса хьажалахь!",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/221-ghalghay-lesson-22-e312738c6f",
       "confidence": 0.98
     },
@@ -37261,9 +37141,9 @@
       "ing": "Сихлелаш",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1222-сихлелаш",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_455",
@@ -37345,9 +37225,9 @@
       "ing": "Х1ана яг1ац хьо кхоана деша?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1241-х1ана-яг1ац-хьо-кхоана-деша",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_344",
@@ -37357,7 +37237,7 @@
       "ing": "Еррига сигале Iаьржъеш, морхаш тIаяьхкар, тIаккха чIоагIа догIа дийлхар.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/344-ghalghay-lesson-37-aa3c55db25",
       "confidence": 0.98
     },
@@ -37417,9 +37297,9 @@
       "ing": "Из бахьан долаш",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1204-из-бахьан-долаш",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_17842",
@@ -38269,7 +38149,7 @@
       "ing": "Чек яккхал сона.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/178-ghalghay-lesson-19-9a3626bf87",
       "confidence": 0.98
     },
@@ -38413,7 +38293,7 @@
       "ing": "Кхы хIама езий хьона?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/180-ghalghay-lesson-19-b5268ca200",
       "confidence": 0.98
     },
@@ -38425,7 +38305,7 @@
       "ing": "Шун цIагIарбараш раьза хургба Iа даьча совгIаташта.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/198-ghalghay-lesson-20-65db0d2e82",
       "confidence": 0.98
     },
@@ -38437,7 +38317,7 @@
       "ing": "Долаш да, хIанз хьатIадена.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/172-ghalghay-lesson-19-f7a87f911d",
       "confidence": 0.98
     },
@@ -38449,19 +38329,19 @@
       "ing": "Мишта дIахьоргья Iа из ерргига хIама?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/182-ghalghay-lesson-19-9eaf512f71",
       "confidence": 0.98
     },
     {
       "id": "pd_196",
       "slug": "196-ghalghay-lesson-20-4baf9b4927",
-      "ru": "Продавец: Примерьте эти туфли",
-      "ruNorm": "продавец примерьте эти туфли",
+      "ru": "Продавец: Примерьте эти туфли. Они 36-го размера",
+      "ruNorm": "продавец примерьте эти туфли они 36-го размера",
       "ing": "Укх туфлешка тIайийхе хьажал.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/196-ghalghay-lesson-20-4baf9b4927",
       "confidence": 0.98
     },
@@ -38473,7 +38353,7 @@
       "ing": "Кхы а йола тхо долча.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/185-ghalghay-lesson-19-17ee982aee",
       "confidence": 0.98
     },
@@ -38485,19 +38365,19 @@
       "ing": "Тхога харжа дукха товар да, тхона товар хIара дийнахьа хьатIаккхухь.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/175-ghalghay-lesson-19-e6ab5e5b13",
       "confidence": 0.98
     },
     {
       "id": "pd_179",
       "slug": "179-ghalghay-lesson-19-b570694378",
-      "ru": "Продавец: Я советую вам взять яблоки по 30 рублей, виноград по 50 рублей и груши по 40 рублей",
-      "ruNorm": "продавец я советую вам взять яблоки по 30 рублей виноград по 50 рублей и груши по 40 рублей",
+      "ru": "Продавец: Я советую вам взять яблоки по 30 рублей, виноград по 50 рублей и груши по 40 рублей. Все очень вкусное. Не пожалеешь, что купила",
+      "ruNorm": "продавец я советую вам взять яблоки по 30 рублей виноград по 50 рублей и груши по 40 рублей все очень вкусное не пожалеешь что купила",
       "ing": "Кхо тума деха Iажаши, пхи тума деха комсаши, диъ тума деха кхораши эцал хьайна. еррига чIоагIа чам болаш я. эцарах дехкеяргьяц хьо.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/179-ghalghay-lesson-19-b570694378",
       "confidence": 0.98
     },
@@ -38780,14 +38660,14 @@
     {
       "id": "pd_19954",
       "slug": "19954-etiquette-chuvala-megargviy",
-      "ru": "Просьба разрешения войти в помещение, к мужчине",
-      "ruNorm": "просьба разрешения войти в помещение к мужчине",
+      "ru": "Просьба разрешения войти в помещение, к мужчине. К женщине — «Чуяла мегаргйий?",
+      "ruNorm": "просьба разрешения войти в помещение к мужчине к женщине — чуяла мегаргйий",
       "ing": "Чувала мегаргвий?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Полонкоева А.А., Оздоева Э.Г. Речевой этикет",
       "url": "https://paydadosh.ru/phrase/19954-etiquette-chuvala-megargviy",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_535",
@@ -38852,14 +38732,14 @@
     {
       "id": "pd_19931",
       "slug": "19931-etiquette-iadika-hiyla",
-      "ru": "Прощание, которое говорит тот, кто уходит",
-      "ruNorm": "прощание которое говорит тот кто уходит",
+      "ru": "Прощание, которое говорит тот, кто уходит. Часть устоявшегося ингушского этикета прощания: уходящий — «Ӏадика хийла",
+      "ruNorm": "прощание которое говорит тот кто уходит часть устоявшегося ингушского этикета прощания уходящий — ӏадика хийла",
       "ing": "Ӏадика хийла",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Полонкоева А.А., Оздоева Э.Г. Речевой этикет",
       "url": "https://paydadosh.ru/phrase/19931-etiquette-iadika-hiyla",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_16539",
@@ -39181,7 +39061,7 @@
       "ing": "Далла ха йIаьхйойла хьа!",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/70-ghalghay-lesson-06-bd3a40ce7b",
       "confidence": 0.98
     },
@@ -39661,9 +39541,9 @@
       "ing": "Никъ дика хилба шун",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Словарь PaydaDosh",
       "url": "https://paydadosh.ru/phrase/680-entry-phrase-66425",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_17084",
@@ -39709,9 +39589,9 @@
       "ing": "Дала моаршал лулда цунна/царна",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Словарь PaydaDosh",
       "url": "https://paydadosh.ru/phrase/673-entry-phrase-66418",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_672",
@@ -39721,9 +39601,9 @@
       "ing": "Дала моаршал лулда хьона",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Словарь PaydaDosh",
       "url": "https://paydadosh.ru/phrase/672-entry-phrase-66417",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_683",
@@ -39829,9 +39709,9 @@
       "ing": "Дала дикача наькъа тӀа долда шо",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Словарь PaydaDosh",
       "url": "https://paydadosh.ru/phrase/681-entry-phrase-66426",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_688",
@@ -39865,9 +39745,9 @@
       "ing": "Дала дикача наькъа тӀа волва (йойла) хьо",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Словарь PaydaDosh",
       "url": "https://paydadosh.ru/phrase/678-entry-phrase-66423",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_662",
@@ -40585,9 +40465,9 @@
       "ing": "Никъ дика хилба хьа",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Словарь PaydaDosh",
       "url": "https://paydadosh.ru/phrase/677-entry-phrase-66422",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_17252",
@@ -41240,14 +41120,14 @@
     {
       "id": "pd_19951",
       "slug": "19951-etiquette-az-deg-tiara-barkal-oal-hoga",
-      "ru": "Развёрнутая, эмоциональная форма благодарности",
-      "ruNorm": "развернутая эмоциональная форма благодарности",
+      "ru": "Развёрнутая, эмоциональная форма благодарности (буквально: «я от сердца спасибо говорю тебе",
+      "ruNorm": "развернутая эмоциональная форма благодарности буквально я от сердца спасибо говорю тебе",
       "ing": "Аз дег тӀара баркал оал хьога",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Полонкоева А.А., Оздоева Э.Г. Речевой этикет",
       "url": "https://paydadosh.ru/phrase/19951-etiquette-az-deg-tiara-barkal-oal-hoga",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_19958",
@@ -41605,9 +41485,9 @@
       "ing": "Ма дарра дувцал сога",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1205-ма-дарра-дувцал-сога",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_17556",
@@ -42109,7 +41989,7 @@
       "ing": "Берий деларо гIадбуг даьй-ноаной.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/207-ghalghay-lesson-21-54a90d4968",
       "confidence": 0.98
     },
@@ -42349,7 +42229,7 @@
       "ing": "Чкъаьрий дохка отдел",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/167-ghalghay-lesson-19-6947c0c848",
       "confidence": 0.98
     },
@@ -42781,7 +42661,7 @@
       "ing": "ТIаккха хьа цен-даьна мишта хет спорт?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/250-ghalghay-lesson-25-cdd0c17825",
       "confidence": 0.98
     },
@@ -42793,7 +42673,7 @@
       "ing": "Корах арахьажача малагIа сурт гу шоана?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/77-ghalghay-lesson-07-3d621b28c3",
       "confidence": 0.98
     },
@@ -42805,7 +42685,7 @@
       "ing": "МалагIа книжка дешаш я хьо х1анз?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/246-ghalghay-lesson-25-4c110cdf05",
       "confidence": 0.98
     },
@@ -42817,7 +42697,7 @@
       "ing": "Яха, тIаккха хьа доттагIий малаш ба?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/67-ghalghay-lesson-05-cf6b3203c5",
       "confidence": 0.98
     },
@@ -42829,7 +42709,7 @@
       "ing": "Дайрий хьона, Iуйранна мишта дохк доаллар?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/281-ghalghay-lesson-29-fa0703e810",
       "confidence": 0.98
     },
@@ -42841,43 +42721,31 @@
       "ing": "Хьона хой цар цIераш?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/156-ghalghay-lesson-18-e71eb99e73",
       "confidence": 0.98
     },
     {
       "id": "pd_284",
       "slug": "284-ghalghay-lesson-29-09f8f5bfbb",
-      "ru": "Саид: А я лето провел в горах",
-      "ruNorm": "саид а я лето провел в горах",
+      "ru": "Саид: А я лето провел в горах. Там было не так жарко. Часто шли дожди. А иногда ночью было даже холодно",
+      "ruNorm": "саид а я лето провел в горах там было не так жарко часто шли дожди а иногда ночью было даже холодно",
       "ing": "Аз ахка лоам даьккхад. цига иштта йIайха яц. яйха яцар. каст-каста догIаш делхар. цкъаза бисан шийла а хулар.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/284-ghalghay-lesson-29-09f8f5bfbb",
-      "confidence": 0.98
-    },
-    {
-      "id": "pd_297",
-      "slug": "297-ghalghay-lesson-30-488cf4d2a9",
-      "ru": "Саид: Ваха, здравствуй! Рад нашей встрече! Отдохнул я очень хорошо",
-      "ruNorm": "саид ваха здравствуй рад нашей встрече отдохнул я очень хорошо",
-      "ing": "Диканца вахийла, ваха! дика хет хьо бIаргавайна. дика салеIад аз. салоIамах лаьца дукха дувца йиш я. аз сурташ дахьаргда хьона, тIакккха хьайна бIарглургда хьона, со мичахьа хиннав.",
-      "category": "lesson_phrase",
-      "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
-      "url": "https://paydadosh.ru/phrase/297-ghalghay-lesson-30-488cf4d2a9",
       "confidence": 0.98
     },
     {
       "id": "pd_287",
       "slug": "287-ghalghay-lesson-29-6f289d4b95",
-      "ru": "Саид: Весной бывает очень красиво",
-      "ruNorm": "саид весной бывает очень красиво",
+      "ru": "Саид: Весной бывает очень красиво. Вся природа просыпается в это время. У людей настроение поднимается",
+      "ruNorm": "саид весной бывает очень красиво вся природа просыпается в это время у людей настроение поднимается",
       "ing": "БIаьсти чIоагIа хоза хул. деррига Iалам сомадоал цу хана. наьха самукъадоал.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/287-ghalghay-lesson-29-6f289d4b95",
       "confidence": 0.98
     },
@@ -42889,19 +42757,19 @@
       "ing": "Беррига наькъа цхьа сахьат ха дIайода са.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/92-ghalghay-lesson-10-852ac2328c",
       "confidence": 0.98
     },
     {
       "id": "pd_39",
       "slug": "39-ghalghay-lesson-03-d1e19b73dd",
-      "ru": "Саид: Вы-диктор",
-      "ruNorm": "саид вы-диктор",
+      "ru": "Саид: Вы-диктор. Вам нравится Ваша профессия?",
+      "ruNorm": "саид вы-диктор вам нравится ваша профессия",
       "ing": "Хьо диктор я. хоза хетий хьона хьона хьай болх?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/39-ghalghay-lesson-03-d1e19b73dd",
       "confidence": 0.98
     },
@@ -42913,7 +42781,7 @@
       "ing": "Iийса , гой хьона, из тоачув да, ер эсти я.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/158-ghalghay-lesson-18-dc8565aa4c",
       "confidence": 0.98
     },
@@ -42925,7 +42793,7 @@
       "ing": "Бакъдар аьлча, сона моллагIа хаоттам а шера ха а хозахет.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/289-ghalghay-lesson-29-60e1e2fef3",
       "confidence": 0.98
     },
@@ -42937,7 +42805,7 @@
       "ing": "Ди дика хилда хьа! миштад хьа гIулакхаш, яха?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/42-ghalghay-lesson-04-77c5320fb8",
       "confidence": 0.98
     },
@@ -42949,7 +42817,7 @@
       "ing": "МалагIа диагноз оттаяьй Iа сона? малагIа молхаш (диета) мегаргьяр сона? из лазар дIа-хьа доалаш-м дац? хьона юха тIа маца ва веза са?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/140-ghalghay-lesson-16-3a5275f802",
       "confidence": 0.98
     },
@@ -42961,7 +42829,7 @@
       "ing": "Хий мала а чкъаьрий лувца а йиш я цу чура.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/163-ghalghay-lesson-18-003fb964dc",
       "confidence": 0.98
     },
@@ -42973,55 +42841,55 @@
       "ing": "Хьо малагIча этажа тIа яхаш ва?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/75-ghalghay-lesson-07-a65a0d6393",
       "confidence": 0.98
     },
     {
       "id": "pd_43",
       "slug": "43-ghalghay-lesson-04-410eefde52",
-      "ru": "САИД: Нет, не женат",
-      "ruNorm": "саид нет не женат",
+      "ru": "САИД: Нет, не женат. А Вы замужем, Яха?",
+      "ruNorm": "саид нет не женат а вы замужем яха",
       "ing": "Со саг йоалаянза ва.тIаккха хьо маьре яхайий?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/43-ghalghay-lesson-04-410eefde52",
       "confidence": 0.98
     },
     {
       "id": "pd_248",
       "slug": "248-ghalghay-lesson-25-4b5253fe42",
-      "ru": "Саид: Нет, я не читал этот роман, но прочитаю",
-      "ruNorm": "саид нет я не читал этот роман но прочитаю",
+      "ru": "Саид: Нет, я не читал этот роман, но прочитаю. Я очень люблю роман Идриса Бозоркина «Из тьмы веков",
+      "ruNorm": "саид нет я не читал этот роман но прочитаю я очень люблю роман идриса бозоркина из тьмы веков",
       "ing": "Аа, аз из роман дийшадац, дешарга-м да. сона чIоагIа хоза хет базоркин идриса яздаь боадонгара яха роман.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/248-ghalghay-lesson-25-4b5253fe42",
       "confidence": 0.98
     },
     {
       "id": "pd_66",
       "slug": "66-ghalghay-lesson-05-abcdf7ad9f",
-      "ru": "Саид: Он сейчас учится в Египте",
-      "ruNorm": "саид он сейчас учится в египте",
+      "ru": "Саид: Он сейчас учится в Египте. Но мы с ним общаемся по электронной почте",
+      "ruNorm": "саид он сейчас учится в египте но мы с ним общаемся по электронной почте",
       "ing": "Из хIанз мисара мехка (египет) дешаш ва. хIаьта оаха электронни почте гIолла къамаьл ду.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/66-ghalghay-lesson-05-abcdf7ad9f",
       "confidence": 0.98
     },
     {
       "id": "pd_243",
       "slug": "243-ghalghay-lesson-24-7429b39fef",
-      "ru": "Саид: Официант, принесите, пожалуйста, счет",
-      "ruNorm": "саид официант принесите пожалуйста счет",
+      "ru": "Саид: Официант, принесите, пожалуйста, счет. Мы хотим рассчитаться и заказать ещё по чашечке чая",
+      "ruNorm": "саид официант принесите пожалуйста счет мы хотим рассчитаться и заказать еще по чашечке чая",
       "ing": "Официант, счет хьаял, ахча дIадала а кхы а цхьацца чаь пела заказ де а безам ба тха.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/243-ghalghay-lesson-24-7429b39fef",
       "confidence": 0.98
     },
@@ -43033,43 +42901,43 @@
       "ing": "СалеIачул тIехьагIа дегIа низ чубоагIа.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/322-ghalghay-lesson-33-2436172f8a",
       "confidence": 0.98
     },
     {
       "id": "pd_238",
       "slug": "238-ghalghay-lesson-24-ab53577f9d",
-      "ru": "Саид: Проходите, садись за этот столик",
-      "ruNorm": "саид проходите садись за этот столик",
+      "ru": "Саид: Проходите, садись за этот столик. Отсюда хороший вид на улицу. Официант, покажите нам меню, мы хотим сделать заказ",
+      "ruNorm": "саид проходите садись за этот столик отсюда хороший вид на улицу официант покажите нам меню мы хотим сделать заказ",
       "ing": "ХьалмагIа довла, Iоховша укх истола юхе, укхазара хоза аре гу. офицант, меню хьахьокхал, заказ де безам ба тха.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/238-ghalghay-lesson-24-ab53577f9d",
       "confidence": 0.98
     },
     {
       "id": "pd_94",
       "slug": "94-ghalghay-lesson-10-cb26a733a8",
-      "ru": "Саид: У меня есть машина, но я на нем редко езжу",
-      "ruNorm": "саид у меня есть машина но я на нем редко езжу",
+      "ru": "Саид: У меня есть машина, но я на нем редко езжу. Ты любишь быстро ездить на машине?",
+      "ruNorm": "саид у меня есть машина но я на нем редко езжу ты любишь быстро ездить на машине",
       "ing": "Сога машин я, бакъда со цунца дукха лелац. хьона хоза хетий машин сиха хоахкаш?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/94-ghalghay-lesson-10-cb26a733a8",
       "confidence": 0.98
     },
     {
       "id": "pd_160",
       "slug": "160-ghalghay-lesson-18-046dcdfcb4",
-      "ru": "Саид: Хватит, давай вернемся к друзьям",
-      "ruNorm": "саид хватит давай вернемся к друзьям",
+      "ru": "Саид: Хватит, давай вернемся к друзьям. Они, наверное, ждут",
+      "ruNorm": "саид хватит давай вернемся к друзьям они наверное ждут",
       "ing": "Тоъаргда, юхадолх вай доттагIий болча, хетаргехь, хьежа хургба уж.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/160-ghalghay-lesson-18-046dcdfcb4",
       "confidence": 0.98
     },
@@ -43081,20 +42949,8 @@
       "ing": "Мегаргда, тIаккха цу юкъа ази Iийсаси укх юхе гIолла кIезига го боаккхаргба.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/153-ghalghay-lesson-18-b2ba7a6459",
-      "confidence": 0.98
-    },
-    {
-      "id": "pd_241",
-      "slug": "241-ghalghay-lesson-24-f2739fde71",
-      "ru": "Саид: Это правда",
-      "ruNorm": "саид это правда",
-      "ing": "Из бакъда. се цхьаь волча хана а, дукха воагIалу со укхаза. юа хIама мишта кийчъю шоашта ма гой шоана. укхаза болх беш дика повараш ба. къона нах ба уж, царна хоза хет тайп-тайпара юа хIамаш кийчъеш.",
-      "category": "lesson_phrase",
-      "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
-      "url": "https://paydadosh.ru/phrase/241-ghalghay-lesson-24-f2739fde71",
       "confidence": 0.98
     },
     {
@@ -43105,19 +42961,19 @@
       "ing": "Со хьежаргва шуга.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/324-ghalghay-lesson-33-e128fad0c9",
       "confidence": 0.98
     },
     {
       "id": "pd_139",
       "slug": "139-ghalghay-lesson-16-d46f9cac1a",
-      "ru": "Саид: Я заболел (простудился)",
-      "ruNorm": "саид я заболел простудился",
+      "ru": "Саид: Я заболел (простудился). У меня кашель (насморк, температура). У меня болит сердце. Я вывихнул ногу (сломал руку, порезал палец)",
+      "ruNorm": "саид я заболел простудился у меня кашель насморк температура у меня болит сердце я вывихнул ногу сломал руку порезал палец",
       "ing": "Со цамогаш хиннав (шелвеннав). сона йIовхараш я ( йIовхал я ). са дог лаз. аз ког чурбаьккхаб (кулг кагдаьд, пIелг хоадабаьб).",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/139-ghalghay-lesson-16-d46f9cac1a",
       "confidence": 0.98
     },
@@ -43129,7 +42985,7 @@
       "ing": "Со кхет, компьютер ца хилча хIанзарча замагIа йиш йоацилга, хIаьта ваха а догдаха а са безам ба бокъонца, чате доацаш.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/253-ghalghay-lesson-25-c4f5245402",
       "confidence": 0.98
     },
@@ -43141,7 +42997,7 @@
       "ing": "Со дешаш ва москве россе паччахьалкхен гуманитарни университете",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/34-ghalghay-lesson-03-c1e818efbe",
       "confidence": 0.98
     },
@@ -43196,14 +43052,14 @@
     {
       "id": "pd_19949",
       "slug": "19949-etiquette-barkal",
-      "ru": "Самая короткая и употребимая форма благодарности",
-      "ruNorm": "самая короткая и употребимая форма благодарности",
+      "ru": "Самая короткая и употребимая форма благодарности. В развёрнутой форме — «Баркал хилда хьона",
+      "ruNorm": "самая короткая и употребимая форма благодарности в развернутой форме — баркал хилда хьона",
       "ing": "Баркал",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Полонкоева А.А., Оздоева Э.Г. Речевой этикет",
       "url": "https://paydadosh.ru/phrase/19949-etiquette-barkal",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_183",
@@ -43220,12 +43076,12 @@
     {
       "id": "pd_110",
       "slug": "110-ghalghay-lesson-09-f4c4da24cd",
-      "ru": "Сами числительные не изменяются при сочетании с существительным в именительном падеже",
-      "ruNorm": "сами числительные не изменяются при сочетании с существительным в именительном падеже",
+      "ru": "Сами числительные не изменяются при сочетании с существительным в именительном падеже. Исключение",
+      "ruNorm": "сами числительные не изменяются при сочетании с существительным в именительном падеже исключение",
       "ing": "4 и все образованные от него изменяются по классам. Например: ВИЪ КЪОНАХ (КЪОНАХ ВА), ЙИЪ КХАЛСАГ (КХАЛСАГ Я), БИЪ КОГ (КОГ БА) , ДИЪ ЦIА (ЦIА ДА).",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/110-ghalghay-lesson-09-f4c4da24cd",
       "confidence": 0.98
     },
@@ -43417,7 +43273,7 @@
       "ing": "Маьр-да",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/57-ghalghay-lesson-04-16cc7d9c21",
       "confidence": 0.98
     },
@@ -43429,7 +43285,7 @@
       "ing": "Маьр-нана",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/58-ghalghay-lesson-04-7a90442b0d",
       "confidence": 0.98
     },
@@ -44017,7 +43873,7 @@
       "ing": "Тахан ткъаь иттлагIа ди да",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/27-ghalghay-lesson-02-f0dcdccc42",
       "confidence": 0.98
     },
@@ -44036,12 +43892,12 @@
     {
       "id": "pd_170",
       "slug": "170-ghalghay-lesson-19-9e191caa90",
-      "ru": "Сегодня этот магазин посетила Яха",
-      "ruNorm": "сегодня этот магазин посетила яха",
+      "ru": "Сегодня этот магазин посетила Яха. У нее завтра день рождения, поэтому она будет закупать продукты. Ее поздравить придут все друзья",
+      "ruNorm": "сегодня этот магазин посетила яха у нее завтра день рождения поэтому она будет закупать продукты ее поздравить придут все друзья",
       "ing": "Тахан цу тика тIа яхаяр яха. кхоана из яь ди да, цудухьа продукташ эца йоалл из. из даькъалъювца цун доттагIий боагIаргба.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/170-ghalghay-lesson-19-9e191caa90",
       "confidence": 0.98
     },
@@ -44053,7 +43909,7 @@
       "ing": "ХIанз ворхIсахьат даьннад",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/29-ghalghay-lesson-02-a168728254",
       "confidence": 0.98
     },
@@ -44065,7 +43921,7 @@
       "ing": "ХIанз бIаьсти я",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/24-ghalghay-lesson-02-e612be8b16",
       "confidence": 0.98
     },
@@ -44077,7 +43933,7 @@
       "ing": "Х1анз малагIа бутт ба?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/25-ghalghay-lesson-02-0f3d1ec69e",
       "confidence": 0.98
     },
@@ -44485,7 +44341,7 @@
       "ing": "Цхьа хIама алал сога.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/267-ghalghay-lesson-28-36debc7f99",
       "confidence": 0.98
     },
@@ -44509,7 +44365,7 @@
       "ing": "Цхьа хIама ар хадижата",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/149-ghalghay-lesson-17-b8db7a22e0",
       "confidence": 0.98
     },
@@ -44713,7 +44569,7 @@
       "ing": "Мел ха яккха еза вай наькъа? Кхо сахьат даккха дезаргда вай.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/339-ghalghay-lesson-36-c9f39806b8",
       "confidence": 0.98
     },
@@ -44725,9 +44581,9 @@
       "ing": "Фу ха яьннай? / Мел ха яьннай",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1230-фу-ха-яьннай-мел-ха-яьннай",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_17032",
@@ -44833,9 +44689,9 @@
       "ing": "Фу доаккх укхох? / фу дех укхох?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1233-фу-доаккх-укхох-фу-дех-укхох",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_16947",
@@ -45572,14 +45428,14 @@
     {
       "id": "pd_19956",
       "slug": "19956-etiquette-hayna-hala-dece",
-      "ru": "Смягчающая формула при просьбе (буквально: «тебе если не трудно»)",
+      "ru": "Смягчающая формула при просьбе (буквально: «тебе если не трудно",
       "ruNorm": "смягчающая формула при просьбе буквально тебе если не трудно",
       "ing": "Хьайна хала деце",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Полонкоева А.А., Оздоева Э.Г. Речевой этикет",
       "url": "https://paydadosh.ru/phrase/19956-etiquette-hayna-hala-dece",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_17987",
@@ -45613,7 +45469,7 @@
       "ing": "Лоа делх",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/142-ghalghay-lesson-17-bebda1f899",
       "confidence": 0.98
     },
@@ -45733,7 +45589,7 @@
       "ing": "Ший долахьа йола автомобиль",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/95-ghalghay-lesson-10-0eff58250c",
       "confidence": 0.98
     },
@@ -45944,12 +45800,12 @@
     {
       "id": "pd_291",
       "slug": "291-ghalghay-lesson-29-05f0f8033d",
-      "ru": "Солнечно",
-      "ruNorm": "солнечно",
+      "ru": "Солнечно. Пасмурно. Туман",
+      "ruNorm": "солнечно пасмурно туман",
       "ing": "Малх хьеж. кхаьла я. дохк доалл.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/291-ghalghay-lesson-29-05f0f8033d",
       "confidence": 0.98
     },
@@ -46177,9 +46033,9 @@
       "ing": "Баркал хьона совг1ат даларах!",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1215-баркал-хьона-совг1ат-даларах",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1358",
@@ -46189,9 +46045,9 @@
       "ing": "Баркала 1а деннача хоза совг1ата",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1358-баркала-1а-деннача-хоза-совг1ата",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1213",
@@ -46201,9 +46057,9 @@
       "ing": "Баркал хилда хьона",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1213-баркал-хилда-хьона",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_1697",
@@ -46297,9 +46153,9 @@
       "ing": "бийса даькъала хийла",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@paydamu",
       "url": "https://paydadosh.ru/phrase/699-entry-phrase-66463",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_10",
@@ -46309,7 +46165,7 @@
       "ing": "Бийса даькъала хийла шун!",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/10-ghalghay-lesson-01-dec605486f",
       "confidence": 0.98
     },
@@ -46321,7 +46177,7 @@
       "ing": "Бийса даькъала хийла шун!",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/21-ghalghay-lesson-01-10ad5330b7",
       "confidence": 0.98
     },
@@ -46489,7 +46345,7 @@
       "ing": "Тхона юкъе во нах бац.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/126-ghalghay-lesson-13-bb8ca36efc",
       "confidence": 0.98
     },
@@ -46501,7 +46357,7 @@
       "ing": "Юкъера пIелг",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/137-ghalghay-lesson-15-7f44b8eed3",
       "confidence": 0.98
     },
@@ -46580,26 +46436,26 @@
     {
       "id": "pd_19944",
       "slug": "19944-etiquette-shedar-dika-da",
-      "ru": "Стандартный ответ на вопрос «как дела» («миштад хьа гӀулакхаш?»)",
-      "ruNorm": "стандартный ответ на вопрос как дела миштад хьа гӏулакхаш",
+      "ru": "Стандартный ответ на вопрос «как дела",
+      "ruNorm": "стандартный ответ на вопрос как дела",
       "ing": "Шедар дика да",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Полонкоева А.А., Оздоева Э.Г. Речевой этикет",
       "url": "https://paydadosh.ru/phrase/19944-etiquette-shedar-dika-da",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_19945",
       "slug": "19945-etiquette-kerda-hiama-dac",
-      "ru": "Стандартный ответ на вопрос «что нового?» («керда хӀама дий цига?»)",
-      "ruNorm": "стандартный ответ на вопрос что нового керда хӏама дий цига",
+      "ru": "Стандартный ответ на вопрос «что нового?",
+      "ruNorm": "стандартный ответ на вопрос что нового",
       "ing": "Керда хӀама дац",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Полонкоева А.А., Оздоева Э.Г. Речевой этикет",
       "url": "https://paydadosh.ru/phrase/19945-etiquette-kerda-hiama-dac",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_1621",
@@ -46645,7 +46501,7 @@
       "ing": "Воккха саг",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/13-ghalghay-lesson-01-029adba3f0",
       "confidence": 0.98
     },
@@ -46681,7 +46537,7 @@
       "ing": "Йоккха саг",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/14-ghalghay-lesson-01-108669d067",
       "confidence": 0.98
     },
@@ -47137,7 +46993,7 @@
       "ing": "Дикача наькъ тIа хилда шо! дика никъ хилба шун!",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/97-ghalghay-lesson-10-4ff38d2855",
       "confidence": 0.98
     },
@@ -47485,7 +47341,7 @@
       "ing": "Цу чу плита латт, йоккха холодильник а, хIама юа истол а, гIандаш а латт.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/84-ghalghay-lesson-08-0a86b41500",
       "confidence": 0.98
     },
@@ -47617,7 +47473,7 @@
       "ing": "Хьа гаргара нах",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/47-ghalghay-lesson-04-0923731387",
       "confidence": 0.98
     },
@@ -47629,7 +47485,7 @@
       "ing": "Хьа воша",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/45-ghalghay-lesson-04-cee8c83606",
       "confidence": 0.98
     },
@@ -47641,7 +47497,7 @@
       "ing": "Хьа",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/59-ghalghay-lesson-04-e01aab07f1",
       "confidence": 0.98
     },
@@ -47665,7 +47521,7 @@
       "ing": "Хьа йиша",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/46-ghalghay-lesson-04-50a56b62bf",
       "confidence": 0.98
     },
@@ -47677,7 +47533,7 @@
       "ing": "Хьона хозахет (хозахетац) со бIаргавайча?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/208-ghalghay-lesson-21-8e49a8e0c9",
       "confidence": 0.98
     },
@@ -47917,7 +47773,7 @@
       "ing": "Наьци",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/56-ghalghay-lesson-04-9fec7892fc",
       "confidence": 0.98
     },
@@ -47929,7 +47785,7 @@
       "ing": "Даьци",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/55-ghalghay-lesson-04-419293d2d0",
       "confidence": 0.98
     },
@@ -47941,7 +47797,7 @@
       "ing": "Тимура беке къонгаш яха роман дийшад.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/144-ghalghay-lesson-17-8c0bf3e29f",
       "confidence": 0.98
     },
@@ -48925,19 +48781,19 @@
       "ing": "Укхаза г1али увза йиш йий?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1363-укхаза-г1али-увза-йиш-йий",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_152",
       "slug": "152-ghalghay-lesson-18-e818db255e",
-      "ru": "Тухан: Я соберу сухих дров",
-      "ruNorm": "тухан я соберу сухих дров",
+      "ru": "Тухан: Я соберу сухих дров. Надо зажечь костер, чтобы сделать шашлык",
+      "ruNorm": "тухан я соберу сухих дров надо зажечь костер чтобы сделать шашлык",
       "ing": "Аз декъа дахча гулдергда вайна. цIи ювза еза, шашлык датта.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/152-ghalghay-lesson-18-e818db255e",
       "confidence": 0.98
     },
@@ -48949,7 +48805,7 @@
       "ing": "Аз Iомавергва хьо.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/161-ghalghay-lesson-18-ff69efbbe1",
       "confidence": 0.98
     },
@@ -49009,7 +48865,7 @@
       "ing": "Дика лор хургвар хьох.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/278-ghalghay-lesson-28-6acda70471",
       "confidence": 0.98
     },
@@ -49033,7 +48889,7 @@
       "ing": "Меца вий хьо? Меца-м вац, чай-м маргдар аз.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/340-ghalghay-lesson-36-741089581a",
       "confidence": 0.98
     },
@@ -49045,9 +48901,9 @@
       "ing": "1а цунна жоп деннадий?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1229-1а-цунна-жоп-деннадий",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_331",
@@ -49057,7 +48913,7 @@
       "ing": "-Кхоана воагIий хьо?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/331-ghalghay-lesson-35-dfe1ba1bbe",
       "confidence": 0.98
     },
@@ -49069,7 +48925,7 @@
       "ing": "Хьо кхоана хьоалчагIа водаций?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/277-ghalghay-lesson-28-54adf6b8c6",
       "confidence": 0.98
     },
@@ -49093,7 +48949,7 @@
       "ing": "Хьона со езий (везий)?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/201-ghalghay-lesson-21-db45ad7792",
       "confidence": 0.98
     },
@@ -49105,7 +48961,7 @@
       "ing": "Сона хьо хозахет.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/204-ghalghay-lesson-21-5853b85755",
       "confidence": 0.98
     },
@@ -49129,7 +48985,7 @@
       "ing": "Хьо са доттагIа ва",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/63-ghalghay-lesson-05-dabd92cb41",
       "confidence": 0.98
     },
@@ -49141,7 +48997,7 @@
       "ing": "Хьо са неш я",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/64-ghalghay-lesson-05-e8be3de286",
       "confidence": 0.98
     },
@@ -49153,7 +49009,7 @@
       "ing": "Каьхат ЯЗДЕРГДИЙ Iа?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/335-ghalghay-lesson-36-20c1a5d585",
       "confidence": 0.98
     },
@@ -49165,9 +49021,9 @@
       "ing": "Хьо кхетац",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1245-хьо-кхетац",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_1750",
@@ -49189,7 +49045,7 @@
       "ing": "Бос чIогIа дика ба хьа!",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/295-ghalghay-lesson-30-3692c8dff2",
       "confidence": 0.98
     },
@@ -49201,7 +49057,7 @@
       "ing": "АЬННАДИЙ Iа цунга ?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/334-ghalghay-lesson-36-0613812f0b",
       "confidence": 0.98
     },
@@ -49861,9 +49717,9 @@
       "ing": "Цхьа хаттар дар са хьога",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1353-цхьа-хаттар-дар-са-хьога",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_217",
@@ -49873,7 +49729,7 @@
       "ing": "Хьоца къамаьл дар са.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/217-ghalghay-lesson-22-9c54ce8868",
       "confidence": 0.98
     },
@@ -49885,9 +49741,9 @@
       "ing": "Сога ха яц",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1221-сога-ха-яц",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_778",
@@ -49945,7 +49801,7 @@
       "ing": "Цунга боккха бала ба.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/209-ghalghay-lesson-21-1b9430a34a",
       "confidence": 0.98
     },
@@ -50185,7 +50041,7 @@
       "ing": "Ахча дий хьога?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/337-ghalghay-lesson-36-d5fe2eb318",
       "confidence": 0.98
     },
@@ -50197,9 +50053,9 @@
       "ing": "Цунца бувзам бий хьа?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1193-цунца-бувзам-бий-хьа",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_726",
@@ -50643,7 +50499,7 @@
       "source": "paydadosh",
       "sourceLabel": "PaydaDosh",
       "url": "https://paydadosh.ru/phrase/6421-дӏаяла",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_6420",
@@ -50655,7 +50511,7 @@
       "source": "paydadosh",
       "sourceLabel": "PaydaDosh",
       "url": "https://paydadosh.ru/phrase/6420-дӏавала",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_15995",
@@ -50677,7 +50533,7 @@
       "ing": "Хьокха пIелг",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/136-ghalghay-lesson-15-444789d958",
       "confidence": 0.98
     },
@@ -51445,7 +51301,7 @@
       "ing": "Например: КIАЬНКА- МАЛЬЧИКА, ДЕШАРХОЧУН",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/263-ghalghay-lesson-27-41a5ef7cc5",
       "confidence": 0.98
     },
@@ -51469,7 +51325,7 @@
       "ing": "Дешалахь, дехкеваргвац хьо.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/270-ghalghay-lesson-28-3c04daeb5b",
       "confidence": 0.98
     },
@@ -51565,19 +51421,19 @@
       "ing": "Фатимас экзаменаш дика д1аеннаяр",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/148-ghalghay-lesson-17-2739c12865",
       "confidence": 0.98
     },
     {
       "id": "pd_307",
       "slug": "307-ghalghay-lesson-31-ee9bfa5076",
-      "ru": "Фатима: Да, я проголодалась",
-      "ruNorm": "фатима да я проголодалась",
+      "ru": "Фатима: Да, я проголодалась. Неплохо было бы немного перекусить. Мы ходим уже три четыре часа",
+      "ruNorm": "фатима да я проголодалась неплохо было бы немного перекусить мы ходим уже три четыре часа",
       "ing": "Мецъеннай со. кIезиг-дукха хIама кхаьллача новкъа-м хургдацар. вай лела кхо-диъ сахьат да.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/307-ghalghay-lesson-31-ee9bfa5076",
       "confidence": 0.98
     },
@@ -51589,67 +51445,55 @@
       "ing": "Ма тайп-тайпара сакъердаме маймалаш да уж. конфеташ эггара кадайгIчарна кхаьчар, вожаш дисар.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/305-ghalghay-lesson-31-1b90e73ad6",
       "confidence": 0.98
     },
     {
       "id": "pd_309",
       "slug": "309-ghalghay-lesson-31-f7641a30f8",
-      "ru": "Фатима: Лебедь красивая птица",
-      "ruNorm": "фатима лебедь красивая птица",
+      "ru": "Фатима: Лебедь красивая птица. Их здесь много. Вон плавают утки, я их видела у бабушки",
+      "ruNorm": "фатима лебедь красивая птица их здесь много вон плавают утки я их видела у бабушки",
       "ing": "ГIургIаж хоза оалхазар да. укхаза дукха я уж. дIа боабашкаш я нек деш, сона уж нани йолча бIаргаяйнай.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/309-ghalghay-lesson-31-f7641a30f8",
       "confidence": 0.98
     },
     {
       "id": "pd_311",
       "slug": "311-ghalghay-lesson-31-b80677d0ef",
-      "ru": "Фатима: Сейчас посмотрим на рыбок и пойдем домой",
-      "ruNorm": "фатима сейчас посмотрим на рыбок и пойдем домой",
+      "ru": "Фатима: Сейчас посмотрим на рыбок и пойдем домой. Смотри, какие они красивые. Их так много",
+      "ruNorm": "фатима сейчас посмотрим на рыбок и пойдем домой смотри какие они красивые их так много",
       "ing": "ХIанз чкъаьрилгашка хьажа чугIоргда вай. хьажал, ма хоза да уж. дукха-м да уж.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/311-ghalghay-lesson-31-b80677d0ef",
-      "confidence": 0.98
-    },
-    {
-      "id": "pd_313",
-      "slug": "313-ghalghay-lesson-31-5b9c7595a2",
-      "ru": "Фатима: Спасибо тебе за ТО, что привела меня сюда",
-      "ruNorm": "фатима спасибо тебе за то что привела меня сюда",
-      "ing": "Баркал хьона со укхаза йоалаярах. дукха керда хIама хайра сона. оакхарий иштта дийна долаш гуш дуккха сакъердамегIа да. кхоана сай доттагIашка тахан вай хиннача наькъах лаьца дувцаргда аз.",
-      "category": "lesson_phrase",
-      "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
-      "url": "https://paydadosh.ru/phrase/313-ghalghay-lesson-31-5b9c7595a2",
       "confidence": 0.98
     },
     {
       "id": "pd_301",
       "slug": "301-ghalghay-lesson-31-864615050e",
-      "ru": "Фатима: Хорошо",
-      "ruNorm": "фатима хорошо",
+      "ru": "Фатима: Хорошо. Как здесь интересно! Смотри, вон там я вижу медведя, а вот волк, а в клетке рядом рыжая лиса",
+      "ruNorm": "фатима хорошо как здесь интересно смотри вон там я вижу медведя а вот волк а в клетке рядом рыжая лиса",
       "ing": "Мегаргда. ма сакъердаме я укхаза. хьажал, дIа дIахьежача, сона ча бIаргагу, ер борз я, цунна юхе клетка чу кера цхьогал дагIа.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/301-ghalghay-lesson-31-864615050e",
       "confidence": 0.98
     },
     {
       "id": "pd_303",
       "slug": "303-ghalghay-lesson-31-9854625e46",
-      "ru": "Фатима: Это крокодил",
-      "ruNorm": "фатима это крокодил",
+      "ru": "Фатима: Это крокодил. Я еще знаю, что это слон, его привезли из Индии. Смотри, как он хоботом взял банан",
+      "ruNorm": "фатима это крокодил я еще знаю что это слон его привезли из индии смотри как он хоботом взял банан",
       "ing": "Из воатагар я. сона кхы а хов из пил долга, хIинди мехкара доаладаьд из. хьажал, тIолдаца банан хьа мишта ийцар цо.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/303-ghalghay-lesson-31-9854625e46",
       "confidence": 0.98
     },
@@ -52033,7 +51877,7 @@
       "ing": "Шелал дегIа чугIолла чакхъяьллар сона.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/123-ghalghay-lesson-13-411f46fc77",
       "confidence": 0.98
     },
@@ -52669,7 +52513,7 @@
       "ing": "вещественный. Хьанах?Сенах? через что? из чего? и т.д.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/227-ghalghay-lesson-23-188ae5fa0d",
       "confidence": 0.98
     },
@@ -53118,18 +52962,6 @@
       "confidence": 0.93
     },
     {
-      "id": "pd_1194",
-      "slug": "1194-оалий-хьог1-цо",
-      "ru": "хьог1 цо? — Говорит ли он / она?",
-      "ruNorm": "хьог1 цо — говорит ли он / она",
-      "ing": "Оалий - хьог1 цо?",
-      "category": "everyday_phrase",
-      "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
-      "url": "https://paydadosh.ru/phrase/1194-оалий-хьог1-цо",
-      "confidence": 0.93
-    },
-    {
       "id": "pd_15954",
       "slug": "15954-аьлдиташка-ладувг-ар-цамагар-ла-ца-дувг-ар-молха",
       "ru": "цамагар, ла ца дувгӀар — молха — Слушать сплетни — болезнь, не слушать — лекарство",
@@ -53293,7 +53125,7 @@
       "ing": "Каст-каста тела шоай гаргарча наха совгIаташ!",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/200-ghalghay-lesson-20-f4a87f1b55",
       "confidence": 0.98
     },
@@ -53845,9 +53677,9 @@
       "ing": "Сево дохадаьд хьа дог?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1324-сево-дохадаьд-хьа-дог",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_211",
@@ -53857,7 +53689,7 @@
       "ing": "Согара фу гIо-новкъостал хургда хьона?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/211-ghalghay-lesson-21-2c4df58a36",
       "confidence": 0.98
     },
@@ -54337,9 +54169,9 @@
       "ing": "Фуд укхаза доалар?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1198-фуд-укхаза-доалар",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_547",
@@ -54445,9 +54277,9 @@
       "ing": "Цу деша фу маIан да?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1348-цу-деша-фу-маiан-да",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_prov_1863",
@@ -54505,9 +54337,9 @@
       "ing": "Фу хиннад?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1197-фу-хиннад",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_18018",
@@ -54529,9 +54361,9 @@
       "ing": "Вай шинне доттаг1а вайна д1а ма ваьннавий, т1еххьарча деношка",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1224-вай-шинне-доттаг1а-вайна-д1а-ма-ваьннавий-т1еххьарча-деношка",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_16480",
@@ -55177,7 +55009,7 @@
       "ing": "Фоарт",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/134-ghalghay-lesson-15-ebee54b9d2",
       "confidence": 0.98
     },
@@ -55381,9 +55213,9 @@
       "ing": "Ч1оаг1а ц1ихеза кинижка да ер",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1232-ч1оаг1а-ц1ихеза-кинижка-да-ер",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1253",
@@ -55393,9 +55225,9 @@
       "ing": "ЦIенхашта къамаьл да ер",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1253-цiенхашта-къамаьл-да-ер",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1250",
@@ -55405,9 +55237,9 @@
       "ing": "Наггахьа хулаш х1ама да из",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1250-наггахьа-хулаш-х1ама-да-из",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_17314",
@@ -55489,7 +55321,7 @@
       "ing": "Баркал хьона сона гIо дара а терко яра а.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/184-ghalghay-lesson-19-591a14f381",
       "confidence": 0.98
     },
@@ -55501,7 +55333,7 @@
       "ing": "Например: ВЕШЕХ- о брате. ВЕШЕХ ВАХЬАЦ СО.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/265-ghalghay-lesson-27-f48acc9c12",
       "confidence": 0.98
     },
@@ -55513,9 +55345,9 @@
       "ing": "Со сай ханахьа хургва",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1220-со-сай-ханахьа-хургва",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1228",
@@ -55525,9 +55357,9 @@
       "ing": "Т1еххьара шин к1ира мукъа вацар со",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1228-т1еххьара-шин-к1ира-мукъа-вацар-со",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1340",
@@ -55537,9 +55369,9 @@
       "ing": "Со хьох кхийтанзар",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1340-со-хьох-кхийтанзар",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_223",
@@ -55549,7 +55381,7 @@
       "ing": "Со хьох кхийтар.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/223-ghalghay-lesson-22-c319b4ccf8",
       "confidence": 0.98
     },
@@ -55561,7 +55393,7 @@
       "ing": "Со кхоана мадина йолча гIоргья",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/150-ghalghay-lesson-17-a85b2e738f",
       "confidence": 0.98
     },
@@ -55573,7 +55405,7 @@
       "ing": "Со д1ахо йодача хана а хургья диктор",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/41-ghalghay-lesson-03-e4db7711d7",
       "confidence": 0.98
     },
@@ -55585,7 +55417,7 @@
       "ing": "Сона дукха деза триллераш а, мелодрамаш, комедеш а.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/255-ghalghay-lesson-25-b682ec3c84",
       "confidence": 0.98
     },
@@ -55597,7 +55429,7 @@
       "ing": "Хьо велавенна (елаенна) бIаргаяйча (бIаргавайча), дика хет сона.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/213-ghalghay-lesson-21-6ca95d4006",
       "confidence": 0.98
     },
@@ -55609,9 +55441,9 @@
       "ing": "Догдоах аз",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1248-догдоах-аз",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_18049",
@@ -55633,7 +55465,7 @@
       "ing": "Со хьога хьежаргвац.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/275-ghalghay-lesson-28-c91f6e2c18",
       "confidence": 0.98
     },
@@ -55645,9 +55477,9 @@
       "ing": "Аз дукха гоавергвац хьо",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1334-аз-дукха-гоавергвац-хьо",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1217",
@@ -55657,9 +55489,9 @@
       "ing": "Аз дукха гоавергвац (гоаергъяц) хьо",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1217-аз-дукха-гоавергвац-гоаергъяц-хьо",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1309",
@@ -55669,9 +55501,9 @@
       "ing": "Сона везац (езац) из",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1309-сона-везац-езац-из",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1242",
@@ -55681,9 +55513,9 @@
       "ing": "Со кхетац",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1242-со-кхетац",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_206",
@@ -55693,7 +55525,7 @@
       "ing": "Хоарцо езац сона.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/206-ghalghay-lesson-21-e53101fbb9",
       "confidence": 0.98
     },
@@ -55705,9 +55537,9 @@
       "ing": "Ц1аккха а хиннавац со цига",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1209-ц1аккха-а-хиннавац-со-цига",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1203",
@@ -55717,9 +55549,9 @@
       "ing": "Аз цIаккха а аьннадац из",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1203-аз-цiаккха-а-аьннадац-из",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_349",
@@ -55729,7 +55561,7 @@
       "ing": "Театре вахар духьа, цIаг1а Iийра со.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/349-ghalghay-lesson-37-b61026e6a3",
       "confidence": 0.98
     },
@@ -55741,7 +55573,7 @@
       "ing": "Сона хьо чIоагIа веза (еза).",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/202-ghalghay-lesson-21-f77b9d5a18",
       "confidence": 0.98
     },
@@ -55753,9 +55585,9 @@
       "ing": "Аз гIалгIай мотт дика бувцац, дерриганех кхета а кхетац",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1344-аз-гiалгiай-мотт-дика-бувцац-дерриганех-кхета-а-кхетац",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1200",
@@ -55765,9 +55597,9 @@
       "ing": "Со нийса кхийттарий хьох?",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1200-со-нийса-кхийттарий-хьох",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1315",
@@ -55777,9 +55609,9 @@
       "ing": "Сона дика хет вай дайза",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1315-сона-дика-хет-вай-дайза",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_264",
@@ -55789,7 +55621,7 @@
       "ing": "Например: ДАЬЦА-с отцом, БЕРАЦА- с ребенком. СО ВЕШИЙЦА ЛОАМ ЯХАЙ.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/264-ghalghay-lesson-27-0ba597c2d0",
       "confidence": 0.98
     },
@@ -55801,9 +55633,9 @@
       "ing": "Аз айса Iомабу гIалгIай мотт",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1343-аз-айса-iомабу-гiалгiай-мотт",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_216",
@@ -55813,7 +55645,7 @@
       "ing": "Со мукъа ва (я).",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/216-ghalghay-lesson-22-b82f4a89de",
       "confidence": 0.98
     },
@@ -55825,9 +55657,9 @@
       "ing": "Бурчолгах хоахкале воал со",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1218-бурчолгах-хоахкале-воал-со",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_61",
@@ -55837,7 +55669,7 @@
       "ing": "Со хьа доттагIа ва",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/61-ghalghay-lesson-05-1a0a61b3f2",
       "confidence": 0.98
     },
@@ -55849,21 +55681,9 @@
       "ing": "Со хьа неш я",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/62-ghalghay-lesson-05-5f8c8083b0",
       "confidence": 0.98
-    },
-    {
-      "id": "pd_973",
-      "slug": "973-я-тебя-люблю-на-ингушском",
-      "ru": "Я тебя сильно люблю {веза — девушка говорит парню} [дословно: ты мне очень нужен] Я тебя сильно люблю {еза — парень говорит девушке} [дословно: ты мне очень нужна]",
-      "ruNorm": "я тебя сильно люблю {веза — девушка говорит парню} [дословно ты мне очень нужен] я тебя сильно люблю {еза — парень говорит девушке} [дословно ты мне очень нужна]",
-      "ing": "Сона дукха веза {еза} хьо",
-      "category": "everyday_phrase",
-      "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
-      "url": "https://paydadosh.ru/phrase/973-я-тебя-люблю-на-ингушском",
-      "confidence": 0.93
     },
     {
       "id": "pd_205",
@@ -55873,7 +55693,7 @@
       "ing": "Аз хьо лоархI.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/205-ghalghay-lesson-21-c301b7b81c",
       "confidence": 0.98
     },
@@ -55897,7 +55717,7 @@
       "ing": "Со кIаьдъеннай (кIаьдвеннав).",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/214-ghalghay-lesson-21-9ec56ea957",
       "confidence": 0.98
     },
@@ -55909,9 +55729,9 @@
       "ing": "Цхьа масехк хаттар дар са хьога",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@g1alghaymott",
       "url": "https://paydadosh.ru/phrase/1335-цхьа-масехк-хаттар-дар-са-хьога",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_350",
@@ -55921,21 +55741,21 @@
       "ing": "Хий мал дог эттад са",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "@paydamu",
       "url": "https://paydadosh.ru/phrase/350-local-example-1",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_1196",
       "slug": "1196-каст-каста-ух-со-даьци-йолча",
-      "ru": "Я часто хожу к тете (дяци — тетя по отцу)",
-      "ruNorm": "я часто хожу к тете дяци — тетя по отцу",
+      "ru": "Я часто хожу к тете (дяци - тетя по отцу)",
+      "ruNorm": "я часто хожу к тете дяци - тетя по отцу",
       "ing": "Каст-каста ух со даьци йолча",
       "category": "everyday_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "ishkola.com",
       "url": "https://paydadosh.ru/phrase/1196-каст-каста-ух-со-даьци-йолча",
-      "confidence": 0.93
+      "confidence": 0.95
     },
     {
       "id": "pd_16856",
@@ -56149,7 +55969,7 @@
       "ing": "ТIаккха хьа воI-студент мичахьа салаIа лаьрхIа ва?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/260-ghalghay-lesson-26-1c09d9ac79",
       "confidence": 0.98
     },
@@ -56161,20 +55981,8 @@
       "ing": "Хьона хой тIаккха из фу аькха да?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/302-ghalghay-lesson-31-0530f0aebc",
-      "confidence": 0.98
-    },
-    {
-      "id": "pd_321",
-      "slug": "321-ghalghay-lesson-33-75b210fd8b",
-      "ru": "Яха: А я в субботу хочу сходить в книжный магазин",
-      "ruNorm": "яха а я в субботу хочу сходить в книжный магазин",
-      "ing": "Шоатта дийнахьа книжкаш дохкача тика тIа яха лаьрхIа я со. цига дукха керда арадаьнна книжкаш да дохкаш. са цIен-даи, сои, тха йоIи сакъердаме исбаьхьалийн литератури, учебникаши, тайп-тайпара дошлоргаши эца дагахьа да.",
-      "category": "lesson_phrase",
-      "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
-      "url": "https://paydadosh.ru/phrase/321-ghalghay-lesson-33-75b210fd8b",
       "confidence": 0.98
     },
     {
@@ -56185,31 +55993,31 @@
       "ing": "Со метро кхаччалца гIаш йода.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/93-ghalghay-lesson-10-cf474673f8",
       "confidence": 0.98
     },
     {
       "id": "pd_128",
       "slug": "128-ghalghay-lesson-14-d6e2a5f75d",
-      "ru": "Яха: Алло, это Лейла",
-      "ruNorm": "яха алло это лейла",
+      "ru": "Яха: Алло, это Лейла. Простите, кто у телефона? Позовите, пожалуйста, Лейлу",
+      "ruNorm": "яха алло это лейла простите кто у телефона позовите пожалуйста лейлу",
       "ing": "Алло, лейла йий хьо. бехк ма баккхалахь, телефон хьаийцар малув? лейла хьатIаехал сона.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/128-ghalghay-lesson-14-d6e2a5f75d",
       "confidence": 0.98
     },
     {
       "id": "pd_247",
       "slug": "247-ghalghay-lesson-25-8f8a7c36dd",
-      "ru": "Яха: В данное время я читаю роман Ахмеда Бокова Сыновья Беки",
-      "ruNorm": "яха в данное время я читаю роман ахмеда бокова сыновья беки",
+      "ru": "Яха: В данное время я читаю роман Ахмеда Бокова Сыновья Беки. Ты читал этот роман?",
+      "ruNorm": "яха в данное время я читаю роман ахмеда бокова сыновья беки ты читал этот роман",
       "ing": "Аз хIанз дешар боков ахьмада беке къонгаш яха роман да. Iа дийшадий из роман?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/247-ghalghay-lesson-25-8f8a7c36dd",
       "confidence": 0.98
     },
@@ -56221,7 +56029,7 @@
       "ing": "Москве ч1оагIа Iимерца яр, кIур хьаж йоагIар хьунагIа яьннача цIерах.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/283-ghalghay-lesson-29-20ba74580d",
       "confidence": 0.98
     },
@@ -56233,7 +56041,7 @@
       "ing": "Цхьа кийла устагIан дулхи 2 кийла дерста доацара бежана дулхи озал сона",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/174-ghalghay-lesson-19-20e718ff73",
       "confidence": 0.98
     },
@@ -56245,43 +56053,43 @@
       "ing": "ЧхьагIар теха йоацаш чам",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/177-ghalghay-lesson-19-011e528422",
       "confidence": 0.98
     },
     {
       "id": "pd_288",
       "slug": "288-ghalghay-lesson-29-dc3a96be89",
-      "ru": "Яха: Да, ты прав",
-      "ruNorm": "яха да ты прав",
+      "ru": "Яха: Да, ты прав. Я тоже люблю весну",
+      "ruNorm": "яха да ты прав я тоже люблю весну",
       "ing": "Хьо бакълув. сона а дукхаеза бIаьсти.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/288-ghalghay-lesson-29-dc3a96be89",
       "confidence": 0.98
     },
     {
       "id": "pd_249",
       "slug": "249-ghalghay-lesson-25-a271b2effe",
-      "ru": "Яха: Да, этот роман нравится практически всем",
-      "ruNorm": "яха да этот роман нравится практически всем",
+      "ru": "Яха: Да, этот роман нравится практически всем. Однако, мой муж читает книги редко",
+      "ruNorm": "яха да этот роман нравится практически всем однако мой муж читает книги редко",
       "ing": "Из роман дукхагIа мел болчарна хоза хет. цхьабакъда, са цIен -дас книжкаш наггахьа мара дешац.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/249-ghalghay-lesson-25-a271b2effe",
       "confidence": 0.98
     },
     {
       "id": "pd_44",
       "slug": "44-ghalghay-lesson-04-776ed91ddb",
-      "ru": "ЯХА: Ее зовут Марьям",
-      "ruNorm": "яха ее зовут марьям",
+      "ru": "ЯХА: Ее зовут Марьям. Она учится в 1-м классе",
+      "ruNorm": "яха ее зовут марьям она учится в 1-м классе",
       "ing": "Из марем яхаш я. цхьоалагIча классе дешаш я из",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/44-ghalghay-lesson-04-776ed91ddb",
       "confidence": 0.98
     },
@@ -56293,20 +56101,8 @@
       "ing": "Кхы хIама юкъе ца эккхе, доагIаргда тхо.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/323-ghalghay-lesson-33-9146ccb927",
-      "confidence": 0.98
-    },
-    {
-      "id": "pd_245",
-      "slug": "245-ghalghay-lesson-25-d45c963db1",
-      "ru": "Яха: К сожалению, свободного времени у меня остается совсем мало",
-      "ruNorm": "яха к сожалению свободного времени у меня остается совсем мало",
-      "ing": "Хала дале а, мукъа йолаш ха дукха хилац са. хIаьта сай новкъосташа дийца а деша могадаь а книжкаш деша ха лаха хьож со. каст-каста транспорте деш, къаьстта метро.",
-      "category": "lesson_phrase",
-      "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
-      "url": "https://paydadosh.ru/phrase/245-ghalghay-lesson-25-d45c963db1",
       "confidence": 0.98
     },
     {
@@ -56317,7 +56113,7 @@
       "ing": "Дийша ваьлча мала хургва хьох?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/36-ghalghay-lesson-03-996ca09a51",
       "confidence": 0.98
     },
@@ -56329,103 +56125,79 @@
       "ing": "Мича деша эйттад хьа бераш?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/132-ghalghay-lesson-14-d99230dcf4",
-      "confidence": 0.98
-    },
-    {
-      "id": "pd_194",
-      "slug": "194-ghalghay-lesson-20-739418bd75",
-      "ru": "Яха: Мне понравилось это красное платье",
-      "ruNorm": "яха мне понравилось это красное платье",
-      "ing": "Из цIе коч хоза хийтай сона. йоIа эцаргья аз из. сона хетаргехь, из цун гIаьхьа хургья.ер тхах яь хоза костюм аз сайна эцаргья, хьатта мара (цIен-даьна) кочи галстуки эцаргья.",
-      "category": "lesson_phrase",
-      "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
-      "url": "https://paydadosh.ru/phrase/194-ghalghay-lesson-20-739418bd75",
       "confidence": 0.98
     },
     {
       "id": "pd_259",
       "slug": "259-ghalghay-lesson-26-513bff6443",
-      "ru": "Яха: Моя дочка мечтает о поездке в деревню к бабушке и дедушке",
-      "ruNorm": "яха моя дочка мечтает о поездке в деревню к бабушке и дедушке",
+      "ru": "Яха: Моя дочка мечтает о поездке в деревню к бабушке и дедушке. Она по ним соскучилась",
+      "ruNorm": "яха моя дочка мечтает о поездке в деревню к бабушке и дедушке она по ним соскучилась",
       "ing": "Са йоI юрта даь-нанеи даь-даи болча яха уйла йолаш я. цун саготденнад уж бIарга ца гуш.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/259-ghalghay-lesson-26-513bff6443",
       "confidence": 0.98
     },
     {
       "id": "pd_312",
       "slug": "312-ghalghay-lesson-31-e6ec7d3b7e",
-      "ru": "Яха: Мы еще раз сюда придем",
-      "ruNorm": "яха мы еще раз сюда придем",
+      "ru": "Яха: Мы еще раз сюда придем. Здесь за один день все посмотреть невозможно",
+      "ruNorm": "яха мы еще раз сюда придем здесь за один день все посмотреть невозможно",
       "ing": "Вай кхы а доагIаргда укхаза. цхьан дийнахьа дерригнега хьажа вIаштIехьадалац укхаза.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/312-ghalghay-lesson-31-e6ec7d3b7e",
       "confidence": 0.98
     },
     {
       "id": "pd_280",
       "slug": "280-ghalghay-lesson-29-607e800527",
-      "ru": "Яха: Наверное, скоро пойдет снег",
-      "ruNorm": "яха наверное скоро пойдет снег",
+      "ru": "Яха: Наверное, скоро пойдет снег. Ветер дует с севера. Стало холодно",
+      "ruNorm": "яха наверное скоро пойдет снег ветер дует с севера стало холодно",
       "ing": "Хетаргахьа, кастта лоа делхаргда. мух гIинбухьера хьекх. шелъеннай.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/280-ghalghay-lesson-29-607e800527",
       "confidence": 0.98
     },
     {
       "id": "pd_199",
       "slug": "199-ghalghay-lesson-20-53f65f6373",
-      "ru": "Яха: Надеюсь, что мои подарки понравятся моим близким",
-      "ruNorm": "яха надеюсь что мои подарки понравятся моим близким",
+      "ru": "Яха: Надеюсь, что мои подарки понравятся моим близким. Я признательна вам за хорошее обслуживание",
+      "ruNorm": "яха надеюсь что мои подарки понравятся моим близким я признательна вам за хорошее обслуживание",
       "ing": "Сай совгIаташ гаргарча наха хоза хетаргдолаш санна хет сона. даьла раьза хилва шоана са хьашташ кхоачашдара.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/199-ghalghay-lesson-20-53f65f6373",
       "confidence": 0.98
     },
     {
       "id": "pd_282",
       "slug": "282-ghalghay-lesson-29-39e9ada5eb",
-      "ru": "Яха: Не видела, туман уже рассеялся, когда я выходила",
-      "ruNorm": "яха не видела туман уже рассеялся когда я выходила",
+      "ru": "Яха: Не видела, туман уже рассеялся, когда я выходила. Саид, а помнишь, какая сильная жара была летом?",
+      "ruNorm": "яха не видела туман уже рассеялся когда я выходила саид а помнишь какая сильная жара была летом",
       "ing": "Дайнзар, дохк дIадаьннадар со арайоалача хана.. саIид, дагадоагIий хьона, мел йIайха яр аьхки?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/282-ghalghay-lesson-29-39e9ada5eb",
-      "confidence": 0.98
-    },
-    {
-      "id": "pd_251",
-      "slug": "251-ghalghay-lesson-25-9e20d2e998",
-      "ru": "Яха: Он поклонник футбольной команды Ангушт , но сам мало играет в футбол",
-      "ruNorm": "яха он поклонник футбольной команды ангушт но сам мало играет в футбол",
-      "ing": "Са цIен-да ангушт яха команда езаш ва. ше футболах дукха ловзац из. цунна нардех ( шахматех, шашкех, волейболах) ловзаш дика хет. тIаккха хьа сенца сакъердалу?",
-      "category": "lesson_phrase",
-      "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
-      "url": "https://paydadosh.ru/phrase/251-ghalghay-lesson-25-9e20d2e998",
       "confidence": 0.98
     },
     {
       "id": "pd_129",
       "slug": "129-ghalghay-lesson-14-03b903ae4d",
-      "ru": "Яха: Подруга, как я рада слышать твой голос",
-      "ruNorm": "яха подруга как я рада слышать твой голос",
+      "ru": "Яха: Подруга, как я рада слышать твой голос. Почему до тебя так долго нельзя было дозвониться?",
+      "ruNorm": "яха подруга как я рада слышать твой голос почему до тебя так долго нельзя было дозвониться",
       "ing": "Са доттагIа, ма хоза хет сона хьа оаз хеза. хьога аз телефон етта мел дукха ха я.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/129-ghalghay-lesson-14-03b903ae4d",
       "confidence": 0.98
     },
@@ -56437,7 +56209,7 @@
       "ing": "Дувцал хьай цIенах лаьца.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/74-ghalghay-lesson-07-a6243a9acc",
       "confidence": 0.98
     },
@@ -56449,7 +56221,7 @@
       "ing": "Саид, хьо мичахьа вах?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/73-ghalghay-lesson-07-8aaf46b48f",
       "confidence": 0.98
     },
@@ -56461,7 +56233,7 @@
       "ing": "СаIид, мишта хет хьона таханара хаоттам?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/279-ghalghay-lesson-29-07f8dd176d",
       "confidence": 0.98
     },
@@ -56473,31 +56245,31 @@
       "ing": "Иккаш 37 -гIа размер лелаю, хIаьта туфлеш цхьа размер зIамагIа а эца мегаргья.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/195-ghalghay-lesson-20-3c31e1f2be",
       "confidence": 0.98
     },
     {
       "id": "pd_252",
       "slug": "252-ghalghay-lesson-25-46c4c84d27",
-      "ru": "Яха: Сейчас все дети увлекаются компьютерными играми, а молодежь может часами просиживать в разного рода чатах",
-      "ruNorm": "яха сейчас все дети увлекаются компьютерными играми а молодежь может часами просиживать в разного рода чатах",
+      "ru": "Яха: Сейчас все дети увлекаются компьютерными играми, а молодежь может часами просиживать в разного рода чатах. Как ты к этому относишься?",
+      "ruNorm": "яха сейчас все дети увлекаются компьютерными играми а молодежь может часами просиживать в разного рода чатах как ты к этому относишься",
       "ing": "ХIанз деррига бераш компьютара ловзарашца сакъердалуш да. кагийча нахеи мехкарашеи дукха сахьаташ дIакхухь чате багIаш. хьона фу хет цох?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/252-ghalghay-lesson-25-46c4c84d27",
       "confidence": 0.98
     },
     {
       "id": "pd_78",
       "slug": "78-ghalghay-lesson-07-484187ee25",
-      "ru": "Яха: Со своего окна я вижу очень красивый парк",
-      "ruNorm": "яха со своего окна я вижу очень красивый парк",
+      "ru": "Яха: Со своего окна я вижу очень красивый парк. Я люблю смотреть из своего окна. Недалеко от нас находится пруд, в котором плавают лебеди",
+      "ruNorm": "яха со своего окна я вижу очень красивый парк я люблю смотреть из своего окна недалеко от нас находится пруд в котором плавают лебеди",
       "ing": "Корах арахьажача сона бIаргагу чIоагIа хоза парк. сона хоза хет сай корах арахьежаш. тхона гаьна доаццаш Iам ба, цу чу наьк деш гIургIажаш я.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/78-ghalghay-lesson-07-484187ee25",
       "confidence": 0.98
     },
@@ -56509,19 +56281,19 @@
       "ing": "Дукха ха дIайодий хьа наькъа?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/91-ghalghay-lesson-10-eb87b55030",
       "confidence": 0.98
     },
     {
       "id": "pd_306",
       "slug": "306-ghalghay-lesson-31-7768559d0c",
-      "ru": "Яха: Ты не проголодалась? Здесь можно очень вкусно поесть",
-      "ruNorm": "яха ты не проголодалась здесь можно очень вкусно поесть",
+      "ru": "Яха: Ты не проголодалась? Здесь можно очень вкусно поесть. Потом посмотрим на рыбок и птиц",
+      "ruNorm": "яха ты не проголодалась здесь можно очень вкусно поесть потом посмотрим на рыбок и птиц",
       "ing": "Мецъеннайий хьо? укхаза чам болаш хIама яа йиш я. тIаккха чкъаьрилгашка е оалхазарашка хьожаргда вай.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/306-ghalghay-lesson-31-7768559d0c",
       "confidence": 0.98
     },
@@ -56533,55 +56305,55 @@
       "ing": "Шун тика тIара болхлой чIоагIа гIулакхаца ба.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/187-ghalghay-lesson-19-d64badedac",
       "confidence": 0.98
     },
     {
       "id": "pd_308",
       "slug": "308-ghalghay-lesson-31-3df3486900",
-      "ru": "Яха: Фатима, я покажу тебе птиц",
-      "ruNorm": "яха фатима я покажу тебе птиц",
+      "ru": "Яха: Фатима, я покажу тебе птиц. Вот это жаворонок, а эта красивую птицу ты знаешь. Это лебедь",
+      "ruNorm": "яха фатима я покажу тебе птиц вот это жаворонок а эта красивую птицу ты знаешь это лебедь",
       "ing": "Фатима, аз оалхазараш дIахьокхаргда хьога. ер чкъорд я, хIаьта ер хоза оалхазар хьона довза хургда. гIургIаж я из.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/308-ghalghay-lesson-31-3df3486900",
       "confidence": 0.98
     },
     {
       "id": "pd_113",
       "slug": "113-ghalghay-lesson-12-bca6518f62",
-      "ru": "Яха: Я была в музее",
-      "ruNorm": "яха я была в музее",
+      "ru": "Яха: Я была в музее. Где был вчера, Ахмед?",
+      "ruNorm": "яха я была в музее где был вчера ахмед",
       "ing": "Со музее хиннай, ахьмад мичахьа хиннав селхан?",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/113-ghalghay-lesson-12-bca6518f62",
       "confidence": 0.98
     },
     {
       "id": "pd_181",
       "slug": "181-ghalghay-lesson-19-5a0fae5722",
-      "ru": "Яха: Я думаю, этого достаточно",
-      "ruNorm": "яха я думаю этого достаточно",
+      "ru": "Яха: Я думаю, этого достаточно. Если что-то осталось, я куплю на рынке",
+      "ruNorm": "яха я думаю этого достаточно если что-то осталось я куплю на рынке",
       "ing": "Аз ийцар тоъаргйолаш санна хет сона. нагахьа санна хIама йицъеннаяле, базар тIара хьаэцаргья аз.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/181-ghalghay-lesson-19-5a0fae5722",
       "confidence": 0.98
     },
     {
       "id": "pd_76",
       "slug": "76-ghalghay-lesson-07-5503565f61",
-      "ru": "Яха: Я живу в 20 этажном новопостроенном доме",
-      "ruNorm": "яха я живу в 20 этажном новопостроенном доме",
+      "ru": "Яха: Я живу в 20 этажном новопостроенном доме. Моя квартире находится на 15 этаже. Я знаю всех своих соседей. Мы живем очень дружно",
+      "ruNorm": "яха я живу в 20 этажном новопостроенном доме моя квартире находится на 15 этаже я знаю всех своих соседей мы живем очень дружно",
       "ing": "Со ях ткъо этаж йолча керда хьалдаьча цIагIа. са квартира пхииттлагIча этажа тIа я. сона сай мел бола лоалахой бовз. ч1оагIа барттайна дах тхо.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/76-ghalghay-lesson-07-5503565f61",
       "confidence": 0.98
     },
@@ -56593,19 +56365,19 @@
       "ing": "Аз яьккхай г1алг1ай паччахьалкхен университета филологически факультет",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/38-ghalghay-lesson-03-a43c2d7fe1",
       "confidence": 0.98
     },
     {
       "id": "pd_197",
       "slug": "197-ghalghay-lesson-20-14b2c7a7c7",
-      "ru": "Яха: Я их покупаю",
-      "ruNorm": "яха я их покупаю",
+      "ru": "Яха: Я их покупаю. Они мне очень идут",
+      "ruNorm": "яха я их покупаю они мне очень идут",
       "ing": "Аз хьаэц ераш. сога чIоагIа хоза тов уж.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/197-ghalghay-lesson-20-14b2c7a7c7",
       "confidence": 0.98
     },
@@ -56617,7 +56389,7 @@
       "ing": "Аз эцаргья йиъ кийла нарсаши, цхьа кийла хохи, кхо кийла помидораши, пхи кийла коартоли эцаргья аз.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/176-ghalghay-lesson-19-4ff0d69870",
       "confidence": 0.98
     },
@@ -56629,19 +56401,19 @@
       "ing": "ХIанз аз телефон дIатохе, машинаца воша тIехьавоагIаргва сона.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/183-ghalghay-lesson-19-0de89360b8",
       "confidence": 0.98
     },
     {
       "id": "pd_286",
       "slug": "286-ghalghay-lesson-29-a710c2f5e5",
-      "ru": "Яха: Я тоже люблю зиму",
-      "ruNorm": "яха я тоже люблю зиму",
+      "ru": "Яха: Я тоже люблю зиму. Я наизусть помню стихотворение: У природы нет плохой погоды. Оно мне очень нравится",
+      "ruNorm": "яха я тоже люблю зиму я наизусть помню стихотворение у природы нет плохой погоды оно мне очень нравится",
       "ing": "Сона дукха деза Iа. Iалама во хаоттам хилац яха стихотворени дагахьа хов сона. сона чIоагIа хозахет из стихотворени.",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/286-ghalghay-lesson-29-a710c2f5e5",
       "confidence": 0.98
     },
@@ -56653,7 +56425,7 @@
       "ing": "Ч1оаг1а хоза хет сона сай професси!",
       "category": "lesson_phrase",
       "source": "paydadosh",
-      "sourceLabel": "PaydaDosh",
+      "sourceLabel": "Хайрова Х., Баркинхоева З., Костоев Х. - Уроки ингушского языка",
       "url": "https://paydadosh.ru/phrase/40-ghalghay-lesson-03-8b2d22b1bf",
       "confidence": 0.98
     },
@@ -56706,5 +56478,10 @@
       "confidence": 0.93
     }
   ],
-  "phase": "complete"
+  "phase": "complete",
+  "importMode": "categories",
+  "categoriesImported": {
+    "everyday_phrase": 159,
+    "lesson_phrase": 278
+  }
 }

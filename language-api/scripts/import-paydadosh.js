@@ -10,9 +10,22 @@ const SNAPSHOT_HTML = path.join(ROOT, "data", "external", "paydadosh", "phrasebo
 
 const SITEMAP_PHRASE_PAGES = Number(process.env.PD_SITEMAP_PHRASE_PAGES || 12);
 const SITEMAP_PROVERB_PAGES = Number(process.env.PD_SITEMAP_PROVERB_PAGES || 6);
+const CATEGORY_MAX_PAGES = Number(process.env.PD_CATEGORY_MAX_PAGES || 50);
 const CONCURRENCY = Number(process.env.PD_IMPORT_CONCURRENCY || 1);
 const FETCH_DELAY_MS = Number(process.env.PD_IMPORT_DELAY_MS || 450);
 const MAX_RETRIES = Number(process.env.PD_IMPORT_RETRIES || 6);
+
+const PHRASEBOOK_CATEGORIES = {
+  everyday_phrase: "Повседневные фразы",
+  lesson_phrase: "Уроки разговорника",
+  idiom_phrase: "Устойчивые выражения",
+  celebration_phrase: "Пожелания и поздравления",
+  condolence_phrase: "Соболезнования",
+  meal_phrase: "За столом",
+  ramadan_phrase: "Рамadan (Ураза)",
+  religious_phrase: "Религиозные фразы",
+  tradition_phrase: "Традиции"
+};
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -125,7 +138,7 @@ function parsePhrasePage(html, url) {
   if (!ing || !ru) return null;
 
   ru = cleanRuQuote(ru.replace(/\s*\([^)]{40,}\)\s*$/g, "").trim());
-  if (!ru || ru === "-" || !/[а-яё]/i.test(ru)) return null;
+  if (!isValidPhraseRu(ru)) return null;
 
   const categoryMatch = html.match(/phrasebook\?category=([^"'&]+)/i);
   const category = categoryMatch ? categoryMatch[1] : "unknown";
@@ -171,7 +184,7 @@ function parseProverbPage(html, url) {
   if (!ing || !ru) return null;
 
   ru = cleanRuQuote(ru);
-  if (!ru || ru === "-" || !/[а-яё]/i.test(ru)) return null;
+  if (!isValidPhraseRu(ru)) return null;
 
   return {
     id,
@@ -187,7 +200,21 @@ function parseProverbPage(html, url) {
   };
 }
 
-function parsePhrasebookSnapshot(html) {
+const CATEGORY_MAX_RU_LEN = {
+  everyday_phrase: 120,
+  lesson_phrase: 150
+};
+
+function isValidPhraseRu(ru, category = "") {
+  const clean = cleanRuQuote(ru);
+  if (!clean || clean === "-" || clean.length < 2) return false;
+  if (!/[а-яё]/i.test(clean)) return false;
+  if (CATEGORY_BLOCKLIST.has(normalizeRu(clean))) return false;
+  const maxLen = CATEGORY_MAX_RU_LEN[category] || 180;
+  return clean.length <= maxLen;
+}
+
+function parsePhrasebookListPage(html, category = "snapshot") {
   const rows = [...html.matchAll(/<div class="pd-row with-actions">([\s\S]*?)<\/div>\s*<div class="pd-row-actions/gi)];
   const out = [];
   for (const row of rows) {
@@ -195,29 +222,66 @@ function parsePhrasebookSnapshot(html) {
     const ingLink = chunk.match(/href="(\/phrase\/[^"]+)"[^>]*>([\s\S]*?)<\/a>/i);
     const ruMatch = chunk.match(/italic text-paper-600[^>]*>\s*«([^»]+)»/i);
     const copyMatch = chunk.match(/data-copy="([^"]+)"/i);
-    const categoryMatch = chunk.match(/урок\/раздел[^>]*>([^<]+)</i);
+    const sourceMatch = chunk.match(/источник:\s*<[^>]*>([^<]+)</i);
     if (!ruMatch && !copyMatch) continue;
 
     const ing = stripTags(ingLink?.[2] || copyMatch?.[1] || "");
     const ru = cleanRuQuote(ruMatch?.[1] || "");
-    if (!ing || !ru) continue;
+    if (!ing || !isValidPhraseRu(ru, category)) continue;
 
     const slug = (ingLink?.[1] || "").replace("/phrase/", "");
     const idMatch = slug.match(/^(\d+)-/);
     out.push({
-      id: idMatch ? `pd_${idMatch[1]}` : `pd_snap_${out.length + 1}`,
+      id: idMatch ? `pd_${idMatch[1]}` : `pd_cat_${category}_${out.length + 1}`,
       slug,
       ru,
       ruNorm: normalizeRu(ru),
       ing,
-      category: categoryMatch ? categoryMatch[1].trim() : "snapshot",
+      category,
       source: "paydadosh",
-      sourceLabel: "PaydaDosh snapshot",
+      sourceLabel: stripTags(sourceMatch?.[1] || "PaydaDosh"),
       url: slug ? `https://paydadosh.ru/phrase/${slug}` : "",
-      confidence: 0.9
+      confidence: category === "lesson_phrase" ? 0.98 : 0.95
     });
   }
   return out;
+}
+
+function parsePhrasebookSnapshot(html) {
+  return parsePhrasebookListPage(html, "snapshot");
+}
+
+function detectCategoryMaxPage(html) {
+  const pages = [...html.matchAll(/category=[^"'&]+(?:&amp;|&)page=(\d+)/g)].map((m) => Number(m[1]));
+  return pages.length ? Math.max(...pages) : 1;
+}
+
+async function importPhrasebookCategory(category, maxPages = CATEGORY_MAX_PAGES) {
+  const label = PHRASEBOOK_CATEGORIES[category] || category;
+  console.log(`Importing category «${label}» (${category})...`);
+
+  const firstUrl = `https://paydadosh.ru/phrasebook?category=${encodeURIComponent(category)}&page=1`;
+  const firstHtml = await fetchText(firstUrl);
+  const totalPages = Math.min(detectCategoryMaxPage(firstHtml), maxPages);
+  console.log(`  pages: ${totalPages}`);
+
+  const parsed = [...parsePhrasebookListPage(firstHtml, category)];
+  for (let page = 2; page <= totalPages; page += 1) {
+    const url = `https://paydadosh.ru/phrasebook?category=${encodeURIComponent(category)}&page=${page}`;
+    try {
+      const html = await fetchText(url);
+      const pageItems = parsePhrasebookListPage(html, category);
+      parsed.push(...pageItems);
+      console.log(`  page ${page}/${totalPages}: +${pageItems.length} (total ${parsed.length})`);
+    } catch (err) {
+      console.warn(`  page ${page} error: ${err.message}`);
+    }
+    if (FETCH_DELAY_MS > 0) await sleep(FETCH_DELAY_MS);
+  }
+
+  const unique = dedupePhrases(parsed);
+  console.log(`  category done: ${unique.length} unique phrases`);
+  return { parsed: unique, category, pages: totalPages };
 }
 
 async function fetchText(url, attempt = 0) {
@@ -302,6 +366,42 @@ function dedupePhrases(items) {
   return [...byRu.values()].sort((a, b) => a.ru.localeCompare(b.ru, "ru"));
 }
 
+function parseCliCategories(argv, args) {
+  if (args.has("--everyday-lessons")) {
+    return ["everyday_phrase", "lesson_phrase"];
+  }
+  const fromFlag = [...args].find((a) => a.startsWith("--categories="));
+  if (fromFlag) {
+    return fromFlag
+      .slice("--categories=".length)
+      .split(",")
+      .map((x) => x.trim())
+      .filter(Boolean);
+  }
+  const env = (process.env.PD_CATEGORIES || "").trim();
+  if (env) {
+    return env.split(",").map((x) => x.trim()).filter(Boolean);
+  }
+  return [];
+}
+
+function mergeWithExisting(existing, incoming, replaceCategories = []) {
+  const replaceSet = new Set(replaceCategories);
+  const kept = replaceSet.size
+    ? existing.filter((item) => !replaceSet.has(item.category))
+    : existing;
+  return dedupePhrases([...kept, ...incoming]);
+}
+
+async function loadExistingPhrases() {
+  try {
+    const json = await fs.readFile(PHRASES_OUT, "utf8").then(JSON.parse);
+    return Array.isArray(json?.items) ? json.items : [];
+  } catch {
+    return [];
+  }
+}
+
 async function importUrls(urls, parser, label) {
   if (!urls.length) return { parsed: [], skipped: 0, errors: [], failures: [] };
   console.log(`Fetching ${urls.length} PaydaDosh ${label} pages (concurrency=${CONCURRENCY}, delay=${FETCH_DELAY_MS}ms)...`);
@@ -338,8 +438,20 @@ async function main() {
   const snapshotOnly = args.has("--snapshot-only");
   const phrasesOnly = args.has("--phrases-only");
   const proverbsOnly = args.has("--proverbs-only");
-  const withProverbs = proverbsOnly || (args.has("--with-proverbs") || (!phrasesOnly && !snapshotOnly));
+  const categoriesOnly = args.has("--categories-only");
+  const categoryList = parseCliCategories(process.argv, args);
+  const categoriesMode = categoryList.length > 0 || categoriesOnly;
+  const withProverbs = proverbsOnly
+    || (args.has("--with-proverbs")
+      && !phrasesOnly
+      && !snapshotOnly
+      && !categoriesMode);
   const limit = Number(process.env.PD_IMPORT_LIMIT || 0);
+  const categoryFilter = categoryList.length
+    ? new Set(categoryList)
+    : (process.env.PD_CATEGORY_FILTER || "").split(",").map((x) => x.trim()).filter(Boolean).length
+      ? new Set((process.env.PD_CATEGORY_FILTER || "").split(",").map((x) => x.trim()).filter(Boolean))
+      : null;
 
   await fs.mkdir(OUT_DIR, { recursive: true });
 
@@ -352,48 +464,80 @@ async function main() {
   }
 
   let existing = [];
-  if (proverbsOnly) {
-    try {
-      const json = await fs.readFile(PHRASES_OUT, "utf8").then(JSON.parse);
-      existing = Array.isArray(json?.items) ? json.items : [];
-      console.log(`Loaded ${existing.length} existing phrases for proverb merge`);
-    } catch {
-      existing = [];
+  if (proverbsOnly || categoriesMode || args.has("--merge")) {
+    existing = await loadExistingPhrases();
+    if (existing.length) {
+      console.log(`Loaded ${existing.length} existing phrases for merge`);
     }
   }
 
   let phraseResult = { parsed: [], skipped: 0, errors: [], failures: [] };
   let proverbResult = { parsed: [], skipped: 0, errors: [], failures: [] };
+  let categoryResult = { parsed: [], byCategory: {} };
 
-  if (!snapshotOnly && !proverbsOnly) {
+  if (categoriesMode) {
+    const targets = categoryList.length
+      ? categoryList
+      : ["everyday_phrase", "lesson_phrase"];
+    for (const category of targets) {
+      if (!PHRASEBOOK_CATEGORIES[category] && category !== "lesson_phrase" && category !== "everyday_phrase") {
+        console.warn(`Unknown category slug: ${category} (trying anyway)`);
+      }
+      const result = await importPhrasebookCategory(category);
+      categoryResult.byCategory[category] = result.parsed.length;
+      categoryResult.parsed.push(...result.parsed);
+    }
+    console.log(`Category import total: ${categoryResult.parsed.length} phrases`);
+  }
+
+  if (!snapshotOnly && !proverbsOnly && !categoriesMode) {
     const phraseUrls = await loadSitemapUrls("sitemap-phrases", SITEMAP_PHRASE_PAGES);
-    const targetPhraseUrls = limit > 0 ? phraseUrls.slice(0, limit) : phraseUrls;
+    let targetPhraseUrls = limit > 0 ? phraseUrls.slice(0, limit) : phraseUrls;
     phraseResult = await importUrls(targetPhraseUrls, parsePhrasePage, "phrase");
+
+    if (categoryFilter) {
+      const before = phraseResult.parsed.length;
+      phraseResult.parsed = phraseResult.parsed.filter((item) => categoryFilter.has(item.category));
+      console.log(`Sitemap category filter: ${phraseResult.parsed.length}/${before} kept (${[...categoryFilter].join(", ")})`);
+    }
 
     const { merged } = await writePayload([...snapshot, ...phraseResult.parsed], { phase: "phrases" });
     console.log(`Checkpoint: ${merged.length} phrases saved after phrase import`);
   }
 
-  if (!snapshotOnly && withProverbs) {
+  if (!snapshotOnly && withProverbs && !categoriesMode) {
     const proverbUrls = await loadSitemapUrls("sitemap-proverbs", SITEMAP_PROVERB_PAGES);
     const targetProverbUrls = limit > 0 ? proverbUrls.slice(0, limit) : proverbUrls;
     proverbResult = await importUrls(targetProverbUrls, parseProverbPage, "proverb");
   }
 
-  const baseItems = proverbsOnly
-    ? existing
-    : snapshotOnly
-      ? snapshot
-      : [...snapshot, ...phraseResult.parsed];
-  const fetched = [...baseItems, ...proverbResult.parsed];
-  const { merged, payload } = await writePayload(fetched, { phase: "complete" });
+  let baseItems;
+  if (proverbsOnly) {
+    baseItems = existing;
+  } else if (categoriesMode) {
+    baseItems = mergeWithExisting(existing, categoryResult.parsed, categoryList.length ? categoryList : ["everyday_phrase", "lesson_phrase"]);
+  } else if (snapshotOnly) {
+    baseItems = snapshot;
+  } else {
+    baseItems = [...snapshot, ...phraseResult.parsed];
+  }
+
+  const fetched = categoriesMode ? baseItems : [...baseItems, ...proverbResult.parsed];
+  const { merged, payload } = await writePayload(fetched, {
+    phase: "complete",
+    importMode: categoriesMode ? "categories" : proverbsOnly ? "proverbs" : "full",
+    categoriesImported: categoriesMode ? categoryResult.byCategory : undefined
+  });
   await fs.writeFile(
     SUMMARY_OUT,
     `${JSON.stringify(
       {
         importedAt: payload.importedAt,
+        importMode: payload.importMode || "full",
         total: merged.length,
         snapshot: snapshot.length,
+        categoriesImported: categoryResult.byCategory || {},
+        categoryPhrasesFetched: categoryResult.parsed.length,
         phrasesFetched: phraseResult.parsed.length,
         proverbsFetched: proverbResult.parsed.length,
         phraseErrors: phraseResult.errors.length,
@@ -401,7 +545,10 @@ async function main() {
         phraseSkipped: phraseResult.skipped,
         proverbSkipped: proverbResult.skipped,
         categories: payload.categories.length,
-        sample: merged.slice(0, 5)
+        categoryCounts: Object.fromEntries(
+          payload.categories.map((cat) => [cat, merged.filter((x) => x.category === cat).length])
+        ),
+        sample: merged.filter((x) => x.category === "everyday_phrase" || x.category === "lesson_phrase").slice(0, 5)
       },
       null,
       2
