@@ -331,6 +331,13 @@
       "audio": "f_1766022575804_42zo.mp3"
     },
     {
+      "ru": "Я хочу есть",
+      "ing": "Са безам ба яаахьам яаа",
+      "pron": "sa bezam ba yaakham yaaa",
+      "id": "habar_want_eat",
+      "audio": "habar_want_eat.mp3"
+    },
+    {
       "ru": "Иди сюда",
       "ing": "ХЬАВЕЛ СУГАХЬ.",
       "pron": "h'avel sugah'.",
@@ -756,6 +763,13 @@
       "pron": "tsii mishta ya khьa?",
       "id": "paydadosh_pd_1531",
       "audio": "paydadosh_pd_1531.mp3"
+    },
+    {
+      "ru": "Как вас зовут?",
+      "ing": "ЦIи фи хьа?",
+      "pron": "tsii fi khьa?",
+      "id": "habar_whats_your_name_formal",
+      "audio": "habar_whats_your_name_formal.mp3"
     },
     {
       "ru": "Как часто употребляется это слово в речи?",
@@ -1424,5 +1438,5 @@
     }
   ],
   "version": 4,
-  "itemCount": 203
+  "itemCount": 205
 }

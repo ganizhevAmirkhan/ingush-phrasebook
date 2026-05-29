@@ -262,3 +262,7 @@
 {"id":"mod_1780041162267","createdAt":"2026-05-29T07:52:42.267Z","ru":"чпать хочу","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
 {"id":"mod_1780044066868","createdAt":"2026-05-29T08:41:06.868Z","ru":"я хотел сказать","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
 {"id":"mod_1780044066981","createdAt":"2026-05-29T08:41:06.981Z","ru":"мне хотелось сказать","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1780072511271","createdAt":"2026-05-29T16:35:11.271Z","ru":"как вас зовут","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1780072511302","createdAt":"2026-05-29T16:35:11.302Z","ru":"Как вас зовут?","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1780072517260","createdAt":"2026-05-29T16:35:17.260Z","ru":"как вас зовут","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1780073005316","createdAt":"2026-05-29T16:43:25.316Z","ru":"хочу есть","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}

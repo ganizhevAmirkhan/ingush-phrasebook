@@ -14144,6 +14144,20 @@
       ]
     },
     {
+      "id": "habar_whats_your_name_formal",
+      "ruPattern": "как вас зовут",
+      "description": "Formal: what is your name",
+      "slots": [],
+      "ingTemplate": "ЦIи фи хьа?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "как вас зовут",
+          "ing_expected": "ЦIи фи хьа?"
+        }
+      ]
+    },
+    {
       "id": "habar_paydadosh_pd_1350",
       "ruPattern": "как часто употребляется это слово в речи",
       "description": "Habar phrasebook sync",
@@ -24668,6 +24682,34 @@
         {
           "ru": "я хочу кушать",
           "ing_expected": "Са йа1хьм яа1 безам ба"
+        }
+      ]
+    },
+    {
+      "id": "habar_want_eat",
+      "ruPattern": "я хочу есть",
+      "description": "Want to eat (formal phrasebook form)",
+      "slots": [],
+      "ingTemplate": "Са безам ба яаахьам яаа",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я хочу есть",
+          "ing_expected": "Са безам ба яаахьам яаа"
+        }
+      ]
+    },
+    {
+      "id": "habar_want_eat_short",
+      "ruPattern": "хочу есть",
+      "description": "Want to eat (short form)",
+      "slots": [],
+      "ingTemplate": "Са безам ба яаахьам яаа",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "хочу есть",
+          "ing_expected": "Са безам ба яаахьам яаа"
         }
       ]
     },
