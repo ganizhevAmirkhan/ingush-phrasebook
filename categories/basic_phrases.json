@@ -471,7 +471,7 @@
       "audio": "habar_past_want_say_me.mp3"
     },
     {
-      "ru": "Можно сказать по-другому?",
+      "ru": "А ты откуда?",
       "ing": "Хьо мичахьара ва / я?",
       "pron": "khьo michakhьara va / ya?",
       "id": "paydadosh_pd_1208",
@@ -1416,12 +1416,6 @@
       "audio": "f_1780043837990_mnlr.mp3"
     }
   ],
-<<<<<<< HEAD
   "version": 3,
-  "itemCount": 201
+  "itemCount": 202
 }
-=======
-  "version": 2,
-  "itemCount": 200
-}
->>>>>>> 9c8c61e901a05a5956dc932c73eb3effc251a873
