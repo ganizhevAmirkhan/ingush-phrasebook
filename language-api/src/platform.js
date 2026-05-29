@@ -473,12 +473,10 @@ function findGrammarLexeme(ruText) {
       const lt = tokenizeRu(x?.ru || "");
       return lt.some((t) => {
         const tStem = t.length > 3 ? t.replace(/[аеиоуыяю]$/i, "") : t;
-        return (
-          t === token
-          || t.startsWith(token)
-          || token.startsWith(t)
-          || (tokenStem && tStem && tokenStem === tStem)
-        );
+        if (t === token) return true;
+        if (t.length >= 4 && t.startsWith(token)) return true;
+        if (token.length >= 4 && t.length >= 3 && token.startsWith(t)) return true;
+        return Boolean(tokenStem && tStem && tokenStem.length >= 4 && tokenStem === tStem);
       });
     });
     if (!candidates.length) return null;
@@ -684,6 +682,12 @@ const PAST_WANT_EXACT = {
   "мне хотелось сказать": "Сона ала валлар"
 };
 
+const WANT_INFINITIVE_EXACT = {
+  "я хочу сказать": "Со ала безам ба",
+  "я хочу пить": "Со мал безам ба",
+  "я хочу спать": "Са наб е безам ба"
+};
+
 function lookupDoshInfinitive(ruVerb) {
   const norm = normalizeText(ruVerb);
   if (!norm) return "";
@@ -752,6 +756,26 @@ function tryComposePastWantInfinitive(ruText) {
   return { ok: true, translation: `${subject} ${verbIng} валлар` };
 }
 
+function tryComposeWantInfinitive(ruText) {
+  const norm = normalizeText(ruText).replace(/[!?.…]+$/g, "").trim();
+  if (WANT_INFINITIVE_EXACT[norm]) {
+    return { ok: true, translation: WANT_INFINITIVE_EXACT[norm] };
+  }
+
+  const match = norm.match(/^я\s+хочу\s+(.+)$/);
+  if (!match) {
+    return { ok: false, translation: "" };
+  }
+
+  const verbRu = match[1].trim();
+  const verbIng = lookupDoshInfinitive(verbRu);
+  if (!verbIng || verbIng.length > 35) {
+    return { ok: false, translation: "" };
+  }
+
+  return { ok: true, translation: `Со ${verbIng} безам ба` };
+}
+
 const CANNOT_INFINITIVE_DOSH = {
   "дышать": "Суна са дах могац"
 };
@@ -802,6 +826,11 @@ function composeFromDictionaryTokens(ruText) {
   const pastWant = tryComposePastWantInfinitive(ruText);
   if (pastWant.ok) {
     return pastWant;
+  }
+
+  const wantInf = tryComposeWantInfinitive(ruText);
+  if (wantInf.ok) {
+    return wantInf;
   }
 
   const needInf = tryComposeNeedInfinitive(ruText);
@@ -1237,6 +1266,18 @@ async function translate(ruText, options = {}) {
     return {
       ok: true,
       translation: pastWantEarly.translation,
+      usedSource: SOURCE.GRAMMAR,
+      confidence: 0.9,
+      fallbackUsed: false
+    };
+  }
+
+  const wantInfEarly = tryComposeWantInfinitive(ru);
+  if (wantInfEarly.ok) {
+    state.metrics.translateFromGrammar += 1;
+    return {
+      ok: true,
+      translation: wantInfEarly.translation,
       usedSource: SOURCE.GRAMMAR,
       confidence: 0.9,
       fallbackUsed: false

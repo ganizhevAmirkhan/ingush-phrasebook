@@ -464,6 +464,13 @@
       "audio": "habar_past_want_say.mp3"
     },
     {
+      "ru": "Я хочу сказать",
+      "ing": "Со ала безам ба",
+      "pron": "so ala bezam ba",
+      "id": "habar_want_say",
+      "audio": "habar_want_say.mp3"
+    },
+    {
       "ru": "Мне хотелось сказать",
       "ing": "Сона ала валлар",
       "pron": "sona ala vallar",
@@ -1416,6 +1423,6 @@
       "audio": "f_1780043837990_mnlr.mp3"
     }
   ],
-  "version": 3,
-  "itemCount": 202
+  "version": 4,
+  "itemCount": 203
 }
