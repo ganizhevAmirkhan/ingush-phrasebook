@@ -106,13 +106,18 @@ async function loadOverview() {
   const grid = document.getElementById("stats-grid");
   if (grid) {
     const cards = [
+      ["Индекс фраз (ключи)", c.phraseIndexKeys],
+      ["Habar (файлы GitHub)", c.habarItemsRaw],
+      ["Habar: basic_phrases", `${c.habarBasicRaw ?? 0} → ${c.habarBasicPhrasesLoaded ?? 0} в индексе`],
+      ["Habar: conversation", `${c.habarConversationRaw ?? 0} → ${c.habarConversationLoaded ?? 0} в индексе`],
+      ["PaydaDosh всего", c.paydadoshRaw ?? c.paydaDoshPhrasesLoaded],
+      ["PaydaDosh everyday", c.paydadoshEverydayRaw ?? c.paydaDoshEverydayLoaded],
+      ["PaydaDosh уроки", c.paydadoshLessonRaw ?? c.paydaDoshLessonLoaded],
+      ["Словарь dosh", c.wordsLoaded],
       ["Шаблоны грамматики", inv.patterns],
       ["Лексемы", inv.lexemes],
-      ["Правила слотов", inv.rules],
-      ["Словарь dosh", c.wordsLoaded],
-      ["PaydaDosh", c.paydaDoshPhrasesLoaded],
-      ["Фразы уроков", c.lessonPhrasesLoaded],
-      ["Корпус текстов", c.corpusLoaded],
+      ["Корпус (файлов)", c.corpusLoaded],
+      ["Corpus фраз (сырые → индекс)", `${c.corpusPhrasesRaw ?? 0} → ${c.corpusPhrasesInIndex ?? 0}`],
       ["Чёрный список", inv.blacklist]
     ];
     grid.innerHTML = cards.map(([l, v]) => `
@@ -123,16 +128,16 @@ async function loadOverview() {
   const sourcesBox = document.getElementById("sources-box");
   if (sourcesBox) {
     sourcesBox.innerHTML = `
-      <strong>Источники перевода (порядок приоритета)</strong><br>
-      1. <b>grammar</b> — шаблоны (${inv.patterns ?? 0}) + лексемы (${inv.lexemes ?? 0})<br>
-      2. <b>dosh</b> — онлайн-словарь (${c.wordsLoaded ?? 0} слов)<br>
-      3. <b>paydadosh</b> — разговорные фразы (${c.paydaDoshPhrasesLoaded ?? 0})<br>
-      4. <b>corpus/lesson</b> — короткие фразы из уроков (${c.lessonPhrasesLoaded ?? 0})<br>
-      5. <b>habar</b> — фразы разговорника (включены, если DISABLE_HABAR_IN_TRANSLATE=false)<br>
-      6. <b>LLM</b> — OpenRouter (приоритет) или Gemini fallback<br><br>
+      <strong>Источники перевода (фактический порядок /translate)</strong><br>
+      1. <b>habar</b> — фразы с GitHub (${c.habarPhrasesLoaded ?? 0}, ключей в индексе: ${c.phraseIndexKeys ?? 0})<br>
+      2. <b>paydadosh</b> — разговорник PaydaDosh (${c.paydaDoshPhrasesLoaded ?? 0}; everyday ${c.paydaDoshEverydayLoaded ?? 0}, уроки ${c.paydaDoshLessonLoaded ?? 0})<br>
+      3. <b>grammar</b> — шаблоны (${inv.patterns ?? 0}) + лексемы (${inv.lexemes ?? 0})<br>
+      4. <b>dosh</b> — словарь + сборка из слов (${c.wordsLoaded ?? 0} слов)<br>
+      5. <b>LLM</b> — OpenRouter / Gemini fallback<br><br>
       <small>
-        «Правила слотов» (${inv.rules ?? 0}) — это не шаблоны перевода, а технические правила падежей (base/dat/gen).<br>
-        Реальные шаблоны — вкладка <b>Грамматика</b> (${inv.patterns ?? 0} шт.), поле <b>Приоритет</b> у каждого шаблона.
+        Формат «N → M в индексе»: N — фраз в файлах, M — осталось после слияния (PaydaDosh перекрывает дубликаты).<br>
+        «Corpus фраз» — короткие реплики из JSON-уроков; обычно уже есть в PaydaDosh/Habar.<br>
+        После Push Habar: <b>POST /refresh</b> с <code>{"pullCategories":true}</code> или кнопка «Данные API» на сайте.
       </small>
     `;
   }

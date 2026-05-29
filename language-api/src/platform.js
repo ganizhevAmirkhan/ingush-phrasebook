@@ -69,7 +69,8 @@ const state = {
     translateFromLLM: 0,
     translateRejected: 0
   },
-  phraseIndex: new Map()
+  phraseIndex: new Map(),
+  inventoryStats: {}
 };
 
 function nowIso() {
@@ -262,6 +263,15 @@ async function loadPhrases() {
     loadPaydaDoshPhrases(),
     loadLessonColloquialPhrases()
   ]);
+  state.inventoryStats = {
+    habarItemsRaw: habar.length,
+    habarBasicRaw: habar.filter((p) => p.category === "basic_phrases").length,
+    habarConversationRaw: habar.filter((p) => p.category === "conversation").length,
+    paydadoshRaw: paydadosh.length,
+    paydadoshEverydayRaw: paydadosh.filter((p) => p.category === "everyday_phrase").length,
+    paydadoshLessonRaw: paydadosh.filter((p) => p.category === "lesson_phrase").length,
+    corpusPhrasesRaw: lessons.length
+  };
   return mergePhraseRecords([...habar, ...lessons, ...paydadosh]);
 }
 
@@ -1379,17 +1389,36 @@ function lookupCorpus(query) {
   return out;
 }
 
+function countPhrasesBy(filterFn) {
+  return state.phrases.filter(filterFn).length;
+}
+
 function getMetrics() {
+  const inv = state.inventoryStats || {};
+  const paydaDoshItems = state.phrases.filter((p) => p.source === SOURCE.PAYDADOSH);
+  const habarItems = state.phrases.filter((p) => p.source === SOURCE.HABAR);
   return {
     ...state.metrics,
     current: {
       wordsLoaded: state.words.length,
       phrasesLoaded: state.phrases.length,
       phraseIndexKeys: state.phraseIndex.size,
-      habarPhrasesLoaded: state.phrases.filter((p) => p.source === SOURCE.HABAR).length,
-      paydaDoshPhrasesLoaded: state.phrases.filter((p) => p.source === SOURCE.PAYDADOSH).length,
-      lessonPhrasesLoaded: state.phrases.filter((p) => p.source === SOURCE.CORPUS).length,
-      grammarPhraseKeys: state.phrases.filter((p) => p.source === SOURCE.GRAMMAR).length,
+      habarItemsRaw: inv.habarItemsRaw ?? habarItems.length,
+      habarBasicRaw: inv.habarBasicRaw ?? 0,
+      habarConversationRaw: inv.habarConversationRaw ?? 0,
+      habarPhrasesLoaded: habarItems.length,
+      habarBasicPhrasesLoaded: countPhrasesBy((p) => p.source === SOURCE.HABAR && p.category === "basic_phrases"),
+      habarConversationLoaded: countPhrasesBy((p) => p.source === SOURCE.HABAR && p.category === "conversation"),
+      paydadoshRaw: inv.paydadoshRaw ?? paydaDoshItems.length,
+      paydaDoshPhrasesLoaded: paydaDoshItems.length,
+      paydaDoshEverydayLoaded: countPhrasesBy((p) => p.source === SOURCE.PAYDADOSH && p.category === "everyday_phrase"),
+      paydaDoshLessonLoaded: countPhrasesBy((p) => p.source === SOURCE.PAYDADOSH && p.category === "lesson_phrase"),
+      paydadoshEverydayRaw: inv.paydadoshEverydayRaw ?? 0,
+      paydadoshLessonRaw: inv.paydadoshLessonRaw ?? 0,
+      corpusPhrasesRaw: inv.corpusPhrasesRaw ?? 0,
+      corpusPhrasesInIndex: countPhrasesBy((p) => p.source === SOURCE.CORPUS),
+      lessonPhrasesLoaded: countPhrasesBy((p) => p.source === SOURCE.CORPUS),
+      grammarPhraseKeys: countPhrasesBy((p) => p.source === SOURCE.GRAMMAR),
       corpusLoaded: state.corpus.length,
       grammarPatternsLoaded: state.grammar.patterns.length,
       grammarRulesLoaded: state.grammar.rules.length,
