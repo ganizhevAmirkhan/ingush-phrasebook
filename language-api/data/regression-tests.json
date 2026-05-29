@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-29T18:24:10.241Z",
+  "generatedAt": "2026-05-29T19:10:40.538Z",
   "items": [
     {
       "id": "f_1766017415464_5gdw",
@@ -36036,6 +36036,18 @@
       "category": "proverbs",
       "ru": "Язык, выученный с молоком матери, не забывается до кончины.",
       "expectedIng": "Шурийца 1омабаь мотт валлалца бицбеннабац."
+    },
+    {
+      "id": "habar_friendship_we_friends",
+      "category": "basic_phrases",
+      "ru": "Мы друзья",
+      "expectedIng": "Тхо новкъасти"
+    },
+    {
+      "id": "habar_friendship_we_their_friends",
+      "category": "basic_phrases",
+      "ru": "Мы их друзья",
+      "expectedIng": "Тхо цар новкъасти"
     }
   ]
 }

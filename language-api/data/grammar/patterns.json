@@ -8544,16 +8544,30 @@
       ]
     },
     {
+      "id": "friendship_we_friends",
+      "ruPattern": "мы друзья",
+      "description": "Lesson 5 — мы друзья (новкъост)",
+      "slots": [],
+      "ingTemplate": "Тхо новкъасти",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мы друзья",
+          "ing_expected": "Тхо новкъасти"
+        }
+      ]
+    },
+    {
       "id": "friendship_we_their_friends",
       "ruPattern": "мы их друзья",
-      "description": "Lesson 5 basic sentence",
+      "description": "Lesson 5 — мы + их + друзья (новкъост)",
       "slots": [],
-      "ingTemplate": "ВАЙ ЦАР ДОТТАГIИЙ ДА",
-      "priority": 98,
+      "ingTemplate": "Тхо цар новкъасти",
+      "priority": 100,
       "examples": [
         {
           "ru": "мы их друзья",
-          "ing_expected": "ВАЙ ЦАР ДОТТАГIИЙ ДА"
+          "ing_expected": "Тхо цар новкъасти"
         }
       ]
     },
@@ -15568,6 +15582,34 @@
         {
           "ru": "я часто хожу к тете (дяци - тетя по отцу)",
           "ing_expected": "Каст-каста ух со даьци йолча"
+        }
+      ]
+    },
+    {
+      "id": "habar_habar_friendship_we_friends",
+      "ruPattern": "мы друзья",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Тхо новкъасти",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мы друзья",
+          "ing_expected": "Тхо новкъасти"
+        }
+      ]
+    },
+    {
+      "id": "habar_habar_friendship_we_their_friends",
+      "ruPattern": "мы их друзья",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Тхо цар новкъасти",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мы их друзья",
+          "ing_expected": "Тхо цар новкъасти"
         }
       ]
     },
@@ -95550,6 +95592,874 @@
         {
           "ru": "ыы",
           "ing_expected": "я"
+        }
+      ]
+    },
+    {
+      "id": "lesson_ассалам_алейкум_ахмед_рад_тебя_видеть_мы",
+      "ruPattern": "ассалам алейкум ахмед рад тебя видеть мы давно не встречались",
+      "description": "School lesson corpus (story_acquaintance_lesson_11_001)",
+      "slots": [],
+      "ingTemplate": "АССАЛАМ АЛЕЙКУМ, АХЬМАД! ДИКА ХЕТ СОНА ХЬО БIАРГАВАЙНА. ДУКХА ХА Я ВАЙ БIАРГА ЦА ГУ.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "ассалам алейкум ахмед рад тебя видеть мы давно не встречались",
+          "ing_expected": "АССАЛАМ АЛЕЙКУМ, АХЬМАД! ДИКА ХЕТ СОНА ХЬО БIАРГАВАЙНА. ДУКХА ХА Я ВАЙ БIАРГА ЦА ГУ."
+        }
+      ]
+    },
+    {
+      "id": "lesson_это_мой_друг_хочу_тебя_с_ним_познакомить",
+      "ruPattern": "это мой друг хочу тебя с ним познакомить",
+      "description": "School lesson corpus (story_acquaintance_lesson_11_001)",
+      "slots": [],
+      "ingTemplate": "ЕР СА ДОТТАГIА ВА. ШО ДАЙЗАЧА БАКЪАХЬА ХЕТ СОНА.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "это мой друг хочу тебя с ним познакомить",
+          "ing_expected": "ЕР СА ДОТТАГIА ВА. ШО ДАЙЗАЧА БАКЪАХЬА ХЕТ СОНА."
+        }
+      ]
+    },
+    {
+      "id": "lesson_с_удовольствием_меня_зовут_яха",
+      "ruPattern": "с удовольствием меня зовут яха",
+      "description": "School lesson corpus (story_acquaintance_lesson_11_001)",
+      "slots": [],
+      "ingTemplate": "ИЗ ЧIОАГIА ДИКА ДА! СА ЦIИ ЯХА Я.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "с удовольствием меня зовут яха",
+          "ing_expected": "ИЗ ЧIОАГIА ДИКА ДА! СА ЦIИ ЯХА Я."
+        }
+      ]
+    },
+    {
+      "id": "lesson_добрый_день_яха_я_много_о_вас_слышал_от_",
+      "ruPattern": "добрый день яха я много о вас слышал от своего друга",
+      "description": "School lesson corpus (story_acquaintance_lesson_11_001)",
+      "slots": [],
+      "ingTemplate": "ДИ ДИКА ХИЛДА ХЬА, ЯХА! ДУКХА ДИЙЦАД СОНА САЙ ДОТТАГIЧО ХЬОХ ЛАЬЦА.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "добрый день яха я много о вас слышал от своего друга",
+          "ing_expected": "ДИ ДИКА ХИЛДА ХЬА, ЯХА! ДУКХА ДИЙЦАД СОНА САЙ ДОТТАГIЧО ХЬОХ ЛАЬЦА."
+        }
+      ]
+    },
+    {
+      "id": "lesson_к_сожалению_мне_пора_идти_рад_был_с_вами",
+      "ruPattern": "к сожалению мне пора идти рад был с вами познакомиться яха",
+      "description": "School lesson corpus (story_acquaintance_lesson_11_001)",
+      "slots": [],
+      "ingTemplate": "БЕХК МА БАККХАЛАШ, СО СИХА ВА. ЧIОАГIА ДИКА ХЕТ СОНА ХЬО ЯЙЗА.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "к сожалению мне пора идти рад был с вами познакомиться яха",
+          "ing_expected": "БЕХК МА БАККХАЛАШ, СО СИХА ВА. ЧIОАГIА ДИКА ХЕТ СОНА ХЬО ЯЙЗА."
+        }
+      ]
+    },
+    {
+      "id": "lesson_до_свидания_ахмед_звони_мне_почаще_буду_",
+      "ruPattern": "до свидания ахмед звони мне почаще буду ждать твоего звонка",
+      "description": "School lesson corpus (story_acquaintance_lesson_11_001)",
+      "slots": [],
+      "ingTemplate": "IАДИКА ХИЙЛА ХЬА, АХЬМАД! КАСТ-КАСТА ТЕЛЕФОН ТОХАЛАХЬ СОГА. СО ХЬЕЖАРГВА IА САЙГА ТЕЛЕФОН ТОХАРГА.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "до свидания ахмед звони мне почаще буду ждать твоего звонка",
+          "ing_expected": "IАДИКА ХИЙЛА ХЬА, АХЬМАД! КАСТ-КАСТА ТЕЛЕФОН ТОХАЛАХЬ СОГА. СО ХЬЕЖАРГВА IА САЙГА ТЕЛЕФОН ТОХАРГА."
+        }
+      ]
+    },
+    {
+      "id": "lesson_здравствуйте_друзья_меня_зовут_яха_а_как",
+      "ruPattern": "здравствуйте друзья меня зовут яха а как зовут тебя",
+      "description": "School lesson corpus (story_acquaintance_lesson_3_001)",
+      "slots": [],
+      "ingTemplate": "МОАРШАЛ ДА ШУГА, ДОТТАГIИЙ! СА ЦIИ ЯХА Я. ЦIИ ФУЙ ХЬА?",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "здравствуйте друзья меня зовут яха а как зовут тебя",
+          "ing_expected": "МОАРШАЛ ДА ШУГА, ДОТТАГIИЙ! СА ЦIИ ЯХА Я. ЦIИ ФУЙ ХЬА?"
+        }
+      ]
+    },
+    {
+      "id": "lesson_здравствуйте_друзья_меня_зовут_саид_я_ст",
+      "ruPattern": "здравствуйте друзья меня зовут саид я — студент",
+      "description": "School lesson corpus (story_acquaintance_lesson_3_001)",
+      "slots": [],
+      "ingTemplate": "МОАРШАЛ ДА ШУГА, ДОТТАГIИЙ! СА ЦIИ САИД Я. СО СТУДЕНТ ВА.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "здравствуйте друзья меня зовут саид я — студент",
+          "ing_expected": "МОАРШАЛ ДА ШУГА, ДОТТАГIИЙ! СА ЦIИ САИД Я. СО СТУДЕНТ ВА."
+        }
+      ]
+    },
+    {
+      "id": "lesson_я_буду_врачом_это_нужная_профессия",
+      "ruPattern": "я буду врачом это нужная профессия",
+      "description": "School lesson corpus (story_acquaintance_lesson_3_001)",
+      "slots": [],
+      "ingTemplate": "СО ЛОР ХУРГВА. ИЗ ЭШАШ ПРОФЕССИ Я.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "я буду врачом это нужная профессия",
+          "ing_expected": "СО ЛОР ХУРГВА. ИЗ ЭШАШ ПРОФЕССИ Я."
+        }
+      ]
+    },
+    {
+      "id": "lesson_утро_день_вечер_ночь_сутки",
+      "ruPattern": "утро день вечер ночь сутки",
+      "description": "School lesson corpus (story_calendar_lesson_2_001)",
+      "slots": [],
+      "ingTemplate": "IУЙРЕ, ДИ, САЙРЕ, БИЙСА. ДИ-БИЙСА.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "утро день вечер ночь сутки",
+          "ing_expected": "IУЙРЕ, ДИ, САЙРЕ, БИЙСА. ДИ-БИЙСА."
+        }
+      ]
+    },
+    {
+      "id": "lesson_какое_время_года_сейчас_весна",
+      "ruPattern": "какое время года сейчас весна",
+      "description": "School lesson corpus (story_calendar_lesson_2_001)",
+      "slots": [],
+      "ingTemplate": "ХIАНЗ МАЛАГIА ШЕРА ХА Я? ХIАНЗ БIАЬСТИ Я.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "какое время года сейчас весна",
+          "ing_expected": "ХIАНЗ МАЛАГIА ШЕРА ХА Я? ХIАНЗ БIАЬСТИ Я."
+        }
+      ]
+    },
+    {
+      "id": "lesson_сейчас_какой_месяц_сейчас_апрель",
+      "ruPattern": "сейчас какой месяц сейчас апрель",
+      "description": "School lesson corpus (story_calendar_lesson_2_001)",
+      "slots": [],
+      "ingTemplate": "ХIАНЗ МАЛАГIА БУТТ БА? ХIАНЗ ТУШОЛЕ БУТТ БА.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "сейчас какой месяц сейчас апрель",
+          "ing_expected": "ХIАНЗ МАЛАГIА БУТТ БА? ХIАНЗ ТУШОЛЕ БУТТ БА."
+        }
+      ]
+    },
+    {
+      "id": "lesson_какой_сегодня_день_сегодня_вторник",
+      "ruPattern": "какой сегодня день сегодня вторник",
+      "description": "School lesson corpus (story_calendar_lesson_2_001)",
+      "slots": [],
+      "ingTemplate": "ТАХАН ФУ ДИ ДА? ТАХАН ШИНАРА ДИ ДА.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "какой сегодня день сегодня вторник",
+          "ing_expected": "ТАХАН ФУ ДИ ДА? ТАХАН ШИНАРА ДИ ДА."
+        }
+      ]
+    },
+    {
+      "id": "lesson_какое_число_сегодня_сегодня_30_число",
+      "ruPattern": "какое число сегодня сегодня 30 число",
+      "description": "School lesson corpus (story_calendar_lesson_2_001)",
+      "slots": [],
+      "ingTemplate": "ТАХАН МАЛАГIА ТАЬРАХЬ ДА? ТАХАН ТКЪАЬ ИТТЛАГIА ДИ ДА.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "какое число сегодня сегодня 30 число",
+          "ing_expected": "ТАХАН МАЛАГIА ТАЬРАХЬ ДА? ТАХАН ТКЪАЬ ИТТЛАГIА ДИ ДА."
+        }
+      ]
+    },
+    {
+      "id": "lesson_который_час_сейчас_7_часов",
+      "ruPattern": "который час сейчас 7 часов",
+      "description": "School lesson corpus (story_calendar_lesson_2_001)",
+      "slots": [],
+      "ingTemplate": "МАССА САХЬАТ ДАЬННАД? ХIАНЗ ВОРХIСАХЬАТ ДАЬННАД.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "который час сейчас 7 часов",
+          "ing_expected": "МАССА САХЬАТ ДАЬННАД? ХIАНЗ ВОРХIСАХЬАТ ДАЬННАД."
+        }
+      ]
+    },
+    {
+      "id": "lesson_на_что_вы_жалуетесь_как_вы_себя_чувствуе",
+      "ruPattern": "на что вы жалуетесь как вы себя чувствуете",
+      "description": "School lesson corpus (story_clinic_visit_lesson_16_001)",
+      "slots": [],
+      "ingTemplate": "СЕВО ЛАЗАР ДУ ХЬОНА? МИШТА ХЕТ ХЬОНА?",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "на что вы жалуетесь как вы себя чувствуете",
+          "ing_expected": "СЕВО ЛАЗАР ДУ ХЬОНА? МИШТА ХЕТ ХЬОНА?"
+        }
+      ]
+    },
+    {
+      "id": "lesson_у_меня_кашель_у_меня_болит_сердце",
+      "ruPattern": "у меня кашель у меня болит сердце",
+      "description": "School lesson corpus (story_clinic_visit_lesson_16_001)",
+      "slots": [],
+      "ingTemplate": "СОНА ЙIОВХАРАШ Я. СА ДОГ ЛАЗ.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "у меня кашель у меня болит сердце",
+          "ing_expected": "СОНА ЙIОВХАРАШ Я. СА ДОГ ЛАЗ."
+        }
+      ]
+    },
+    {
+      "id": "lesson_разденьтесь_до_пояса_вздохните_глубоко",
+      "ruPattern": "разденьтесь до пояса вздохните глубоко",
+      "description": "School lesson corpus (story_clinic_visit_lesson_16_001)",
+      "slots": [],
+      "ingTemplate": "ЮКЪАГА КХАЧАЛЦА БАРЗКЪАШ IОДАХА. ДОККХА СА ДАККХАЛ.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "разденьтесь до пояса вздохните глубоко",
+          "ing_expected": "ЮКЪАГА КХАЧАЛЦА БАРЗКЪАШ IОДАХА. ДОККХА СА ДАККХАЛ."
+        }
+      ]
+    },
+    {
+      "id": "lesson_я_вам_выпишу_рецепт_вам_надо_обратиться_",
+      "ruPattern": "я вам выпишу рецепт вам надо обратиться к хирургу",
+      "description": "School lesson corpus (story_clinic_visit_lesson_16_001)",
+      "slots": [],
+      "ingTemplate": "АЗ ХЬОНА РЕЦЕПТ ЯЗДЕРГДА. ХЬА ХИРУРГА ТIАВАХА ВЕЗА.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "я вам выпишу рецепт вам надо обратиться к хирургу",
+          "ing_expected": "АЗ ХЬОНА РЕЦЕПТ ЯЗДЕРГДА. ХЬА ХИРУРГА ТIАВАХА ВЕЗА."
+        }
+      ]
+    },
+    {
+      "id": "lesson_я_их_покупаю_они_мне_очень_идут",
+      "ruPattern": "я их покупаю они мне очень идут",
+      "description": "School lesson corpus (story_department_store_lesson_20_001)",
+      "slots": [],
+      "ingTemplate": "АЗ ХЬАЭЦ ЕРАШ. СОГА ЧIОАГIА ХОЗА ТОВ УЖ.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "я их покупаю они мне очень идут",
+          "ing_expected": "АЗ ХЬАЭЦ ЕРАШ. СОГА ЧIОАГIА ХОЗА ТОВ УЖ."
+        }
+      ]
+    },
+    {
+      "id": "lesson_давай_сегодня_поговорим_о_семье_ты_женат",
+      "ruPattern": "давай сегодня поговорим о семье ты женат",
+      "description": "School lesson corpus (story_family_relatives_lesson_4_001)",
+      "slots": [],
+      "ingTemplate": "ТАХАН ВАЙ ДЕЗАЛАХ ЛАЬЦА ДУВЦИЙТА ВАЙГА. ХЬО САГ ЙОАЛАЯЬ ВИЙ?",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "давай сегодня поговорим о семье ты женат",
+          "ing_expected": "ТАХАН ВАЙ ДЕЗАЛАХ ЛАЬЦА ДУВЦИЙТА ВАЙГА. ХЬО САГ ЙОАЛАЯЬ ВИЙ?"
+        }
+      ]
+    },
+    {
+      "id": "lesson_нет_не_женат_а_вы_замужем_яха",
+      "ruPattern": "нет не женат а вы замужем яха",
+      "description": "School lesson corpus (story_family_relatives_lesson_4_001)",
+      "slots": [],
+      "ingTemplate": "СО САГ ЙОАЛАЯНЗА ВА. ТIАККХА ХЬО МАЬРЕ ЯХАЙИЙ?",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "нет не женат а вы замужем яха",
+          "ing_expected": "СО САГ ЙОАЛАЯНЗА ВА. ТIАККХА ХЬО МАЬРЕ ЯХАЙИЙ?"
+        }
+      ]
+    },
+    {
+      "id": "lesson_ее_зовут_марьям_она_учится_в_1_м_классе",
+      "ruPattern": "ее зовут марьям она учится в 1-м классе",
+      "description": "School lesson corpus (story_family_relatives_lesson_4_001)",
+      "slots": [],
+      "ingTemplate": "ИЗ МАРЕМ ЯХАШ Я. ЦХЬОАЛАГIЧА КЛАССЕ ДЕШАШ Я ИЗ.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "ее зовут марьям она учится в 1-м классе",
+          "ing_expected": "ИЗ МАРЕМ ЯХАШ Я. ЦХЬОАЛАГIЧА КЛАССЕ ДЕШАШ Я ИЗ."
+        }
+      ]
+    },
+    {
+      "id": "lesson_мой_муж_моя_жена_мои_дети",
+      "ruPattern": "мой муж моя жена мои дети",
+      "description": "School lesson corpus (story_family_relatives_lesson_4_001)",
+      "slots": [],
+      "ingTemplate": "СА ЦIЕН-ДА. СА ЦIЕН-НАНА. СА БЕРАШ.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "мой муж моя жена мои дети",
+          "ing_expected": "СА ЦIЕН-ДА. СА ЦIЕН-НАНА. СА БЕРАШ."
+        }
+      ]
+    },
+    {
+      "id": "lesson_твой_брат_твоя_сестра_твои_родственники",
+      "ruPattern": "твой брат твоя сестра твои родственники",
+      "description": "School lesson corpus (story_family_relatives_lesson_4_001)",
+      "slots": [],
+      "ingTemplate": "ХЬА ВОША. ХЬА ЙИША. ХЬА ГАРГАРА НАХ.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "твой брат твоя сестра твои родственники",
+          "ing_expected": "ХЬА ВОША. ХЬА ЙИША. ХЬА ГАРГАРА НАХ."
+        }
+      ]
+    },
+    {
+      "id": "lesson_наш_папа_наша_мама_наши_родители",
+      "ruPattern": "наш папа наша мама наши родители",
+      "description": "School lesson corpus (story_family_relatives_lesson_4_001)",
+      "slots": [],
+      "ingTemplate": "ТХА ДАДА. ТХА НАНА. ТХА ДАЙ-НОАНОЙ.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "наш папа наша мама наши родители",
+          "ing_expected": "ТХА ДАДА. ТХА НАНА. ТХА ДАЙ-НОАНОЙ."
+        }
+      ]
+    },
+    {
+      "id": "lesson_ваш_сын_ваша_дочь_ваши_дети",
+      "ruPattern": "ваш сын ваша дочь ваши дети",
+      "description": "School lesson corpus (story_family_relatives_lesson_4_001)",
+      "slots": [],
+      "ingTemplate": "ШУН ВОI. ШУН ЙОI. ШУН БЕРАШ.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "ваш сын ваша дочь ваши дети",
+          "ing_expected": "ШУН ВОI. ШУН ЙОI. ШУН БЕРАШ."
+        }
+      ]
+    },
+    {
+      "id": "lesson_давайте_здесь_остановимся_мне_здесь_нрав",
+      "ruPattern": "давайте здесь остановимся мне здесь нравится",
+      "description": "School lesson corpus (story_forest_lesson_18_001)",
+      "slots": [],
+      "ingTemplate": "УКХАЗА СОВЦИЙ ВАЙ. СОНА ХОЗА ХЕТ УКХАЗА.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "давайте здесь остановимся мне здесь нравится",
+          "ing_expected": "УКХАЗА СОВЦИЙ ВАЙ. СОНА ХОЗА ХЕТ УКХАЗА."
+        }
+      ]
+    },
+    {
+      "id": "lesson_я_соберу_сухих_дров_надо_зажечь_костер_ч",
+      "ruPattern": "я соберу сухих дров надо зажечь костер чтобы сделать шашлык",
+      "description": "School lesson corpus (story_forest_lesson_18_001)",
+      "slots": [],
+      "ingTemplate": "АЗ ДЕКЪА ДАХЧА ГУЛДЕРГДА ВАЙНА. ЦIИ ЮВЗА ЕЗА, ШАШЛЫК ДАТТА.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "я соберу сухих дров надо зажечь костер чтобы сделать шашлык",
+          "ing_expected": "АЗ ДЕКЪА ДАХЧА ГУЛДЕРГДА ВАЙНА. ЦIИ ЮВЗА ЕЗА, ШАШЛЫК ДАТТА."
+        }
+      ]
+    },
+    {
+      "id": "lesson_как_много_здесь_деревьев_а_ты_знаешь_их_",
+      "ruPattern": "как много здесь деревьев а ты знаешь их названия",
+      "description": "School lesson corpus (story_forest_lesson_18_001)",
+      "slots": [],
+      "ingTemplate": "МА ДУКХА ГАЬНАШ Я УКХАЗА. ХЬОНА ХОЙ ЦАР ЦIЕРАШ?",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "как много здесь деревьев а ты знаешь их названия",
+          "ing_expected": "МА ДУКХА ГАЬНАШ Я УКХАЗА. ХЬОНА ХОЙ ЦАР ЦIЕРАШ?"
+        }
+      ]
+    },
+    {
+      "id": "lesson_это_орешник_а_там_яблоня_это_клен_а_рядо",
+      "ruPattern": "это орешник а там яблоня это клен а рядом с ним тополь",
+      "description": "School lesson corpus (story_forest_lesson_18_001)",
+      "slots": [],
+      "ingTemplate": "ИЗ БIАРИНГ Я, ДIАРБАР IАЖ БА. ИЗ КЪОАХК Я, ЦУННА ЮХЕ ЯГIАР МИХА Я.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "это орешник а там яблоня это клен а рядом с ним тополь",
+          "ing_expected": "ИЗ БIАРИНГ Я, ДIАРБАР IАЖ БА. ИЗ КЪОАХК Я, ЦУННА ЮХЕ ЯГIАР МИХА Я."
+        }
+      ]
+    },
+    {
+      "id": "lesson_а_можно_пить_воду_из_этого_ручья_она_чис",
+      "ruPattern": "а можно пить воду из этого ручья она чистая",
+      "description": "School lesson corpus (story_forest_lesson_18_001)",
+      "slots": [],
+      "ingTemplate": "ЦУ ТОАТОЛГА ЧУРА ХИЙ МАЛА ЙИШ ЙИЙ? ЦIЕНА ДИЙ-ХЬОГI ИЗ?",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "а можно пить воду из этого ручья она чистая",
+          "ing_expected": "ЦУ ТОАТОЛГА ЧУРА ХИЙ МАЛА ЙИШ ЙИЙ? ЦIЕНА ДИЙ-ХЬОГI ИЗ?"
+        }
+      ]
+    },
+    {
+      "id": "lesson_главные_слова_дружба_друг_друзья",
+      "ruPattern": "главные слова дружба друг друзья",
+      "description": "School lesson corpus (story_friendship_lesson_5_001)",
+      "slots": [],
+      "ingTemplate": "ДОТТАГIАЛ, ДОТТАГIА, ДОТТАГIИЙ.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "главные слова дружба друг друзья",
+          "ing_expected": "ДОТТАГIАЛ, ДОТТАГIА, ДОТТАГIИЙ."
+        }
+      ]
+    },
+    {
+      "id": "lesson_я_твой_друг_я_твоя_подруга",
+      "ruPattern": "я твой друг я твоя подруга",
+      "description": "School lesson corpus (story_friendship_lesson_5_001)",
+      "slots": [],
+      "ingTemplate": "СО ХЬА ДОТТАГIА ВА. СО ХЬА НЕШ Я.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "я твой друг я твоя подруга",
+          "ing_expected": "СО ХЬА ДОТТАГIА ВА. СО ХЬА НЕШ Я."
+        }
+      ]
+    },
+    {
+      "id": "lesson_ты_мой_друг_ты_моя_подруга",
+      "ruPattern": "ты мой друг ты моя подруга",
+      "description": "School lesson corpus (story_friendship_lesson_5_001)",
+      "slots": [],
+      "ingTemplate": "ХЬО СА ДОТТАГIА ВА. ХЬО СА НЕШ Я.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "ты мой друг ты моя подруга",
+          "ing_expected": "ХЬО СА ДОТТАГIА ВА. ХЬО СА НЕШ Я."
+        }
+      ]
+    },
+    {
+      "id": "lesson_мы_ваши_друзья_они_наши_друзья",
+      "ruPattern": "мы ваши друзья они наши друзья",
+      "description": "School lesson corpus (story_friendship_lesson_5_001)",
+      "slots": [],
+      "ingTemplate": "ТХО ШУН ДОТТАГIИЙ ДА. УЖ ТХА ДОТТАГIИЙ БА.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "мы ваши друзья они наши друзья",
+          "ing_expected": "ТХО ШУН ДОТТАГIИЙ ДА. УЖ ТХА ДОТТАГIИЙ БА."
+        }
+      ]
+    },
+    {
+      "id": "lesson_у_тебя_много_друзей_саид_кто_они",
+      "ruPattern": "у тебя много друзей саид кто они",
+      "description": "School lesson corpus (story_friendship_lesson_5_001)",
+      "slots": [],
+      "ingTemplate": "САИД, ХЬА ДУКХА БИЙ ДОТТАГIИЙ? МАЛАШ БА УЖ?",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "у тебя много друзей саид кто они",
+          "ing_expected": "САИД, ХЬА ДУКХА БИЙ ДОТТАГIИЙ? МАЛАШ БА УЖ?"
+        }
+      ]
+    },
+    {
+      "id": "lesson_он_сейчас_учится_в_египте_мы_с_ним_общае",
+      "ruPattern": "он сейчас учится в египте мы с ним общаемся по электронной почте",
+      "description": "School lesson corpus (story_friendship_lesson_5_001)",
+      "slots": [],
+      "ingTemplate": "ИЗ ХIАНЗ МИСАРА МЕХКА (ЕГИПЕТ) ДЕШАШ ВА. ХIАЬТА ОАХА ЭЛЕКТРОННИ ПОЧТЕ ГIОЛЛА КЪАМАЬЛ ДУ.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "он сейчас учится в египте мы с ним общаемся по электронной почте",
+          "ing_expected": "ИЗ ХIАНЗ МИСАРА МЕХКА (ЕГИПЕТ) ДЕШАШ ВА. ХIАЬТА ОАХА ЭЛЕКТРОННИ ПОЧТЕ ГIОЛЛА КЪАМАЬЛ ДУ."
+        }
+      ]
+    },
+    {
+      "id": "lesson_доброе_утро_добрый_день_добрый_вечер_спо",
+      "ruPattern": "доброе утро добрый день добрый вечер спокойной ночи (к 1 человеку)",
+      "description": "School lesson corpus (story_greetings_lesson_1_001)",
+      "slots": [],
+      "ingTemplate": "IУЙРЕ ДИКА ХИЙЛА ХЬА! ДИ ДИКА ХИЛДА ХЬА! САЙРЕ ДИКА ХИЙЛА ХЬА! БИЙСА ДАЬКЪАЛА ХИЙЛА ХЬА!",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "доброе утро добрый день добрый вечер спокойной ночи (к 1 человеку)",
+          "ing_expected": "IУЙРЕ ДИКА ХИЙЛА ХЬА! ДИ ДИКА ХИЛДА ХЬА! САЙРЕ ДИКА ХИЙЛА ХЬА! БИЙСА ДАЬКЪАЛА ХИЙЛА ХЬА!"
+        }
+      ]
+    },
+    {
+      "id": "lesson_доброе_утро_всем_добрый_день_всем_добрый",
+      "ruPattern": "доброе утро всем добрый день всем добрый вечер всем спокойной ночи всем",
+      "description": "School lesson corpus (story_greetings_lesson_1_001)",
+      "slots": [],
+      "ingTemplate": "IУЙРЕ ДИКА ХИЙЛА ШУН! ДИ ДИКА ХИЛДА ШУН! САЙРЕ ДИКА ХИЙЛА ШУН! БИЙСА ДАЬКЪАЛА ХИЙЛА ШУН!",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "доброе утро всем добрый день всем добрый вечер всем спокойной ночи всем",
+          "ing_expected": "IУЙРЕ ДИКА ХИЙЛА ШУН! ДИ ДИКА ХИЛДА ШУН! САЙРЕ ДИКА ХИЙЛА ШУН! БИЙСА ДАЬКЪАЛА ХИЙЛА ШУН!"
+        }
+      ]
+    },
+    {
+      "id": "lesson_здравствуй_здравствуйте",
+      "ruPattern": "здравствуй здравствуйте",
+      "description": "School lesson corpus (story_greetings_lesson_1_001)",
+      "slots": [],
+      "ingTemplate": "МОАРШАЛ ДА ХЬОГА! МОАРШАЛ ДА ШУГА!",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "здравствуй здравствуйте",
+          "ing_expected": "МОАРШАЛ ДА ХЬОГА! МОАРШАЛ ДА ШУГА!"
+        }
+      ]
+    },
+    {
+      "id": "lesson_приветствие_ассаламу_алейкум_ответ_ва_ал",
+      "ruPattern": "приветствие ассаламу алейкум ответ ва алейкум салам",
+      "description": "School lesson corpus (story_greetings_lesson_1_001)",
+      "slots": [],
+      "ingTemplate": "АССАЛАМУ IАЛАЙКУМ! ВА IАЛАЙКУМ САЛАМ!",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "приветствие ассаламу алейкум ответ ва алейкум салам",
+          "ing_expected": "АССАЛАМУ IАЛАЙКУМ! ВА IАЛАЙКУМ САЛАМ!"
+        }
+      ]
+    },
+    {
+      "id": "lesson_как_вы_поживаете_живем_потихоньку",
+      "ruPattern": "как вы поживаете живем потихоньку",
+      "description": "School lesson corpus (story_greetings_lesson_1_001)",
+      "slots": [],
+      "ingTemplate": "ФУ ДЕШ ДА ШО? ДIА-М ДОАХК ТХО.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "как вы поживаете живем потихоньку",
+          "ing_expected": "ФУ ДЕШ ДА ШО? ДIА-М ДОАХК ТХО."
+        }
+      ]
+    },
+    {
+      "id": "lesson_как_здоровье_живем_здоровые",
+      "ruPattern": "как здоровье живем здоровые",
+      "description": "School lesson corpus (story_greetings_lesson_1_001)",
+      "slots": [],
+      "ingTemplate": "МОГАШ ДИЙ ШО? МОГАШ ДОАХК.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "как здоровье живем здоровые",
+          "ing_expected": "МОГАШ ДИЙ ШО? МОГАШ ДОАХК."
+        }
+      ]
+    },
+    {
+      "id": "lesson_до_свидания_спокойной_ночи_желаем_успеха",
+      "ruPattern": "до свидания спокойной ночи желаем успеха",
+      "description": "School lesson corpus (story_greetings_lesson_1_001)",
+      "slots": [],
+      "ingTemplate": "IАДИКА ХИЙЛА ШУН! БИЙСА ДАЬКЪАЛА ХИЙЛА ШУН! АЬТТУВ ХИЛБА ШУН!",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "до свидания спокойной ночи желаем успеха",
+          "ing_expected": "IАДИКА ХИЙЛА ШУН! БИЙСА ДАЬКЪАЛА ХИЙЛА ШУН! АЬТТУВ ХИЛБА ШУН!"
+        }
+      ]
+    },
+    {
+      "id": "lesson_на_стене_висят_2_ковра_в_углу_стоит_огро",
+      "ruPattern": "на стене висят 2 ковра в углу стоит огромный цветок",
+      "description": "School lesson corpus (story_home_lesson_8_001)",
+      "slots": [],
+      "ingTemplate": "ПЕНАХ ХЬАЛТЕХА ШИ КIУВС БОАЛЛ. САЬН ЧУ ДОККХА ЗИЗА ЛАТТ.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "на стене висят 2 ковра в углу стоит огромный цветок",
+          "ing_expected": "ПЕНАХ ХЬАЛТЕХА ШИ КIУВС БОАЛЛ. САЬН ЧУ ДОККХА ЗИЗА ЛАТТ."
+        }
+      ]
+    },
+    {
+      "id": "lesson_я_знаю_всех_своих_соседей_мы_живем_очень",
+      "ruPattern": "я знаю всех своих соседей мы живем очень дружно",
+      "description": "School lesson corpus (story_place_we_live_lesson_7_001)",
+      "slots": [],
+      "ingTemplate": "СОНА САЙ МЕЛ БОЛА ЛОАЛАХОЙ БОВЗ. Ч1ОАГIА БАРТТАЙНА ДАХ ТХО.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "я знаю всех своих соседей мы живем очень дружно",
+          "ing_expected": "СОНА САЙ МЕЛ БОЛА ЛОАЛАХОЙ БОВЗ. Ч1ОАГIА БАРТТАЙНА ДАХ ТХО."
+        }
+      ]
+    },
+    {
+      "id": "lesson_где_вы_живете_где_вы_учитесь_где_вы_рабо",
+      "ruPattern": "где вы живете где вы учитесь где вы работаете",
+      "description": "School lesson corpus (story_place_we_live_lesson_7_001)",
+      "slots": [],
+      "ingTemplate": "ХЬО МИЧАХЬА ВАХАШ ВА (Я)? ХЬО МИЧАХЬА ДЕШАШ ВА (Я)? ХЬО МИЧАХЬА БОЛХ БЕШ ВА (Я)?",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "где вы живете где вы учитесь где вы работаете",
+          "ing_expected": "ХЬО МИЧАХЬА ВАХАШ ВА (Я)? ХЬО МИЧАХЬА ДЕШАШ ВА (Я)? ХЬО МИЧАХЬА БОЛХ БЕШ ВА (Я)?"
+        }
+      ]
+    },
+    {
+      "id": "lesson_на_столе_в_печке",
+      "ruPattern": "на столе в печке",
+      "description": "School lesson corpus (story_postpositions_lesson_13_001)",
+      "slots": [],
+      "ingTemplate": "ИСТОЛА ТIА. ПИШКА ЧУ.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "на столе в печке",
+          "ing_expected": "ИСТОЛА ТIА. ПИШКА ЧУ."
+        }
+      ]
+    },
+    {
+      "id": "lesson_алло_это_лейла_простите_кто_у_телефона_п",
+      "ruPattern": "алло это лейла простите кто у телефона позовите пожалуйста лейлу",
+      "description": "School lesson corpus (story_telephone_conversation_lesson_14_001)",
+      "slots": [],
+      "ingTemplate": "АЛЛО, ЛЕЙЛА ЙИЙ ХЬО. БЕХК МА БАККХАЛАХЬ, ТЕЛЕФОН ХЬАИЙЦАР МАЛУВ? ЛЕЙЛА ХЬАТIАЕХАЛ СОНА.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "алло это лейла простите кто у телефона позовите пожалуйста лейлу",
+          "ing_expected": "АЛЛО, ЛЕЙЛА ЙИЙ ХЬО. БЕХК МА БАККХАЛАХЬ, ТЕЛЕФОН ХЬАИЙЦАР МАЛУВ? ЛЕЙЛА ХЬАТIАЕХАЛ СОНА."
+        }
+      ]
+    },
+    {
+      "id": "lesson_что_нового_в_москве_ничего_нового",
+      "ruPattern": "что нового в москве ничего нового",
+      "description": "School lesson corpus (story_telephone_conversation_lesson_14_001)",
+      "slots": [],
+      "ingTemplate": "КЕРДА ФУД МОСКВЕ? КЕРДА ХIАМА ДАЦ.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "что нового в москве ничего нового",
+          "ing_expected": "КЕРДА ФУД МОСКВЕ? КЕРДА ХIАМА ДАЦ."
+        }
+      ]
+    },
+    {
+      "id": "lesson_сколько_лет_им_предстоит_учиться_5_лет",
+      "ruPattern": "сколько лет им предстоит учиться 5 лет",
+      "description": "School lesson corpus (story_telephone_conversation_lesson_14_001)",
+      "slots": [],
+      "ingTemplate": "МАССА ШЕРА ДЕША ДЕЗА ЦАР? ПХЕ ШЕРА.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "сколько лет им предстоит учиться 5 лет",
+          "ing_expected": "МАССА ШЕРА ДЕША ДЕЗА ЦАР? ПХЕ ШЕРА."
+        }
+      ]
+    },
+    {
+      "id": "lesson_большой_привет_семье_до_встречи",
+      "ruPattern": "большой привет семье до встречи",
+      "description": "School lesson corpus (story_telephone_conversation_lesson_14_001)",
+      "slots": [],
+      "ingTemplate": "ЦIАГIАРЧАРГА ДОККХА САЛАМ-МОАРШАЛ ДIАЛЕ! IАДИКА ХИЙЛА!",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "большой привет семье до встречи",
+          "ing_expected": "ЦIАГIАРЧАРГА ДОККХА САЛАМ-МОАРШАЛ ДIАЛЕ! IАДИКА ХИЙЛА!"
+        }
+      ]
+    },
+    {
+      "id": "lesson_я_студент_я_был_школьником_я_буду_врачом",
+      "ruPattern": "я студент я был школьником я буду врачом",
+      "description": "School lesson corpus (story_three_tenses_to_be_lesson_12_001)",
+      "slots": [],
+      "ingTemplate": "СО СТУДЕНТ ВА. СО ДЕШАРХО ВАР. СО ЛОР ХУРГВА.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "я студент я был школьником я буду врачом",
+          "ing_expected": "СО СТУДЕНТ ВА. СО ДЕШАРХО ВАР. СО ЛОР ХУРГВА."
+        }
+      ]
+    },
+    {
+      "id": "lesson_я_диктор_я_была_студенткой_я_и_в_дальней",
+      "ruPattern": "я диктор я была студенткой я и в дальнейшем буду диктором",
+      "description": "School lesson corpus (story_three_tenses_to_be_lesson_12_001)",
+      "slots": [],
+      "ingTemplate": "СО ДИКТОР Я. СО СТУДЕНТКА ЯР. СО ДIАХО ЙОДАЧА ХАНА А ДИКТОР ХУРГЬЯ.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "я диктор я была студенткой я и в дальнейшем буду диктором",
+          "ing_expected": "СО ДИКТОР Я. СО СТУДЕНТКА ЯР. СО ДIАХО ЙОДАЧА ХАНА А ДИКТОР ХУРГЬЯ."
+        }
+      ]
+    },
+    {
+      "id": "lesson_а_сегодня_он_будет_на_работе_когда_мадин",
+      "ruPattern": "а сегодня он будет на работе когда мадина будет на работе",
+      "description": "School lesson corpus (story_three_tenses_to_be_lesson_12_001)",
+      "slots": [],
+      "ingTemplate": "ТАХАН ХУРГВИЙ ИЗ БАЛХА? МАДИНА МАЦА ХУРГЬЯ БАЛХА?",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "а сегодня он будет на работе когда мадина будет на работе",
+          "ing_expected": "ТАХАН ХУРГВИЙ ИЗ БАЛХА? МАДИНА МАЦА ХУРГЬЯ БАЛХА?"
+        }
+      ]
+    },
+    {
+      "id": "lesson_мы_были_в_театре_где_они_были_утром",
+      "ruPattern": "мы были в театре где они были утром",
+      "description": "School lesson corpus (story_three_tenses_to_be_lesson_12_001)",
+      "slots": [],
+      "ingTemplate": "ТХО ТЕАТРЕ ДАР. МИЧА БАР УЖ IУЙРАН?",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "мы были в театре где они были утром",
+          "ing_expected": "ТХО ТЕАТРЕ ДАР. МИЧА БАР УЖ IУЙРАН?"
+        }
+      ]
+    },
+    {
+      "id": "lesson_утром_они_были_в_магазине_где_они_будут_",
+      "ruPattern": "утром они были в магазине где они будут днем",
+      "description": "School lesson corpus (story_three_tenses_to_be_lesson_12_001)",
+      "slots": [],
+      "ingTemplate": "IУЙРАН УЖ ТИКА ТIА БАР. ДИЙНАХЬА МИЧА ХУРГБА УЖ?",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "утром они были в магазине где они будут днем",
+          "ing_expected": "IУЙРАН УЖ ТИКА ТIА БАР. ДИЙНАХЬА МИЧА ХУРГБА УЖ?"
+        }
+      ]
+    },
+    {
+      "id": "lesson_днем_они_будут_дома_сейчас_они_в_школе",
+      "ruPattern": "днем они будут дома сейчас они в школе",
+      "description": "School lesson corpus (story_three_tenses_to_be_lesson_12_001)",
+      "slots": [],
+      "ingTemplate": "ДИЙНАХЬА УЖ ЦIАГIА ХУРГБА. ХIАНЗ ИШКОЛЕ БА УЖ.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "днем они будут дома сейчас они в школе",
+          "ing_expected": "ДИЙНАХЬА УЖ ЦIАГIА ХУРГБА. ХIАНЗ ИШКОЛЕ БА УЖ."
+        }
+      ]
+    },
+    {
+      "id": "lesson_а_как_ты_выезжаешь_загород_на_электричке",
+      "ruPattern": "а как ты выезжаешь загород на электричке",
+      "description": "School lesson corpus (story_transport_lesson_10_001)",
+      "slots": [],
+      "ingTemplate": "ТIАККХА ГIАЛАРА АРА СЕНЦА ЙОАЛ ХЬО? ЭЛЕКТРИЧКАЦА.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "а как ты выезжаешь загород на электричке",
+          "ing_expected": "ТIАККХА ГIАЛАРА АРА СЕНЦА ЙОАЛ ХЬО? ЭЛЕКТРИЧКАЦА."
+        }
+      ]
+    },
+    {
+      "id": "lesson_это_какая_станция_сколько_стоит_билет",
+      "ruPattern": "это какая станция сколько стоит билет",
+      "description": "School lesson corpus (story_transport_lesson_10_001)",
+      "slots": [],
+      "ingTemplate": "ЕР МАЛАГIА СТАНЦИ Я? БИЛЕТА ФУ МАХ БА?",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "это какая станция сколько стоит билет",
+          "ing_expected": "ЕР МАЛАГIА СТАНЦИ Я? БИЛЕТА ФУ МАХ БА?"
+        }
+      ]
+    },
+    {
+      "id": "lesson_говори_быстрее_надо_говорить_быстрее",
+      "ruPattern": "говори быстрее надо говорить быстрее",
+      "description": "School lesson corpus (story_verb_moods_lesson_001)",
+      "slots": [],
+      "ingTemplate": "СИХАГIА ДУВЦА. СИХАГIА ДУВЦА ДЕЗА.",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "говори быстрее надо говорить быстрее",
+          "ing_expected": "СИХАГIА ДУВЦА. СИХАГIА ДУВЦА ДЕЗА."
         }
       ]
     }

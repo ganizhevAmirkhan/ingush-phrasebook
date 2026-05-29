@@ -1,8 +1,9 @@
 /**
- * Import missing ghalghay.com lessons (26–37) into corpus + Habar conversation.
+ * Import ghalghay.com school lessons (уроки 1–37) into corpus + Habar conversation.
+ * Source: https://ghalghay.com/category/ингушский-язык/
  * Skips lessons already present in language-api/data/corpus/stories/.
  *
- * Usage: node scripts/import-ghalghay-lessons.js [--dry-run] [--from=26] [--to=37]
+ * Usage: node scripts/import-ghalghay-lessons.js [--dry-run] [--from=1] [--to=37]
  */
 const fs = require("node:fs/promises");
 const path = require("node:path");
@@ -152,7 +153,7 @@ function capitalizeRu(ru) {
 async function main() {
   const args = process.argv.slice(2);
   const dryRun = args.includes("--dry-run");
-  const fromLesson = Number(args.find((a) => a.startsWith("--from="))?.slice(7) || 26);
+  const fromLesson = Number(args.find((a) => a.startsWith("--from="))?.slice(7) || 1);
   const toLesson = Number(args.find((a) => a.startsWith("--to="))?.slice(5) || 37);
 
   const have = await existingLessonNumbers();
