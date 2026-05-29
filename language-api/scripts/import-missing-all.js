@@ -25,7 +25,7 @@ const PAYDADOSH_MAP = {
   religious_phrase: { habar: "misc", maxRu: 120 },
   tradition_phrase: { habar: "misc", maxRu: 120 },
   ramadan_phrase: { habar: "misc", maxRu: 120 },
-  proverb: { habar: "misc", maxRu: 100 }
+  proverb: { habar: "proverbs", maxRu: 100 }
 };
 
 const SKIP_PD = new Set(["snapshot"]);

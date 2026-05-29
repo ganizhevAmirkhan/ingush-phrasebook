@@ -10,7 +10,7 @@ const categories = [
   "danger","thermal","orientation","weather","emotions",
   "health","help","commands","tools","animals",
   "time","numbers","colors","money","shop",
-  "city","village","guests","communication","work","misc"
+  "city","village","guests","communication","work","proverbs","misc"
 ];
 
 const categoryTitles = {
@@ -25,7 +25,7 @@ const categoryTitles = {
   time:"Время", numbers:"Числа", colors:"Цвета",
   money:"Деньги", shop:"Магазин", city:"Город",
   village:"Деревня", guests:"Гости", communication:"Общение",
-  work:"Работа", misc:"Разное"
+  work:"Работа", proverbs:"Пословицы", misc:"Разное"
 };
 
 /* ================= STATE ================= */
