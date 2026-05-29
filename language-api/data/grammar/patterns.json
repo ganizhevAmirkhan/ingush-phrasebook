@@ -1280,12 +1280,12 @@
       "ruPattern": "я не понимаю",
       "description": "Negative present understanding",
       "slots": [],
-      "ingTemplate": "СО КХЕТАЦ",
-      "priority": 99,
+      "ingTemplate": "Со кхетац",
+      "priority": 100,
       "examples": [
         {
           "ru": "я не понимаю",
-          "ing_expected": "СО КХЕТАЦ"
+          "ing_expected": "Со кхетац"
         }
       ]
     },
@@ -3450,12 +3450,12 @@
       "ruPattern": "я не задержу вас долго",
       "description": "Polite assurance",
       "slots": [],
-      "ingTemplate": "АЗ ДУКХА ГОАВЕРГВАЦ ХЬО.",
-      "priority": 98,
+      "ingTemplate": "Аз дукха гоавергвац хьо",
+      "priority": 100,
       "examples": [
         {
           "ru": "я не задержу вас долго",
-          "ing_expected": "АЗ ДУКХА ГОАВЕРГВАЦ ХЬО."
+          "ing_expected": "Аз дукха гоавергвац хьо"
         }
       ]
     },
@@ -3562,12 +3562,12 @@
       "ruPattern": "вы меня понимаете",
       "description": "Understanding check",
       "slots": [],
-      "ingTemplate": "ХЬО КХЕТИЙ СОХ?",
-      "priority": 98,
+      "ingTemplate": "Хьо кхетий сох?",
+      "priority": 100,
       "examples": [
         {
           "ru": "вы меня понимаете",
-          "ing_expected": "ХЬО КХЕТИЙ СОХ?"
+          "ing_expected": "Хьо кхетий сох?"
         }
       ]
     },
@@ -3576,12 +3576,12 @@
       "ruPattern": "как вы произнесете это слово",
       "description": "Pronunciation question",
       "slots": [],
-      "ingTemplate": "ИЗ ДОШ МИШТА АРГДАР IА?",
-      "priority": 98,
+      "ingTemplate": "Из дош мишта аргдар Iа?",
+      "priority": 100,
       "examples": [
         {
           "ru": "как вы произнесете это слово",
-          "ing_expected": "ИЗ ДОШ МИШТА АРГДАР IА?"
+          "ing_expected": "Из дош мишта аргдар Iа?"
         }
       ]
     },
@@ -3772,12 +3772,12 @@
       "ruPattern": "не забывайте нас",
       "description": "Lesson 21 request",
       "slots": [],
-      "ingTemplate": "ТХО ДИЦ МА ДЕ.",
-      "priority": 98,
+      "ingTemplate": "Тхо диц ма де",
+      "priority": 100,
       "examples": [
         {
           "ru": "не забывайте нас",
-          "ing_expected": "ТХО ДИЦ МА ДЕ."
+          "ing_expected": "Тхо диц ма де"
         }
       ]
     },
@@ -3842,12 +3842,12 @@
       "ruPattern": "давай помиримся",
       "description": "Lesson 21 social phrase",
       "slots": [],
-      "ingTemplate": "ТА ВАЙ ШИЪ.",
-      "priority": 98,
+      "ingTemplate": "Та вай шиъ",
+      "priority": 100,
       "examples": [
         {
           "ru": "давай помиримся",
-          "ing_expected": "ТА ВАЙ ШИЪ."
+          "ing_expected": "Та вай шиъ"
         }
       ]
     },
@@ -8380,12 +8380,12 @@
       "ruPattern": "спасибо за подарок",
       "description": "Lesson 6 phrase",
       "slots": [],
-      "ingTemplate": "БАРКАЛ ХЬОНА, СОНА СОВГIАТ ДАРА!",
-      "priority": 98,
+      "ingTemplate": "Баркал хьона совг1ат даларах!",
+      "priority": 100,
       "examples": [
         {
           "ru": "спасибо за подарок",
-          "ing_expected": "БАРКАЛ ХЬОНА, СОНА СОВГIАТ ДАРА!"
+          "ing_expected": "Баркал хьона совг1ат даларах!"
         }
       ]
     },
@@ -10532,12 +10532,12 @@
       "ruPattern": "заходи",
       "description": "Invitation to come in",
       "slots": [],
-      "ingTemplate": "ЧУДАВЛ.",
+      "ingTemplate": "Чувал",
       "priority": 100,
       "examples": [
         {
           "ru": "заходи",
-          "ing_expected": "ЧУДАВЛ."
+          "ing_expected": "Чувал"
         }
       ]
     },
@@ -13580,6 +13580,1882 @@
         {
           "ru": "ц",
           "ing_expected": "ы"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1208",
+      "ruPattern": "а ты откуда",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Хьо мичахьара ва / я?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "а ты откуда",
+          "ing_expected": "Хьо мичахьара ва / я?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1214",
+      "ruPattern": "большое спасибо за внимание и уважение",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Доккха баркал хилда хьона, сона теркам барах (со ларх1арах)!",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "большое спасибо за внимание и уважение",
+          "ing_expected": "Доккха баркал хилда хьона, сона теркам барах (со ларх1арах)!"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1227",
+      "ruPattern": "в горах воздух свежий",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Лоамашка ц1ена фо да",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "в горах воздух свежий",
+          "ing_expected": "Лоамашка ц1ена фо да"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1223",
+      "ruPattern": "в свободное время я приду если будет возможность",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Мукъа ха йолча ханахьа, хьо волча воаг1аргва со, аьттув хуле",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "в свободное время я приду если будет возможность",
+          "ing_expected": "Мукъа ха йолча ханахьа, хьо волча воаг1аргва со, аьттув хуле"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_19955",
+      "ruPattern": "вежливая просьба подождать (буквально: «терпение сделаешь ли мне",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Сабр дергдарий Ӏа сона",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "вежливая просьба подождать (буквально: «терпение сделаешь ли мне",
+          "ing_expected": "Сабр дергдарий Ӏа сона"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_19952",
+      "ruPattern": "вежливая развёрнутая форма благодарности (буквально: «тебе спасибо сказать хочу я",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Хьона баркал ала ловра сона",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "вежливая развёрнутая форма благодарности (буквально: «тебе спасибо сказать хочу я",
+          "ing_expected": "Хьона баркал ала ловра сона"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_19953",
+      "ruPattern": "вежливый вопрос-просьба о помощи (буквально: «помощь дашь ли мне",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Новкъостал деддарий Ӏа сона?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "вежливый вопрос-просьба о помощи (буквально: «помощь дашь ли мне",
+          "ing_expected": "Новкъостал деддарий Ӏа сона?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_19942",
+      "ruPattern": "вопрос о местонахождении знакомому к мужчине — «мича хиннав хьо",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Мича хиннав хьо?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "вопрос о местонахождении знакомому к мужчине — «мича хиннав хьо",
+          "ing_expected": "Мича хиннав хьо?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_19943",
+      "ruPattern": "вопрос-укор при встрече после долгого перерыва дружеская реплика не требует развернутого ответа",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Дукха ха май йий хьо бӀарг ца гу",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "вопрос-укор при встрече после долгого перерыва дружеская реплика не требует развернутого ответа",
+          "ing_expected": "Дукха ха май йий хьо бӀарг ца гу"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1345",
+      "ruPattern": "вы меня понимаете",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Хьо кхетий сох?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "вы меня понимаете",
+          "ing_expected": "Хьо кхетий сох?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1244",
+      "ruPattern": "вы не понимаете",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Шо кхетац",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "вы не понимаете",
+          "ing_expected": "Шо кхетац"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_19935",
+      "ruPattern": "выражение тоски при расставании к одному человеку к нескольким — «аз сагот дергда шоана",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Аз сагот дергда хьона",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "выражение тоски при расставании к одному человеку к нескольким — «аз сагот дергда шоана",
+          "ing_expected": "Аз сагот дергда хьона"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1355",
+      "ruPattern": "где вы изучаете ингушский язык",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ГIалгIай мотт мичахьа Iомабу Iа?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "где вы изучаете ингушский язык",
+          "ing_expected": "ГIалгIай мотт мичахьа Iомабу Iа?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1362",
+      "ruPattern": "где я могу найти ее (его)",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Мича корайог1аргяр (коравог1аргвар)?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "где я могу найти ее (его)",
+          "ing_expected": "Мича корайог1аргяр (коравог1аргвар)?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1211",
+      "ruPattern": "говори без намеков",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Къодамаш ца беш дувцал",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "говори без намеков",
+          "ing_expected": "Къодамаш ца беш дувцал"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1194",
+      "ruPattern": "говорит ли он / она",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Оалий - хьог1 цо?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "говорит ли он / она",
+          "ing_expected": "Оалий - хьог1 цо?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_679",
+      "ruPattern": "да пребудете вы на добром пути",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Дикача наькъа тӀа хилда шо",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "да пребудете вы на добром пути",
+          "ing_expected": "Дикача наькъа тӀа хилда шо"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_676",
+      "ruPattern": "да пребудешь ты на добром пути",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Дикача наькъа тӀа хилва (хийла) хьо",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "да пребудешь ты на добром пути",
+          "ing_expected": "Дикача наькъа тӀа хилва (хийла) хьо"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1364",
+      "ruPattern": "да пожалуйста",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Х1а, мегаргда",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "да пожалуйста",
+          "ing_expected": "Х1а, мегаргда"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1326",
+      "ruPattern": "давай помиримся",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Та вай шиъ",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "давай помиримся",
+          "ing_expected": "Та вай шиъ"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1239",
+      "ruPattern": "девочка поправила свою постель",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ЙиIигас ший мотт дIанийсабар",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "девочка поправила свою постель",
+          "ing_expected": "ЙиIигас ший мотт дIанийсабар"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1216",
+      "ruPattern": "для меня это очень важно",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Сона ч1оаг1а лоарх1аме х1ама да из",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "для меня это очень важно",
+          "ing_expected": "Сона ч1оаг1а лоарх1аме х1ама да из"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_660",
+      "ruPattern": "доброе утро",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Iуйре дика хийла!",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "доброе утро",
+          "ing_expected": "Iуйре дика хийла!"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_701",
+      "ruPattern": "добрый вечер",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Сайре дика хийла.",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "добрый вечер",
+          "ing_expected": "Сайре дика хийла."
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_19934",
+      "ruPattern": "дружеское пожелание при прощании призывает поддерживать связь часто говорят давнему другу или родственнику",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Вайна дӀамавалалахь",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "дружеское пожелание при прощании призывает поддерживать связь часто говорят давнему другу или родственнику",
+          "ing_expected": "Вайна дӀамавалалахь"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_410",
+      "ruPattern": "если бог даст (дословно: если бог сказал)",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Дала аьннадале",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "если бог даст (дословно: если бог сказал)",
+          "ing_expected": "Дала аьннадале"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1361",
+      "ruPattern": "если не затруднит скажите пожалуйста где (когда кто как)",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Хала деций, ала сога мичахьа (маца, мала, мишта)",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "если не затруднит скажите пожалуйста где (когда кто как)",
+          "ing_expected": "Хала деций, ала сога мичахьа (маца, мала, мишта)"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1339",
+      "ruPattern": "если сможете постарайтесь прийти пораньше",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Хьай вIаштIехьдоале, хьалхагIа хьавола (хьайола, хьадувла) хьажалахь",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "если сможете постарайтесь прийти пораньше",
+          "ing_expected": "Хьай вIаштIехьдоале, хьалхагIа хьавола (хьайола, хьадувла) хьажалахь"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_671",
+      "ruPattern": "здоровья ему/ей/им",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Моаршал хилда цунна/царна",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "здоровья ему/ей/им",
+          "ing_expected": "Моаршал хилда цунна/царна"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_670",
+      "ruPattern": "здоровья тебе/вам",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Моаршал хилда хьона/шоана",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "здоровья тебе/вам",
+          "ing_expected": "Моаршал хилда хьона/шоана"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1236",
+      "ruPattern": "и тебе доброго вечера",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Хьа а хийла сайре дика",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "и тебе доброго вечера",
+          "ing_expected": "Хьа а хийла сайре дика"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1237",
+      "ruPattern": "и тебе доброго дня",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Хьа а хийла ди дика",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "и тебе доброго дня",
+          "ing_expected": "Хьа а хийла ди дика"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1238",
+      "ruPattern": "и тебе доброго утра",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Хьа а хийла 1уйре дика",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "и тебе доброго утра",
+          "ing_expected": "Хьа а хийла 1уйре дика"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1365",
+      "ruPattern": "к сожалению нет / нельзя",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Халахете а, йиш яц",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "к сожалению нет / нельзя",
+          "ing_expected": "Халахете а, йиш яц"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1199",
+      "ruPattern": "как все прошло",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Мишта д1адахар деррига?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "как все прошло",
+          "ing_expected": "Мишта д1адахар деррига?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1347",
+      "ruPattern": "как вы произнесете это слово",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Из дош мишта аргдар Iа?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "как вы произнесете это слово",
+          "ing_expected": "Из дош мишта аргдар Iа?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1351",
+      "ruPattern": "как вы скажете это по-ингушски",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ГIалгIай метта мишта аргда Iа из?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "как вы скажете это по-ингушски",
+          "ing_expected": "ГIалгIай метта мишта аргда Iа из?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1249",
+      "ruPattern": "как он много вопросов задавал",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Ма дукха хаттараш телар цо",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "как он много вопросов задавал",
+          "ing_expected": "Ма дукха хаттараш телар цо"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1225",
+      "ruPattern": "как тебе погода сегодня",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Мишта хет хьона таханара хаоттам?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "как тебе погода сегодня",
+          "ing_expected": "Мишта хет хьона таханара хаоттам?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1531",
+      "ruPattern": "как тебя зовут",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ЦIи мишта я хьа?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "как тебя зовут",
+          "ing_expected": "ЦIи мишта я хьа?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1350",
+      "ruPattern": "как часто употребляется это слово в речи",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Къамаьла юкъе мел дукха леладу из дош?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "как часто употребляется это слово в речи",
+          "ing_expected": "Къамаьла юкъе мел дукха леладу из дош?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1192",
+      "ruPattern": "какого цвета это платье / рубашка",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Малаг1ча беса я из коч?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "какого цвета это платье / рубашка",
+          "ing_expected": "Малаг1ча беса я из коч?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1190",
+      "ruPattern": "когда мы встретимся",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Вай в1ашаг1 маца кхет?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "когда мы встретимся",
+          "ing_expected": "Вай в1ашаг1 маца кхет?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1336",
+      "ruPattern": "когда мы могли бы с вами встретиться",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Маца вIашагIкхета вIаштIехьдаргда вай?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "когда мы могли бы с вами встретиться",
+          "ing_expected": "Маца вIашагIкхета вIаштIехьдаргда вай?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1231",
+      "ruPattern": "который час",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Масса сахьат даьннад?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "который час",
+          "ing_expected": "Масса сахьат даьннад?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_19941",
+      "ruPattern": "краткий вопрос о здоровье/самочувствии ответ: «дика да",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Магар миштад?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "краткий вопрос о здоровье/самочувствии ответ: «дика да",
+          "ing_expected": "Магар миштад?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1252",
+      "ruPattern": "лечить",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Дарба де",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "лечить",
+          "ing_expected": "Дарба де"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1206",
+      "ruPattern": "мама делает оладьи (пустышки)",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Нана локъамаш еш йоал",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мама делает оладьи (пустышки)",
+          "ing_expected": "Нана локъамаш еш йоал"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1240",
+      "ruPattern": "мама научила сына говорить",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Нанас ший кIаьнка мотт Iомабар",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мама научила сына говорить",
+          "ing_expected": "Нанас ший кIаьнка мотт Iомабар"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1332",
+      "ruPattern": "мне бы хотелось с вами поговорить",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Хьоца къамаьл дувца безам бар са",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мне бы хотелось с вами поговорить",
+          "ing_expected": "Хьоца къамаьл дувца безам бар са"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_20199",
+      "ruPattern": "мне надоело это",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "сона кӀордадаьд ер",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мне надоело это",
+          "ing_expected": "сона кӀордадаьд ер"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1323",
+      "ruPattern": "мне не страшно",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Со кхерац",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мне не страшно",
+          "ing_expected": "Со кхерац"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1226",
+      "ruPattern": "мне нравится когда идет дождь",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Сона дог1а делхача (доаг1ача) ханахьа хоза хет",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мне нравится когда идет дождь",
+          "ing_expected": "Сона дог1а делхача (доаг1ача) ханахьа хоза хет"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1234",
+      "ruPattern": "можно ли примерить",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Т1айийха хьажа мегаргвий?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "можно ли примерить",
+          "ing_expected": "Т1айийха хьажа мегаргвий?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1352",
+      "ruPattern": "можно сказать по-другому",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Кхыча тайпара ала йиш йий?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "можно сказать по-другому",
+          "ing_expected": "Кхыча тайпара ала йиш йий?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_22388",
+      "ruPattern": "мой руки с мылом",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Кулгаш сапаца дила",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мой руки с мылом",
+          "ing_expected": "Кулгаш сапаца дила"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1246",
+      "ruPattern": "мы не понимаем",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Тхо / вай кхетац",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "мы не понимаем",
+          "ing_expected": "Тхо / вай кхетац"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1359",
+      "ruPattern": "не за что",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Доккха х1ама дацар из",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "не за что",
+          "ing_expected": "Доккха х1ама дацар из"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1318",
+      "ruPattern": "не забывайте нас",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Тхо диц ма де",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "не забывайте нас",
+          "ing_expected": "Тхо диц ма де"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1219",
+      "ruPattern": "не опаздывайте",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Т1ехьа ма дисалаш",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "не опаздывайте",
+          "ing_expected": "Т1ехьа ма дисалаш"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1202",
+      "ruPattern": "не переживай все будет хорошо",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Сагот ма де, деррига дика хургда!",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "не переживай все будет хорошо",
+          "ing_expected": "Сагот ма де, деррига дика хургда!"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1201",
+      "ruPattern": "не разочаруйся в своей работе",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Хьай белха дог ма эккхалахь",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "не разочаруйся в своей работе",
+          "ing_expected": "Хьай белха дог ма эккхалахь"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1191",
+      "ruPattern": "не хитри / не проворачивай махинации",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Киловзал ма лелае",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "не хитри / не проворачивай махинации",
+          "ing_expected": "Киловзал ма лелае"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_19933",
+      "ruPattern": "неформальная форма прощания между друзьями близкими (буквально: «глазами увидимся ещё",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "БӀаргагургда вай",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "неформальная форма прощания между друзьями близкими (буквально: «глазами увидимся ещё",
+          "ing_expected": "БӀаргагургда вай"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_19940",
+      "ruPattern": "неформальный вопрос знакомому при встрече стандартный ответ — «керда хӏама дац",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Керда хӀама дий цига?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "неформальный вопрос знакомому при встрече стандартный ответ — «керда хӏама дац",
+          "ing_expected": "Керда хӀама дий цига?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1313",
+      "ruPattern": "он (она) мне безразличен",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Сона бе-башха вац (яц) из",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "он (она) мне безразличен",
+          "ing_expected": "Сона бе-башха вац (яц) из"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1243",
+      "ruPattern": "он / она не понимает",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Из кхетац",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "он / она не понимает",
+          "ing_expected": "Из кхетац"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1195",
+      "ruPattern": "он всегда бывает недоволен",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Из ц1аккъа раьза хилац",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "он всегда бывает недоволен",
+          "ing_expected": "Из ц1аккъа раьза хилац"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1210",
+      "ruPattern": "он жалуется",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Латкъаш ва из",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "он жалуется",
+          "ing_expected": "Латкъаш ва из"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1251",
+      "ruPattern": "он мне сказал",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Цо сога аьннад",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "он мне сказал",
+          "ing_expected": "Цо сога аьннад"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1207",
+      "ruPattern": "он пишет жалобу",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Из лоткъам язбеш ва",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "он пишет жалобу",
+          "ing_expected": "Из лоткъам язбеш ва"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1247",
+      "ruPattern": "они не понимают",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Уж кхетац",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "они не понимают",
+          "ing_expected": "Уж кхетац"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_6422",
+      "ruPattern": "оставь меня в покое (говорит мужчина) / оставь меня в покое (говорит женщина)",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "паргIата витал со / паргIата йитал со",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "оставь меня в покое (говорит мужчина) / оставь меня в покое (говорит женщина)",
+          "ing_expected": "паргIата витал со / паргIата йитал со"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1349",
+      "ruPattern": "переведите это предложение на ингушский (русский) язык",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Цу предложенена гIалгIай (эрсий) метта таржам дел",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "переведите это предложение на ингушский (русский) язык",
+          "ing_expected": "Цу предложенена гIалгIай (эрсий) метта таржам дел"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1235",
+      "ruPattern": "поближе покажите мне",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Йистег1а хьахьокха сога",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "поближе покажите мне",
+          "ing_expected": "Йистег1а хьахьокха сога"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1212",
+      "ruPattern": "подай тарелку",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Оаркхилг хьакховдаде",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "подай тарелку",
+          "ing_expected": "Оаркхилг хьакховдаде"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1991",
+      "ruPattern": "подскажите если не трудно",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Хьаал сога, хала деце",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "подскажите если не трудно",
+          "ing_expected": "Хьаал сога, хала деце"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1342",
+      "ruPattern": "пожалуйста говорите медленнее",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "КIезига шортагIа дувцал",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "пожалуйста говорите медленнее",
+          "ing_expected": "КIезига шортагIа дувцал"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1354",
+      "ruPattern": "пожалуйста спрашивайте",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Хьахаттал",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "пожалуйста спрашивайте",
+          "ing_expected": "Хьахаттал"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1360",
+      "ruPattern": "позвольте спросить",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Хатта мегаргдий...",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "позвольте спросить",
+          "ing_expected": "Хатта мегаргдий..."
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1346",
+      "ruPattern": "понимаю не стесняйтесь",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Кхет, эхь ма хеталахь",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "понимаю не стесняйтесь",
+          "ing_expected": "Кхет, эхь ма хеталахь"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1222",
+      "ruPattern": "поторопитесь",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Сихлелаш",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "поторопитесь",
+          "ing_expected": "Сихлелаш"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1241",
+      "ruPattern": "почему ты не идешь завтра на учебу",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Х1ана яг1ац хьо кхоана деша?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "почему ты не идешь завтра на учебу",
+          "ing_expected": "Х1ана яг1ац хьо кхоана деша?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1204",
+      "ruPattern": "поэтому / по этой причине",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Из бахьан долаш",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "поэтому / по этой причине",
+          "ing_expected": "Из бахьан долаш"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_19954",
+      "ruPattern": "просьба разрешения войти в помещение к мужчине к женщине — «чуяла мегаргйий",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Чувала мегаргвий?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "просьба разрешения войти в помещение к мужчине к женщине — «чуяла мегаргйий",
+          "ing_expected": "Чувала мегаргвий?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_19931",
+      "ruPattern": "прощание которое говорит тот кто уходит часть устоявшегося ингушского этикета прощания: уходящий — «ӏадика хийла",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Ӏадика хийла",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "прощание которое говорит тот кто уходит часть устоявшегося ингушского этикета прощания: уходящий — «ӏадика хийла",
+          "ing_expected": "Ӏадика хийла"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_680",
+      "ruPattern": "пусть ваш путь будет добрым",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Никъ дика хилба шун",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "пусть ваш путь будет добрым",
+          "ing_expected": "Никъ дика хилба шун"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_673",
+      "ruPattern": "пусть всевышний одарит его/её/их здоровьем",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Дала моаршал лулда цунна/царна",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "пусть всевышний одарит его/её/их здоровьем",
+          "ing_expected": "Дала моаршал лулда цунна/царна"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_672",
+      "ruPattern": "пусть всевышний одарит тебя здоровьем",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Дала моаршал лулда хьона",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "пусть всевышний одарит тебя здоровьем",
+          "ing_expected": "Дала моаршал лулда хьона"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_681",
+      "ruPattern": "пусть всевышний сделает ваш путь добрым",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Дала дикача наькъа тӀа долда шо",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "пусть всевышний сделает ваш путь добрым",
+          "ing_expected": "Дала дикача наькъа тӀа долда шо"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_678",
+      "ruPattern": "пусть всевышний сделает твой путь добрым",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Дала дикача наькъа тӀа волва (йойла) хьо",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "пусть всевышний сделает твой путь добрым",
+          "ing_expected": "Дала дикача наькъа тӀа волва (йойла) хьо"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_677",
+      "ruPattern": "пусть твой путь будет добрым",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Никъ дика хилба хьа",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "пусть твой путь будет добрым",
+          "ing_expected": "Никъ дика хилба хьа"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_19951",
+      "ruPattern": "развёрнутая эмоциональная форма благодарности (буквально: «я от сердца спасибо говорю тебе",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Аз дег тӀара баркал оал хьога",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "развёрнутая эмоциональная форма благодарности (буквально: «я от сердца спасибо говорю тебе",
+          "ing_expected": "Аз дег тӀара баркал оал хьога"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1205",
+      "ruPattern": "расскажи мне подробно",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Ма дарра дувцал сога",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "расскажи мне подробно",
+          "ing_expected": "Ма дарра дувцал сога"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_19949",
+      "ruPattern": "самая короткая и употребимая форма благодарности в развёрнутой форме — «баркал хилда хьона",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Баркал",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "самая короткая и употребимая форма благодарности в развёрнутой форме — «баркал хилда хьона",
+          "ing_expected": "Баркал"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1230",
+      "ruPattern": "сколько времени",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Фу ха яьннай? / Мел ха яьннай",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "сколько времени",
+          "ing_expected": "Фу ха яьннай? / Мел ха яьннай"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1233",
+      "ruPattern": "сколько стоит",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Фу доаккх укхох? / фу дех укхох?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "сколько стоит",
+          "ing_expected": "Фу доаккх укхох? / фу дех укхох?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_19956",
+      "ruPattern": "смягчающая формула при просьбе (буквально: «тебе если не трудно",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Хьайна хала деце",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "смягчающая формула при просьбе (буквально: «тебе если не трудно",
+          "ing_expected": "Хьайна хала деце"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1215",
+      "ruPattern": "спасибо за подарок",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Баркал хьона совг1ат даларах!",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "спасибо за подарок",
+          "ing_expected": "Баркал хьона совг1ат даларах!"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1358",
+      "ruPattern": "спасибо за прекрасный подарок",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Баркала 1а деннача хоза совг1ата",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "спасибо за прекрасный подарок",
+          "ing_expected": "Баркала 1а деннача хоза совг1ата"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_699",
+      "ruPattern": "спокойной ночи (доброй ночи)",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "бийса даькъала хийла",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "спокойной ночи (доброй ночи)",
+          "ing_expected": "бийса даькъала хийла"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_19944",
+      "ruPattern": "стандартный ответ на вопрос «как дела",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Шедар дика да",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "стандартный ответ на вопрос «как дела",
+          "ing_expected": "Шедар дика да"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_19945",
+      "ruPattern": "стандартный ответ на вопрос «что нового",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Керда хӀама дац",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "стандартный ответ на вопрос «что нового",
+          "ing_expected": "Керда хӀама дац"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1363",
+      "ruPattern": "тут можно курить",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Укхаза г1али увза йиш йий?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "тут можно курить",
+          "ing_expected": "Укхаза г1али увза йиш йий?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1229",
+      "ruPattern": "ты ему ответил(а)",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "1а цунна жоп деннадий?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "ты ему ответил(а)",
+          "ing_expected": "1а цунна жоп деннадий?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1245",
+      "ruPattern": "ты не понимаешь",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Хьо кхетац",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "ты не понимаешь",
+          "ing_expected": "Хьо кхетац"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1353",
+      "ruPattern": "у меня к вам вопрос",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Цхьа хаттар дар са хьога",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "у меня к вам вопрос",
+          "ing_expected": "Цхьа хаттар дар са хьога"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1221",
+      "ruPattern": "у меня нет времени",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Сога ха яц",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "у меня нет времени",
+          "ing_expected": "Сога ха яц"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1193",
+      "ruPattern": "у тебя есть с ним связь / контакт",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Цунца бувзам бий хьа?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "у тебя есть с ним связь / контакт",
+          "ing_expected": "Цунца бувзам бий хьа?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_6421",
+      "ruPattern": "уйди отойди отстань (по отношению к женщине)",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "дӀаяла",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "уйди отойди отстань (по отношению к женщине)",
+          "ing_expected": "дӀаяла"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_6420",
+      "ruPattern": "уйди отойди отстань (по отношению к мужчине)",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "дӀавала",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "уйди отойди отстань (по отношению к мужчине)",
+          "ing_expected": "дӀавала"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1324",
+      "ruPattern": "чем ты расстроен (расстроена)",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Сево дохадаьд хьа дог?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "чем ты расстроен (расстроена)",
+          "ing_expected": "Сево дохадаьд хьа дог?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1198",
+      "ruPattern": "что здесь происходит",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Фуд укхаза доалар?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "что здесь происходит",
+          "ing_expected": "Фуд укхаза доалар?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1348",
+      "ruPattern": "что означает это слово",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Цу деша фу маIан да?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "что означает это слово",
+          "ing_expected": "Цу деша фу маIан да?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1197",
+      "ruPattern": "что случилось / в чем дело",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Фу хиннад?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "что случилось / в чем дело",
+          "ing_expected": "Фу хиннад?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1224",
+      "ruPattern": "что-то наш друг пропал в последние дни",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Вай шинне доттаг1а вайна д1а ма ваьннавий, т1еххьарча деношка",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "что-то наш друг пропал в последние дни",
+          "ing_expected": "Вай шинне доттаг1а вайна д1а ма ваьннавий, т1еххьарча деношка"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1232",
+      "ruPattern": "это очень известная книга",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Ч1оаг1а ц1ихеза кинижка да ер",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "это очень известная книга",
+          "ing_expected": "Ч1оаг1а ц1ихеза кинижка да ер"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1253",
+      "ruPattern": "это серьезный разговор",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "ЦIенхашта къамаьл да ер",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "это серьезный разговор",
+          "ing_expected": "ЦIенхашта къамаьл да ер"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1250",
+      "ruPattern": "это случается редко",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Наггахьа хулаш х1ама да из",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "это случается редко",
+          "ing_expected": "Наггахьа хулаш х1ама да из"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1220",
+      "ruPattern": "я буду вовремя",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Со сай ханахьа хургва",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я буду вовремя",
+          "ing_expected": "Со сай ханахьа хургва"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1228",
+      "ruPattern": "я был занят последние две недели",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Т1еххьара шин к1ира мукъа вацар со",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я был занят последние две недели",
+          "ing_expected": "Т1еххьара шин к1ира мукъа вацар со"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1340",
+      "ruPattern": "я вас не понял (не поняла)",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Со хьох кхийтанзар",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я вас не понял (не поняла)",
+          "ing_expected": "Со хьох кхийтанзар"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1248",
+      "ruPattern": "я надеюсь",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Догдоах аз",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я надеюсь",
+          "ing_expected": "Догдоах аз"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1334",
+      "ruPattern": "я не задержу вас долго",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Аз дукха гоавергвац хьо",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я не задержу вас долго",
+          "ing_expected": "Аз дукха гоавергвац хьо"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1217",
+      "ruPattern": "я не задержу тебя надолго",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Аз дукха гоавергвац (гоаергъяц) хьо",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я не задержу тебя надолго",
+          "ing_expected": "Аз дукха гоавергвац (гоаергъяц) хьо"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1309",
+      "ruPattern": "я не люблю его (ее)",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Сона везац (езац) из",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я не люблю его (ее)",
+          "ing_expected": "Сона везац (езац) из"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1242",
+      "ruPattern": "я не понимаю",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Со кхетац",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я не понимаю",
+          "ing_expected": "Со кхетац"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1209",
+      "ruPattern": "я никогда там не был",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Ц1аккха а хиннавац со цига",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я никогда там не был",
+          "ing_expected": "Ц1аккха а хиннавац со цига"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1203",
+      "ruPattern": "я никогда этого не говорил(а)",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Аз цIаккха а аьннадац из",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я никогда этого не говорил(а)",
+          "ing_expected": "Аз цIаккха а аьннадац из"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1344",
+      "ruPattern": "я плохо говорю по-ингушски и не всё понимаю",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Аз гIалгIай мотт дика бувцац, дерриганех кхета а кхетац",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я плохо говорю по-ингушски и не всё понимаю",
+          "ing_expected": "Аз гIалгIай мотт дика бувцац, дерриганех кхета а кхетац"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1200",
+      "ruPattern": "я правильно тебя поняла",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Со нийса кхийттарий хьох?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я правильно тебя поняла",
+          "ing_expected": "Со нийса кхийттарий хьох?"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1315",
+      "ruPattern": "я рада (рад) нашему знакомству",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Сона дика хет вай дайза",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я рада (рад) нашему знакомству",
+          "ing_expected": "Сона дика хет вай дайза"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1343",
+      "ruPattern": "я самостоятельно изучаю ингушский язык",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Аз айса Iомабу гIалгIай мотт",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я самостоятельно изучаю ингушский язык",
+          "ing_expected": "Аз айса Iомабу гIалгIай мотт"
+        }
+      ]
+    },
+    {
+      "id": "habar_paydadosh_pd_1218",
+      "ruPattern": "я собираюсь покататься на качелях",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Бурчолгах хоахкале воал со",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "я собираюсь покататься на качелях",
+          "ing_expected": "Бурчолгах хоахкале воал со"
         }
       ]
     },
@@ -20336,12 +22212,12 @@
       "ruPattern": "берегите его",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Из йолча",
+      "ingTemplate": "Лорве из",
       "priority": 100,
       "examples": [
         {
           "ru": "берегите его",
-          "ing_expected": "Из йолча"
+          "ing_expected": "Лорве из"
         }
       ]
     },
@@ -20378,12 +22254,12 @@
       "ruPattern": "помоги мне",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Са г1о де!",
+      "ingTemplate": "г1о де суна!",
       "priority": 100,
       "examples": [
         {
           "ru": "помоги мне",
-          "ing_expected": "Са г1о де!"
+          "ing_expected": "г1о де суна!"
         }
       ]
     },
@@ -22796,6 +24672,20 @@
       ]
     },
     {
+      "id": "habar_f_1779906038312_w59s",
+      "ruPattern": "сколько стоят яблоки",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "Мелла дех 1ажашт?",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "сколько стоят яблоки",
+          "ing_expected": "Мелла дех 1ажашт?"
+        }
+      ]
+    },
+    {
       "id": "habar_f_1766018537464_dn0x",
       "ruPattern": "как твои дела",
       "description": "Habar phrasebook sync",
@@ -24284,12 +26174,12 @@
       "ruPattern": "поставь сюда",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Хьокха деж",
+      "ingTemplate": "Укхаза 1о отта е",
       "priority": 100,
       "examples": [
         {
           "ru": "поставь сюда",
-          "ing_expected": "Хьокха деж"
+          "ing_expected": "Укхаза 1о отта е"
         }
       ]
     },
@@ -24298,12 +26188,12 @@
       "ruPattern": "закрой дверь",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Богам хетта",
+      "ingTemplate": "Дакъовла ня1",
       "priority": 100,
       "examples": [
         {
           "ru": "закрой дверь",
-          "ing_expected": "Богам хетта"
+          "ing_expected": "Дакъовла ня1"
         }
       ]
     },
@@ -24424,12 +26314,12 @@
       "ruPattern": "я хочу спать",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Со йоаг1 безам ба",
+      "ingTemplate": "са наб е безам ба",
       "priority": 100,
       "examples": [
         {
           "ru": "я хочу спать",
-          "ing_expected": "Со йоаг1 безам ба"
+          "ing_expected": "са наб е безам ба"
         }
       ]
     },
@@ -24438,12 +26328,12 @@
       "ruPattern": "где ты живёшь",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Хьа дакъош ву?",
+      "ingTemplate": "Хьо мича вах?",
       "priority": 100,
       "examples": [
         {
           "ru": "где ты живёшь",
-          "ing_expected": "Хьа дакъош ву?"
+          "ing_expected": "Хьо мича вах?"
         }
       ]
     },
@@ -24494,12 +26384,12 @@
       "ruPattern": "работает",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Лоца",
+      "ingTemplate": "Болх бу",
       "priority": 100,
       "examples": [
         {
           "ru": "работает",
-          "ing_expected": "Лоца"
+          "ing_expected": "Болх бу"
         }
       ]
     },
@@ -24606,12 +26496,12 @@
       "ruPattern": "стой",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Тха!",
+      "ingTemplate": "Латт!",
       "priority": 100,
       "examples": [
         {
           "ru": "стой",
-          "ing_expected": "Тха!"
+          "ing_expected": "Латт!"
         }
       ]
     },
@@ -25214,6 +27104,20 @@
         {
           "ru": "волк на охоте 1",
           "ing_expected": "борз чарахье"
+        }
+      ]
+    },
+    {
+      "id": "habar_f_1780032269524_rdm2",
+      "ruPattern": "шакал",
+      "description": "Habar phrasebook sync",
+      "slots": [],
+      "ingTemplate": "цӀувзи",
+      "priority": 100,
+      "examples": [
+        {
+          "ru": "шакал",
+          "ing_expected": "цӀувзи"
         }
       ]
     },
@@ -26902,12 +28806,12 @@
       "ruPattern": "добрый вечер",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Гув маршалла",
+      "ingTemplate": "Сайре дика хийла хьа!",
       "priority": 100,
       "examples": [
         {
           "ru": "добрый вечер",
-          "ing_expected": "Гув маршалла"
+          "ing_expected": "Сайре дика хийла хьа!"
         }
       ]
     },
@@ -27070,12 +28974,12 @@
       "ruPattern": "очень хорошо",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "Дика йо",
+      "ingTemplate": "Ч1оаг1 дика",
       "priority": 100,
       "examples": [
         {
           "ru": "очень хорошо",
-          "ing_expected": "Дика йо"
+          "ing_expected": "Ч1оаг1 дика"
         }
       ]
     },
@@ -27420,12 +29324,12 @@
       "ruPattern": "заходи",
       "description": "Habar phrasebook sync",
       "slots": [],
-      "ingTemplate": "ЧУДАВЛ.",
+      "ingTemplate": "Чувал",
       "priority": 100,
       "examples": [
         {
           "ru": "заходи",
-          "ing_expected": "ЧУДАВЛ."
+          "ing_expected": "Чувал"
         }
       ]
     },

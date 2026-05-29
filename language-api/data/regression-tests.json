@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T18:26:12.290Z",
+  "generatedAt": "2026-05-29T08:07:23.833Z",
   "items": [
     {
       "id": "f_1766017415464_5gdw",
@@ -2531,13 +2531,13 @@
       "id": "f_1766025491600_t8jo",
       "category": "home",
       "ru": "Поставь сюда",
-      "expectedIng": "Хьокха деж"
+      "expectedIng": "Укхаза 1о отта е"
     },
     {
       "id": "f_1766025491600_ju5m",
       "category": "home",
       "ru": "Закрой дверь",
-      "expectedIng": "Богам хетта"
+      "expectedIng": "Дакъовла ня1"
     },
     {
       "id": "f_1766025491600_4qtt",
@@ -2591,13 +2591,13 @@
       "id": "f_1766025491600_n2gw",
       "category": "home",
       "ru": "Я хочу спать",
-      "expectedIng": "Со йоаг1 безам ба"
+      "expectedIng": "са наб е безам ба"
     },
     {
       "id": "f_1766025491600_7elq",
       "category": "home",
       "ru": "Где ты живёшь?",
-      "expectedIng": "Хьа дакъош ву?"
+      "expectedIng": "Хьо мича вах?"
     },
     {
       "id": "f_1766025491600_5vgf",
@@ -2621,7 +2621,7 @@
       "id": "f_1766025491600_zduz",
       "category": "home",
       "ru": "Работает",
-      "expectedIng": "Лоца"
+      "expectedIng": "Болх бу"
     },
     {
       "id": "f_1766025491600_kgcz",
@@ -2669,7 +2669,7 @@
       "id": "f_1766017407916_v1ah",
       "category": "hunt",
       "ru": "Стой!",
-      "expectedIng": "Тха!"
+      "expectedIng": "Латт!"
     },
     {
       "id": "f_1766017407916_06de",
@@ -3455,7 +3455,7 @@
       "id": "f_1766025348310_lgwp",
       "category": "greetings",
       "ru": "Добрый вечер",
-      "expectedIng": "Гув маршалла"
+      "expectedIng": "Сайре дика хийла хьа!"
     },
     {
       "id": "f_1766025348310_hn3t",
@@ -3527,7 +3527,7 @@
       "id": "f_1766025348310_yetz",
       "category": "greetings",
       "ru": "Очень хорошо",
-      "expectedIng": "Дика йо"
+      "expectedIng": "Ч1оаг1 дика"
     },
     {
       "id": "f_1766025348310_31p4",
@@ -3677,7 +3677,7 @@
       "id": "f_1766025348310_che2",
       "category": "greetings",
       "ru": "Заходи",
-      "expectedIng": "ЧУДАВЛ."
+      "expectedIng": "Чувал"
     },
     {
       "id": "f_1766025348310_6k2e",
@@ -7463,7 +7463,7 @@
       "id": "ph_danger_8_kq8enb",
       "category": "danger",
       "ru": "Берегите его",
-      "expectedIng": "Из йолча"
+      "expectedIng": "Лорве из"
     },
     {
       "id": "ph_danger_9_1gc3qy",
@@ -7481,7 +7481,7 @@
       "id": "ph_danger_11_ftphss",
       "category": "danger",
       "ru": "Помоги мне!",
-      "expectedIng": "Са г1о де!"
+      "expectedIng": "г1о де суна!"
     },
     {
       "id": "ph_danger_12_7dj797",
@@ -8202,6 +8202,822 @@
       "category": "shop",
       "ru": "Я иду в магазин",
       "expectedIng": "Со вилхавар"
+    },
+    {
+      "id": "paydadosh_pd_1208",
+      "category": "basic_phrases",
+      "ru": "А ты откуда?",
+      "expectedIng": "Хьо мичахьара ва / я?"
+    },
+    {
+      "id": "paydadosh_pd_1214",
+      "category": "basic_phrases",
+      "ru": "Большое спасибо за внимание и уважение!",
+      "expectedIng": "Доккха баркал хилда хьона, сона теркам барах (со ларх1арах)!"
+    },
+    {
+      "id": "paydadosh_pd_1227",
+      "category": "basic_phrases",
+      "ru": "В горах воздух свежий",
+      "expectedIng": "Лоамашка ц1ена фо да"
+    },
+    {
+      "id": "paydadosh_pd_1223",
+      "category": "basic_phrases",
+      "ru": "В свободное время я приду, если будет возможность",
+      "expectedIng": "Мукъа ха йолча ханахьа, хьо волча воаг1аргва со, аьттув хуле"
+    },
+    {
+      "id": "paydadosh_pd_19955",
+      "category": "basic_phrases",
+      "ru": "Вежливая просьба подождать (буквально: «терпение сделаешь ли мне?",
+      "expectedIng": "Сабр дергдарий Ӏа сона"
+    },
+    {
+      "id": "paydadosh_pd_19952",
+      "category": "basic_phrases",
+      "ru": "Вежливая, развёрнутая форма благодарности (буквально: «тебе спасибо сказать хочу я",
+      "expectedIng": "Хьона баркал ала ловра сона"
+    },
+    {
+      "id": "paydadosh_pd_19953",
+      "category": "basic_phrases",
+      "ru": "Вежливый вопрос-просьба о помощи (буквально: «помощь дашь ли мне?",
+      "expectedIng": "Новкъостал деддарий Ӏа сона?"
+    },
+    {
+      "id": "paydadosh_pd_19942",
+      "category": "basic_phrases",
+      "ru": "Вопрос о местонахождении знакомому. К мужчине — «Мича хиннав хьо?",
+      "expectedIng": "Мича хиннав хьо?"
+    },
+    {
+      "id": "paydadosh_pd_19943",
+      "category": "basic_phrases",
+      "ru": "Вопрос-укор при встрече после долгого перерыва. Дружеская реплика, не требует развернутого ответа",
+      "expectedIng": "Дукха ха май йий хьо бӀарг ца гу"
+    },
+    {
+      "id": "paydadosh_pd_1345",
+      "category": "basic_phrases",
+      "ru": "Вы меня понимаете?",
+      "expectedIng": "Хьо кхетий сох?"
+    },
+    {
+      "id": "paydadosh_pd_1244",
+      "category": "basic_phrases",
+      "ru": "Вы не понимаете",
+      "expectedIng": "Шо кхетац"
+    },
+    {
+      "id": "paydadosh_pd_19935",
+      "category": "basic_phrases",
+      "ru": "Выражение тоски при расставании, к одному человеку. К нескольким — «Аз сагот дергда шоана",
+      "expectedIng": "Аз сагот дергда хьона"
+    },
+    {
+      "id": "paydadosh_pd_1355",
+      "category": "basic_phrases",
+      "ru": "Где вы изучаете ингушский язык?",
+      "expectedIng": "ГIалгIай мотт мичахьа Iомабу Iа?"
+    },
+    {
+      "id": "paydadosh_pd_1362",
+      "category": "basic_phrases",
+      "ru": "Где я могу найти ее (его)?",
+      "expectedIng": "Мича корайог1аргяр (коравог1аргвар)?"
+    },
+    {
+      "id": "paydadosh_pd_1211",
+      "category": "basic_phrases",
+      "ru": "Говори без намеков",
+      "expectedIng": "Къодамаш ца беш дувцал"
+    },
+    {
+      "id": "paydadosh_pd_1194",
+      "category": "basic_phrases",
+      "ru": "Говорит ли он / она?",
+      "expectedIng": "Оалий - хьог1 цо?"
+    },
+    {
+      "id": "paydadosh_pd_679",
+      "category": "basic_phrases",
+      "ru": "Да пребудете вы на добром пути!",
+      "expectedIng": "Дикача наькъа тӀа хилда шо"
+    },
+    {
+      "id": "paydadosh_pd_676",
+      "category": "basic_phrases",
+      "ru": "Да пребудешь ты на добром пути!",
+      "expectedIng": "Дикача наькъа тӀа хилва (хийла) хьо"
+    },
+    {
+      "id": "paydadosh_pd_1364",
+      "category": "basic_phrases",
+      "ru": "Да, пожалуйста",
+      "expectedIng": "Х1а, мегаргда"
+    },
+    {
+      "id": "paydadosh_pd_1326",
+      "category": "basic_phrases",
+      "ru": "Давай помиримся",
+      "expectedIng": "Та вай шиъ"
+    },
+    {
+      "id": "paydadosh_pd_1239",
+      "category": "basic_phrases",
+      "ru": "Девочка поправила свою постель",
+      "expectedIng": "ЙиIигас ший мотт дIанийсабар"
+    },
+    {
+      "id": "paydadosh_pd_1216",
+      "category": "basic_phrases",
+      "ru": "Для меня это очень важно",
+      "expectedIng": "Сона ч1оаг1а лоарх1аме х1ама да из"
+    },
+    {
+      "id": "paydadosh_pd_660",
+      "category": "basic_phrases",
+      "ru": "Доброе утро!",
+      "expectedIng": "Iуйре дика хийла!"
+    },
+    {
+      "id": "paydadosh_pd_701",
+      "category": "basic_phrases",
+      "ru": "Добрый вечер",
+      "expectedIng": "Сайре дика хийла."
+    },
+    {
+      "id": "paydadosh_pd_19934",
+      "category": "basic_phrases",
+      "ru": "Дружеское пожелание при прощании, призывает поддерживать связь. Часто говорят давнему другу или родственнику",
+      "expectedIng": "Вайна дӀамавалалахь"
+    },
+    {
+      "id": "paydadosh_pd_410",
+      "category": "basic_phrases",
+      "ru": "Если Бог даст (дословно: если Бог сказал)",
+      "expectedIng": "Дала аьннадале"
+    },
+    {
+      "id": "paydadosh_pd_1361",
+      "category": "basic_phrases",
+      "ru": "Если не затруднит, скажите, пожалуйста, где (когда, кто, как)?",
+      "expectedIng": "Хала деций, ала сога мичахьа (маца, мала, мишта)"
+    },
+    {
+      "id": "paydadosh_pd_1339",
+      "category": "basic_phrases",
+      "ru": "Если сможете, постарайтесь прийти пораньше",
+      "expectedIng": "Хьай вIаштIехьдоале, хьалхагIа хьавола (хьайола, хьадувла) хьажалахь"
+    },
+    {
+      "id": "paydadosh_pd_671",
+      "category": "basic_phrases",
+      "ru": "Здоровья ему/ей/им!",
+      "expectedIng": "Моаршал хилда цунна/царна"
+    },
+    {
+      "id": "paydadosh_pd_670",
+      "category": "basic_phrases",
+      "ru": "Здоровья тебе/вам!",
+      "expectedIng": "Моаршал хилда хьона/шоана"
+    },
+    {
+      "id": "paydadosh_pd_1236",
+      "category": "basic_phrases",
+      "ru": "И тебе доброго вечера",
+      "expectedIng": "Хьа а хийла сайре дика"
+    },
+    {
+      "id": "paydadosh_pd_1237",
+      "category": "basic_phrases",
+      "ru": "И тебе доброго дня",
+      "expectedIng": "Хьа а хийла ди дика"
+    },
+    {
+      "id": "paydadosh_pd_1238",
+      "category": "basic_phrases",
+      "ru": "И тебе доброго утра",
+      "expectedIng": "Хьа а хийла 1уйре дика"
+    },
+    {
+      "id": "paydadosh_pd_1365",
+      "category": "basic_phrases",
+      "ru": "К сожалению, нет / нельзя",
+      "expectedIng": "Халахете а, йиш яц"
+    },
+    {
+      "id": "paydadosh_pd_1199",
+      "category": "basic_phrases",
+      "ru": "Как все прошло?",
+      "expectedIng": "Мишта д1адахар деррига?"
+    },
+    {
+      "id": "paydadosh_pd_1347",
+      "category": "basic_phrases",
+      "ru": "Как вы произнесете это слово?",
+      "expectedIng": "Из дош мишта аргдар Iа?"
+    },
+    {
+      "id": "paydadosh_pd_1351",
+      "category": "basic_phrases",
+      "ru": "Как вы скажете это по-ингушски?",
+      "expectedIng": "ГIалгIай метта мишта аргда Iа из?"
+    },
+    {
+      "id": "paydadosh_pd_1249",
+      "category": "basic_phrases",
+      "ru": "Как он много вопросов задавал",
+      "expectedIng": "Ма дукха хаттараш телар цо"
+    },
+    {
+      "id": "paydadosh_pd_1225",
+      "category": "basic_phrases",
+      "ru": "Как тебе погода сегодня?",
+      "expectedIng": "Мишта хет хьона таханара хаоттам?"
+    },
+    {
+      "id": "paydadosh_pd_1531",
+      "category": "basic_phrases",
+      "ru": "Как тебя зовут?",
+      "expectedIng": "ЦIи мишта я хьа?"
+    },
+    {
+      "id": "paydadosh_pd_1350",
+      "category": "basic_phrases",
+      "ru": "Как часто употребляется это слово в речи?",
+      "expectedIng": "Къамаьла юкъе мел дукха леладу из дош?"
+    },
+    {
+      "id": "paydadosh_pd_1192",
+      "category": "basic_phrases",
+      "ru": "Какого цвета это платье / рубашка?",
+      "expectedIng": "Малаг1ча беса я из коч?"
+    },
+    {
+      "id": "paydadosh_pd_1190",
+      "category": "basic_phrases",
+      "ru": "Когда мы встретимся?",
+      "expectedIng": "Вай в1ашаг1 маца кхет?"
+    },
+    {
+      "id": "paydadosh_pd_1336",
+      "category": "basic_phrases",
+      "ru": "Когда мы могли бы с вами встретиться?",
+      "expectedIng": "Маца вIашагIкхета вIаштIехьдаргда вай?"
+    },
+    {
+      "id": "paydadosh_pd_1231",
+      "category": "basic_phrases",
+      "ru": "Который час?",
+      "expectedIng": "Масса сахьат даьннад?"
+    },
+    {
+      "id": "paydadosh_pd_19941",
+      "category": "basic_phrases",
+      "ru": "Краткий вопрос о здоровье/самочувствии. Ответ: «дика да",
+      "expectedIng": "Магар миштад?"
+    },
+    {
+      "id": "paydadosh_pd_1252",
+      "category": "basic_phrases",
+      "ru": "Лечить",
+      "expectedIng": "Дарба де"
+    },
+    {
+      "id": "paydadosh_pd_1206",
+      "category": "basic_phrases",
+      "ru": "Мама делает оладьи (пустышки)",
+      "expectedIng": "Нана локъамаш еш йоал"
+    },
+    {
+      "id": "paydadosh_pd_1240",
+      "category": "basic_phrases",
+      "ru": "Мама научила сына говорить",
+      "expectedIng": "Нанас ший кIаьнка мотт Iомабар"
+    },
+    {
+      "id": "paydadosh_pd_1332",
+      "category": "basic_phrases",
+      "ru": "Мне бы хотелось с вами поговорить",
+      "expectedIng": "Хьоца къамаьл дувца безам бар са"
+    },
+    {
+      "id": "paydadosh_pd_20199",
+      "category": "basic_phrases",
+      "ru": "Мне надоело это",
+      "expectedIng": "сона кӀордадаьд ер"
+    },
+    {
+      "id": "paydadosh_pd_1323",
+      "category": "basic_phrases",
+      "ru": "Мне не страшно",
+      "expectedIng": "Со кхерац"
+    },
+    {
+      "id": "paydadosh_pd_1226",
+      "category": "basic_phrases",
+      "ru": "Мне нравится, когда идет дождь",
+      "expectedIng": "Сона дог1а делхача (доаг1ача) ханахьа хоза хет"
+    },
+    {
+      "id": "paydadosh_pd_1234",
+      "category": "basic_phrases",
+      "ru": "Можно ли примерить?",
+      "expectedIng": "Т1айийха хьажа мегаргвий?"
+    },
+    {
+      "id": "paydadosh_pd_1352",
+      "category": "basic_phrases",
+      "ru": "Можно сказать по-другому?",
+      "expectedIng": "Кхыча тайпара ала йиш йий?"
+    },
+    {
+      "id": "paydadosh_pd_22388",
+      "category": "basic_phrases",
+      "ru": "Мой руки с мылом",
+      "expectedIng": "Кулгаш сапаца дила"
+    },
+    {
+      "id": "paydadosh_pd_1246",
+      "category": "basic_phrases",
+      "ru": "Мы не понимаем",
+      "expectedIng": "Тхо / вай кхетац"
+    },
+    {
+      "id": "paydadosh_pd_1359",
+      "category": "basic_phrases",
+      "ru": "Не за что",
+      "expectedIng": "Доккха х1ама дацар из"
+    },
+    {
+      "id": "paydadosh_pd_1318",
+      "category": "basic_phrases",
+      "ru": "Не забывайте нас",
+      "expectedIng": "Тхо диц ма де"
+    },
+    {
+      "id": "paydadosh_pd_1219",
+      "category": "basic_phrases",
+      "ru": "Не опаздывайте",
+      "expectedIng": "Т1ехьа ма дисалаш"
+    },
+    {
+      "id": "paydadosh_pd_1202",
+      "category": "basic_phrases",
+      "ru": "Не переживай, все будет хорошо!",
+      "expectedIng": "Сагот ма де, деррига дика хургда!"
+    },
+    {
+      "id": "paydadosh_pd_1201",
+      "category": "basic_phrases",
+      "ru": "Не разочаруйся в своей работе!",
+      "expectedIng": "Хьай белха дог ма эккхалахь"
+    },
+    {
+      "id": "paydadosh_pd_1191",
+      "category": "basic_phrases",
+      "ru": "Не хитри / не проворачивай махинации",
+      "expectedIng": "Киловзал ма лелае"
+    },
+    {
+      "id": "paydadosh_pd_19933",
+      "category": "basic_phrases",
+      "ru": "Неформальная форма прощания между друзьями, близкими (буквально: «глазами увидимся ещё",
+      "expectedIng": "БӀаргагургда вай"
+    },
+    {
+      "id": "paydadosh_pd_19940",
+      "category": "basic_phrases",
+      "ru": "Неформальный вопрос знакомому при встрече. Стандартный ответ — «Керда хӀама дац",
+      "expectedIng": "Керда хӀама дий цига?"
+    },
+    {
+      "id": "paydadosh_pd_1313",
+      "category": "basic_phrases",
+      "ru": "Он (она) мне безразличен",
+      "expectedIng": "Сона бе-башха вац (яц) из"
+    },
+    {
+      "id": "paydadosh_pd_1243",
+      "category": "basic_phrases",
+      "ru": "Он / она не понимает",
+      "expectedIng": "Из кхетац"
+    },
+    {
+      "id": "paydadosh_pd_1195",
+      "category": "basic_phrases",
+      "ru": "Он всегда бывает недоволен",
+      "expectedIng": "Из ц1аккъа раьза хилац"
+    },
+    {
+      "id": "paydadosh_pd_1210",
+      "category": "basic_phrases",
+      "ru": "Он жалуется",
+      "expectedIng": "Латкъаш ва из"
+    },
+    {
+      "id": "paydadosh_pd_1251",
+      "category": "basic_phrases",
+      "ru": "Он мне сказал",
+      "expectedIng": "Цо сога аьннад"
+    },
+    {
+      "id": "paydadosh_pd_1207",
+      "category": "basic_phrases",
+      "ru": "Он пишет жалобу",
+      "expectedIng": "Из лоткъам язбеш ва"
+    },
+    {
+      "id": "paydadosh_pd_1247",
+      "category": "basic_phrases",
+      "ru": "Они не понимают",
+      "expectedIng": "Уж кхетац"
+    },
+    {
+      "id": "paydadosh_pd_6422",
+      "category": "basic_phrases",
+      "ru": "Оставь меня в покое (говорит мужчина) / оставь меня в покое (говорит женщина)",
+      "expectedIng": "паргIата витал со / паргIата йитал со"
+    },
+    {
+      "id": "paydadosh_pd_1349",
+      "category": "basic_phrases",
+      "ru": "Переведите это предложение на ингушский (русский) язык",
+      "expectedIng": "Цу предложенена гIалгIай (эрсий) метта таржам дел"
+    },
+    {
+      "id": "paydadosh_pd_1235",
+      "category": "basic_phrases",
+      "ru": "Поближе покажите мне",
+      "expectedIng": "Йистег1а хьахьокха сога"
+    },
+    {
+      "id": "paydadosh_pd_1212",
+      "category": "basic_phrases",
+      "ru": "Подай тарелку",
+      "expectedIng": "Оаркхилг хьакховдаде"
+    },
+    {
+      "id": "paydadosh_pd_1991",
+      "category": "basic_phrases",
+      "ru": "Подскажите, если не трудно",
+      "expectedIng": "Хьаал сога, хала деце"
+    },
+    {
+      "id": "paydadosh_pd_1342",
+      "category": "basic_phrases",
+      "ru": "Пожалуйста, говорите медленнее",
+      "expectedIng": "КIезига шортагIа дувцал"
+    },
+    {
+      "id": "paydadosh_pd_1354",
+      "category": "basic_phrases",
+      "ru": "Пожалуйста, спрашивайте",
+      "expectedIng": "Хьахаттал"
+    },
+    {
+      "id": "paydadosh_pd_1360",
+      "category": "basic_phrases",
+      "ru": "Позвольте спросить",
+      "expectedIng": "Хатта мегаргдий..."
+    },
+    {
+      "id": "paydadosh_pd_1346",
+      "category": "basic_phrases",
+      "ru": "Понимаю, не стесняйтесь",
+      "expectedIng": "Кхет, эхь ма хеталахь"
+    },
+    {
+      "id": "paydadosh_pd_1222",
+      "category": "basic_phrases",
+      "ru": "Поторопитесь",
+      "expectedIng": "Сихлелаш"
+    },
+    {
+      "id": "paydadosh_pd_1241",
+      "category": "basic_phrases",
+      "ru": "Почему ты не идешь завтра на учебу?",
+      "expectedIng": "Х1ана яг1ац хьо кхоана деша?"
+    },
+    {
+      "id": "paydadosh_pd_1204",
+      "category": "basic_phrases",
+      "ru": "Поэтому / по этой причине",
+      "expectedIng": "Из бахьан долаш"
+    },
+    {
+      "id": "paydadosh_pd_19954",
+      "category": "basic_phrases",
+      "ru": "Просьба разрешения войти в помещение, к мужчине. К женщине — «Чуяла мегаргйий?",
+      "expectedIng": "Чувала мегаргвий?"
+    },
+    {
+      "id": "paydadosh_pd_19931",
+      "category": "basic_phrases",
+      "ru": "Прощание, которое говорит тот, кто уходит. Часть устоявшегося ингушского этикета прощания: уходящий — «Ӏадика хийла",
+      "expectedIng": "Ӏадика хийла"
+    },
+    {
+      "id": "paydadosh_pd_680",
+      "category": "basic_phrases",
+      "ru": "Пусть ваш путь будет добрым!",
+      "expectedIng": "Никъ дика хилба шун"
+    },
+    {
+      "id": "paydadosh_pd_673",
+      "category": "basic_phrases",
+      "ru": "Пусть Всевышний одарит его/её/их здоровьем!",
+      "expectedIng": "Дала моаршал лулда цунна/царна"
+    },
+    {
+      "id": "paydadosh_pd_672",
+      "category": "basic_phrases",
+      "ru": "Пусть Всевышний одарит тебя здоровьем!",
+      "expectedIng": "Дала моаршал лулда хьона"
+    },
+    {
+      "id": "paydadosh_pd_681",
+      "category": "basic_phrases",
+      "ru": "Пусть Всевышний сделает ваш путь добрым!",
+      "expectedIng": "Дала дикача наькъа тӀа долда шо"
+    },
+    {
+      "id": "paydadosh_pd_678",
+      "category": "basic_phrases",
+      "ru": "Пусть Всевышний сделает твой путь добрым!",
+      "expectedIng": "Дала дикача наькъа тӀа волва (йойла) хьо"
+    },
+    {
+      "id": "paydadosh_pd_677",
+      "category": "basic_phrases",
+      "ru": "Пусть твой путь будет добрым!",
+      "expectedIng": "Никъ дика хилба хьа"
+    },
+    {
+      "id": "paydadosh_pd_19951",
+      "category": "basic_phrases",
+      "ru": "Развёрнутая, эмоциональная форма благодарности (буквально: «я от сердца спасибо говорю тебе",
+      "expectedIng": "Аз дег тӀара баркал оал хьога"
+    },
+    {
+      "id": "paydadosh_pd_1205",
+      "category": "basic_phrases",
+      "ru": "Расскажи мне подробно",
+      "expectedIng": "Ма дарра дувцал сога"
+    },
+    {
+      "id": "paydadosh_pd_19949",
+      "category": "basic_phrases",
+      "ru": "Самая короткая и употребимая форма благодарности. В развёрнутой форме — «Баркал хилда хьона",
+      "expectedIng": "Баркал"
+    },
+    {
+      "id": "paydadosh_pd_1230",
+      "category": "basic_phrases",
+      "ru": "Сколько времени?",
+      "expectedIng": "Фу ха яьннай? / Мел ха яьннай"
+    },
+    {
+      "id": "paydadosh_pd_1233",
+      "category": "basic_phrases",
+      "ru": "Сколько стоит?",
+      "expectedIng": "Фу доаккх укхох? / фу дех укхох?"
+    },
+    {
+      "id": "paydadosh_pd_19956",
+      "category": "basic_phrases",
+      "ru": "Смягчающая формула при просьбе (буквально: «тебе если не трудно",
+      "expectedIng": "Хьайна хала деце"
+    },
+    {
+      "id": "paydadosh_pd_1215",
+      "category": "basic_phrases",
+      "ru": "Спасибо за подарок!",
+      "expectedIng": "Баркал хьона совг1ат даларах!"
+    },
+    {
+      "id": "paydadosh_pd_1358",
+      "category": "basic_phrases",
+      "ru": "Спасибо за прекрасный подарок",
+      "expectedIng": "Баркала 1а деннача хоза совг1ата"
+    },
+    {
+      "id": "paydadosh_pd_699",
+      "category": "basic_phrases",
+      "ru": "Спокойной ночи (доброй ночи)",
+      "expectedIng": "бийса даькъала хийла"
+    },
+    {
+      "id": "paydadosh_pd_19944",
+      "category": "basic_phrases",
+      "ru": "Стандартный ответ на вопрос «как дела",
+      "expectedIng": "Шедар дика да"
+    },
+    {
+      "id": "paydadosh_pd_19945",
+      "category": "basic_phrases",
+      "ru": "Стандартный ответ на вопрос «что нового?",
+      "expectedIng": "Керда хӀама дац"
+    },
+    {
+      "id": "paydadosh_pd_1363",
+      "category": "basic_phrases",
+      "ru": "Тут можно курить?",
+      "expectedIng": "Укхаза г1али увза йиш йий?"
+    },
+    {
+      "id": "paydadosh_pd_1229",
+      "category": "basic_phrases",
+      "ru": "Ты ему ответил(а)?",
+      "expectedIng": "1а цунна жоп деннадий?"
+    },
+    {
+      "id": "paydadosh_pd_1245",
+      "category": "basic_phrases",
+      "ru": "Ты не понимаешь",
+      "expectedIng": "Хьо кхетац"
+    },
+    {
+      "id": "paydadosh_pd_1353",
+      "category": "basic_phrases",
+      "ru": "У меня к вам вопрос",
+      "expectedIng": "Цхьа хаттар дар са хьога"
+    },
+    {
+      "id": "paydadosh_pd_1221",
+      "category": "basic_phrases",
+      "ru": "У меня нет времени",
+      "expectedIng": "Сога ха яц"
+    },
+    {
+      "id": "paydadosh_pd_1193",
+      "category": "basic_phrases",
+      "ru": "У тебя есть с ним связь / контакт?",
+      "expectedIng": "Цунца бувзам бий хьа?"
+    },
+    {
+      "id": "paydadosh_pd_6421",
+      "category": "basic_phrases",
+      "ru": "Уйди, отойди, отстань (по отношению к женщине)",
+      "expectedIng": "дӀаяла"
+    },
+    {
+      "id": "paydadosh_pd_6420",
+      "category": "basic_phrases",
+      "ru": "Уйди, отойди, отстань (по отношению к мужчине)",
+      "expectedIng": "дӀавала"
+    },
+    {
+      "id": "paydadosh_pd_1324",
+      "category": "basic_phrases",
+      "ru": "Чем ты расстроен (расстроена)?",
+      "expectedIng": "Сево дохадаьд хьа дог?"
+    },
+    {
+      "id": "paydadosh_pd_1198",
+      "category": "basic_phrases",
+      "ru": "Что здесь происходит?",
+      "expectedIng": "Фуд укхаза доалар?"
+    },
+    {
+      "id": "paydadosh_pd_1348",
+      "category": "basic_phrases",
+      "ru": "Что означает это слово?",
+      "expectedIng": "Цу деша фу маIан да?"
+    },
+    {
+      "id": "paydadosh_pd_1197",
+      "category": "basic_phrases",
+      "ru": "Что случилось / в чем дело?",
+      "expectedIng": "Фу хиннад?"
+    },
+    {
+      "id": "paydadosh_pd_1224",
+      "category": "basic_phrases",
+      "ru": "Что-то наш друг пропал в последние дни",
+      "expectedIng": "Вай шинне доттаг1а вайна д1а ма ваьннавий, т1еххьарча деношка"
+    },
+    {
+      "id": "paydadosh_pd_1232",
+      "category": "basic_phrases",
+      "ru": "Это очень известная книга",
+      "expectedIng": "Ч1оаг1а ц1ихеза кинижка да ер"
+    },
+    {
+      "id": "paydadosh_pd_1253",
+      "category": "basic_phrases",
+      "ru": "Это серьезный разговор",
+      "expectedIng": "ЦIенхашта къамаьл да ер"
+    },
+    {
+      "id": "paydadosh_pd_1250",
+      "category": "basic_phrases",
+      "ru": "Это случается редко",
+      "expectedIng": "Наггахьа хулаш х1ама да из"
+    },
+    {
+      "id": "paydadosh_pd_1220",
+      "category": "basic_phrases",
+      "ru": "Я буду вовремя",
+      "expectedIng": "Со сай ханахьа хургва"
+    },
+    {
+      "id": "paydadosh_pd_1228",
+      "category": "basic_phrases",
+      "ru": "Я был занят последние две недели",
+      "expectedIng": "Т1еххьара шин к1ира мукъа вацар со"
+    },
+    {
+      "id": "paydadosh_pd_1340",
+      "category": "basic_phrases",
+      "ru": "Я вас не понял (не поняла)",
+      "expectedIng": "Со хьох кхийтанзар"
+    },
+    {
+      "id": "paydadosh_pd_1248",
+      "category": "basic_phrases",
+      "ru": "Я надеюсь",
+      "expectedIng": "Догдоах аз"
+    },
+    {
+      "id": "paydadosh_pd_1334",
+      "category": "basic_phrases",
+      "ru": "Я не задержу вас долго",
+      "expectedIng": "Аз дукха гоавергвац хьо"
+    },
+    {
+      "id": "paydadosh_pd_1217",
+      "category": "basic_phrases",
+      "ru": "Я не задержу тебя надолго",
+      "expectedIng": "Аз дукха гоавергвац (гоаергъяц) хьо"
+    },
+    {
+      "id": "paydadosh_pd_1309",
+      "category": "basic_phrases",
+      "ru": "Я не люблю его (ее)",
+      "expectedIng": "Сона везац (езац) из"
+    },
+    {
+      "id": "paydadosh_pd_1242",
+      "category": "basic_phrases",
+      "ru": "Я не понимаю",
+      "expectedIng": "Со кхетац"
+    },
+    {
+      "id": "paydadosh_pd_1209",
+      "category": "basic_phrases",
+      "ru": "Я никогда там не был",
+      "expectedIng": "Ц1аккха а хиннавац со цига"
+    },
+    {
+      "id": "paydadosh_pd_1203",
+      "category": "basic_phrases",
+      "ru": "Я никогда этого не говорил(а)",
+      "expectedIng": "Аз цIаккха а аьннадац из"
+    },
+    {
+      "id": "paydadosh_pd_1344",
+      "category": "basic_phrases",
+      "ru": "Я плохо говорю по-ингушски и не всё понимаю",
+      "expectedIng": "Аз гIалгIай мотт дика бувцац, дерриганех кхета а кхетац"
+    },
+    {
+      "id": "paydadosh_pd_1200",
+      "category": "basic_phrases",
+      "ru": "Я правильно тебя поняла?",
+      "expectedIng": "Со нийса кхийттарий хьох?"
+    },
+    {
+      "id": "paydadosh_pd_1315",
+      "category": "basic_phrases",
+      "ru": "Я рада (рад) нашему знакомству",
+      "expectedIng": "Сона дика хет вай дайза"
+    },
+    {
+      "id": "paydadosh_pd_1343",
+      "category": "basic_phrases",
+      "ru": "Я самостоятельно изучаю ингушский язык",
+      "expectedIng": "Аз айса Iомабу гIалгIай мотт"
+    },
+    {
+      "id": "paydadosh_pd_1218",
+      "category": "basic_phrases",
+      "ru": "Я собираюсь покататься на качелях",
+      "expectedIng": "Бурчолгах хоахкале воал со"
+    },
+    {
+      "id": "f_1779906038312_w59s",
+      "category": "food",
+      "ru": "сколько стоят яблоки?",
+      "expectedIng": "Мелла дех 1ажашт?"
+    },
+    {
+      "id": "f_1780032269524_rdm2",
+      "category": "hunt",
+      "ru": "Шакал",
+      "expectedIng": "цӀувзи"
     }
   ]
 }
