@@ -1,5 +1,40 @@
 const TOKEN_KEY = "languageApiAdminToken";
 
+const STAT_ICONS = {
+  index: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>`,
+  habar: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>`,
+  book: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>`,
+  grammar: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
+  corpus: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>`,
+  term: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>`,
+  block: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>`
+};
+
+function statCard(label, value, { icon = "book", tone = "indigo", sub = "" } = {}) {
+  const svg = STAT_ICONS[icon] || STAT_ICONS.book;
+  const subHtml = sub ? `<span class="stat-sub">${sub}</span>` : "";
+  return `
+    <div class="stat-card">
+      <div class="stat-icon ${tone}" aria-hidden="true">${svg}</div>
+      <div class="stat-body">
+        <span class="stat-label">${label}</span>
+        <strong>${value ?? 0}</strong>
+        ${subHtml}
+      </div>
+    </div>`;
+}
+
+function sourceStep(num, title, meta) {
+  return `
+    <div class="source-step">
+      <span class="source-step-num">${num}</span>
+      <div class="source-step-body">
+        ${title}
+        ${meta ? `<div class="source-step-meta">${meta}</div>` : ""}
+      </div>
+    </div>`;
+}
+
 function apiBase() {
   return `${location.origin}/admin/api`;
 }
@@ -106,44 +141,65 @@ async function loadOverview() {
   const grid = document.getElementById("stats-grid");
   if (grid) {
     const cards = [
-      ["Индекс фраз (ключи)", c.phraseIndexKeys],
-      ["Habar (файлы GitHub)", c.habarItemsRaw],
-      ["Habar: basic_phrases", `${c.habarBasicRaw ?? 0} → ${c.habarBasicPhrasesLoaded ?? 0} в индексе`],
-      ["Habar: conversation", `${c.habarConversationRaw ?? 0} → ${c.habarConversationLoaded ?? 0} в индексе`],
-      ["PaydaDosh всего", c.paydadoshRaw ?? c.paydaDoshPhrasesLoaded],
-      ["PaydaDosh everyday", c.paydadoshEverydayRaw ?? c.paydaDoshEverydayLoaded],
-      ["PaydaDosh уроки", c.paydadoshLessonRaw ?? c.paydaDoshLessonLoaded],
-      ["Словарь dosh", c.wordsLoaded],
-      ["Шаблоны грамматики", inv.patterns],
-      ["Лексемы", inv.lexemes],
-      ["Корпус (файлов)", c.corpusLoaded],
-      ["Паралл. корпус (parall)", `${c.parallelCorpusPhrasesRaw ?? 0} → ${c.parallelCorpusInIndex ?? 0} в индексе`],
-      ["Словарь терминов 2016", `${c.ingTermRaw ?? 0} → ${c.ingTermPhrasesLoaded ?? 0} фраз, ${c.ingTermWordsLoaded ?? 0} слов`],
-      ["Corpus фраз (уроки → индекс)", `${c.corpusPhrasesRaw ?? 0} → ${c.corpusPhrasesInIndex ?? 0}`],
-      ["Чёрный список", inv.blacklist]
+      statCard("Индекс фраз (ключи)", c.phraseIndexKeys, { icon: "index", tone: "indigo" }),
+      statCard("Habar (GitHub)", c.habarItemsRaw, { icon: "habar", tone: "sky" }),
+      statCard("basic_phrases", `${c.habarBasicPhrasesLoaded ?? 0}`, {
+        icon: "habar",
+        tone: "sky",
+        sub: `${c.habarBasicRaw ?? 0} в файлах → в индексе`
+      }),
+      statCard("conversation", `${c.habarConversationLoaded ?? 0}`, {
+        icon: "habar",
+        tone: "sky",
+        sub: `${c.habarConversationRaw ?? 0} в файлах → в индексе`
+      }),
+      statCard("PaydaDosh", c.paydadoshRaw ?? c.paydaDoshPhrasesLoaded, { icon: "book", tone: "emerald" }),
+      statCard("PaydaDosh everyday", c.paydadoshEverydayRaw ?? c.paydaDoshEverydayLoaded, { icon: "book", tone: "emerald" }),
+      statCard("PaydaDosh уроки", c.paydadoshLessonRaw ?? c.paydaDoshLessonLoaded, { icon: "book", tone: "emerald" }),
+      statCard("Словарь dosh", c.wordsLoaded, { icon: "book", tone: "violet" }),
+      statCard("Шаблоны грамматики", inv.patterns, { icon: "grammar", tone: "amber" }),
+      statCard("Лексемы", inv.lexemes, { icon: "grammar", tone: "amber" }),
+      statCard("Корпус (файлов)", c.corpusLoaded, { icon: "corpus", tone: "rose" }),
+      statCard("Паралл. корпус", c.parallelCorpusInIndex ?? 0, {
+        icon: "corpus",
+        tone: "rose",
+        sub: `${c.parallelCorpusPhrasesRaw ?? 0} сырых фраз`
+      }),
+      statCard("Словарь терминов", c.ingTermPhrasesLoaded ?? 0, {
+        icon: "term",
+        tone: "violet",
+        sub: `${c.ingTermRaw ?? 0} терминов, ${c.ingTermWordsLoaded ?? 0} слов`
+      }),
+      statCard("Corpus уроки", c.corpusPhrasesInIndex ?? 0, {
+        icon: "corpus",
+        tone: "slate",
+        sub: `${c.corpusPhrasesRaw ?? 0} сырых`
+      }),
+      statCard("Чёрный список", inv.blacklist, { icon: "block", tone: "slate" })
     ];
-    grid.innerHTML = cards.map(([l, v]) => `
-      <div class="stat-card"><span>${l}</span><strong>${v ?? 0}</strong></div>
-    `).join("");
+    grid.innerHTML = cards.join("");
   }
 
   const sourcesBox = document.getElementById("sources-box");
   if (sourcesBox) {
     sourcesBox.innerHTML = `
-      <strong>Источники перевода (фактический порядок /translate)</strong><br>
-      1. <b>habar</b> — фразы с GitHub (${c.habarPhrasesLoaded ?? 0}, ключей в индексе: ${c.phraseIndexKeys ?? 0})<br>
-      2. <b>paydadosh</b> — разговорник PaydaDosh (${c.paydaDoshPhrasesLoaded ?? 0}; everyday ${c.paydaDoshEverydayLoaded ?? 0}, уроки ${c.paydaDoshLessonLoaded ?? 0})<br>
-      2b. <b>corpus</b> — параллельные тексты ghalghay (${c.parallelCorpusInIndex ?? 0} фраз, Киплинг, Пушкин…)<br>
-      2c. <b>ing_term</b> — словарь терминов 2016 (${c.ingTermPhrasesLoaded ?? 0} в индексе, ${c.ingTermWordsLoaded ?? 0} слов)<br>
-      3. <b>grammar</b> — шаблоны (${inv.patterns ?? 0}) + лексемы (${inv.lexemes ?? 0})<br>
-      4. <b>dosh</b> — словарь + сборка из слов (${c.wordsLoaded ?? 0} слов)<br>
-      5. <b>LLM</b> — OpenRouter / Gemini fallback<br><br>
-      <small>
-        Формат «N → M в индексе»: N — фраз в файлах, M — осталось после слияния (PaydaDosh перекрывает дубликаты).<br>
-        «Corpus фраз» — уроки ghalghay + параллельный корпус (Киплинг, Пушкин и др., ${c.parallelCorpusInIndex ?? 0} в индексе).<br>
-        После Push Habar: <b>POST /refresh</b> с <code>{"pullCategories":true}</code> или кнопка «Данные API» на сайте.
-      </small>
-    `;
+      <div class="info-box-header">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Источники перевода <span class="muted">(порядок /translate)</span>
+      </div>
+      <div class="source-pipeline">
+        ${sourceStep("1", "<b>habar</b> — разговорник с GitHub", `${c.habarPhrasesLoaded ?? 0} фраз · ${c.phraseIndexKeys ?? 0} ключей в индексе`)}
+        ${sourceStep("2", "<b>paydadosh</b> — PaydaDosh", `${c.paydaDoshPhrasesLoaded ?? 0} фраз (everyday ${c.paydaDoshEverydayLoaded ?? 0}, уроки ${c.paydaDoshLessonLoaded ?? 0})`)}
+        ${sourceStep("2b", "<b>corpus</b> — параллельные тексты ghalghay", `${c.parallelCorpusInIndex ?? 0} фраз · Киплинг, Пушкин…`)}
+        ${sourceStep("2c", "<b>ing_term</b> — словарь терминов 2016", `${c.ingTermPhrasesLoaded ?? 0} в индексе · ${c.ingTermWordsLoaded ?? 0} слов`)}
+        ${sourceStep("3", "<b>grammar</b> — шаблоны + лексемы", `${inv.patterns ?? 0} шаблонов · ${inv.lexemes ?? 0} лексем`)}
+        ${sourceStep("4", "<b>dosh</b> — словарь + сборка из слов", `${c.wordsLoaded ?? 0} слов`)}
+        ${sourceStep("5", "<b>LLM</b> — OpenRouter / Gemini", "fallback, если ничего не найдено")}
+      </div>
+      <div class="info-footnote">
+        Формат «N → M в индексе»: N — фраз в файлах, M — после слияния (дубликаты отбрасываются).<br>
+        После push Habar: <b>POST /refresh</b> с <code>{"pullCategories":true}</code> или кнопка «Перезагрузить данные».
+      </div>`;
   }
 
   const geminiBox = document.getElementById("gemini-box");
@@ -153,8 +209,15 @@ async function loadOverview() {
       const g = await res.json();
       if (g.ok) {
         const provider = g.provider === "openrouter" ? "OpenRouter" : "Gemini";
-        const model = g.model ? ` (${g.model})` : "";
-        geminiBox.innerHTML = `<strong>LLM:</strong> ${provider} работает ✓${model}`;
+        const model = g.model ? g.model : "";
+        geminiBox.innerHTML = `
+          <div class="llm-status">
+            <span class="llm-dot" aria-hidden="true"></span>
+            <div class="llm-text">
+              <strong>LLM работает</strong>
+              <small>${provider}${model ? ` · ${model}` : ""}</small>
+            </div>
+          </div>`;
       } else {
         const parts = [];
         if (g.openrouterConfigured) parts.push("OpenRouter настроен, но не отвечает");
@@ -162,10 +225,21 @@ async function loadOverview() {
         if (!g.openrouterConfigured && !g.geminiConfigured) {
           parts.push("Нет OPENROUTER_API_KEY / GEMINI_API_KEY в .env");
         }
-        geminiBox.innerHTML = `<strong>LLM:</strong> ${g.error || "ошибка"}<br><small>${parts.join("; ")}${g.detail ? `<br>${g.detail}` : ""}${Array.isArray(g.openrouterAttempts) && g.openrouterAttempts.length ? `<br><br>Модели OpenRouter:<br>${g.openrouterAttempts.map((a) => `${a.model}: ${a.detail || a.error}`).join("<br>")}` : ""}</small>`;
+        geminiBox.innerHTML = `
+          <div class="llm-status">
+            <span class="llm-dot error" aria-hidden="true"></span>
+            <div class="llm-text">
+              <strong>LLM недоступен</strong>
+              <small>${g.error || "ошибка"}${parts.length ? ` · ${parts.join("; ")}` : ""}${g.detail ? ` · ${g.detail}` : ""}</small>
+            </div>
+          </div>`;
       }
     } catch {
-      geminiBox.textContent = "Не удалось проверить LLM";
+      geminiBox.innerHTML = `
+        <div class="llm-status">
+          <span class="llm-dot error" aria-hidden="true"></span>
+          <div class="llm-text"><strong>Не удалось проверить LLM</strong></div>
+        </div>`;
     }
   }
 }
