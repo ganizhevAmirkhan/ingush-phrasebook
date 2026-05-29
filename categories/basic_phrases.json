@@ -1400,6 +1400,13 @@
       "pron": "burcholgakh khoakhkale voal so",
       "id": "paydadosh_pd_1218",
       "audio": "paydadosh_pd_1218.mp3"
+    },
+    {
+      "id": "f_1780043802475_jjie",
+      "ru": "хотел",
+      "ing": "воалар",
+      "pron": "voalar",
+      "audio": "f_1780043802475_jjie.mp3"
     }
   ],
   "version": 2,
