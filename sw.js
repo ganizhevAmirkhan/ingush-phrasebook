@@ -1,5 +1,5 @@
 // Kill stale caches from older PWA builds (they served outdated script.js).
-const SW_VERSION = "ingush-phrasebook-v2-nocache";
+const SW_VERSION = "ingush-phrasebook-v3-viewport";
 
 self.addEventListener("install", (e) => {
   self.skipWaiting();

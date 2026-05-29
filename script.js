@@ -104,6 +104,8 @@ function syncMobileLayoutMetrics(){
   const topbar = document.querySelector(".topbar");
   const searchWrap = document.querySelector(".search-wrap");
   const root = document.documentElement;
+  const vv = window.visualViewport;
+
   if(topbar){
     root.style.setProperty("--topbar-h", `${Math.ceil(topbar.getBoundingClientRect().height)}px`);
   }
@@ -111,12 +113,33 @@ function syncMobileLayoutMetrics(){
     const r = searchWrap.getBoundingClientRect();
     root.style.setProperty("--search-dropdown-top", `${Math.ceil(r.bottom + 4)}px`);
   }
+
+  if(vv){
+    root.style.setProperty("--app-vh", `${Math.round(vv.height)}px`);
+    root.style.setProperty("--app-vw", `${Math.round(vv.width)}px`);
+    document.body.style.height = `${Math.round(vv.height)}px`;
+  } else {
+    document.body.style.height = "";
+  }
 }
 
 function setupMobileLayoutMetrics(){
   syncMobileLayoutMetrics();
-  window.addEventListener("resize", syncMobileLayoutMetrics, { passive: true });
-  window.addEventListener("orientationchange", syncMobileLayoutMetrics, { passive: true });
+
+  const rerun = () => {
+    syncMobileLayoutMetrics();
+    window.setTimeout(syncMobileLayoutMetrics, 120);
+    window.setTimeout(syncMobileLayoutMetrics, 320);
+  };
+
+  window.addEventListener("resize", rerun, { passive: true });
+  window.addEventListener("orientationchange", rerun, { passive: true });
+
+  if(window.visualViewport){
+    window.visualViewport.addEventListener("resize", rerun, { passive: true });
+    window.visualViewport.addEventListener("scroll", syncMobileLayoutMetrics, { passive: true });
+  }
+
   const sInput = document.getElementById("global-search");
   if(sInput){
     sInput.addEventListener("focus", syncMobileLayoutMetrics, { passive: true });
