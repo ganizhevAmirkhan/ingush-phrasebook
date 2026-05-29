@@ -10,6 +10,8 @@ git checkout -- \
   language-api/data/blacklist.json \
   categories/basic_phrases.json \
   categories/conversation.json \
+  categories/misc.json \
+  categories/proverbs.json \
   2>/dev/null || true
 
 echo "==> git pull"

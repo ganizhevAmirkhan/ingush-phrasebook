@@ -29,6 +29,7 @@ const CATEGORY_DIR = path.join(HABAR_ROOT, "categories");
 const GITHUB_CATEGORIES_API =
   "https://api.github.com/repos/ganizhevAmirkhan/ingush-phrasebook/contents/categories?ref=main";
 const PAYDADOSH_PHRASES_FILE = path.join(ROOT, "data", "colloquial", "paydadosh-phrases.json");
+const ING_TERM_FILE = path.join(ROOT, "data", "dictionary", "ing-term-2016.json");
 const { splitRuIngPairs } = require("./phrase-split");
 const CORPUS_STORIES_DIR = path.join(ROOT, "data", "corpus", "stories");
 const CORPUS_NOVELLAS_DIR = path.join(ROOT, "data", "corpus", "novellas");
@@ -67,6 +68,7 @@ const state = {
     translateFromPhrase: 0,
     translateFromPaydaDosh: 0,
     translateFromCorpus: 0,
+    translateFromIngTerm: 0,
     translateFromLLM: 0,
     translateRejected: 0
   },
@@ -106,6 +108,62 @@ async function loadDictionary() {
     }
   }
   return [];
+}
+
+async function loadTermEntries() {
+  try {
+    const json = await readJson(ING_TERM_FILE);
+    return Array.isArray(json?.items) ? json.items : [];
+  } catch {
+    return [];
+  }
+}
+
+function termToWordRecord(item) {
+  const ru = (item?.ru || "").toString().trim();
+  const ing = (item?.ing || "").toString().trim();
+  if (!ru || !ing) return null;
+  return {
+    id: (item?.id || "").toString(),
+    ru,
+    ruNorm: normalizeText(ru),
+    ruTokens: tokenizeRu(ru),
+    ingVariants: [ing],
+    pos: "term",
+    source: SOURCE.ING_TERM,
+    confidence: Number(item?.confidence) || 0.88
+  };
+}
+
+async function loadAllWords() {
+  const [dosh, termItems] = await Promise.all([loadDictionary(), loadTermEntries()]);
+  const byRu = new Map();
+  for (const word of dosh) {
+    if (word?.ruNorm) byRu.set(word.ruNorm, word);
+  }
+  for (const item of termItems) {
+    const word = termToWordRecord(item);
+    if (!word?.ruNorm || byRu.has(word.ruNorm)) continue;
+    byRu.set(word.ruNorm, word);
+  }
+  return [...byRu.values()];
+}
+
+function termItemsToPhrases(termItems) {
+  return termItems
+    .map((item) =>
+      toColloquialPhraseRecord(
+        {
+          id: item?.id,
+          ru: item?.ru,
+          ing: item?.ing,
+          confidence: Number(item?.confidence) || 0.88
+        },
+        SOURCE.ING_TERM,
+        "term"
+      )
+    )
+    .filter((rec) => rec.ruNorm && rec.ing);
 }
 
 async function loadHabarPhrases() {
@@ -253,6 +311,7 @@ const DISABLE_HABAR_PHRASE_SOURCE =
 const PHRASE_SOURCE_PRIORITY = {
   [SOURCE.HABAR]: 5,
   [SOURCE.PAYDADOSH]: 4,
+  [SOURCE.ING_TERM]: 3.5,
   [SOURCE.CORPUS]: 2,
   [SOURCE.GRAMMAR]: 1
 };
@@ -331,12 +390,14 @@ function rebuildPhraseIndex() {
 }
 
 async function loadPhrases() {
-  const [habar, paydadosh, lessons, parallel] = await Promise.all([
+  const [habar, paydadosh, lessons, parallel, termItems] = await Promise.all([
     loadHabarPhrases(),
     loadPaydaDoshPhrases(),
     loadLessonColloquialPhrases(),
-    loadParallelCorpusPhrases()
+    loadParallelCorpusPhrases(),
+    loadTermEntries()
   ]);
+  const termPhrases = termItemsToPhrases(termItems);
   state.inventoryStats = {
     habarItemsRaw: habar.length,
     habarBasicRaw: habar.filter((p) => p.category === "basic_phrases").length,
@@ -345,9 +406,11 @@ async function loadPhrases() {
     paydadoshEverydayRaw: paydadosh.filter((p) => p.category === "everyday_phrase").length,
     paydadoshLessonRaw: paydadosh.filter((p) => p.category === "lesson_phrase").length,
     corpusPhrasesRaw: lessons.length,
-    parallelCorpusPhrasesRaw: parallel.length
+    parallelCorpusPhrasesRaw: parallel.length,
+    ingTermRaw: termItems.length,
+    ingTermPhrasesRaw: termPhrases.length
   };
-  return mergePhraseRecords([...habar, ...lessons, ...parallel, ...paydadosh]);
+  return mergePhraseRecords([...habar, ...termPhrases, ...lessons, ...parallel, ...paydadosh]);
 }
 
 async function loadCorpus() {
@@ -1030,6 +1093,7 @@ function findPhraseBest(ruText, options = {}) {
 function phraseTranslateResult(phrase) {
   if (phrase.source === SOURCE.PAYDADOSH) state.metrics.translateFromPaydaDosh += 1;
   else if (phrase.source === SOURCE.CORPUS) state.metrics.translateFromCorpus += 1;
+  else if (phrase.source === SOURCE.ING_TERM) state.metrics.translateFromIngTerm += 1;
   else if (phrase.source === SOURCE.GRAMMAR) state.metrics.translateFromGrammar += 1;
   else state.metrics.translateFromPhrase += 1;
   const usedSource =
@@ -1037,9 +1101,11 @@ function phraseTranslateResult(phrase) {
       ? SOURCE.PAYDADOSH
       : phrase.source === SOURCE.CORPUS
         ? SOURCE.CORPUS
-        : phrase.source === SOURCE.GRAMMAR
-          ? SOURCE.GRAMMAR
-          : SOURCE.HABAR;
+        : phrase.source === SOURCE.ING_TERM
+          ? SOURCE.ING_TERM
+          : phrase.source === SOURCE.GRAMMAR
+            ? SOURCE.GRAMMAR
+            : SOURCE.HABAR;
   return {
     ok: true,
     translation: phrase.ing,
@@ -1430,12 +1496,13 @@ async function translate(ruText, options = {}) {
 
   const exactWord = findWordExact(ru);
   if (exactWord) {
-    state.metrics.translateFromDosh += 1;
+    if (exactWord.source === SOURCE.ING_TERM) state.metrics.translateFromIngTerm += 1;
+    else state.metrics.translateFromDosh += 1;
     return {
       ok: true,
       translation: exactWord.ingVariants.slice(0, 2).join(" / "),
-      usedSource: SOURCE.DOSH,
-      confidence: 1,
+      usedSource: exactWord.source === SOURCE.ING_TERM ? SOURCE.ING_TERM : SOURCE.DOSH,
+      confidence: exactWord.confidence ?? 1,
       fallbackUsed: false
     };
   }
@@ -1590,6 +1657,9 @@ function getMetrics() {
       paydadoshLessonRaw: inv.paydadoshLessonRaw ?? 0,
       corpusPhrasesRaw: inv.corpusPhrasesRaw ?? 0,
       parallelCorpusPhrasesRaw: inv.parallelCorpusPhrasesRaw ?? 0,
+      ingTermRaw: inv.ingTermRaw ?? 0,
+      ingTermPhrasesLoaded: countPhrasesBy((p) => p.source === SOURCE.ING_TERM),
+      ingTermWordsLoaded: state.words.filter((w) => w.source === SOURCE.ING_TERM).length,
       corpusPhrasesInIndex: countPhrasesBy((p) => p.source === SOURCE.CORPUS),
       parallelCorpusInIndex: countPhrasesBy(
         (p) => p.source === SOURCE.CORPUS && (p.category || "").startsWith("ghalghay_") && !/lesson/.test(p.category || "")
@@ -1662,7 +1732,7 @@ async function refreshAllSources({ pullCategories = false } = {}) {
   }
 
   const [words, phrases, corpus, blacklist, grammar] = await Promise.all([
-    loadDictionary(),
+    loadAllWords(),
     loadPhrases(),
     loadCorpus(),
     loadBlacklist(),

@@ -1,0 +1,17 @@
+{
+  "name": "language-api",
+  "version": "1.0.0",
+  "description": "Backend for the Ingush language platform.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "pdf-parse": "1.1.1"
+  }
+}

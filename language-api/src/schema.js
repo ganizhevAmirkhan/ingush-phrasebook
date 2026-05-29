@@ -4,6 +4,7 @@ const SOURCE = {
   HABAR: "habar",
   PAYDADOSH: "paydadosh",
   CORPUS: "corpus",
+  ING_TERM: "ing_term",
   LLM: "llm"
 };
 

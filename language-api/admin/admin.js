@@ -118,6 +118,7 @@ async function loadOverview() {
       ["Лексемы", inv.lexemes],
       ["Корпус (файлов)", c.corpusLoaded],
       ["Паралл. корпус (parall)", `${c.parallelCorpusPhrasesRaw ?? 0} → ${c.parallelCorpusInIndex ?? 0} в индексе`],
+      ["Словарь терминов 2016", `${c.ingTermRaw ?? 0} → ${c.ingTermPhrasesLoaded ?? 0} фраз, ${c.ingTermWordsLoaded ?? 0} слов`],
       ["Corpus фраз (уроки → индекс)", `${c.corpusPhrasesRaw ?? 0} → ${c.corpusPhrasesInIndex ?? 0}`],
       ["Чёрный список", inv.blacklist]
     ];
@@ -133,6 +134,7 @@ async function loadOverview() {
       1. <b>habar</b> — фразы с GitHub (${c.habarPhrasesLoaded ?? 0}, ключей в индексе: ${c.phraseIndexKeys ?? 0})<br>
       2. <b>paydadosh</b> — разговорник PaydaDosh (${c.paydaDoshPhrasesLoaded ?? 0}; everyday ${c.paydaDoshEverydayLoaded ?? 0}, уроки ${c.paydaDoshLessonLoaded ?? 0})<br>
       2b. <b>corpus</b> — параллельные тексты ghalghay (${c.parallelCorpusInIndex ?? 0} фраз, Киплинг, Пушкин…)<br>
+      2c. <b>ing_term</b> — словарь терминов 2016 (${c.ingTermPhrasesLoaded ?? 0} в индексе, ${c.ingTermWordsLoaded ?? 0} слов)<br>
       3. <b>grammar</b> — шаблоны (${inv.patterns ?? 0}) + лексемы (${inv.lexemes ?? 0})<br>
       4. <b>dosh</b> — словарь + сборка из слов (${c.wordsLoaded ?? 0} слов)<br>
       5. <b>LLM</b> — OpenRouter / Gemini fallback<br><br>
