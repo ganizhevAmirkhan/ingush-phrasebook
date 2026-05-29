@@ -66,6 +66,7 @@ const state = {
     translateFromGrammar: 0,
     translateFromPhrase: 0,
     translateFromPaydaDosh: 0,
+    translateFromCorpus: 0,
     translateFromLLM: 0,
     translateRejected: 0
   },
@@ -172,6 +173,78 @@ async function loadLessonColloquialPhrases() {
   return out;
 }
 
+const PARALLEL_CORPUS_SPLIT_OPTS = { maxRuLen: 280, maxRuWords: 35 };
+
+function isGhalghayParallelStory(doc) {
+  const id = (doc?.id || "").toString();
+  const genre = (doc?.genre || "").toString();
+  return genre === "story" && id.startsWith("ghalghay_") && !/lesson/.test(id);
+}
+
+function isParallelTitlePair(ru) {
+  const t = (ru || "").trim();
+  if (!t || t.length > 120) return false;
+  return /^(р\.|а\.?\s*с\.|и\.?\s*с\.|дж\.|слово о полку)/i.test(t);
+}
+
+function normalizeParallelRu(ru) {
+  return (ru || "")
+    .toString()
+    .replace(/\s*\|\s*/g, " ")
+    .replace(/¶/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+async function loadParallelCorpusPhrases() {
+  const storyFiles = await safeListJsonFiles(CORPUS_STORIES_DIR);
+  const out = [];
+  for (const filePath of storyFiles) {
+    try {
+      const json = await readJson(filePath);
+      if (!isGhalghayParallelStory(json)) continue;
+      const category = json.id;
+      const paragraphs = Array.isArray(json?.paragraphs) ? json.paragraphs : [];
+      paragraphs.forEach((paragraph, index) => {
+        const ruRaw = (paragraph?.ru || "").toString();
+        const ingRaw = (paragraph?.ing || "").toString().trim();
+        if (!ruRaw || !ingRaw || isParallelTitlePair(ruRaw)) return;
+
+        const seen = new Set();
+        let subIndex = 0;
+        const pushPair = (ru, ing) => {
+          const ruClean = normalizeParallelRu(ru);
+          if (!ruClean || !ing) return;
+          const key = normalizePhraseKey(ruClean);
+          if (!key || seen.has(key)) return;
+          seen.add(key);
+          subIndex += 1;
+          out.push(
+            toColloquialPhraseRecord(
+              {
+                id: `${category}_${index + 1}_${subIndex}`,
+                ru: ruClean,
+                ing,
+                confidence: 0.88
+              },
+              SOURCE.CORPUS,
+              category
+            )
+          );
+        };
+
+        for (const pair of splitRuIngPairs(ruRaw, ingRaw, PARALLEL_CORPUS_SPLIT_OPTS)) {
+          pushPair(pair.ru, pair.ing.trim());
+        }
+        pushPair(ruRaw, ingRaw);
+      });
+    } catch {
+      // ignore bad file
+    }
+  }
+  return out;
+}
+
 // Habar UI sends skipHabar:true to avoid circular lookup. Public /translate uses Habar by default.
 // Set DISABLE_HABAR_IN_TRANSLATE=true on VPS only if you need to turn phrasebook off globally.
 const DISABLE_HABAR_PHRASE_SOURCE =
@@ -258,10 +331,11 @@ function rebuildPhraseIndex() {
 }
 
 async function loadPhrases() {
-  const [habar, paydadosh, lessons] = await Promise.all([
+  const [habar, paydadosh, lessons, parallel] = await Promise.all([
     loadHabarPhrases(),
     loadPaydaDoshPhrases(),
-    loadLessonColloquialPhrases()
+    loadLessonColloquialPhrases(),
+    loadParallelCorpusPhrases()
   ]);
   state.inventoryStats = {
     habarItemsRaw: habar.length,
@@ -270,9 +344,10 @@ async function loadPhrases() {
     paydadoshRaw: paydadosh.length,
     paydadoshEverydayRaw: paydadosh.filter((p) => p.category === "everyday_phrase").length,
     paydadoshLessonRaw: paydadosh.filter((p) => p.category === "lesson_phrase").length,
-    corpusPhrasesRaw: lessons.length
+    corpusPhrasesRaw: lessons.length,
+    parallelCorpusPhrasesRaw: parallel.length
   };
-  return mergePhraseRecords([...habar, ...lessons, ...paydadosh]);
+  return mergePhraseRecords([...habar, ...lessons, ...parallel, ...paydadosh]);
 }
 
 async function loadCorpus() {
@@ -954,14 +1029,17 @@ function findPhraseBest(ruText, options = {}) {
 
 function phraseTranslateResult(phrase) {
   if (phrase.source === SOURCE.PAYDADOSH) state.metrics.translateFromPaydaDosh += 1;
+  else if (phrase.source === SOURCE.CORPUS) state.metrics.translateFromCorpus += 1;
   else if (phrase.source === SOURCE.GRAMMAR) state.metrics.translateFromGrammar += 1;
   else state.metrics.translateFromPhrase += 1;
   const usedSource =
     phrase.source === SOURCE.PAYDADOSH
       ? SOURCE.PAYDADOSH
-      : phrase.source === SOURCE.GRAMMAR
-        ? SOURCE.GRAMMAR
-        : SOURCE.HABAR;
+      : phrase.source === SOURCE.CORPUS
+        ? SOURCE.CORPUS
+        : phrase.source === SOURCE.GRAMMAR
+          ? SOURCE.GRAMMAR
+          : SOURCE.HABAR;
   return {
     ok: true,
     translation: phrase.ing,
@@ -1511,7 +1589,11 @@ function getMetrics() {
       paydadoshEverydayRaw: inv.paydadoshEverydayRaw ?? 0,
       paydadoshLessonRaw: inv.paydadoshLessonRaw ?? 0,
       corpusPhrasesRaw: inv.corpusPhrasesRaw ?? 0,
+      parallelCorpusPhrasesRaw: inv.parallelCorpusPhrasesRaw ?? 0,
       corpusPhrasesInIndex: countPhrasesBy((p) => p.source === SOURCE.CORPUS),
+      parallelCorpusInIndex: countPhrasesBy(
+        (p) => p.source === SOURCE.CORPUS && (p.category || "").startsWith("ghalghay_") && !/lesson/.test(p.category || "")
+      ),
       lessonPhrasesLoaded: countPhrasesBy((p) => p.source === SOURCE.CORPUS),
       grammarPhraseKeys: countPhrasesBy((p) => p.source === SOURCE.GRAMMAR),
       corpusLoaded: state.corpus.length,

@@ -117,7 +117,8 @@ async function loadOverview() {
       ["Шаблоны грамматики", inv.patterns],
       ["Лексемы", inv.lexemes],
       ["Корпус (файлов)", c.corpusLoaded],
-      ["Corpus фраз (сырые → индекс)", `${c.corpusPhrasesRaw ?? 0} → ${c.corpusPhrasesInIndex ?? 0}`],
+      ["Паралл. корпус (parall)", `${c.parallelCorpusPhrasesRaw ?? 0} → ${c.parallelCorpusInIndex ?? 0} в индексе`],
+      ["Corpus фраз (уроки → индекс)", `${c.corpusPhrasesRaw ?? 0} → ${c.corpusPhrasesInIndex ?? 0}`],
       ["Чёрный список", inv.blacklist]
     ];
     grid.innerHTML = cards.map(([l, v]) => `
@@ -131,12 +132,13 @@ async function loadOverview() {
       <strong>Источники перевода (фактический порядок /translate)</strong><br>
       1. <b>habar</b> — фразы с GitHub (${c.habarPhrasesLoaded ?? 0}, ключей в индексе: ${c.phraseIndexKeys ?? 0})<br>
       2. <b>paydadosh</b> — разговорник PaydaDosh (${c.paydaDoshPhrasesLoaded ?? 0}; everyday ${c.paydaDoshEverydayLoaded ?? 0}, уроки ${c.paydaDoshLessonLoaded ?? 0})<br>
+      2b. <b>corpus</b> — параллельные тексты ghalghay (${c.parallelCorpusInIndex ?? 0} фраз, Киплинг, Пушкин…)<br>
       3. <b>grammar</b> — шаблоны (${inv.patterns ?? 0}) + лексемы (${inv.lexemes ?? 0})<br>
       4. <b>dosh</b> — словарь + сборка из слов (${c.wordsLoaded ?? 0} слов)<br>
       5. <b>LLM</b> — OpenRouter / Gemini fallback<br><br>
       <small>
         Формат «N → M в индексе»: N — фраз в файлах, M — осталось после слияния (PaydaDosh перекрывает дубликаты).<br>
-        «Corpus фраз» — короткие реплики из JSON-уроков; обычно уже есть в PaydaDosh/Habar.<br>
+        «Corpus фраз» — уроки ghalghay + параллельный корпус (Киплинг, Пушкин и др., ${c.parallelCorpusInIndex ?? 0} в индексе).<br>
         После Push Habar: <b>POST /refresh</b> с <code>{"pullCategories":true}</code> или кнопка «Данные API» на сайте.
       </small>
     `;

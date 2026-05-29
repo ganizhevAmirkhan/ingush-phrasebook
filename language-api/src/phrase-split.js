@@ -1,10 +1,10 @@
 const MAX_RU_LEN = 100;
 const MAX_RU_WORDS = 12;
 
-function isUsableShortRu(text) {
+function isUsableRu(text, { maxRuLen = MAX_RU_LEN, maxRuWords = MAX_RU_WORDS } = {}) {
   const t = (text || "").trim();
-  if (!t || t.length > MAX_RU_LEN) return false;
-  if (t.split(/\s+/).length > MAX_RU_WORDS) return false;
+  if (!t || t.length > maxRuLen) return false;
+  if (t.split(/\s+/).length > maxRuWords) return false;
   if (!/[а-яё]/i.test(t)) return false;
   if (/^[-–—]+$/.test(t)) return false;
   if (/^урок\s*\d/i.test(t)) return false;
@@ -29,7 +29,11 @@ function splitOnPunctuation(text) {
     .filter(Boolean);
 }
 
-function splitRuIngPairs(ru, ing) {
+function isUsableShortRu(text) {
+  return isUsableRu(text);
+}
+
+function splitRuIngPairs(ru, ing, options = {}) {
   const ruText = (ru || "").toString().trim();
   const ingText = (ing || "").toString().trim();
   if (!ruText || !ingText) return [];
@@ -40,10 +44,10 @@ function splitRuIngPairs(ru, ing) {
   if (ruParts.length > 1 && ruParts.length === ingParts.length) {
     return ruParts
       .map((part, index) => ({ ru: part, ing: ingParts[index] }))
-      .filter((pair) => isUsableShortRu(pair.ru) && pair.ing);
+      .filter((pair) => isUsableRu(pair.ru, options) && pair.ing);
   }
 
-  if (isUsableShortRu(ruText)) {
+  if (isUsableRu(ruText, options)) {
     return [{ ru: cleanRuFragment(ruText), ing: ingText }];
   }
 
@@ -53,6 +57,7 @@ function splitRuIngPairs(ru, ing) {
 module.exports = {
   MAX_RU_LEN,
   MAX_RU_WORDS,
+  isUsableRu,
   isUsableShortRu,
   splitRuIngPairs
 };
