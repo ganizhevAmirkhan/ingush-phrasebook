@@ -1407,8 +1407,21 @@
       "pron": "burcholgakh khoakhkale voal so",
       "id": "paydadosh_pd_1218",
       "audio": "paydadosh_pd_1218.mp3"
+    },
+    {
+      "id": "f_1780043837990_mnlr",
+      "ru": "сказать",
+      "ing": "ала",
+      "pron": "ala",
+      "audio": "f_1780043837990_mnlr.mp3"
     }
   ],
+<<<<<<< HEAD
   "version": 3,
   "itemCount": 201
 }
+=======
+  "version": 2,
+  "itemCount": 200
+}
+>>>>>>> 9c8c61e901a05a5956dc932c73eb3effc251a873
