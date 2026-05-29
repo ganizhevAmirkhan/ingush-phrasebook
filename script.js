@@ -100,6 +100,30 @@ function toast(msg, ok=true){
   window.__toastTimer = setTimeout(()=>t.classList.add("hidden"), 1700);
 }
 
+function syncMobileLayoutMetrics(){
+  const topbar = document.querySelector(".topbar");
+  const searchWrap = document.querySelector(".search-wrap");
+  const root = document.documentElement;
+  if(topbar){
+    root.style.setProperty("--topbar-h", `${Math.ceil(topbar.getBoundingClientRect().height)}px`);
+  }
+  if(searchWrap){
+    const r = searchWrap.getBoundingClientRect();
+    root.style.setProperty("--search-dropdown-top", `${Math.ceil(r.bottom + 4)}px`);
+  }
+}
+
+function setupMobileLayoutMetrics(){
+  syncMobileLayoutMetrics();
+  window.addEventListener("resize", syncMobileLayoutMetrics, { passive: true });
+  window.addEventListener("orientationchange", syncMobileLayoutMetrics, { passive: true });
+  const sInput = document.getElementById("global-search");
+  if(sInput){
+    sInput.addEventListener("focus", syncMobileLayoutMetrics, { passive: true });
+    sInput.addEventListener("blur", () => setTimeout(syncMobileLayoutMetrics, 120), { passive: true });
+  }
+}
+
 /* ================= INIT ================= */
 window.onload = async () => {
   loadCategories();
@@ -112,6 +136,7 @@ window.onload = async () => {
   }
 
   setupSearchSuggest();
+  setupMobileLayoutMetrics();
   initAiUI();
 
   // Если у тебя где-то был кэш старого режима — просто перерисуем
@@ -604,6 +629,7 @@ function setupSearchSuggest(){
       });
 
     sBox.classList.remove("hidden");
+    syncMobileLayoutMetrics();
   };
 
   document.getElementById("search-btn").onclick = doSearch;

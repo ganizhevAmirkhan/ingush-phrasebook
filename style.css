@@ -2,6 +2,7 @@ body {
   margin:0;
   font-family:Arial, sans-serif;
   background:#f5f5f5;
+  overflow-x:hidden;
 }
 
 .topbar {
@@ -12,47 +13,60 @@ body {
   align-items:center;
   gap:12px;
   flex-wrap:wrap;
+  box-sizing:border-box;
+  width:100%;
+  max-width:100%;
 }
 
 .title {
   font-size:20px;
   font-weight:700;
+  min-width:0;
 }
 
 .search-wrap {
   position:relative;
-  flex:1;
-  min-width:260px;
+  flex:1 1 200px;
+  min-width:0;
   max-width:520px;
   display:flex;
   gap:6px;
+  box-sizing:border-box;
 }
 
 .search {
   flex:1;
+  min-width:0;
   padding:8px 10px;
   border-radius:6px;
   border:0;
+  font-size:16px;
+  box-sizing:border-box;
 }
 
 .layout {
   display:flex;
-  height:calc(100vh - 56px);
+  height:calc(100dvh - var(--topbar-h, 56px));
+  min-height:0;
+  max-width:100%;
+  overflow:hidden;
 }
 
 .sidebar {
-  flex:0 0 auto;
-  width:max-content;
-  max-width:min(220px, 38vw);
+  flex:0 0 198px;
+  width:198px;
+  min-width:198px;
+  max-width:198px;
   background:#eee;
   padding:10px;
   overflow:auto;
+  box-sizing:border-box;
 }
 
 #category-list {
   display:grid;
   gap:6px;
-  width:max-content;
+  width:100%;
 }
 
 .content {
@@ -69,6 +83,8 @@ body {
   border-radius:6px;
   white-space:nowrap;
   box-sizing:border-box;
+  width:100%;
+  text-align:left;
 }
 
 .category:hover { background:#f0f0f0; }
@@ -145,7 +161,9 @@ body {
   border:1px solid #ccc;
   max-height:260px;
   overflow-y:auto;
+  overflow-x:hidden;
   z-index:9999;
+  box-sizing:border-box;
 }
 
 .search-item {
@@ -387,4 +405,70 @@ body {
 .flash{
   outline:3px solid #1f6feb;
   transition:outline .2s;
+}
+
+/* iPhone / узкий экран: поиск не раздувает страницу */
+@media (max-width:720px){
+  .topbar{
+    flex-direction:column;
+    align-items:stretch;
+    gap:8px;
+    padding:10px;
+  }
+
+  .title{
+    font-size:17px;
+    line-height:1.2;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+
+  .search-wrap{
+    flex:0 0 auto;
+    width:100%;
+    max-width:none;
+  }
+
+  .admin-panel,
+  .ai-panel{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:8px;
+    min-width:0;
+  }
+
+  .admin-panel input{
+    flex:1;
+    min-width:0;
+    max-width:160px;
+    font-size:16px;
+    box-sizing:border-box;
+  }
+
+  .layout{
+    height:calc(100dvh - var(--topbar-h, 132px));
+  }
+
+  .sidebar{
+    flex:0 0 158px;
+    width:158px;
+    min-width:158px;
+    max-width:158px;
+  }
+
+  .search-results{
+    position:fixed;
+    left:10px;
+    right:10px;
+    top:var(--search-dropdown-top, 96px);
+    max-height:min(45dvh, 320px);
+    -webkit-overflow-scrolling:touch;
+  }
+
+  .search-item{
+    white-space:normal;
+    word-break:break-word;
+  }
 }
