@@ -260,3 +260,5 @@
 {"id":"mod_1780041027116","createdAt":"2026-05-29T07:50:27.116Z","ru":"дикие животные","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
 {"id":"mod_1780041027144","createdAt":"2026-05-29T07:50:27.144Z","ru":"животные дикие","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
 {"id":"mod_1780041162267","createdAt":"2026-05-29T07:52:42.267Z","ru":"чпать хочу","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1780044066868","createdAt":"2026-05-29T08:41:06.868Z","ru":"я хотел сказать","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1780044066981","createdAt":"2026-05-29T08:41:06.981Z","ru":"мне хотелось сказать","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}

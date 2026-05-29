@@ -457,14 +457,21 @@
       "audio": "f_1766022575804_5gd9.mp3"
     },
     {
-      "id": "f_1766022575804_8k39",
-      "ru": "ц",
-      "ing": "ы",
-      "pron": "w",
-      "audio": "f_1766022575804_8k39.mp3"
+      "ru": "Я хотел сказать",
+      "ing": "Со ала валлар",
+      "pron": "so ala vallar",
+      "id": "habar_past_want_say",
+      "audio": "habar_past_want_say.mp3"
     },
     {
-      "ru": "А ты откуда?",
+      "ru": "Мне хотелось сказать",
+      "ing": "Сона ала валлар",
+      "pron": "sona ala vallar",
+      "id": "habar_past_want_say_me",
+      "audio": "habar_past_want_say_me.mp3"
+    },
+    {
+      "ru": "Можно сказать по-другому?",
       "ing": "Хьо мичахьара ва / я?",
       "pron": "khьo michakhьara va / ya?",
       "id": "paydadosh_pd_1208",
@@ -1402,6 +1409,6 @@
       "audio": "paydadosh_pd_1218.mp3"
     }
   ],
-  "version": 2,
-  "itemCount": 200
+  "version": 3,
+  "itemCount": 201
 }

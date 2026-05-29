@@ -178,8 +178,8 @@ const DISABLE_HABAR_PHRASE_SOURCE =
   String(process.env.DISABLE_HABAR_IN_TRANSLATE ?? "false").toLowerCase() === "true";
 
 const PHRASE_SOURCE_PRIORITY = {
+  [SOURCE.HABAR]: 5,
   [SOURCE.PAYDADOSH]: 4,
-  [SOURCE.HABAR]: 3,
   [SOURCE.CORPUS]: 2,
   [SOURCE.GRAMMAR]: 1
 };
@@ -670,7 +670,18 @@ function tryGrammarPatternTranslate(ruText) {
 }
 
 const NEED_INFINITIVE_VERB_DOSH = {
-  "идти": "даваха"
+  "идти": "даваха",
+  "сказать": "ала",
+  "поговорить": "къамаьл ду",
+  "спать": "наб",
+  "пить": "мала",
+  "есть": "кхи"
+};
+
+const PAST_WANT_EXACT = {
+  "я хотел сказать": "Со ала валлар",
+  "я хотела сказать": "Со ала валлар",
+  "мне хотелось сказать": "Сона ала валлар"
 };
 
 function lookupDoshInfinitive(ruVerb) {
@@ -714,6 +725,31 @@ function tryComposeNeedInfinitive(ruText) {
   }
 
   return { ok: true, translation: `Са веза ${verbIng}` };
+}
+
+function tryComposePastWantInfinitive(ruText) {
+  const norm = normalizeText(ruText).replace(/[!?.…]+$/g, "").trim();
+  if (PAST_WANT_EXACT[norm]) {
+    return { ok: true, translation: PAST_WANT_EXACT[norm] };
+  }
+
+  let subject = "Со";
+  let match = norm.match(/^я\s+хотел[а]?\s+(.+)$/);
+  if (!match) {
+    match = norm.match(/^мне\s+хотелось\s+(.+)$/);
+    if (match) subject = "Сона";
+  }
+  if (!match) {
+    return { ok: false, translation: "" };
+  }
+
+  const verbRu = match[1].trim();
+  const verbIng = lookupDoshInfinitive(verbRu);
+  if (!verbIng || verbIng.length > 35) {
+    return { ok: false, translation: "" };
+  }
+
+  return { ok: true, translation: `${subject} ${verbIng} валлар` };
 }
 
 const CANNOT_INFINITIVE_DOSH = {
@@ -761,6 +797,11 @@ function composeFromDictionaryTokens(ruText) {
   const atHome = tryComposeAtHomePhrase(ruText);
   if (atHome.ok) {
     return atHome;
+  }
+
+  const pastWant = tryComposePastWantInfinitive(ruText);
+  if (pastWant.ok) {
+    return pastWant;
   }
 
   const needInf = tryComposeNeedInfinitive(ruText);
@@ -1188,6 +1229,18 @@ async function translate(ruText, options = {}) {
   }
   if (exactPhrase) {
     return phraseTranslateResult(exactPhrase);
+  }
+
+  const pastWantEarly = tryComposePastWantInfinitive(ru);
+  if (pastWantEarly.ok) {
+    state.metrics.translateFromGrammar += 1;
+    return {
+      ok: true,
+      translation: pastWantEarly.translation,
+      usedSource: SOURCE.GRAMMAR,
+      confidence: 0.9,
+      fallbackUsed: false
+    };
   }
 
   // Короткие фразы из слов Dosh — до грамматики и LLM (быстрее, без таймаута)
