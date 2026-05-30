@@ -5,13 +5,17 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "digitize:textbook": "node scripts/digitize-textbook-pdf.js",
+    "import:gramatika5": "node scripts/import-gramatika-5.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "pdf-parse": "1.1.1"
+    "pdf-lib": "^1.17.1",
+    "pdf-parse": "1.1.1",
+    "pdf-to-img": "^6.1.0"
   }
 }
