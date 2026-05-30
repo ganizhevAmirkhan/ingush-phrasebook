@@ -26,6 +26,10 @@ const GRAMMAR_FILES = {
 
 const NOUN_CLASS_KNOWLEDGE_FILE = path.join(GRAMMAR_DIR, "noun-class-knowledge.json");
 const GRAMMAR_OVERVIEW_FILE = path.join(GRAMMAR_DIR, "grammar-overview-knowledge.json");
+const NICHOLS_GRAMMAR_FILE = path.join(GRAMMAR_DIR, "nichols-ingush-grammar-sections.json");
+const NICHOLS_PRIORITY_FILE = path.join(GRAMMAR_DIR, "nichols-priority-knowledge.json");
+const NICHOLS_UNIQUE_FILE = path.join(GRAMMAR_DIR, "nichols-unique-knowledge.json");
+const NICHOLS_NUMERAL_FILE = path.join(GRAMMAR_DIR, "nichols-numeral-declension.json");
 
 async function readJson(filePath) {
   const raw = await fs.readFile(filePath, "utf8");
@@ -102,6 +106,9 @@ async function getInventory() {
   }
   let nounClassEntries = 0;
   let grammarOverviewSections = 0;
+  let nicholsGrammarSections = 0;
+  let nicholsPriorityChapters = 0;
+  let nicholsUniqueStats = null;
   try {
     const nc = await readJson(NOUN_CLASS_KNOWLEDGE_FILE);
     nounClassEntries = Array.isArray(nc?.entries) ? nc.entries.length : 0;
@@ -114,6 +121,31 @@ async function getInventory() {
   } catch {
     // empty
   }
+  try {
+    const ng = await readJson(NICHOLS_GRAMMAR_FILE);
+    nicholsGrammarSections = Array.isArray(ng?.sections) ? ng.sections.length : 0;
+  } catch {
+    // empty
+  }
+  try {
+    const np = await readJson(NICHOLS_PRIORITY_FILE);
+    nicholsPriorityChapters = Array.isArray(np?.chapters) ? np.chapters.length : 0;
+  } catch {
+    // empty
+  }
+  try {
+    const nu = await readJson(NICHOLS_UNIQUE_FILE);
+    nicholsUniqueStats = nu?.stats || null;
+  } catch {
+    // empty
+  }
+  let nicholsNumeralParadigms = 0;
+  try {
+    const num = await readJson(NICHOLS_NUMERAL_FILE);
+    nicholsNumeralParadigms = Array.isArray(num?.paradigms) ? num.paradigms.length : 0;
+  } catch {
+    // empty
+  }
   return {
     adminEnabled: getAdminSecret().length > 0,
     patterns: patterns.length,
@@ -121,6 +153,10 @@ async function getInventory() {
     lexemes: lexemes.length,
     nounClassEntries,
     grammarOverviewSections,
+    nicholsGrammarSections,
+    nicholsPriorityChapters,
+    nicholsUniqueStats,
+    nicholsNumeralParadigms,
     corpusStories: storyFiles.length,
     corpusNovellas: novellaFiles.length,
     blacklist: blacklist.length
@@ -416,6 +452,153 @@ async function getGrammarOverviewSection(id) {
   }
 }
 
+async function getNicholsGrammarMeta() {
+  try {
+    const json = await readJson(NICHOLS_GRAMMAR_FILE);
+    const sections = Array.isArray(json?.sections) ? json.sections : [];
+    const appendices = Array.isArray(json?.appendices) ? json.appendices : [];
+    return {
+      schema: json?.schema || null,
+      source: json?.source || null,
+      titleRu: json?.titleRu || null,
+      titleEn: json?.titleEn || null,
+      author: json?.author || null,
+      pages: json?.pages || null,
+      noteRu: json?.noteRu || null,
+      relevanceRu: json?.relevanceRu || null,
+      sections: sections.map((s) => ({
+        id: s.id,
+        number: s.number,
+        titleRu: s.titleRu,
+        titleEn: s.titleEn,
+        apiPriority: !!s.apiPriority
+      })),
+      appendices: appendices.map((a) => ({
+        id: a.id,
+        titleRu: a.titleRu,
+        titleEn: a.titleEn
+      })),
+      sectionCount: sections.length,
+      appendixCount: appendices.length
+    };
+  } catch {
+    return {
+      schema: null,
+      source: null,
+      titleRu: null,
+      titleEn: null,
+      author: null,
+      pages: null,
+      noteRu: null,
+      relevanceRu: null,
+      sections: [],
+      appendices: [],
+      sectionCount: 0,
+      appendixCount: 0
+    };
+  }
+}
+
+async function getNicholsGrammarSection(id) {
+  try {
+    const json = await readJson(NICHOLS_GRAMMAR_FILE);
+    const section = (json?.sections || []).find((s) => s.id === id);
+    if (section) return section;
+    const appendix = (json?.appendices || []).find((a) => a.id === id);
+    return appendix || null;
+  } catch {
+    return null;
+  }
+}
+
+async function getNicholsPriorityMeta() {
+  try {
+    const json = await readJson(NICHOLS_PRIORITY_FILE);
+    const chapters = Array.isArray(json?.chapters) ? json.chapters : [];
+    return {
+      schema: json?.schema || null,
+      source: json?.source || null,
+      titleRu: json?.titleRu || null,
+      noteRu: json?.noteRu || null,
+      chapters: chapters.map((c) => ({
+        id: c.id,
+        number: c.number,
+        titleRu: c.titleRu,
+        sourceRef: c.sourceRef || null
+      })),
+      chapterCount: chapters.length
+    };
+  } catch {
+    return { schema: null, source: null, titleRu: null, noteRu: null, chapters: [], chapterCount: 0 };
+  }
+}
+
+async function getNicholsPriorityChapter(id) {
+  try {
+    const json = await readJson(NICHOLS_PRIORITY_FILE);
+    return (json?.chapters || []).find((c) => c.id === id) || null;
+  } catch {
+    return null;
+  }
+}
+
+async function getNicholsUniqueMeta() {
+  try {
+    const json = await readJson(NICHOLS_UNIQUE_FILE);
+    return {
+      schema: json?.schema || null,
+      noteRu: json?.noteRu || null,
+      stats: json?.stats || null,
+      rules: (json?.rules || []).map((r) => ({ id: r.id, titleRu: r.titleRu })),
+      otherChapterSummaries: (json?.otherChapterSummaries || []).map((c) => ({
+        number: c.n,
+        titleRu: c.titleRu
+      }))
+    };
+  } catch {
+    return { schema: null, noteRu: null, stats: null, rules: [], otherChapterSummaries: [] };
+  }
+}
+
+async function getNicholsUniqueSection(kind, id) {
+  try {
+    const json = await readJson(NICHOLS_UNIQUE_FILE);
+    if (kind === "rule") return (json?.rules || []).find((r) => r.id === id) || null;
+    if (kind === "chapter") return (json?.otherChapterSummaries || []).find((c) => String(c.n) === id) || null;
+    if (kind === "noun") return (json?.nounClassEntries || []).find((e) => e.id === id) || null;
+    if (kind === "paradigm") return (json?.paradigms || []).find((p) => p.id === id) || null;
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+async function getNicholsNumeralMeta() {
+  try {
+    const json = await readJson(NICHOLS_NUMERAL_FILE);
+    return {
+      schema: json?.schema || null,
+      titleRu: json?.titleRu || null,
+      noteRu: json?.noteRu || null,
+      crossRef: json?.crossRef || null,
+      rulesRu: json?.rulesRu || [],
+      paradigms: (json?.paradigms || []).map((p) => ({ id: p.id, n: p.n, lemmaRu: p.lemmaRu })),
+      paradigmCount: (json?.paradigms || []).length
+    };
+  } catch {
+    return { schema: null, titleRu: null, noteRu: null, crossRef: null, rulesRu: [], paradigms: [], paradigmCount: 0 };
+  }
+}
+
+async function getNicholsNumeralParadigm(id) {
+  try {
+    const json = await readJson(NICHOLS_NUMERAL_FILE);
+    return (json?.paradigms || []).find((p) => p.id === id) || null;
+  } catch {
+    return null;
+  }
+}
+
 module.exports = {
   getAdminSecret,
   isAdminAuthorized,
@@ -441,5 +624,13 @@ module.exports = {
   listNounClasses,
   getNounClassKnowledgeMeta,
   getGrammarOverviewMeta,
-  getGrammarOverviewSection
+  getGrammarOverviewSection,
+  getNicholsGrammarMeta,
+  getNicholsGrammarSection,
+  getNicholsPriorityMeta,
+  getNicholsPriorityChapter,
+  getNicholsUniqueMeta,
+  getNicholsUniqueSection,
+  getNicholsNumeralMeta,
+  getNicholsNumeralParadigm
 };

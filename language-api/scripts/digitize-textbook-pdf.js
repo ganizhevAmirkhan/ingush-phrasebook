@@ -92,11 +92,17 @@ async function analyzePdf(inputPath) {
   const data = await pdfParse(buf);
   const text = (data.text || "").replace(/\s+/g, " ").trim();
   const cyr = (text.match(/[А-Яа-яЁёӀ]/g) || []).length;
+  const latin = (text.match(/[A-Za-z]/g) || []).length;
+  const hasTextLayer = text.length > 5000 || (latin > 3000 && cyr < 500);
+  const langHint = cyr >= latin ? "rus" : latin > 500 ? "eng" : "rus";
   return {
     pages: data.numpages,
     textLen: text.length,
     cyrChars: cyr,
-    isScan: cyr < 500 && data.numpages > 5,
+    latinChars: latin,
+    hasTextLayer,
+    isScan: !hasTextLayer && cyr < 500 && data.numpages > 5,
+    langHint,
     sample: text.slice(0, 240)
   };
 }
@@ -182,13 +188,14 @@ async function main() {
 
   process.stdout.write(
     `Input: ${inputPath}\n` +
-      `Pages: ${totalPages}, scan=${analysis.isScan}, existing text chars=${analysis.textLen}\n` +
+      `Pages: ${totalPages}, scan=${analysis.isScan}, textLayer=${analysis.hasTextLayer}, ` +
+      `cyr=${analysis.cyrChars}, latin=${analysis.latinChars}\n` +
       `OCR range: ${from}–${to}, scale=${args.scale}, lang=${args.lang}\n` +
       `Output: ${outDir}\n\n`
   );
 
-  if (!analysis.isScan && analysis.cyrChars > 3000 && !args.rebuildOnly) {
-    process.stdout.write("PDF already has text layer — copying as digital.\n");
+  if (analysis.hasTextLayer && !args.rebuildOnly) {
+    process.stdout.write("PDF already has text layer — extracting without OCR.\n");
     await fsp.copyFile(inputPath, digitalPdfPath);
     const data = await pdfParse(await fsp.readFile(inputPath));
     await fsp.writeFile(txtPath, data.text || "", "utf8");

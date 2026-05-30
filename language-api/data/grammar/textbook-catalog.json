@@ -108,6 +108,21 @@
       "status": "not_downloaded",
       "nounClassValue": "medium",
       "note": "Практикум, много упражнений на классы."
+    },
+    {
+      "id": "nichols-ingush-grammar-2011",
+      "grade": null,
+      "type": "academic",
+      "title": "Ingush Grammar (Johanna Nichols, 2011)",
+      "titleRu": "Грамматика ингушского языка (Дж. Николс, 2011)",
+      "pdf": "https://escholarship.org/uc/item/3nn7z6w5",
+      "sizeMb": 48,
+      "localDir": "nichols-ingush-grammar-2011",
+      "status": "imported",
+      "nounClassValue": "very_high",
+      "language": "en",
+      "pages": 829,
+      "note": "Академическая грамматика UC Press. Гл. 7, 19 — классы V/J/B/D; гл. 18, 21 — эргатив; 35 глав + 5 приложений. Текст извлечён, оглавление на русском в API."
     }
   ]
 }

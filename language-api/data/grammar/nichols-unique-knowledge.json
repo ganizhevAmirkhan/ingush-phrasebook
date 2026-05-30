@@ -1,0 +1,1310 @@
+{
+  "schema": "nichols-unique-knowledge/v1",
+  "source": "nichols-ingush-grammar-2011",
+  "sourceUrl": "https://escholarship.org/uc/item/3nn7z6w5",
+  "noteRu": "Только материал Nichols, отсутствующий в noun-class-knowledge, declensions, grammar-overview и nichols-priority. Без повторов.",
+  "generatedAt": "2026-05-30T20:29:44.614Z",
+  "stats": {
+    "nounClassEntries": 53,
+    "nounClassNewToApi": 52,
+    "skippedNounsDuplicate": 1,
+    "genderVerbs": 13,
+    "genderAdjectives": 8,
+    "genderlessNouns": 5,
+    "paradigms": 0,
+    "rules": 8,
+    "otherChapterSummaries": 24
+  },
+  "nounClassEntries": [
+    {
+      "id": "nichols_nc_jett",
+      "ing": "jett",
+      "ru": "корова",
+      "markerSg": "ba",
+      "markerPl": "da",
+      "nicholsGender": "B",
+      "noteRu": "split OIG: nom jett, gen watta",
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_zhwalii",
+      "ing": "zhwalii",
+      "ru": "собака",
+      "markerSg": "da",
+      "markerPl": "da",
+      "nicholsGender": "D",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_kuorta",
+      "ing": "kuorta",
+      "ru": "голова",
+      "markerSg": "ba",
+      "markerPl": "da",
+      "nicholsGender": "B",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_qoalam",
+      "ing": "q'oalam",
+      "ru": "карандаш, ручка",
+      "markerSg": "ya",
+      "markerPl": "ya",
+      "nicholsGender": "J",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_ust",
+      "ing": "ust",
+      "ru": "бык, вол",
+      "markerSg": "ba",
+      "markerPl": "da",
+      "nicholsGender": "B",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_wagj",
+      "ing": "wagj",
+      "ru": "ложка",
+      "markerSg": "ya",
+      "markerPl": "ya",
+      "nicholsGender": "J",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_maza",
+      "ing": "maza",
+      "ru": "вошь",
+      "markerSg": "ya",
+      "markerPl": "ya",
+      "nicholsGender": "J",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_wazh",
+      "ing": "wazh",
+      "ru": "яблоко",
+      "markerSg": "ba",
+      "markerPl": "ba",
+      "nicholsGender": "B",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false,
+      "alreadyInApi": true
+    },
+    {
+      "id": "nichols_nc_beg",
+      "ing": "beg",
+      "ru": "шутка",
+      "markerSg": "ba",
+      "markerPl": "ba",
+      "nicholsGender": "B",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_toppar",
+      "ing": "toppar",
+      "ru": "глина, штукатурка",
+      "markerSg": "ba",
+      "markerPl": "ba",
+      "nicholsGender": "B",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_nitt",
+      "ing": "nitt",
+      "ru": "крапива",
+      "markerSg": "ba",
+      "markerPl": "ba",
+      "nicholsGender": "B",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_oaghuu",
+      "ing": "oaghuu",
+      "ru": "сторона",
+      "markerSg": "ba",
+      "markerPl": "ba",
+      "nicholsGender": "B",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_tiesham",
+      "ing": "tiesham",
+      "ru": "вера, доверие",
+      "markerSg": "ba",
+      "markerPl": "ba",
+      "nicholsGender": "B",
+      "noteRu": "deverbal -am",
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_kog",
+      "ing": "kog",
+      "ru": "нога, ступня",
+      "markerSg": "ba",
+      "markerPl": [
+        "ba",
+        "da"
+      ],
+      "nicholsGender": "B",
+      "noteRu": "вариативность у носителей",
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_cu",
+      "ing": "cu",
+      "ru": "жареная ячменная мука",
+      "markerSg": "ba",
+      "markerPl": [
+        "ba",
+        "da"
+      ],
+      "nicholsGender": "B",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_mashen",
+      "ing": "mashen",
+      "ru": "машина, автомобиль",
+      "markerSg": "ya",
+      "markerPl": "ya",
+      "nicholsGender": "J",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_limon",
+      "ing": "limon",
+      "ru": "лимон",
+      "markerSg": "ya",
+      "markerPl": "ya",
+      "nicholsGender": "J",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_nax",
+      "ing": "nax",
+      "ru": "люди",
+      "markerSg": "ba",
+      "markerPl": "ba",
+      "nicholsGender": "B",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_adam",
+      "ing": "adam",
+      "ru": "человек",
+      "markerSg": "da",
+      "markerPl": "da",
+      "nicholsGender": "D",
+      "noteRu": "исключение среди одушевлённых",
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_ber",
+      "ing": "ber",
+      "ru": "ребёнок",
+      "markerSg": "da",
+      "markerPl": "da",
+      "nicholsGender": "D",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_nuskal",
+      "ing": "nuskal",
+      "ru": "невеста",
+      "markerSg": "da",
+      "markerPl": "da",
+      "nicholsGender": "D",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_jiwig",
+      "ing": "jiwig",
+      "ru": "девочка",
+      "markerSg": "ya",
+      "markerPl": "ya",
+      "nicholsGender": "J",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_daa",
+      "ing": "daa",
+      "ru": "отец",
+      "markerSg": "va",
+      "markerPl": "ba",
+      "nicholsGender": "V",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_vosha",
+      "ing": "vosha",
+      "ru": "брат",
+      "markerSg": "va",
+      "markerPl": "ba",
+      "nicholsGender": "V",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_naana",
+      "ing": "naana",
+      "ru": "мать",
+      "markerSg": "ya",
+      "markerPl": "ba",
+      "nicholsGender": "J",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_jisha",
+      "ing": "jisha",
+      "ru": "сестра",
+      "markerSg": "ya",
+      "markerPl": "ba",
+      "nicholsGender": "J",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_sag",
+      "ing": "sag",
+      "ru": "человек, лицо",
+      "markerSg": "va",
+      "markerPl": "va",
+      "nicholsGender": "V",
+      "noteRu": "муж. референт",
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_dulx",
+      "ing": "dulx",
+      "ru": "мясо",
+      "markerSg": "da",
+      "markerPl": "da",
+      "nicholsGender": "D",
+      "noteRu": "пример O+gender на глаголе",
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_meaq",
+      "ing": "meaq",
+      "ru": "хлеб",
+      "markerSg": "ya",
+      "markerPl": "ya",
+      "nicholsGender": "J",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": false
+    },
+    {
+      "id": "nichols_nc_moza",
+      "ing": "moza",
+      "ru": "муха",
+      "markerSg": "ba",
+      "markerPl": "ba",
+      "nicholsGender": "B",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    },
+    {
+      "id": "nichols_nc_mux",
+      "ing": "mux",
+      "ru": "ветер",
+      "markerSg": "ba",
+      "markerPl": "ba",
+      "nicholsGender": "B",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    },
+    {
+      "id": "nichols_nc_boardz",
+      "ing": "boardz",
+      "ru": "курган, насыпь",
+      "markerSg": "ba",
+      "markerPl": "ba",
+      "nicholsGender": "B",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    },
+    {
+      "id": "nichols_nc_bei",
+      "ing": "bei",
+      "ru": "газон, трава",
+      "markerSg": "ba",
+      "markerPl": "ba",
+      "nicholsGender": "B",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    },
+    {
+      "id": "nichols_nc_bolx",
+      "ing": "bolx",
+      "ru": "работа",
+      "markerSg": "ba",
+      "markerPl": "ba",
+      "nicholsGender": "B",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    },
+    {
+      "id": "nichols_nc_pen",
+      "ing": "pen",
+      "ru": "стена",
+      "markerSg": "ba",
+      "markerPl": "ba",
+      "nicholsGender": "B",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    },
+    {
+      "id": "nichols_nc_pxa",
+      "ing": "pxa",
+      "ru": "стрела",
+      "markerSg": "ba",
+      "markerPl": "ba",
+      "nicholsGender": "B",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    },
+    {
+      "id": "nichols_nc_dogha",
+      "ing": "dogha",
+      "ru": "дождь",
+      "markerSg": "da",
+      "markerPl": "da",
+      "nicholsGender": "D",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    },
+    {
+      "id": "nichols_nc_duq",
+      "ing": "duq'",
+      "ru": "ярмо, горный гребень",
+      "markerSg": "da",
+      "markerPl": "da",
+      "nicholsGender": "D",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    },
+    {
+      "id": "nichols_nc_dig",
+      "ing": "dig",
+      "ru": "топор",
+      "markerSg": "da",
+      "markerPl": "da",
+      "nicholsGender": "D",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    },
+    {
+      "id": "nichols_nc_dog",
+      "ing": "dog",
+      "ru": "сердце",
+      "markerSg": "da",
+      "markerPl": "da",
+      "nicholsGender": "D",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    },
+    {
+      "id": "nichols_nc_nihw",
+      "ing": "nihw",
+      "ru": "кожа, шкура",
+      "markerSg": "da",
+      "markerPl": "da",
+      "nicholsGender": "D",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    },
+    {
+      "id": "nichols_nc_nadzh",
+      "ing": "nadzh",
+      "ru": "дуб, жёлудь",
+      "markerSg": "da",
+      "markerPl": "da",
+      "nicholsGender": "D",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    },
+    {
+      "id": "nichols_nc_nux",
+      "ing": "nux",
+      "ru": "плуг",
+      "markerSg": "da",
+      "markerPl": "da",
+      "nicholsGender": "D",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    },
+    {
+      "id": "nichols_nc_txyr",
+      "ing": "txyr",
+      "ru": "роса",
+      "markerSg": "da",
+      "markerPl": "da",
+      "nicholsGender": "D",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    },
+    {
+      "id": "nichols_nc_turs",
+      "ing": "turs",
+      "ru": "щит",
+      "markerSg": "da",
+      "markerPl": "da",
+      "nicholsGender": "D",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    },
+    {
+      "id": "nichols_nc_tii",
+      "ing": "t'ii",
+      "ru": "мост",
+      "markerSg": "da",
+      "markerPl": "da",
+      "nicholsGender": "D",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    },
+    {
+      "id": "nichols_nc_tux",
+      "ing": "tux",
+      "ru": "соль",
+      "markerSg": "da",
+      "markerPl": "da",
+      "nicholsGender": "D",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    },
+    {
+      "id": "nichols_nc_juq",
+      "ing": "juq'",
+      "ru": "середина, интервал",
+      "markerSg": "ya",
+      "markerPl": "ya",
+      "nicholsGender": "J",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    },
+    {
+      "id": "nichols_nc_jish",
+      "ing": "jish",
+      "ru": "песня",
+      "markerSg": "ya",
+      "markerPl": "ya",
+      "nicholsGender": "J",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    },
+    {
+      "id": "nichols_nc_jexk",
+      "ing": "jexk",
+      "ru": "расчёска",
+      "markerSg": "ya",
+      "markerPl": "ya",
+      "nicholsGender": "J",
+      "noteRu": "split OIG",
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    },
+    {
+      "id": "nichols_nc_juu",
+      "ing": "juu",
+      "ru": "шило",
+      "markerSg": "ya",
+      "markerPl": "ya",
+      "nicholsGender": "J",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    },
+    {
+      "id": "nichols_nc_jis",
+      "ing": "jis",
+      "ru": "иней",
+      "markerSg": "ya",
+      "markerPl": "ya",
+      "nicholsGender": "J",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    },
+    {
+      "id": "nichols_nc_jurt",
+      "ing": "jurt",
+      "ru": "город, село",
+      "markerSg": "ya",
+      "markerPl": "ya",
+      "nicholsGender": "J",
+      "noteRu": null,
+      "sources": [
+        {
+          "book": "nichols-ingush-grammar-2011",
+          "ref": "ch7",
+          "verified": "academic"
+        }
+      ],
+      "reviewStatus": "nichols_extract",
+      "oig": true
+    }
+  ],
+  "skippedNounsDuplicate": [
+    {
+      "ing": "wazh",
+      "ru": "яблоко",
+      "reason": "already_in_api_before_nichols"
+    }
+  ],
+  "genderAgreeingVerbs": [
+    {
+      "stem": "diett",
+      "ru": "бить, ударять"
+    },
+    {
+      "stem": "doaqq",
+      "ru": "извлекать"
+    },
+    {
+      "stem": "daarzha",
+      "ru": "распространять"
+    },
+    {
+      "stem": "du'",
+      "ru": "есть"
+    },
+    {
+      "stem": "dash",
+      "ru": "таять"
+    },
+    {
+      "stem": "diek",
+      "ru": "звенеть"
+    },
+    {
+      "stem": "diesh",
+      "ru": "читать, учиться"
+    },
+    {
+      "stem": "diest",
+      "ru": "опухать"
+    },
+    {
+      "stem": "diex",
+      "ru": "спрашивать"
+    },
+    {
+      "stem": "douz",
+      "ru": "знать, узнавать"
+    },
+    {
+      "stem": "duox",
+      "ru": "ломаться (непер.)"
+    },
+    {
+      "stem": "daax",
+      "ru": "жить"
+    },
+    {
+      "stem": "aara",
+      "ru": "выходить (+ V/J/B/D по S)"
+    }
+  ],
+  "genderAgreeingAdjectives": [
+    {
+      "stem": "doaqqa",
+      "ru": "большой"
+    },
+    {
+      "stem": "dweaxa",
+      "ru": "длинный"
+    },
+    {
+      "stem": "dei",
+      "ru": "лёгкий, дешёвый"
+    },
+    {
+      "stem": "deassa",
+      "ru": "пустой"
+    },
+    {
+      "stem": "diq'a",
+      "ru": "густой, сухой, твёрдый"
+    },
+    {
+      "stem": "ditq'a",
+      "ru": "тонкий"
+    },
+    {
+      "stem": "dwaaixa",
+      "ru": "горячий"
+    },
+    {
+      "stem": "berriga",
+      "ru": "весь, все (прonominal)"
+    }
+  ],
+  "genderlessNouns": [
+    {
+      "ing": "c'alx",
+      "ru": "очень кислый плод",
+      "noteRu": "согласование с подлежащим, не с предикатом"
+    },
+    {
+      "ing": "gilavodzh",
+      "ru": "кривой (лезвие косы)"
+    },
+    {
+      "ing": "ergazh",
+      "ru": "пёстрая окраска (архаизм)"
+    },
+    {
+      "ing": "sie hama",
+      "ru": "самка (животное)"
+    },
+    {
+      "ing": "mawa hama",
+      "ru": "самец (животное)"
+    }
+  ],
+  "paradigms": [],
+  "rules": [
+    {
+      "id": "six_target_genders",
+      "titleRu": "Шесть целевых (target) классов согласования",
+      "bodyRu": "По Corbett: 4 контроллера в ед.ч. (V,J,B,D), 3 в мн.ч. (J,B,D) → 6 пар sg/pl для согласования. Школьные 6 классов — другая сетка; Nichols V/J/B/D = 4 маркера на формах.",
+      "sourceRef": "nichols:ch7:(5)"
+    },
+    {
+      "id": "b_plural_mostly_d",
+      "titleRu": "Мн.ч. существительных B-класса",
+      "bodyRu": "У ~91% B-существительных с мн.ч. согласование в предикате переходит на D (не B). Исключения: wazh, beg, toppar, nitt и др.",
+      "sourceRef": "nichols:ch7:(4)"
+    },
+    {
+      "id": "predicate_nominal_agreement",
+      "titleRu": "Именное сказуемое: согласование с именной частью",
+      "bodyRu": "Copula согласуется с предикатом, не с подлежащем: «Mariem Muusaa vy» — играет Musa (V). Исключение: подлежащее 1–2 л. мн.ч. → согласование с подлежащим (D).",
+      "sourceRef": "nichols:ch19:19.1.3"
+    },
+    {
+      "id": "simplex_vs_compound_alignment",
+      "titleRu": "Simplex vs compound глаголы",
+      "bodyRu": "Simplex — эргатив по умолчанию, обязателен именительный pivot. Compound (light verb) — часто аккузативные паттерны, нет обязательного именительного.",
+      "sourceRef": "nichols:ch21"
+    },
+    {
+      "id": "no_passive",
+      "titleRu": "Нет пассива и antipassive",
+      "bodyRu": "Нет пассива, антипассива, dative shift. Именительный S/O — pivot; relation-changing derivations только лексические (causative, inceptive).",
+      "sourceRef": "nichols:ch21"
+    },
+    {
+      "id": "np_requires_predicate",
+      "titleRu": "Именная группа почти всегда с предикатом",
+      "bodyRu": "Ингушский не любит «голую» NP: даже там, где в русском/англ. достаточно фразы, часто добавляется copula с классовым согласованием (§5.10).",
+      "sourceRef": "nichols:ch5:5.10"
+    },
+    {
+      "id": "focus_particle_m",
+      "titleRu": "Конtrastive focus =m",
+      "bodyRu": "Частица =m — эмфатическое/контрастное фокусирование, присоединяется к слову в scope (часто в начале клаузы).",
+      "sourceRef": "nichols:ch33:33.1.1"
+    },
+    {
+      "id": "numeral_oblique_declension",
+      "titleRu": "Числительные склоняются как прилагательные",
+      "bodyRu": "Cardinal: nominative/oblique (cwa/cwan); nominalized forms склоняются по падежам (cweanniena и т.д.) — см. прилож. 4.",
+      "sourceRef": "nichols:appendix_4"
+    }
+  ],
+  "otherChapterSummaries": [
+    {
+      "n": 1,
+      "titleRu": "Язык и носители",
+      "summaryRu": "В типологической выборке Nichols ингушский — самый морфологически сложный среди сравниваемых языков (не полисинтетический)."
+    },
+    {
+      "n": 2,
+      "titleRu": "Звуковая система",
+      "summaryRu": "Большие инвентари гласных и согласных; короткие гласные крайне централизованы; частичные слияния и контекстные нейтрализации."
+    },
+    {
+      "n": 3,
+      "titleRu": "Фонологические процессы",
+      "summaryRu": "Продуктивный аблаут во всех регулярных глагольных парадигмах; морфофонемика + фонотактика."
+    },
+    {
+      "n": 4,
+      "titleRu": "Просодия",
+      "summaryRu": "Три категории: ударение (обычно начальное), фразовое акцентирование, тон (high vs unmarked)."
+    },
+    {
+      "n": 5,
+      "titleRu": "Части речи",
+      "summaryRu": "Три класса: существ., глагол, modifier (прил. = наречие образа действия; причастие ≈ converb)."
+    },
+    {
+      "n": 8,
+      "titleRu": "Образование существительных",
+      "summaryRu": "≥2000 простых существ.; номinalization глагола продуктивна (cleft, complement, relativization)."
+    },
+    {
+      "n": 11,
+      "titleRu": "Прилагательные и причастия",
+      "summaryRu": "Сотни базовых прилаг.; причастия/converbs легко лексicalizуются как прилаг."
+    },
+    {
+      "n": 12,
+      "titleRu": "Классы спряжения глаголов",
+      "summaryRu": "Система Handel 2003 / Nichols 2004; present stem — лучшая цитатная форма."
+    },
+    {
+      "n": 13,
+      "titleRu": "Категории глагола",
+      "summaryRu": "Полная система времён, наклонений, evidentials, converbs; прилож. 5 — парадигма «drink»."
+    },
+    {
+      "n": 14,
+      "titleRu": "Число глагола",
+      "summaryRu": "Pluractionality и simulfactive — морфологически различимы."
+    },
+    {
+      "n": 15,
+      "titleRu": "Структура глагола",
+      "summaryRu": "Causative (direct/indirect), inceptive, deadjectival — suffixal derivations."
+    },
+    {
+      "n": 16,
+      "titleRu": "Несклоняемые",
+      "summaryRu": "Междометия, частицы, clitics; отдельно от modifier."
+    },
+    {
+      "n": 17,
+      "titleRu": "Послелоги",
+      "summaryRu": "Postpositions + relational nouns; пространственные серии (locative, allative, ablative)."
+    },
+    {
+      "n": 20,
+      "titleRu": "Именные группы",
+      "summaryRu": "NP internal structure; associatives (Easetaar); focus gemination."
+    },
+    {
+      "n": 22,
+      "titleRu": "Обстоятельства",
+      "summaryRu": "Non-arguments: temporal, locative, manner — не аргументы валентности."
+    },
+    {
+      "n": 23,
+      "titleRu": "Сравнение",
+      "summaryRu": "Сравнительный падеж -l; periphrastic comparatives."
+    },
+    {
+      "n": 25,
+      "titleRu": "Комплементация",
+      "summaryRu": "Придаточные-дополнения; nominalized participles as complements."
+    },
+    {
+      "n": 26,
+      "titleRu": "Относительные",
+      "summaryRu": "Headless relativization через nominalization."
+    },
+    {
+      "n": 27,
+      "titleRu": "Обстоятельственные придаточные",
+      "summaryRu": "Temporal, causal adjunct clauses."
+    },
+    {
+      "n": 28,
+      "titleRu": "Номинализация и cleft",
+      "summaryRu": "Clefting через nominalized verb + copula."
+    },
+    {
+      "n": 29,
+      "titleRu": "Кореференция",
+      "summaryRu": "Reflexives sie/hwie; obviation in 3rd person."
+    },
+    {
+      "n": 30,
+      "titleRu": "Порядок слов",
+      "summaryRu": "SOV default; verb-second в некоторых типах; existentials."
+    },
+    {
+      "n": 33,
+      "titleRu": "Прагматика",
+      "summaryRu": "Discourse particles; =m focus; narrative chaining."
+    },
+    {
+      "n": 35,
+      "titleRu": "Тексты",
+      "summaryRu": "Фольклор (Dumézil 1936), разговорные записи, oldest Ingush."
+    }
+  ],
+  "targetGenderClasses": [
+    {
+      "id": "human",
+      "sg": "V/J",
+      "pl": "B",
+      "ru": "люди (по полу в ед., B в мн.)"
+    },
+    {
+      "id": "t1",
+      "sg": "V/J",
+      "pl": "D",
+      "ru": "1–2 л. мн.ч."
+    },
+    {
+      "id": "t2",
+      "sg": "B",
+      "pl": "B",
+      "ru": "неодуш. B, мн. B"
+    },
+    {
+      "id": "t3",
+      "sg": "B",
+      "pl": "D",
+      "ru": "неодуш. B, мн. D (типично)"
+    },
+    {
+      "id": "t4",
+      "sg": "D",
+      "pl": "D",
+      "ru": "неодуш. D"
+    },
+    {
+      "id": "t5",
+      "sg": "J",
+      "pl": "J",
+      "ru": "неодуш. J"
+    }
+  ]
+}

@@ -224,6 +224,63 @@ async function adminApiRoute(req, res, apiPath, url) {
     }
   }
 
+  if (apiPath === "/grammar/nichols") {
+    if (req.method === "GET") {
+      const sectionId = q("section");
+      if (sectionId) {
+        const section = await adminStore.getNicholsGrammarSection(decodeURIComponent(sectionId));
+        return section
+          ? sendJson(res, 200, { ok: true, section })
+          : sendJson(res, 404, { ok: false, error: "section_not_found" });
+      }
+      const data = await adminStore.getNicholsGrammarMeta();
+      return sendJson(res, 200, { ok: true, ...data });
+    }
+  }
+
+  if (apiPath === "/grammar/nichols-priority") {
+    if (req.method === "GET") {
+      const chapterId = q("chapter");
+      if (chapterId) {
+        const chapter = await adminStore.getNicholsPriorityChapter(decodeURIComponent(chapterId));
+        return chapter
+          ? sendJson(res, 200, { ok: true, chapter })
+          : sendJson(res, 404, { ok: false, error: "chapter_not_found" });
+      }
+      const data = await adminStore.getNicholsPriorityMeta();
+      return sendJson(res, 200, { ok: true, ...data });
+    }
+  }
+
+  if (apiPath === "/grammar/nichols-unique") {
+    if (req.method === "GET") {
+      const kind = q("kind");
+      const id = q("id");
+      if (kind && id) {
+        const item = await adminStore.getNicholsUniqueSection(kind, decodeURIComponent(id));
+        return item
+          ? sendJson(res, 200, { ok: true, kind, item })
+          : sendJson(res, 404, { ok: false, error: "not_found" });
+      }
+      const data = await adminStore.getNicholsUniqueMeta();
+      return sendJson(res, 200, { ok: true, ...data });
+    }
+  }
+
+  if (apiPath === "/grammar/nichols-numerals") {
+    if (req.method === "GET") {
+      const paradigmId = q("paradigm");
+      if (paradigmId) {
+        const paradigm = await adminStore.getNicholsNumeralParadigm(decodeURIComponent(paradigmId));
+        return paradigm
+          ? sendJson(res, 200, { ok: true, paradigm })
+          : sendJson(res, 404, { ok: false, error: "paradigm_not_found" });
+      }
+      const data = await adminStore.getNicholsNumeralMeta();
+      return sendJson(res, 200, { ok: true, ...data });
+    }
+  }
+
   if (apiPath === "/corpus") {
     if (req.method === "GET") {
       const data = await adminStore.listCorpus(listOpts());

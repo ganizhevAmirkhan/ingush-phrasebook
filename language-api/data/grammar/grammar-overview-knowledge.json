@@ -6,7 +6,8 @@
     "6 грамматических классов и copula → noun-class-knowledge.json",
     "8 падежей (обзор), парадигма цIа/зiza, склонение местоимений Мальсагова → declensions.json",
     "Личные местоимения (базовые), вопросительные частицы, ба/да → rules.json",
-    "Послелоги (паттерны перевода) → patterns.json postposition_*"
+    "Послелоги (паттерны перевода) → patterns.json postposition_*",
+    "Список кардиналей 1–100 → grammar-overview vigesimal_numerals; склонение cwan/cweanniena → nichols-numeral-declension.json"
   ],
   "sections": [
     {

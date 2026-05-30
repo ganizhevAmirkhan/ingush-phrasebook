@@ -1,0 +1,338 @@
+{
+  "schema": "nichols-ingush-grammar-sections/v1",
+  "source": "nichols-ingush-grammar-2011",
+  "sourceUrl": "https://escholarship.org/uc/item/3nn7z6w5",
+  "author": "Johanna Nichols",
+  "titleEn": "Ingush Grammar",
+  "titleRu": "Грамматика ингушского языка",
+  "publisher": "University of California Press, 2011",
+  "isbn": "978-0-520-09877-0",
+  "pages": 829,
+  "language": "en",
+  "catalogLanguage": "ru",
+  "noteRu": "Академическая грамматика на английском. Оглавление и описания разделов — на русском. Полный текст PDF вне git: textbooks-ingush/nichols-ingush-grammar-2011/",
+  "relevanceRu": {
+    "nounClasses": "гл. 7, 19 — система согласования (V/J/B/D), не муж/жен род",
+    "ergative": "гл. 18.4, 21 — эргативный падеж и выравнивание",
+    "cases": "гл. 6, 18, прилож. 1 — падежи (в т.ч. пространственные)",
+    "postpositions": "гл. 17 — послелоги вместо предлогов",
+    "numerals": "гл. 10, прилож. 4 — двадцатеричная система",
+    "verbTenses": "гл. 13 — времена, наклонения, converbs",
+    "wordOrder": "гл. 30 — порядок слов, вопросы, existentials"
+  },
+  "generatedAt": "2026-05-30T20:18:35.290Z",
+  "sections": [
+    {
+      "id": "nichols_ch1",
+      "number": 1,
+      "titleEn": "The Ingush language and its speakers",
+      "titleRu": "Язык ингушский и его носители",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 1 THE INGUSH LANGUAGE AND ITS SPEAKERS In 2007 I began a cross-linguistic survey of complexity across several domains of grammar (phonology, morphology, lexicon) using grammatical features already present in available databases and a genealogically based sample of languages including Ingush, my long-term field language. To my surprise, Ingush turned out to be the most complex language of my sample, besting even polysynthetic languages like Seneca, Lakhota, and Halkomelem. Ingush is not polysynthetic; its co"
+    },
+    {
+      "id": "nichols_ch2",
+      "number": 2,
+      "titleEn": "Sound system",
+      "titleRu": "Звуковая система",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 2 SOUND SYSTEM 2.1. Overview of the sound system Ingush is unusual in having large inventories of both vowels and consonants. The vowel system is notable for the extreme shortness and great centralization of the short vowels and the shortening of long vowels in closed syllables, to the point that they are similar in length to short vowels though most of them remain qualitatively different. Two or three ongoing near- mergers and several contextual neutralizations of vowel contrasts further complicate recover"
+    },
+    {
+      "id": "nichols_ch3",
+      "number": 3,
+      "titleEn": "Phonological processes, phonotactics, and word structure",
+      "titleRu": "Фонологические процессы, фонотактика и структура слова",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 3 PHONOLOGICAL PROCESSES, PHONOTACTICS, AND SYLLABLE STRUCTURE This chapter describes the synchronic phonological alternations and constraints, starting with morphophonemic ones and ending with phonetic ones, including the impact of alternative phonological analyses and, where known and relevant, some discussion of the historical origin of synchronic alternations. Alternations involving tones and prosody are covered in Chapter 4. 3.1. Morphophonemic processes 3.1.1. Productive ablaut. All regular verb parad"
+    },
+    {
+      "id": "nichols_ch4",
+      "number": 4,
+      "titleEn": "Prosody and prosodic wordhood",
+      "titleRu": "Просодия и просодическое слово",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 4 PROSODY AND PROSODIC WORDHOOD Ingush prosody consists of stress, usually initial but in a few instances on the second syllable; a rule of phrasal accent that parses certain phrase types, from right to left, into a two-stress or two-word minimal prosodic unit or intonational phrase (IP); a minimal tone opposition (high vs. unmarked), distinct from stress; and pitch declination over the entire clause or sentence or utterance. Stress, phrasal accent, and tone are three separate phonemic categories. Pitch and"
+    },
+    {
+      "id": "nichols_ch5",
+      "number": 5,
+      "titleEn": "Word classes",
+      "titleRu": "Части речи",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 5 WORD CLASSES Ingush has three major lexical classes of words: nouns, verbs, and modifiers. \"Modifier\" is a single lexical class in that there is no formal difference between adjectives and manner adverbs, or between participles (which are verbal adjectives) and chaining converbs (which are in some respects like verbal adverbs). Other words with lexical content are postpositions and numerals, of which postpositions are a distinct word class while numerals can probably best be regarded as a subtype of modif"
+    },
+    {
+      "id": "nichols_ch6",
+      "number": 6,
+      "titleEn": "Noun declension",
+      "titleRu": "Склонение существительных",
+      "apiPriority": true,
+      "excerptEn": "CHAPTER 6 NOUN DECLENSION 6.1. Noun case declension Ingush nouns have eight regular cases marked by the endings shown below. Endings separated by a comma are more or less automatic alternants; a semicolon separates lexically determined differences of declension; a slash separates stylistic variants. Main functions of the cases are listed here to clarify their names; see Chapter 18 for case functions and Chapter 21 for the abbreviations A, S, O, G, T. Singular Plural Main functions Nominative (no ending) -azh; -ii, "
+    },
+    {
+      "id": "nichols_ch7",
+      "number": 7,
+      "titleEn": "Gender",
+      "titleRu": "Род (классы согласования V/J/B/D)",
+      "apiPriority": true,
+      "excerptEn": "CHAPTER 7 GENDER This chapter is partly taken from Nichols 2007, which describes gender in Chechen and gives Chechen-Ingush-Batsbi comparison and reconstruction. Only the gender classification of nouns and its marking are described here; for the morphosyntax of gender agreement and gender resolution see Chapter 19. Gender in Nakh-Daghestanian languages is sometimes called class or noun class, but I follow Corbett 1991 in using the term gender. Gender in Ingush (and its close sisters) takes two forms, which I call a"
+    },
+    {
+      "id": "nichols_ch8",
+      "number": 8,
+      "titleEn": "Derivation and formation of nouns",
+      "titleRu": "Словообразование и образование существительных",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 8 DERIVATION AND FORMATION OF NOUNS Ingush nouns have gender, decline for case, and can head NP's. Nouns are an open word class in Ingush; there are at least about 2000 underived simplex nouns and thousands of derived nouns and compounds in regular use. Nominalization is widely used in syntactic processes such as clefting, complementation, and headless relativization, and consequently nominalization of verbs, variously using the verbal noun and nominalized participles, is productive and frequent. 8.1. Root "
+    },
+    {
+      "id": "nichols_ch9",
+      "number": 9,
+      "titleEn": "Pronominals and deictics",
+      "titleRu": "Местоимения и указательные слова",
+      "apiPriority": true,
+      "excerptEn": "CHAPTER 9 PRONOMINALS AND DEICTICS Pronominals include personal pronouns and a number of others: demonstratives, indefinites, interrogatives, and others. Personal pronouns are much like nouns in their case inflection and syntactic behavior; the others have nominal (or nominalized) forms, adjective (or attributive) forms, and various adverbial series (manner, location, time, etc.) 9.1. Personal and reflexive pronouns 9.1.1. Personal pronouns. The personal pronouns are shown in Table 9-1. They distinguish singular fr"
+    },
+    {
+      "id": "nichols_ch10",
+      "number": 10,
+      "titleEn": "Numerals: morphology",
+      "titleRu": "Числительные: морфология",
+      "apiPriority": true,
+      "excerptEn": "CHAPTER 10 NUMERALS: MORPHOLOGY Ingush numerals are more like adjectives than any other part of speech: they modify nouns, make a nominative/oblique case distinction, and have nominalized forms. They also have a number of regular derivatives unlike those of any other part of speech: ordinals, multiples, collectives, and others. Uniquely among Ingush words, numerals form regular derivatives in which consonant-initial suffixes are added to all stems, including consonant- final stems, with no epenthetic vowel and no a"
+    },
+    {
+      "id": "nichols_ch11",
+      "number": 11,
+      "titleEn": "Adjectives and participles",
+      "titleRu": "Прилагательные и причастия",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 11 ADJECTIVES AND PARTICIPLES 11.1. Basic and derived adjectives Adjectives are a large, open, and productive word class in Ingush. Basic adjectives number several hundred and are probably not now an open class, though they include some loans. New adjectives are formed either suffixally or by compounding or periphrasis. Participles and converbs are easily lexicalized as adjectives. Adjectives can be derived from all other major lexical classes. They can be nominalized, both for syntactic purposes and as a m"
+    },
+    {
+      "id": "nichols_ch12",
+      "number": 12,
+      "titleEn": "Verb conjugation classes",
+      "titleRu": "Классы спряжения глаголов",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 12 VERB CONJUGATION CLASSES This chapter is based on the system of verb classes and analysis of conjugation worked out in Handel 2003. Important elements of that system include recognition of ablaut paradigms as conjugation classes and recognition that the present stem is the most informative form and the best citation form for linguistic purposes. The numbering of classes used here follows that used in Nichols 2004, which is intended for lay use and sets up two additional conjugation classes in order to us"
+    },
+    {
+      "id": "nichols_ch13",
+      "number": 13,
+      "titleEn": "Inflectional categories of the verb",
+      "titleRu": "Формы и категории глагола",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 13 INFLECTIONAL CATEGORIES OF THE VERB 13.0. Introduction Ingush has a large number of tenses and moods which combine with aktionsart and pluractionality categories (Chapter 14) to create a very rich system of tense-aspect-mood distinctions. This chapter describes the forms and meanings of the TAM categories. Appendix 1 includes full inflectional tables for two simplex verbs. Tables 12-1 and 12-2 in Chapter 12 show the main forms for one verb of each conjugation class. Ingush has tenses that I have labeled "
+    },
+    {
+      "id": "nichols_ch14",
+      "number": 14,
+      "titleEn": "Verbal number, pluractionality, and aktionsart",
+      "titleRu": "Число глагола, плюракциональность, акционарт",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 14 VERBAL NUMBER, PLURACTIONALITY, AND AKTIONSART 14.1. Singular and plural verbs A few verbs undergo stem changes in agreement with the number of the S/O. The 23 known pairs are shown in Table 14-1. The main formations are suppletion, ablaut of stem vowel, and change of stem-final -ll- to -xk-. Only simple stems are given here (some are attested mostly with prefixes). Two plurals correspond to ull 'lie': d.aada (progressive, most often with animate subject) and uxk (stative, often with inanimate subject). "
+    },
+    {
+      "id": "nichols_ch15",
+      "number": 15,
+      "titleEn": "Verb structure and derivation",
+      "titleRu": "Структура и словообразование глагола",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 15 VERB STRUCTURE AND DERIVATION 15.0. Introduction. Position classes in the verb The Ingush verbal lexicon is split into two parts. Simple verbs are a closed class. As a class they take all available suffixal derivations. In their derivational behavior they are ergative, with a nominative pivot that can never be replaced by another case. Every valence must contain a nominative. Compound verbs are formed with light verbs. They are an open and productive class. Their derivational behavior is restricted to th"
+    },
+    {
+      "id": "nichols_ch16",
+      "number": 16,
+      "titleEn": "Non-inflecting words",
+      "titleRu": "Несклоняемые слова",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 16 NON-INFLECTING WORDS This chapter follows the classification of adverbs, particles, etc. given in Chapter 5. Postpositions are treated in Chapter 17. 16.1. Adverbs 16.1.1. Manner adverbs. There is no difference of word class between adjectives, anterior converbs, and manner adverbs on the whole. Any adjective or anterior converb can be used as a manner adverb, semantics permitting. There are some adverbs that are not attested as noun modifiers. sixa 'fast, rapid; quickly' (1) Aaz sou sixa q'ameal duuc 1s"
+    },
+    {
+      "id": "nichols_ch17",
+      "number": 17,
+      "titleEn": "Postpositions and PP's",
+      "titleRu": "Послелоги и послелогальные группы",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 17 POSTPOSITIONS AND PP'S All adpositions in Ingush are postpositions. Postpositions have argument structure (all have exactly one argument) 147 and valence (they govern the case of that argument). Most postpositions can be used with a nominalized verb as object, thereby heading a subordinate clause. Examples of this are (31) and (50) below. Most postpositions govern the dative of the object noun. In colloquial usage and in folklore texts, the nominative is commonly used instead of the dative or other case:"
+    },
+    {
+      "id": "nichols_ch18",
+      "number": 18,
+      "titleEn": "Functions of cases and adpositions",
+      "titleRu": "Функции падежей и послелогов",
+      "apiPriority": true,
+      "excerptEn": "CHAPTER 18 FUNCTIONS OF CASES AND ADPOSITIONS The morphology of the regular inflectional cases is described in Chapter 6. This chapter describes the syntactic functions of those cases as well as the basic adverb that is formed from many nouns and the secondary cases (ablative, locative) that are occasionally formed from some nouns and more often from personal pronouns. Arguments are labeled A (subject of transitive), S (subject of intransitive), O (object of monotransitive), G and T (goal-like and theme-like object"
+    },
+    {
+      "id": "nichols_ch19",
+      "number": 19,
+      "titleEn": "Agreement",
+      "titleRu": "Согласование (род, лицо, число, падеж)",
+      "apiPriority": true,
+      "excerptEn": "CHAPTER 19 AGREEMENT Agreement in Ingush is a partial category in nearly all of its forms. There are three agreement categories: gender, number, and case. A minority of the verbs, a small minority of the adjectives and pronominals, and one numeral (and its derivatives) agree in gender; the rest do not take gender agreement on the stem (though in verbs some of the tense formatives take gender). A minority of the verbs and two adjectives agree in number. The vast majority of adjectives, and all participles, agree in "
+    },
+    {
+      "id": "nichols_ch20",
+      "number": 20,
+      "titleEn": "Phrases: NP's and PP's",
+      "titleRu": "Фразы: именные и послелогальные группы",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 20 PHRASES: NP'S AND PP'S Throughout this grammar I use \"NP\" loosely, to refer to traditional noun phrases, though number agreement of demonstratives in numeral phrases ( 20.2) shows that the demonstrative is a sister of the rest of the NP. Non-simple NP's are quite frequent in Ingush speech and writing. Recall ( 8.4-5) that there are few canonical compounds in Ingush, but many lexicalized phrases that do the work done by compounds in other languages. Many of these are NP's, in particular complex NP's. 20.1"
+    },
+    {
+      "id": "nichols_ch21",
+      "number": 21,
+      "titleEn": "Valence, argument structure, and alignment",
+      "titleRu": "Валентность, аргументы и эргативное выравнивание",
+      "apiPriority": true,
+      "excerptEn": "CHAPTER 21 VALENCE, ARGUMENT STRUCTURE, AND ALIGNMENT Essential concepts used here are as follows. Arguments are nominals required (or syntactically governed) by verbs, and argument structure is the set of arguments governed by a verb. Arguments are conventionally identified by abbreviations A, S, O etc. ( 21.1). Valence is the set of morphological codings (in Ingush, cases or postpositions) assigned to the arguments by the verb: for example, the valence of iec 'buy' is ergative A and nominative O. Alignment is the"
+    },
+    {
+      "id": "nichols_ch22",
+      "number": 22,
+      "titleEn": "Non-arguments",
+      "titleRu": "Обстоятельства (неаргументы)",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 22 NON-ARGUMENTS Covered in this chapter are true adjuncts (in traditional terms, circumstantials) and non- arguments which may be subcategorized for by the verb. Since there is no formal difference between the two, I have not tried to sort them out here. The forms used on adjuncts include bare cases, postpositions, adverbs, deictic and local prefixes, and converbial subordinate clauses. There are no obvious generalizations to be made about which forms have which adjunct functions. 22.1. Spatial relations S"
+    },
+    {
+      "id": "nichols_ch23",
+      "number": 23,
+      "titleEn": "Comparison",
+      "titleRu": "Сравнение",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 23 COMPARISON The six sections in this chapter are grouped together on semantic grounds, though they are syntactically disparate. Comparison with 'like', 'as' ( 23.1) is a controlled construction where comparison is drawn between two elements (usually clause arguments) that have the same syntactic function in the two compared clauses. Comparison with 'more than' and 'less than' ( 23.2) is also a controlled construction, but within a simple clause, and usually with an explicit standard of comparison in a ded"
+    },
+    {
+      "id": "nichols_ch24",
+      "number": 24,
+      "titleEn": "Coordination and chaining",
+      "titleRu": "Сочинение и цепочечные конструкции",
+      "apiPriority": true,
+      "excerptEn": "CHAPTER 24 COORDINATION AND CHAINING Ingush uses coordination for phrases (chiefly NP's and PP's), but in combining clauses it makes relatively little use of coordination and much use of chaining, in which the clauses share part or all of their argument structure and various inflectional categories, and only the last verb of the chain is finite. 175 24.1. Phrase coordination 24.1.1. =j(i) 'and'. This conjunction normally coordinates exactly two elements, words or (less often) phrases. Usually it is used for exhaust"
+    },
+    {
+      "id": "nichols_ch25",
+      "number": 25,
+      "titleEn": "Complementation",
+      "titleRu": "Комплементация (придаточные дополнения)",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 25 COMPLEMENTATION Most forms of the verb and most types of non-main clauses figure in complementation: finite verb forms, direct speech and semi-direct speech, subjunctive, verbal noun, infinitive, participles, converbs; tensed clauses with and without conjunctions, clefting, nominalization, chaining. Depending on the verb and the form of complementation, coreferents to the subject may undergo argument sharing, controlled deletion, long-distance reflexivization, or free anaphoric zero. A number of verbs ta"
+    },
+    {
+      "id": "nichols_ch26",
+      "number": 26,
+      "titleEn": "Relative clauses",
+      "titleRu": "Относительные придаточные",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 26 RELATIVE CLAUSES Ingush uses relativization by deletion. A number of different nonfinite verb forms can be used in the relative clause: participle, infinitive, converb, nominalized participle. All known semantic types of relative clause seem to occur in Ingush. I this chapter, __ marks the place of the null relative noun, and its interlinear shows the case it would have if overt. 26.1. Semantic types of relatives Semantically, Ingush relatives can be restrictive, non-restrictive, or extent. Most examples"
+    },
+    {
+      "id": "nichols_ch27",
+      "number": 27,
+      "titleEn": "Adjunct subordination",
+      "titleRu": "Обстоятельственные придаточные",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 27 ADJUNCT SUBORDINATION Adjunct subordinate clauses include clauses of time, reason, condition, purpose, etc. In Ingush these mostly use converbs. There are a good many such converbs, most of them specialized for a meaning such as time sequence, exact time coincidence, reason, condition, etc. None of these converbs take argument sharing; all of them may have, but do not require, an argument coreferential to one in the matrix clause. An argument coreferential to a main- clause subject may be either reflexiv"
+    },
+    {
+      "id": "nichols_ch28",
+      "number": 28,
+      "titleEn": "Nominalization and clefting",
+      "titleRu": "Номинализация и расщеплённые конструкции",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 28 NOMINALIZATION AND CLEFTING Ingush makes extensive use of nominalizing morphology to create nominal paradigms corresponding to modifying parts of speech (adjectives, numerals, participles). Nominalization is favored or required in a number of syntactic contexts and also plays a prominent role in word formation. 28.1. Nominalized possessors A headless possessor ('mine', 'ours', 'Ahmed's', etc.) is nominalized; for the form of nominalization and several examples see  8.3.10, 9.1.3. In (1) txy+jarazh 'ours'"
+    },
+    {
+      "id": "nichols_ch29",
+      "number": 29,
+      "titleEn": "Coreference: anaphora, reflexivization, obviation",
+      "titleRu": "Кореференция, анафора, рефлексивы",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 29 COREFERENCE: ANAPHORA, REFLEXIVIZATION, OBVIATION, SYNTACTIC ALIGNMENT There is no single syntactic alignment for Ingush coreference phenomena. Infinitives have S/A control with no case restrictions, but (at least in the most conservative kind of speech) nuclear and (with less consistency) core chaining both have a nominative (thus, S/O) pivot. That is, infinitives have accusative syntax and chaining has ergative syntax. Coordination and relativization have no case restrictions and almost no syntactic re"
+    },
+    {
+      "id": "nichols_ch30",
+      "number": 30,
+      "titleEn": "Word order",
+      "titleRu": "Порядок слов",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 30 WORD ORDER Ingush is a consistently head-final language except for predominantly verb-second order in main clauses. Verb-second order is much like that of Germanic languages in that the finite verb is clause-second but its preverb, including prefixes, is clause-final. Nearly all phrases and non-main clauses are head-final. In addition to verb-second order in main clauses there are other, often pragmatically determined but always grammatically defined, word orders that place elements in clause-initial or "
+    },
+    {
+      "id": "nichols_ch31",
+      "number": 31,
+      "titleEn": "Negation",
+      "titleRu": "Отрицание",
+      "apiPriority": true,
+      "excerptEn": "CHAPTER 31 NEGATION Negation is formally marked only on the verb in Ingush, regardless of its semantic scope. (There is one exception to this statement: the negative participial forms discussed at the end of  31.1.) The word in the scope of negation can sometimes be identified by particles and prosody, but often there is no formal marking of scope. 31.1. Simple negation The negative morpheme is either a suffix or a proclitic particle depending on the verb's inflectional form: suffix for tense forms, proclitic cy fo"
+    },
+    {
+      "id": "nichols_ch32",
+      "number": 32,
+      "titleEn": "Questions, answers, rebuttals",
+      "titleRu": "Вопросы, ответы, возражения",
+      "apiPriority": true,
+      "excerptEn": "CHAPTER 32 QUESTIONS, ANSWERS, REBUTTALS 32.1. Polar (yes-no) questions In polar questions the verb is followed by the interrogative clitic =ii. Word order in these questions is generally verb-second. The interrogative clitic opens the preceding syllable and undoes present-tense vowel shortening in verbs such as {tuox} 'strike' and {d.iesh} 'read'. Present tox desh vedz Interrogative tuox=ii? diesh=ii? viez=ii? 'strike' 'read' 'know' After a vowel or diphthong the clitic is reduced to {j}, turning the vowel into a "
+    },
+    {
+      "id": "nichols_ch33",
+      "number": 33,
+      "titleEn": "Pragmatic and discourse phenomena",
+      "titleRu": "Прагматика и дискурс",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 33 PRAGMATIC AND DISCOURSE PHENOMENA Much work remains to be done on pragmatic phenomena and discourse structure in Ingush. This chapter is not a full treatment and probably not even a very comprehensive overview, but mentions some conspicuous and regular phenomena. 33.1. The main pragmatic markers 33.1.1. Contrastive focus =m. This is an emphatic, usually contrastive, particle. When its meaning is fully contrastive it attaches to the word in its scope (which is often clause- initial). (1) Suona=m xoza di x"
+    },
+    {
+      "id": "nichols_ch34",
+      "number": 34,
+      "titleEn": "Lexicon",
+      "titleRu": "Лексикон (быть, движение, родство и др.)",
+      "apiPriority": true,
+      "excerptEn": "CHAPTER 34 LEXICON This chapter gives a 100-word list, some other word lists used in typology (with commentary), and discussion of some typologically interesting parts of the lexicon. 34.1. Swadesh 100-word list Note: Do not reproduce this list without also including Tables 2-1 and 2-2 (from Chapter 2), as the spelling used here requires commentary. * at the right marks words whose initial consonants have little or no value in phonologically based wordlist comparisons (because they are gender agreement markers or o"
+    },
+    {
+      "id": "nichols_ch35",
+      "number": 35,
+      "titleEn": "Texts",
+      "titleRu": "Тексты (фольклор и разговорная речь)",
+      "apiPriority": false,
+      "excerptEn": "CHAPTER 35 TEXTS 35.0. Contents of this chapter The texts and text sections included here are taken from a variety of times and styles. 35.1. The oldest recorded Ingush 35.2. Heroic saga: Oaldama Gheaza (Dum zil 1936) 35.3. Spoken Ingush: Feud and reconciliation (0408) 35.4. Spoken Ingush: Ch'uozha Waba and his wolves (0207A.3) 35.5. Spoken Ingush: Wolves and livestock (0240) 35.6. Spoken Ingush: Wolves and snowball (0238A.10) 35.7. Published folklore: Ucc'eazhta t'yvaxaa neic A strikeout indicates words abandoned "
+    }
+  ],
+  "appendices": [
+    {
+      "id": "appendix_1",
+      "titleEn": "Inflection of nouns",
+      "titleRu": "Приложение 1: склонение существительных",
+      "excerptEn": ""
+    },
+    {
+      "id": "appendix_2",
+      "titleEn": "Personal and reflexive pronouns",
+      "titleRu": "Приложение 2: личные и возвратные местоимения",
+      "excerptEn": ""
+    },
+    {
+      "id": "appendix_3",
+      "titleEn": "Adjectives",
+      "titleRu": "Приложение 3: прилагательные",
+      "excerptEn": ""
+    },
+    {
+      "id": "appendix_4",
+      "titleEn": "Numerals",
+      "titleRu": "Приложение 4: числительные",
+      "excerptEn": ""
+    },
+    {
+      "id": "appendix_5",
+      "titleEn": "Inflection of verbs",
+      "titleRu": "Приложение 5: спряжение глаголов",
+      "excerptEn": ""
+    }
+  ]
+}

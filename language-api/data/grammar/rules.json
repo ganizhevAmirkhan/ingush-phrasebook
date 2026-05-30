@@ -423,6 +423,38 @@
       "title": "Главные особенности грамматики (конспект)",
       "dataFile": "data/grammar/grammar-overview-knowledge.json",
       "notes": "22 раздела без дублей noun-class-knowledge, declensions, rules, postposition patterns."
+    },
+    {
+      "id": "nichols_grammar_knowledge",
+      "type": "reference",
+      "source": "nichols-ingush-grammar-sections.json",
+      "title": "Грамматика ингушского (Nichols 2011)",
+      "dataFile": "data/grammar/nichols-ingush-grammar-sections.json",
+      "notes": "35 глав + 5 приложений; оглавление и relevanceRu на русском, excerptEn из PDF. Приоритет для API: гл. 6–10, 18–19, 21, 24, 31–32, 34."
+    },
+    {
+      "id": "nichols_priority_knowledge",
+      "type": "reference",
+      "source": "nichols-priority-knowledge.json",
+      "title": "Nichols 2011 — конспект приоритетных глав (RU)",
+      "dataFile": "data/grammar/nichols-priority-knowledge.json",
+      "notes": "11 глав: классы V/J/B/D, падежи, эргатив, согласование, copula vy/jy/by/dy. Связь со школьными ва/я/ба/да."
+    },
+    {
+      "id": "nichols_unique_knowledge",
+      "type": "reference",
+      "source": "nichols-unique-knowledge.json",
+      "title": "Nichols 2011 — только новое (без дублей)",
+      "dataFile": "data/grammar/nichols-unique-knowledge.json",
+      "notes": "49+ слов классов, 4 парадигмы, 13 глаголов/8 прил. с gender agreement, 8 правил, 24 главы-конспекта."
+    },
+    {
+      "id": "nichols_numeral_declension",
+      "type": "reference",
+      "source": "nichols-numeral-declension.json",
+      "title": "Nichols — склонение числительных",
+      "dataFile": "data/grammar/nichols-numeral-declension.json",
+      "notes": "Attributive nom/obl + nominalized по падежам (1,2,3,20); gender на «4»; без дубля vigesimal_numerals."
     }
   ]
 }

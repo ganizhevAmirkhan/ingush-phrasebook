@@ -1,0 +1,150 @@
+{
+  "schema": "nichols-numeral-declension/v1",
+  "source": "nichols-ingush-grammar-2011",
+  "sourceRef": "appendix_4, ch10, Table 10-1",
+  "sourceUrl": "https://escholarship.org/uc/item/3nn7z6w5",
+  "titleRu": "Склонение числительных (Nichols 2011)",
+  "noteRu": "Дополняет grammar-overview → vigesimal_numerals (список 1–100 без падежей). Кардинальные 1–5 и 20 имеют oblique; nominalized склоняются по падежам. Других дублей нет.",
+  "crossRef": {
+    "cardinalListSection": "grammar-overview-knowledge.json → vigesimal_numerals",
+    "briefRule": "nichols-unique-knowledge.json → numeral_oblique_declension"
+  },
+  "generatedAt": "2026-05-30T22:00:00.000Z",
+  "rulesRu": [
+    "Числительные ведут себя как прилагательные: согласуются с существительным, но существительное остаётся в ед.ч. (Ткъo sag — «двадцать человек»).",
+    "Две формы: attributive (при существительном) и nominalized (счёт, арифметика, «нас пятеро»).",
+    "Attributive: nominative = основа; oblique у 1–5 и 20 — суффикс -n или ablaut (cwa/cwan, shi/shin, tq'o/tq'ea).",
+    "Nominalized oblique: суффикс -nn- после гласной, -n- после согласной/schwa; эргатив -nnie/-nie; без эпентетического гласного.",
+    "Только «4» и производные (14, 80…) согласуются по классу: vi'/ji'/bi'/di' (ва/я/ба/да).",
+    "cwea / cwannie- — «один, сам» (alone); shinnahwa / qeannahw — «в двух/трёх местах»."
+  ],
+  "stemMap": [
+    { "n": 1, "nicholsNom": "cwa", "nicholsObl": "cwan", "schoolIng": "цхьaI", "schoolAlt": "цхьа" },
+    { "n": 2, "nicholsNom": "shi", "nicholsObl": "shin", "schoolIng": "шиъ" },
+    { "n": 3, "nicholsNom": "qo", "nicholsObl": "qea", "schoolIng": "кхoъ" },
+    { "n": 4, "nicholsNom": "di'", "nicholsObl": "di'", "schoolIng": "диъ", "genderAgreement": true },
+    { "n": 5, "nicholsNom": "pxi", "nicholsObl": "pxie", "schoolIng": "пхiъ" },
+    { "n": 6, "nicholsNom": "jaalx", "nicholsObl": "=", "schoolIng": "ялх", "noteRu": "6–9: одна форма для nom и obl" },
+    { "n": 7, "nicholsNom": "vorh", "nicholsObl": "=", "schoolIng": "ворхI" },
+    { "n": 8, "nicholsNom": "baarh", "nicholsObl": "=", "schoolIng": "ирхI / бархI" },
+    { "n": 9, "nicholsNom": "iis", "nicholsObl": "=", "schoolIng": "ийс" },
+    { "n": 10, "nicholsNom": "itt", "nicholsObl": "=", "schoolIng": "itt" },
+    { "n": 20, "nicholsNom": "tq'o", "nicholsObl": "tq'ea", "schoolIng": "ткъo" }
+  ],
+  "paradigms": [
+    {
+      "id": "numeral_1",
+      "n": 1,
+      "lemmaRu": "один",
+      "attributive": {
+        "nominative": { "nichols": "cwa", "schoolIng": "цхьaI" },
+        "oblique": { "nichols": "cwan", "schoolIng": "цхьан", "noteRu": "перед косвенным падежом сущ.: cwan sahwataa «за час»" }
+      },
+      "nominalized": {
+        "nominative": { "nichols": "caw", "schoolIng": "цaу'" },
+        "genitive": { "nichols": "cweannen", "schoolIng": "цweannen" },
+        "dative": { "nichols": "cweanniena", "schoolIng": "цweanniena" },
+        "ergative": { "nichols": "cweannie", "schoolIng": "цweannie" },
+        "allative": { "nichols": "cweanniega", "schoolIng": "цweanniega" },
+        "instrumental": { "nichols": "cweannieca", "schoolIng": "цweannieca" },
+        "lative": { "nichols": "cweannegh", "schoolIng": "цweannegh" },
+        "comparative": { "nichols": "cweannel", "schoolIng": "цweannel" },
+        "plural": { "nichols": "cawazh", "schoolIng": "цawazh" }
+      },
+      "special": [
+        { "form": "cwea", "ru": "один, сам (alone)" },
+        { "form": "cwannie", "ru": "эрг. «один» в значении «сам»" },
+        { "form": "cwa-barazh", "ru": "неопределённое «некоторые»" }
+      ],
+      "examples": [
+        { "nichols": "cwa sag", "ru": "один человек" },
+        { "nichols": "cwan sahwataa", "ru": "за/в один час" },
+        { "nichols": "Muusaa shie cwea vy", "ru": "Мusa дома один (alone)" }
+      ]
+    },
+    {
+      "id": "numeral_2",
+      "n": 2,
+      "lemmaRu": "два",
+      "attributive": {
+        "nominative": { "nichols": "shi", "schoolIng": "шиъ" },
+        "oblique": { "nichols": "shin", "schoolIng": "шин", "noteRu": "shin zhwalez ber — «две собаки напугали ребёнка»" }
+      },
+      "nominalized": {
+        "nominative": { "nichols": "shi'", "schoolIng": "ши'" },
+        "genitive": { "nichols": "shinnie", "schoolIng": "шinnie" },
+        "dative": { "nichols": "shinniena", "schoolIng": "shinniena" },
+        "ergative": { "nichols": "shinnie", "schoolIng": "shinnie" },
+        "allative": { "nichols": "shinniega", "schoolIng": "shinniega" },
+        "instrumental": { "nichols": "shinnieca", "schoolIng": "shinnieca" },
+        "lative": { "nichols": "shinnegh", "schoolIng": "shinnegh" },
+        "comparative": { "nichols": "shinnel", "schoolIng": "shinnel" },
+        "adverb": { "nichols": "shinnahw", "ru": "в двух местах" },
+        "plural": { "nichols": "shi'azh", "schoolIng": "ши'azh" }
+      },
+      "examples": [
+        { "nichols": "Shi zhwalii juxa-diera", "ru": "Вернулись две собаки" },
+        { "nichols": "Yzh shi' sixa lel", "ru": "Эти двое ходят быстро" }
+      ]
+    },
+    {
+      "id": "numeral_3",
+      "n": 3,
+      "lemmaRu": "три",
+      "attributive": {
+        "nominative": { "nichols": "qo", "schoolIng": "кхoъ" },
+        "oblique": { "nichols": "qea", "schoolIng": "кхea" }
+      },
+      "nominalized": {
+        "nominative": { "nichols": "qo'", "schoolIng": "кхo'" },
+        "genitive": { "nichols": "qeannie", "schoolIng": "кхeannie" },
+        "dative": { "nichols": "qeanniena", "schoolIng": "кхeanniena" },
+        "ergative": { "nichols": "qeannie", "schoolIng": "кхeannie" },
+        "allative": { "nichols": "qeanniega", "schoolIng": "кхeanniega" },
+        "instrumental": { "nichols": "qeannieca", "schoolIng": "кхeannieca" },
+        "lative": { "nichols": "qeannegh", "schoolIng": "кхeannegh" },
+        "comparative": { "nichols": "qeannel", "schoolIng": "кхeannel" },
+        "adverb": { "nichols": "qeannahw", "ru": "в трёх местах" },
+        "plural": { "nichols": "qo'azh", "schoolIng": "кхo'azh" }
+      },
+      "examples": [
+        { "nichols": "qo sag — qea sahwtaa", "ru": "трое людей — на три часа" },
+        { "nichols": "Shinniena qo' wa=t'y-tiexacha pxi' xul", "ru": "Два плюс три равно пять" }
+      ]
+    },
+    {
+      "id": "numeral_20",
+      "n": 20,
+      "lemmaRu": "двадцать",
+      "attributive": {
+        "nominative": { "nichols": "tq'o", "schoolIng": "ткъo" },
+        "oblique": { "nichols": "tq'ea", "schoolIng": "ткъea" }
+      },
+      "nominalized": {
+        "nominative": { "nichols": "tq'o", "schoolIng": "ткъo" },
+        "genitive": { "nichols": "tq'eannie", "schoolIng": "ткъeannie" },
+        "dative": { "nichols": "tq'eanniena", "schoolIng": "ткъeanniena" },
+        "ergative": { "nichols": "tq'eannie", "schoolIng": "ткъeannie" },
+        "allative": { "nichols": "tq'eanniega", "schoolIng": "ткъeanniega" },
+        "instrumental": { "nichols": "tq'eannieca", "schoolIng": "ткъeannieca" },
+        "lative": { "nichols": "tq'eannegh", "schoolIng": "ткъeannegh" },
+        "comparative": { "nichols": "tq'eannel", "schoolIng": "ткъeannel" }
+      },
+      "examples": [
+        { "nichols": "tq'o sag", "ru": "двадцать человек (сущ. в ед.ч.)" },
+        { "nichols": "tq'ea cwa", "ru": "двадцать один (21)" }
+      ]
+    }
+  ],
+  "genderOnFour": {
+    "noteRu": "Только 4 и производные (14, 80…) меняют начальный согласный по классу существительного",
+    "forms": [
+      { "class": "V", "nichols": "vi'", "school": "виъ", "example": "vi' sag — четыре мужчины" },
+      { "class": "J", "nichols": "ji'", "school": "йиъ", "example": "ji' jisha — четыре сестры" },
+      { "class": "B", "nichols": "bi'", "school": "биъ", "example": "bi' wazh — четыре яблока" },
+      { "class": "D", "nichols": "di'", "school": "диъ", "example": "di' sahwat — четыре часа" }
+    ]
+  },
+  "ordinalNoteRu": "Порядковые: hwalxara «первый по времени», cwoalagh «№1»; остальные -lagh (shoalagh, qoalagh…). Склоняются перифразисом — см. гл. 10.2.",
+  "higherNumeralsNoteRu": "Составные: 21 = tq'ea cwa, 40 = shouztq'a; суффиксы только к последнему числу в цепочке. Список кардиналей 1–100 — в vigesimal_numerals."
+}
