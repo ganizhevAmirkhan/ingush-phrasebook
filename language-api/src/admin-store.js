@@ -24,6 +24,8 @@ const GRAMMAR_FILES = {
   lexemes: path.join(GRAMMAR_DIR, "lexemes.json")
 };
 
+const NOUN_CLASS_KNOWLEDGE_FILE = path.join(GRAMMAR_DIR, "noun-class-knowledge.json");
+
 async function readJson(filePath) {
   const raw = await fs.readFile(filePath, "utf8");
   return JSON.parse(raw);
@@ -97,11 +99,19 @@ async function getInventory() {
   } catch {
     // empty
   }
+  let nounClassEntries = 0;
+  try {
+    const nc = await readJson(NOUN_CLASS_KNOWLEDGE_FILE);
+    nounClassEntries = Array.isArray(nc?.entries) ? nc.entries.length : 0;
+  } catch {
+    // empty
+  }
   return {
     adminEnabled: getAdminSecret().length > 0,
     patterns: patterns.length,
     rules: rules.length,
     lexemes: lexemes.length,
+    nounClassEntries,
     corpusStories: storyFiles.length,
     corpusNovellas: novellaFiles.length,
     blacklist: blacklist.length
@@ -343,6 +353,34 @@ async function removeBlacklistTerm(term) {
   return saveBlacklist(blocked);
 }
 
+async function listNounClasses(opts) {
+  try {
+    const json = await readJson(NOUN_CLASS_KNOWLEDGE_FILE);
+    const items = Array.isArray(json?.entries) ? json.entries : [];
+    return paginate(items, {
+      ...opts,
+      fields: ["ing", "ru", "markerSg", "markerPl", "reviewStatus"]
+    });
+  } catch {
+    return { total: 0, offset: 0, limit: 0, items: [] };
+  }
+}
+
+async function getNounClassKnowledgeMeta() {
+  try {
+    const json = await readJson(NOUN_CLASS_KNOWLEDGE_FILE);
+    return {
+      schema: json?.schema || null,
+      status: json?.status || null,
+      composerRules: json?.composerRules || [],
+      stats: json?.stats || null,
+      entries: Array.isArray(json?.entries) ? json.entries.length : 0
+    };
+  } catch {
+    return { schema: null, status: null, composerRules: [], stats: null, entries: 0 };
+  }
+}
+
 module.exports = {
   getAdminSecret,
   isAdminAuthorized,
@@ -364,5 +402,7 @@ module.exports = {
   deleteCorpus,
   getBlacklist,
   addBlacklistTerm,
-  removeBlacklistTerm
+  removeBlacklistTerm,
+  listNounClasses,
+  getNounClassKnowledgeMeta
 };

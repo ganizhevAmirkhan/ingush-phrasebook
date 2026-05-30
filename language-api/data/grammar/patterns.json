@@ -96462,6 +96462,30 @@
           "ing_expected": "СИХАГIА ДУВЦА. СИХАГIА ДУВЦА ДЕЗА."
         }
       ]
+    },
+    {
+      "id": "noun_class_existential",
+      "ruPattern": "есть {THING}",
+      "description": "Существование: сказуемие по классу существительного (ба/да/я/ва)",
+      "slots": [
+        {
+          "name": "THING",
+          "pos": "noun",
+          "requiredCase": "base"
+        }
+      ],
+      "ingTemplate": "{THING} {THING_COPULA}",
+      "priority": 88,
+      "examples": [
+        {
+          "ru": "есть вода",
+          "ing_expected": "хий ду да"
+        },
+        {
+          "ru": "есть солнце",
+          "ing_expected": "малх бай ба"
+        }
+      ]
     }
   ]
 }

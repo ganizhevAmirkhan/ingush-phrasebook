@@ -1,0 +1,430 @@
+{
+  "title": "Классовые признаки (белгалонаш): ва, я, ба, да",
+  "description": "Согласование сказуемого с грамматическим классом существительного. Не род как в русском — класс + число. Источники: носитель (verified), Грамматика 5 кл. §40, упр. 23–24.",
+  "markers": {
+    "va": { "form": "ва", "labelRu": "1-й класс (часто одушевл. м.р.)", "gradesIntro": [5, 6] },
+    "ya": { "form": "я", "labelRu": "2-й класс / часть неодушевл.", "gradesIntro": [2, 3, 4, 5] },
+    "ba": { "form": "ба", "labelRu": "3-й класс (часто неодушевл.)", "gradesIntro": [2, 3, 4, 5] },
+    "da": { "form": "да", "labelRu": "4-й класс / мн.ч. многих слов", "gradesIntro": [2, 3, 4, 5] }
+  },
+  "partialRules": [
+    {
+      "id": "plural_ba_to_da",
+      "summaryRu": "У многих неодушевлённых: в ед.ч. сказуемие с -ба, во мн.ч. часто -да",
+      "confidence": "partial",
+      "examples": ["лоам/лоамаш", "никъa/някъаш", "седкъa/седкъий", "б1e/б1енаш"],
+      "exceptions": ["боал/боалаш (оба -ба)"]
+    },
+    {
+      "id": "not_phonology_alone",
+      "summaryRu": "По одной последней букве или глухости согласной класс не выводится",
+      "confidence": "high"
+    },
+    {
+      "id": "compound_da",
+      "summaryRu": "Сложные с -да-/-нана- часто класс D: да-нана, вошa-ишa, ков-карт (§40, грам. 5)",
+      "source": "gramatika-5-klass §40",
+      "confidence": "textbook"
+    }
+  ],
+  "groups": [
+    {
+      "id": "inanimate_ba_sg",
+      "labelRu": "Неодушевл. · ед.ч. · признак ба",
+      "marker": "ba",
+      "number": "sg"
+    },
+    {
+      "id": "inanimate_da_sg",
+      "labelRu": "Неодушевл. · ед.ч. · признак да",
+      "marker": "da",
+      "number": "sg"
+    },
+    {
+      "id": "inanimate_ya_sg",
+      "labelRu": "Неодушевл. · ед.ч. · признак я",
+      "marker": "ya",
+      "number": "sg"
+    },
+    {
+      "id": "inanimate_ba_pl",
+      "labelRu": "Неодушевл. · мн.ч. · признак ба",
+      "marker": "ba",
+      "number": "pl"
+    },
+    {
+      "id": "inanimate_da_pl",
+      "labelRu": "Неодушевл. · мн.ч. · признак да",
+      "marker": "da",
+      "number": "pl"
+    },
+    {
+      "id": "inanimate_ya_pl",
+      "labelRu": "Неодушевл. · мн.ч. · признак я",
+      "marker": "ya",
+      "number": "pl"
+    }
+  ],
+  "entries": [
+    {
+      "ing": "малх",
+      "ru": "солнце",
+      "group": "inanimate_ba_sg",
+      "marker": "ba",
+      "number": "sg",
+      "semantic": "небо, светило",
+      "source": "user-upr23",
+      "grade": 5
+    },
+    {
+      "ing": "лоам",
+      "ru": "гора",
+      "group": "inanimate_ba_sg",
+      "marker": "ba",
+      "number": "sg",
+      "pluralIng": "лоамаш",
+      "pluralMarker": "da",
+      "pluralGroup": "inanimate_da_pl",
+      "flipBaDa": true,
+      "source": "user-upr23",
+      "grade": 5
+    },
+    {
+      "ing": "лоамаш",
+      "ru": "горы",
+      "group": "inanimate_da_pl",
+      "marker": "da",
+      "number": "pl",
+      "stem": "лоам",
+      "source": "user-upr23",
+      "grade": 5,
+      "note": "мн.ч. на -аш (не -аж)"
+    },
+    {
+      "ing": "седкъа",
+      "ru": "звезда",
+      "group": "inanimate_ba_sg",
+      "marker": "ba",
+      "number": "sg",
+      "pluralIng": "седкъий",
+      "pluralMarker": "da",
+      "flipBaDa": true,
+      "source": "user-upr23",
+      "grade": 5
+    },
+    {
+      "ing": "седкъий",
+      "ru": "звёзды",
+      "group": "inanimate_da_pl",
+      "marker": "da",
+      "number": "pl",
+      "stem": "седкъa",
+      "source": "user-upr23",
+      "grade": 5
+    },
+    {
+      "ing": "никъa",
+      "ru": "дорога",
+      "group": "inanimate_ba_sg",
+      "marker": "ba",
+      "number": "sg",
+      "pluralIng": "някъаш",
+      "pluralMarker": "da",
+      "flipBaDa": true,
+      "source": "user-upr23",
+      "grade": 5
+    },
+    {
+      "ing": "някъаш",
+      "ru": "дороги",
+      "group": "inanimate_da_pl",
+      "marker": "da",
+      "number": "pl",
+      "stem": "никъa",
+      "source": "user-upr23",
+      "grade": 5,
+      "note": "мн.ч. на -аш"
+    },
+    {
+      "ing": " метти",
+      "ru": "земля",
+      "group": "inanimate_da_sg",
+      "marker": "da",
+      "number": "sg",
+      "semantic": "стихия, поверхность",
+      "source": "user-upr23",
+      "grade": 5
+    },
+    {
+      "ing": "кха",
+      "ru": "поле",
+      "group": "inanimate_da_sg",
+      "marker": "da",
+      "number": "sg",
+      "source": "user-upr23",
+      "grade": 5
+    },
+    {
+      "ing": "хий",
+      "ru": "вода",
+      "group": "inanimate_da_sg",
+      "marker": "da",
+      "number": "sg",
+      "source": "user-upr23",
+      "grade": 5
+    },
+    {
+      "ing": "бутт",
+      "ru": "месяц / луна",
+      "group": "inanimate_ba_sg",
+      "marker": "ba",
+      "number": "sg",
+      "source": "user-upr23",
+      "grade": 5
+    },
+    {
+      "ing": "мангI",
+      "ru": "коса",
+      "group": "inanimate_ba_sg",
+      "marker": "ba",
+      "number": "sg",
+      "source": "user",
+      "grade": 5
+    },
+    {
+      "ing": "пишк",
+      "ru": "печка",
+      "group": "inanimate_ya_sg",
+      "marker": "ya",
+      "number": "sg",
+      "source": "user",
+      "grade": 5
+    },
+    {
+      "ing": "истол",
+      "ru": "стол",
+      "group": "inanimate_da_sg",
+      "marker": "da",
+      "number": "sg",
+      "source": "user",
+      "grade": 5,
+      "note": "возможно заимствование"
+    },
+    {
+      "ing": "шод",
+      "ru": "вилы",
+      "group": "inanimate_da_sg",
+      "marker": "da",
+      "number": "sg",
+      "source": "user",
+      "grade": 5
+    },
+    {
+      "ing": "гIанд",
+      "ru": "стул",
+      "group": "inanimate_da_sg",
+      "marker": "da",
+      "number": "sg",
+      "source": "user",
+      "grade": 5
+    },
+    {
+      "ing": "харбаз",
+      "ru": "арбуз",
+      "group": "inanimate_ya_sg",
+      "marker": "ya",
+      "number": "sg",
+      "pluralIng": "харбазаш",
+      "pluralMarker": "ya",
+      "pluralGroup": "inanimate_ya_pl",
+      "source": "user",
+      "grade": 5
+    },
+    {
+      "ing": "харбазаш",
+      "ru": "арбузы",
+      "group": "inanimate_ya_pl",
+      "marker": "ya",
+      "number": "pl",
+      "stem": "харбаз",
+      "source": "user",
+      "grade": 5
+    },
+    {
+      "ing": "б1e",
+      "ru": "гнездо",
+      "group": "inanimate_ba_sg",
+      "marker": "ba",
+      "number": "sg",
+      "pluralIng": "б1енаш",
+      "pluralMarker": "da",
+      "flipBaDa": true,
+      "source": "user",
+      "grade": 5
+    },
+    {
+      "ing": "б1енаш",
+      "ru": "гнёзда",
+      "group": "inanimate_da_pl",
+      "marker": "da",
+      "number": "pl",
+      "stem": "б1e",
+      "source": "user",
+      "grade": 5
+    },
+    {
+      "ing": "боал",
+      "ru": "черешня",
+      "group": "inanimate_ba_sg",
+      "marker": "ba",
+      "number": "sg",
+      "pluralIng": "боалаш",
+      "pluralMarker": "ba",
+      "pluralGroup": "inanimate_ba_pl",
+      "flipBaDa": false,
+      "source": "user",
+      "grade": 5,
+      "note": "исключение: мн.ч. тоже -ба"
+    },
+    {
+      "ing": "боалаш",
+      "ru": "черешни",
+      "group": "inanimate_ba_pl",
+      "marker": "ba",
+      "number": "pl",
+      "stem": "боал",
+      "source": "user",
+      "grade": 5
+    },
+    {
+      "ing": "коа",
+      "ru": "двор",
+      "group": "inanimate_ba_sg",
+      "marker": "ba",
+      "number": "sg",
+      "example": "Коа сийна бай ба — «Во дворе синяя трава есть»",
+      "source": "user",
+      "grade": 5
+    },
+    {
+      "ing": "1аж",
+      "ru": "яблоко",
+      "group": "inanimate_ba_sg",
+      "marker": "ba",
+      "number": "sg",
+      "pluralIng": "1ажяш",
+      "pluralMarker": "ba",
+      "source": "gramatika-5 §40",
+      "grade": 5
+    },
+    {
+      "ing": "1ажяш",
+      "ru": "яблоки",
+      "group": "inanimate_ba_pl",
+      "marker": "ba",
+      "number": "pl",
+      "source": "gramatika-5 §40",
+      "grade": 5
+    },
+    {
+      "ing": "кхор",
+      "ru": "груша",
+      "group": "inanimate_ba_sg",
+      "marker": "ba",
+      "number": "sg",
+      "pluralIng": "кхораш",
+      "pluralMarker": "ba",
+      "source": "gramatika-5 §40",
+      "grade": 5
+    },
+    {
+      "ing": "гIайба",
+      "ru": "слива",
+      "group": "inanimate_ba_sg",
+      "marker": "ba",
+      "number": "sg",
+      "pluralIng": "гIайбаш",
+      "pluralMarker": "da",
+      "flipBaDa": true,
+      "source": "gramatika-5 §40",
+      "grade": 5
+    },
+    {
+      "ing": "сармак",
+      "ru": "вишня",
+      "group": "inanimate_ba_sg",
+      "marker": "ba",
+      "number": "sg",
+      "pluralIng": "сarmakash",
+      "pluralMarker": "da",
+      "flipBaDa": true,
+      "source": "gramatika-5 §40",
+      "grade": 5
+    },
+    {
+      "ing": "бер",
+      "ru": "ребёнок (как пример класса в таблице)",
+      "group": "inanimate_da_sg",
+      "marker": "da",
+      "number": "sg",
+      "pluralIng": "бераш",
+      "pluralMarker": "da",
+      "source": "gramatika-5 §40",
+      "grade": 5,
+      "note": "в §40 как образец 3–4 класса; одушевл."
+    },
+    {
+      "ing": "кор",
+      "ru": "девочка (образец в таблице)",
+      "group": "inanimate_da_sg",
+      "marker": "da",
+      "number": "sg",
+      "source": "gramatika-5 §40",
+      "grade": 5
+    }
+  ],
+  "byGrade": {
+    "2": {
+      "book": "ГIалгIай мотт, 2 кл. (Озиева, Гagiev)",
+      "status": "ocr_scan_only",
+      "topics": ["белгалонаш в легенде упражнений", "простые предложения"],
+      "note": "PDF — скан; классы вводятся через упражнения, цифрового текста нет"
+    },
+    "3": {
+      "book": "ГIалгIай мотт, 3 кл. (Гандалoeva et al.)",
+      "status": "not_imported",
+      "topics": ["расширение словаря", "белгалде / белгалон"]
+    },
+    "4": {
+      "book": "ГIалgIай мотт, 4 кл. (Гagiev et al.)",
+      "status": "not_imported",
+      "topics": ["предложение", "классовые признаки в упражнениях"]
+    },
+    "5": {
+      "book": "ГIалgIай метта грамматика (Мальсagova, Цицkieva)",
+      "status": "imported",
+      "sections": ["§40 классаш", "упр. 23–24", "белгалдаккхар"],
+      "entriesFromBook": 8
+    },
+    "6": {
+      "book": "Грамматика / язык 6 кл. (Сердало)",
+      "status": "not_imported",
+      "topics": ["6 классов, таблицы согласования"]
+    },
+    "7": {
+      "book": "ГIалgIай мотт 7 кл.",
+      "status": "not_imported"
+    },
+    "8": {
+      "book": "ГIалgIай мотт 8 кл.",
+      "status": "not_imported"
+    }
+  },
+  "stats": {
+    "entriesTotal": 30,
+    "fromUser": 22,
+    "fromGramatika5S40": 8,
+    "flipBaDaCount": 7,
+    "flipBaDaExceptions": ["боал/боалаш"]
+  }
+}

@@ -21,6 +21,8 @@ const {
   testGeminiConnection
 } = require("./llm");
 
+const { loadNounClassKnowledge } = require("./noun-classes");
+
 const ROOT = path.resolve(__dirname, "..");
 const WORKSPACE_ROOT = path.resolve(ROOT, "..");
 const HABAR_ROOT = WORKSPACE_ROOT;
@@ -57,6 +59,7 @@ const state = {
     lexemes: [],
     declensions: []
   },
+  nounClasses: null,
   moderationQueue: [],
   metrics: {
     lookupsWord: 0,
@@ -70,7 +73,8 @@ const state = {
     translateFromCorpus: 0,
     translateFromIngTerm: 0,
     translateFromLLM: 0,
-    translateRejected: 0
+    translateRejected: 0,
+    nounClassAgreementFixes: 0
   },
   phraseIndex: new Map(),
   inventoryStats: {}
@@ -339,13 +343,15 @@ function phrasesFromGrammarPatterns(patterns) {
   const seen = new Set();
   for (const pattern of patterns || []) {
     const ing = (pattern?.ingTemplate || "").toString().trim();
-    if (!ing) continue;
+    if (!ing || ing.includes("{")) continue;
+    if (Array.isArray(pattern?.slots) && pattern.slots.length) continue;
     const ruCandidates = [
       pattern?.examples?.[0]?.ru,
       pattern?.ruPattern
     ]
       .map((x) => (x || "").toString().trim())
-      .filter(Boolean);
+      .filter(Boolean)
+      .filter((ru) => !ru.includes("{"));
     for (const ru of ruCandidates) {
       const key = normalizePhraseKey(ru);
       if (!key || seen.has(key)) continue;
@@ -667,6 +673,7 @@ function resolveSlotForms(slotRu) {
     out.dat = out.dat || out.base;
     out.goal = out.goal || out.dat || out.base;
     out.want = wantVerbForLexeme(lexeme);
+    attachNounClassToForms(out, slotText, out.base);
     return out;
   }
 
@@ -674,13 +681,35 @@ function resolveSlotForms(slotRu) {
   if (tokens.length === 1) {
     const w = findWordForToken(tokens[0]);
     const base = pickBaseVariantFromWord(w);
-    return { base, dat: base, goal: base, want: "деза" };
+    const out = { base, dat: base, goal: base, want: "деза" };
+    attachNounClassToForms(out, slotText, base);
+    return out;
   }
 
   const composed = composeFromDictionaryTokens(slotText);
-  if (composed.ok) return { base: composed.translation, dat: composed.translation, goal: composed.translation, want: "деза" };
+  if (composed.ok) {
+    const out = { base: composed.translation, dat: composed.translation, goal: composed.translation, want: "деза" };
+    attachNounClassToForms(out, slotText, composed.translation);
+    return out;
+  }
 
   return { base: "", dat: "", goal: "", want: "деза" };
+}
+
+function attachNounClassToForms(forms, ruHint, ingHint) {
+  const nc = state.nounClasses;
+  if (!nc) return;
+  const resolved = nc.getMarkerFor(ruHint, { preferRu: true, ingForm: ingHint || forms.base });
+  if (!resolved?.copula) return;
+  const verified = /verified/.test(resolved.entry?.reviewStatus || "");
+  if (verified && resolved.entry?.ing) {
+    forms.base = resolved.entry.ing;
+    if (!forms.dat || forms.dat === ingHint) forms.dat = resolved.entry.ing;
+  }
+  forms.nounClass = resolved.marker;
+  forms.copula = resolved.copula.pair;
+  forms.classMarker = resolved.copula.marker;
+  forms.nounClassRuleIds = resolved.ruleIds;
 }
 
 function fillIngTemplate(template, slotValues) {
@@ -700,6 +729,8 @@ function fillIngTemplate(template, slotValues) {
     out = out
       .replace(new RegExp(`\\{${slotName}_BASE\\}`, "g"), base)
       .replace(new RegExp(`\\{${slotName}_DAT\\}`, "g"), dat)
+      .replace(new RegExp(`\\{${slotName}_COPULA\\}`, "g"), (forms?.copula || "").toString())
+      .replace(new RegExp(`\\{${slotName}_CLASS\\}`, "g"), (forms?.classMarker || "").toString())
       .replace(new RegExp(`\\{${slotName}\\}`, "g"), selected);
   }
   return out.replace(/\s+/g, " ").trim();
@@ -803,6 +834,47 @@ function tryGrammarPatternTranslate(ruText) {
     };
   }
   return { ok: false, translation: "" };
+}
+
+function applyNounClassAgreementToResult(translation, ruHint = "") {
+  const nc = state.nounClasses;
+  if (!nc || !translation) return { translation, nounClass: null };
+
+  const hints = {};
+  if (ruHint) {
+    const tokens = tokenizeRu(ruHint);
+    if (tokens.length === 1) hints.subjectRu = ruHint.trim();
+  }
+
+  const fixed = nc.applyCopulaAgreement(translation, hints);
+  if (fixed.changed) state.metrics.nounClassAgreementFixes += 1;
+  return {
+    translation: fixed.text,
+    nounClass: fixed.changed || fixed.entry
+      ? {
+          applied: fixed.changed,
+          subjectIng: fixed.subjectIng || null,
+          marker: fixed.marker || null,
+          previousMarker: fixed.previousMarker || null,
+          ruleIds: fixed.ruleIds || [],
+          entryId: fixed.entry?.id || null
+        }
+      : null
+  };
+}
+
+function grammarTranslateResult(translation, ruHint = "", extra = {}) {
+  state.metrics.translateFromGrammar += 1;
+  const agreed = applyNounClassAgreementToResult(translation, ruHint);
+  return {
+    ok: true,
+    translation: agreed.translation,
+    usedSource: SOURCE.GRAMMAR,
+    confidence: extra.confidence ?? 0.9,
+    fallbackUsed: extra.fallbackUsed ?? false,
+    patternId: extra.patternId,
+    nounClass: agreed.nounClass
+  };
 }
 
 const NEED_INFINITIVE_VERB_DOSH = {
@@ -1429,8 +1501,17 @@ async function translate(ruText, options = {}) {
     };
   }
 
-  // Короткие фразы из слов Dosh — до грамматики и LLM (быстрее, без таймаута)
+  // Короткие фразы: сначала грамматические шаблоны (классы, слоты), потом Dosh
   const ruWordsEarly = normalizeText(ru).split(" ").filter(Boolean);
+  if (ruWordsEarly.length >= 2) {
+    const byGrammarEarly = tryGrammarPatternTranslate(ru);
+    if (byGrammarEarly.ok) {
+      return grammarTranslateResult(byGrammarEarly.translation, ru, {
+        patternId: byGrammarEarly.patternId
+      });
+    }
+  }
+
   if (ruWordsEarly.length >= 2 && ruWordsEarly.length <= 4) {
     const composedEarly = composeFromDictionaryTokens(ru);
     if (composedEarly.ok) {
@@ -1453,14 +1534,9 @@ async function translate(ruText, options = {}) {
   if (isNegationInput) {
     const byGrammarNeg = tryGrammarPatternTranslate(ru);
     if (byGrammarNeg.ok) {
-      state.metrics.translateFromGrammar += 1;
-      return {
-        ok: true,
-        translation: byGrammarNeg.translation,
-        usedSource: SOURCE.GRAMMAR,
-        confidence: 0.9,
-        fallbackUsed: false
-      };
+      return grammarTranslateResult(byGrammarNeg.translation, ru, {
+        patternId: byGrammarNeg.patternId
+      });
     }
   }
 
@@ -1483,14 +1559,9 @@ async function translate(ruText, options = {}) {
   if (ruTokens.length >= 2) {
     const byGrammarPhrase = tryGrammarPatternTranslate(ru);
     if (byGrammarPhrase.ok) {
-      state.metrics.translateFromGrammar += 1;
-      return {
-        ok: true,
-        translation: byGrammarPhrase.translation,
-        usedSource: SOURCE.GRAMMAR,
-        confidence: 0.9,
-        fallbackUsed: false
-      };
+      return grammarTranslateResult(byGrammarPhrase.translation, ru, {
+        patternId: byGrammarPhrase.patternId
+      });
     }
   }
 
@@ -1509,14 +1580,9 @@ async function translate(ruText, options = {}) {
 
   const byGrammar = tryGrammarPatternTranslate(ru);
   if (byGrammar.ok) {
-    state.metrics.translateFromGrammar += 1;
-    return {
-      ok: true,
-      translation: byGrammar.translation,
-      usedSource: SOURCE.GRAMMAR,
-      confidence: 0.9,
-      fallbackUsed: false
-    };
+    return grammarTranslateResult(byGrammar.translation, ru, {
+      patternId: byGrammar.patternId
+    });
   }
 
   // Deterministic fallback: compose phrase from dosh token matches.
@@ -1671,6 +1737,8 @@ function getMetrics() {
       grammarRulesLoaded: state.grammar.rules.length,
       grammarLexemesLoaded: state.grammar.lexemes.length,
       grammarDeclensionsLoaded: state.grammar.declensions.length,
+      nounClassEntriesLoaded: state.nounClasses?.index?.count ?? 0,
+      nounClassAgreementFixes: state.metrics.nounClassAgreementFixes,
       moderationPending: state.moderationQueue.length
     }
   };
@@ -1731,20 +1799,31 @@ async function refreshAllSources({ pullCategories = false } = {}) {
     }
   }
 
-  const [words, phrases, corpus, blacklist, grammar] = await Promise.all([
+  const [words, phrases, corpus, blacklist, grammar, nounClasses] = await Promise.all([
     loadAllWords(),
     loadPhrases(),
     loadCorpus(),
     loadBlacklist(),
-    loadGrammarData()
+    loadGrammarData(),
+    loadNounClassKnowledge()
   ]);
   state.words = words;
   state.grammar = grammar;
+  state.nounClasses = nounClasses;
   state.phrases = mergePhraseRecords([...phrases, ...phrasesFromGrammarPatterns(grammar.patterns)]);
   state.corpus = corpus;
   state.blacklist = blacklist;
   rebuildPhraseIndex();
   return { ok: true, categoriesPulled, phrasesLoaded: state.phrases.length, phraseIndexKeys: state.phraseIndex.size };
+}
+
+function lookupNounClass(query, { by = "auto" } = {}) {
+  const nc = state.nounClasses;
+  if (!nc || !query) return null;
+  const q = String(query).trim();
+  if (by === "ru") return nc.getMarkerFor(q, { preferRu: true });
+  if (by === "ing") return nc.getMarkerFor(q, { preferRu: false, ingForm: q });
+  return nc.getMarkerFor(q, { preferRu: true, ingForm: q }) || nc.getMarkerFor(q);
 }
 
 module.exports = {
@@ -1753,6 +1832,7 @@ module.exports = {
   lookupWord,
   lookupPhrase,
   lookupCorpus,
+  lookupNounClass,
   translate,
   assistTask,
   getMetrics,

@@ -407,6 +407,14 @@
         }
       ],
       "notes": "Существование / отрицание (см. также rules aux_neg_*)"
+    },
+    {
+      "id": "noun_class_knowledge",
+      "type": "reference",
+      "source": "noun-class-knowledge.json",
+      "title": "Классовые признаки (ва, я, ба, да)",
+      "dataFile": "data/grammar/noun-class-knowledge.json",
+      "notes": "62 слова; composer использует composerRules и lookup по ing/ru. Шаблон {SLOT_COPULA} в patterns."
     }
   ]
 }

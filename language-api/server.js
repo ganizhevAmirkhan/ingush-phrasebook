@@ -198,6 +198,18 @@ async function adminApiRoute(req, res, apiPath, url) {
     }
   }
 
+  if (apiPath === "/grammar/noun-classes") {
+    if (req.method === "GET") {
+      const meta = q("meta") === "1";
+      if (meta) {
+        const data = await adminStore.getNounClassKnowledgeMeta();
+        return sendJson(res, 200, { ok: true, ...data });
+      }
+      const data = await adminStore.listNounClasses(listOpts());
+      return sendJson(res, 200, { ok: true, ...data });
+    }
+  }
+
   if (apiPath === "/corpus") {
     if (req.method === "GET") {
       const data = await adminStore.listCorpus(listOpts());

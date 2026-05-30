@@ -1,0 +1,2049 @@
+{
+  "schema": "noun-class-knowledge/v1",
+  "status": "draft_for_review",
+  "purpose": "Справочник для согласования сказуемого; composer ссылается на ruleId и example id",
+  "externalTextbooksRoot": "c:\\Users\\admin\\Desktop\\РАЗГОВОРНИК\\textbooks-ingush",
+  "noteGit": "PDF лежат в textbooks-ingush/ рядом с репо — GitHub Desktop не видит",
+  "generatedAt": "2026-05-30T17:35:54.732Z",
+  "composerRules": [
+    {
+      "id": "existential_ba",
+      "kind": "copula_agreement",
+      "marker": "ba",
+      "summaryRu": "Существование/наличие: … бай ба / … беш ба",
+      "predicatePattern": "{stem} бай ба",
+      "whenRu": "Подлежащее 3-го класса, ед.ч. (часто неодушевл.)",
+      "sourceRefs": [
+        "gramatika-5:§40",
+        "user:upr23"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "existential_da",
+      "kind": "copula_agreement",
+      "marker": "da",
+      "summaryRu": "Существование/наличие: … ду да / … беш да",
+      "predicatePattern": "{stem} ду да",
+      "whenRu": "Подлежащее 4-го класса или мн.ч. после ba→da",
+      "sourceRefs": [
+        "gramatika-5:§40",
+        "user:upr23"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "existential_ya",
+      "kind": "copula_agreement",
+      "marker": "ya",
+      "summaryRu": "Существование/наличие: … бу я / … беш я",
+      "predicatePattern": "{stem} бу я",
+      "whenRu": "Подлежащее 2-го класса (я)",
+      "sourceRefs": [
+        "gramatika-5:§40"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "existential_va",
+      "kind": "copula_agreement",
+      "marker": "va",
+      "summaryRu": "Существование/наличие: … вар ва (муж. класс)",
+      "predicatePattern": "{stem} вар ва",
+      "whenRu": "Подлежащее 1-го класса (ва), часто одушевл. м.р.",
+      "sourceRefs": [
+        "gramatika-5:§40"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "plural_ba_to_da",
+      "kind": "number_flip",
+      "marker": "da",
+      "summaryRu": "Мн.ч. многих слов с -ба в ед.: сказуемие на -да",
+      "whenRu": "лоам→лоамаш, никъa→някъаш, гIайба→гIайбаш и т.п.",
+      "sourceRefs": [
+        "gramatika-5:§40",
+        "user:upr23"
+      ],
+      "confidence": "partial",
+      "exceptions": [
+        "боал/боалаш — оба -ба"
+      ]
+    },
+    {
+      "id": "compound_da",
+      "kind": "morphology",
+      "marker": "da",
+      "summaryRu": "Сложные с -да-, -нана- часто класс D",
+      "whenRu": "да-нана, вошa-ишa, ков-карт",
+      "sourceRefs": [
+        "gramatika-5:§40"
+      ],
+      "confidence": "textbook"
+    },
+    {
+      "id": "lookup_not_phonology",
+      "kind": "constraint",
+      "summaryRu": "Класс не выводится по последней букве — только по словарю",
+      "sourceRefs": [
+        "user:upr23"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "sources": [
+    {
+      "id": "gramatika-5",
+      "title": "ГIалgIай метта грамматика, 5 класс (2010)",
+      "textFrom": "cache",
+      "chars": 213886,
+      "loaded": true
+    },
+    {
+      "id": "gramatika-6-7",
+      "title": "ГIалgIай метта грамматика, 6–7 класс (2011)",
+      "textFrom": "cache",
+      "chars": 444025,
+      "loaded": true
+    },
+    {
+      "id": "gramatika-8-9",
+      "title": "ГIалgIай метта грамматика, 8–9 класс (2011)",
+      "textFrom": "cache",
+      "chars": 417318,
+      "loaded": true
+    },
+    {
+      "id": "praktikum-1988",
+      "title": "ГIалgIай мотт Iомабара практикум (1988)",
+      "textFrom": "cache",
+      "chars": 358619,
+      "loaded": true
+    },
+    {
+      "id": "mott-2-ocr",
+      "title": "ГIалgIай мотт, 2 класс (2017, OCR)",
+      "textFrom": "fallback",
+      "chars": 102723,
+      "loaded": true
+    }
+  ],
+  "wordListsFromExercises": [
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "хандош",
+        "таьрахьдош",
+        "куцдош",
+        "ц1ерметтдош"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "адеш",
+        "ма-",
+        "ла"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "яха",
+        "хаттар",
+        "саг",
+        "бел-"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "цхьанкхийтта",
+        "де-",
+        "шаш"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "ва",
+        "ба",
+        "да"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "дешашца",
+        "предложенеш",
+        "оттае"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "хаттараш",
+        "ацарНа",
+        "жоплуц1ердешашахьаязде"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "дешаштахатта-",
+        "рашаувттадеш",
+        "хьаязде"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "ча-",
+        "ккхенаш",
+        "к1алтакахьакхе",
+        "белгалъе"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "цДердешаша",
+        "царцадувзаденнабелгал-",
+        "дешаш",
+        "хьат1аязде"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "предложенена",
+        "чухь",
+        "подле-",
+        "жащехдувцашдар"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "кертера",
+        "маьженаш",
+        "к1ал",
+        "така",
+        "ахьакхе"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "дешах",
+        "т1адерзар",
+        "оал"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "т1адерзар",
+        "к1ал",
+        "такахьакхе"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "цар",
+        "кертера",
+        "маьженаш"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "хьаракех",
+        "алапаш",
+        "оал"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "шоламукъазаалал",
+        "цхьатакахьакхе",
+        "шола-шолхамукъазадляпят",
+        "шитакахьакхе"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "мукъаза",
+        "оазаца",
+        "латте",
+        "шитакилгхьакхебелгалде"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "Воккха",
+        "йоккха",
+        "боккха",
+        "язду"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "й1аьха",
+        "мукъа",
+        "оаз"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "аюкъе",
+        "й1аьха",
+        "мукъа",
+        "оаз",
+        "к1ал",
+        "така",
+        "хьакхе",
+        "белгалъе"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "де-",
+        "шай",
+        "ма1ан"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "дешай",
+        "ма-",
+        "1ан",
+        "хьаала"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "дешашхьокхамга",
+        "хьежжа",
+        "хьат1аязде"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "ц1ердешаши",
+        "царца",
+        "бувзам",
+        "бола",
+        "дешаши",
+        "хьаала",
+        "царех",
+        "малаг1акъамаьладоакъош",
+        "оал"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "т1адерзар",
+        "цунца",
+        "дувзаденнадешаш"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "дола",
+        "ц1ерде-",
+        "шаш"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "дешаш",
+        "юкъе",
+        "кхувлаш",
+        "шоашкара",
+        "предложенеш",
+        "увттае"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "пхелаг1ча",
+        "предло-",
+        "жененачуйоаг1а",
+        "кертерамаьженаш"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "аеш",
+        "1о-",
+        "деша"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "долац1ердешаш",
+        "кхыча",
+        "х1амай",
+        "шоллаг1ча",
+        "классе",
+        "хул"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "наьха",
+        "ц1ераш",
+        "шинна",
+        "классаца",
+        "лелаш",
+        "хул"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "цу",
+        "ц1ердешай",
+        "чаккхенаш"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "дешашта",
+        "доаг1аш",
+        "дола",
+        "хаттараш",
+        "оттаде"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "цхьанкхийтта-",
+        "чадешашта",
+        "юкъерабувзам"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "дар",
+        "деш",
+        "вола",
+        "саге",
+        "кхы",
+        "х1ама"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "даршийна",
+        "т1адерза",
+        "саг",
+        "кхы",
+        "х1ама"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "ц1ердешашкадожар",
+        "аоттадеш",
+        "деш",
+        "т1ерахьаязде"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "доала",
+        "дожаре",
+        "латта",
+        "ц1ердешаш"
+      ]
+    },
+    {
+      "sourceRef": "gramatika-5:белгал",
+      "words": [
+        "дар",
+        "т1адожаш",
+        "вола",
+        "саг",
+        "х1ама",
+        "моттиг"
+      ]
+    }
+  ],
+  "stats": {
+    "entries": 62,
+    "withExamples": 23,
+    "withUserVerified": 30,
+    "extractedExamples": 25,
+    "rules": 7
+  },
+  "entries": [
+    {
+      "id": "nc_метти",
+      "ing": " метти",
+      "ru": "земля",
+      "markerSg": "da",
+      "numberDefault": "sg",
+      "compound": false,
+      "sources": [
+        {
+          "book": "user-upr23",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_da"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_1аж",
+      "ing": "1аж",
+      "ru": "яблоко",
+      "markerSg": "ba",
+      "markerPl": "ba",
+      "numberDefault": "sg",
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-5 §40",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "user_verified",
+      "grammaticalClass": "3"
+    },
+    {
+      "id": "nc_1ажяш",
+      "ing": "1ажяш",
+      "ru": "яблоки",
+      "markerSg": "ba",
+      "numberDefault": "sg",
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-5 §40",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_амат",
+      "ing": "Амат",
+      "ru": null,
+      "markerSg": "da",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-6-7",
+          "ref": "gramatika-6-7:paren",
+          "verified": "draft"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ex_амат_0",
+          "snippetIng": "Амат (да)",
+          "marker": "da",
+          "sourceRef": "gramatika-6-7:paren",
+          "confidence": "textbook_paren"
+        }
+      ],
+      "composerRuleIds": [
+        "existential_da"
+      ],
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "nc_б1енаш",
+      "ing": "б1енаш",
+      "ru": "гнёзда",
+      "markerSg": "da",
+      "numberDefault": "sg",
+      "compound": false,
+      "sources": [
+        {
+          "book": "user",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_da"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_б1ил",
+      "ing": "Б1ил",
+      "ru": null,
+      "markerSg": "da",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-8-9",
+          "ref": "gramatika-8-9:paren",
+          "verified": "draft"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ex_б1ил_0",
+          "snippetIng": "Б1ил (да)",
+          "marker": "da",
+          "sourceRef": "gramatika-8-9:paren",
+          "confidence": "textbook_paren"
+        }
+      ],
+      "composerRuleIds": [
+        "existential_da"
+      ],
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "nc_б1e",
+      "ing": "б1e",
+      "ru": "гнездо",
+      "markerSg": "ba",
+      "markerPl": "da",
+      "numberDefault": "sg",
+      "flipBaDa": true,
+      "compound": false,
+      "sources": [
+        {
+          "book": "user",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_ба",
+      "ing": "ба",
+      "ru": null,
+      "markerSg": "ba",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-5",
+          "ref": "gramatika-5:paren",
+          "verified": "draft"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ex_ба_0",
+          "snippetIng": "ба (ба)",
+          "marker": "ba",
+          "sourceRef": "gramatika-5:paren",
+          "confidence": "textbook_paren"
+        },
+        {
+          "id": "ex_ба_1",
+          "snippetIng": "ба (да)",
+          "marker": "da",
+          "sourceRef": "gramatika-5:paren",
+          "confidence": "textbook_paren"
+        }
+      ],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "nc_бер",
+      "ing": "бер",
+      "ru": "ребёнок (как пример класса в таблице)",
+      "markerSg": "da",
+      "markerPl": "da",
+      "numberDefault": "sg",
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-5 §40",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_da"
+      ],
+      "reviewStatus": "user_verified",
+      "grammaticalClass": "3-4"
+    },
+    {
+      "id": "nc_боал",
+      "ing": "боал",
+      "ru": "черешня",
+      "markerSg": "ba",
+      "markerPl": "ba",
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "user",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_боалаш",
+      "ing": "боалаш",
+      "ru": "черешни",
+      "markerSg": "ba",
+      "numberDefault": "sg",
+      "compound": false,
+      "sources": [
+        {
+          "book": "user",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_бов",
+      "ing": "бов",
+      "ru": null,
+      "markerSg": "ya",
+      "markerPl": "ya",
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-5",
+          "ref": "§40",
+          "verified": "textbook"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ya"
+      ],
+      "reviewStatus": "textbook_verified",
+      "grammaticalClass": "2"
+    },
+    {
+      "id": "nc_бутт",
+      "ing": "бутт",
+      "ru": "месяц / луна",
+      "markerSg": "ba",
+      "numberDefault": "sg",
+      "compound": false,
+      "sources": [
+        {
+          "book": "user-upr23",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_в1ил",
+      "ing": "В1ил",
+      "ru": null,
+      "markerSg": "da",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-6-7",
+          "ref": "gramatika-6-7:paren",
+          "verified": "draft"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ex_в1ил_0",
+          "snippetIng": "В1ил (да)",
+          "marker": "da",
+          "sourceRef": "gramatika-6-7:paren",
+          "confidence": "textbook_paren"
+        }
+      ],
+      "composerRuleIds": [
+        "existential_da"
+      ],
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "nc_ва",
+      "ing": "ва",
+      "ru": null,
+      "markerSg": "ba",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-5",
+          "ref": "gramatika-5:paren",
+          "verified": "draft"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ex_ва_0",
+          "snippetIng": "ва (ба)",
+          "marker": "ba",
+          "sourceRef": "gramatika-5:paren",
+          "confidence": "textbook_paren"
+        },
+        {
+          "id": "ex_ва_1",
+          "snippetIng": "ва (я)",
+          "marker": "ya",
+          "sourceRef": "gramatika-6-7:paren",
+          "confidence": "textbook_paren"
+        }
+      ],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "nc_вошa_ишa",
+      "ing": "вошa-ишa",
+      "ru": null,
+      "markerSg": "da",
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": true,
+      "sources": [
+        {
+          "book": "gramatika-5",
+          "ref": "§40",
+          "verified": "textbook"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_da",
+        "compound_da"
+      ],
+      "reviewStatus": "textbook_verified",
+      "grammaticalClass": "4"
+    },
+    {
+      "id": "nc_говр",
+      "ing": "говр",
+      "ru": null,
+      "markerSg": "ya",
+      "markerPl": "ya",
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-5",
+          "ref": "§40",
+          "verified": "textbook"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ya"
+      ],
+      "reviewStatus": "textbook_verified",
+      "grammaticalClass": "2"
+    },
+    {
+      "id": "nc_гтат",
+      "ing": "гТат",
+      "ru": null,
+      "markerSg": "ya",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "mott-2-ocr",
+          "ref": "mott-2-ocr:paren",
+          "verified": "draft"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ex_гтат_0",
+          "snippetIng": "гТат (я)",
+          "marker": "ya",
+          "sourceRef": "mott-2-ocr:paren",
+          "confidence": "textbook_paren"
+        }
+      ],
+      "composerRuleIds": [
+        "existential_ya"
+      ],
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "nc_гiайба",
+      "ing": "гIайба",
+      "ru": "слива",
+      "markerSg": "ba",
+      "markerPl": "da",
+      "numberDefault": "sg",
+      "flipBaDa": true,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-5 §40",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "user_verified",
+      "grammaticalClass": "3"
+    },
+    {
+      "id": "nc_гiанд",
+      "ing": "гIанд",
+      "ru": "стул",
+      "markerSg": "da",
+      "numberDefault": "sg",
+      "compound": false,
+      "sources": [
+        {
+          "book": "user",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_da"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_да",
+      "ing": "да",
+      "ru": null,
+      "markerSg": "da",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-5",
+          "ref": "gramatika-5:paren",
+          "verified": "draft"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ex_да_0",
+          "snippetIng": "да (да)",
+          "marker": "da",
+          "sourceRef": "gramatika-5:paren",
+          "confidence": "textbook_paren"
+        }
+      ],
+      "composerRuleIds": [
+        "existential_da"
+      ],
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "nc_да_нана",
+      "ing": "да-нана",
+      "ru": null,
+      "markerSg": "da",
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": true,
+      "sources": [
+        {
+          "book": "gramatika-5",
+          "ref": "§40",
+          "verified": "textbook"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_da",
+        "compound_da"
+      ],
+      "reviewStatus": "textbook_verified",
+      "grammaticalClass": "4"
+    },
+    {
+      "id": "nc_зале",
+      "ing": "зале",
+      "ru": null,
+      "markerSg": "ya",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-8-9",
+          "ref": "gramatika-8-9:paren",
+          "verified": "draft"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ex_зале_0",
+          "snippetIng": "зале (я)",
+          "marker": "ya",
+          "sourceRef": "gramatika-8-9:paren",
+          "confidence": "textbook_paren"
+        }
+      ],
+      "composerRuleIds": [
+        "existential_ya"
+      ],
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "nc_ииiиг",
+      "ing": "ииIиг",
+      "ru": null,
+      "markerSg": "ya",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-6-7",
+          "ref": "gramatika-6-7:paren",
+          "verified": "draft"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ex_ииiиг_0",
+          "snippetIng": "ииIиг (я)",
+          "marker": "ya",
+          "sourceRef": "gramatika-6-7:paren",
+          "confidence": "textbook_paren"
+        }
+      ],
+      "composerRuleIds": [
+        "existential_ya"
+      ],
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "nc_истол",
+      "ing": "истол",
+      "ru": "стол",
+      "markerSg": "da",
+      "numberDefault": "sg",
+      "compound": false,
+      "sources": [
+        {
+          "book": "user",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_da"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_йи1иг",
+      "ing": "йи1иг",
+      "ru": null,
+      "markerSg": "ya",
+      "markerPl": "ya",
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-5",
+          "ref": "§40",
+          "verified": "textbook"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ya"
+      ],
+      "reviewStatus": "textbook_verified",
+      "grammaticalClass": "2"
+    },
+    {
+      "id": "nc_к1aьнк",
+      "ing": "к1aьнк",
+      "ru": null,
+      "markerSg": "va",
+      "markerPl": "ba",
+      "numberDefault": "sg",
+      "flipBaDa": true,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-5",
+          "ref": "§40",
+          "verified": "textbook"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_va"
+      ],
+      "reviewStatus": "textbook_verified",
+      "grammaticalClass": "1"
+    },
+    {
+      "id": "nc_коа",
+      "ing": "коа",
+      "ru": "двор",
+      "markerSg": "ba",
+      "numberDefault": "sg",
+      "compound": false,
+      "sources": [
+        {
+          "book": "user",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ex_user_коа",
+          "snippetIng": "Коа сийна бай ба — «Во дворе синяя трава есть»",
+          "sourceRef": "user",
+          "confidence": "verified"
+        }
+      ],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_ков_карт",
+      "ing": "ков-карт",
+      "ru": null,
+      "markerSg": "da",
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": true,
+      "sources": [
+        {
+          "book": "gramatika-5",
+          "ref": "§40",
+          "verified": "textbook"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_da",
+        "compound_da"
+      ],
+      "reviewStatus": "textbook_verified",
+      "grammaticalClass": "4"
+    },
+    {
+      "id": "nc_кор",
+      "ing": "кор",
+      "ru": "девочка (образец в таблице)",
+      "markerSg": "da",
+      "numberDefault": "sg",
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-5 §40",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_da"
+      ],
+      "reviewStatus": "user_verified",
+      "grammaticalClass": "3-4"
+    },
+    {
+      "id": "nc_кха",
+      "ing": "кха",
+      "ru": "поле",
+      "markerSg": "da",
+      "numberDefault": "sg",
+      "compound": false,
+      "sources": [
+        {
+          "book": "user-upr23",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_da"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_кхор",
+      "ing": "кхор",
+      "ru": "груша",
+      "markerSg": "ba",
+      "markerPl": "ba",
+      "numberDefault": "sg",
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-5 §40",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "user_verified",
+      "grammaticalClass": "3"
+    },
+    {
+      "id": "nc_къонах",
+      "ing": "къонах",
+      "ru": null,
+      "markerSg": "va",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "praktikum-1988",
+          "ref": "praktikum-1988:6classes",
+          "verified": "textbook"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ex_къонах_0",
+          "snippetIng": "Къонах (ва)",
+          "marker": "va",
+          "sourceRef": "praktikum-1988:paren",
+          "confidence": "textbook_paren"
+        }
+      ],
+      "composerRuleIds": [
+        "existential_va"
+      ],
+      "reviewStatus": "textbook_verified"
+    },
+    {
+      "id": "nc_кiаънк",
+      "ing": "кIаънк",
+      "ru": null,
+      "markerSg": "va",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-6-7",
+          "ref": "gramatika-6-7:paren",
+          "verified": "draft"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ex_кiаънк_0",
+          "snippetIng": "кIаънк(ва)",
+          "marker": "va",
+          "sourceRef": "gramatika-6-7:paren",
+          "confidence": "textbook_paren"
+        }
+      ],
+      "composerRuleIds": [
+        "existential_va"
+      ],
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "nc_лоам",
+      "ing": "лоам",
+      "ru": "гора",
+      "markerSg": "ba",
+      "markerPl": "da",
+      "numberDefault": "sg",
+      "flipBaDa": true,
+      "compound": false,
+      "sources": [
+        {
+          "book": "user-upr23",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_лоамаш",
+      "ing": "лоамаш",
+      "ru": "горы",
+      "markerSg": "da",
+      "numberDefault": "sg",
+      "compound": false,
+      "sources": [
+        {
+          "book": "user-upr23",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_da"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_малх",
+      "ing": "малх",
+      "ru": "солнце",
+      "markerSg": "ba",
+      "numberDefault": "sg",
+      "compound": false,
+      "sources": [
+        {
+          "book": "user-upr23",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_мангал",
+      "ing": "мангал",
+      "ru": null,
+      "markerSg": "ba",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-6-7",
+          "ref": "gramatika-6-7:§20",
+          "verified": "textbook"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "textbook_verified"
+    },
+    {
+      "id": "nc_мангi",
+      "ing": "мангI",
+      "ru": "коса",
+      "markerSg": "ba",
+      "numberDefault": "sg",
+      "compound": false,
+      "sources": [
+        {
+          "book": "user",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_мотт",
+      "ing": "мотт",
+      "ru": null,
+      "markerSg": "ba",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-6-7",
+          "ref": "gramatika-6-7:§20",
+          "verified": "textbook"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "textbook_verified",
+      "note": "легар мотт—метта"
+    },
+    {
+      "id": "nc_несарий",
+      "ing": "несарий",
+      "ru": null,
+      "markerSg": "ya",
+      "markerPl": "ba",
+      "numberDefault": "sg",
+      "flipBaDa": true,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-5",
+          "ref": "§40",
+          "verified": "textbook"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ya"
+      ],
+      "reviewStatus": "textbook_verified",
+      "grammaticalClass": "2/3"
+    },
+    {
+      "id": "nc_никъa",
+      "ing": "никъa",
+      "ru": "дорога",
+      "markerSg": "ba",
+      "markerPl": "da",
+      "numberDefault": "sg",
+      "flipBaDa": true,
+      "compound": false,
+      "sources": [
+        {
+          "book": "user-upr23",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_някъаш",
+      "ing": "някъаш",
+      "ru": "дороги",
+      "markerSg": "da",
+      "numberDefault": "sg",
+      "compound": false,
+      "sources": [
+        {
+          "book": "user-upr23",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_da"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_пишк",
+      "ing": "пишк",
+      "ru": "печка",
+      "markerSg": "ya",
+      "numberDefault": "sg",
+      "compound": false,
+      "sources": [
+        {
+          "book": "user",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ya"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_сармак",
+      "ing": "сармак",
+      "ru": "вишня",
+      "markerSg": "ba",
+      "markerPl": "da",
+      "numberDefault": "sg",
+      "flipBaDa": true,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-5 §40",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "user_verified",
+      "grammaticalClass": "3"
+    },
+    {
+      "id": "nc_седкъа",
+      "ing": "седкъа",
+      "ru": "звезда",
+      "markerSg": "ba",
+      "markerPl": "da",
+      "numberDefault": "sg",
+      "flipBaDa": true,
+      "compound": false,
+      "sources": [
+        {
+          "book": "user-upr23",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_седкъий",
+      "ing": "седкъий",
+      "ru": "звёзды",
+      "markerSg": "da",
+      "numberDefault": "sg",
+      "compound": false,
+      "sources": [
+        {
+          "book": "user-upr23",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_da"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_сесаг",
+      "ing": "сесаг",
+      "ru": null,
+      "markerSg": "ya",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "praktikum-1988",
+          "ref": "praktikum-1988:6classes",
+          "verified": "textbook"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ex_сесаг_0",
+          "snippetIng": "сесаг (я)",
+          "marker": "ya",
+          "sourceRef": "praktikum-1988:paren",
+          "confidence": "textbook_paren"
+        }
+      ],
+      "composerRuleIds": [
+        "existential_ya"
+      ],
+      "reviewStatus": "textbook_verified"
+    },
+    {
+      "id": "nc_уъ",
+      "ing": "уъ",
+      "ru": null,
+      "markerSg": "ba",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-8-9",
+          "ref": "gramatika-8-9:paren",
+          "verified": "draft"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ex_уъ_0",
+          "snippetIng": "уъ (ба)",
+          "marker": "ba",
+          "sourceRef": "gramatika-8-9:paren",
+          "confidence": "textbook_paren"
+        }
+      ],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "nc_форд",
+      "ing": "форд",
+      "ru": null,
+      "markerSg": "ba",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-6-7",
+          "ref": "gramatika-6-7:§20",
+          "verified": "textbook"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "textbook_verified",
+      "note": "легар, III группа"
+    },
+    {
+      "id": "nc_харбаз",
+      "ing": "харбаз",
+      "ru": "арбуз",
+      "markerSg": "ya",
+      "markerPl": "ya",
+      "numberDefault": "sg",
+      "compound": false,
+      "sources": [
+        {
+          "book": "user",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ya"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_харбазаш",
+      "ing": "харбазаш",
+      "ru": "арбузы",
+      "markerSg": "ya",
+      "numberDefault": "sg",
+      "compound": false,
+      "sources": [
+        {
+          "book": "user",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_ya"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_херх",
+      "ing": "херх",
+      "ru": null,
+      "markerSg": "ba",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-6-7",
+          "ref": "gramatika-6-7:paren",
+          "verified": "draft"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ex_херх_0",
+          "snippetIng": "херх (ба)",
+          "marker": "ba",
+          "sourceRef": "gramatika-6-7:paren",
+          "confidence": "textbook_paren"
+        }
+      ],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "nc_хи",
+      "ing": "хи",
+      "ru": null,
+      "markerSg": "ba",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "praktikum-1988",
+          "ref": "praktikum-1988:6classes",
+          "verified": "textbook"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ex_хи_0",
+          "snippetIng": "хи (ба)",
+          "marker": "ba",
+          "sourceRef": "praktikum-1988:paren",
+          "confidence": "textbook_paren"
+        }
+      ],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "textbook_verified"
+    },
+    {
+      "id": "nc_хий",
+      "ing": "хий",
+      "ru": "вода",
+      "markerSg": "da",
+      "numberDefault": "sg",
+      "compound": false,
+      "sources": [
+        {
+          "book": "user-upr23",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ex_хий_0",
+          "snippetIng": "хий (да)",
+          "marker": "da",
+          "sourceRef": "praktikum-1988:paren",
+          "confidence": "textbook_paren"
+        }
+      ],
+      "composerRuleIds": [
+        "existential_da"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_хир",
+      "ing": "Хир",
+      "ru": null,
+      "markerSg": "da",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-6-7",
+          "ref": "gramatika-6-7:paren",
+          "verified": "draft"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ex_хир_0",
+          "snippetIng": "Хир (да)",
+          "marker": "da",
+          "sourceRef": "gramatika-6-7:paren",
+          "confidence": "textbook_paren"
+        }
+      ],
+      "composerRuleIds": [
+        "existential_da"
+      ],
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "nc_хорш",
+      "ing": "Хорш",
+      "ru": null,
+      "markerSg": "ya",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-6-7",
+          "ref": "gramatika-6-7:paren",
+          "verified": "draft"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ex_хорш_0",
+          "snippetIng": "Хорш (я)",
+          "marker": "ya",
+          "sourceRef": "gramatika-6-7:paren",
+          "confidence": "textbook_paren"
+        }
+      ],
+      "composerRuleIds": [
+        "existential_ya"
+      ],
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "nc_хьайба",
+      "ing": "хьайба",
+      "ru": null,
+      "markerSg": "da",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "mott-2-ocr",
+          "ref": "mott-2-ocr:paren",
+          "verified": "draft"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ex_хьайба_0",
+          "snippetIng": "хьайба (да)",
+          "marker": "da",
+          "sourceRef": "mott-2-ocr:paren",
+          "confidence": "textbook_paren"
+        },
+        {
+          "id": "ex_хьайба_1",
+          "snippetIng": "хьайба (я)",
+          "marker": "ya",
+          "sourceRef": "mott-2-ocr:paren",
+          "confidence": "textbook_paren"
+        }
+      ],
+      "composerRuleIds": [
+        "existential_da"
+      ],
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "nc_цiа",
+      "ing": "цIа",
+      "ru": null,
+      "markerSg": "da",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-6-7",
+          "ref": "gramatika-6-7:paren",
+          "verified": "draft"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ex_цiа_0",
+          "snippetIng": "цIа (да)",
+          "marker": "da",
+          "sourceRef": "gramatika-6-7:paren",
+          "confidence": "textbook_paren"
+        }
+      ],
+      "composerRuleIds": [
+        "existential_da"
+      ],
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "nc_цiеракiаьга",
+      "ing": "ЦIеракIаьга",
+      "ru": null,
+      "markerSg": "da",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-6-7",
+          "ref": "gramatika-6-7:paren",
+          "verified": "draft"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ex_цiеракiаьга_0",
+          "snippetIng": "ЦIеракIаьга (да)",
+          "marker": "da",
+          "sourceRef": "gramatika-6-7:paren",
+          "confidence": "textbook_paren"
+        }
+      ],
+      "composerRuleIds": [
+        "existential_da"
+      ],
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "nc_шод",
+      "ing": "шод",
+      "ru": "вилы",
+      "markerSg": "da",
+      "numberDefault": "sg",
+      "compound": false,
+      "sources": [
+        {
+          "book": "user",
+          "ref": "grade-5",
+          "verified": "user"
+        }
+      ],
+      "examples": [],
+      "composerRuleIds": [
+        "existential_da"
+      ],
+      "reviewStatus": "user_verified"
+    },
+    {
+      "id": "nc_ювргiа",
+      "ing": "ювргIа",
+      "ru": null,
+      "markerSg": "ba",
+      "markerPl": null,
+      "numberDefault": "sg",
+      "flipBaDa": false,
+      "compound": false,
+      "sources": [
+        {
+          "book": "gramatika-6-7",
+          "ref": "gramatika-6-7:upr88",
+          "verified": "textbook"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ex_ювргiа_0",
+          "snippetIng": "ювргIа (ба)",
+          "marker": "ba",
+          "sourceRef": "gramatika-6-7:paren",
+          "confidence": "textbook_paren"
+        }
+      ],
+      "composerRuleIds": [
+        "existential_ba"
+      ],
+      "reviewStatus": "textbook_verified"
+    }
+  ]
+}

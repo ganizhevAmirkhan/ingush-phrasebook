@@ -1,0 +1,113 @@
+{
+  "source": "dzurdzuki.com/biblioteka",
+  "fetchedAt": "2026-05-30",
+  "forNounClasses": true,
+  "items": [
+    {
+      "id": "mott-2",
+      "grade": 2,
+      "type": "mott",
+      "title": "ГIалгIай мотт. 2 класс (2017)",
+      "pdf": "https://dzurdzuki.com/wp-content/uploads/download-manager-files/galgaj-mott-2-klass.-2017-god.-.pdf",
+      "sizeMb": 108,
+      "localDir": "gialgaj-mott-2-klass-2017",
+      "status": "partial_local",
+      "nounClassValue": "exercises",
+      "note": "Скан; OCR есть частично. Белгалонаш в упражнениях."
+    },
+    {
+      "id": "mott-3",
+      "grade": 3,
+      "type": "mott",
+      "title": "ГIалgIай мотт. 3 класс (2017)",
+      "pdf": "https://dzurdzuki.com/wp-content/uploads/download-manager-files/galgaj-mott-3-klass.-2017-god.-.pdf",
+      "sizeMb": 169,
+      "localDir": "gialgaj-mott-3-klass-2017",
+      "status": "not_downloaded",
+      "nounClassValue": "high",
+      "note": "Белгалде / белгалон — ключевой для классов."
+    },
+    {
+      "id": "mott-4",
+      "grade": 4,
+      "type": "mott",
+      "title": "ГIалgIай мотт. 4 класс (Гагиев, Котиева, Оздоев, 2009)",
+      "pdf": null,
+      "sizeMb": null,
+      "localDir": "gialgaj-mott-4-klass-2009",
+      "status": "not_on_dzurdzuki",
+      "nounClassValue": "high",
+      "note": "На dzurdzuki.com нет. Есть в каталоге РГБ (бумага). Альт: Гандалоева, Оздоев Р.И. (новее)."
+    },
+    {
+      "id": "gramatika-5",
+      "grade": 5,
+      "type": "gramatika",
+      "title": "ГIалgIай метта грамматика, 5 класс (2010)",
+      "pdf": "https://dzurdzuki.com/wp-content/uploads/download-manager-files/malsagova-l.-d.-cziczkieva-a.-d.-gialgiaj-metta-gramatika-5-klass.-magas-2010-g..pdf",
+      "sizeMb": 6.7,
+      "localDir": "gialgiai-metta-gramatika-5-klass-2010",
+      "status": "imported",
+      "nounClassValue": "very_high",
+      "note": "§40 таблица классов, упр. 23–24, 351–353."
+    },
+    {
+      "id": "gramatika-6-7",
+      "grade": [
+        6,
+        7
+      ],
+      "type": "gramatika",
+      "title": "ГIалgIай метта грамматика, 6–7 класс (Оздоев, 2011)",
+      "slug": "ozdoev-i-a-ozdoev-r-i-gialgiaj-metta-grammatika-6-7-klass-2011",
+      "pdf": "https://dzurdzuki.com/wp-content/uploads/download-manager-files/Ozdoev-I.A-Ozdoev-R.I.-GIalgIaj-metta-grammatika-6-7-klass-2011.pdf",
+      "sizeMb": 24,
+      "localDir": "gialgiai-metta-gramatika-6-7-klass-2011",
+      "status": "not_downloaded",
+      "nounClassValue": "very_high",
+      "note": "6 классов, таблицы согласования."
+    },
+    {
+      "id": "gramatika-8-9",
+      "grade": [
+        8,
+        9
+      ],
+      "type": "gramatika",
+      "title": "ГIалgIай метта грамматика, 8–9 класс (Оздоев, 2011)",
+      "slug": "ozdoev-i-a-ozdoev-r-i-gialgiaj-metta-grammatika-8-9-klass-2011",
+      "pdf": "https://dzurdzuki.com/wp-content/uploads/download-manager-files/Ozdoev-I.A-Ozdoev-R.I.-GIalgIaj-metta-grammatika-8-9-klass-2011.pdf",
+      "sizeMb": 10,
+      "localDir": "gialgiai-metta-gramatika-8-9-klass-2011",
+      "status": "not_downloaded",
+      "nounClassValue": "very_high",
+      "note": "Синтаксис + классы."
+    },
+    {
+      "id": "deshara-2",
+      "grade": 2,
+      "type": "reader",
+      "title": "Дешара книжка, 2 класс (2017)",
+      "slug": "deshara-knizhka-2-klass-sost-shadiev-s-a-2017",
+      "pdf": "https://dzurdzuki.com/wp-content/uploads/download-manager-files/Deshara-knizhka-2-klass-sost.-SHadiev-S.A-2017.pdf",
+      "sizeMb": 14,
+      "localDir": "deshara-knizhka-2-klass-2017",
+      "status": "not_downloaded",
+      "nounClassValue": "low",
+      "note": "Читательская книга, не грамматика."
+    },
+    {
+      "id": "praktikum-1988",
+      "grade": null,
+      "type": "reference",
+      "title": "ГIалgIай мотт Iомабара практикум (Гандалоева, 1988)",
+      "slug": "gandaloeva-a-z-gialgiaj-mott-iomabara-praktikum-1988",
+      "pdf": "https://dzurdzuki.com/wp-content/uploads/download-manager-files/Gandaloeva-A.Z.-GIalgIaj-mott-Iomabara-praktikum-1988.pdf",
+      "sizeMb": 25,
+      "localDir": "gialgaj-mott-iomabara-praktikum-1988",
+      "status": "not_downloaded",
+      "nounClassValue": "medium",
+      "note": "Практикум, много упражнений на классы."
+    }
+  ]
+}
