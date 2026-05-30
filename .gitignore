@@ -3,3 +3,7 @@
 language-api/.env
 language-api/data/moderation-queue.log.jsonl
 node_modules/
+
+language-api/data/external/textbooks/**/_digitized/
+language-api/data/external/textbooks/**/*.pdf
+language-api/data/external/tessdata/
