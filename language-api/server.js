@@ -210,6 +210,20 @@ async function adminApiRoute(req, res, apiPath, url) {
     }
   }
 
+  if (apiPath === "/grammar/overview") {
+    if (req.method === "GET") {
+      const sectionId = q("section");
+      if (sectionId) {
+        const section = await adminStore.getGrammarOverviewSection(decodeURIComponent(sectionId));
+        return section
+          ? sendJson(res, 200, { ok: true, section })
+          : sendJson(res, 404, { ok: false, error: "section_not_found" });
+      }
+      const data = await adminStore.getGrammarOverviewMeta();
+      return sendJson(res, 200, { ok: true, ...data });
+    }
+  }
+
   if (apiPath === "/corpus") {
     if (req.method === "GET") {
       const data = await adminStore.listCorpus(listOpts());

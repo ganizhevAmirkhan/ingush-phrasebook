@@ -25,6 +25,7 @@ const GRAMMAR_FILES = {
 };
 
 const NOUN_CLASS_KNOWLEDGE_FILE = path.join(GRAMMAR_DIR, "noun-class-knowledge.json");
+const GRAMMAR_OVERVIEW_FILE = path.join(GRAMMAR_DIR, "grammar-overview-knowledge.json");
 
 async function readJson(filePath) {
   const raw = await fs.readFile(filePath, "utf8");
@@ -100,9 +101,16 @@ async function getInventory() {
     // empty
   }
   let nounClassEntries = 0;
+  let grammarOverviewSections = 0;
   try {
     const nc = await readJson(NOUN_CLASS_KNOWLEDGE_FILE);
     nounClassEntries = Array.isArray(nc?.entries) ? nc.entries.length : 0;
+  } catch {
+    // empty
+  }
+  try {
+    const ov = await readJson(GRAMMAR_OVERVIEW_FILE);
+    grammarOverviewSections = Array.isArray(ov?.sections) ? ov.sections.length : 0;
   } catch {
     // empty
   }
@@ -112,6 +120,7 @@ async function getInventory() {
     rules: rules.length,
     lexemes: lexemes.length,
     nounClassEntries,
+    grammarOverviewSections,
     corpusStories: storyFiles.length,
     corpusNovellas: novellaFiles.length,
     blacklist: blacklist.length
@@ -381,6 +390,32 @@ async function getNounClassKnowledgeMeta() {
   }
 }
 
+async function getGrammarOverviewMeta() {
+  try {
+    const json = await readJson(GRAMMAR_OVERVIEW_FILE);
+    const sections = Array.isArray(json?.sections) ? json.sections : [];
+    return {
+      schema: json?.schema || null,
+      source: json?.source || null,
+      excludedBecauseElsewhere: json?.excludedBecauseElsewhere || [],
+      sections: sections.map((s) => ({ id: s.id, title: s.title })),
+      sectionCount: sections.length
+    };
+  } catch {
+    return { schema: null, source: null, excludedBecauseElsewhere: [], sections: [], sectionCount: 0 };
+  }
+}
+
+async function getGrammarOverviewSection(id) {
+  try {
+    const json = await readJson(GRAMMAR_OVERVIEW_FILE);
+    const section = (json?.sections || []).find((s) => s.id === id);
+    return section || null;
+  } catch {
+    return null;
+  }
+}
+
 module.exports = {
   getAdminSecret,
   isAdminAuthorized,
@@ -404,5 +439,7 @@ module.exports = {
   addBlacklistTerm,
   removeBlacklistTerm,
   listNounClasses,
-  getNounClassKnowledgeMeta
+  getNounClassKnowledgeMeta,
+  getGrammarOverviewMeta,
+  getGrammarOverviewSection
 };

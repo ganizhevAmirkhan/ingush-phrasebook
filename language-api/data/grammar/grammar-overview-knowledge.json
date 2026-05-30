@@ -1,0 +1,405 @@
+{
+  "schema": "grammar-overview-knowledge/v1",
+  "source": "Главные особенности грамматики.docx",
+  "sourceNote": "Конспект; дубли с noun-class-knowledge, rules.json, declensions.json и patterns.json не включены",
+  "excludedBecauseElsewhere": [
+    "6 грамматических классов и copula → noun-class-knowledge.json",
+    "8 падежей (обзор), парадигма цIа/зiza, склонение местоимений Мальсагова → declensions.json",
+    "Личные местоимения (базовые), вопросительные частицы, ба/да → rules.json",
+    "Послелоги (паттерны перевода) → patterns.json postposition_*"
+  ],
+  "sections": [
+    {
+      "id": "phonetics",
+      "title": "Фонетика и специфические буквы",
+      "items": [
+        { "symbol": "Ӏ", "labelRu": "палочка", "noteRu": "гортанный знак; меняет гласные или обозначает глубоко-гортанный согласный" },
+        { "symbol": "ГӀ", "exampleIng": "гӀала", "exampleRu": "город", "noteRu": "глухой хриплый «г»" },
+        { "symbol": "Кх", "exampleIng": "кхалсаг", "exampleRu": "женщина", "noteRu": "глоточный «к»" },
+        { "symbol": "Къ", "exampleIng": "къонах", "exampleRu": "мужчина", "noteRu": "взрывной «к»" },
+        { "symbol": "ПӀ / ТӀ / ЦӀ / ЧӀ", "noteRu": "абруптивные (взрывные с задержкой воздуха)" }
+      ]
+    },
+    {
+      "id": "paradigm_kniga",
+      "title": "Склонение «книга» (8 падежей)",
+      "lemmaRu": "книга",
+      "lemmaIng": "книга",
+      "rows": [
+        { "caseRu": "именительный", "caseIng": "цIерад падеж", "formIng": "книга", "exampleRu": "книга" },
+        { "caseRu": "родительный", "caseIng": "доалад падеж", "formIng": "книгана", "exampleRu": "книги" },
+        { "caseRu": "дательный", "caseIng": "лура падеж", "formIng": "книгана", "exampleRu": "книге" },
+        { "caseRu": "эргативный", "caseIng": "веттад падеж", "formIng": "книго", "exampleRu": "книгой (субъект действия)" },
+        { "caseRu": "творительный", "caseIng": "гIирса падеж", "formIng": "книгаца", "exampleRu": "книгой (инструмент)" },
+        { "caseRu": "совместительный", "caseIng": "хотталура падеж", "formIng": "книгацана", "exampleRu": "вместе с книгой" },
+        { "caseRu": "вещественный", "caseIng": "мехка падеж", "formIng": "книгах", "exampleRu": "о книге / из книги" },
+        { "caseRu": "сравнительный", "caseIng": "дустара падеж", "formIng": "книгал", "exampleRu": "чем книга (лучше/хуже)" }
+      ]
+    },
+    {
+      "id": "spatial_cases_gala_extra",
+      "title": "Пространственные падежи (дополнение к 8 основным)",
+      "lemmaRu": "город",
+      "lemmaIng": "гӀала",
+      "noteRu": "Полная парадигма гӀала — в declensions.json (malsagov). Здесь только входной и направительный.",
+      "rows": [
+        { "caseRu": "местный (входной)", "questionRu": "куда / в чём?", "formIng": "гӀала чу", "exampleRu": "в город / в городе" },
+        { "caseRu": "направительный", "questionRu": "к чему?", "formIng": "гӀалагахьа", "exampleRu": "в сторону города / к городу" }
+      ],
+      "ergativeRuleRu": "Эргатив (гӀало, къонахa) — только при переходном глаголе",
+      "examples": [
+        { "ru": "Мужчина строит город.", "ing": "Къонахa гӀала йотт." }
+      ]
+    },
+    {
+      "id": "ergative_syntax",
+      "title": "Эргативная конструкция",
+      "summaryRu": "Непереходный: субъект в именительном (Со вижа ва). Переходный: субъект в эргативе (Аз книга деш).",
+      "pronounErgative": [
+        { "nom": "со", "erg": "аз", "ergAlt": "ас", "ru": "я" },
+        { "nom": "хьо", "erg": "Ӏа", "ru": "ты" },
+        { "nom": "из", "erg": "цо", "ru": "он/она" },
+        { "nom": "вай / тхо", "erg": "вай / оха", "ru": "мы" },
+        { "nom": "шо", "erg": "оаша", "ru": "вы" },
+        { "nom": "уж", "erg": "цар", "ru": "они" }
+      ],
+      "noteRu": "Форма аз/ас — варианты записи; полное склонение — declensions.json malsagov_1963_pronoun_declension_personal_reflexive",
+      "examples": [
+        { "ru": "Я сплю.", "ing": "Со вижа ва.", "type": "intransitive" },
+        { "ru": "Я читаю книгу.", "ing": "Аз книга деш.", "type": "transitive" },
+        { "ru": "Ты идёшь.", "ing": "Хьо воагӀa.", "type": "intransitive" },
+        { "ru": "Ты пишешь письмо.", "ing": "Ӏа каьхат доазув.", "type": "transitive" }
+      ]
+    },
+    {
+      "id": "ablaut",
+      "title": "Чередование гласных (аблаут)",
+      "nounPatterns": [
+        { "from": "о", "to": "е", "example": "корт → керта", "ru": "голова → голове" },
+        { "from": "у", "to": "и", "example": "борз → берзalой", "ru": "волк → волки" },
+        { "from": "а", "to": "и", "example": "саг → сaga; сиг/сий", "ru": "человек (в ряде форм)" }
+      ],
+      "verbPatterns": [
+        { "example": "дatта → дott → дийцad", "ru": "печь → печёт → рассказал" }
+      ]
+    },
+    {
+      "id": "verb_tenses_desha",
+      "title": "Времена глагола (обзор на примере «деша»)",
+      "lemmaRu": "учиться / читать",
+      "lemmaIng": "деша",
+      "noteRu": "Глагол не спрягается по лицам; меняется корневая гласная и суффиксы. Детали — declensions.json malsagov_1963_*",
+      "tenses": [
+        {
+          "nameRu": "настоящее",
+          "nameIng": "карара хан",
+          "examples": [
+            { "ru": "Я учусь.", "ing": "Со дешаш va." },
+            { "ru": "Они учатся.", "ing": "Иж доаш." }
+          ]
+        },
+        {
+          "nameRu": "прошедшее (типы)",
+          "nameIng": "дӀaxaxa хан",
+          "examples": [
+            { "ru": "Я прочитал (недавно).", "ing": "Сов дешар." },
+            { "ru": "Я выучил (результат есть).", "ing": "Аз дийшad." },
+            { "ru": "Я читал (длительно).", "ing": "Со дешаш var." }
+          ]
+        },
+        {
+          "nameRu": "будущее",
+          "nameIng": "тӀexьara хан",
+          "examples": [
+            { "ru": "Я буду учиться (точно).", "ing": "Аз дешаргda." },
+            { "ru": "Я, возможно, буду читать.", "ing": "Аз дешa mega." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "past_tense_six_forms",
+      "title": "6 форм прошедшего времени (на «даре»)",
+      "lemmaRu": "делать",
+      "lemmaIng": "даре",
+      "rootPast": "дир / даьd",
+      "forms": [
+        { "order": 1, "nameRu": "недавно прошедшее", "formIng": "дир", "exampleRu": "Я только что сделал это.", "exampleIng": "Аз из дир." },
+        { "order": 2, "nameRu": "прошедшее совершенное", "formIng": "даьd", "exampleRu": "Я сделал (результат налицо).", "exampleIng": "Аз из даьd." },
+        { "order": 3, "nameRu": "давно прошедшее", "formIng": "даьцar", "exampleRu": "Я делал это давно.", "exampleIng": "Аз из даьцar." },
+        { "order": 4, "nameRu": "прошедшее несовершенное", "formIng": "дora", "exampleRu": "Я делал (процесс).", "exampleIng": "Аз из дora." },
+        { "order": 5, "nameRu": "прошедшее очевидное", "formIng": "даь хиннаd", "exampleRu": "Я точно сделал.", "exampleIng": "Аз из даь хиннаd." },
+        { "order": 6, "nameRu": "прошедшее неочевидное", "formIng": "даь хиннаdaьr", "exampleRu": "Он, оказывается, сделал.", "exampleIng": "Цо из даь хиннаdaьr." }
+      ]
+    },
+    {
+      "id": "class_marker_mutation",
+      "title": "Мутация классовых показателей (догIаш)",
+      "summaryRu": "Показатели V/J/B/D встраиваются в начало прилагательных, «4» и многих глаголов.",
+      "adjectiveBig": [
+        { "class": "V", "exampleIng": "воI vakkxa va", "exampleRu": "Сын большой." },
+        { "class": "J", "exampleIng": "йоI yakxa ya", "exampleRu": "Дочь большая." },
+        { "class": "B", "exampleIng": "кор bakkxa ba", "exampleRu": "Окно большое." },
+        { "class": "D", "exampleIng": "цIa dakkxa da", "exampleRu": "Дом большой." }
+      ],
+      "verbWalk": [
+        { "class": "V", "exampleIng": "къonax voagIa", "exampleRu": "Мужчина идёт." },
+        { "class": "J", "exampleIng": "кхalsag yoagIa", "exampleRu": "Женщина идёт." },
+        { "class": "B", "exampleIng": "дахka boagIa", "exampleRu": "Мышь идёт." },
+        { "class": "D", "exampleIng": "Iasa doagIa", "exampleRu": "Телёнок идёт." }
+      ]
+    },
+    {
+      "id": "plural_supplements",
+      "title": "Образование мн.ч. (дополнения к declensions plural_formation_lesson_23)",
+      "patterns": [
+        { "suffix": "-aьш", "sg": "наьнж", "pl": "наьнжаьш", "ru": "груша — груши" },
+        { "suffix": "-altsash", "sg": "га", "pl": "галtsash", "ru": "дерево — деревья" },
+        { "suffix": "-lhoi", "sg": "наьsare", "pl": "наьsarлhoi", "ru": "назрановец — назрановцы" },
+        { "suffix": "супpletive", "sg": "сag", "pl": "нах", "ru": "человек — люди" },
+        { "suffix": "zero", "sg": "хьaьжа", "pl": "хьaьжа", "ru": "орех — орехи (форма не меняется)" }
+      ]
+    },
+    {
+      "id": "participles_converbs",
+      "title": "Причастия и деепричастия (краткий обзор)",
+      "participles": [
+        { "tenseRu": "настоящее", "suffix": "-a", "verb": "къaxьega", "participle": "къaxьega", "exampleRu": "трудящийся человек", "exampleIng": "къaxьega сag" },
+        { "tenseRu": "прошедшее", "suffix": "-aь", "verb": "venav", "participle": "venaь", "exampleRu": "человек, пришедший вчера", "exampleIng": "селxan venaь сag" }
+      ],
+      "converbs": [
+        { "suffix": "-ash", "meaningRu": "одновременность", "exampleRu": "Читая книгу, он не шёл.", "exampleIng": "Книга дeshash, из voagIacar." },
+        { "suffix": "-aча / -isha", "meaningRu": "завершённость", "exampleRu": "Прочитав книгу, он лёг.", "exampleIng": "Книга дийsha vaьlcha, из vizhar." }
+      ]
+    },
+    {
+      "id": "verb_negation_question",
+      "title": "Отрицание и вопрос на глаголе (дополнение к rules aux_neg)",
+      "patterns": [
+        { "type": "negation_verb", "positive": "ворda voagIa", "negative": "ворda voagIac", "ru": "брат идёт → брат не идёт" },
+        { "type": "negation_verb", "positive": "аз деш", "negative": "аз дeshac", "ru": "я читаю → я не читаю" },
+        { "type": "question_copula", "positive": "из кхalsag ya", "question": "из кхalsag yiy?", "ru": "она женщина → она женщина?" },
+        { "type": "question_verb", "positive": "хьo voagIa", "question": "хьo voagIiy?", "ru": "ты идёшь → ты идёшь?" }
+      ]
+    },
+    {
+      "id": "vigesimal_numerals",
+      "title": "Двадцатеричная система счёта",
+      "ruleRu": "После числительного существительное в ед.ч.: Ткъo сag — двадцать человек.",
+      "base": [
+        { "n": 10, "ing": "itt" },
+        { "n": 20, "ing": "ткъo" },
+        { "n": 30, "ing": "ткъaь itt" },
+        { "n": 40, "ing": "шovzткъo" },
+        { "n": 50, "ing": "шovzткъaь itt" },
+        { "n": 60, "ing": "кхozткъo" },
+        { "n": 70, "ing": "кхozткъaь itt" },
+        { "n": 80, "ing": "dezткъo" },
+        { "n": 90, "ing": "dezткъaь itt" },
+        { "n": 100, "ing": "бIaь" }
+      ],
+      "oneToTwenty": [
+        { "n": 1, "ing": "цхьaI" },
+        { "n": 2, "ing": "шиъ", "noteRu": "класс: виъ/йиъ/биъ/диъ" },
+        { "n": 3, "ing": "кхoъ" },
+        { "n": 4, "ing": "диъ" },
+        { "n": 5, "ing": "пхiъ" },
+        { "n": 6, "ing": "ялх" },
+        { "n": 7, "ing": "ворхI" },
+        { "n": 8, "ing": "ирхI / бархI" },
+        { "n": 9, "ing": "ийс" },
+        { "n": 10, "ing": "itt" },
+        { "n": 11, "ing": "цхьaittа" },
+        { "n": 12, "ing": "шiittа" },
+        { "n": 13, "ing": "кхoайttа" },
+        { "n": 14, "ing": "дiittа" },
+        { "n": 15, "ing": "пхiittа" },
+        { "n": 16, "ing": "ялхiittа" },
+        { "n": 17, "ing": "ворхIайttа" },
+        { "n": 18, "ing": "бархIайttа" },
+        { "n": 19, "ing": "ткъovussin", "noteRu": "до двадцати одного не хватает" },
+        { "n": 20, "ing": "ткъo" },
+        { "n": 21, "ing": "ткъaь цхьaI" }
+      ]
+    },
+    {
+      "id": "top_verbs",
+      "title": "Базовые глаголы: инфинитив и 3 времени",
+      "intransitive": [
+        { "ru": "идти / приходить", "inf": "v-oagIa", "present": "со voagIa", "past": "со venav", "future": "со voagIargva" },
+        { "ru": "идти / уходить", "inf": "v-axa", "present": "со voda", "past": "со vaxav", "future": "со gIorgva" },
+        { "ru": "спать", "inf": "v-izha", "present": "со vizha voal", "past": "со vizhav", "future": "со vizhargva" },
+        { "ru": "сидеть", "inf": "v-agIa", "present": "со vagIa", "past": "со vagIav", "future": "со vagIargva" },
+        { "ru": "стоять", "inf": "lattta", "present": "со lattta", "past": "со latttav", "future": "со latttargva" }
+      ],
+      "transitive": [
+        { "ru": "читать / учиться", "inf": "desha", "present": "аз doash", "past": "аз diishad", "future": "az deshargda" },
+        { "ru": "делать", "inf": "dare", "present": "az dora / de", "past": "az daьd", "future": "az dergda" },
+        { "ru": "писать", "inf": "d-aza", "present": "az doazuv", "past": "az dizad", "future": "az dazargda" },
+        { "ru": "видеть", "inf": "d-ayna", "present": "az go", "past": "az daynad", "future": "az daynargda" },
+        { "ru": "есть", "inf": "dua", "present": "az dua", "past": "az diъad", "future": "az duargda" },
+        { "ru": "пить", "inf": "mala", "present": "az mol", "past": "az melnad", "future": "az malargda" }
+      ],
+      "noteRu": "Переходные: субъект в эргативе (аз). Префикс V-/D- в инфинитиве — классовая мутация."
+    },
+    {
+      "id": "imperative",
+      "title": "Побудительное наклонение",
+      "intransitiveByAddressee": [
+        { "verbRu": "идти", "m": "voala!", "f": "yoala!", "pl": "boalaysha!" },
+        { "verbRu": "ложиться", "m": "vizha!", "f": "yizha!", "pl": "dizhasha!" }
+      ],
+      "transitive": [
+        { "verbRu": "читать", "form": "diisha!" },
+        { "verbRu": "писать", "form": "dizol! / deizi xьa!" },
+        { "verbRu": "дать", "form": "xьada!" },
+        { "verbRu": "есть", "form": "diъa!" }
+      ],
+      "polite": [
+        { "ru": "сядь, пожалуйста", "ing": "dIavagIalaxь" },
+        { "ru": "дай, будь добр", "ing": "xьadal xьa" }
+      ]
+    },
+    {
+      "id": "negative_imperative",
+      "title": "Отрицательный императив (ма + глагол)",
+      "intransitive": [
+        { "ru": "не уходи (м)", "ing": "ma gIorgda! / ma gIolo!" },
+        { "ru": "не подходи (м)", "ing": "ma voala!" },
+        { "ru": "не подходи (ж)", "ing": "ma yoala!" },
+        { "ru": "не бойся", "ing": "ma khera!" }
+      ],
+      "transitive": [
+        { "ru": "не делай", "ing": "ma de!" },
+        { "ru": "не читай", "ing": "ma diisha!" },
+        { "ru": "не говори", "ing": "ma ala!" },
+        { "ru": "не ешь", "ing": "ma dua!" }
+      ],
+      "polite": { "ru": "не говори, пожалуйста", "ing": "ma ala xьaьI" }
+    },
+    {
+      "id": "conjunctions",
+      "title": "Союзы и вводные слова",
+      "coordinating": [
+        { "ing": "a", "ru": "и, но", "example": "Со voagIa, a xьo lattta." },
+        { "ing": "ishtta", "ru": "также" },
+        { "ing": "e … e …", "ru": "или … или …" },
+        { "ing": "txaьtsara / bakda", "ru": "но, однако" }
+      ],
+      "subordinating": [
+        { "ing": "sendaьre aьlcha", "ru": "потому что" },
+        { "ing": "nagaxь sanна", "ru": "если" },
+        { "ing": "tsuduxьa", "ru": "поэтому" }
+      ],
+      "introductory": [
+        { "ing": "bakdar aьlcha", "ru": "честно говоря" },
+        { "ing": "xettare aьlcha", "ru": "по моему мнению" },
+        { "ing": "tsxabakda", "ru": "однако" },
+        { "ing": "huvtsatsar", "ru": "короче говоря" }
+      ]
+    },
+    {
+      "id": "diminutives",
+      "title": "Уменьшительно-ласкательные формы",
+      "suffixes": ["-ig", "-ilg", "-g"],
+      "examples": [
+        { "base": "кIaьnk", "dim": "кIaьnkig", "ru": "мальчик → мальчуган" },
+        { "base": "йoI", "dim": "йoIig", "ru": "дочь → доченька" },
+        { "base": "цisk", "dim": "цiskig", "ru": "кот → котик" },
+        { "base": "дog", "dim": "дogig", "ru": "сердце → сердечко" }
+      ]
+    },
+    {
+      "id": "interrogative_sentences",
+      "title": "Вопросительные предложения (согласование связки)",
+      "words": [
+        { "ing": "malu?", "ru": "кто?" },
+        { "ing": "fu?", "ru": "что?" },
+        { "ing": "micha?", "ru": "где? / куда?" },
+        { "ing": "matsa?", "ru": "когда?" },
+        { "ing": "mishта?", "ru": "как?" },
+        { "ing": "mel?", "ru": "сколько?" }
+      ],
+      "copulaQuestion": "ва/я/да/ба → вий/йий/дий/бий",
+      "examples": [
+        { "ru": "Кто это? (муж.)", "ing": "Ер malu va?" },
+        { "ru": "Кто это? (жен.)", "ing": "Ер malu ya?" },
+        { "ru": "Что ты делаешь?", "ing": "Ӏa fu desh?" }
+      ]
+    },
+    {
+      "id": "kinship",
+      "title": "Родство и фамилии",
+      "surnamesNoteRu": "Исторически -naьkъan; в документах -oy/-ev/-oev. Порядок: фамилия + имя (Евлой Ахмад).",
+      "terms": [
+        { "ing": "da", "ru": "отец", "class": "V" },
+        { "ing": "nana", "ru": "мать", "class": "J" },
+        { "ing": "vosha", "ru": "брат" },
+        { "ing": "yisha", "ru": "сестра" },
+        { "ing": "voI / yoI", "ru": "сын / дочь" },
+        { "ing": "naьna-vosha", "ru": "дядя по матери" },
+        { "ing": "daь-yisha", "ru": "тётя по отцу" },
+        { "ing": "mar-da", "ru": "свекор / тесть" }
+      ]
+    },
+    {
+      "id": "medical",
+      "title": "Анатомия и здоровье",
+      "bodyParts": [
+        { "ing": "kort", "class": "B", "ru": "голова", "ache": "kort lazab" },
+        { "ing": "dog", "class": "D", "ru": "сердце", "ache": "dog laz" },
+        { "ing": "bIargash", "class": "B", "ru": "глаза", "ache": "bIargash lazada" },
+        { "ing": "lerg", "class": "D", "ru": "ухо", "ache": "lerg lazadiy xьana?" },
+        { "ing": "tott", "class": "D", "ru": "живот", "ache": "tott lazab" },
+        { "ing": "kog", "class": "B", "ru": "нога", "ache": "kog lazab" },
+        { "ing": "kug", "class": "D", "ru": "рука", "ache": "kug lazab" }
+      ],
+      "phrases": [
+        { "ru": "Мне нездоровится.", "ing": "Со цIaьrmaza va/ya." },
+        { "ru": "Где болит?", "ing": "Lazar micha da xьana?" },
+        { "ru": "Где врач?", "ing": "Emgar / lor micha va?" },
+        { "ru": "Дай лекарство.", "ing": "Darba desh dola deshash (üxash) xьada sa." },
+        { "ru": "У меня температура.", "ing": "Yovxal ya sa." }
+      ]
+    },
+    {
+      "id": "conditional",
+      "title": "Условные формы (-are / -rgdar)",
+      "patternRu": "Если бы … (-are / -vale), то … (-rgdar / -rgvar)",
+      "examples": [
+        { "ru": "Если бы я знал, я бы сделал.", "ing": "Az xaynadare, az iz dergdar." },
+        { "ru": "Если бы ты пришёл, мы бы пошли.", "ing": "Xьo venavale, vay gIorgvar." },
+        { "ru": "Если бы шёл дождь, я бы остался дома.", "ing": "Doxk denadare, so tsIagIa voallagdar." }
+      ]
+    },
+    {
+      "id": "idioms",
+      "title": "Идиомы и пословицы",
+      "expressions": [
+        { "ing": "dog dika hilar", "literalRu": "чтобы сердце было хорошим", "ru": "быть в хорошем настроении" },
+        { "ing": "bIarg tassa", "literalRu": "бросить глаз", "ru": "присмотреть, обратить внимание" },
+        { "ing": "kort xьalxabaьkkxa", "literalRu": "головой вперёд", "ru": "упрямо, к цели" }
+      ],
+      "proverbs": [
+        { "ing": "GIlalat voatsash sag hinnavats, doxkoval voatsash dika sag hinnavats.", "ru": "Без ошибок людей не бывает, без покаяния хороших людей не бывает." },
+        { "ing": "DottagIa voatsa sag — tIam voatsa oalxazar.", "ru": "Человек без друга — что птица без крыла." }
+      ]
+    },
+    {
+      "id": "syntax_sample",
+      "title": "Разбор предложения (образец)",
+      "sentenceRu": "Вчера хороший мужчина велел парню читать хорошую книгу.",
+      "sentenceIng": "Селxan dikacha къonaxa kIantax dika kniga desha aьlar",
+      "tokens": [
+        { "ing": "селxan", "ru": "вчера", "pos": "наречие" },
+        { "ing": "dikacha", "ru": "хорошего", "pos": "прил., зависимая форма -cha" },
+        { "ing": "къonaxa", "ru": "мужчина (эргатив)", "class": "V" },
+        { "ing": "kIantax", "ru": "парню (вещественный)", "class": "V" },
+        { "ing": "dika", "ru": "хорошую", "pos": "прил." },
+        { "ing": "kniga", "ru": "книга (им., объект)", "class": "D" },
+        { "ing": "desha", "ru": "читать", "pos": "инфинитив" },
+        { "ing": "aьlar", "ru": "сказал / велел", "pos": "глагол, недав. прош." }
+      ]
+    }
+  ]
+}
