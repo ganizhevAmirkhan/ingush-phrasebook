@@ -4,6 +4,7 @@ language-api/.env
 language-api/data/moderation-queue.log.jsonl
 node_modules/
 
+# Учебники: сканы и OCR слишком большие для GitHub (>100 MB)
 language-api/data/external/textbooks/**/_digitized/
 language-api/data/external/textbooks/**/*.pdf
 language-api/data/external/tessdata/
