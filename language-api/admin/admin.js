@@ -159,6 +159,23 @@ async function loadOverview() {
       statCard("Словарь dosh", c.wordsLoaded, { icon: "book", tone: "violet" }),
       statCard("Шаблоны грамматики", inv.patterns, { icon: "grammar", tone: "amber" }),
       statCard("Лексемы", inv.lexemes, { icon: "grammar", tone: "amber" }),
+      statCard("Классы (ва/я/ба/да)", inv.nounClassEntries ?? 0, {
+        icon: "grammar",
+        tone: "amber",
+        sub: inv.nicholsUniqueStats
+          ? `Nichols +${inv.nicholsUniqueStats.nounClassNewToApi ?? 0} без дублей`
+          : "noun-class-knowledge"
+      }),
+      statCard("Nichols 2011", inv.nicholsGrammarSections ?? 0, {
+        icon: "book",
+        tone: "slate",
+        sub: `${inv.nicholsPriorityChapters ?? 0} конспектов · ${inv.nicholsNumeralParadigms ?? 0} парадигм числ.`
+      }),
+      statCard("Конспект грамматики", inv.grammarOverviewSections ?? 0, {
+        icon: "grammar",
+        tone: "slate",
+        sub: "docx overview"
+      }),
       statCard("Корпус (файлов)", c.corpusLoaded, { icon: "corpus", tone: "rose" }),
       statCard("Паралл. корпус", c.parallelCorpusInIndex ?? 0, {
         icon: "corpus",
@@ -192,7 +209,8 @@ async function loadOverview() {
         ${sourceStep("2", "<b>paydadosh</b> — PaydaDosh", `${c.paydaDoshPhrasesLoaded ?? 0} фраз (everyday ${c.paydaDoshEverydayLoaded ?? 0}, уроки ${c.paydaDoshLessonLoaded ?? 0})`)}
         ${sourceStep("2b", "<b>corpus</b> — параллельные тексты ghalghay", `${c.parallelCorpusInIndex ?? 0} фраз · Киплинг, Пушкин…`)}
         ${sourceStep("2c", "<b>ing_term</b> — словарь терминов 2016", `${c.ingTermPhrasesLoaded ?? 0} в индексе · ${c.ingTermWordsLoaded ?? 0} слов`)}
-        ${sourceStep("3", "<b>grammar</b> — шаблоны + лексемы", `${inv.patterns ?? 0} шаблонов · ${inv.lexemes ?? 0} лексем`)}
+        ${sourceStep("3", "<b>grammar</b> — шаблоны + лексемы + классы", `${inv.patterns ?? 0} шаблонов · ${inv.lexemes ?? 0} лексем · ${inv.nounClassEntries ?? 0} классов`)}
+        ${sourceStep("3b", "<b>nichols</b> — справочник (829 стр., без дублей)", `${inv.nicholsGrammarSections ?? 0} глав · ${inv.nicholsUniqueStats?.nounClassNewToApi ?? 52} слов класса · ${inv.nicholsNumeralParadigms ?? 4} склон. числ.`)}
         ${sourceStep("4", "<b>dosh</b> — словарь + сборка из слов", `${c.wordsLoaded ?? 0} слов`)}
         ${sourceStep("5", "<b>LLM</b> — OpenRouter / Gemini", "fallback, если ничего не найдено")}
       </div>
