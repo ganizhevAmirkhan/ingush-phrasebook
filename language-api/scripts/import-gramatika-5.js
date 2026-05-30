@@ -5,10 +5,11 @@
  *   data/external/textbooks/gialgiai-metta-gramatika-5-klass-2010/_digitized/*.txt
  *
  * Writes / merges:
- *   data/grammar/gramatika-5-sections.json   — § catalog
- *   data/grammar/patterns.json                — RU→ING phrase patterns
- *   data/grammar/rules.json                 — reference markers (pronouns, particles)
- *   data/corpus/stories/gramatika_5_grammar.json — lesson corpus
+ *   data/grammar/gramatika-5-sections.json   — § catalog (reference)
+ *   data/grammar/rules.json                 — reference markers (optional)
+ *   data/corpus/stories/gramatika_5_grammar.json — stub only
+ *
+ * Does NOT import phrase patterns (gram5_*) — textbook exercises are not RU→ING pairs.
  *
  * Usage:
  *   node scripts/import-gramatika-5.js [--dry-run]
@@ -275,8 +276,8 @@ function buildStaticRules() {
   ];
 }
 
-function buildCorpusParagraphs(sections, pairs) {
-  const paragraphs = [
+function buildCorpusParagraphs() {
+  return [
     {
       ru: "Грамматика ингушского языка, 5 класс (Мальсагова, Цицкиева, 2010).",
       ing: "ГIалгIай метта грамматика, 5 класс."
@@ -290,26 +291,6 @@ function buildCorpusParagraphs(sections, pairs) {
       ing: "Кхоачам, къоастам, лоаттам — кертерза маьжена я."
     }
   ];
-
-  for (const s of sections.slice(0, 25)) {
-    if (!s.title || s.title.length < 4) continue;
-    paragraphs.push({
-      ru: `§${s.number}. ${s.title}`,
-      ing: s.excerpt.slice(0, 200) || s.title
-    });
-  }
-
-  for (const p of pairs.slice(0, 120)) {
-    paragraphs.push({ ru: p.ru, ing: p.ing });
-  }
-
-  const seen = new Set();
-  return paragraphs.filter((p) => {
-    const k = norm(p.ru);
-    if (!k || seen.has(k)) return false;
-    seen.add(k);
-    return isUsableRu(p.ru) && p.ing;
-  });
 }
 
 async function main() {
@@ -318,9 +299,6 @@ async function main() {
   const raw = await fs.readFile(textPath, "utf8");
 
   const sections = parseSections(raw);
-  const parenPairs = extractParenPairs(raw);
-  const xokhamPairs = extractXokhamPairs(raw);
-  const allPairs = [...parenPairs, ...xokhamPairs];
 
   const patterns = JSON.parse(await fs.readFile(PATTERNS_FILE, "utf8"));
   const rules = JSON.parse(await fs.readFile(RULES_FILE, "utf8"));
@@ -330,34 +308,6 @@ async function main() {
     (p) => p.source !== "gramatika-5-klass-2010" && !String(p.id || "").startsWith("gram5_")
   );
   const removed = before - patterns.patterns.length;
-
-  const byKey = new Map();
-  for (const p of patterns.patterns || []) {
-    byKey.set(norm(p.ruPattern), p);
-  }
-
-  let patternsAdded = 0;
-  let patternsSkipped = 0;
-  for (const pair of allPairs) {
-    const key = norm(pair.ru);
-    if (byKey.has(key)) {
-      patternsSkipped += 1;
-      continue;
-    }
-    const pattern = {
-      id: slugId("gram5", key),
-      ruPattern: pair.ru,
-      description: `Грамматика 5 кл. (${pair.kind || "paren"})`,
-      slots: [],
-      ingTemplate: pair.ing,
-      priority: 96,
-      source: "gramatika-5-klass-2010",
-      examples: [{ ru: pair.ru, ing_expected: pair.ing }]
-    };
-    patterns.patterns.push(pattern);
-    byKey.set(key, pattern);
-    patternsAdded += 1;
-  }
 
   const staticRules = buildStaticRules();
   const ruleIds = new Set((rules.rules || []).map((r) => r.id));
@@ -369,14 +319,13 @@ async function main() {
     rulesAdded += 1;
   }
 
-  const corpusPairs = allPairs.filter((p) => isUsableRu(p.ru));
   const corpusDoc = {
     id: "gramatika_5_grammar_001",
     title: "Грамматика 5 класс (учебник)",
     level: "B1",
     genre: "lesson",
     source: "gramatika-5-klass-2010",
-    paragraphs: buildCorpusParagraphs(sections, corpusPairs),
+    paragraphs: buildCorpusParagraphs(),
     glossary: staticRules.flatMap((r) => (r.markers || []).slice(0, 12))
   };
 
@@ -396,13 +345,8 @@ async function main() {
   process.stdout.write(
     `Text: ${textPath}\n` +
       `§ sections: ${sections.length}\n` +
-      `Paren pairs: ${parenPairs.length}\n` +
-      `Xьокхам pairs: ${xokhamPairs.length}\n` +
-      `Old gram5 patterns removed: ${removed}\n` +
-      `Patterns added: ${patternsAdded}\n` +
-      `Patterns skipped (dup): ${patternsSkipped}\n` +
+      `gram5 patterns removed: ${removed}\n` +
       `Rules added: ${rulesAdded}\n` +
-      `Corpus paragraphs: ${corpusDoc.paragraphs.length}\n` +
       `Total patterns now: ${patterns.patterns.length}\n` +
       (args.dryRun ? "(dry-run, no files written)\n" : `Written:\n  ${SECTIONS_FILE}\n  ${CORPUS_FILE}\n`)
   );
