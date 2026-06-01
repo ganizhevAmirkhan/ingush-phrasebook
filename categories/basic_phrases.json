@@ -1470,6 +1470,13 @@
       "pron": "kho tsar novkasti",
       "id": "habar_friendship_we_their_friends",
       "audio": "habar_friendship_we_their_friends.mp3"
+    },
+    {
+      "id": "f_1780275218077_5snw",
+      "ru": "Меня зовут",
+      "ing": "Са ц1и я",
+      "pron": "sa ts1i ya",
+      "audio": "f_1780275218077_5snw.mp3"
     }
   ],
   "version": 6,
