@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ghalghay API — языковой ИИ для ингушского</title>
+  <meta name="description" content="Платформа разработки и внедрения: гибридный ИИ-движок ингушского — грамматика, база знаний, LLM с валидацией, REST API">
+  <meta name="theme-color" content="#0d9488">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/brand/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/site.css?v=2">
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="/">
+        <img src="/assets/brand/icon.svg" width="44" height="44" alt="">
+        <div class="brand-text">
+          <strong>Ghalghay API</strong>
+          <span>ИИ · разработка · внедрение</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="#brand">Иконки</a>
+        <a href="#stats">Метрики</a>
+        <a href="#demo">Демо</a>
+        <a href="#api">API</a>
+        <span id="status-pill" class="status-pill">
+          <span class="status-dot" id="status-dot"></span>
+          <span id="status-text">проверка…</span>
+        </span>
+        <a class="btn btn-ghost" href="/admin/">Админ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap hero">
+      <div>
+        <h1>Языковой ИИ<br><em>для ингушского — от идеи до внедрения</em></h1>
+        <p class="lead">
+          Не словарь и не «ещё один переводчик». Это ядро для продуктов на ингушском:
+          гибридный движок — правила грамматики, проверенная база знаний и LLM с контролем качества.
+          Готовый REST API для чатов, обучения, ботов и ваших приложений на VPS.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#demo">Проверить движок</a>
+          <a class="btn btn-ghost" href="#api">Интеграция</a>
+        </div>
+        <div class="hero-badges">
+          <span class="badge">Hybrid AI</span>
+          <span class="badge">POST /translate</span>
+          <span class="badge">POST /ai/assist</span>
+          <span class="badge">Grammar engine</span>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <h3>Архитектура ядра</h3>
+        <div class="pipeline" id="pipeline">
+          <div class="pipe-step"><span class="pipe-num">1</span><div><strong>Запрос</strong><small>REST · приложение · бот</small></div><span class="pipe-count">API</span></div>
+          <div class="pipe-step"><span class="pipe-num">2</span><div><strong>Grammar engine</strong><small>шаблоны, классы ва/я/ба/да</small></div><span class="pipe-count" data-k="grammarPatternsLoaded">—</span></div>
+          <div class="pipe-step"><span class="pipe-num">3</span><div><strong>Knowledge base</strong><small>habar · dosh · corpus · Nichols</small></div><span class="pipe-count" data-k="phraseIndexKeys">—</span></div>
+          <div class="pipe-step"><span class="pipe-num">4</span><div><strong>Validation</strong><small>чёрный список · модерация</small></div><span class="pipe-count">guard</span></div>
+          <div class="pipe-step"><span class="pipe-num">5</span><div><strong>LLM layer</strong><small>OpenRouter · Gemini · контекст</small></div><span class="pipe-count">augment</span></div>
+        </div>
+      </aside>
+    </div>
+
+    <section id="stats">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Масштаб базы знаний</h2>
+          <p>Цифры из <code>/metrics</code> — то, на чём обучается и проверяется движок, без дублей в индексе.</p>
+        </div>
+        <div class="stats-grid" id="stats-grid"></div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Что внутри платформы</h2>
+          <p>Разработка и внедрение языкового ИИ — не один промпт, а управляемый конвейер.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature tone-teal">
+            <div class="feature-icon">◎</div>
+            <h3>Гибридный движок</h3>
+            <p>Сначала детерминированная логика — шаблоны, лексемы, сборка из словаря. LLM подключается с контекстом, когда правил недостаточно.</p>
+          </article>
+          <article class="feature tone-amber">
+            <div class="feature-icon">◆</div>
+            <h3>Grammar-aware ИИ</h3>
+            <p>Классы ва/я/ба/да, эргатив, copula — встроены в ядро, а не «надеемся на модель». Nichols и школьные грамматики как слой правил.</p>
+          </article>
+          <article class="feature tone-violet">
+            <div class="feature-icon">⬡</div>
+            <h3>База знаний</h3>
+            <p>Habar, dosh, корпус ghalghay, термины — curated data для lookup и подсказок LLM. Источник ответа всегда прозрачен.</p>
+          </article>
+          <article class="feature tone-rose">
+            <div class="feature-icon">⚙</div>
+            <h3>Готово к внедрению</h3>
+            <p>REST на VPS, админка для правил и corpus, модерация, метрики — подключайте к чату, LMS или своему продукту через <code>/translate</code> и <code>/ai/assist</code>.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="demo">
+      <div class="wrap two-col">
+        <div class="panel">
+          <h3>Демо движка</h3>
+          <input id="demo-ru" class="demo-input" type="text" placeholder="Текст для перевода…" value="Я хочу пить">
+          <button type="button" class="btn btn-primary" id="btn-translate">Перевести</button>
+          <div class="demo-result" id="demo-result">—</div>
+          <div class="demo-meta" id="demo-meta"></div>
+        </div>
+        <div class="panel">
+          <h3>Lookup базы знаний</h3>
+          <input id="lookup-q" class="demo-input" type="text" placeholder="Слово или фраза…" value="вода">
+          <button type="button" class="btn btn-ghost" id="btn-lookup">Найти</button>
+          <pre class="code-block" id="lookup-result" style="margin-top:12px;min-height:120px">—</pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="api">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Эндпоинты</h2>
+          <p>Публичные маршруты. Базовый URL — текущий хост (<span id="api-origin"></span>).</p>
+        </div>
+        <div class="endpoint-list" id="endpoint-list"></div>
+      </div>
+    </section>
+
+    <section id="brand">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Иконки бренда</h2>
+          <p>Для VPS, PWA, favicon и ярлыка на телефоне. Горы (лоам) + teal-градиент + маркеры классов.</p>
+        </div>
+        <div class="brand-grid">
+          <div class="brand-card brand-card-main">
+            <img src="/assets/brand/icon.svg" width="128" height="128" alt="Ghalghay API">
+            <div>
+              <strong>Основная</strong>
+              <span>512 SVG · логотип сайта</span>
+              <a href="/assets/brand/icon.svg" download="ghalghay-icon.svg">Скачать SVG</a>
+            </div>
+          </div>
+          <div class="brand-card">
+            <img src="/assets/brand/icon-512.png" width="96" height="96" alt="">
+            <div>
+              <strong>512 PNG</strong>
+              <span>PWA · stores</span>
+              <a href="/assets/brand/icon-512.png" download="ghalghay-icon-512.png">Скачать</a>
+            </div>
+          </div>
+          <div class="brand-card">
+            <img src="/assets/brand/icon-192.png" width="72" height="72" alt="">
+            <div>
+              <strong>192 PNG</strong>
+              <span>Android · manifest</span>
+              <a href="/assets/brand/icon-192.png" download="ghalghay-icon-192.png">Скачать</a>
+            </div>
+          </div>
+          <div class="brand-card">
+            <img src="/apple-touch-icon.png" width="72" height="72" alt="">
+            <div>
+              <strong>180 PNG</strong>
+              <span>iOS · apple-touch</span>
+              <a href="/apple-touch-icon.png" download="ghalghay-apple-touch.png">Скачать</a>
+            </div>
+          </div>
+          <div class="brand-card">
+            <img src="/assets/brand/icon-maskable.svg" width="72" height="72" alt="">
+            <div>
+              <strong>Maskable</strong>
+              <span>PWA safe zone</span>
+              <a href="/assets/brand/icon-maskable.svg" download="ghalghay-maskable.svg">Скачать</a>
+            </div>
+          </div>
+          <div class="brand-card">
+            <img src="/favicon.svg" width="48" height="48" alt="">
+            <div>
+              <strong>Favicon</strong>
+              <span>32 SVG · вкладка</span>
+              <a href="/favicon.svg" download="ghalghay-favicon.svg">Скачать</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <strong>Ghalghay API</strong> · языковой ИИ для ингушского<br>
+        Разработка · внедрение · гибридное ядро
+      </div>
+      <div>
+        <a href="/health">/health</a> ·
+        <a href="/metrics">/metrics</a> ·
+        <a href="/info">/info</a> ·
+        <a href="/admin/">Админ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/site.js?v=1"></script>
+</body>
+</html>

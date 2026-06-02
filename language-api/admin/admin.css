@@ -68,12 +68,17 @@ body {
   width: 48px;
   height: 48px;
   border-radius: 14px;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
   flex-shrink: 0;
+  overflow: hidden;
+}
+
+.login-brand-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .login-box h1 { margin: 0; font-size: 1.35rem; }
@@ -153,10 +158,35 @@ body {
   width: 36px;
   height: 36px;
   border-radius: 10px;
-  background: linear-gradient(135deg, #6366f1, #a855f7);
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.top-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 14px;
+  border-radius: var(--radius-sm);
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  transition: color 0.15s, background 0.15s;
+}
+
+.btn-link:hover {
+  color: var(--text);
+  background: var(--surface2);
 }
 
 .top-title { font-weight: 700; font-size: 1.05rem; letter-spacing: -0.02em; }

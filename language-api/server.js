@@ -48,12 +48,17 @@ const adminStore = require("./src/admin-store");
 
 const PORT = Number(process.env.PORT || 8787);
 const ADMIN_DIR = path.join(__dirname, "admin");
+const PUBLIC_DIR = path.join(__dirname, "public");
 
 const MIME = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
   ".js": "application/javascript; charset=utf-8",
-  ".json": "application/json; charset=utf-8"
+  ".json": "application/json; charset=utf-8",
+  ".svg": "image/svg+xml",
+  ".png": "image/png",
+  ".ico": "image/x-icon",
+  ".webmanifest": "application/manifest+json; charset=utf-8"
 };
 
 function sendJson(res, status, payload) {
@@ -89,6 +94,33 @@ async function sendAdminStatic(req, res, urlPath) {
     sendText(res, 200, data, MIME[ext] || "application/octet-stream", noCache);
   } catch {
     sendText(res, 404, "Not found", "text/plain; charset=utf-8", noCache);
+  }
+}
+
+async function sendPublicStatic(req, res, urlPath) {
+  let rel = urlPath === "/" ? "index.html" : urlPath.replace(/^\//, "");
+  if (rel.includes("..")) return sendText(res, 403, "Forbidden");
+  if (rel === "favicon.ico") {
+    rel = "assets/brand/favicon-32.png";
+  }
+  const filePath = path.join(PUBLIC_DIR, rel);
+  const cacheStatic = {
+    "Cache-Control": "public, max-age=3600"
+  };
+  const cacheHtml = {
+    "Cache-Control": "no-cache"
+  };
+  try {
+    const stat = await fsp.stat(filePath);
+    if (stat.isDirectory()) {
+      return sendPublicStatic(req, res, "/index.html");
+    }
+    const ext = path.extname(filePath).toLowerCase();
+    const data = await fsp.readFile(filePath);
+    const headers = ext === ".html" ? cacheHtml : cacheStatic;
+    sendText(res, 200, data, MIME[ext] || "application/octet-stream", headers);
+  } catch {
+    sendText(res, 404, "Not found", "text/plain; charset=utf-8", cacheHtml);
   }
 }
 
@@ -414,6 +446,40 @@ async function route(req, res) {
     return sendJson(res, 200, { ok: true, metrics: getMetrics() });
   }
 
+  if (req.method === "GET" && path === "/info") {
+    const llm = getLlmConfig();
+    const inventory = await adminStore.getInventory();
+    return sendJson(res, 200, {
+      ok: true,
+      name: "Ghalghay API",
+      shortName: "Ghalghay",
+      tagline: "Языковой ИИ · разработка · внедрение",
+      llmPrimary: llm.primary || null,
+      endpoints: [
+        { method: "POST", path: "/translate", desc: "RU → ING перевод" },
+        { method: "GET", path: "/lookup/word", desc: "Словарь dosh" },
+        { method: "GET", path: "/lookup/phrase", desc: "Индекс фраз" },
+        { method: "GET", path: "/lookup/corpus", desc: "Поиск в корпусе" },
+        { method: "GET", path: "/metrics", desc: "Метрики загрузки" },
+        { method: "GET", path: "/health", desc: "Статус сервиса" },
+        { method: "POST", path: "/ai/assist", desc: "LLM-задачи" }
+      ],
+      metrics: getMetrics().current,
+      grammar: {
+        patterns: inventory.patterns,
+        rules: inventory.rules,
+        lexemes: inventory.lexemes,
+        nounClassEntries: inventory.nounClassEntries,
+        grammarOverviewSections: inventory.grammarOverviewSections,
+        nicholsGrammarSections: inventory.nicholsGrammarSections,
+        nicholsPriorityChapters: inventory.nicholsPriorityChapters,
+        nicholsNumeralParadigms: inventory.nicholsNumeralParadigms,
+        nicholsUniqueStats: inventory.nicholsUniqueStats
+      },
+      links: { home: "/", admin: "/admin/", manifest: "/site.webmanifest" }
+    });
+  }
+
   if (req.method === "GET" && path === "/moderation/pending") {
     return sendJson(res, 200, { ok: true, items: getModerationQueue() });
   }
@@ -464,6 +530,20 @@ async function route(req, res) {
     return sendJson(res, 200, { ok: true, text: result.text });
   }
 
+  if (req.method === "GET") {
+    const isPublicAsset =
+      path === "/"
+      || path === "/index.html"
+      ||       path === "/site.webmanifest"
+      || path === "/favicon.ico"
+      || path === "/favicon.svg"
+      || path === "/apple-touch-icon.png"
+      || path.startsWith("/assets/");
+    if (isPublicAsset) {
+      return sendPublicStatic(req, res, path);
+    }
+  }
+
   return sendJson(res, 404, { ok: false, error: "not_found" });
 }
 
@@ -477,7 +557,8 @@ async function start() {
   });
 
   server.listen(PORT, () => {
-    process.stdout.write(`LanguageAPI listening on http://localhost:${PORT}\n`);
+    process.stdout.write(`Ghalghay API listening on http://localhost:${PORT}\n`);
+    process.stdout.write(`Public site: http://localhost:${PORT}/\n`);
     process.stdout.write(`Admin panel: http://localhost:${PORT}/admin\n`);
   });
 

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Ghalghay API">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="45%" stop-color="#0d9488"/>
+      <stop offset="100%" stop-color="#065f46"/>
+    </linearGradient>
+    <linearGradient id="peak" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ecfdf5" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+  <!-- maskable: full bleed, safe zone ~80% center -->
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <circle cx="380" cy="120" r="28" fill="#fde68a" opacity="0.95"/>
+  <circle cx="380" cy="120" r="14" fill="#fbbf24"/>
+  <path fill="url(#peak)" d="M96 380 L176 200 L256 380 Z"/>
+  <path fill="url(#peak)" opacity="0.92" d="M200 380 L280 160 L360 380 Z"/>
+  <path fill="url(#peak)" opacity="0.78" d="M304 380 L376 260 L448 380 Z"/>
+  <path d="M140 396 Q256 428 372 396" fill="none" stroke="#a7f3d0" stroke-width="12" stroke-linecap="round" opacity="0.55"/>
+  <circle cx="168" cy="408" r="12" fill="#fff"/>
+  <circle cx="220" cy="414" r="12" fill="#fef3c7"/>
+  <circle cx="292" cy="414" r="12" fill="#fde68a"/>
+  <circle cx="344" cy="408" r="12" fill="#fcd34d"/>
+</svg>

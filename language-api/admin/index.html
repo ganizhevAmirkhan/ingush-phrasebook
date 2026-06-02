@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LanguageAPI — админ</title>
+  <title>Ghalghay API — админ</title>
+  <meta name="theme-color" content="#0d9488">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/brand/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="/admin/admin.css?v=20260530">
 </head>
 <body>
@@ -12,10 +17,10 @@
   <div class="login-box">
     <div class="login-brand">
       <div class="login-brand-icon" aria-hidden="true">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        <img src="/assets/brand/icon.svg" width="44" height="44" alt="">
       </div>
       <div>
-        <h1>LanguageAPI</h1>
+        <h1>Ghalghay API</h1>
         <p class="muted" style="margin:4px 0 0">Панель управления</p>
       </div>
     </div>
@@ -34,16 +39,17 @@
 <div id="app" class="app hidden">
   <header class="top">
     <div class="top-brand">
-      <div class="top-logo" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-      </div>
+      <a class="top-logo" href="/" title="На главную" aria-hidden="true">
+        <img src="/assets/brand/icon.svg" width="32" height="32" alt="">
+      </a>
       <div>
-        <span class="top-title">LanguageAPI Admin</span>
+        <span class="top-title">Ghalghay Admin</span>
         <span id="api-base" class="muted"></span>
         <span class="admin-version">v20260530</span>
       </div>
     </div>
     <div class="top-actions">
+      <a class="btn-link" href="/" title="Публичная страница API">Сайт</a>
       <button type="button" id="btn-reload">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
         Перезагрузить данные
