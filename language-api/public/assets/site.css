@@ -566,61 +566,6 @@ section {
   text-decoration: none;
 }
 
-.brand-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px;
-}
-
-.brand-card {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 18px;
-  border-radius: var(--radius);
-  background: var(--surface);
-  border: 1px solid var(--border);
-}
-
-.brand-card-main {
-  grid-column: span 2;
-}
-
-.brand-card img {
-  border-radius: 18px;
-  box-shadow: 0 8px 28px rgba(13, 148, 136, 0.25);
-  flex-shrink: 0;
-}
-
-.brand-card strong {
-  display: block;
-  font-size: 0.95rem;
-  margin-bottom: 2px;
-}
-
-.brand-card span {
-  display: block;
-  font-size: 0.78rem;
-  color: var(--muted);
-  margin-bottom: 8px;
-}
-
-.brand-card a {
-  font-size: 0.78rem;
-  color: var(--teal);
-  text-decoration: none;
-}
-
-.brand-card a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 900px) {
-  .brand-card-main {
-    grid-column: span 1;
-  }
-}
-
 @media (max-width: 900px) {
   .hero,
   .two-col {
