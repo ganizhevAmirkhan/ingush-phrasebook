@@ -90,6 +90,7 @@ body {
 
 .content {
   flex:1;
+  min-width:0;
   padding:15px;
   overflow:auto;
   background:#fff;
@@ -228,11 +229,7 @@ body {
   display:flex;
   gap:6px;
   align-items:center;
-}
-.download-panel{
-  display:flex;
-  gap:6px;
-  align-items:center;
+  flex-wrap:nowrap;
 }
 #ai-status{
   color:#7CFC00;
@@ -240,6 +237,7 @@ body {
   min-width:1.2em;
   text-align:center;
 }
+#ai-status:empty{ display:none; }
 #ai-status.bad{ color:#ff6b6b; }
 #ai-status.warn{ color:#ffd166; }
 #ai-status.loading{ color:#4a90d9; animation:ai-pulse 1s ease-in-out infinite; }
@@ -487,8 +485,7 @@ body {
   }
 
   .admin-panel,
-  .ai-panel,
-  .download-panel{
+  .ai-panel{
     order:3;
     display:flex;
     flex-wrap:wrap;
@@ -503,6 +500,10 @@ body {
     max-width:160px;
     font-size:16px;
     box-sizing:border-box;
+  }
+
+  #ai-status{
+    display:none;
   }
 
   .btn-win{
@@ -521,10 +522,10 @@ body {
   }
 
   .sidebar{
-    flex:0 0 158px;
-    width:158px;
-    min-width:158px;
-    max-width:158px;
+    flex:0 0 132px;
+    width:132px;
+    min-width:132px;
+    max-width:132px;
   }
 
   .search-results{
@@ -568,8 +569,7 @@ body {
   }
 
   .admin-panel,
-  .ai-panel,
-  .download-panel{
+  .ai-panel{
     flex:0 0 auto;
     flex-wrap:nowrap;
   }
@@ -599,6 +599,8 @@ body {
   .category{
     font-size:13px;
     padding:6px 8px;
+    overflow:hidden;
+    text-overflow:ellipsis;
   }
 
   .content{
