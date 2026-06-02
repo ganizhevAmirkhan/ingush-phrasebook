@@ -2,6 +2,7 @@
 const OWNER  = "ganizhevAmirkhan";
 const REPO   = "ingush-phrasebook";
 const BRANCH = "main";
+const WINDOWS_INSTALLER_FILE = "Ингушский разговорник Setup 1.0.0.exe";
 
 /* ================= DATA ================= */
 const categories = [
@@ -470,18 +471,19 @@ function downloadZip(){
 async function downloadWindowsApp(){
   const releaseApi = `https://api.github.com/repos/${OWNER}/${REPO}/releases/latest`;
   const releasePage = `https://github.com/${OWNER}/${REPO}/releases/latest`;
+  const directRepoFile = `https://github.com/${OWNER}/${REPO}/raw/${BRANCH}/${encodeURIComponent(WINDOWS_INSTALLER_FILE)}`;
   try{
     const res = await fetch(releaseApi, { cache: "no-store" });
     if(!res.ok){
-      window.open(releasePage, "_blank");
+      window.open(directRepoFile, "_blank");
       return;
     }
     const rel = await res.json();
     const assets = Array.isArray(rel?.assets) ? rel.assets : [];
     const exe = assets.find(a => /\.exe$/i.test(safe(a?.name)));
-    window.open(exe?.browser_download_url || releasePage, "_blank");
+    window.open(exe?.browser_download_url || directRepoFile, "_blank");
   }catch{
-    window.open(releasePage, "_blank");
+    window.open(directRepoFile, "_blank");
   }
 }
 
