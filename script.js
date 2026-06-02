@@ -467,6 +467,24 @@ function downloadZip(){
   window.open(`https://github.com/${OWNER}/${REPO}/archive/refs/heads/${BRANCH}.zip`, "_blank");
 }
 
+async function downloadWindowsApp(){
+  const releaseApi = `https://api.github.com/repos/${OWNER}/${REPO}/releases/latest`;
+  const releasePage = `https://github.com/${OWNER}/${REPO}/releases/latest`;
+  try{
+    const res = await fetch(releaseApi, { cache: "no-store" });
+    if(!res.ok){
+      window.open(releasePage, "_blank");
+      return;
+    }
+    const rel = await res.json();
+    const assets = Array.isArray(rel?.assets) ? rel.assets : [];
+    const exe = assets.find(a => /\.exe$/i.test(safe(a?.name)));
+    window.open(exe?.browser_download_url || releasePage, "_blank");
+  }catch{
+    window.open(releasePage, "_blank");
+  }
+}
+
 /* ================= CATEGORY RESOLUTION ================= */
 async function findCategoryById(id){
   if(phraseIndex[id]) return phraseIndex[id];

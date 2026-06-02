@@ -125,6 +125,13 @@ body {
 }
 .btn-primary { background:#1f6feb; color:#fff; }
 .btn-ghost { background:#e6e6e6; color:#111; }
+.btn-win {
+  background:#2ea043;
+  color:#fff;
+  font-weight:700;
+  white-space:nowrap;
+}
+.btn-win:hover { background:#238636; }
 
 .admin-status {
   color:#7CFC00;
@@ -198,6 +205,11 @@ body {
 
 /* AI panel */
 .ai-panel {
+  display:flex;
+  gap:6px;
+  align-items:center;
+}
+.download-panel{
   display:flex;
   gap:6px;
   align-items:center;
@@ -455,7 +467,8 @@ body {
   }
 
   .admin-panel,
-  .ai-panel{
+  .ai-panel,
+  .download-panel{
     order:3;
     display:flex;
     flex-wrap:wrap;
@@ -524,7 +537,8 @@ body {
   }
 
   .admin-panel,
-  .ai-panel{
+  .ai-panel,
+  .download-panel{
     flex:0 0 auto;
     flex-wrap:nowrap;
   }
