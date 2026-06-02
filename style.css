@@ -130,8 +130,28 @@ body {
   color:#fff;
   font-weight:700;
   white-space:nowrap;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:6px 9px;
+  font-size:13px;
+  line-height:1;
 }
 .btn-win:hover { background:#238636; }
+.win-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:16px;
+  height:16px;
+}
+.win-icon svg{
+  fill:none;
+  stroke:currentColor;
+  stroke-width:2;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
 
 .admin-status {
   color:#7CFC00;
@@ -485,6 +505,17 @@ body {
     box-sizing:border-box;
   }
 
+  .btn-win{
+    font-size:12px;
+    padding:6px 8px;
+    gap:4px;
+  }
+
+  .win-icon{
+    width:14px;
+    height:14px;
+  }
+
   .layout{
     height:calc(var(--app-vh, 100dvh) - var(--topbar-h, 132px));
   }
@@ -545,6 +576,12 @@ body {
 
   .admin-panel input{
     max-width:110px;
+  }
+
+  .btn-win{
+    font-size:11px;
+    padding:5px 7px;
+    gap:4px;
   }
 
   .layout{

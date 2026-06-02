@@ -38,7 +38,17 @@
   </div>
 
   <div class="download-panel">
-    <button type="button" onclick="downloadWindowsApp()" class="btn btn-win">⬇ Скачать для Windows</button>
+    <button type="button" onclick="downloadWindowsApp()" class="btn btn-win" title="Скачать для Windows">
+      <span class="win-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="14" height="14">
+          <rect x="3" y="4" width="18" height="12" rx="2" ry="2"></rect>
+          <path d="M12 7v6"></path>
+          <path d="M9.5 10.5L12 13l2.5-2.5"></path>
+          <path d="M8 20h8"></path>
+        </svg>
+      </span>
+      Win
+    </button>
   </div>
 </header>
 
