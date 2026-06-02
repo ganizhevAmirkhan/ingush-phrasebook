@@ -479,8 +479,8 @@
     },
     {
       "ru": "Мне хотелось сказать",
-      "ing": "Сона ала валлар",
-      "pron": "sona ala vallar",
+      "ing": "Со ала воаллар",
+      "pron": "so ala voallar",
       "id": "habar_past_want_say_me",
       "audio": "habar_past_want_say_me.mp3"
     },
@@ -1461,13 +1461,43 @@
       "ru": "Мы друзья",
       "ing": "Тхо новкъасти",
       "pron": "kho novkasti",
-      "id": "habar_friendship_we_friends"
+      "id": "habar_friendship_we_friends",
+      "audio": "habar_friendship_we_friends.mp3"
     },
     {
       "ru": "Мы их друзья",
       "ing": "Тхо цар новкъасти",
       "pron": "kho tsar novkasti",
-      "id": "habar_friendship_we_their_friends"
+      "id": "habar_friendship_we_their_friends",
+      "audio": "habar_friendship_we_their_friends.mp3"
+    },
+    {
+      "id": "f_1780275218077_5snw",
+      "ru": "Меня зовут",
+      "ing": "Са ц1и я",
+      "pron": "sa ts1i ya",
+      "audio": "f_1780275218077_5snw.mp3"
+    },
+    {
+      "id": "f_1780275381095_zcbj",
+      "ru": "От куда ты?",
+      "ing": "Мичахьр ва хьо?",
+      "pron": "michah'r va h'o?",
+      "audio": "f_1780275381095_zcbj.mp3"
+    },
+    {
+      "id": "f_1780275539848_p431",
+      "ru": "От куда идёш?",
+      "ing": "Мичахьар воаг1 хьо?",
+      "pron": "michah'ar voag1 h'o?",
+      "audio": "f_1780275539848_p431.mp3"
+    },
+    {
+      "id": "f_1780275687102_jpyt",
+      "ru": "Я из Москвы иду",
+      "ing": "Со Москвер воаг1а",
+      "pron": "so moskver voag1a",
+      "audio": "f_1780275687102_jpyt.mp3"
     }
   ],
   "version": 6,
