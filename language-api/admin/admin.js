@@ -196,6 +196,11 @@ async function loadOverview() {
         tone: "emerald",
         sub: `Хайрова · ${inv.uroki2009Phrases ?? 0} фраз · ${inv.uroki2009Vocabulary ?? 0} слов`
       }),
+      statCard("Морфемика 2020", inv.morphemika2020Sections ?? 0, {
+        icon: "grammar",
+        tone: "violet",
+        sub: `Барахоева · ${inv.morphemika2020Affixes ?? 0} аффиксов · 103 §`
+      }),
       statCard("Конспект грамматики", inv.grammarOverviewSections ?? 0, {
         icon: "grammar",
         tone: "slate",
@@ -259,6 +264,7 @@ async function loadOverview() {
         ${sourceStep("3e", "<b>med_kodzoev</b> — мед. кластеры (справочник)", `${inv.medKodzoevKnowledgeSections ?? 0} разд. · ${inv.medKodzoevItems ?? 0} терминов в словаре`)}
         ${sourceStep("3f", "<b>tariev_2009</b> — грамматика + парадигмы", `${inv.tariev2009KnowledgeSections ?? 0} разд. · ${inv.tariev2009Items ?? 0} статей`)}
         ${sourceStep("3g", "<b>uroki_2009</b> — уроки + грамматика учебника", `${inv.uroki2009KnowledgeSections ?? 0} уроков · ${inv.uroki2009Phrases ?? 0} фраз`)}
+        ${sourceStep("3h", "<b>morphemika_2020</b> — морфемика + словообразование", `${inv.morphemika2020Sections ?? 0} § · ${inv.morphemika2020Affixes ?? 0} аффиксов`)}
         ${sourceStep("4", "<b>dosh</b> — словарь + сборка из слов", `${c.wordsLoaded ?? 0} слов`)}
         ${sourceStep("5", "<b>LLM</b> — OpenRouter / Gemini", "fallback, если ничего не найдено")}
       </div>

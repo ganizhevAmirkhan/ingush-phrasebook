@@ -1,0 +1,993 @@
+{
+  "schema": "morphemika-2020-affixes/v1",
+  "source": "morphemika-2020",
+  "knowledgeRef": "data/grammar/morphemika-2020-knowledge.json",
+  "stats": {
+    "entries": 109,
+    "prefixes": 26,
+    "suffixes": 15
+  },
+  "items": [
+    {
+      "id": "morph_affix_1",
+      "form": "ар",
+      "kind": "affix",
+      "paragraph": 2,
+      "sectionId": "morph_p002",
+      "titleRu": "Основные понятия морфемики",
+      "part": 1
+    },
+    {
+      "id": "morph_affix_2",
+      "form": "да",
+      "kind": "affix",
+      "paragraph": 5,
+      "sectionId": "morph_p005",
+      "titleRu": "Типы аффиксальных морфем ингушского языка",
+      "part": 1
+    },
+    {
+      "id": "morph_affix_3",
+      "form": "аш",
+      "kind": "affix",
+      "paragraph": 5,
+      "sectionId": "morph_p005",
+      "titleRu": "Типы аффиксальных морфем ингушского языка",
+      "part": 1
+    },
+    {
+      "id": "morph_affix_4",
+      "form": "хо",
+      "kind": "affix",
+      "paragraph": 5,
+      "sectionId": "morph_p005",
+      "titleRu": "Типы аффиксальных морфем ингушского языка",
+      "part": 1
+    },
+    {
+      "id": "morph_affix_5",
+      "form": "ла",
+      "kind": "affix",
+      "paragraph": 5,
+      "sectionId": "morph_p005",
+      "titleRu": "Типы аффиксальных морфем ингушского языка",
+      "part": 1
+    },
+    {
+      "id": "morph_affix_6",
+      "form": "за",
+      "kind": "affix",
+      "paragraph": 5,
+      "sectionId": "morph_p005",
+      "titleRu": "Типы аффиксальных морфем ингушского языка",
+      "part": 1
+    },
+    {
+      "id": "morph_affix_7",
+      "form": "то",
+      "kind": "affix",
+      "paragraph": 5,
+      "sectionId": "morph_p005",
+      "titleRu": "Типы аффиксальных морфем ингушского языка",
+      "part": 1
+    },
+    {
+      "id": "morph_affix_8",
+      "form": "агIа",
+      "kind": "affix",
+      "paragraph": 5,
+      "sectionId": "morph_p005",
+      "titleRu": "Типы аффиксальных морфем ингушского языка",
+      "part": 1
+    },
+    {
+      "id": "morph_affix_9",
+      "form": "ах",
+      "kind": "affix",
+      "paragraph": 5,
+      "sectionId": "morph_p005",
+      "titleRu": "Типы аффиксальных морфем ингушского языка",
+      "part": 1
+    },
+    {
+      "id": "morph_affix_10",
+      "form": "аз",
+      "kind": "affix",
+      "paragraph": 5,
+      "sectionId": "morph_p005",
+      "titleRu": "Типы аффиксальных морфем ингушского языка",
+      "part": 1
+    },
+    {
+      "id": "morph_affix_11",
+      "form": "ца",
+      "kind": "affix",
+      "paragraph": 5,
+      "sectionId": "morph_p005",
+      "titleRu": "Типы аффиксальных морфем ингушского языка",
+      "part": 1
+    },
+    {
+      "id": "morph_affix_12",
+      "form": "лх",
+      "kind": "affix",
+      "paragraph": 5,
+      "sectionId": "morph_p005",
+      "titleRu": "Типы аффиксальных морфем ингушского языка",
+      "part": 1
+    },
+    {
+      "id": "morph_affix_13",
+      "form": "суффиксальный",
+      "kind": "affix",
+      "paragraph": 5,
+      "sectionId": "morph_p005",
+      "titleRu": "Типы аффиксальных морфем ингушского языка",
+      "part": 1
+    },
+    {
+      "id": "morph_affix_14",
+      "form": "суффиксального",
+      "kind": "affix",
+      "paragraph": 5,
+      "sectionId": "morph_p005",
+      "titleRu": "Типы аффиксальных морфем ингушского языка",
+      "part": 1
+    },
+    {
+      "id": "morph_affix_15",
+      "form": "ий",
+      "kind": "affix",
+      "paragraph": 5,
+      "sectionId": "morph_p005",
+      "titleRu": "Типы аффиксальных морфем ингушского языка",
+      "part": 1
+    },
+    {
+      "id": "morph_affix_16",
+      "form": "ша",
+      "kind": "affix",
+      "paragraph": 6,
+      "sectionId": "morph_p006",
+      "titleRu": "Словоизменительные и словообразовательные",
+      "part": 1
+    },
+    {
+      "id": "morph_affix_17",
+      "form": "гIа",
+      "kind": "affix",
+      "paragraph": 6,
+      "sectionId": "morph_p006",
+      "titleRu": "Словоизменительные и словообразовательные",
+      "part": 1
+    },
+    {
+      "id": "morph_affix_18",
+      "form": "ло",
+      "kind": "affix",
+      "paragraph": 6,
+      "sectionId": "morph_p006",
+      "titleRu": "Словоизменительные и словообразовательные",
+      "part": 1
+    },
+    {
+      "id": "morph_affix_19",
+      "form": "лга",
+      "kind": "affix",
+      "paragraph": 6,
+      "sectionId": "morph_p006",
+      "titleRu": "Словоизменительные и словообразовательные",
+      "part": 1
+    },
+    {
+      "id": "morph_affix_20",
+      "form": "инг",
+      "kind": "affix",
+      "paragraph": 6,
+      "sectionId": "morph_p006",
+      "titleRu": "Словоизменительные и словообразовательные",
+      "part": 1
+    },
+    {
+      "id": "morph_affix_21",
+      "form": "непереходных",
+      "kind": "affix",
+      "paragraph": 8,
+      "sectionId": "morph_p008",
+      "titleRu": "Основные понятия словообразования",
+      "part": 2
+    },
+    {
+      "id": "morph_affix_22",
+      "form": "либо",
+      "kind": "affix",
+      "paragraph": 10,
+      "sectionId": "morph_p010",
+      "titleRu": "Словообразовательная цепочка.",
+      "part": 2
+    },
+    {
+      "id": "morph_affix_23",
+      "form": "суффиксальному",
+      "kind": "affix",
+      "paragraph": 10,
+      "sectionId": "morph_p010",
+      "titleRu": "Словообразовательная цепочка.",
+      "part": 2
+    },
+    {
+      "id": "morph_affix_24",
+      "form": "га",
+      "kind": "affix",
+      "paragraph": 12,
+      "sectionId": "morph_p012",
+      "titleRu": "Словообразовательная продуктивность",
+      "part": 2
+    },
+    {
+      "id": "morph_affix_25",
+      "form": "суффиксальный",
+      "kind": "prefix",
+      "paragraph": 17,
+      "sectionId": "morph_p017",
+      "titleRu": "Префиксальный способ словообразования",
+      "part": 2
+    },
+    {
+      "id": "morph_affix_26",
+      "form": "лга",
+      "kind": "prefix",
+      "paragraph": 17,
+      "sectionId": "morph_p017",
+      "titleRu": "Префиксальный способ словообразования",
+      "part": 2
+    },
+    {
+      "id": "morph_affix_27",
+      "form": "сложное",
+      "kind": "affix",
+      "paragraph": 19,
+      "sectionId": "morph_p019",
+      "titleRu": "Композитное словообразование",
+      "part": 2
+    },
+    {
+      "id": "morph_affix_28",
+      "form": "лоIа",
+      "kind": "affix",
+      "paragraph": 19,
+      "sectionId": "morph_p019",
+      "titleRu": "Композитное словообразование",
+      "part": 2
+    },
+    {
+      "id": "morph_affix_29",
+      "form": "сложный",
+      "kind": "affix",
+      "paragraph": 20,
+      "sectionId": "morph_p020",
+      "titleRu": "Редупликация",
+      "part": 2
+    },
+    {
+      "id": "morph_affix_30",
+      "form": "ниг",
+      "kind": "affix",
+      "paragraph": 22,
+      "sectionId": "morph_p022",
+      "titleRu": "Образование имен существительных",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_31",
+      "form": "лар",
+      "kind": "affix",
+      "paragraph": 22,
+      "sectionId": "morph_p022",
+      "titleRu": "Образование имен существительных",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_32",
+      "form": "хуо",
+      "kind": "affix",
+      "paragraph": 24,
+      "sectionId": "morph_p024",
+      "titleRu": "Имена существительные с общим значением лица",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_33",
+      "form": "хьан",
+      "kind": "affix",
+      "paragraph": 24,
+      "sectionId": "morph_p024",
+      "titleRu": "Имена существительные с общим значением лица",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_34",
+      "form": "уо",
+      "kind": "affix",
+      "paragraph": 24,
+      "sectionId": "morph_p024",
+      "titleRu": "Имена существительные с общим значением лица",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_35",
+      "form": "наькъан",
+      "kind": "affix",
+      "paragraph": 24,
+      "sectionId": "morph_p024",
+      "titleRu": "Имена существительные с общим значением лица",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_36",
+      "form": "руо",
+      "kind": "affix",
+      "paragraph": 24,
+      "sectionId": "morph_p024",
+      "titleRu": "Имена существительные с общим значением лица",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_37",
+      "form": "ров",
+      "kind": "affix",
+      "paragraph": 24,
+      "sectionId": "morph_p024",
+      "titleRu": "Имена существительные с общим значением лица",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_38",
+      "form": "луо",
+      "kind": "affix",
+      "paragraph": 24,
+      "sectionId": "morph_p024",
+      "titleRu": "Имена существительные с общим значением лица",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_39",
+      "form": "ча",
+      "kind": "affix",
+      "paragraph": 24,
+      "sectionId": "morph_p024",
+      "titleRu": "Имена существительные с общим значением лица",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_40",
+      "form": "чы",
+      "kind": "affix",
+      "paragraph": 24,
+      "sectionId": "morph_p024",
+      "titleRu": "Имена существительные с общим значением лица",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_41",
+      "form": "чи",
+      "kind": "affix",
+      "paragraph": 24,
+      "sectionId": "morph_p024",
+      "titleRu": "Имена существительные с общим значением лица",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_42",
+      "form": "оценочных",
+      "kind": "affix",
+      "paragraph": 25,
+      "sectionId": "morph_p025",
+      "titleRu": "Имена существительные",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_43",
+      "form": "лг",
+      "kind": "affix",
+      "paragraph": 25,
+      "sectionId": "morph_p025",
+      "titleRu": "Имена существительные",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_44",
+      "form": "оценочными",
+      "kind": "affix",
+      "paragraph": 25,
+      "sectionId": "morph_p025",
+      "titleRu": "Имена существительные",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_45",
+      "form": "кI",
+      "kind": "affix",
+      "paragraph": 25,
+      "sectionId": "morph_p025",
+      "titleRu": "Имена существительные",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_46",
+      "form": "оценочным",
+      "kind": "affix",
+      "paragraph": 25,
+      "sectionId": "morph_p025",
+      "titleRu": "Имена существительные",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_47",
+      "form": "кIиг",
+      "kind": "affix",
+      "paragraph": 25,
+      "sectionId": "morph_p025",
+      "titleRu": "Имена существительные",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_48",
+      "form": "ие",
+      "kind": "affix",
+      "paragraph": 26,
+      "sectionId": "morph_p026",
+      "titleRu": "Имена существительные со значением",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_49",
+      "form": "гI",
+      "kind": "affix",
+      "paragraph": 29,
+      "sectionId": "morph_p029",
+      "titleRu": "Имена существительные со словообразовательным",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_50",
+      "form": "ра",
+      "kind": "affix",
+      "paragraph": 29,
+      "sectionId": "morph_p029",
+      "titleRu": "Имена существительные со словообразовательным",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_51",
+      "form": "йла",
+      "kind": "affix",
+      "paragraph": 30,
+      "sectionId": "morph_p030",
+      "titleRu": "Имена существительные со словообразовательным",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_52",
+      "form": "ийла",
+      "kind": "affix",
+      "paragraph": 30,
+      "sectionId": "morph_p030",
+      "titleRu": "Имена существительные со словообразовательным",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_53",
+      "form": "лва",
+      "kind": "affix",
+      "paragraph": 30,
+      "sectionId": "morph_p030",
+      "titleRu": "Имена существительные со словообразовательным",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_54",
+      "form": "гIа",
+      "kind": "suffix",
+      "paragraph": 31,
+      "sectionId": "morph_p031",
+      "titleRu": "Непродуктивные словообразовательные суффиксы",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_55",
+      "form": "ха",
+      "kind": "suffix",
+      "paragraph": 31,
+      "sectionId": "morph_p031",
+      "titleRu": "Непродуктивные словообразовательные суффиксы",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_56",
+      "form": "ци",
+      "kind": "suffix",
+      "paragraph": 31,
+      "sectionId": "morph_p031",
+      "titleRu": "Непродуктивные словообразовательные суффиксы",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_57",
+      "form": "ли",
+      "kind": "affix",
+      "paragraph": 32,
+      "sectionId": "morph_p032",
+      "titleRu": "К вопросу о топоформантах в ингушском языке",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_58",
+      "form": "ми",
+      "kind": "affix",
+      "paragraph": 32,
+      "sectionId": "morph_p032",
+      "titleRu": "К вопросу о топоформантах в ингушском языке",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_59",
+      "form": "кие",
+      "kind": "affix",
+      "paragraph": 32,
+      "sectionId": "morph_p032",
+      "titleRu": "К вопросу о топоформантах в ингушском языке",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_60",
+      "form": "чие",
+      "kind": "affix",
+      "paragraph": 32,
+      "sectionId": "morph_p032",
+      "titleRu": "К вопросу о топоформантах в ингушском языке",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_61",
+      "form": "топоформанта",
+      "kind": "affix",
+      "paragraph": 32,
+      "sectionId": "morph_p032",
+      "titleRu": "К вопросу о топоформантах в ингушском языке",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_62",
+      "form": "тIие",
+      "kind": "affix",
+      "paragraph": 32,
+      "sectionId": "morph_p032",
+      "titleRu": "К вопросу о топоформантах в ингушском языке",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_63",
+      "form": "ца",
+      "kind": "prefix",
+      "paragraph": 33,
+      "sectionId": "morph_p033",
+      "titleRu": "Префиксальный способ словообразования",
+      "part": 3
+    },
+    {
+      "id": "morph_affix_64",
+      "form": "ла",
+      "kind": "suffix",
+      "paragraph": 54,
+      "sectionId": "morph_p054",
+      "titleRu": "Суффиксальное образование качественных",
+      "part": 4
+    },
+    {
+      "id": "morph_affix_65",
+      "form": "за",
+      "kind": "suffix",
+      "paragraph": 54,
+      "sectionId": "morph_p054",
+      "titleRu": "Суффиксальное образование качественных",
+      "part": 4
+    },
+    {
+      "id": "morph_affix_66",
+      "form": "ра",
+      "kind": "suffix",
+      "paragraph": 54,
+      "sectionId": "morph_p054",
+      "titleRu": "Суффиксальное образование качественных",
+      "part": 4
+    },
+    {
+      "id": "morph_affix_67",
+      "form": "ий",
+      "kind": "suffix",
+      "paragraph": 54,
+      "sectionId": "morph_p054",
+      "titleRu": "Суффиксальное образование качественных",
+      "part": 4
+    },
+    {
+      "id": "morph_affix_68",
+      "form": "ига",
+      "kind": "suffix",
+      "paragraph": 54,
+      "sectionId": "morph_p054",
+      "titleRu": "Суффиксальное образование качественных",
+      "part": 4
+    },
+    {
+      "id": "morph_affix_69",
+      "form": "хь",
+      "kind": "suffix",
+      "paragraph": 54,
+      "sectionId": "morph_p054",
+      "titleRu": "Суффиксальное образование качественных",
+      "part": 4
+    },
+    {
+      "id": "morph_affix_70",
+      "form": "ша",
+      "kind": "suffix",
+      "paragraph": 54,
+      "sectionId": "morph_p054",
+      "titleRu": "Суффиксальное образование качественных",
+      "part": 4
+    },
+    {
+      "id": "morph_affix_71",
+      "form": "лагIа",
+      "kind": "affix",
+      "paragraph": 62,
+      "sectionId": "morph_p062",
+      "titleRu": "Словообразовательная структура имен числительных",
+      "part": 5
+    },
+    {
+      "id": "morph_affix_72",
+      "form": "ал",
+      "kind": "affix",
+      "paragraph": 62,
+      "sectionId": "morph_p062",
+      "titleRu": "Словообразовательная структура имен числительных",
+      "part": 5
+    },
+    {
+      "id": "morph_affix_73",
+      "form": "ехк",
+      "kind": "affix",
+      "paragraph": 64,
+      "sectionId": "morph_p064",
+      "titleRu": "Особенности словообразования местоименных слов",
+      "part": 6
+    },
+    {
+      "id": "morph_affix_74",
+      "form": "аьхк",
+      "kind": "affix",
+      "paragraph": 64,
+      "sectionId": "morph_p064",
+      "titleRu": "Особенности словообразования местоименных слов",
+      "part": 6
+    },
+    {
+      "id": "morph_affix_75",
+      "form": "йтта",
+      "kind": "affix",
+      "paragraph": 64,
+      "sectionId": "morph_p064",
+      "titleRu": "Особенности словообразования местоименных слов",
+      "part": 6
+    },
+    {
+      "id": "morph_affix_76",
+      "form": "зза",
+      "kind": "affix",
+      "paragraph": 67,
+      "sectionId": "morph_p067",
+      "titleRu": "Морфологический способ образования наречий",
+      "part": 7
+    },
+    {
+      "id": "morph_affix_77",
+      "form": "жды",
+      "kind": "affix",
+      "paragraph": 67,
+      "sectionId": "morph_p067",
+      "titleRu": "Морфологический способ образования наречий",
+      "part": 7
+    },
+    {
+      "id": "morph_affix_78",
+      "form": "хьа",
+      "kind": "affix",
+      "paragraph": 67,
+      "sectionId": "morph_p067",
+      "titleRu": "Морфологический способ образования наречий",
+      "part": 7
+    },
+    {
+      "id": "morph_affix_79",
+      "form": "на",
+      "kind": "affix",
+      "paragraph": 67,
+      "sectionId": "morph_p067",
+      "titleRu": "Морфологический способ образования наречий",
+      "part": 7
+    },
+    {
+      "id": "morph_affix_80",
+      "form": "лха",
+      "kind": "affix",
+      "paragraph": 67,
+      "sectionId": "morph_p067",
+      "titleRu": "Морфологический способ образования наречий",
+      "part": 7
+    },
+    {
+      "id": "morph_affix_81",
+      "form": "ехь",
+      "kind": "affix",
+      "paragraph": 67,
+      "sectionId": "morph_p067",
+      "titleRu": "Морфологический способ образования наречий",
+      "part": 7
+    },
+    {
+      "id": "morph_affix_82",
+      "form": "тIа",
+      "kind": "prefix",
+      "paragraph": 72,
+      "sectionId": "morph_p072",
+      "titleRu": "Префикс тIа-",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_83",
+      "form": "чу",
+      "kind": "prefix",
+      "paragraph": 73,
+      "sectionId": "morph_p073",
+      "titleRu": "Префикс чу-",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_84",
+      "form": "чура",
+      "kind": "prefix",
+      "paragraph": 74,
+      "sectionId": "morph_p074",
+      "titleRu": "Префикс чура-",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_85",
+      "form": "кIал",
+      "kind": "prefix",
+      "paragraph": 75,
+      "sectionId": "morph_p075",
+      "titleRu": "Префикс кIал-",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_86",
+      "form": "чакх",
+      "kind": "prefix",
+      "paragraph": 76,
+      "sectionId": "morph_p076",
+      "titleRu": "Префикс чакх-",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_87",
+      "form": "дIа",
+      "kind": "prefix",
+      "paragraph": 77,
+      "sectionId": "morph_p077",
+      "titleRu": "Префикс дIа-",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_88",
+      "form": "хьа",
+      "kind": "prefix",
+      "paragraph": 78,
+      "sectionId": "morph_p078",
+      "titleRu": "Префикс хьа-",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_89",
+      "form": "дIайхьай",
+      "kind": "prefix",
+      "paragraph": 79,
+      "sectionId": "morph_p079",
+      "titleRu": "Префикс дIайхьай-",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_90",
+      "form": "хьал",
+      "kind": "prefix",
+      "paragraph": 80,
+      "sectionId": "morph_p080",
+      "titleRu": "Префиксы хьал- и урагIа-",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_91",
+      "form": "ура",
+      "kind": "prefix",
+      "paragraph": 81,
+      "sectionId": "morph_p081",
+      "titleRu": "Префикс ура-",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_92",
+      "form": "Iо",
+      "kind": "prefix",
+      "paragraph": 82,
+      "sectionId": "morph_p082",
+      "titleRu": "Префикс Iо-",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_93",
+      "form": "юха",
+      "kind": "prefix",
+      "paragraph": 83,
+      "sectionId": "morph_p083",
+      "titleRu": "Префикс юха-",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_94",
+      "form": "сов",
+      "kind": "prefix",
+      "paragraph": 84,
+      "sectionId": "morph_p084",
+      "titleRu": "Префикс сов-",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_95",
+      "form": "тIех",
+      "kind": "prefix",
+      "paragraph": 85,
+      "sectionId": "morph_p085",
+      "titleRu": "Префикс тIех",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_96",
+      "form": "тIакIалтIа",
+      "kind": "prefix",
+      "paragraph": 86,
+      "sectionId": "morph_p086",
+      "titleRu": "Префикс тIакIалтIа-",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_97",
+      "form": "тIакIалтIара",
+      "kind": "prefix",
+      "paragraph": 87,
+      "sectionId": "morph_p087",
+      "titleRu": "Префикс тIакIалтIара-",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_98",
+      "form": "вIашагIа",
+      "kind": "prefix",
+      "paragraph": 88,
+      "sectionId": "morph_p088",
+      "titleRu": "Префикс вIашагIа-",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_99",
+      "form": "сехьа",
+      "kind": "prefix",
+      "paragraph": 89,
+      "sectionId": "morph_p089",
+      "titleRu": "Префиксы сехьа-, дехьа-",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_100",
+      "form": "юкъе",
+      "kind": "prefix",
+      "paragraph": 90,
+      "sectionId": "morph_p090",
+      "titleRu": "Префикс юкъе-",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_101",
+      "form": "уллув",
+      "kind": "prefix",
+      "paragraph": 91,
+      "sectionId": "morph_p091",
+      "titleRu": "Префикс уллув-",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_102",
+      "form": "хьалха",
+      "kind": "prefix",
+      "paragraph": 92,
+      "sectionId": "morph_p092",
+      "titleRu": "Префикс хьалха-",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_103",
+      "form": "кIалхара",
+      "kind": "prefix",
+      "paragraph": 93,
+      "sectionId": "morph_p093",
+      "titleRu": "Префикс кIалхара-",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_104",
+      "form": "ара",
+      "kind": "prefix",
+      "paragraph": 94,
+      "sectionId": "morph_p094",
+      "titleRu": "Префикс ара-",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_105",
+      "form": "ийта",
+      "kind": "suffix",
+      "paragraph": 95,
+      "sectionId": "morph_p095",
+      "titleRu": "Суффиксальное словообразование глаголов",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_106",
+      "form": "ся",
+      "kind": "suffix",
+      "paragraph": 95,
+      "sectionId": "morph_p095",
+      "titleRu": "Суффиксальное словообразование глаголов",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_107",
+      "form": "лу",
+      "kind": "suffix",
+      "paragraph": 95,
+      "sectionId": "morph_p095",
+      "titleRu": "Суффиксальное словообразование глаголов",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_108",
+      "form": "дала",
+      "kind": "suffix",
+      "paragraph": 95,
+      "sectionId": "morph_p095",
+      "titleRu": "Суффиксальное словообразование глаголов",
+      "part": 8
+    },
+    {
+      "id": "morph_affix_109",
+      "form": "де",
+      "kind": "suffix",
+      "paragraph": 95,
+      "sectionId": "morph_p095",
+      "titleRu": "Суффиксальное словообразование глаголов",
+      "part": 8
+    }
+  ]
+}

@@ -39,6 +39,8 @@ const TARIEV_2009_KNOWLEDGE_FILE = path.join(GRAMMAR_DIR, "tariev-2009-knowledge
 const TARIEV_2009_GRAMMAR_RULES_FILE = path.join(GRAMMAR_DIR, "tariev-2009-grammar-rules.json");
 const UROKI_INGUSH_FILE = path.join(ROOT, "data", "dictionary", "uroki-ingush.json");
 const UROKI_INGUSH_KNOWLEDGE_FILE = path.join(GRAMMAR_DIR, "uroki-ingush-knowledge.json");
+const MORPHEMIKA_2020_FILE = path.join(GRAMMAR_DIR, "morphemika-2020-knowledge.json");
+const MORPHEMIKA_2020_AFFIXES_FILE = path.join(GRAMMAR_DIR, "morphemika-2020-affixes.json");
 
 async function readJson(filePath) {
   const raw = await fs.readFile(filePath, "utf8");
@@ -161,6 +163,9 @@ async function getInventory() {
   let uroki2009Phrases = 0;
   let uroki2009Vocabulary = 0;
   let uroki2009KnowledgeSections = 0;
+  let morphemika2020Sections = 0;
+  let morphemika2020Affixes = 0;
+  let morphemika2020Stats = null;
   try {
     const num = await readJson(NICHOLS_NUMERAL_FILE);
     nicholsNumeralParadigms = Array.isArray(num?.paradigms) ? num.paradigms.length : 0;
@@ -221,6 +226,19 @@ async function getInventory() {
   } catch {
     // empty
   }
+  try {
+    const morph = await readJson(MORPHEMIKA_2020_FILE);
+    morphemika2020Sections = Array.isArray(morph?.sections) ? morph.sections.length : 0;
+    morphemika2020Stats = morph?.stats || null;
+  } catch {
+    // empty
+  }
+  try {
+    const aff = await readJson(MORPHEMIKA_2020_AFFIXES_FILE);
+    morphemika2020Affixes = Array.isArray(aff?.items) ? aff.items.length : 0;
+  } catch {
+    // empty
+  }
   return {
     adminEnabled: getAdminSecret().length > 0,
     patterns: patterns.length,
@@ -244,6 +262,9 @@ async function getInventory() {
     uroki2009Phrases,
     uroki2009Vocabulary,
     uroki2009KnowledgeSections,
+    morphemika2020Sections,
+    morphemika2020Affixes,
+    morphemika2020Stats,
     corpusStories: storyFiles.length,
     corpusNovellas: novellaFiles.length,
     blacklist: blacklist.length
@@ -934,6 +955,83 @@ async function getUrokiIngushSection(id) {
   }
 }
 
+async function getMorphemika2020Meta() {
+  try {
+    const json = await readJson(MORPHEMIKA_2020_FILE);
+    const aff = await readJson(MORPHEMIKA_2020_AFFIXES_FILE);
+    const sections = Array.isArray(json?.sections) ? json.sections : [];
+    return {
+      schema: json?.schema || null,
+      source: json?.source || null,
+      authors: json?.authors || null,
+      titleRu: json?.titleRu || null,
+      noteRu: json?.noteRu || null,
+      affixesRef: json?.affixesRef || null,
+      stats: {
+        ...(json?.stats || {}),
+        affixInventory: Array.isArray(aff?.items) ? aff.items.length : 0
+      },
+      parts: json?.stats?.parts || [],
+      sections: sections.map((s) => ({
+        id: s.id,
+        paragraph: s.paragraph,
+        part: s.part,
+        partTitleRu: s.partTitleRu,
+        titleRu: s.titleRu,
+        charCount: s.charCount,
+        exampleCount: s.exampleCount,
+        affixCount: s.affixCount,
+        dedupeRef: s.dedupeRef || null,
+        sourceRef: s.sourceRef || null
+      })),
+      sectionCount: sections.length
+    };
+  } catch {
+    return {
+      schema: null,
+      source: null,
+      authors: null,
+      titleRu: null,
+      noteRu: null,
+      affixesRef: null,
+      stats: null,
+      parts: [],
+      sections: [],
+      sectionCount: 0
+    };
+  }
+}
+
+async function getMorphemika2020Section(id) {
+  try {
+    const json = await readJson(MORPHEMIKA_2020_FILE);
+    return (json?.sections || []).find((s) => s.id === id) || null;
+  } catch {
+    return null;
+  }
+}
+
+async function getMorphemika2020Affixes(opts = {}) {
+  try {
+    const json = await readJson(MORPHEMIKA_2020_AFFIXES_FILE);
+    const items = Array.isArray(json?.items) ? json.items : [];
+    const kind = (opts.kind || "").toLowerCase();
+    const part = opts.part ? Number(opts.part) : 0;
+    let list = items;
+    if (kind === "prefix" || kind === "suffix" || kind === "affix") {
+      list = list.filter((x) => x.kind === kind);
+    }
+    if (part > 0) list = list.filter((x) => x.part === part);
+    return {
+      schema: json?.schema || null,
+      stats: json?.stats || null,
+      items: list
+    };
+  } catch {
+    return { schema: null, stats: null, items: [] };
+  }
+}
+
 module.exports = {
   getAdminSecret,
   isAdminAuthorized,
@@ -977,5 +1075,8 @@ module.exports = {
   getTariev2009Meta,
   getTariev2009Section,
   getUrokiIngushMeta,
-  getUrokiIngushSection
+  getUrokiIngushSection,
+  getMorphemika2020Meta,
+  getMorphemika2020Section,
+  getMorphemika2020Affixes
 };

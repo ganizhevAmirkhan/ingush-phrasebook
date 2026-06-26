@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "digitize:textbook": "node scripts/digitize-textbook-pdf.js",
+    "import-morphemika-2020": "node scripts/import-morphemika-2020.js",
     "import:gramatika5": "node scripts/import-gramatika-5.js",
     "textbooks:download": "node scripts/download-textbooks-external.js",
     "textbooks:extract-classes": "node scripts/extract-noun-class-knowledge.js"

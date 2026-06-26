@@ -495,6 +495,14 @@
       "title": "Хайрова — Уроки ингушского языка",
       "dataFile": "data/grammar/uroki-ingush-knowledge.json",
       "notes": "37 уроков: диалоги, словарь урока, грамматика. Словарь: data/dictionary/uroki-ingush.json, lookup /lookup/uroki, /translate uroki_2009."
+    },
+    {
+      "id": "morphemika_2020_knowledge",
+      "type": "reference",
+      "source": "morphemika-2020-knowledge.json",
+      "title": "Барахоева 2020 — Морфемика. Словообразование",
+      "dataFile": "data/grammar/morphemika-2020-knowledge.json",
+      "notes": "103 § (§1–103): морфемика, словообразование, 128 аффиксов. GET /grammar/morphemika-2020?section=morph_p072, ?affixes=1&kind=prefix. Аффиксы: morphemika-2020-affixes.json."
     }
   ]
 }

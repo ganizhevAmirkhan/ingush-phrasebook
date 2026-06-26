@@ -357,6 +357,27 @@ async function adminApiRoute(req, res, apiPath, url) {
     }
   }
 
+  if (apiPath === "/grammar/morphemika-2020") {
+    if (req.method === "GET") {
+      const sectionId = q("section");
+      if (sectionId) {
+        const section = await adminStore.getMorphemika2020Section(decodeURIComponent(sectionId));
+        return section
+          ? sendJson(res, 200, { ok: true, section })
+          : sendJson(res, 404, { ok: false, error: "section_not_found" });
+      }
+      const affixes = q("affixes");
+      if (affixes === "1" || affixes === "true") {
+        const kind = q("kind") || "";
+        const part = q("part") || "";
+        const data = await adminStore.getMorphemika2020Affixes({ kind, part });
+        return sendJson(res, 200, { ok: true, ...data });
+      }
+      const data = await adminStore.getMorphemika2020Meta();
+      return sendJson(res, 200, { ok: true, ...data });
+    }
+  }
+
   if (apiPath === "/grammar/uroki-ingush") {
     if (req.method === "GET") {
       const sectionId = q("section");
@@ -586,7 +607,10 @@ async function route(req, res) {
         uroki2009Lessons: inventory.uroki2009Lessons,
         uroki2009Phrases: inventory.uroki2009Phrases,
         uroki2009Vocabulary: inventory.uroki2009Vocabulary,
-        uroki2009KnowledgeSections: inventory.uroki2009KnowledgeSections
+        uroki2009KnowledgeSections: inventory.uroki2009KnowledgeSections,
+        morphemika2020Sections: inventory.morphemika2020Sections,
+        morphemika2020Affixes: inventory.morphemika2020Affixes,
+        morphemika2020Stats: inventory.morphemika2020Stats
       },
       links: { home: "/", admin: "/admin/", manifest: "/site.webmanifest" }
     });
