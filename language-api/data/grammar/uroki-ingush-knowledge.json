@@ -1,0 +1,295 @@
+{
+  "schema": "uroki-ingush-knowledge/v1",
+  "source": "uroki-ingush",
+  "authors": "Хайрова Х. А., Баркинхоева З. К., Костоев Х. М.",
+  "titleRu": "Уроки ингушского языка",
+  "noteRu": "Полный учебник Хайрова/Баркинхоева/Костоева. Дополняет фрагменты с PaydaDosh/ghalghay.com полной структурой уроков.",
+  "stats": {
+    "lessons": 35,
+    "phrases": 489,
+    "vocabulary": 171,
+    "grammarLessons": 9
+  },
+  "sections": [
+    {
+      "id": "uroki_l01",
+      "lesson": 1,
+      "titleRu": "Приветствие моаршал хаттар Этот урок мы начнем с разучивания",
+      "titleIng": "",
+      "kind": "conversation",
+      "grammarNoteCount": 5
+    },
+    {
+      "id": "uroki_l02",
+      "lesson": 2,
+      "titleRu": "Календарь Итак, вы уже знаете, что по-ингушски: IУЙРЕ - Утро",
+      "titleIng": "",
+      "kind": "conversation",
+      "grammarNoteCount": 2
+    },
+    {
+      "id": "uroki_l03",
+      "lesson": 3,
+      "titleRu": "Семья и родственники",
+      "titleIng": "В этом уроке Яха и Саид побеседуют о семье и ближайших родственниках.Яха: Здравствуйте, друзья!",
+      "kind": "conversation",
+      "grammarNoteCount": 1
+    },
+    {
+      "id": "uroki_l05",
+      "lesson": 5,
+      "titleRu": "ДРУЖБА И ДРУЗЬЯ (ДОТТАГIАЛИ ДОТТАГIИЙ) У ингушей отношение к",
+      "titleIng": "",
+      "kind": "conversation",
+      "grammarNoteCount": 0
+    },
+    {
+      "id": "uroki_l06",
+      "lesson": 6,
+      "titleRu": "ПОЗДРАВЛЕНИЯ (ДАЬКЪАЛВАР (ЯР)) Как известно, ингуши праздную",
+      "titleIng": "",
+      "kind": "conversation",
+      "grammarNoteCount": 0
+    },
+    {
+      "id": "uroki_l07",
+      "lesson": 7,
+      "titleRu": "МЕСТО, ГДЕ МЫ ЖИВЁМ (ВАЙ ДАХА МОТТИГ) Приведем некоторые сло",
+      "titleIng": "",
+      "kind": "conversation",
+      "grammarNoteCount": 0
+    },
+    {
+      "id": "uroki_l08",
+      "lesson": 8,
+      "titleRu": "ДОМА (ЦIАГIА) Мой брат купил квартиру в Магасе. Недавно мы в",
+      "titleIng": "",
+      "kind": "conversation",
+      "grammarNoteCount": 2
+    },
+    {
+      "id": "uroki_l09",
+      "lesson": 9,
+      "titleRu": "КАК СЧИТАТЬ ПО – ИНГУШСКИ? В отличие от русского языка, в ин",
+      "titleIng": "",
+      "kind": "conversation",
+      "grammarNoteCount": 3
+    },
+    {
+      "id": "uroki_l10",
+      "lesson": 10,
+      "titleRu": "ТРАНСПОРТ Все знают, что в жизни человека транспорт играет о",
+      "titleIng": "",
+      "kind": "conversation",
+      "grammarNoteCount": 0
+    },
+    {
+      "id": "uroki_l11",
+      "lesson": 11,
+      "titleRu": "ЗНАКОМСТВО (ХЬОАШАЛ ТАССАР) Нам часто приходится встречаться",
+      "titleIng": "",
+      "kind": "conversation",
+      "grammarNoteCount": 0
+    },
+    {
+      "id": "uroki_l12",
+      "lesson": 12,
+      "titleRu": "ТРИ ВРЕМЕНИ ГЛАГОЛА «БЫТЬ» Сегодня мы учимся использовать в",
+      "titleIng": "",
+      "kind": "conversation",
+      "grammarNoteCount": 3
+    },
+    {
+      "id": "uroki_l13",
+      "lesson": 13,
+      "titleRu": "ПОСЛЕЛОГИ В ИНГУШСКОМ ЯЗЫКЕ В ингушском языке нет предлогов,",
+      "titleIng": "",
+      "kind": "grammar",
+      "grammarNoteCount": 1
+    },
+    {
+      "id": "uroki_l14",
+      "lesson": 14,
+      "titleRu": "ТЕЛЕФОННЫЙ РАЗГОВОР (ТЕЛЕФОНАЦА ДУ КЪАМАЬЛ) Современный чело",
+      "titleIng": "",
+      "kind": "conversation",
+      "grammarNoteCount": 2
+    },
+    {
+      "id": "uroki_l15",
+      "lesson": 15,
+      "titleRu": "АНАТОМИЯ ЧЕЛОВЕКА (САГАН АНАТОМИ) На земле живут миллиарды л",
+      "titleIng": "",
+      "kind": "conversation",
+      "grammarNoteCount": 0
+    },
+    {
+      "id": "uroki_l16",
+      "lesson": 16,
+      "titleRu": "ПОСЕЩЕНИЕ ПОЛИКЛИНИКИ (ПОЛИКЛИНИКИ ВАХАР)Бывает так, что чел",
+      "titleIng": "",
+      "kind": "conversation",
+      "grammarNoteCount": 0
+    },
+    {
+      "id": "uroki_l17",
+      "lesson": 17,
+      "titleRu": "ФОРМЫ ВРЕМЕНИВ уроке 12 мы с вами уже учились использовать в",
+      "titleIng": "",
+      "kind": "conversation",
+      "grammarNoteCount": 1
+    },
+    {
+      "id": "uroki_l18",
+      "lesson": 18,
+      "titleRu": "В ЛЕСУ (ХЬУНАГIА)Лето. Прекрасная пора",
+      "titleIng": "",
+      "kind": "conversation",
+      "grammarNoteCount": 0
+    },
+    {
+      "id": "uroki_l19",
+      "lesson": 19,
+      "titleRu": "ПОСЕЩЕНИЕ",
+      "titleIng": "ПРОДОВОЛЬСТВЕННОГО МАГАЗИНА (КХАЧАН",
+      "kind": "conversation",
+      "grammarNoteCount": 0
+    },
+    {
+      "id": "uroki_l20",
+      "lesson": 20,
+      "titleRu": "ПОСЕЩЕНИЕ УНИВЕРМАГА (УНИВЕРМАГЕ ВАХАР)Наша ведущая Яха скор",
+      "titleIng": "",
+      "kind": "conversation",
+      "grammarNoteCount": 0
+    },
+    {
+      "id": "uroki_l21",
+      "lesson": 21,
+      "titleRu": "ОБ ОТНОШЕНИЯХ МЕЖДУ ЛЮДЬМИ (НАХА ЮКЪЕРА ГIУЛАКХ)Отношения ме",
+      "titleIng": "",
+      "kind": "conversation",
+      "grammarNoteCount": 0
+    },
+    {
+      "id": "uroki_l22",
+      "lesson": 22,
+      "titleRu": "ПОВСЕДНЕВНЫЕ СЛОВА И ВЫРАЖЕНИЯ (ХIАРА ДЕННА ОАЛАШ ДОЛА ДЕШАШ",
+      "titleIng": "",
+      "kind": "conversation",
+      "grammarNoteCount": 0
+    },
+    {
+      "id": "uroki_l23",
+      "lesson": 23,
+      "titleRu": "ИМЯ СУЩЕСТВИТЕЛЬНОЕ (ЦIЕРДОШ)Наш сегодняшний урок мы посвяти",
+      "titleIng": "",
+      "kind": "grammar",
+      "grammarNoteCount": 3
+    },
+    {
+      "id": "uroki_l24",
+      "lesson": 24,
+      "titleRu": "В КАФЕСаид на улице встретил своего друга Башира и его сестр",
+      "titleIng": "",
+      "kind": "conversation",
+      "grammarNoteCount": 0
+    },
+    {
+      "id": "uroki_l25",
+      "lesson": 25,
+      "titleRu": "ЧЕМ",
+      "titleIng": "МЫ УВЛЕКАЕМСЯ? (СЕНЦА",
+      "kind": "conversation",
+      "grammarNoteCount": 0
+    },
+    {
+      "id": "uroki_l26",
+      "lesson": 26,
+      "titleRu": "ЛЕТНИЙ ОТДЫХ (АЬХКИ САЛАIАР)Лето - период массовых отпусков.",
+      "titleIng": "",
+      "kind": "conversation",
+      "grammarNoteCount": 0
+    },
+    {
+      "id": "uroki_l27",
+      "lesson": 27,
+      "titleRu": "СКЛОНЕНИЕ ИМЕН СУЩЕСТВИТЕЛЬНЫХ (ЦIЕРДЕШАЙ ЛЕГАРАШ)В уроке 22",
+      "titleIng": "",
+      "kind": "grammar",
+      "grammarNoteCount": 2
+    },
+    {
+      "id": "uroki_l28",
+      "lesson": 28,
+      "titleRu": "НАКЛОНЕНИЕ ГЛАГОЛА (ХАНДЕШАЙ СОТТАМ)В уроке 17 мы рассматрив",
+      "titleIng": "",
+      "kind": "grammar",
+      "grammarNoteCount": 2
+    },
+    {
+      "id": "uroki_l29",
+      "lesson": 29,
+      "titleRu": "ПОГОДА (ХАОТТАМ)У природы нет плохой погоды . - IАЛАМА ВО ХА",
+      "titleIng": "",
+      "kind": "conversation",
+      "grammarNoteCount": 1
+    },
+    {
+      "id": "uroki_l30",
+      "lesson": 30,
+      "titleRu": "ВСТРЕЧА ДРУЗЕЙ (ДОТТАГIИЙ ВIАШАГIКХЕТАР)Прошло лето - время",
+      "titleIng": "",
+      "kind": "conversation",
+      "grammarNoteCount": 0
+    },
+    {
+      "id": "uroki_l31",
+      "lesson": 31,
+      "titleRu": "ЖИВОТНЫЙ МИР (ОАКХАРИЙ ДУНЕ)В один из выходных дней Яха и Фа",
+      "titleIng": "",
+      "kind": "conversation",
+      "grammarNoteCount": 0
+    },
+    {
+      "id": "uroki_l32",
+      "lesson": 32,
+      "titleRu": "ПРЕДЛОЖЕНИЕ В ИНГУШСКОМ ЯЗЫКЕ (ГIАЛГIАЙ МЕТТА ПРЕДЛОЖЕНИ)Пре",
+      "titleIng": "",
+      "kind": "grammar",
+      "grammarNoteCount": 3
+    },
+    {
+      "id": "uroki_l34",
+      "lesson": 34,
+      "titleRu": "ПРИЧАСТИЕ В ИНГУШСКОМ ЯЗЫКЕ (ГIАЛГIАЙ МЕТТА ПРИЧАСТИ )В сего",
+      "titleIng": "",
+      "kind": "grammar",
+      "grammarNoteCount": 2
+    },
+    {
+      "id": "uroki_l35",
+      "lesson": 35,
+      "titleRu": "ОТРИЦАТЕЛЬНЫЕ ПРЕДЛОЖЕНИЯ, МЕСТОИМЕНИЯ, ЧАСТИЦЫ (ДАЦАРА ПРЕД",
+      "titleIng": "",
+      "kind": "grammar",
+      "grammarNoteCount": 2
+    },
+    {
+      "id": "uroki_l36",
+      "lesson": 36,
+      "titleRu": "ВОПРОСИТЕЛЬНОЕ ПРЕДЛОЖЕНИЕ (ХАТТАРА ПРЕДЛОЖЕНИ)В нашем сегод",
+      "titleIng": "",
+      "kind": "grammar",
+      "grammarNoteCount": 4
+    },
+    {
+      "id": "uroki_l37",
+      "lesson": 37,
+      "titleRu": "СОЮЗЫ В ИНГУШСКОМ ЯЗЫКЕ (ГIАЛГIАЙ МЕТТА ХОТТАРГАШ)В ингушско",
+      "titleIng": "",
+      "kind": "grammar",
+      "grammarNoteCount": 1
+    }
+  ]
+}

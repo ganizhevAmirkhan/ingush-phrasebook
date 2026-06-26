@@ -36,6 +36,7 @@ const {
   lookupPhrase,
   lookupCorpus,
   lookupTariev,
+  lookupUroki,
   translate,
   assistTask,
   getMetrics,
@@ -356,6 +357,20 @@ async function adminApiRoute(req, res, apiPath, url) {
     }
   }
 
+  if (apiPath === "/grammar/uroki-ingush") {
+    if (req.method === "GET") {
+      const sectionId = q("section");
+      if (sectionId) {
+        const section = await adminStore.getUrokiIngushSection(decodeURIComponent(sectionId));
+        return section
+          ? sendJson(res, 200, { ok: true, section })
+          : sendJson(res, 404, { ok: false, error: "section_not_found" });
+      }
+      const data = await adminStore.getUrokiIngushMeta();
+      return sendJson(res, 200, { ok: true, ...data });
+    }
+  }
+
   if (apiPath === "/grammar/tariev-2009") {
     if (req.method === "GET") {
       const sectionId = q("section");
@@ -499,6 +514,19 @@ async function route(req, res) {
     return sendJson(res, 200, { ok: true, items: lookupCorpus(q) });
   }
 
+  if (req.method === "GET" && path === "/lookup/uroki") {
+    const lesson = url.searchParams.get("lesson") || "";
+    const ru = url.searchParams.get("ru") || "";
+    const ing = url.searchParams.get("ing") || "";
+    const by = url.searchParams.get("by") || (lesson ? "lesson" : ru ? "ru" : "ing");
+    const q = ing || ru || lesson;
+    const limit = Number(url.searchParams.get("limit") || 25);
+    return sendJson(res, 200, {
+      ok: true,
+      items: lookupUroki(q, { by, lesson, ru, ing, limit })
+    });
+  }
+
   if (req.method === "GET" && path === "/lookup/tariev") {
     const ing = url.searchParams.get("ing") || "";
     const ru = url.searchParams.get("ru") || "";
@@ -530,6 +558,7 @@ async function route(req, res) {
         { method: "GET", path: "/lookup/word", desc: "Словарь dosh" },
         { method: "GET", path: "/lookup/phrase", desc: "Индекс фраз" },
         { method: "GET", path: "/lookup/corpus", desc: "Поиск в корпусе" },
+        { method: "GET", path: "/lookup/uroki", desc: "Учебник Хайрова — уроки, фразы, словарь" },
         { method: "GET", path: "/lookup/tariev", desc: "Словарь Тариевой 2009 (ING/RU, парадигма)" },
         { method: "GET", path: "/metrics", desc: "Метрики загрузки" },
         { method: "GET", path: "/health", desc: "Статус сервиса" },
@@ -553,7 +582,11 @@ async function route(req, res) {
         medKodzoevKnowledgeSections: inventory.medKodzoevKnowledgeSections,
         tariev2009Items: inventory.tariev2009Items,
         tariev2009VerbsWithParadigm: inventory.tariev2009VerbsWithParadigm,
-        tariev2009KnowledgeSections: inventory.tariev2009KnowledgeSections
+        tariev2009KnowledgeSections: inventory.tariev2009KnowledgeSections,
+        uroki2009Lessons: inventory.uroki2009Lessons,
+        uroki2009Phrases: inventory.uroki2009Phrases,
+        uroki2009Vocabulary: inventory.uroki2009Vocabulary,
+        uroki2009KnowledgeSections: inventory.uroki2009KnowledgeSections
       },
       links: { home: "/", admin: "/admin/", manifest: "/site.webmanifest" }
     });

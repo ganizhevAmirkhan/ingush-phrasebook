@@ -37,6 +37,8 @@ const MED_KODZOEV_KNOWLEDGE_FILE = path.join(GRAMMAR_DIR, "med-kodzoev-knowledge
 const TARIEV_2009_FILE = path.join(ROOT, "data", "dictionary", "tariev-2009.json");
 const TARIEV_2009_KNOWLEDGE_FILE = path.join(GRAMMAR_DIR, "tariev-2009-knowledge.json");
 const TARIEV_2009_GRAMMAR_RULES_FILE = path.join(GRAMMAR_DIR, "tariev-2009-grammar-rules.json");
+const UROKI_INGUSH_FILE = path.join(ROOT, "data", "dictionary", "uroki-ingush.json");
+const UROKI_INGUSH_KNOWLEDGE_FILE = path.join(GRAMMAR_DIR, "uroki-ingush-knowledge.json");
 
 async function readJson(filePath) {
   const raw = await fs.readFile(filePath, "utf8");
@@ -155,6 +157,10 @@ async function getInventory() {
   let tariev2009Items = 0;
   let tariev2009VerbsWithParadigm = 0;
   let tariev2009KnowledgeSections = 0;
+  let uroki2009Lessons = 0;
+  let uroki2009Phrases = 0;
+  let uroki2009Vocabulary = 0;
+  let uroki2009KnowledgeSections = 0;
   try {
     const num = await readJson(NICHOLS_NUMERAL_FILE);
     nicholsNumeralParadigms = Array.isArray(num?.paradigms) ? num.paradigms.length : 0;
@@ -201,6 +207,20 @@ async function getInventory() {
   } catch {
     // empty
   }
+  try {
+    const ur = await readJson(UROKI_INGUSH_FILE);
+    uroki2009Lessons = Number(ur?.lessonCount) || (Array.isArray(ur?.items) ? ur.items.length : 0);
+    uroki2009Phrases = Number(ur?.phraseCount) || 0;
+    uroki2009Vocabulary = Number(ur?.vocabCount) || 0;
+  } catch {
+    // empty
+  }
+  try {
+    const uk = await readJson(UROKI_INGUSH_KNOWLEDGE_FILE);
+    uroki2009KnowledgeSections = Array.isArray(uk?.sections) ? uk.sections.length : 0;
+  } catch {
+    // empty
+  }
   return {
     adminEnabled: getAdminSecret().length > 0,
     patterns: patterns.length,
@@ -220,6 +240,10 @@ async function getInventory() {
     tariev2009Items,
     tariev2009VerbsWithParadigm,
     tariev2009KnowledgeSections,
+    uroki2009Lessons,
+    uroki2009Phrases,
+    uroki2009Vocabulary,
+    uroki2009KnowledgeSections,
     corpusStories: storyFiles.length,
     corpusNovellas: novellaFiles.length,
     blacklist: blacklist.length
@@ -848,6 +872,68 @@ async function getTariev2009Section(id) {
   }
 }
 
+async function getUrokiIngushMeta() {
+  try {
+    const json = await readJson(UROKI_INGUSH_KNOWLEDGE_FILE);
+    const dict = await readJson(UROKI_INGUSH_FILE);
+    const sections = Array.isArray(json?.sections) ? json.sections : [];
+    return {
+      schema: json?.schema || null,
+      source: json?.source || null,
+      authors: json?.authors || null,
+      titleRu: json?.titleRu || null,
+      noteRu: json?.noteRu || null,
+      stats: {
+        ...(json?.stats || {}),
+        dictionaryLessons: Number(dict?.lessonCount) || (Array.isArray(dict?.items) ? dict.items.length : 0),
+        dictionaryPhrases: Number(dict?.phraseCount) || 0,
+        dictionaryVocabulary: Number(dict?.vocabCount) || 0
+      },
+      sections: sections.map((s) => ({
+        id: s.id,
+        lesson: s.lesson,
+        titleRu: s.titleRu,
+        titleIng: s.titleIng,
+        kind: s.kind,
+        phraseCount: s.phraseCount,
+        vocabularyCount: s.vocabularyCount
+      })),
+      sectionCount: sections.length
+    };
+  } catch {
+    return {
+      schema: null,
+      source: null,
+      authors: null,
+      titleRu: null,
+      noteRu: null,
+      stats: null,
+      sections: [],
+      sectionCount: 0
+    };
+  }
+}
+
+async function getUrokiIngushSection(id) {
+  try {
+    const json = await readJson(UROKI_INGUSH_KNOWLEDGE_FILE);
+    const section = (json?.sections || []).find((s) => s.id === id);
+    if (!section) return null;
+    const dict = await readJson(UROKI_INGUSH_FILE);
+    const lesson = (dict?.items || []).find((it) => it.id === id);
+    return lesson
+      ? {
+          ...section,
+          pairs: lesson.pairs || [],
+          vocabulary: lesson.vocabulary || [],
+          grammarNotes: lesson.grammarNotes || []
+        }
+      : section;
+  } catch {
+    return null;
+  }
+}
+
 module.exports = {
   getAdminSecret,
   isAdminAuthorized,
@@ -889,5 +975,7 @@ module.exports = {
   getMedKodzoevMeta,
   getMedKodzoevSection,
   getTariev2009Meta,
-  getTariev2009Section
+  getTariev2009Section,
+  getUrokiIngushMeta,
+  getUrokiIngushSection
 };

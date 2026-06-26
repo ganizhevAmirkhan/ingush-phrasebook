@@ -487,6 +487,14 @@
       "title": "Тариева 2009 — ГӀалгӀай-эрсий дошлорг",
       "dataFile": "data/grammar/tariev-2009-knowledge.json",
       "notes": "ING→RU ~17k статей, парадигмы глаголов (4 формы), классы сущ. Словарь: data/dictionary/tariev-2009.json, lookup /lookup/tariev, /translate tariev_2009 + tense."
+    },
+    {
+      "id": "uroki_2009_knowledge",
+      "type": "reference",
+      "source": "uroki-ingush-knowledge.json",
+      "title": "Хайрова — Уроки ингушского языка",
+      "dataFile": "data/grammar/uroki-ingush-knowledge.json",
+      "notes": "37 уроков: диалоги, словарь урока, грамматика. Словарь: data/dictionary/uroki-ingush.json, lookup /lookup/uroki, /translate uroki_2009."
     }
   ]
 }

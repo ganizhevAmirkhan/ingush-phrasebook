@@ -41,6 +41,13 @@ const {
   pickIngForm,
   lookupTariev: lookupTarievEntries
 } = require("./tariev-2009");
+const {
+  loadUrokiLessons,
+  buildUrokiIndexes,
+  urokiVocabToWordRecords,
+  urokiLessonsToPhrases,
+  lookupUroki: lookupUrokiEntries
+} = require("./uroki-ingush");
 const { splitRuIngPairs } = require("./phrase-split");
 const CORPUS_STORIES_DIR = path.join(ROOT, "data", "corpus", "stories");
 const CORPUS_NOVELLAS_DIR = path.join(ROOT, "data", "corpus", "novellas");
@@ -83,7 +90,9 @@ const state = {
     translateFromIngTerm: 0,
     translateFromMedKodzoev: 0,
     translateFromTariev2009: 0,
+    translateFromUroki2009: 0,
     lookupsTariev: 0,
+    lookupsUroki: 0,
     translateFromLLM: 0,
     translateRejected: 0,
     nounClassAgreementFixes: 0
@@ -93,6 +102,10 @@ const state = {
   tariev: {
     items: [],
     indexes: { byId: new Map(), ingIndex: new Map(), ruIndex: new Map() }
+  },
+  uroki: {
+    lessons: [],
+    indexes: { byLesson: new Map(), ruIndex: new Map(), ingIndex: new Map() }
   }
 };
 
@@ -181,11 +194,12 @@ function medToWordRecord(item) {
 }
 
 async function loadAllWords() {
-  const [dosh, termItems, medItems, tarievItems] = await Promise.all([
+  const [dosh, termItems, medItems, tarievItems, urokiLessons] = await Promise.all([
     loadDictionary(),
     loadTermEntries(),
     loadMedEntries(),
-    loadTarievEntries()
+    loadTarievEntries(),
+    loadUrokiLessons()
   ]);
   const byRu = new Map();
   for (const word of dosh) {
@@ -203,6 +217,10 @@ async function loadAllWords() {
   }
   for (const item of tarievItems) {
     const word = tarievToWordRecord(item);
+    if (!word?.ruNorm || byRu.has(word.ruNorm)) continue;
+    byRu.set(word.ruNorm, word);
+  }
+  for (const word of urokiVocabToWordRecords(urokiLessons)) {
     if (!word?.ruNorm || byRu.has(word.ruNorm)) continue;
     byRu.set(word.ruNorm, word);
   }
@@ -390,6 +408,7 @@ const PHRASE_SOURCE_PRIORITY = {
   [SOURCE.PAYDADOSH]: 4,
   [SOURCE.ING_TERM]: 3.5,
   [SOURCE.MED_KODZOEV]: 3.2,
+  [SOURCE.UROKI_2009]: 3.12,
   [SOURCE.TARIEV_2009]: 3.15,
   [SOURCE.CORPUS]: 2,
   [SOURCE.GRAMMAR]: 1
@@ -471,20 +490,25 @@ function rebuildPhraseIndex() {
 }
 
 async function loadPhrases() {
-  const [habar, paydadosh, lessons, parallel, termItems, medItems, tarievItems] = await Promise.all([
+  const [habar, paydadosh, lessons, parallel, termItems, medItems, tarievItems, urokiLessons] =
+    await Promise.all([
     loadHabarPhrases(),
     loadPaydaDoshPhrases(),
     loadLessonColloquialPhrases(),
     loadParallelCorpusPhrases(),
     loadTermEntries(),
     loadMedEntries(),
-    loadTarievEntries()
+    loadTarievEntries(),
+    loadUrokiLessons()
   ]);
   const termPhrases = termItemsToPhrases(termItems);
   const medPhrases = medItemsToPhrases(medItems);
   const tarievPhrases = tarievItemsToPhrases(tarievItems);
+  const urokiPhrases = urokiLessonsToPhrases(urokiLessons);
   state.tariev.items = tarievItems;
   state.tariev.indexes = buildIndexes(tarievItems);
+  state.uroki.lessons = urokiLessons;
+  state.uroki.indexes = buildUrokiIndexes(urokiLessons);
   state.inventoryStats = {
     habarItemsRaw: habar.length,
     habarBasicRaw: habar.filter((p) => p.category === "basic_phrases").length,
@@ -500,12 +524,16 @@ async function loadPhrases() {
     medKodzoevPhrasesRaw: medPhrases.length,
     tariev2009Raw: tarievItems.length,
     tariev2009VerbsWithParadigm: tarievItems.filter((it) => it.paradigm).length,
-    tariev2009PhrasesRaw: tarievPhrases.length
+    tariev2009PhrasesRaw: tarievPhrases.length,
+    uroki2009Lessons: urokiLessons.length,
+    uroki2009PhrasesRaw: urokiPhrases.length,
+    uroki2009VocabRaw: urokiLessons.reduce((n, l) => n + (l.vocabulary?.length || 0), 0)
   };
   return mergePhraseRecords([
     ...habar,
     ...termPhrases,
     ...medPhrases,
+    ...urokiPhrases,
     ...tarievPhrases,
     ...lessons,
     ...parallel,
@@ -1261,6 +1289,7 @@ function phraseTranslateResult(phrase) {
   else if (phrase.source === SOURCE.CORPUS) state.metrics.translateFromCorpus += 1;
   else if (phrase.source === SOURCE.ING_TERM) state.metrics.translateFromIngTerm += 1;
   else if (phrase.source === SOURCE.MED_KODZOEV) state.metrics.translateFromMedKodzoev += 1;
+  else if (phrase.source === SOURCE.UROKI_2009) state.metrics.translateFromUroki2009 += 1;
   else if (phrase.source === SOURCE.TARIEV_2009) state.metrics.translateFromTariev2009 += 1;
   else if (phrase.source === SOURCE.GRAMMAR) state.metrics.translateFromGrammar += 1;
   else state.metrics.translateFromPhrase += 1;
@@ -1273,7 +1302,9 @@ function phraseTranslateResult(phrase) {
           ? SOURCE.ING_TERM
           : phrase.source === SOURCE.MED_KODZOEV
             ? SOURCE.MED_KODZOEV
-            : phrase.source === SOURCE.TARIEV_2009
+            : phrase.source === SOURCE.UROKI_2009
+              ? SOURCE.UROKI_2009
+              : phrase.source === SOURCE.TARIEV_2009
               ? SOURCE.TARIEV_2009
               : phrase.source === SOURCE.GRAMMAR
             ? SOURCE.GRAMMAR
@@ -1669,6 +1700,7 @@ async function translate(ruText, options = {}) {
   if (exactWord) {
     if (exactWord.source === SOURCE.ING_TERM) state.metrics.translateFromIngTerm += 1;
     else if (exactWord.source === SOURCE.MED_KODZOEV) state.metrics.translateFromMedKodzoev += 1;
+    else if (exactWord.source === SOURCE.UROKI_2009) state.metrics.translateFromUroki2009 += 1;
     else if (exactWord.source === SOURCE.TARIEV_2009) state.metrics.translateFromTariev2009 += 1;
     else state.metrics.translateFromDosh += 1;
 
@@ -1800,6 +1832,16 @@ function lookupTariev(query, options = {}) {
   });
 }
 
+function lookupUroki(query, options = {}) {
+  state.metrics.lookupsUroki += 1;
+  return lookupUrokiEntries(state.uroki.indexes, {
+    lesson: options.lesson || "",
+    ru: options.ru || (options.by === "ru" ? query : ""),
+    ing: options.ing || (options.by === "ing" ? query : ""),
+    limit: Number(options.limit) || 25
+  });
+}
+
 function lookupCorpus(query) {
   state.metrics.lookupsCorpus += 1;
   const norm = normalizeText(query);
@@ -1867,6 +1909,11 @@ function getMetrics() {
       tariev2009VerbsWithParadigm: inv.tariev2009VerbsWithParadigm ?? 0,
       tariev2009PhrasesLoaded: countPhrasesBy((p) => p.source === SOURCE.TARIEV_2009),
       tariev2009WordsLoaded: state.words.filter((w) => w.source === SOURCE.TARIEV_2009).length,
+      uroki2009Lessons: inv.uroki2009Lessons ?? state.uroki.lessons.length,
+      uroki2009PhrasesRaw: inv.uroki2009PhrasesRaw ?? 0,
+      uroki2009VocabRaw: inv.uroki2009VocabRaw ?? 0,
+      uroki2009PhrasesLoaded: countPhrasesBy((p) => p.source === SOURCE.UROKI_2009),
+      uroki2009WordsLoaded: state.words.filter((w) => w.source === SOURCE.UROKI_2009).length,
       corpusPhrasesInIndex: countPhrasesBy((p) => p.source === SOURCE.CORPUS),
       parallelCorpusInIndex: countPhrasesBy(
         (p) => p.source === SOURCE.CORPUS && (p.category || "").startsWith("ghalghay_") && !/lesson/.test(p.category || "")
@@ -1974,6 +2021,7 @@ module.exports = {
   lookupPhrase,
   lookupCorpus,
   lookupTariev,
+  lookupUroki,
   lookupNounClass,
   translate,
   assistTask,
