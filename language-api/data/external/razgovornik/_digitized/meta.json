@@ -1,0 +1,23 @@
+{
+  "inputPath": "C:\\Users\\admin\\Desktop\\РАЗГОВОРНИК\\ingush-phrasebook-main\\language-api\\data\\external\\razgovornik\\source.pdf",
+  "outDir": "C:\\Users\\admin\\Desktop\\РАЗГОВОРНИК\\ingush-phrasebook-main\\language-api\\data\\external\\razgovornik\\_digitized",
+  "from": 16,
+  "to": 19,
+  "totalPages": 92,
+  "analysis": {
+    "pages": 92,
+    "textLen": 0,
+    "cyrChars": 0,
+    "latinChars": 0,
+    "hasTextLayer": false,
+    "isScan": true,
+    "langHint": "rus",
+    "sample": ""
+  },
+  "ocrLang": "rus",
+  "textChars": 86997,
+  "cyrChars": 63857,
+  "txtPath": "C:\\Users\\admin\\Desktop\\РАЗГОВОРНИК\\ingush-phrasebook-main\\language-api\\data\\external\\razgovornik\\_digitized\\source.txt",
+  "digitalPdfPath": null,
+  "finishedAt": "2026-06-26T19:28:37.825Z"
+}

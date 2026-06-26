@@ -12394,6 +12394,34 @@
       ]
     },
     {
+      "id": "malsagov_focus_dont_look",
+      "ruPattern": "не смотри",
+      "description": "High-priority lexical negative imperative for looking",
+      "slots": [],
+      "ingTemplate": "Ма хьежа",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "не смотри",
+          "ing_expected": "Ма хьежа"
+        }
+      ]
+    },
+    {
+      "id": "malsagov_focus_dont_look_at_me",
+      "ruPattern": "не смотри на меня",
+      "description": "Negative imperative: don't look at me (сугахь = ко мне)",
+      "slots": [],
+      "ingTemplate": "Ма хьежа сугахь",
+      "priority": 99,
+      "examples": [
+        {
+          "ru": "не смотри на меня",
+          "ing_expected": "Ма хьежа сугахь"
+        }
+      ]
+    },
+    {
       "id": "habar_f_1766017415464_5gdw",
       "ruPattern": "животные",
       "description": "Habar phrasebook sync",

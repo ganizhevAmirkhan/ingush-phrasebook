@@ -1,0 +1,139 @@
+{
+  "importedAt": "2026-06-26T19:43:29.006Z",
+  "parsedRaw": 252,
+  "imported": 191,
+  "skipped": 61,
+  "skippedByReason": {
+    "existing_ru": 36,
+    "batch_ru": 24,
+    "empty_ru": 1
+  },
+  "stats": {
+    "total": 252,
+    "sections": 32,
+    "categories": [
+      "greetings",
+      "work",
+      "celebration",
+      "personal_info",
+      "family",
+      "conversation",
+      "communication",
+      "food",
+      "emotions",
+      "weather",
+      "misc",
+      "travel",
+      "money",
+      "city",
+      "shop"
+    ]
+  },
+  "sample": [
+    {
+      "id": "sz_0001",
+      "ru": "Вы как?",
+      "ruNorm": "вы как",
+      "ing": "шшуга фу хьагл да?",
+      "pron": "",
+      "category": "work",
+      "section": "РАБОТА",
+      "page": 9,
+      "source": "sultygova_razgovornik",
+      "sourceLabel": "Султыгова 2013",
+      "confidence": 0.84
+    },
+    {
+      "id": "sz_0002",
+      "ru": "Ребенок",
+      "ruNorm": "ребенок",
+      "ing": "Бер",
+      "pron": "/ дитя Бер",
+      "category": "personal_info",
+      "section": "ЗНАКОМСТВО",
+      "page": 10,
+      "source": "sultygova_razgovornik",
+      "sourceLabel": "Султыгова 2013",
+      "confidence": 0.84
+    },
+    {
+      "id": "sz_0003",
+      "ru": "Как тебя (вас) зовут?",
+      "ruNorm": "как тебя вас зовут",
+      "ing": "Хьа и мишта я?",
+      "pron": "",
+      "category": "personal_info",
+      "section": "ЗНАКОМСТВО",
+      "page": 10,
+      "source": "sultygova_razgovornik",
+      "sourceLabel": "Султыгова 2013",
+      "confidence": 0.84
+    },
+    {
+      "id": "sz_0004",
+      "ru": "Женщина",
+      "ruNorm": "женщина",
+      "ing": "Кхалсаг",
+      "pron": "Кха:лсаг",
+      "category": "family",
+      "section": "ДЕТИ",
+      "page": 10,
+      "source": "sultygova_razgovornik",
+      "sourceLabel": "Султыгова 2013",
+      "confidence": 0.84
+    },
+    {
+      "id": "sz_0005",
+      "ru": "Вы знакомы с",
+      "ruNorm": "вы знакомы с",
+      "ing": "Хьона вовзий ер?",
+      "pron": "Хьон вогвзий йер?",
+      "category": "family",
+      "section": "ДЕТИ",
+      "page": 11,
+      "source": "sultygova_razgovornik",
+      "sourceLabel": "Султыгова 2013",
+      "confidence": 0.84
+    },
+    {
+      "id": "sz_0006",
+      "ru": "Простите / извините.",
+      "ruNorm": "простите / извините",
+      "ing": "Бехк ма баккхалахь",
+      "pron": "Бе:хк ма багккхалахь.",
+      "category": "conversation",
+      "section": "ВСТУПЛЕНИЕ В РАЗГОВОР",
+      "page": 12,
+      "source": "sultygova_razgovornik",
+      "sourceLabel": "Султыгова 2013",
+      "confidence": 0.84
+    },
+    {
+      "id": "sz_0007",
+      "ru": "выразился?",
+      "ruNorm": "выразился",
+      "ing": "аларий?",
+      "pron": "аьгларий?",
+      "category": "communication",
+      "section": "ПОНИМАНИЕ (ЗНАНИЕ) ЯЗЫКА",
+      "page": 13,
+      "source": "sultygova_razgovornik",
+      "sourceLabel": "Султыгова 2013",
+      "confidence": 0.84
+    },
+    {
+      "id": "sz_0008",
+      "ru": "мотт, языка.",
+      "ruNorm": "мотт языка",
+      "ing": "со ваха воалар со",
+      "pron": "",
+      "category": "communication",
+      "section": "ПОНИМАНИЕ (ЗНАНИЕ) ЯЗЫКА",
+      "page": 13,
+      "source": "sultygova_razgovornik",
+      "sourceLabel": "Султыгова 2013",
+      "confidence": 0.84
+    }
+  ],
+  "outFile": "data\\colloquial\\sultygova-razgovornik-phrases.json"
+}

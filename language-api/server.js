@@ -539,12 +539,13 @@ async function route(req, res) {
     const lesson = url.searchParams.get("lesson") || "";
     const ru = url.searchParams.get("ru") || "";
     const ing = url.searchParams.get("ing") || "";
-    const by = url.searchParams.get("by") || (lesson ? "lesson" : ru ? "ru" : "ing");
-    const q = ing || ru || lesson;
+    const q = url.searchParams.get("q") || "";
+    const by = url.searchParams.get("by") || (lesson ? "lesson" : ru ? "ru" : ing ? "ing" : q ? "ru" : "ing");
+    const query = lesson || ru || ing || q;
     const limit = Number(url.searchParams.get("limit") || 25);
     return sendJson(res, 200, {
       ok: true,
-      items: lookupUroki(q, { by, lesson, ru, ing, limit })
+      items: lookupUroki(query, { by, lesson, ru: ru || (by === "ru" ? q : ""), ing: ing || (by === "ing" ? q : ""), limit })
     });
   }
 
@@ -552,12 +553,13 @@ async function route(req, res) {
     const ing = url.searchParams.get("ing") || "";
     const ru = url.searchParams.get("ru") || "";
     const id = url.searchParams.get("id") || "";
-    const by = url.searchParams.get("by") || (ru ? "ru" : id ? "id" : "ing");
-    const q = ing || ru || id;
+    const q = url.searchParams.get("q") || "";
+    const by = url.searchParams.get("by") || (ru ? "ru" : id ? "id" : ing ? "ing" : q ? "ru" : "ing");
+    const query = ing || ru || id || q;
     const limit = Number(url.searchParams.get("limit") || 15);
     return sendJson(res, 200, {
       ok: true,
-      items: lookupTariev(q, { by, id, limit })
+      items: lookupTariev(query, { by, id: id || (by === "id" ? q : ""), limit })
     });
   }
 

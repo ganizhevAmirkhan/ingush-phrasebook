@@ -1,0 +1,554 @@
+{
+  "count": 61,
+  "items": [
+    {
+      "ru": "С приездом!",
+      "ing": "Марша воаг!алва!",
+      "pron": "Магрша воагГалва!",
+      "section": "ПРИВЕТСТВИЕ",
+      "category": "greetings",
+      "page": 8,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "С приездом!",
+      "ing": "алва!",
+      "pron": "Марша воаг!",
+      "section": "ПРИВЕТСТВИЕ",
+      "category": "greetings",
+      "page": 8,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Брат",
+      "ing": "Воша",
+      "pron": "Во:ша",
+      "section": "ПОЖЕЛАНИЯ",
+      "category": "celebration",
+      "page": 9,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Можно войти?",
+      "ing": "Сона дезар...",
+      "pron": "Со:н де:зар...",
+      "section": "ЕДА",
+      "category": "food",
+      "page": 14,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Можно войти?",
+      "ing": "Чувагл мегагвий?",
+      "pron": "",
+      "section": "ЕДА",
+      "category": "food",
+      "page": 14,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Что?",
+      "ing": "Фу?",
+      "pron": "Фа?",
+      "section": "ВОПРОСЫ",
+      "category": "conversation",
+      "page": 20,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Что случилось?",
+      "ing": "Фа хиннад?",
+      "pron": "",
+      "section": "ВОПРОСЫ",
+      "category": "conversation",
+      "page": 20,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Что случилось?",
+      "ing": "Фу хиннад?",
+      "pron": "Фа хиннад?",
+      "section": "ВОПРОСЫ",
+      "category": "conversation",
+      "page": 20,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Где?",
+      "ing": "Мича?",
+      "pron": "Мича:?",
+      "section": "ВОПРОСЫ",
+      "category": "conversation",
+      "page": 20,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Что нового?",
+      "ing": "Фуд керда?",
+      "pron": "Фад ке:рда?",
+      "section": "ВОПРОСЫ",
+      "category": "conversation",
+      "page": 20,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Гдеэто?",
+      "ing": "Мичад из?",
+      "pron": "Мича:д из?",
+      "section": "ВОПРОСЫ",
+      "category": "conversation",
+      "page": 20,
+      "reason": "batch_ru"
+    },
+    {
+      "ru": "Где находится?",
+      "ing": "Мичахьа да.",
+      "pron": "Мича:хь да.",
+      "section": "ВОПРОСЫ",
+      "category": "conversation",
+      "page": 20,
+      "reason": "batch_ru"
+    },
+    {
+      "ru": "Г !",
+      "ing": "улакх;ш ГӀулакхаш нийсвеннав хьо.",
+      "pron": "",
+      "section": "ПОГОДА",
+      "category": "weather",
+      "page": 21,
+      "reason": "empty_ru"
+    },
+    {
+      "ru": "Я е Ех;’:'а‚,р ла) Когда?",
+      "ing": "Маца?",
+      "pron": "Мац?",
+      "section": "ПОГОДА",
+      "category": "weather",
+      "page": 21,
+      "reason": "batch_ru"
+    },
+    {
+      "ru": "Какого цвета?",
+      "ing": "Малапа бесара?",
+      "pron": "бесар?",
+      "section": "ПОГОДА",
+      "category": "weather",
+      "page": 21,
+      "reason": "batch_ru"
+    },
+    {
+      "ru": "Когда (во сколько) Мац в/агшаг/кхет",
+      "ing": "— Маца 'Откуда ни Мичагр воаг!",
+      "pron": "",
+      "section": "ПОГОДА",
+      "category": "weather",
+      "page": 22,
+      "reason": "batch_ru"
+    },
+    {
+      "ru": "Куда?",
+      "ing": "Масс? уе",
+      "pron": "Мича? ° Сколько?",
+      "section": "ПОГОДА",
+      "category": "weather",
+      "page": 22,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Куда ты",
+      "ing": "'Сколько.",
+      "pron": "Мича вода хьо?",
+      "section": "ПОГОДА",
+      "category": "weather",
+      "page": 22,
+      "reason": "batch_ru"
+    },
+    {
+      "ru": "Который час?",
+      "ing": "Масса сахьат",
+      "pron": "Масс сахьат.",
+      "section": "ПОГОДА",
+      "category": "weather",
+      "page": 22,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Где?",
+      "ing": "Мичахьа? Л Фу ха",
+      "pron": "Мичагхь?",
+      "section": "ПОГОДА",
+      "category": "weather",
+      "page": 22,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Где?",
+      "ing": "Мичахьа?",
+      "pron": "Мичагхь?",
+      "section": "ПОГОДА",
+      "category": "weather",
+      "page": 22,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Где я",
+      "ing": "Мичахьа ва со?",
+      "pron": "Мичаг:хь ва со?",
+      "section": "ПОГОДА",
+      "category": "weather",
+      "page": 22,
+      "reason": "batch_ru"
+    },
+    {
+      "ru": "Откуда?.",
+      "ing": "Мичахьара?",
+      "pron": "Мича:р?",
+      "section": "ПОГОДА",
+      "category": "weather",
+      "page": 22,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Откуда?",
+      "ing": "Мичахьара?",
+      "pron": "Мича:р?",
+      "section": "ПОГОДА",
+      "category": "weather",
+      "page": 22,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Что вы говорите?",
+      "ing": "Фу ях Ӏа?",
+      "pron": "Фаях 'а?",
+      "section": "РАДОСТЬ",
+      "category": "emotions",
+      "page": 24,
+      "reason": "batch_ru"
+    },
+    {
+      "ru": "Это правда?",
+      "ing": "‘сделали Бакъахь дяд 'а Бакъахьа даьд Та",
+      "pron": "Бакьдий из?",
+      "section": "УДИВЛЕНИЕ",
+      "category": "emotions",
+      "page": 24,
+      "reason": "batch_ru"
+    },
+    {
+      "ru": "Поздравляю.",
+      "ing": "о свндания!",
+      "pron": "Аз дягкъала вувц Аз даькъала.",
+      "section": "ПОЖЕЛАНИЯ",
+      "category": "celebration",
+      "page": 28,
+      "reason": "batch_ru"
+    },
+    {
+      "ru": "Счастливого пути",
+      "ing": "а Дикача наькъат!",
+      "pron": "",
+      "section": "ПОЖЕЛАНИЯ",
+      "category": "celebration",
+      "page": 29,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "поезд?.",
+      "ing": "Масс сахьат Масса сахьат",
+      "pron": "",
+      "section": "СПОРТ",
+      "category": "misc",
+      "page": 30,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "поезд?",
+      "ing": "Масс сахьат Масса сахьат",
+      "pron": "",
+      "section": "СПОРТ",
+      "category": "misc",
+      "page": 30,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Сколько стоит",
+      "ing": "Фу мах ба",
+      "pron": "",
+      "section": "СПОРТ",
+      "category": "misc",
+      "page": 30,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "автобус?",
+      "ing": "Йиш я?",
+      "pron": "йиш я?",
+      "section": "АЭРОПОРТ",
+      "category": "travel",
+      "page": 32,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Сколько с",
+      "ing": "Фу доагӀа согара?.",
+      "pron": "Фу доаг! соггар?",
+      "section": "ВОКЗАЛ",
+      "category": "travel",
+      "page": 33,
+      "reason": "batch_ru"
+    },
+    {
+      "ru": "Я хочу",
+      "ing": "воакх хьо воаккха хьо",
+      "pron": "",
+      "section": "ВОКЗАЛ",
+      "category": "travel",
+      "page": 33,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Ы Это дорого.",
+      "ing": "сахьат",
+      "pron": "сахьа:т Барх!",
+      "section": "ГОСТИНИЦА",
+      "category": "travel",
+      "page": 36,
+      "reason": "batch_ru"
+    },
+    {
+      "ru": "На пятом этаже.",
+      "ing": "Пхеглаг/ча Пхелай!",
+      "pron": "",
+      "section": "ТЕЛЕФОН",
+      "category": "communication",
+      "page": 36,
+      "reason": "batch_ru"
+    },
+    {
+      "ru": "Накрапывает Падамаш деглх \"адамаш делх.",
+      "ing": "ИГовхал я?",
+      "pron": "о:вхал я?",
+      "section": "ПОГОДА",
+      "category": "weather",
+      "page": 38,
+      "reason": "batch_ru"
+    },
+    {
+      "ru": "Сколько.",
+      "ing": "Масса къам да Масса къам да",
+      "pron": "",
+      "section": "ПОГОДА",
+      "category": "weather",
+      "page": 39,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Где мы",
+      "ing": "Б К 6 вечера Сарахь Сарахьа.",
+      "pron": "",
+      "section": "В ГОРОДЕ",
+      "category": "city",
+      "page": 41,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Когда.",
+      "ing": "Мац яй Маца яьй",
+      "pron": "",
+      "section": "В ГОРОДЕ",
+      "category": "city",
+      "page": 42,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Я хочу",
+      "ing": "укхаза?",
+      "pron": "",
+      "section": "ТЕЛЕФОН",
+      "category": "communication",
+      "page": 44,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Мне нравится.",
+      "ing": "Сона хоза хетт.",
+      "pron": "Со:н хоз хетт.",
+      "section": "ТЕЛЕФОН",
+      "category": "communication",
+      "page": 46,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Где можно.",
+      "ing": "/ спектакль?",
+      "pron": "спектагкль?",
+      "section": "ТЕЛЕФОН",
+      "category": "communication",
+      "page": 46,
+      "reason": "batch_ru"
+    },
+    {
+      "ru": "Какой фильм Тахан",
+      "ing": "‚два билета на сарахьар сеанса дезар сона",
+      "pron": "Тахан малаг1а.",
+      "section": "ТЕЛЕФОН",
+      "category": "communication",
+      "page": 48,
+      "reason": "batch_ru"
+    },
+    {
+      "ru": "Мне нравится",
+      "ing": "Сона хоза хет какие покупки.",
+      "pron": "",
+      "section": "МАГАЗИН, ПОКУПКИ",
+      "category": "shop",
+      "page": 52,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Я люблю цирк",
+      "ing": "Сона хоза хет рки.",
+      "pron": "",
+      "section": "МАГАЗИН, ПОКУПКИ",
+      "category": "shop",
+      "page": 52,
+      "reason": "batch_ru"
+    },
+    {
+      "ru": "пожалуйста.",
+      "ing": "дукхаваха.",
+      "pron": "дукхва:ха.",
+      "section": "РАБОТА",
+      "category": "work",
+      "page": 53,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Где можно",
+      "ing": "Шуга йий...?",
+      "pron": "Шуг йий...?",
+      "section": "РАБОТА",
+      "category": "work",
+      "page": 53,
+      "reason": "batch_ru"
+    },
+    {
+      "ru": "Сколько это",
+      "ing": "/ Фу дех укхах?",
+      "pron": "Фу дегх укхах?",
+      "section": "РАБОТА",
+      "category": "work",
+      "page": 53,
+      "reason": "batch_ru"
+    },
+    {
+      "ru": "Где находится",
+      "ing": "ат» — Мичахьа я подарочную упаковку ч ч",
+      "pron": "",
+      "section": "МАГАЗИН",
+      "category": "shop",
+      "page": 55,
+      "reason": "batch_ru"
+    },
+    {
+      "ru": "с У вас",
+      "ing": "Чкъавра бий шуга?",
+      "pron": "Чкъягра бий шуга?",
+      "section": "МАГАЗИН",
+      "category": "shop",
+      "page": 56,
+      "reason": "batch_ru"
+    },
+    {
+      "ru": "Молоко",
+      "ing": "Масхам",
+      "pron": "Шура Шура Квас Масхам",
+      "section": "ЕДА",
+      "category": "food",
+      "page": 62,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Что вы будете",
+      "ing": "моркови дя салат даь салат",
+      "pron": "Фу юаргъя оаш?",
+      "section": "РЕСТОРАН",
+      "category": "food",
+      "page": 66,
+      "reason": "batch_ru"
+    },
+    {
+      "ru": "Который час?",
+      "ing": "Са сахьататӀа...",
+      "pron": "Са сахьаттиа...",
+      "section": "СЕМЬЯ",
+      "category": "family",
+      "page": 71,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Суббота",
+      "ing": "Кастта",
+      "pron": "Шоатта Шоатта Скоро Кастта",
+      "section": "ЕДА",
+      "category": "food",
+      "page": 72,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Утро",
+      "ing": "оо",
+      "pron": "'ийре Туйре Красивый Хоз",
+      "section": "ЕДА",
+      "category": "food",
+      "page": 73,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "День",
+      "ing": "ИО",
+      "pron": "Ди Ди Некрасивый Ийрч",
+      "section": "ЕДА",
+      "category": "food",
+      "page": 73,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Вечер",
+      "ing": "Къаьна",
+      "pron": "Сайре Сайре Старый Къья:на",
+      "section": "ЕДА",
+      "category": "food",
+      "page": 73,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Сколько?",
+      "ing": "Масса?",
+      "pron": "Масса?",
+      "section": "ЕДА",
+      "category": "food",
+      "page": 76,
+      "reason": "existing_ru"
+    },
+    {
+      "ru": "Постригите меня .",
+      "ing": "Мос дӀатасса са.",
+      "pron": "Мос д1а тасс са.",
+      "section": "ЕДА",
+      "category": "food",
+      "page": 81,
+      "reason": "batch_ru"
+    },
+    {
+      "ru": "Юбка Юбка Юбка Одеяло.",
+      "ing": "Югвреа Юврг!",
+      "pron": "",
+      "section": "ОБРАЩЕНИЕ",
+      "category": "conversation",
+      "page": 89,
+      "reason": "batch_ru"
+    }
+  ]
+}

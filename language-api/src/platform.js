@@ -31,6 +31,7 @@ const CATEGORY_DIR = path.join(HABAR_ROOT, "categories");
 const GITHUB_CATEGORIES_API =
   "https://api.github.com/repos/ganizhevAmirkhan/ingush-phrasebook/contents/categories?ref=main";
 const PAYDADOSH_PHRASES_FILE = path.join(ROOT, "data", "colloquial", "paydadosh-phrases.json");
+const SULTYGOVA_PHRASES_FILE = path.join(ROOT, "data", "colloquial", "sultygova-razgovornik-phrases.json");
 const ING_TERM_FILE = path.join(ROOT, "data", "dictionary", "ing-term-2016.json");
 const MED_KODZOEV_FILE = path.join(ROOT, "data", "dictionary", "med-kodzoev-2019.json");
 const {
@@ -59,6 +60,11 @@ const GRAMMAR_RULES_FILE = path.join(GRAMMAR_DIR, "rules.json");
 const GRAMMAR_LEXEMES_FILE = path.join(GRAMMAR_DIR, "lexemes.json");
 const GRAMMAR_DECLENSIONS_FILE = path.join(GRAMMAR_DIR, "declensions.json");
 
+const DOSH_LOCAL_FILE = path.join(ROOT, "data", "dictionary", "dosh-dictionary.json");
+const DOSH_FETCH_TIMEOUT_MS = Math.max(
+  3000,
+  Number(process.env.DOSH_FETCH_TIMEOUT_MS) || 12000
+);
 const DOSH_URLS = [
   "https://dosh.inghub.ru/public/dictionary.json",
   "https://raw.githubusercontent.com/ganizhevAmirkhan/ingush-language/main/public/dictionary.json"
@@ -127,18 +133,39 @@ async function safeListJsonFiles(dir) {
   }
 }
 
+function mapDictionaryWords(json) {
+  const words = Array.isArray(json?.words) ? json.words : [];
+  return words.map(toWordRecord).filter((w) => w.ruNorm && w.ingVariants.length);
+}
+
+async function fetchDictionaryUrl(url) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), DOSH_FETCH_TIMEOUT_MS);
+  try {
+    const res = await fetch(url, { cache: "no-store", signal: controller.signal });
+    if (!res.ok) return null;
+    const json = await res.json();
+    const mapped = mapDictionaryWords(json);
+    return mapped.length ? mapped : null;
+  } catch {
+    return null;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 async function loadDictionary() {
+  try {
+    const json = await readJson(DOSH_LOCAL_FILE);
+    const mapped = mapDictionaryWords(json);
+    if (mapped.length) return mapped;
+  } catch {
+    // no local snapshot yet
+  }
+
   for (const url of DOSH_URLS) {
-    try {
-      const res = await fetch(url, { cache: "no-store" });
-      if (!res.ok) continue;
-      const json = await res.json();
-      const words = Array.isArray(json?.words) ? json.words : [];
-      if (!words.length) continue;
-      return words.map(toWordRecord).filter((w) => w.ruNorm && w.ingVariants.length);
-    } catch {
-      // continue next source
-    }
+    const mapped = await fetchDictionaryUrl(url);
+    if (mapped?.length) return mapped;
   }
   return [];
 }
@@ -269,6 +296,20 @@ async function loadPaydaDoshPhrases() {
     const items = Array.isArray(json?.items) ? json.items : [];
     return items
       .map((item) => toColloquialPhraseRecord(item, SOURCE.PAYDADOSH, item?.category || "paydadosh"))
+      .filter((rec) => rec.ruNorm && rec.ing);
+  } catch {
+    return [];
+  }
+}
+
+async function loadSultygovaPhrases() {
+  try {
+    const json = await readJson(SULTYGOVA_PHRASES_FILE);
+    const items = Array.isArray(json?.items) ? json.items : [];
+    return items
+      .map((item) =>
+        toColloquialPhraseRecord(item, SOURCE.SULTYGOVA_RAZGOVORNIK, item?.category || "sultygova")
+      )
       .filter((rec) => rec.ruNorm && rec.ing);
   } catch {
     return [];
@@ -410,6 +451,7 @@ const PHRASE_SOURCE_PRIORITY = {
   [SOURCE.MED_KODZOEV]: 3.2,
   [SOURCE.UROKI_2009]: 3.12,
   [SOURCE.TARIEV_2009]: 3.15,
+  [SOURCE.SULTYGOVA_RAZGOVORNIK]: 3.05,
   [SOURCE.CORPUS]: 2,
   [SOURCE.GRAMMAR]: 1
 };
@@ -490,10 +532,11 @@ function rebuildPhraseIndex() {
 }
 
 async function loadPhrases() {
-  const [habar, paydadosh, lessons, parallel, termItems, medItems, tarievItems, urokiLessons] =
+  const [habar, paydadosh, sultygova, lessons, parallel, termItems, medItems, tarievItems, urokiLessons] =
     await Promise.all([
     loadHabarPhrases(),
     loadPaydaDoshPhrases(),
+    loadSultygovaPhrases(),
     loadLessonColloquialPhrases(),
     loadParallelCorpusPhrases(),
     loadTermEntries(),
@@ -516,6 +559,7 @@ async function loadPhrases() {
     paydadoshRaw: paydadosh.length,
     paydadoshEverydayRaw: paydadosh.filter((p) => p.category === "everyday_phrase").length,
     paydadoshLessonRaw: paydadosh.filter((p) => p.category === "lesson_phrase").length,
+    sultygovaRaw: sultygova.length,
     corpusPhrasesRaw: lessons.length,
     parallelCorpusPhrasesRaw: parallel.length,
     ingTermRaw: termItems.length,
@@ -537,7 +581,8 @@ async function loadPhrases() {
     ...tarievPhrases,
     ...lessons,
     ...parallel,
-    ...paydadosh
+    ...paydadosh,
+    ...sultygova
   ]);
 }
 
@@ -1021,6 +1066,34 @@ const WANT_INFINITIVE_EXACT = {
   "хочу есть": "Са безам ба яаахьам яаа"
 };
 
+/** «Иди вон», «пошёл вон» — без LLM (корпус / Dosh). */
+const GO_AWAY_EXACT = {
+  "иди вон": "gho дӀа",
+  "пошел вон": "воллел ара",
+  "иди отсюда": "gho укхазара",
+  "уйди отсюда": "gho укхазара"
+};
+
+/** Отрицательное повелительное — без LLM (как «не слушай» → МА ХАЗА). */
+const NEG_IMPERATIVE_EXACT = {
+  "не смотри": "Ма хьежа",
+  "не смотри на меня": "Ма хьежа сугахь"
+};
+
+function tryComposeGoAway(ruText) {
+  const norm = normalizeText(ruText).replace(/[!?.…]+$/g, "").trim();
+  const hit = GO_AWAY_EXACT[norm];
+  if (!hit) return { ok: false, translation: "" };
+  return { ok: true, translation: hit };
+}
+
+function tryComposeNegImperative(ruText) {
+  const norm = normalizeText(ruText).replace(/[!?.…]+$/g, "").trim();
+  const hit = NEG_IMPERATIVE_EXACT[norm];
+  if (!hit) return { ok: false, translation: "" };
+  return { ok: true, translation: hit };
+}
+
 function lookupDoshInfinitive(ruVerb) {
   const norm = normalizeText(ruVerb);
   if (!norm) return "";
@@ -1109,11 +1182,69 @@ function tryComposeWantInfinitive(ruText) {
   return { ok: true, translation: `Со ${verbIng} безам ба` };
 }
 
-const CANNOT_INFINITIVE_DOSH = {
-  "дышать": "Суна са дах могац"
+// Modal «мочь»: основа мага-, наст. мог, буд. могарда; отриц. наст. магац.
+const MOG_MODAL = {
+  stem: "мага",
+  present: "мог",
+  future: "могарда",
+  negPresent: "магац",
+  subjectI: "сун"
 };
 
-// Locative presence / activity at home (ва/бу copula markers must not be dropped).
+const CANNOT_INFINITIVE_EXACT = {
+  "я не могу дышать": "Суна са дах могац",
+  "я не могу поднять": "Сун магац хьалэйде"
+};
+
+function buildCannotPresentPhrase(verbIng, { subject = MOG_MODAL.subjectI, verbFirst = false } = {}) {
+  const v = (verbIng || "").trim();
+  if (!v) return "";
+  if (verbFirst) return `${subject} ${v} ${MOG_MODAL.negPresent}`;
+  return `${subject} ${MOG_MODAL.negPresent} ${v}`;
+}
+
+function lookupVerbForCannotCompose(ruVerb) {
+  const norm = normalizeText(ruVerb);
+  if (!norm) return "";
+
+  const tariev = lookupTarievEntries(state.tariev.indexes, { ru: ruVerb, limit: 12 });
+  const verb = tariev.find((e) => {
+    if ((e.pos || "").toLowerCase() !== "verb") return false;
+    const r = normalizeText((e.ru || "").split(/[,;]/)[0]);
+    return r === norm;
+  });
+  if (verb?.ing) {
+    return verb.ing.toString().trim().toLowerCase();
+  }
+
+  return lookupDoshInfinitive(ruVerb);
+}
+
+function tryComposeCannotInfinitive(ruText) {
+  const norm = normalizeText(ruText).replace(/[!?.…]+$/g, "").trim();
+  if (CANNOT_INFINITIVE_EXACT[norm]) {
+    return { ok: true, translation: CANNOT_INFINITIVE_EXACT[norm] };
+  }
+
+  const match = norm.match(/^я не могу (.+)$/);
+  if (!match) {
+    return { ok: false, translation: "" };
+  }
+
+  const verbRu = match[1].trim();
+  if (verbRu === "дышать") {
+    return { ok: true, translation: "Суна са дах могац" };
+  }
+
+  const verbIng = lookupVerbForCannotCompose(verbRu);
+  if (!verbIng || verbIng.length > 35) {
+    return { ok: false, translation: "" };
+  }
+
+  // «ца вахача магац сона» — не пойти я не могу (мочь, отриц. наст. = магац).
+  return { ok: true, translation: buildCannotPresentPhrase(verbIng) };
+}
+
 const AT_HOME_PHRASES_DOSH = {
   "я дома": "Со ц1ага ва",
   "я дома работаю": "Аз ц1г1а болх бу"
@@ -1125,22 +1256,6 @@ function tryComposeAtHomePhrase(ruText) {
   if (!translation) {
     return { ok: false, translation: "" };
   }
-  return { ok: true, translation };
-}
-
-function tryComposeCannotInfinitive(ruText) {
-  const norm = normalizeText(ruText).replace(/[!?.…]+$/g, "").trim();
-  const match = norm.match(/^я не могу (.+)$/);
-  if (!match) {
-    return { ok: false, translation: "" };
-  }
-
-  const verbRu = match[1].trim();
-  const translation = CANNOT_INFINITIVE_DOSH[verbRu];
-  if (!translation) {
-    return { ok: false, translation: "" };
-  }
-
   return { ok: true, translation };
 }
 
@@ -1418,6 +1533,23 @@ function fixCommonRuTypos(ruText) {
   return fixed.join(" ");
 }
 
+/** «от сюда» → «отсюда» и т.п. — частая опечатка ввода. */
+function normalizeSpacedCompounds(ruText) {
+  const norm = normalizeText(ruText);
+  if (!norm) return "";
+  const replacements = [
+    ["от сюда", "отсюда"],
+    ["от туда", "оттуда"],
+    ["до сюда", "досюда"],
+    ["до туда", "дотуда"]
+  ];
+  let out = norm;
+  for (const [from, to] of replacements) {
+    if (out.includes(from)) out = out.split(from).join(to);
+  }
+  return out === norm ? "" : out;
+}
+
 function levenshteinAtMost(a, b, maxDist) {
   if (a === b) return 0;
   if (Math.abs(a.length - b.length) > maxDist) return maxDist + 1;
@@ -1576,10 +1708,12 @@ async function appendModeration(item) {
 
 async function translate(ruText, options = {}) {
   state.metrics.translateTotal += 1;
-  const ru = (ruText || "").toString().trim();
+  let ru = (ruText || "").toString().trim();
   if (!ru) {
     return { ok: false, status: 400, error: "empty_ru" };
   }
+  const ruCompact = normalizeSpacedCompounds(ru);
+  if (ruCompact) ru = ruCompact;
 
   const excludeSources = [
     ...(Array.isArray(options.excludeSources) ? options.excludeSources : [])
@@ -1593,7 +1727,9 @@ async function translate(ruText, options = {}) {
   const phraseOptions = excludeSources.length ? { excludeSources } : {};
 
   // 1) Готовые фразы: Habar, PaydaDosh, уроки, шаблоны (+ опечатка в 1 слове, напр. «чпать»→«спать»)
-  const ruTry = [ru, fixCommonRuTypos(ru)].filter((v, i, arr) => v && arr.indexOf(v) === i);
+  const ruTry = [ru, fixCommonRuTypos(ru), normalizeSpacedCompounds(ruText)].filter(
+    (v, i, arr) => v && arr.indexOf(v) === i
+  );
   let exactPhrase = null;
   for (const variant of ruTry) {
     exactPhrase =
@@ -1616,6 +1752,42 @@ async function translate(ruText, options = {}) {
       translation: pastWantEarly.translation,
       usedSource: SOURCE.GRAMMAR,
       confidence: 0.9,
+      fallbackUsed: false
+    };
+  }
+
+  const goAwayEarly = tryComposeGoAway(ru);
+  if (goAwayEarly.ok) {
+    state.metrics.translateFromCorpus += 1;
+    return {
+      ok: true,
+      translation: goAwayEarly.translation,
+      usedSource: SOURCE.CORPUS,
+      confidence: 0.9,
+      fallbackUsed: false
+    };
+  }
+
+  const negImperEarly = tryComposeNegImperative(ru);
+  if (negImperEarly.ok) {
+    state.metrics.translateFromGrammar += 1;
+    return {
+      ok: true,
+      translation: negImperEarly.translation,
+      usedSource: SOURCE.GRAMMAR,
+      confidence: 0.95,
+      fallbackUsed: false
+    };
+  }
+
+  const cannotInfEarly = tryComposeCannotInfinitive(ru);
+  if (cannotInfEarly.ok) {
+    state.metrics.translateFromGrammar += 1;
+    return {
+      ok: true,
+      translation: cannotInfEarly.translation,
+      usedSource: SOURCE.GRAMMAR,
+      confidence: 0.88,
       fallbackUsed: false
     };
   }
@@ -1897,6 +2069,8 @@ function getMetrics() {
       paydaDoshLessonLoaded: countPhrasesBy((p) => p.source === SOURCE.PAYDADOSH && p.category === "lesson_phrase"),
       paydadoshEverydayRaw: inv.paydadoshEverydayRaw ?? 0,
       paydadoshLessonRaw: inv.paydadoshLessonRaw ?? 0,
+      sultygovaRaw: inv.sultygovaRaw ?? 0,
+      sultygovaPhrasesLoaded: countPhrasesBy((p) => p.source === SOURCE.SULTYGOVA_RAZGOVORNIK),
       corpusPhrasesRaw: inv.corpusPhrasesRaw ?? 0,
       parallelCorpusPhrasesRaw: inv.parallelCorpusPhrasesRaw ?? 0,
       ingTermRaw: inv.ingTermRaw ?? 0,

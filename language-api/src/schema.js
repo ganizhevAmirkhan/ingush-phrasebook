@@ -8,6 +8,7 @@ const SOURCE = {
   MED_KODZOEV: "med_kodzoev",
   TARIEV_2009: "tariev_2009",
   UROKI_2009: "uroki_2009",
+  SULTYGOVA_RAZGOVORNIK: "sultygova_razgovornik",
   LLM: "llm"
 };
 
