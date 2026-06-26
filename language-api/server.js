@@ -561,6 +561,25 @@ async function route(req, res) {
     });
   }
 
+  if (req.method === "GET" && path === "/grammar/morphemika-2020") {
+    const sectionId = url.searchParams.get("section");
+    if (sectionId) {
+      const section = await adminStore.getMorphemika2020Section(decodeURIComponent(sectionId));
+      return section
+        ? sendJson(res, 200, { ok: true, section })
+        : sendJson(res, 404, { ok: false, error: "section_not_found" });
+    }
+    const affixes = url.searchParams.get("affixes");
+    if (affixes === "1" || affixes === "true") {
+      const kind = url.searchParams.get("kind") || "";
+      const part = url.searchParams.get("part") || "";
+      const data = await adminStore.getMorphemika2020Affixes({ kind, part });
+      return sendJson(res, 200, { ok: true, ...data });
+    }
+    const data = await adminStore.getMorphemika2020Meta();
+    return sendJson(res, 200, { ok: true, ...data });
+  }
+
   if (req.method === "GET" && path === "/metrics") {
     return sendJson(res, 200, { ok: true, metrics: getMetrics() });
   }
@@ -581,6 +600,7 @@ async function route(req, res) {
         { method: "GET", path: "/lookup/corpus", desc: "Поиск в корпусе" },
         { method: "GET", path: "/lookup/uroki", desc: "Учебник Хайрова — уроки, фразы, словарь" },
         { method: "GET", path: "/lookup/tariev", desc: "Словарь Тариевой 2009 (ING/RU, парадигма)" },
+        { method: "GET", path: "/grammar/morphemika-2020", desc: "Барахоева 2020 — морфемика, 103 §" },
         { method: "GET", path: "/metrics", desc: "Метрики загрузки" },
         { method: "GET", path: "/health", desc: "Статус сервиса" },
         { method: "POST", path: "/ai/assist", desc: "LLM-задачи" }
