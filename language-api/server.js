@@ -313,6 +313,34 @@ async function adminApiRoute(req, res, apiPath, url) {
     }
   }
 
+  if (apiPath === "/grammar/desheriev-99") {
+    if (req.method === "GET") {
+      const sectionId = q("section");
+      if (sectionId) {
+        const section = await adminStore.getDesheriev99Section(decodeURIComponent(sectionId));
+        return section
+          ? sendJson(res, 200, { ok: true, section })
+          : sendJson(res, 404, { ok: false, error: "section_not_found" });
+      }
+      const data = await adminStore.getDesheriev99Meta();
+      return sendJson(res, 200, { ok: true, ...data });
+    }
+  }
+
+  if (apiPath === "/grammar/naana-mott") {
+    if (req.method === "GET") {
+      const sectionId = q("section");
+      if (sectionId) {
+        const section = await adminStore.getNaanaMottSection(decodeURIComponent(sectionId));
+        return section
+          ? sendJson(res, 200, { ok: true, section })
+          : sendJson(res, 404, { ok: false, error: "section_not_found" });
+      }
+      const data = await adminStore.getNaanaMottMeta();
+      return sendJson(res, 200, { ok: true, ...data });
+    }
+  }
+
   if (apiPath === "/corpus") {
     if (req.method === "GET") {
       const data = await adminStore.listCorpus(listOpts());
@@ -474,7 +502,10 @@ async function route(req, res) {
         nicholsGrammarSections: inventory.nicholsGrammarSections,
         nicholsPriorityChapters: inventory.nicholsPriorityChapters,
         nicholsNumeralParadigms: inventory.nicholsNumeralParadigms,
-        nicholsUniqueStats: inventory.nicholsUniqueStats
+        nicholsUniqueStats: inventory.nicholsUniqueStats,
+        desheriev99Sections: inventory.desheriev99Sections,
+        naanaMottSections: inventory.naanaMottSections,
+        naanaMottStats: inventory.naanaMottStats
       },
       links: { home: "/", admin: "/admin/", manifest: "/site.webmanifest" }
     });

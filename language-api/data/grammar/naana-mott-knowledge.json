@@ -1,0 +1,149 @@
+{
+  "schema": "naana-mott-knowledge/v1",
+  "source": "ok-naana-mott",
+  "sourceUrl": "https://ok.ru/group/53943028285608/album/53943175413928",
+  "groupRu": "«ГIАЛГIАЙ МОТТ» — альбом «НАЬНА МОТТ»",
+  "noteRu": "Редкая лексика из карточек OK.ru. Включено только то, чего нет в ingcorpora/KOD, ing-term-2016 и lexemes.json. Справочник для grammar/lookup — не в индекс /translate.",
+  "generatedAt": "2026-06-26T12:00:00.000Z",
+  "stats": {
+    "sections": 2,
+    "entriesNew": 12,
+    "corrections": 3
+  },
+  "sections": [
+    {
+      "id": "nm_missing_lexicon",
+      "titleRu": "Лексемы, отсутствующие в словарных источниках API",
+      "summaryRu": "Проверено по ingcorpora/src/data.js, ing-term-2016/extracted.txt, lexemes.json — этих записей там нет.",
+      "apiNoteRu": "Использовать в /admin/api/grammar/naana-mott и grammar hints. Не импортировать в phrase index без ручной проверки.",
+      "dedupeRef": "ingcorpora, ing-term-2016, lexemes.json",
+      "entries": [
+        {
+          "id": "nm_anzor",
+          "ing": "анзор",
+          "altIng": ["анзур"],
+          "ru": "наблюдатель",
+          "nounClass": "в",
+          "pos": "noun",
+          "etymologyRu": "АН — горизонт; ЗУвР — наблюдать",
+          "cluster": "warrior_etymology"
+        },
+        {
+          "id": "nm_tkhovrat",
+          "ing": "тхьоврат",
+          "ru": "история",
+          "pos": "noun",
+          "cluster": "culture"
+        },
+        {
+          "id": "nm_yarloam",
+          "ing": "яьрлоам",
+          "ru": "вулкан",
+          "nounClass": "ба",
+          "pos": "noun",
+          "cluster": "nature"
+        },
+        {
+          "id": "nm_khovzagettarga",
+          "ing": "хьовзагӀеттарга",
+          "altIng": ["хьовзагlеттарга"],
+          "ru": "вертолёт",
+          "nounClass": "я",
+          "pos": "noun",
+          "cluster": "modern"
+        },
+        {
+          "id": "nm_lamcham",
+          "ing": "ламчам",
+          "ru": "дегустация, проба еды",
+          "nounClass": "да",
+          "pos": "noun",
+          "etymologyRu": "букв. «учёба» вкуса",
+          "cluster": "food"
+        },
+        {
+          "id": "nm_yish_khalar",
+          "ing": "йиш хаьлар",
+          "ru": "потеря голоса",
+          "pos": "phrase",
+          "cluster": "health"
+        },
+        {
+          "id": "nm_tsa_khalar",
+          "ing": "ца хаьлар",
+          "ru": "оскомина",
+          "pos": "phrase",
+          "cluster": "health"
+        },
+        {
+          "id": "nm_dukha_dukha",
+          "ing": "духьа-духьа",
+          "ru": "вразнобой, беспорядочно, каждый по-своему",
+          "pos": "adverb",
+          "cluster": "manner"
+        },
+        {
+          "id": "nm_daakqaste",
+          "ing": "даъкъасте",
+          "ru": "земля отцов (родина)",
+          "pos": "noun",
+          "cluster": "homeland",
+          "relatedRu": "Наьче — родина; Даьхе — отчизна; Даймохк — страна (есть в KOD, не в API)"
+        },
+        {
+          "id": "nm_onguch",
+          "ing": "Онгуч",
+          "altIng": ["онгуч"],
+          "ru": "топоним; этноним «ингуш» (рус. огласовка — Ангушт)",
+          "pos": "toponym",
+          "etymologyRu": "Этноним «ингуш» связывают с названием аула Онгуч",
+          "cluster": "ethnography"
+        },
+        {
+          "id": "nm_khesha",
+          "ing": "хьеша",
+          "ru": "мять",
+          "pos": "verb",
+          "cluster": "action"
+        },
+        {
+          "id": "nm_lelar_tunnel",
+          "ing": "лелар",
+          "ru": "подземный ход",
+          "nounClass": "я",
+          "pos": "noun",
+          "cluster": "architecture",
+          "warnRu": "Омоним: в KOD/Nichols лелар = ходьба, поведение. Значение «подземный ход» — по карточке альбома; сверить с носителем."
+        }
+      ]
+    },
+    {
+      "id": "nm_album_corrections",
+      "titleRu": "Оговорки к карточкам альбома (не импортировать как есть)",
+      "summaryRu": "В альбоме встречаются неточности относительно KOD, DUD, KUR. Здесь — исправления, а не новые переводы.",
+      "apiNoteRu": "Для модерации и grammar hints; не добавлять в translate index.",
+      "corrections": [
+        {
+          "ing": "шолхаргаш",
+          "albumRu": "близнецы",
+          "correctRu": "парные метательные ножи",
+          "preferIng": "шолгӀарг",
+          "preferRu": "близнец",
+          "sourceRef": "KOD21, DUD15, ХАЙОР"
+        },
+        {
+          "ing": "гӀаппархо",
+          "albumRu": "воин на крепостной стене",
+          "correctRu": "представитель ингушского рода гӀаппархой",
+          "sourceRef": "KUR05"
+        },
+        {
+          "ing": "мажар",
+          "albumRu": "фитильное ружьё",
+          "correctRu": "кремнёвое / венгерское ружьё; в KOD18: моакхаза топ",
+          "sourceRef": "KOD18, ИРТ16, UZH27"
+        }
+      ]
+    }
+  ]
+}

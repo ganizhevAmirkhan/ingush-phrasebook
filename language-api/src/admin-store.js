@@ -30,6 +30,8 @@ const NICHOLS_GRAMMAR_FILE = path.join(GRAMMAR_DIR, "nichols-ingush-grammar-sect
 const NICHOLS_PRIORITY_FILE = path.join(GRAMMAR_DIR, "nichols-priority-knowledge.json");
 const NICHOLS_UNIQUE_FILE = path.join(GRAMMAR_DIR, "nichols-unique-knowledge.json");
 const NICHOLS_NUMERAL_FILE = path.join(GRAMMAR_DIR, "nichols-numeral-declension.json");
+const DESHERIEV_99_FILE = path.join(GRAMMAR_DIR, "desheriev-99-knowledge.json");
+const NAANA_MOTT_FILE = path.join(GRAMMAR_DIR, "naana-mott-knowledge.json");
 
 async function readJson(filePath) {
   const raw = await fs.readFile(filePath, "utf8");
@@ -140,9 +142,25 @@ async function getInventory() {
     // empty
   }
   let nicholsNumeralParadigms = 0;
+  let desheriev99Sections = 0;
+  let naanaMottSections = 0;
+  let naanaMottStats = null;
   try {
     const num = await readJson(NICHOLS_NUMERAL_FILE);
     nicholsNumeralParadigms = Array.isArray(num?.paradigms) ? num.paradigms.length : 0;
+  } catch {
+    // empty
+  }
+  try {
+    const d99 = await readJson(DESHERIEV_99_FILE);
+    desheriev99Sections = Array.isArray(d99?.sections) ? d99.sections.length : 0;
+  } catch {
+    // empty
+  }
+  try {
+    const nm = await readJson(NAANA_MOTT_FILE);
+    naanaMottSections = Array.isArray(nm?.sections) ? nm.sections.length : 0;
+    naanaMottStats = nm?.stats || null;
   } catch {
     // empty
   }
@@ -157,6 +175,9 @@ async function getInventory() {
     nicholsPriorityChapters,
     nicholsUniqueStats,
     nicholsNumeralParadigms,
+    desheriev99Sections,
+    naanaMottSections,
+    naanaMottStats,
     corpusStories: storyFiles.length,
     corpusNovellas: novellaFiles.length,
     blacklist: blacklist.length
@@ -599,6 +620,93 @@ async function getNicholsNumeralParadigm(id) {
   }
 }
 
+async function getDesheriev99Meta() {
+  try {
+    const json = await readJson(DESHERIEV_99_FILE);
+    const sections = Array.isArray(json?.sections) ? json.sections : [];
+    return {
+      schema: json?.schema || null,
+      source: json?.source || null,
+      sourceUrl: json?.sourceUrl || null,
+      authors: json?.authors || null,
+      titleRu: json?.titleRu || null,
+      noteRu: json?.noteRu || null,
+      stats: json?.stats || null,
+      sections: sections.map((s) => ({
+        id: s.id,
+        titleRu: s.titleRu,
+        sourceRef: s.sourceRef || null,
+        dedupeRef: s.dedupeRef || null
+      })),
+      sectionCount: sections.length
+    };
+  } catch {
+    return {
+      schema: null,
+      source: null,
+      sourceUrl: null,
+      authors: null,
+      titleRu: null,
+      noteRu: null,
+      stats: null,
+      sections: [],
+      sectionCount: 0
+    };
+  }
+}
+
+async function getDesheriev99Section(id) {
+  try {
+    const json = await readJson(DESHERIEV_99_FILE);
+    return (json?.sections || []).find((s) => s.id === id) || null;
+  } catch {
+    return null;
+  }
+}
+
+async function getNaanaMottMeta() {
+  try {
+    const json = await readJson(NAANA_MOTT_FILE);
+    const sections = Array.isArray(json?.sections) ? json.sections : [];
+    return {
+      schema: json?.schema || null,
+      source: json?.source || null,
+      sourceUrl: json?.sourceUrl || null,
+      groupRu: json?.groupRu || null,
+      noteRu: json?.noteRu || null,
+      stats: json?.stats || null,
+      sections: sections.map((s) => ({
+        id: s.id,
+        titleRu: s.titleRu,
+        entryCount: Array.isArray(s.entries) ? s.entries.length : 0,
+        correctionCount: Array.isArray(s.corrections) ? s.corrections.length : 0,
+        dedupeRef: s.dedupeRef || null
+      })),
+      sectionCount: sections.length
+    };
+  } catch {
+    return {
+      schema: null,
+      source: null,
+      sourceUrl: null,
+      groupRu: null,
+      noteRu: null,
+      stats: null,
+      sections: [],
+      sectionCount: 0
+    };
+  }
+}
+
+async function getNaanaMottSection(id) {
+  try {
+    const json = await readJson(NAANA_MOTT_FILE);
+    return (json?.sections || []).find((s) => s.id === id) || null;
+  } catch {
+    return null;
+  }
+}
+
 module.exports = {
   getAdminSecret,
   isAdminAuthorized,
@@ -632,5 +740,9 @@ module.exports = {
   getNicholsUniqueMeta,
   getNicholsUniqueSection,
   getNicholsNumeralMeta,
-  getNicholsNumeralParadigm
+  getNicholsNumeralParadigm,
+  getDesheriev99Meta,
+  getDesheriev99Section,
+  getNaanaMottMeta,
+  getNaanaMottSection
 };

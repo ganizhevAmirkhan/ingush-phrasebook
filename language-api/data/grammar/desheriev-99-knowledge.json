@@ -1,0 +1,249 @@
+{
+  "schema": "desheriev-99-knowledge/v1",
+  "source": "desheriev-desherieva-1999",
+  "sourceUrl": "http://www.philology.ru/linguistics4/desheriev-desherieva-99.htm",
+  "authors": "Ю. Д. Дешериев, Т. И. Дешериева",
+  "titleRu": "Ингушский язык (Языки мира: Кавказские языки, 1999, с. 187–196)",
+  "noteRu": "Энциклопедический конспект на русском. Не дублирует vigesimal_numerals (1–100), malsagov declensions (мотт), ergative_syntax, noun-class V/J/B/D. Уникально: порядковые/распределительные/кратные числительные, 9 типов спряжения, залоги и наклонения, 6-классовая схема Дешериевых.",
+  "generatedAt": "2026-06-02T12:00:00.000Z",
+  "stats": {
+    "sections": 8,
+    "conjugationTypes": 9,
+    "voiceTypes": 7,
+    "moodTypes": 5,
+    "declensionTypes": 4,
+    "postpositionEntries": 12,
+    "conjunctionEntries": 8
+  },
+  "sections": [
+    {
+      "id": "desheriev_numerals_derived",
+      "titleRu": "Числительные: порядковые, распределительные, кратные",
+      "summaryRu": "Двадцатеричная база (ткъа, шоизткъа…) уже в grammar-overview → vigesimal_numerals. Здесь — производные разряды по Дешериевым 1999.",
+      "ordinalRu": "Порядковые от количественных: суффикс -лагӀа; склоняются как качественные прилагательные.",
+      "ordinalExamples": [
+        { "ing": "иттлагӀа", "ru": "десятый" },
+        { "ing": "ворхӀлагӀа", "ru": "седьмой" },
+        { "ing": "бӀаьлагӀа", "ru": "сотый" },
+        { "ing": "ткъаь иттлагӀа", "ru": "одиннадцатый (в составных)" }
+      ],
+      "distributiveRu": "Распределительные: удвоение количественного (по N штук / по N раз в смысле «по пятерке»).",
+      "distributiveExamples": [
+        { "ing": "пхи-пхи", "ru": "по пять" },
+        { "ing": "итт-итт", "ru": "по десять" }
+      ],
+      "multipleRu": "Кратные (сколько раз): суффикс -зза к основе количественного.",
+      "multipleExamples": [
+        { "ing": "кхозза", "ru": "трижды" },
+        { "ing": "бӀаьзза", "ru": "сто раз" },
+        { "ing": "шозза", "ru": "дважды (из шиъ)" }
+      ],
+      "apiNoteRu": "Не импортировать в phrase index. Использовать в grammar hints и шаблонах порядковых/кратных.",
+      "dedupeRef": "grammar-overview:vigesimal_numerals, nichols-numeral-declension",
+      "sourceRef": "desheriev:2.3.3"
+    },
+    {
+      "id": "desheriev_conjugation_9",
+      "titleRu": "Девять типов спряжения (аблаут)",
+      "summaryRu": "Типы по чередованию гласных в основах инфинитива, настоящего и близкого прошедшего совершенного. Сводка Дешериевых; детальные парадигмы — malsagov_1963 в declensions.json.",
+      "types": [
+        { "n": 1, "pattern": "ā/ао/аь", "exampleRu": "I тип" },
+        { "n": 2, "pattern": "ā/а/аь", "exampleRu": "II тип" },
+        { "n": 3, "pattern": "а/о,э", "exampleRu": "III тип" },
+        { "n": 4, "pattern": "а/а/э", "exampleRu": "IV тип" },
+        { "n": 5, "pattern": "ӯэ/иэ/ий, иэ/иэ/ий", "exampleRu": "V тип" },
+        { "n": 6, "pattern": "ӯо/уо/иэ, уо/уо/иэ", "exampleRu": "VI тип" },
+        { "n": 7, "pattern": "ōв/ов/эй", "exampleRu": "VII тип" },
+        { "n": 8, "pattern": "ӯв/ув/ий", "exampleRu": "VIII тип" },
+        { "n": 9, "pattern": "ə/у/и", "exampleRu": "IX тип" }
+      ],
+      "nounAblautExamples": [
+        { "pair": "дуог — дега", "ru": "сердце — род. п." },
+        { "pair": "болх — белха", "ru": "работа — род. п." },
+        { "pair": "воша — веший — вошас", "ru": "брат — эрг. п." },
+        { "pair": "са — син", "ru": "душа — (форма)" },
+        { "pair": "лоа — лай/лаи", "ru": "снег — (падежные)" }
+      ],
+      "sourceRef": "desheriev:2.2.3, 2.4.0"
+    },
+    {
+      "id": "desheriev_verb_paradigms",
+      "titleRu": "Образцы глагольных парадигм",
+      "summaryRu": "Четыре глагола × основные временные формы (Дешериев 1999, табл.). Для справочника и сверки со школьными «деша»/6 форм прошедшего.",
+      "verbs": [
+        {
+          "lemma": "къага",
+          "ru": "блеснуть",
+          "forms": {
+            "present": "къаг",
+            "pastImpftEvident": "къагар",
+            "futPossible": "къагар",
+            "futFactual": "къагаргда",
+            "pastPftEvident": "къагадар",
+            "recentPast": "къавгад",
+            "remotePast": "къаьгадар"
+          }
+        },
+        {
+          "lemma": "мага",
+          "ru": "мочь",
+          "forms": {
+            "present": "мог",
+            "pastImpftEvident": "могар",
+            "futPossible": "могар",
+            "futFactual": "магаргда",
+            "pastPftEvident": "мегадар",
+            "recentPast": "мегад",
+            "remotePast": "мегадар"
+          }
+        },
+        {
+          "lemma": "дарста",
+          "ru": "полнеть",
+          "forms": {
+            "present": "дарст",
+            "pastImpftEvident": "дарстар",
+            "futPossible": "дарстар",
+            "futFactual": "дарстаргда",
+            "pastPftEvident": "дерстадар",
+            "recentPast": "дерстад",
+            "remotePast": "дерстадар"
+          }
+        },
+        {
+          "lemma": "лувча",
+          "ru": "купаться",
+          "forms": {
+            "present": "лувч",
+            "pastImpftEvident": "лувчар",
+            "futPossible": "лувчар",
+            "futFactual": "лувчаргда",
+            "pastPftEvident": "лийчар",
+            "recentPast": "лийчад",
+            "remotePast": "лийчадар"
+          }
+        }
+      ],
+      "dedupeRef": "grammar-overview:verb_tenses_desha, past_tense_six_forms",
+      "sourceRef": "desheriev:2.4.0"
+    },
+    {
+      "id": "desheriev_voices_moods",
+      "titleRu": "Залоги и наклонения",
+      "summaryRu": "Таксономия, которой нет отдельным блоком в grammar-overview. Примеры для объяснений и будущих шаблонов.",
+      "voices": [
+        { "id": "nominative_intrans", "ru": "номинативный непереходный", "exampleIng": "Студент общежитие в-ах", "exampleRu": "Студент живёт в общежитии" },
+        { "id": "ergative_trans", "ru": "эргативный переходный", "exampleIng": "Дас лаьтта оах", "exampleRu": "Отец пашет землю" },
+        { "id": "ergative_like_intrans", "ru": "эргативнообразный непереходный", "exampleIng": "Аз лох", "exampleRu": "Я ищу" },
+        { "id": "affective_trans", "ru": "аффективный переходный", "exampleIng": "Сона форд баинаб", "exampleRu": "Я видел море" },
+        { "id": "affective_intrans", "ru": "аффективный непереходный", "exampleIng": "Сона сакъердаме я", "exampleRu": "Мне весело" },
+        { "id": "passive", "ru": "пассивный", "exampleIng": "Латта тракторашца аьхад да", "exampleRu": "Земля вспахана тракторами" },
+        { "id": "causative", "ru": "каузатив (-ийт-)", "exampleIng": "даж-ийта", "exampleRu": "заставить / позволить пастись" }
+      ],
+      "moods": [
+        { "id": "indicative", "ru": "изъявительное", "formationRu": "временные формы глагола" },
+        { "id": "imperative", "ru": "повелительное", "formationRu": "обычно = инфинитив" },
+        { "id": "interrogative", "ru": "вопросительное", "formationRu": "аффикс -ий / -й к изъявительному" },
+        { "id": "conditional", "ru": "условное", "formationRu": "причастие буд. вр. + связка в прошедшем: гӀоргвар «пошёл бы»" },
+        { "id": "desiderative", "ru": "желательное", "formationRu": "причастие + д-алар: гӀоттавалар «если бы встал (сейчас)»" }
+      ],
+      "negationRu": "Отрицание: формант -ц(а): лаца → лаца-ц «не ловлю», дуца-ц «не говорю».",
+      "copulaAnomalyRu": "Связка д-у/да «есть»: только наст. и прош. несов.; масдара нет; отрицание суффиксальное.",
+      "dedupeRef": "grammar-overview:ergative_syntax",
+      "sourceRef": "desheriev:2.3.5, 2.5.1"
+    },
+    {
+      "id": "desheriev_six_classes",
+      "titleRu": "Шесть грамматических классов (схема Дешериевых)",
+      "summaryRu": "Альтернативная школьно-энциклопедическая сетка (I–VI). API-классы V/J/B/D (Nichols) — другая модель; не смешивать без пометки.",
+      "classes": [
+        { "n": "I", "semanticsRu": "мужчины", "sg": "в", "pl": "б" },
+        { "n": "II", "semanticsRu": "женщины", "sg": "й", "pl": "б" },
+        { "n": "III", "semanticsRu": "неодуш. (гӀовр, хьу…)", "sg": "й", "pl": "й" },
+        { "n": "IV", "semanticsRu": "неодуш. (белам, дезал…)", "sg": "б", "pl": "б" },
+        { "n": "V", "semanticsRu": "неодуш. (гӀуллакх, гӀа…)", "sg": "д", "pl": "д" },
+        { "n": "VI", "semanticsRu": "неодуш. (устилг, барг…)", "sg": "б", "pl": "д" }
+      ],
+      "doubleMarkerRu": "В непроизводных глаголах один классный маркер может повторяться: в-аха-в, й-аха-й, д-ийша-д, д-ешург-д-аь.",
+      "mappingNoteRu": "Школьные ва/я/ба/да ≈ маркеры в/й/б/д в этой таблице; Nichols V/J/B/D — 4-маркерная модель согласования.",
+      "dedupeRef": "noun-class-knowledge, nichols-priority:ch7",
+      "sourceRef": "desheriev:2.3.2"
+    },
+    {
+      "id": "desheriev_declension_4",
+      "titleRu": "Четыре типа склонения существительных",
+      "summaryRu": "Обзор типов; полные парадигмы мотт/лоалахо уже в declensions.json (malsagov, paradigm_house_neighbor_flower).",
+      "types": [
+        { "n": 1, "ru": "согласный в конце", "example": "юрт «село»" },
+        { "n": 2, "ru": "многосложные, гласный в конце", "example": "арахье «равнина»" },
+        { "n": 3, "ru": "гласный в конце + наращение -чу- в косвенных", "example": "лоалахо «сосед»" },
+        { "n": 4, "ru": "неправильное, односложные с гласным", "example": "лоар «снег» → лай, лайна…" }
+      ],
+      "paradigmMottSg": {
+        "nom": "мотт",
+        "gen": "меттан",
+        "erg": "метто",
+        "dat": "метта",
+        "ins": "меттаца",
+        "mat": "меттах",
+        "cmp": "меттал",
+        "loc": "меттага"
+      },
+      "paradigmMottPl": {
+        "nom": "метташ",
+        "gen": "меттай",
+        "erg": "метташа",
+        "dat": "метташта",
+        "ins": "метташца",
+        "mat": "меттайех",
+        "cmp": "меттайел",
+        "loc": "метташка"
+      },
+      "dedupeRef": "declensions:malsagov_1963_declension_1_paradigms, paradigm_house_neighbor_flower",
+      "sourceRef": "desheriev:2.4.0"
+    },
+    {
+      "id": "desheriev_syntax",
+      "titleRu": "Синтаксис: порядок слов и союзы",
+      "summaryRu": "Эргативная и номинативная конструкции — см. ergative_syntax. Здесь — порядок слов и союзы сложных предложений.",
+      "wordOrderRu": "Базовый порядок: S – O₂ – O₁ – O (подлежащее → косвенное доп. → прямое доп. → сказуемое). Перестановки без сдвига прямого дополнения и сказуемого меняют логическое ударение.",
+      "coordConjunctions": [
+        { "ing": "а", "ru": "и" },
+        { "ing": "е", "ru": "или" },
+        { "ing": "бакъда", "ru": "однако" },
+        { "ing": "вешта", "ru": "впрочем" },
+        { "ing": "даьлах", "ru": "но, однако" },
+        { "ing": "цултӀехьагӀ", "ru": "затем, потом" },
+        { "ing": "санна", "ru": "как" }
+      ],
+      "subordConjunctions": [
+        { "ing": "нагахь / нагахь санна", "ru": "если" },
+        { "ing": "духьа", "ru": "чтобы" },
+        { "ing": "цудухьа", "ru": "потому что" }
+      ],
+      "complexSentenceRu": "Сложноподчинённые чаще строятся причастием/деепричастием/масдаром, а не только подчинительными союзами.",
+      "sourceRef": "desheriev:2.5.3, 2.5.4"
+    },
+    {
+      "id": "desheriev_postpositions",
+      "titleRu": "Послелоги (с этимологией)",
+      "summaryRu": "Дополнение к postposition_* в patterns.json. Пространственные значения часто через послелог + падеж.",
+      "items": [
+        { "ing": "чу", "ru": "в", "etymologyRu": "от че «нутро»" },
+        { "ing": "ара", "ru": "из", "etymologyRu": "от аре «место снаружи»" },
+        { "ing": "тӀи", "ru": "на" },
+        { "ing": "дӀа", "ru": "туда" },
+        { "ing": "хьа", "ru": "сюда" },
+        { "ing": "кӀал", "ru": "под" },
+        { "ing": "тӀехь", "ru": "сзади" },
+        { "ing": "юкъе", "ru": "в середине" },
+        { "ing": "юхе", "ru": "близко" },
+        { "ing": "хьалха", "ru": "впереди, прежде, раньше" },
+        { "ing": "уллув", "ru": "рядом" },
+        { "ing": "тӀера", "ru": "сверху (форма местного падежа послелога)" }
+      ],
+      "dedupeRef": "patterns:postposition_*, nichols:ch17",
+      "sourceRef": "desheriev:2.3.4"
+    }
+  ]
+}
