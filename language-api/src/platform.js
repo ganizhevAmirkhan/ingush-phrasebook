@@ -33,6 +33,14 @@ const GITHUB_CATEGORIES_API =
 const PAYDADOSH_PHRASES_FILE = path.join(ROOT, "data", "colloquial", "paydadosh-phrases.json");
 const ING_TERM_FILE = path.join(ROOT, "data", "dictionary", "ing-term-2016.json");
 const MED_KODZOEV_FILE = path.join(ROOT, "data", "dictionary", "med-kodzoev-2019.json");
+const {
+  loadTarievEntries,
+  buildIndexes,
+  tarievToWordRecord,
+  tarievItemsToPhrases,
+  pickIngForm,
+  lookupTariev: lookupTarievEntries
+} = require("./tariev-2009");
 const { splitRuIngPairs } = require("./phrase-split");
 const CORPUS_STORIES_DIR = path.join(ROOT, "data", "corpus", "stories");
 const CORPUS_NOVELLAS_DIR = path.join(ROOT, "data", "corpus", "novellas");
@@ -74,12 +82,18 @@ const state = {
     translateFromCorpus: 0,
     translateFromIngTerm: 0,
     translateFromMedKodzoev: 0,
+    translateFromTariev2009: 0,
+    lookupsTariev: 0,
     translateFromLLM: 0,
     translateRejected: 0,
     nounClassAgreementFixes: 0
   },
   phraseIndex: new Map(),
-  inventoryStats: {}
+  inventoryStats: {},
+  tariev: {
+    items: [],
+    indexes: { byId: new Map(), ingIndex: new Map(), ruIndex: new Map() }
+  }
 };
 
 function nowIso() {
@@ -167,10 +181,11 @@ function medToWordRecord(item) {
 }
 
 async function loadAllWords() {
-  const [dosh, termItems, medItems] = await Promise.all([
+  const [dosh, termItems, medItems, tarievItems] = await Promise.all([
     loadDictionary(),
     loadTermEntries(),
-    loadMedEntries()
+    loadMedEntries(),
+    loadTarievEntries()
   ]);
   const byRu = new Map();
   for (const word of dosh) {
@@ -183,6 +198,11 @@ async function loadAllWords() {
   }
   for (const item of medItems) {
     const word = medToWordRecord(item);
+    if (!word?.ruNorm || byRu.has(word.ruNorm)) continue;
+    byRu.set(word.ruNorm, word);
+  }
+  for (const item of tarievItems) {
+    const word = tarievToWordRecord(item);
     if (!word?.ruNorm || byRu.has(word.ruNorm)) continue;
     byRu.set(word.ruNorm, word);
   }
@@ -370,6 +390,7 @@ const PHRASE_SOURCE_PRIORITY = {
   [SOURCE.PAYDADOSH]: 4,
   [SOURCE.ING_TERM]: 3.5,
   [SOURCE.MED_KODZOEV]: 3.2,
+  [SOURCE.TARIEV_2009]: 3.15,
   [SOURCE.CORPUS]: 2,
   [SOURCE.GRAMMAR]: 1
 };
@@ -450,16 +471,20 @@ function rebuildPhraseIndex() {
 }
 
 async function loadPhrases() {
-  const [habar, paydadosh, lessons, parallel, termItems, medItems] = await Promise.all([
+  const [habar, paydadosh, lessons, parallel, termItems, medItems, tarievItems] = await Promise.all([
     loadHabarPhrases(),
     loadPaydaDoshPhrases(),
     loadLessonColloquialPhrases(),
     loadParallelCorpusPhrases(),
     loadTermEntries(),
-    loadMedEntries()
+    loadMedEntries(),
+    loadTarievEntries()
   ]);
   const termPhrases = termItemsToPhrases(termItems);
   const medPhrases = medItemsToPhrases(medItems);
+  const tarievPhrases = tarievItemsToPhrases(tarievItems);
+  state.tariev.items = tarievItems;
+  state.tariev.indexes = buildIndexes(tarievItems);
   state.inventoryStats = {
     habarItemsRaw: habar.length,
     habarBasicRaw: habar.filter((p) => p.category === "basic_phrases").length,
@@ -472,9 +497,20 @@ async function loadPhrases() {
     ingTermRaw: termItems.length,
     ingTermPhrasesRaw: termPhrases.length,
     medKodzoevRaw: medItems.length,
-    medKodzoevPhrasesRaw: medPhrases.length
+    medKodzoevPhrasesRaw: medPhrases.length,
+    tariev2009Raw: tarievItems.length,
+    tariev2009VerbsWithParadigm: tarievItems.filter((it) => it.paradigm).length,
+    tariev2009PhrasesRaw: tarievPhrases.length
   };
-  return mergePhraseRecords([...habar, ...termPhrases, ...medPhrases, ...lessons, ...parallel, ...paydadosh]);
+  return mergePhraseRecords([
+    ...habar,
+    ...termPhrases,
+    ...medPhrases,
+    ...tarievPhrases,
+    ...lessons,
+    ...parallel,
+    ...paydadosh
+  ]);
 }
 
 async function loadCorpus() {
@@ -1225,6 +1261,7 @@ function phraseTranslateResult(phrase) {
   else if (phrase.source === SOURCE.CORPUS) state.metrics.translateFromCorpus += 1;
   else if (phrase.source === SOURCE.ING_TERM) state.metrics.translateFromIngTerm += 1;
   else if (phrase.source === SOURCE.MED_KODZOEV) state.metrics.translateFromMedKodzoev += 1;
+  else if (phrase.source === SOURCE.TARIEV_2009) state.metrics.translateFromTariev2009 += 1;
   else if (phrase.source === SOURCE.GRAMMAR) state.metrics.translateFromGrammar += 1;
   else state.metrics.translateFromPhrase += 1;
   const usedSource =
@@ -1236,7 +1273,9 @@ function phraseTranslateResult(phrase) {
           ? SOURCE.ING_TERM
           : phrase.source === SOURCE.MED_KODZOEV
             ? SOURCE.MED_KODZOEV
-            : phrase.source === SOURCE.GRAMMAR
+            : phrase.source === SOURCE.TARIEV_2009
+              ? SOURCE.TARIEV_2009
+              : phrase.source === SOURCE.GRAMMAR
             ? SOURCE.GRAMMAR
             : SOURCE.HABAR;
   return {
@@ -1630,19 +1669,36 @@ async function translate(ruText, options = {}) {
   if (exactWord) {
     if (exactWord.source === SOURCE.ING_TERM) state.metrics.translateFromIngTerm += 1;
     else if (exactWord.source === SOURCE.MED_KODZOEV) state.metrics.translateFromMedKodzoev += 1;
+    else if (exactWord.source === SOURCE.TARIEV_2009) state.metrics.translateFromTariev2009 += 1;
     else state.metrics.translateFromDosh += 1;
-    return {
+
+    let translation = exactWord.ingVariants.slice(0, 2).join(" / ");
+    let tenseUsed = null;
+    if (exactWord.source === SOURCE.TARIEV_2009 && exactWord.tariev?.paradigm) {
+      const item = state.tariev.indexes.byId.get(exactWord.id);
+      tenseUsed = options.tense || "imperative";
+      translation = pickIngForm(item || { paradigm: exactWord.tariev.paradigm, ing: exactWord.ingVariants[0] }, tenseUsed);
+    }
+
+    const out = {
       ok: true,
-      translation: exactWord.ingVariants.slice(0, 2).join(" / "),
+      translation,
       usedSource:
         exactWord.source === SOURCE.ING_TERM
           ? SOURCE.ING_TERM
           : exactWord.source === SOURCE.MED_KODZOEV
             ? SOURCE.MED_KODZOEV
-            : SOURCE.DOSH,
+            : exactWord.source === SOURCE.TARIEV_2009
+              ? SOURCE.TARIEV_2009
+              : SOURCE.DOSH,
       confidence: exactWord.confidence ?? 1,
       fallbackUsed: false
     };
+    if (exactWord.tariev?.paradigm) {
+      out.paradigm = exactWord.tariev.paradigm;
+      out.tense = tenseUsed;
+    }
+    return out;
   }
 
   const byGrammar = tryGrammarPatternTranslate(ru);
@@ -1733,6 +1789,17 @@ function lookupPhrase(ruText) {
     .slice(0, 25);
 }
 
+function lookupTariev(query, options = {}) {
+  state.metrics.lookupsTariev += 1;
+  const by = (options.by || "ing").toLowerCase();
+  return lookupTarievEntries(state.tariev.indexes, {
+    ing: by === "ru" || by === "id" ? "" : query,
+    ru: by === "ru" ? query : "",
+    id: by === "id" ? query : options.id || "",
+    limit: Number(options.limit) || 15
+  });
+}
+
 function lookupCorpus(query) {
   state.metrics.lookupsCorpus += 1;
   const norm = normalizeText(query);
@@ -1796,6 +1863,10 @@ function getMetrics() {
       medKodzoevRaw: inv.medKodzoevRaw ?? 0,
       medKodzoevPhrasesLoaded: countPhrasesBy((p) => p.source === SOURCE.MED_KODZOEV),
       medKodzoevWordsLoaded: state.words.filter((w) => w.source === SOURCE.MED_KODZOEV).length,
+      tariev2009Raw: inv.tariev2009Raw ?? 0,
+      tariev2009VerbsWithParadigm: inv.tariev2009VerbsWithParadigm ?? 0,
+      tariev2009PhrasesLoaded: countPhrasesBy((p) => p.source === SOURCE.TARIEV_2009),
+      tariev2009WordsLoaded: state.words.filter((w) => w.source === SOURCE.TARIEV_2009).length,
       corpusPhrasesInIndex: countPhrasesBy((p) => p.source === SOURCE.CORPUS),
       parallelCorpusInIndex: countPhrasesBy(
         (p) => p.source === SOURCE.CORPUS && (p.category || "").startsWith("ghalghay_") && !/lesson/.test(p.category || "")
@@ -1902,6 +1973,7 @@ module.exports = {
   lookupWord,
   lookupPhrase,
   lookupCorpus,
+  lookupTariev,
   lookupNounClass,
   translate,
   assistTask,

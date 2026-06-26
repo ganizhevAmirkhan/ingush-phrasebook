@@ -34,6 +34,9 @@ const DESHERIEV_99_FILE = path.join(GRAMMAR_DIR, "desheriev-99-knowledge.json");
 const NAANA_MOTT_FILE = path.join(GRAMMAR_DIR, "naana-mott-knowledge.json");
 const MED_KODZOEV_FILE = path.join(ROOT, "data", "dictionary", "med-kodzoev-2019.json");
 const MED_KODZOEV_KNOWLEDGE_FILE = path.join(GRAMMAR_DIR, "med-kodzoev-knowledge.json");
+const TARIEV_2009_FILE = path.join(ROOT, "data", "dictionary", "tariev-2009.json");
+const TARIEV_2009_KNOWLEDGE_FILE = path.join(GRAMMAR_DIR, "tariev-2009-knowledge.json");
+const TARIEV_2009_GRAMMAR_RULES_FILE = path.join(GRAMMAR_DIR, "tariev-2009-grammar-rules.json");
 
 async function readJson(filePath) {
   const raw = await fs.readFile(filePath, "utf8");
@@ -149,6 +152,9 @@ async function getInventory() {
   let naanaMottStats = null;
   let medKodzoevItems = 0;
   let medKodzoevKnowledgeSections = 0;
+  let tariev2009Items = 0;
+  let tariev2009VerbsWithParadigm = 0;
+  let tariev2009KnowledgeSections = 0;
   try {
     const num = await readJson(NICHOLS_NUMERAL_FILE);
     nicholsNumeralParadigms = Array.isArray(num?.paradigms) ? num.paradigms.length : 0;
@@ -180,6 +186,21 @@ async function getInventory() {
   } catch {
     // empty
   }
+  try {
+    const tar = await readJson(TARIEV_2009_FILE);
+    tariev2009Items = Number(tar?.itemCount) || (Array.isArray(tar?.items) ? tar.items.length : 0);
+    tariev2009VerbsWithParadigm =
+      Number(tar?.verbsWithParadigm) ||
+      (Array.isArray(tar?.items) ? tar.items.filter((it) => it.paradigm).length : 0);
+  } catch {
+    // empty
+  }
+  try {
+    const tk = await readJson(TARIEV_2009_KNOWLEDGE_FILE);
+    tariev2009KnowledgeSections = Array.isArray(tk?.sections) ? tk.sections.length : 0;
+  } catch {
+    // empty
+  }
   return {
     adminEnabled: getAdminSecret().length > 0,
     patterns: patterns.length,
@@ -196,6 +217,9 @@ async function getInventory() {
     naanaMottStats,
     medKodzoevItems,
     medKodzoevKnowledgeSections,
+    tariev2009Items,
+    tariev2009VerbsWithParadigm,
+    tariev2009KnowledgeSections,
     corpusStories: storyFiles.length,
     corpusNovellas: novellaFiles.length,
     blacklist: blacklist.length
@@ -771,6 +795,59 @@ async function getMedKodzoevSection(id) {
   }
 }
 
+async function getTariev2009Meta() {
+  try {
+    const json = await readJson(TARIEV_2009_KNOWLEDGE_FILE);
+    const dict = await readJson(TARIEV_2009_FILE);
+    const rules = await readJson(TARIEV_2009_GRAMMAR_RULES_FILE);
+    const sections = Array.isArray(json?.sections) ? json.sections : [];
+    return {
+      schema: json?.schema || null,
+      source: json?.source || null,
+      authors: json?.authors || null,
+      titleRu: json?.titleRu || null,
+      noteRu: json?.noteRu || null,
+      grammarRulesRef: json?.grammarRulesRef || null,
+      verbParadigmOrder: rules?.verbParadigm?.orderRu || null,
+      stats: {
+        ...(json?.stats || {}),
+        dictionaryItems: Number(dict?.itemCount) || (Array.isArray(dict?.items) ? dict.items.length : 0),
+        verbsWithParadigm:
+          Number(dict?.verbsWithParadigm) ||
+          (Array.isArray(dict?.items) ? dict.items.filter((it) => it.paradigm).length : 0)
+      },
+      sections: sections.map((s) => ({
+        id: s.id,
+        titleRu: s.titleRu,
+        exampleCount: Array.isArray(s.examples) ? s.examples.length : 0
+      })),
+      sectionCount: sections.length
+    };
+  } catch {
+    return {
+      schema: null,
+      source: null,
+      authors: null,
+      titleRu: null,
+      noteRu: null,
+      grammarRulesRef: null,
+      verbParadigmOrder: null,
+      stats: null,
+      sections: [],
+      sectionCount: 0
+    };
+  }
+}
+
+async function getTariev2009Section(id) {
+  try {
+    const json = await readJson(TARIEV_2009_KNOWLEDGE_FILE);
+    return (json?.sections || []).find((s) => s.id === id) || null;
+  } catch {
+    return null;
+  }
+}
+
 module.exports = {
   getAdminSecret,
   isAdminAuthorized,
@@ -810,5 +887,7 @@ module.exports = {
   getNaanaMottMeta,
   getNaanaMottSection,
   getMedKodzoevMeta,
-  getMedKodzoevSection
+  getMedKodzoevSection,
+  getTariev2009Meta,
+  getTariev2009Section
 };

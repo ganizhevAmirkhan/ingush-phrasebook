@@ -35,6 +35,7 @@ const {
   lookupWord,
   lookupPhrase,
   lookupCorpus,
+  lookupTariev,
   translate,
   assistTask,
   getMetrics,
@@ -355,6 +356,20 @@ async function adminApiRoute(req, res, apiPath, url) {
     }
   }
 
+  if (apiPath === "/grammar/tariev-2009") {
+    if (req.method === "GET") {
+      const sectionId = q("section");
+      if (sectionId) {
+        const section = await adminStore.getTariev2009Section(decodeURIComponent(sectionId));
+        return section
+          ? sendJson(res, 200, { ok: true, section })
+          : sendJson(res, 404, { ok: false, error: "section_not_found" });
+      }
+      const data = await adminStore.getTariev2009Meta();
+      return sendJson(res, 200, { ok: true, ...data });
+    }
+  }
+
   if (apiPath === "/corpus") {
     if (req.method === "GET") {
       const data = await adminStore.listCorpus(listOpts());
@@ -484,6 +499,19 @@ async function route(req, res) {
     return sendJson(res, 200, { ok: true, items: lookupCorpus(q) });
   }
 
+  if (req.method === "GET" && path === "/lookup/tariev") {
+    const ing = url.searchParams.get("ing") || "";
+    const ru = url.searchParams.get("ru") || "";
+    const id = url.searchParams.get("id") || "";
+    const by = url.searchParams.get("by") || (ru ? "ru" : id ? "id" : "ing");
+    const q = ing || ru || id;
+    const limit = Number(url.searchParams.get("limit") || 15);
+    return sendJson(res, 200, {
+      ok: true,
+      items: lookupTariev(q, { by, id, limit })
+    });
+  }
+
   if (req.method === "GET" && path === "/metrics") {
     return sendJson(res, 200, { ok: true, metrics: getMetrics() });
   }
@@ -502,6 +530,7 @@ async function route(req, res) {
         { method: "GET", path: "/lookup/word", desc: "Словарь dosh" },
         { method: "GET", path: "/lookup/phrase", desc: "Индекс фраз" },
         { method: "GET", path: "/lookup/corpus", desc: "Поиск в корпусе" },
+        { method: "GET", path: "/lookup/tariev", desc: "Словарь Тариевой 2009 (ING/RU, парадигма)" },
         { method: "GET", path: "/metrics", desc: "Метрики загрузки" },
         { method: "GET", path: "/health", desc: "Статус сервиса" },
         { method: "POST", path: "/ai/assist", desc: "LLM-задачи" }
@@ -521,7 +550,10 @@ async function route(req, res) {
         naanaMottSections: inventory.naanaMottSections,
         naanaMottStats: inventory.naanaMottStats,
         medKodzoevItems: inventory.medKodzoevItems,
-        medKodzoevKnowledgeSections: inventory.medKodzoevKnowledgeSections
+        medKodzoevKnowledgeSections: inventory.medKodzoevKnowledgeSections,
+        tariev2009Items: inventory.tariev2009Items,
+        tariev2009VerbsWithParadigm: inventory.tariev2009VerbsWithParadigm,
+        tariev2009KnowledgeSections: inventory.tariev2009KnowledgeSections
       },
       links: { home: "/", admin: "/admin/", manifest: "/site.webmanifest" }
     });
@@ -550,7 +582,8 @@ async function route(req, res) {
     const body = await readBody(req);
     const result = await translate(body?.ru || "", {
       skipHabar: !!body?.skipHabar,
-      excludeSources: Array.isArray(body?.excludeSources) ? body.excludeSources : []
+      excludeSources: Array.isArray(body?.excludeSources) ? body.excludeSources : [],
+      tense: body?.tense || null
     });
     if (!result.ok) {
       return sendJson(res, result.status || 400, {
@@ -564,7 +597,8 @@ async function route(req, res) {
       translation: result.translation,
       usedSource: result.usedSource,
       confidence: result.confidence,
-      fallbackUsed: result.fallbackUsed
+      fallbackUsed: result.fallbackUsed,
+      ...(result.paradigm ? { paradigm: result.paradigm, tense: result.tense } : {})
     });
   }
 

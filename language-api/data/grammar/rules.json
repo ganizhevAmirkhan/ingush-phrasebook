@@ -479,6 +479,14 @@
       "title": "Кодзоев 2019 — медицинский словарь",
       "dataFile": "data/grammar/med-kodzoev-knowledge.json",
       "notes": "RU→ING ~1200 терминов (med19). Словарь: data/dictionary/med-kodzoev-2019.json, источник /translate med_kodzoev."
+    },
+    {
+      "id": "tariev_2009_knowledge",
+      "type": "reference",
+      "source": "tariev-2009-knowledge.json",
+      "title": "Тариева 2009 — ГӀалгӀай-эрсий дошлорг",
+      "dataFile": "data/grammar/tariev-2009-knowledge.json",
+      "notes": "ING→RU ~17k статей, парадигмы глаголов (4 формы), классы сущ. Словарь: data/dictionary/tariev-2009.json, lookup /lookup/tariev, /translate tariev_2009 + tense."
     }
   ]
 }
