@@ -471,6 +471,14 @@
       "title": "НАЬНА МОТТ (OK.ru) — редкая лексика",
       "dataFile": "data/grammar/naana-mott-knowledge.json",
       "notes": "12 лексем, отсутствующих в ingcorpora/ing-term; 3 оговорки к карточкам альбома. Не в /translate."
+    },
+    {
+      "id": "med_kodzoev_knowledge",
+      "type": "reference",
+      "source": "med-kodzoev-knowledge.json",
+      "title": "Кодзоев 2019 — медицинский словарь",
+      "dataFile": "data/grammar/med-kodzoev-knowledge.json",
+      "notes": "RU→ING ~1200 терминов (med19). Словарь: data/dictionary/med-kodzoev-2019.json, источник /translate med_kodzoev."
     }
   ]
 }

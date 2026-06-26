@@ -119,6 +119,66 @@
       "ing": "Со ч1оаг1 ва",
       "pron": "so chog va",
       "audio": "f_1766020839248_4rsn.mp3"
+    },
+    {
+      "id": "med_health_kashiel",
+      "ru": "Кашель",
+      "ing": "Кхайкадар",
+      "pron": "khaykadar"
+    },
+    {
+      "id": "med_health_nasmork",
+      "ru": "Насморк",
+      "ing": "Йовхараш",
+      "pron": "yovkharash"
+    },
+    {
+      "id": "med_health_lekarstvo",
+      "ru": "Лекарство",
+      "ing": "Молха",
+      "pron": "molkha"
+    },
+    {
+      "id": "med_health_apteka",
+      "ru": "Аптека",
+      "ing": "Молха тика",
+      "pron": "molkha tika"
+    },
+    {
+      "id": "med_health_vrach",
+      "ru": "Врач",
+      "ing": "Лор",
+      "pron": "lor"
+    },
+    {
+      "id": "med_health_bolnitsa",
+      "ru": "Больница",
+      "ing": "Дарбанче",
+      "pron": "darbanche"
+    },
+    {
+      "id": "med_health_ukol",
+      "ru": "Инъекция",
+      "ing": "Маха тохар",
+      "pron": "makha tokhar"
+    },
+    {
+      "id": "med_health_likhoradka",
+      "ru": "Лихорадка",
+      "ing": "Хорш",
+      "pron": "khorsh"
+    },
+    {
+      "id": "med_health_krov",
+      "ru": "Кровь",
+      "ing": "Ц1ий",
+      "pron": "tsii"
+    },
+    {
+      "id": "med_health_lekar",
+      "ru": "Лекарь",
+      "ing": "Лор",
+      "pron": "lor"
     }
   ]
 }

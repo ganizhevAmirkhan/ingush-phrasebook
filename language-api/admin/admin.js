@@ -181,6 +181,11 @@ async function loadOverview() {
         tone: "violet",
         sub: `OK.ru · ${inv.naanaMottSections ?? 0} разд. · ${inv.naanaMottStats?.corrections ?? 0} оговорок`
       }),
+      statCard("Медицина 2019", inv.medKodzoevItems ?? 0, {
+        icon: "term",
+        tone: "rose",
+        sub: `Кодзоев · ${inv.medKodzoevKnowledgeSections ?? 0} кластеров`
+      }),
       statCard("Конспект грамматики", inv.grammarOverviewSections ?? 0, {
         icon: "grammar",
         tone: "slate",
@@ -196,6 +201,11 @@ async function loadOverview() {
         icon: "term",
         tone: "violet",
         sub: `${c.ingTermRaw ?? 0} терминов, ${c.ingTermWordsLoaded ?? 0} слов`
+      }),
+      statCard("Мед. словарь", c.medKodzoevPhrasesLoaded ?? 0, {
+        icon: "term",
+        tone: "rose",
+        sub: `${c.medKodzoevRaw ?? 0} терминов · ${c.medKodzoevWordsLoaded ?? 0} слов`
       }),
       statCard("Corpus уроки", c.corpusPhrasesInIndex ?? 0, {
         icon: "corpus",
@@ -219,10 +229,12 @@ async function loadOverview() {
         ${sourceStep("2", "<b>paydadosh</b> — PaydaDosh", `${c.paydaDoshPhrasesLoaded ?? 0} фраз (everyday ${c.paydaDoshEverydayLoaded ?? 0}, уроки ${c.paydaDoshLessonLoaded ?? 0})`)}
         ${sourceStep("2b", "<b>corpus</b> — параллельные тексты ghalghay", `${c.parallelCorpusInIndex ?? 0} фраз · Киплинг, Пушкин…`)}
         ${sourceStep("2c", "<b>ing_term</b> — словарь терминов 2016", `${c.ingTermPhrasesLoaded ?? 0} в индексе · ${c.ingTermWordsLoaded ?? 0} слов`)}
+        ${sourceStep("2d", "<b>med_kodzoev</b> — медицина 2019", `${c.medKodzoevPhrasesLoaded ?? 0} в индексе · ${c.medKodzoevWordsLoaded ?? 0} слов`)}
         ${sourceStep("3", "<b>grammar</b> — шаблоны + лексемы + классы", `${inv.patterns ?? 0} шаблонов · ${inv.lexemes ?? 0} лексем · ${inv.nounClassEntries ?? 0} классов`)}
         ${sourceStep("3b", "<b>nichols</b> — справочник (829 стр., без дублей)", `${inv.nicholsGrammarSections ?? 0} глав · ${inv.nicholsUniqueStats?.nounClassNewToApi ?? 52} слов класса · ${inv.nicholsNumeralParadigms ?? 4} склон. числ.`)}
         ${sourceStep("3c", "<b>desheriev</b> — энциклопедия 1999", `${inv.desheriev99Sections ?? 0} разделов · числит. -лагӀа · залоги`)}
         ${sourceStep("3d", "<b>naana_mott</b> — OK.ru редкая лексика", `${inv.naanaMottStats?.entriesNew ?? 0} новых · ${inv.naanaMottStats?.corrections ?? 0} оговорок`)}
+        ${sourceStep("3e", "<b>med_kodzoev</b> — мед. кластеры (справочник)", `${inv.medKodzoevKnowledgeSections ?? 0} разд. · ${inv.medKodzoevItems ?? 0} терминов в словаре`)}
         ${sourceStep("4", "<b>dosh</b> — словарь + сборка из слов", `${c.wordsLoaded ?? 0} слов`)}
         ${sourceStep("5", "<b>LLM</b> — OpenRouter / Gemini", "fallback, если ничего не найдено")}
       </div>

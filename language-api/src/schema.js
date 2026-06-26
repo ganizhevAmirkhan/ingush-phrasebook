@@ -5,6 +5,7 @@ const SOURCE = {
   PAYDADOSH: "paydadosh",
   CORPUS: "corpus",
   ING_TERM: "ing_term",
+  MED_KODZOEV: "med_kodzoev",
   LLM: "llm"
 };
 

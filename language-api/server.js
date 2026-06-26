@@ -341,6 +341,20 @@ async function adminApiRoute(req, res, apiPath, url) {
     }
   }
 
+  if (apiPath === "/grammar/med-kodzoev") {
+    if (req.method === "GET") {
+      const sectionId = q("section");
+      if (sectionId) {
+        const section = await adminStore.getMedKodzoevSection(decodeURIComponent(sectionId));
+        return section
+          ? sendJson(res, 200, { ok: true, section })
+          : sendJson(res, 404, { ok: false, error: "section_not_found" });
+      }
+      const data = await adminStore.getMedKodzoevMeta();
+      return sendJson(res, 200, { ok: true, ...data });
+    }
+  }
+
   if (apiPath === "/corpus") {
     if (req.method === "GET") {
       const data = await adminStore.listCorpus(listOpts());
@@ -505,7 +519,9 @@ async function route(req, res) {
         nicholsUniqueStats: inventory.nicholsUniqueStats,
         desheriev99Sections: inventory.desheriev99Sections,
         naanaMottSections: inventory.naanaMottSections,
-        naanaMottStats: inventory.naanaMottStats
+        naanaMottStats: inventory.naanaMottStats,
+        medKodzoevItems: inventory.medKodzoevItems,
+        medKodzoevKnowledgeSections: inventory.medKodzoevKnowledgeSections
       },
       links: { home: "/", admin: "/admin/", manifest: "/site.webmanifest" }
     });

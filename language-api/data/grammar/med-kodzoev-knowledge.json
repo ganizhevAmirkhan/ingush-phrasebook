@@ -1,0 +1,66 @@
+{
+  "schema": "med-kodzoev-knowledge/v1",
+  "source": "med-kodzoev-2019",
+  "authors": "Кодзоев Н.Д.",
+  "titleRu": "Медицина. Русско-ингушский словарь (КЕП, Назрань, 2019)",
+  "dictionaryFile": "data/dictionary/med-kodzoev-2019.json",
+  "sourceRef": "ingcorpora:med19",
+  "noteRu": "~1200 пар RU→ING. Импорт: scripts/import-med-kodzoev-2019.js. В /translate с приоритетом ниже habar/paydadosh, рядом с ing_term.",
+  "generatedAt": "2026-06-26T12:00:00.000Z",
+  "stats": {
+    "sections": 4,
+    "dictionaryItems": 1198
+  },
+  "sections": [
+    {
+      "id": "med_treatment",
+      "titleRu": "Лечение, аптека, врач",
+      "summaryRu": "Бытовая и клиническая лексика обращения к врачу.",
+      "examples": [
+        { "ru": "лечить", "ing": "дárба dé" },
+        { "ru": "лечебница", "ing": "дárбанчé" },
+        { "ru": "лекарство", "ing": "mólха" },
+        { "ru": "лекарь", "ing": "лор" },
+        { "ru": "аптека", "ing": "mólха тика" },
+        { "ru": "медицина", "ing": "lóral" }
+      ],
+      "apiNoteRu": "Омоним «лор» — также фамилия; контекст медицины."
+    },
+    {
+      "id": "med_blood_heart",
+      "titleRu": "Кровь, сердце, давление",
+      "examples": [
+        { "ru": "кровь", "ing": "цIий" },
+        { "ru": "кровотечение", "ing": "цIийахар" },
+        { "ru": "аритмия", "ing": "харцгарт" },
+        { "ru": "артерия", "ing": "bókkha pha" },
+        { "ru": "анемия", "ing": "цIий кIезига хилар" }
+      ]
+    },
+    {
+      "id": "med_anatomy",
+      "titleRu": "Анатомия (выборка)",
+      "examples": [
+        { "ru": "лёгкое", "ing": "пехк" },
+        { "ru": "сердце", "ing": "дега" },
+        { "ru": "печень", "ing": "кит" },
+        { "ru": "плечо", "ing": "белаж" },
+        { "ru": "бедро", "ing": "ворув" },
+        { "ru": "ладонь", "ing": "tIarъyuk" }
+      ],
+      "dedupeRef": "ingcorpora:med19, ing-term anatomical overlap"
+    },
+    {
+      "id": "med_symptoms",
+      "titleRu": "Симптомы и болезни",
+      "examples": [
+        { "ru": "лихорадка", "ing": "хорш" },
+        { "ru": "кашель", "ing": "кхáйкадар" },
+        { "ru": "насморк", "ing": "йIóвхараш" },
+        { "ru": "ангина", "ing": "къамаргашкара лазар" },
+        { "ru": "аллергия", "ing": "bócha лазар" },
+        { "ru": "крапивница", "ing": "хьер" }
+      ]
+    }
+  ]
+}

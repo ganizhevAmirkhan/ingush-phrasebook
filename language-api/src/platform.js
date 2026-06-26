@@ -32,6 +32,7 @@ const GITHUB_CATEGORIES_API =
   "https://api.github.com/repos/ganizhevAmirkhan/ingush-phrasebook/contents/categories?ref=main";
 const PAYDADOSH_PHRASES_FILE = path.join(ROOT, "data", "colloquial", "paydadosh-phrases.json");
 const ING_TERM_FILE = path.join(ROOT, "data", "dictionary", "ing-term-2016.json");
+const MED_KODZOEV_FILE = path.join(ROOT, "data", "dictionary", "med-kodzoev-2019.json");
 const { splitRuIngPairs } = require("./phrase-split");
 const CORPUS_STORIES_DIR = path.join(ROOT, "data", "corpus", "stories");
 const CORPUS_NOVELLAS_DIR = path.join(ROOT, "data", "corpus", "novellas");
@@ -72,6 +73,7 @@ const state = {
     translateFromPaydaDosh: 0,
     translateFromCorpus: 0,
     translateFromIngTerm: 0,
+    translateFromMedKodzoev: 0,
     translateFromLLM: 0,
     translateRejected: 0,
     nounClassAgreementFixes: 0
@@ -123,6 +125,15 @@ async function loadTermEntries() {
   }
 }
 
+async function loadMedEntries() {
+  try {
+    const json = await readJson(MED_KODZOEV_FILE);
+    return Array.isArray(json?.items) ? json.items : [];
+  } catch {
+    return [];
+  }
+}
+
 function termToWordRecord(item) {
   const ru = (item?.ru || "").toString().trim();
   const ing = (item?.ing || "").toString().trim();
@@ -139,14 +150,39 @@ function termToWordRecord(item) {
   };
 }
 
+function medToWordRecord(item) {
+  const ru = (item?.ru || "").toString().trim();
+  const ing = (item?.ing || "").toString().trim();
+  if (!ru || !ing) return null;
+  return {
+    id: (item?.id || "").toString(),
+    ru,
+    ruNorm: normalizeText(ru),
+    ruTokens: tokenizeRu(ru),
+    ingVariants: [ing],
+    pos: "med",
+    source: SOURCE.MED_KODZOEV,
+    confidence: Number(item?.confidence) || 0.86
+  };
+}
+
 async function loadAllWords() {
-  const [dosh, termItems] = await Promise.all([loadDictionary(), loadTermEntries()]);
+  const [dosh, termItems, medItems] = await Promise.all([
+    loadDictionary(),
+    loadTermEntries(),
+    loadMedEntries()
+  ]);
   const byRu = new Map();
   for (const word of dosh) {
     if (word?.ruNorm) byRu.set(word.ruNorm, word);
   }
   for (const item of termItems) {
     const word = termToWordRecord(item);
+    if (!word?.ruNorm || byRu.has(word.ruNorm)) continue;
+    byRu.set(word.ruNorm, word);
+  }
+  for (const item of medItems) {
+    const word = medToWordRecord(item);
     if (!word?.ruNorm || byRu.has(word.ruNorm)) continue;
     byRu.set(word.ruNorm, word);
   }
@@ -312,10 +348,28 @@ async function loadParallelCorpusPhrases() {
 const DISABLE_HABAR_PHRASE_SOURCE =
   String(process.env.DISABLE_HABAR_IN_TRANSLATE ?? "false").toLowerCase() === "true";
 
+function medItemsToPhrases(medItems) {
+  return medItems
+    .map((item) =>
+      toColloquialPhraseRecord(
+        {
+          id: item?.id,
+          ru: item?.ru,
+          ing: item?.ing,
+          confidence: Number(item?.confidence) || 0.86
+        },
+        SOURCE.MED_KODZOEV,
+        "med"
+      )
+    )
+    .filter((rec) => rec.ruNorm && rec.ing);
+}
+
 const PHRASE_SOURCE_PRIORITY = {
   [SOURCE.HABAR]: 5,
   [SOURCE.PAYDADOSH]: 4,
   [SOURCE.ING_TERM]: 3.5,
+  [SOURCE.MED_KODZOEV]: 3.2,
   [SOURCE.CORPUS]: 2,
   [SOURCE.GRAMMAR]: 1
 };
@@ -396,14 +450,16 @@ function rebuildPhraseIndex() {
 }
 
 async function loadPhrases() {
-  const [habar, paydadosh, lessons, parallel, termItems] = await Promise.all([
+  const [habar, paydadosh, lessons, parallel, termItems, medItems] = await Promise.all([
     loadHabarPhrases(),
     loadPaydaDoshPhrases(),
     loadLessonColloquialPhrases(),
     loadParallelCorpusPhrases(),
-    loadTermEntries()
+    loadTermEntries(),
+    loadMedEntries()
   ]);
   const termPhrases = termItemsToPhrases(termItems);
+  const medPhrases = medItemsToPhrases(medItems);
   state.inventoryStats = {
     habarItemsRaw: habar.length,
     habarBasicRaw: habar.filter((p) => p.category === "basic_phrases").length,
@@ -414,9 +470,11 @@ async function loadPhrases() {
     corpusPhrasesRaw: lessons.length,
     parallelCorpusPhrasesRaw: parallel.length,
     ingTermRaw: termItems.length,
-    ingTermPhrasesRaw: termPhrases.length
+    ingTermPhrasesRaw: termPhrases.length,
+    medKodzoevRaw: medItems.length,
+    medKodzoevPhrasesRaw: medPhrases.length
   };
-  return mergePhraseRecords([...habar, ...termPhrases, ...lessons, ...parallel, ...paydadosh]);
+  return mergePhraseRecords([...habar, ...termPhrases, ...medPhrases, ...lessons, ...parallel, ...paydadosh]);
 }
 
 async function loadCorpus() {
@@ -1166,6 +1224,7 @@ function phraseTranslateResult(phrase) {
   if (phrase.source === SOURCE.PAYDADOSH) state.metrics.translateFromPaydaDosh += 1;
   else if (phrase.source === SOURCE.CORPUS) state.metrics.translateFromCorpus += 1;
   else if (phrase.source === SOURCE.ING_TERM) state.metrics.translateFromIngTerm += 1;
+  else if (phrase.source === SOURCE.MED_KODZOEV) state.metrics.translateFromMedKodzoev += 1;
   else if (phrase.source === SOURCE.GRAMMAR) state.metrics.translateFromGrammar += 1;
   else state.metrics.translateFromPhrase += 1;
   const usedSource =
@@ -1175,7 +1234,9 @@ function phraseTranslateResult(phrase) {
         ? SOURCE.CORPUS
         : phrase.source === SOURCE.ING_TERM
           ? SOURCE.ING_TERM
-          : phrase.source === SOURCE.GRAMMAR
+          : phrase.source === SOURCE.MED_KODZOEV
+            ? SOURCE.MED_KODZOEV
+            : phrase.source === SOURCE.GRAMMAR
             ? SOURCE.GRAMMAR
             : SOURCE.HABAR;
   return {
@@ -1568,11 +1629,17 @@ async function translate(ruText, options = {}) {
   const exactWord = findWordExact(ru);
   if (exactWord) {
     if (exactWord.source === SOURCE.ING_TERM) state.metrics.translateFromIngTerm += 1;
+    else if (exactWord.source === SOURCE.MED_KODZOEV) state.metrics.translateFromMedKodzoev += 1;
     else state.metrics.translateFromDosh += 1;
     return {
       ok: true,
       translation: exactWord.ingVariants.slice(0, 2).join(" / "),
-      usedSource: exactWord.source === SOURCE.ING_TERM ? SOURCE.ING_TERM : SOURCE.DOSH,
+      usedSource:
+        exactWord.source === SOURCE.ING_TERM
+          ? SOURCE.ING_TERM
+          : exactWord.source === SOURCE.MED_KODZOEV
+            ? SOURCE.MED_KODZOEV
+            : SOURCE.DOSH,
       confidence: exactWord.confidence ?? 1,
       fallbackUsed: false
     };
@@ -1726,6 +1793,9 @@ function getMetrics() {
       ingTermRaw: inv.ingTermRaw ?? 0,
       ingTermPhrasesLoaded: countPhrasesBy((p) => p.source === SOURCE.ING_TERM),
       ingTermWordsLoaded: state.words.filter((w) => w.source === SOURCE.ING_TERM).length,
+      medKodzoevRaw: inv.medKodzoevRaw ?? 0,
+      medKodzoevPhrasesLoaded: countPhrasesBy((p) => p.source === SOURCE.MED_KODZOEV),
+      medKodzoevWordsLoaded: state.words.filter((w) => w.source === SOURCE.MED_KODZOEV).length,
       corpusPhrasesInIndex: countPhrasesBy((p) => p.source === SOURCE.CORPUS),
       parallelCorpusInIndex: countPhrasesBy(
         (p) => p.source === SOURCE.CORPUS && (p.category || "").startsWith("ghalghay_") && !/lesson/.test(p.category || "")

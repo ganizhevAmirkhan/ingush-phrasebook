@@ -32,6 +32,8 @@ const NICHOLS_UNIQUE_FILE = path.join(GRAMMAR_DIR, "nichols-unique-knowledge.jso
 const NICHOLS_NUMERAL_FILE = path.join(GRAMMAR_DIR, "nichols-numeral-declension.json");
 const DESHERIEV_99_FILE = path.join(GRAMMAR_DIR, "desheriev-99-knowledge.json");
 const NAANA_MOTT_FILE = path.join(GRAMMAR_DIR, "naana-mott-knowledge.json");
+const MED_KODZOEV_FILE = path.join(ROOT, "data", "dictionary", "med-kodzoev-2019.json");
+const MED_KODZOEV_KNOWLEDGE_FILE = path.join(GRAMMAR_DIR, "med-kodzoev-knowledge.json");
 
 async function readJson(filePath) {
   const raw = await fs.readFile(filePath, "utf8");
@@ -145,6 +147,8 @@ async function getInventory() {
   let desheriev99Sections = 0;
   let naanaMottSections = 0;
   let naanaMottStats = null;
+  let medKodzoevItems = 0;
+  let medKodzoevKnowledgeSections = 0;
   try {
     const num = await readJson(NICHOLS_NUMERAL_FILE);
     nicholsNumeralParadigms = Array.isArray(num?.paradigms) ? num.paradigms.length : 0;
@@ -164,6 +168,18 @@ async function getInventory() {
   } catch {
     // empty
   }
+  try {
+    const med = await readJson(MED_KODZOEV_FILE);
+    medKodzoevItems = Number(med?.itemCount) || (Array.isArray(med?.items) ? med.items.length : 0);
+  } catch {
+    // empty
+  }
+  try {
+    const mk = await readJson(MED_KODZOEV_KNOWLEDGE_FILE);
+    medKodzoevKnowledgeSections = Array.isArray(mk?.sections) ? mk.sections.length : 0;
+  } catch {
+    // empty
+  }
   return {
     adminEnabled: getAdminSecret().length > 0,
     patterns: patterns.length,
@@ -178,6 +194,8 @@ async function getInventory() {
     desheriev99Sections,
     naanaMottSections,
     naanaMottStats,
+    medKodzoevItems,
+    medKodzoevKnowledgeSections,
     corpusStories: storyFiles.length,
     corpusNovellas: novellaFiles.length,
     blacklist: blacklist.length
@@ -707,6 +725,52 @@ async function getNaanaMottSection(id) {
   }
 }
 
+async function getMedKodzoevMeta() {
+  try {
+    const json = await readJson(MED_KODZOEV_KNOWLEDGE_FILE);
+    const dict = await readJson(MED_KODZOEV_FILE);
+    const sections = Array.isArray(json?.sections) ? json.sections : [];
+    return {
+      schema: json?.schema || null,
+      source: json?.source || null,
+      authors: json?.authors || null,
+      titleRu: json?.titleRu || null,
+      noteRu: json?.noteRu || null,
+      stats: {
+        ...(json?.stats || {}),
+        dictionaryItems: Number(dict?.itemCount) || (Array.isArray(dict?.items) ? dict.items.length : 0)
+      },
+      sections: sections.map((s) => ({
+        id: s.id,
+        titleRu: s.titleRu,
+        exampleCount: Array.isArray(s.examples) ? s.examples.length : 0,
+        dedupeRef: s.dedupeRef || null
+      })),
+      sectionCount: sections.length
+    };
+  } catch {
+    return {
+      schema: null,
+      source: null,
+      authors: null,
+      titleRu: null,
+      noteRu: null,
+      stats: null,
+      sections: [],
+      sectionCount: 0
+    };
+  }
+}
+
+async function getMedKodzoevSection(id) {
+  try {
+    const json = await readJson(MED_KODZOEV_KNOWLEDGE_FILE);
+    return (json?.sections || []).find((s) => s.id === id) || null;
+  } catch {
+    return null;
+  }
+}
+
 module.exports = {
   getAdminSecret,
   isAdminAuthorized,
@@ -744,5 +808,7 @@ module.exports = {
   getDesheriev99Meta,
   getDesheriev99Section,
   getNaanaMottMeta,
-  getNaanaMottSection
+  getNaanaMottSection,
+  getMedKodzoevMeta,
+  getMedKodzoevSection
 };
