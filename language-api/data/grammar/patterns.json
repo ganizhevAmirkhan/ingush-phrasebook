@@ -98012,6 +98012,132 @@
           "ing_expected": "Они не понимают"
         }
       ]
+    },
+    {
+      "id": "lesson_баьца_трава_траве_",
+      "ruPattern": "баьца (трава- траве)",
+      "description": "School lesson corpus (story_ghalghay_lesson_27_i_001)",
+      "slots": [],
+      "ingTemplate": "БУЦ",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "баьца (трава- траве)",
+          "ing_expected": "БУЦ"
+        }
+      ]
+    },
+    {
+      "id": "lesson_солнце_и_т",
+      "ruPattern": "солнце) и т",
+      "description": "School lesson corpus (story_ghalghay_lesson_27_i_001)",
+      "slots": [],
+      "ingTemplate": "МАЛХ- МАЬЛХА (солнце",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "солнце) и т",
+          "ing_expected": "МАЛХ- МАЬЛХА (солнце"
+        }
+      ]
+    },
+    {
+      "id": "lesson_нет_не_иду",
+      "ruPattern": "нет не иду",
+      "description": "School lesson corpus (story_ghalghay_lesson_35_i_001)",
+      "slots": [],
+      "ingTemplate": "— А, ВАГIАЦ",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "нет не иду",
+          "ing_expected": "— А, ВАГIАЦ"
+        }
+      ]
+    },
+    {
+      "id": "lesson_он_не_понимает",
+      "ruPattern": "он не понимает",
+      "description": "School lesson corpus (story_ghalghay_lesson_35_i_001)",
+      "slots": [],
+      "ingTemplate": "ИЗ КХЕТАЦ",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "он не понимает",
+          "ing_expected": "ИЗ КХЕТАЦ"
+        }
+      ]
+    },
+    {
+      "id": "lesson_дади_венав",
+      "ruPattern": "дади венав",
+      "description": "School lesson corpus (story_ghalghay_lesson_36_001)",
+      "slots": [],
+      "ingTemplate": "Пришел дедушка",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "дади венав",
+          "ing_expected": "Пришел дедушка"
+        }
+      ]
+    },
+    {
+      "id": "lesson_сколько_времени_мы_проведем_в_дороге",
+      "ruPattern": "сколько времени мы проведем в дороге",
+      "description": "School lesson corpus (story_ghalghay_lesson_36_001)",
+      "slots": [],
+      "ingTemplate": "Мел ха яккха еза вай наькъа?",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "сколько времени мы проведем в дороге",
+          "ing_expected": "Мел ха яккха еза вай наькъа?"
+        }
+      ]
+    },
+    {
+      "id": "lesson_са_новкъостий_москве_ба",
+      "ruPattern": "са новкъостий москве ба",
+      "description": "School lesson corpus (story_ghalghay_lesson_36_001)",
+      "slots": [],
+      "ingTemplate": "Мои друзья в Москве",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "са новкъостий москве ба",
+          "ing_expected": "Мои друзья в Москве"
+        }
+      ]
+    },
+    {
+      "id": "lesson_наьнага_язду",
+      "ruPattern": "наьнага язду",
+      "description": "School lesson corpus (story_ghalghay_lesson_36_001)",
+      "slots": [],
+      "ingTemplate": "Пишу матери",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "наьнага язду",
+          "ing_expected": "Пишу матери"
+        }
+      ]
+    },
+    {
+      "id": "lesson_е_фатима_е_роза_яхийта_еза_маькх_эца",
+      "ruPattern": "е фатима е роза яхийта еза маькх эца",
+      "description": "School lesson corpus (story_ghalghay_lesson_37_i_i_001)",
+      "slots": [],
+      "ingTemplate": "Или",
+      "priority": 98,
+      "examples": [
+        {
+          "ru": "е фатима е роза яхийта еза маькх эца",
+          "ing_expected": "Или"
+        }
+      ]
     }
   ]
 }

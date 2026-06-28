@@ -7,7 +7,7 @@
  */
 const fs = require("node:fs/promises");
 const path = require("node:path");
-const { splitRuIngPairs, isUsableShortRu, isUsableRu } = require("../src/phrase-split");
+const { splitRuIngPairs, isUsableRu } = require("../src/phrase-split");
 
 const ROOT = path.join(__dirname, "..", "..");
 const CATEGORIES_DIR = path.join(ROOT, "categories");
@@ -122,6 +122,29 @@ function splitRuIngLine(text) {
   return candidates.length ? candidates[candidates.length - 1] : null;
 }
 
+function splitIngRuLine(text) {
+  for (const match of text.matchAll(/\s+(?:—|–)\s+/g)) {
+    const left = text.slice(0, match.index).trim();
+    const right = text.slice(match.index + match[0].length).trim();
+    if (isLikelyIngushBlock(left) && /[а-яё]{3,}/i.test(right) && !isLikelyIngushBlock(right)) {
+      return { ru: cleanGrammarRu(right.split(/[.?!]/)[0]), ing: left };
+    }
+  }
+  const hyphenQ = text.match(/^([A-ZА-ЯЁI1ӏ][^?]{2,90}\?)\s*-\s*([А-ЯЁа-яё][^.!?]{3,120})/);
+  if (hyphenQ && isLikelyIngushBlock(hyphenQ[1])) {
+    return { ru: cleanGrammarRu(hyphenQ[2]), ing: hyphenQ[1].trim() };
+  }
+  const vocab = text.match(/^([A-Za-zА-Яа-яЁёI1ӏ?.\s]+?)\s*-\s*([а-яёА-ЯЁ][а-яёА-ЯЁ\s]{1,50})$/);
+  if (vocab && !/[а-яё]{8,}/i.test(vocab[1])) {
+    return { ru: vocab[2].trim(), ing: vocab[1].trim() };
+  }
+  return null;
+}
+
+function splitDialogueLine(text) {
+  return splitRuIngLine(text) || splitIngRuLine(text);
+}
+
 function cleanGrammarRu(ru) {
   return stripSpeakerPrefix((ru || "").replace(/\s+/g, " ").replace(/^[-–—]\s*/, "").trim());
 }
@@ -177,6 +200,8 @@ function extractGrammarPairsFromText(text) {
 
   return pairs;
 }
+
+function paragraphToPlain(html) {
   return decodeEntities(html)
     .replace(/<br\s*\/?>/gi, " ")
     .replace(/<[^>]+>/g, "")
@@ -232,13 +257,19 @@ function extractPairsFromLessonHtml(html) {
     while ((m = pRe.exec(bodyMatch[1]))) {
       const text = paragraphToPlain(m[1]);
       if (!text || /filed under|tags:/i.test(text)) continue;
-      const split = splitRuIngLine(text);
-      if (split) {
+      const split = splitDialogueLine(text);
+      const grammarPairs =
+        text.length > 60 && /(?:—|–|\?-|\s-\s)/.test(text)
+          ? extractGrammarPairsFromText(text)
+          : [];
+      if (grammarPairs.length > 1) {
+        for (const gp of grammarPairs) pushPair(gp.ru, gp.ing);
+      } else if (split && text.length < 500) {
         pushPair(split.ru, split.ing);
-      } else if (text.length > 180) {
-        for (const gp of extractGrammarPairsFromText(text)) {
-          pushPair(gp.ru, gp.ing);
-        }
+      } else if (grammarPairs.length === 1) {
+        pushPair(grammarPairs[0].ru, grammarPairs[0].ing);
+      } else if (split) {
+        pushPair(split.ru, split.ing);
       } else if (!/<strong/i.test(m[1])) {
         extractPairsFromText(text, seen, pairs, pushPair);
       }
@@ -248,23 +279,6 @@ function extractPairsFromLessonHtml(html) {
 
   const bodyText = stripHtml(decodeEntities(bodyMatch?.[1] || html));
   extractPairsFromText(bodyText, seen, pairs, pushPair);
-  return pairs;
-}
-
-function extractPairsFromTextLegacy(text) {
-  const pairs = [];
-  const seen = new Set();
-  function push(ru, ing) {
-    ru = (ru || "").replace(/\s+/g, " ").trim();
-    ing = (ing || "").replace(/\s+/g, " ").trim();
-    if (!isUsableShortRu(ru) || !ing || ing.length > 220) return;
-    if (!/[A-ZА-ЯI1Әӏ]/.test(ing)) return;
-    const key = norm(ru);
-    if (seen.has(key)) return;
-    seen.add(key);
-    pairs.push({ ru, ing });
-  }
-  extractPairsFromText(text, seen, pairs, push);
   return pairs;
 }
 
