@@ -1,0 +1,5615 @@
+{
+  "id": "andersen_skazki",
+  "title": "Г. Х. Андерсен — Сказки (ингушский перевод)",
+  "author": "Ганс Христиан Андерсен",
+  "translator": null,
+  "source": "andersen_skazki",
+  "sourcePdf": "data/external/andersen-skazki/source.pdf",
+  "ocrNote": "Скан без текстового слоя; OCR rus+tesseract. Проверяйте орфографию.",
+  "status": "needs_ru",
+  "stories": [
+    "К1ориг (Ёлочка)",
+    "Гета (Снежная королева)",
+    "Цхьан бетта чура пхиъ (Дюймовочка)",
+    "Оле-Лукойе",
+    "Паччахьа щена барзкъаш (Свинопас)",
+    "Корсам",
+    "Иведе-Аведе",
+    "Клумпе-Думпе"
+  ],
+  "phraseCount": 559,
+  "needsRu": 559,
+  "hasRu": 0,
+  "phrases": [
+    {
+      "id": "andersen-0001",
+      "story": "К1ориг (Ёлочка)",
+      "page": 5,
+      "ing": "дуне?—аьлар нанас.—О, из-м бешал арахьа, гаьнна гаьна дГадода.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0002",
+      "story": "К1ориг (Ёлочка)",
+      "page": 5,
+      "ing": "Х1а, хТанз в!ашаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0003",
+      "story": "К1ориг (Ёлочка)",
+      "page": 5,
+      "ing": "ма кхийттайий шу,—аьнна, эйелар из.—А, ерригаш а йоацай, х1анз а уллаш ма дий эггара доккхаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0004",
+      "story": "К1ориг (Ёлочка)",
+      "page": 5,
+      "ing": "Ма дукха улл из з1ок ца тохаш!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0005",
+      "story": "К1ориг (Ёлочка)",
+      "page": 5,
+      "ing": "Боккъала сона е г!улакх к1орда дайта ма гТерт яр,",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0006",
+      "story": "К1ориг (Ёлочка)",
+      "page": 5,
+      "ing": "аьнна, юха а т1айижар из фуа.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0007",
+      "story": "К1ориг (Ёлочка)",
+      "page": 5,
+      "ing": "Фу хьалда хьога?—аьнна, хаьттар цунга гучаяла енача къаьнача боабашка.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0008",
+      "story": "К1ориг (Ёлочка)",
+      "page": 5,
+      "ing": "Боккъала ч1оаг!а дГаьх ма деннад укх фуа г[улакх аьнна жоп делар фуа та яг[ача боабашка.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0009",
+      "story": "К1ориг (Ёлочка)",
+      "page": 5,
+      "ing": "В!алла з1ок тохац!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0010",
+      "story": "К1ориг (Ёлочка)",
+      "page": 5,
+      "ing": "Бакъда вокхарга хьо хьежалахь, хГанзалца сона бГарга мел яьйначарел тамашийна хоза к1оригаш хиннай царех!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0011",
+      "story": "К1ориг (Ёлочка)",
+      "page": 5,
+      "ing": "Хьахьокхал сога из з1ок тоха ца туга фуъ,— аьлар къаьнача боабашка.—Сох тешалахь москала фуъ да хьона из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0012",
+      "story": "К1ориг (Ёлочка)",
+      "page": 5,
+      "ing": "Цкъа сона а бир иштта тийша болх, дукха бала эзар аз сай к1оригашца х\\ана аьлча, москалаш хих кхерандаь.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0013",
+      "story": "К1ориг (Ёлочка)",
+      "page": 5,
+      "ing": "Аз тешаю хьо уж цхьаккха дича а сона хи чу яха цамагарах.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0014",
+      "story": "К1ориг (Ёлочка)",
+      "page": 5,
+      "ing": "Когаш 1отехача а ткъамаш техача а х1ама хулаш дацар!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0015",
+      "story": "К1ориг (Ёлочка)",
+      "page": 5,
+      "ing": "Хьахьокхал из фуъ.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0016",
+      "story": "К1ориг (Ёлочка)",
+      "page": 5,
+      "ing": "Да а да, бокъонца москала фуъ!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0017",
+      "story": "К1ориг (Ёлочка)",
+      "page": 5,
+      "ing": "Цунна къа ца а хьегаш, вокх берашта наьк Томаде.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0018",
+      "story": "К1ориг (Ёлочка)",
+      "page": 5,
+      "ing": "А, фуннагпа дале а кТезига ягГаргья со,— аьлар боабашка селла дукха яьг1ача кГезига кхы яга а мегаргья со.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0019",
+      "story": "К1ориг (Ёлочка)",
+      "page": 5,
+      "ing": "„Пип-пип!— аьнна, араяьлар чкъора чура кГориг; Талаьмате ийрчеи йоккхеи хилар иЗ.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0020",
+      "story": "К1ориг (Ёлочка)",
+      "page": 5,
+      "ing": "Боабашк б!арахьежар цунна.—Ма йоккха к1ориг я ер!—аьнна хетаделар цунна.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0021",
+      "story": "К1ориг (Ёлочка)",
+      "page": 5,
+      "ing": "В!алла вокхарна тара а мича—я.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0022",
+      "story": "К1ориг (Ёлочка)",
+      "page": 5,
+      "ing": "Шоллаг!ча дийнахь тамашийна хоза ха эттар: 4",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0023",
+      "story": "К1ориг (Ёлочка)",
+      "page": 9,
+      "ing": "Иштта уллаш ши ди даьккхар цо, т1аккха ткъамашца ера ши акха г!аж; уж фуашта чура араяьнна дукха ха яцар, геттара гГадъяха а яр.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0024",
+      "story": "К1ориг (Ёлочка)",
+      "page": 9,
+      "ing": "Ладувгалахь новкъост!—-аьлар цар.—Сов ийрча хиларах тхона цхьанна хГаманна новкъа хургьяц хьо.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0025",
+      "story": "К1ориг (Ёлочка)",
+      "page": 9,
+      "ing": "Тхоца яха а, да-хьа уха оалхазар хила безам бий хьа?",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0026",
+      "story": "К1ориг (Ёлочка)",
+      "page": 9,
+      "ing": "Паф!—хезар лакхера, цу минуте шаккъе а г!аж енна Гоежар эрзала, хий Щий а деш.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0027",
+      "story": "К1ориг (Ёлочка)",
+      "page": 9,
+      "ing": "Паф!—иккхар юха а дукха акха г[ажаш: эйелар эрзаш т[а, юха а топашщ яьлар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0028",
+      "story": "К1ориг (Ёлочка)",
+      "page": 9,
+      "ing": "Чарахьаша Гама го баьбар, цхьабараш хенаш та а баьннабар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0029",
+      "story": "К1ориг (Ёлочка)",
+      "page": 9,
+      "ing": "Эрз масса а оаг1орахьа д1а-са лесташ бар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0030",
+      "story": "К1ориг (Ёлочка)",
+      "page": 9,
+      "ing": "Кхераеннача к1орига корта оаг!орбаьккхар, ткъама к1алболла дагахь.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0031",
+      "story": "К1ориг (Ёлочка)",
+      "page": 9,
+      "ing": "Цу минуте цунна хьалхашка доккха, унзара жГали нийсделар: цун мотт багара гаьнна Гооллабенна— бар, бирса къегаш б!Гаргаш а дар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0032",
+      "story": "К1ориг (Ёлочка)",
+      "page": 9,
+      "ing": "Духхьал кГоригагахьа бат д1а та а ехьа, ира цергаш б1арга а яйта, хГама ца а деш д1адахар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0033",
+      "story": "К1ориг (Ёлочка)",
+      "page": 9,
+      "ing": "Из ший метта таккхал уллар, цу хана Гам та топа т!ехьа ювлаш топаш яр.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0034",
+      "story": "К1ориг (Ёлочка)",
+      "page": 9,
+      "ing": "Делкъийга мара сатенЗар, цул техьаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0035",
+      "story": "К1ориг (Ёлочка)",
+      "page": 9,
+      "ing": "миска кГориг, хьалъэйяла ца юхьаш, уллаш кхы а цхьа-ши сахьат даьккхар, т1аккха Жьал-1о хьажар; ший низ ма кхоачча ам т!ара едар из ардашка, цонашка г1олла удар из, цхьабакъда, чГоагГа хьекхача мухах ада хала-м дар цунна.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0036",
+      "story": "К1ориг (Ёлочка)",
+      "page": 9,
+      "ing": "Ё Сайра хулаш латташ цхьа щ/алг даг1ача кхаьчар из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0037",
+      "story": "К1ориг (Ёлочка)",
+      "page": 9,
+      "ing": "Сов тиша, къаденна хиларах ше малаг!ча оаг!орахь Гохарцаргда ца ховш, ура латтар из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0038",
+      "story": "К1ориг (Ёлочка)",
+      "page": 10,
+      "ing": "бирса хьекхача михага ше ца яхьийта, щГоган та [охувшар к1ориг.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0039",
+      "story": "К1ориг (Ёлочка)",
+      "page": 10,
+      "ing": "К1ориго зийра, цхьан алтамах хьа а иккха ни!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0040",
+      "story": "К1ориг (Ёлочка)",
+      "page": 10,
+      "ing": "оагГора яьннача г1олла йиса, щГаг1а чуэккха Ммоттиг; Цох чуяьлар из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0041",
+      "story": "К1ориг (Ёлочка)",
+      "page": 10,
+      "ing": "Цудухьа цох щ!и тиллаяр „Лоаца когаш,“ аьнна.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0042",
+      "story": "К1ориг (Ёлочка)",
+      "page": 10,
+      "ing": "Фудола ер?—яхаш, йоккха саг гонахьа",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0043",
+      "story": "К1ориг (Ёлочка)",
+      "page": 10,
+      "ing": "г[олла хьажар; цунна бГарга х1ама дика гацар цудухьа таръелар цунна кТоригах тувлаенна ерста боабашк.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0044",
+      "story": "К1ориг (Ёлочка)",
+      "page": 10,
+      "ing": "Ер-м дика нийсденна хГама да,— йоахар цо.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0045",
+      "story": "К1ориг (Ёлочка)",
+      "page": 10,
+      "ing": "Х!анз сога боабашка фуаш а хургда; ма1а боабашк ма хулаялар из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0046",
+      "story": "К1ориг (Ёлочка)",
+      "page": 10,
+      "ing": "Кхо к!ира даккха зе дагахь соцайир боабашка к!ориг; кхо кТира даьлар, бакъда, боабашка фуаш хулаш дацар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0047",
+      "story": "К1ориг (Ёлочка)",
+      "page": 10,
+      "ing": "Фуаш доай а?— хоаттар цо— Даций ?",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0048",
+      "story": "К1ориг (Ёлочка)",
+      "page": 10,
+      "ing": "х1аьта соцабе хьай мотт.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0049",
+      "story": "К1ориг (Ёлочка)",
+      "page": 10,
+      "ing": "Хьона могий букъ сотто, мур-мур ала, сийгаш лелхийта?",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0050",
+      "story": "К1ориг (Ёлочка)",
+      "page": 10,
+      "ing": "Хаьта хьай х!ама отто г[ертача яц хьо!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0051",
+      "story": "К1ориг (Ёлочка)",
+      "page": 10,
+      "ing": "Кхы ла ца а мега, юххера а д1а— аьлар цо из котамага.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0052",
+      "story": "К1ориг (Ёлочка)",
+      "page": 11,
+      "ing": "Фу даьд хьона?—хаьттар котама.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0053",
+      "story": "К1ориг (Ёлочка)",
+      "page": 11,
+      "ing": "Де х!ама доацилга да хьона из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0054",
+      "story": "К1ориг (Ёлочка)",
+      "page": 11,
+      "ing": "Боккъала хоза ма дий хи тГа наьк де!—йоахар кТорига.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0055",
+      "story": "К1ориг (Ёлочка)",
+      "page": 11,
+      "ing": "Ма дош а да из, фу-д цига хоза?— аьлар котама.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0056",
+      "story": "К1ориг (Ёлочка)",
+      "page": 11,
+      "ing": "Эмаяьй хьо!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0057",
+      "story": "К1ориг (Ёлочка)",
+      "page": 11,
+      "ing": "Дахатта сона мел довзачул хьаькъалаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0058",
+      "story": "К1ориг (Ёлочка)",
+      "page": 11,
+      "ing": "Д1ахатта вай фусам-наьнага, йоккхача сагага, цул хьаькъЪал долаш саг дунен та а яц хьона.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0059",
+      "story": "К1ориг (Ёлочка)",
+      "page": 11,
+      "ing": "Цун наьк де, а корта а, т[ехьа хи чу те1а а безам ба мотт хьона?",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0060",
+      "story": "К1ориг (Ёлочка)",
+      "page": 11,
+      "ing": "Аз яхачох кхетац хво,—аьлар кТорига.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0061",
+      "story": "К1ориг (Ёлочка)",
+      "page": 11,
+      "ing": "Щаккха а хургьяц хьо цискал е йоккхача сагал хьаькъал долашаг!, со-м ювцаргьяц вай!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0062",
+      "story": "К1ориг (Ёлочка)",
+      "page": 11,
+      "ing": "Дукха боча ца а ювлаш, хьайна даьча г[улакхаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0063",
+      "story": "К1ориг (Ёлочка)",
+      "page": 11,
+      "ing": "Д1айхача щ1агГа нийсъеннаяц хьо, Томаде хГама дац хьона?",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0064",
+      "story": "К1ориг (Ёлочка)",
+      "page": 11,
+      "ing": "Сона-м хьона дика дар хилча дика хетт, цох тешалахь.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0065",
+      "story": "К1ориг (Ёлочка)",
+      "page": 11,
+      "ing": "Сона хетт, се маьлха дуне мел-д дТаг1ор, аьнна.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0066",
+      "story": "К1ориг (Ёлочка)",
+      "page": 11,
+      "ing": "Хьайна ловр де,—аьнна жоп делар котама.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0067",
+      "story": "К1ориг (Ёлочка)",
+      "page": 11,
+      "ing": "‚ Цо наьк дора, чу а лёчкъар, бакъда, кхы мел дола х!ама цун ийрчалах цох опув увзаш дар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0068",
+      "story": "К1ориг (Ёлочка)",
+      "page": 11,
+      "ing": "ХьунамМа Гажаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0069",
+      "story": "К1ориг (Ёлочка)",
+      "page": 11,
+      "ing": "Ё Хала ха эттар мискача к1орига: Цхьан сарахь К[отаргашта юкъера хозача, доккхийча оалхазарий б1арчча Гул арадаьлар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0070",
+      "story": "К1ориг (Ёлочка)",
+      "page": 11,
+      "ing": "б1арга— дайнадацар #1орига: Й!аьха, сетташ фоартамаш йолаш, лоа мо кТай яруж масса—я а.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0071",
+      "story": "К1ориг (Ёлочка)",
+      "page": 12,
+      "ing": "Шоай тайпара щог!арч а теха, кхы хоЗаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0072",
+      "story": "К1ориг (Ёлочка)",
+      "page": 12,
+      "ing": "доккхий ткъамаш а лостадаь, форда та г1олла эйенна дГаяхар уж шийлача мехкара б1айхача мехка.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0073",
+      "story": "К1ориг (Ёлочка)",
+      "page": 12,
+      "ing": "Цар сов лакха эйялар б!аргадайнача ийрчача кТорига, х1ана тохалу а ца ховш, дог тохаделар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0074",
+      "story": "К1ориг (Ёлочка)",
+      "page": 12,
+      "ing": "Чарх санна хи чу кхеста эйденнача оалхазарашкахьа фоарт хьал а эза, ч1оаг!1а Щог!1а техар цо, из щог!а эрга хиларах ше а кхералуш.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0075",
+      "story": "К1ориг (Ёлочка)",
+      "page": 12,
+      "ing": "ГТ1оралла ца яларна к1орига даиман наьк деш лела езар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0076",
+      "story": "К1ориг (Ёлочка)",
+      "page": 12,
+      "ing": "Х!ара бийсанна цо наьк деш хинна Там з1амиглуш 11",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0077",
+      "story": "К1ориг (Ёлочка)",
+      "page": 13,
+      "ing": "в!ашката!аш боаг!ар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0078",
+      "story": "К1ориг (Ёлочка)",
+      "page": 13,
+      "ing": "Шага ше д1а ца лацийта хХадданза когаш хьекхар к1орига.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0079",
+      "story": "К1ориг (Ёлочка)",
+      "page": 13,
+      "ing": "Эггар т1ехьа а низ кхоача—бенна сецар из, шаво д1а а лаьца.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0080",
+      "story": "К1ориг (Ёлочка)",
+      "page": 13,
+      "ing": "Сецца-1урра цига г!1олла т1ехвоалаш ахархо нийсвелар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0081",
+      "story": "К1ориг (Ёлочка)",
+      "page": 13,
+      "ing": "К1ориг б!1аргаяйна юхе та а ваха, ший дахчан пашмакх теха ша а бохабаь, к1ориг ший сесага йихьар цо.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0082",
+      "story": "К1ориг (Ёлочка)",
+      "page": 13,
+      "ing": "Шийца ловзадаьннача берех кхераенна, цар шийна халахетар дар кхераш кхоссаенна шурий бога чу иккхар из, шура цицкха хинна щ1аг1а г[олла д1а а йоаржаеш.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0083",
+      "story": "К1ориг (Ёлочка)",
+      "page": 13,
+      "ing": "бахийтар цунна т1ехьа, щШогГарч детташ, из лаца г1ерташ, эг!адича санна, хьувзаш бераш а дар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0084",
+      "story": "К1ориг (Ёлочка)",
+      "page": 13,
+      "ing": "йийла хинна: ткъамашца эйъенна яха ханзза лоа тГадиллача котаргашта юкъе чу а иккха, цига тап аьнна тийра из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0085",
+      "story": "К1ориг (Ёлочка)",
+      "page": 13,
+      "ing": "Эрзашта юкъе Там та уллар из, юха б1айха а малх хьажача: оалхазарий илли а доладелар—б!аьсти а яьлар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0086",
+      "story": "К1ориг (Ёлочка)",
+      "page": 13,
+      "ing": "Цхьатарра ший ткъамаш эйдир цо—цар ннзо, таташ а деш, цу моттигера эййир из, шийна фу хиннад кхета ца могаш Йоккхача беша кхаьчар из, зиза теха [ажаши хоза хьаж йола сирений зизаши долча.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0087",
+      "story": "К1ориг (Ёлочка)",
+      "page": 13,
+      "ing": "Уж зизаш дадар баьццарча гаьнех, нийса кГал ухкача шерача хьоарсамаш т!а.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0088",
+      "story": "К1ориг (Ёлочка)",
+      "page": 13,
+      "ing": "О, ма б1аьсти яр цига, ма дика яр цига!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0089",
+      "story": "К1ориг (Ёлочка)",
+      "page": 13,
+      "ing": "Дуккхача к!отаргашта юкъера араяьлар хоза кТай кхо лебед: шоай бедараш тоаяь, хи та голла аттача наькаца д1айолаелар уж.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0090",
+      "story": "К1ориг (Ёлочка)",
+      "page": 14,
+      "ing": "Цу хозача оалхазарашта '\"Гаг1оргья со, цар з1окарч йийтта ювргьяле а, иштта ийрча хьо тхона т/а х!ана енай, аьнна!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0091",
+      "story": "К1ориг (Ёлочка)",
+      "page": 14,
+      "ing": "Из б!аргаяйна уж, ткъамаш д1а а дахийта, т[ахьийлхар цунна.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0092",
+      "story": "К1ориг (Ёлочка)",
+      "page": 14,
+      "ing": "Дае со!—-аьлар корта чу а бахийта мискача к[орига.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0093",
+      "story": "К1ориг (Ёлочка)",
+      "page": 14,
+      "ing": "Цу чу ший сурат дайра цунна; бакъда, хГанзолца хинна ийрча тайша оалхазар-м дацар из—из дар хозача лебеда сурат.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0094",
+      "story": "К1ориг (Ёлочка)",
+      "page": 14,
+      "ing": "Эггара зГамаг!чо ц!ог!а техар:",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0095",
+      "story": "К1ориг (Ёлочка)",
+      "page": 14,
+      "ing": "Талаьлов, керда цхьаькха а тТакхийттай!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0096",
+      "story": "К1ориг (Ёлочка)",
+      "page": 14,
+      "ing": "Кхы бераш а цунца гГоздаьлар: 13",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0097",
+      "story": "К1ориг (Ёлочка)",
+      "page": 15,
+      "ing": "Бакъда, керда яр енай!—-йоахар цар т1оаращ а детташ, халха а лелхаш, даьгеи наьнагеи кхайкаш, хи чу маькхаш, пирожнеш кхувсаш.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0098",
+      "story": "К1ориг (Ёлочка)",
+      "page": 15,
+      "ing": "Шоайла къувсаш дувцар цар:—Керда яр массарел а хозаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0099",
+      "story": "К1ориг (Ёлочка)",
+      "page": 15,
+      "ing": "я, массарел а з1амаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0100",
+      "story": "К1ориг (Ёлочка)",
+      "page": 15,
+      "ing": "я, массарел а дикаг!| я!—-Къаьнача лебедаша дун сийна кортош лохдир.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0101",
+      "story": "Гета (Снежная королева)",
+      "page": 16,
+      "ing": "ГЕТА Гета латтар дизза зиза теха; зунгатий ткъамаш мо диткъа, кхы а диткъаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0102",
+      "story": "Гета (Снежная королева)",
+      "page": 16,
+      "ing": "Малх а бар гетана т[ахьежаш, моархаш а яр цунна дог!а лоаттадеш, лувчадаьча бера нанас боккха барт санна, пайданна дар цунна уж.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0103",
+      "story": "Гета (Снежная королева)",
+      "page": 16,
+      "ing": "Наха йоах,--аьлар гетас,—со сов а дика, лакха, д1аьха хиннад, сох еов хоза гата кусок а хургья.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0104",
+      "story": "Гета (Снежная королева)",
+      "page": 16,
+      "ing": "дунен та саг хургвий-хьог!!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0105",
+      "story": "Гета (Снежная королева)",
+      "page": 16,
+      "ing": "Х!анз а дика хилча, хГаьта \"Мехьаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0106",
+      "story": "Гета (Снежная королева)",
+      "page": 16,
+      "ing": "х1ама хургда сох!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0107",
+      "story": "Гета (Снежная королева)",
+      "page": 16,
+      "ing": "Ма сакъердаме да маьлха к!ал, ма кердадоах со дог!илго!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0108",
+      "story": "Гета (Снежная королева)",
+      "page": 16,
+      "ing": "Х!а-а, х!а-а!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0109",
+      "story": "Гета (Снежная королева)",
+      "page": 16,
+      "ing": "аьлар корта хьокхаша.— Шоана дуне довзац тхона мо, хана аьлча, тхоах ирдеш шолхаш доах.—Из оалаш латкъаш щ!айзар уж: Шнип, шнап, шпурре, Басселурс!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0110",
+      "story": "Гета (Снежная королева)",
+      "page": 16,
+      "ing": "А, хаьдадац из х[анз!—-аьлар гетас.—Малх кхоана а хьежаргба, дог!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0111",
+      "story": "Гета (Снежная королева)",
+      "page": 16,
+      "ing": "Се дег!адоаг!илга ма гой сона; сайна зиза мишта техад ма 15",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0112",
+      "story": "Гета (Снежная королева)",
+      "page": 17,
+      "ing": "Со дунен т1а мел долча х!амал ираз долашаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0113",
+      "story": "Гета (Снежная королева)",
+      "page": 17,
+      "ing": "Бакъда, цкъа баьхкар нах, кертага г1олла хьа а лаьца, эзза овлаш а т1ехьа хьадаьккхар из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0114",
+      "story": "Гета (Снежная королева)",
+      "page": 17,
+      "ing": "Цул т1ехьаг!, дувш санна, хила деллар, т1аккха, дотташ санна, щера та лоаттадир ‘из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0115",
+      "story": "Гета (Снежная королева)",
+      "page": 17,
+      "ing": "Ла деза, т1аккха ховргда сона керда х1ама“.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0116",
+      "story": "Гета (Снежная королева)",
+      "page": 17,
+      "ing": "Т1оададеш, докъадеш, увзадеш, ехк хьекхаш",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0117",
+      "story": "Гета (Снежная королева)",
+      "page": 17,
+      "ing": "„Сов а ираз долаш хиннад со!--хетар цунна цу Тазапа юкъе“.—Тоъам бе беза аз, къона долча хана ираз долаш хиларах.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0118",
+      "story": "Гета (Снежная королева)",
+      "page": 17,
+      "ing": "Ох!“ Цун уйла яь ялалехь, маша беча толдаш та дахар из; укхаза цох хилар йоккха, тамашийна, хоза гата кусок.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0119",
+      "story": "Гета (Снежная королева)",
+      "page": 17,
+      "ing": "Деррига гета, массада а мерг\\илг а т1ехьа, цу кусокага дахар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0120",
+      "story": "Гета (Снежная королева)",
+      "page": 18,
+      "ing": "Хьанна хетар яр хургда, аьнна!...",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0121",
+      "story": "Гета (Снежная королева)",
+      "page": 18,
+      "ing": "Тамашийна хГама да хьо, тамашийна!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0122",
+      "story": "Гета (Снежная королева)",
+      "page": 18,
+      "ing": "Ма ч1оаг!еи кТаьдеи да со!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0123",
+      "story": "Гета (Снежная королева)",
+      "page": 18,
+      "ing": "Духхьал зиза теха буц мара ярий со!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0124",
+      "story": "Гета (Снежная королева)",
+      "page": 18,
+      "ing": "Сона цу хана цхьаннеа г!улакх мича дора, кхыметтел хий а хилацар сона дог1а дилхача мара.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0125",
+      "story": "Гета (Снежная королева)",
+      "page": 18,
+      "ing": "гГулакх: хГара [ур-1урра кхалсаго такГалт1а доакх со, хГара сар-сарахь лайка чура хий детт сона.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0126",
+      "story": "Гета (Снежная королева)",
+      "page": 18,
+      "ing": "Тедаш, этт![адеш, маьхий чакхдоахаш, цунна леладаьр, санна дувцаргда из, безаме хГама да—цар хьона!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0127",
+      "story": "Гета (Снежная королева)",
+      "page": 18,
+      "ing": "Бакъда, гата кусоках шийттазза дувхадал барзкъаш даьлар, селла чоаг[а хГара сага эшаш дола.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0128",
+      "story": "Гета (Снежная королева)",
+      "page": 18,
+      "ing": "Б1арчча шийтта барзкъа хилар кусоках.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0129",
+      "story": "Гета (Снежная королева)",
+      "page": 18,
+      "ing": "Хьайла, алалахь боккъала!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0130",
+      "story": "Гета (Снежная королева)",
+      "page": 18,
+      "ing": "Х!анз хиннад сох цхьа хГама!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0131",
+      "story": "Гета (Снежная королева)",
+      "page": 18,
+      "ing": "Х1анз аз а бу дуненна пайда, из дакха эшар а бокъонца дола ираз а!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0132",
+      "story": "Гета (Снежная королева)",
+      "page": 18,
+      "ing": "х1ама хилац!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0133",
+      "story": "Гета (Снежная королева)",
+      "page": 18,
+      "ing": "Цкъа тиш даланза даргдий,—аьлар хГара барзкъо.—Инш хиннаяларе кхы а леларгдар со, деха Пиш Йнй таро йЙоацар!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0134",
+      "story": "Гета (Снежная королева)",
+      "page": 18,
+      "ing": "барзкъаш этт!адаь в!ашаг!даьхар, х!анз-м йисте даьннад долла хГама, аьнна, хетар царна, х1ана аьлча, массая а пахашк тедаш, те1аеш кхехкайора—шоашта а хацар царна шоашца фу леладу.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0135",
+      "story": "Гета (Снежная королева)",
+      "page": 20,
+      "ing": "Хьалха хинначул диткъаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0136",
+      "story": "Гета (Снежная королева)",
+      "page": 20,
+      "ing": "а да со, яз а дергда сона т!а!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0137",
+      "story": "Гета (Снежная королева)",
+      "page": 20,
+      "ing": "Цхьанна а х!аманца нийсдала йишйоацаш ираз да-кха ер!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0138",
+      "story": "Гета (Снежная королева)",
+      "page": 20,
+      "ing": "Цу т1а яздаьчунга наха ладувг!ар, яздаьр чГоаг!а.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0139",
+      "story": "Гета (Снежная королева)",
+      "page": 20,
+      "ing": "дика а хьаькЪале а дар; из мел дийша нах дикаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0140",
+      "story": "Гета (Снежная королева)",
+      "page": 20,
+      "ing": "а хьаькъалехь а хилар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0141",
+      "story": "Гета (Снежная королева)",
+      "page": 20,
+      "ing": "„О,—ер гаьнна доккхаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0142",
+      "story": "Гета (Снежная королева)",
+      "page": 20,
+      "ing": "Цхьанна а хана дагадоха йиш ярий, аз наха юкъе ирази хьаькъали арадоаккхаргда, аьнна?",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0143",
+      "story": "Гета (Снежная королева)",
+      "page": 20,
+      "ing": "ХГанз дика ца тешаш ма дий со-м, бокъонца из иштта долашехь а.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0144",
+      "story": "Гета (Снежная королева)",
+      "page": 20,
+      "ing": "Цхьаннена т!ехьа кхы дар доаг1аш, дог!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0145",
+      "story": "Гета (Снежная королева)",
+      "page": 20,
+      "ing": "Ханз илли хада ма хаьдадий, аьнна, хГара аз уйла массаз ю, со кхы а .дикаг!ча наькъаца доалаш, дадода.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0146",
+      "story": "Гета (Снежная королева)",
+      "page": 20,
+      "ing": "Х1анз са мел дукха мах болаш уйлаш я аьлча, уж хургья хьалха сона теха хинна зизаш миссел.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0147",
+      "story": "Гета (Снежная королева)",
+      "page": 20,
+      "ing": "Дунен т1а мел долча хамал ираз долашаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0148",
+      "story": "Гета (Снежная королева)",
+      "page": 20,
+      "ing": "да со!“ Бакъда, каьхат дахийтанзар дунена го баккха: типографе а дахьийта, цига цунна тГаяздаь мел хиннача хГамах зорба теха книжкаш а даь, дуккхача б1аьннешца лоарх!ам болаш арахийцар из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0149",
+      "story": "Гета (Снежная королева)",
+      "page": 20,
+      "ing": "эцар пайда а сакъердам а, х1ана аьлча, духхьал цхьа каьхат дуненна го баккха дахийтача ах никъ балехьа из тиш а денна дГадаргдар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0150",
+      "story": "Гета (Снежная королева)",
+      "page": 20,
+      "ing": "„Иштта хьаькъалехь а хиннадоад, аьнна, уйла йир каьхато.—Бакъдар аьлча, сона из дага а ма денадацар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0151",
+      "story": "Гета (Снежная королева)",
+      "page": 21,
+      "ing": "тара т1айохийташ яздеш леладаь со се сай метта улл, книжкаш массанахьа а хьувзаш да.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0152",
+      "story": "Гета (Снежная королева)",
+      "page": 21,
+      "ing": "О, со дунен т1а мел долча х1амал ираз 'долашаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0153",
+      "story": "Гета (Снежная королева)",
+      "page": 21,
+      "ing": "да!“ Таккха каьхат а пачкаш яь вГашаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0154",
+      "story": "Гета (Снежная королева)",
+      "page": 21,
+      "ing": "а дийхка, ишкапа: чу д1алочкъадир.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0155",
+      "story": "Гета (Снежная королева)",
+      "page": 21,
+      "ing": "Къахьийгачул т1ехьаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0156",
+      "story": "Гета (Снежная королева)",
+      "page": 21,
+      "ing": "сала!ар ма дика да!— аьлар каьхато.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0157",
+      "story": "Гета (Снежная королева)",
+      "page": 21,
+      "ing": "Х!анз мара бокъонца сайх кхийттадац со, х1аьта ше довзар а боккха г!а хьалхабаккхар да!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0158",
+      "story": "Гета (Снежная королева)",
+      "page": 21,
+      "ing": "Дувца ца дезаш хаьда да-кх.— Со д1ахо гГоргдолга: масса а хана хьалха доалаш дТагГоргда.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0159",
+      "story": "Гета (Снежная королева)",
+      "page": 21,
+      "ing": "Х1аьта цхьан хозача дийнахь каьхат кхуврча чу тессар доагаде.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0160",
+      "story": "Гета (Снежная королева)",
+      "page": 21,
+      "ing": "Цун ираза тика чу нийсдаланзар из— цига цунна юкъе даьттеи шекари хьерчоргдар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0161",
+      "story": "Гета (Снежная королева)",
+      "page": 21,
+      "ing": "Цага мел дола бер гулделар щ!ера хьалхашка: цар безам бар каьхат мишта доаг хьажа.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0162",
+      "story": "Гета (Снежная королева)",
+      "page": 21,
+      "ing": "Берашта дика хетар, шоашта са йоацаш дукха ше сийгаш кхычахьа д1аудаш санна хеташ б1аргадайча.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0163",
+      "story": "Гета (Снежная королева)",
+      "page": 22,
+      "ing": "Наг-нагахь хеталу из дГавахача санна, кхы сийгаш а хургдоацаш, х!аьта а юха аравоал из массарел а т1ехьа волаш.“ Еррига пачка щГералла чуяхийтар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0164",
+      "story": "Гета (Снежная королева)",
+      "page": 22,
+      "ing": "Ухх, ух!—ма ‘сийрда ала иккхар цох.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0165",
+      "story": "Гета (Снежная королева)",
+      "page": 22,
+      "ing": "Боккха ала баьнна, лота а денна, цхьанна а хана гетас ший сигал бесса дола зизаш ца эйдаьча тайпара лаккха лакха эйденна сийрдадаьлар из, цхьанна а хана к[ай гата сийрда ца даьннача бесса.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0166",
+      "story": "Гета (Снежная королева)",
+      "page": 22,
+      "ing": "Цхьан минута деррига яздаь мел хина алапаш щийделар, деррига дешаш, уйлаш щ1ера алалла дайна дГадаьлар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0167",
+      "story": "Гета (Снежная королева)",
+      "page": 22,
+      "ing": "„ХГа, х1анз со духхьал малх болча кхача боал“— аьлар алас, эзараш багенаш цхьатарра гайттай-кх, аьнна хетадолийташ.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0168",
+      "story": "Гета (Снежная королева)",
+      "page": 22,
+      "ing": "Дешархоштеи хьехархоштеи тара хинна щ(е сийгаш хьалха доладелар, хГаьта бераша чиллан та илли аьлар: ` ' й Шнип, шнап, шнурре, Басселуре!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0169",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 23,
+      "ing": "Цхьан бетта чу пхи кхе яг1ар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0170",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 23,
+      "ing": "Шоай фусама чГоаг!а раьза йолаш, в[аший юххе яг!ар уж, в1ашка а та[аь: дийнахь сийрда яр, бус баьде яр, сатийна, парг1ато шедар хила деззача тайпара дар царна.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0171",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 23,
+      "ing": "Малхаи дог!анеи кТал дег!абоаг1ар кхен ботт, чакх са доаг1аши шщ1енеи; кхеш а дег1аухар, есташ, паръесташ латтар— цхьацца хГама ца леладича яргьярий уж?",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0172",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 23,
+      "ing": "ЩагТа мел дика яле а цкъаза кхей а оттар кхыча х1аманга безам.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0173",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 23,
+      "ing": "Сов дукха яга вай укхаза,—аьлар цкъа цхьан кхес,—иштта яг!е-м йокъа а лург ма Йий.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0174",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 23,
+      "ing": "Х!аьта цхьаькха а мотт сона, вай щенал арахьа кхы а х!амаш санна...",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0175",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 23,
+      "ing": "Шаьхха чГоаг!а катехар: сага кулго ботт хьа а баьккха киса беллар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0176",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 23,
+      "ing": "Х!а, х1анз кастта мукъадала мег вай,— йоахар кхеша, ч!оаг!а гГадъяха.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0177",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 23,
+      "ing": "Ботт баьттар, кхеш раьза йолаш к1аьнка т!/аьръюкъе араяйдар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0178",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 23,
+      "ing": "Ма тамашийна хоза кхеш я ераш,—аьлар кГаьнка,—- гТаьххьа са чГинжарг!а топа",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0179",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 23,
+      "ing": "Цхьа кхе чу а елла, фу аьнна араяхийтар цо,",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0180",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 23,
+      "ing": "Йода, йода!—аьнна, щогГа техар цо, 22",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0181",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 24,
+      "ing": "Лаца, лаца со!—-аьнна, къайлаяьлар из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0182",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 24,
+      "ing": "Араиккхар шоллаг!1а яр а.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0183",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 24,
+      "ing": "Тхо гаьна йоаццаш [0 а лийга, тхьовса гГортаргья— аьлар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0184",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 24,
+      "ing": "Шийна товр хургда-кх— аьлар юххерчо, лакхе ураг!йодаш.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0185",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 24,
+      "ing": "Из цхьан дахчах даьча къаьнача щГен тхов Т[а а ежа, кТаьдача лаьттахи петарахи дизза долча Турга.яхар..",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0186",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 24,
+      "ing": "Наха чулатташ, денна хала болх беш, низткъа шийнеи ший Ййииган даа х!1ама доккхар цо.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0187",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 24,
+      "ing": "Ии!иг г1ийли низ боацаш, зиза мо ховхеи яр.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0188",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 24,
+      "ing": "Цамогар ч!оаг!а долаш лела могаш яцар из, метта уллаш б1арчча денош д'аухийтар цо.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0189",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 24,
+      "ing": "аьнна, хетар нанна.—Ши йи!иг мара хинна а яцар са; Царех ца!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0190",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 24,
+      "ing": "Ма хала да-кх къаста!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0191",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 24,
+      "ing": "Ший бос бахача йи!ига б!арахьежаш хийла елхар нана.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0192",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 24,
+      "ing": "Хоза хьесташ бола малх чухьажар акхар тховна кТал а.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0193",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 24,
+      "ing": "‚ Ии!иг маьлха з!1анарашка д1ахьежжача йисар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0194",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 26,
+      "ing": "Нани, фу-д цу кора т!ехьашкара баьциара дар?",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0195",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 26,
+      "ing": "аьнна, хаьттар цо наьнага.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0196",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 26,
+      "ing": "Нанна, кор хьадийлача, г[ийла баьца гайдолгаш б1аргадайра.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0197",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 26,
+      "ing": "Кхеш хила мег уж,—-аьлар нанас.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0198",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 26,
+      "ing": "Цхьан тайпара кхе бурилг ежа хургья, цига та а яьннай.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0199",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 26,
+      "ing": ": Ии!ига менгилг кора юхе хьа а эза, балха яхар из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0200",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 26,
+      "ing": "Нани,—аьлар йи!ига,: сарахь— сона хетт се тоалуш' йоаг!1аш санна.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0201",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 26,
+      "ing": "Хьайла мишта кердеи баьццареи я из,— хьайла, мишта тоалуш йоаг!а со.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0202",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 27,
+      "ing": "Кхелг дег!а ухаш, ший гайдолгаца т1иргах хьерчаш, эйлуш лакхденна, кастта зиза а теха даэттар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0203",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 27,
+      "ing": "Ии!иг б1арчча денош доахаш кхелгага хьежаш, цох сакъердаш, хоалуш дикаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0204",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 27,
+      "ing": "хилар; басилгаш цщ1ий а енна, б1аргаш сийрда а даьнна, .",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0205",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 27,
+      "ing": "саго новкъостал ца деш эйлуш а ший менге т1а Гохоалуш а хилар из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0206",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 27,
+      "ing": "^ Цхьаькха к!ира даьлар, йи!иг г[еттар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0207",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 27,
+      "ing": "Ма г!озъяьнна кор хьадийлар цо, ма безаме барт баьккхар цо кхен зизай гТалгех!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0208",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 27,
+      "ing": "БТарчча сахьата яьпар из корага, маьлха ЙГовхалга,—ма безаме бар из!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0209",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 27,
+      "ing": "эггара хьалхаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0210",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 27,
+      "ing": "шийна Хеттача яха г1ийрта кхелг, хий ухача турба чу а иккха, цигара кхокхан къамарга яхар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0211",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 27,
+      "ing": "Кхокхарча йиар вож ши кхелга цаннахьа 10 а лийга дикка тхьовса г1ийрта.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0212",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 27,
+      "ing": "Х1ама дергдац, уж а енаяц хозахета!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0213",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 27,
+      "ing": "Ма сомлуш йоаг1а со!--яхаш хиннадар цо.—Геттар йоккхаг!, йоккхаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0214",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 27,
+      "ing": "Ишта хуле-м дукха ха ялалехь эккхарг ма йий!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0215",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 27,
+      "ing": "Сона хиннар-м цхьанна кхелга а мича хиннад—цох со теш цу пхеннел толашаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0216",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 27,
+      "ing": "Бадана к!1алхарча щалга корага латтар щ1е-кТай бос бола тоаенна йи!иг.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0217",
+      "story": "Цхьан бетта чура пхиъ (Дюймовочка)",
+      "page": 27,
+      "ing": "Малхага кулгаш д1а а дахийта, г1озъяьнна хьежар из кТайча дуненга.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0218",
+      "story": "Оле-Лукойе",
+      "page": 28,
+      "ing": "ОЛЕ ЛУКОИЕ Дерригача дунен т1а Оле Лукойе мо дахар дувца ховш цхьаккха саг а хургвац— „Оле, дГадувшаде б1аргаш.“ Галаьлов, ма дувца хов-кх цунна!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0219",
+      "story": "Оле-Лукойе",
+      "page": 28,
+      "ing": "Саррахь, бераш истола йисте е шоай гГандаш та дагГача хана воаг!а Оле Лукойе.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0220",
+      "story": "Оле-Лукойе",
+      "page": 28,
+      "ing": "когаш та пазаташ а ювхаш, лоаме тГа хьалт!/а воал из, вГалла тата`доацаш ни!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0221",
+      "story": "Оле-Лукойе",
+      "page": 28,
+      "ing": "хьа а йийла— пррр...—аьле, берашта пурх бий б!аргашка мерза шщура тох цо, б!1аргаш хьаделла могаргдоацаш а, ше б1арга ца войта а.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0222",
+      "story": "Оле-Лукойе",
+      "page": 28,
+      "ing": "Тебаш т!1ехьашка г1олла та а вайя, шортта пхьукТоага чу фо тох цо царна т!аккха цар кортош дащ мо дезлу.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0223",
+      "story": "Оле-Лукойе",
+      "page": 28,
+      "ing": "Х1а, ладувг!алахь,",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0224",
+      "story": "Оле-Лукойе",
+      "page": 28,
+      "ing": "аьлар Оле Лукойе саррахь Ялмар метта 1овужавича;—со ща цхьалхадаккха воалл.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0225",
+      "story": "Оле-Лукойе",
+      "page": 30,
+      "ing": "хилар, пенаца г!олла тховга кхаччалца гаьнаш д1а а яхийта, щалг безаме йолча беседкана тара лестар; массадолча зизашта зиза техар, х1ара зиза Тандара зизал (розал) тоам болашаг!, дувцилга доацаш хоза хьаж йоаг1аш дика дар; хГаьта царех зиза бага деллача варенел мерзаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0226",
+      "story": "Оле-Лукойе",
+      "page": 30,
+      "ing": "Сомаш дошув мо къегар бургацаш яр цига мезах лелха йоахкаш,— цецваллал тамашийна х1ама дар из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0227",
+      "story": "Оле-Лукойе",
+      "page": 30,
+      "ing": "Щаьхха, Ялмара дешара книжкаш дадача истола яьшка чура хьана-д ца ховш леткъаш щ0юг!а’иккхар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0228",
+      "story": "Оле-Лукойе",
+      "page": 30,
+      "ing": "Из фу дола?—хаьттар Оле Лукойе.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0229",
+      "story": "Оле-Лукойе",
+      "page": 30,
+      "ing": "Истола ДТат!а а ваха яьшка хьайийлар цо.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0230",
+      "story": "Оле-Лукойе",
+      "page": 30,
+      "ing": "Из хиннаяр грифела Таькъа, цу т1ара арифметикан масалаш деш харцахьа яздаь терахьаш щувзаш, детта луш дар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0231",
+      "story": "Оле-Лукойе",
+      "page": 30,
+      "ing": "Грифел ший тГирга 1а з1анарах дийхка жТалиг мо кхувсалуш етталора, цун безам бар из г!алат тоадеш новкъЪостал де, бакъда, из мишта тоадергда хацар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0232",
+      "story": "Оле-Лукойе",
+      "page": 30,
+      "ing": "Ялмара тетрадь а делхаш дар, ла ца дувг1алуш сов а ч1оаг!а къахеталуш.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0233",
+      "story": "Оле-Лукойе",
+      "page": 30,
+      "ing": "ХГара листа оагон т!а доккхий алапаш латтар, царна улув кагий дараш дар; массада.муг!арах латтар уж—из кулга йоазув дар, эггара хьалха Гомалуш яздаь.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0234",
+      "story": "Оле-Лукойе",
+      "page": 31,
+      "ing": "яздаьдар Ялмара, бакъда, къоалама мугГар та геттар нийса латта дезаш дола уж гора ухар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0235",
+      "story": "Оле-Лукойе",
+      "page": 31,
+      "ing": "Хьайла шоай, х[анз иштта латта деза шо, йоахар-кулга йоазано.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0236",
+      "story": "Оле-Лукойе",
+      "page": 31,
+      "ing": "КТеззига оаг1оро хьежа мела а ма хила.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0237",
+      "story": "Оле-Лукойе",
+      "page": 31,
+      "ing": "Хаьта аз молхаш лургья шоана,—аьлар Оле Лукойе.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0238",
+      "story": "Оле-Лукойе",
+      "page": 31,
+      "ing": "Езац тхона, езац!—аьнна щогТарч а теха нийсденна д1аэйттар уж, безаме б1арахьажа дог а доаг1аш.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0239",
+      "story": "Оле-Лукойе",
+      "page": 31,
+      "ing": "Х1а,—аьнна, тохавелар Оле Лукойе.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0240",
+      "story": "Оле-Лукойе",
+      "page": 31,
+      "ing": "Бакъда, Оле Лукойе д1а а ваха, Ялмар сомаваьнна царна б1арахьажача, хьалха шоаш хиннача бесса гоамеи вои дар уж.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0241",
+      "story": "Оле-Лукойе",
+      "page": 31,
+      "ing": "[алаьлов, ма чГоагТа делхар коа дог!1а!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0242",
+      "story": "Оле-Лукойе",
+      "page": 31,
+      "ing": "ГТанахь мо хозар из Ялмара, Оле Лукойе кор хьадийлача,",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0243",
+      "story": "Оле-Лукойе",
+      "page": 31,
+      "ing": "хий корага г!олла доаг1ар, б1арчча [ам эттабар коа, щен хьалхашка тоам бола кема латтар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0244",
+      "story": "Оле-Лукойе",
+      "page": 32,
+      "ing": "З1амига Ялмар, тхоца кемаца ва безамбий хьа?—аьнна хаьттар Оле Лукойе.—Цхьан бус наьха мехкашка а хьажаь, Гурра щ!аг!а хургда вай.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0245",
+      "story": "Оле-Лукойе",
+      "page": 32,
+      "ing": "Кема улица юкъе г1олла доладенна дГадахар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0246",
+      "story": "Оле-Лукойе",
+      "page": 32,
+      "ing": "Лаьтта б1арга ца гуш, гаьна баьнна бар уж, т1аккха гГараг!урай 1ул б1аргадайра`царна, шоай щГагГара ара а яьнна б1айхача мехка йолхача.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0247",
+      "story": "Оле-Лукойе",
+      "page": 32,
+      "ing": "'ПТараг1ураш в[ашт!ехьа Ййолхар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0248",
+      "story": "Оле-Лукойе",
+      "page": 32,
+      "ing": "Царех ца|, сов ч1оаг1а кТ1аьдъенна, ткъамаша низткъа мара д1ахьацар; эггара т1ехьа яр из мугТара.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0249",
+      "story": "Оле-Лукойе",
+      "page": 32,
+      "ing": "Дукха ха ялалехь геттара т1ехьайисар из новкъастел, т1аккха ткъамаш д1а-са а доаржадаь лохъяла Ййолаелар из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0250",
+      "story": "Оле-Лукойе",
+      "page": 32,
+      "ing": "Юха а ший хурдаь ткъамаш техар цо, бакъда, цох а х1ама хиланзар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0251",
+      "story": "Оле-Лукойе",
+      "page": 32,
+      "ing": "Дахьажалаш, миштай из!—йохар котамаш.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0252",
+      "story": "Оле-Лукойе",
+      "page": 33,
+      "ing": "Моска борг!ало, сайса та а ена, ше мо хГама ца хеташ хаьттар цунга: „Хьо малий?",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0253",
+      "story": "Оле-Лукойе",
+      "page": 33,
+      "ing": "Боабашкаша кТагт!1ехьашкахьа а ухаш, шоайла йоахар; „Пап-пап!“ Таккха гГ[араПура йолаелар Й!айхача Африкера дар, пирамидех, страус яхача эмалкаш санна удача оалхазарех дар дувца.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0254",
+      "story": "Оле-Лукойе",
+      "page": 33,
+      "ing": "Товдал йолга бакъда,—аьнна хоададир, кхайка а кхайка моска боргГала.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0255",
+      "story": "Оле-Лукойе",
+      "page": 33,
+      "ing": "Хьа д!аьха когаш ма дика да!—-аьлар москала.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0256",
+      "story": "Оле-Лукойе",
+      "page": 33,
+      "ing": "Ха-ха-ха!—-яхаш елар боабашкаш.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0257",
+      "story": "Оле-Лукойе",
+      "page": 33,
+      "ing": "Хьо а елаяла мегаргьяр,—аьлар цунга моска борг!ала.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0258",
+      "story": "Оле-Лукойе",
+      "page": 33,
+      "ing": "Из щ1оаг!а аьнна дош дар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0259",
+      "story": "Оле-Лукойе",
+      "page": 33,
+      "ing": "Хьона-м цох сакъердам ца хила а мег?",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0260",
+      "story": "Оле-Лукойе",
+      "page": 33,
+      "ing": "Ах, ах!—-аьнна, котамаш а йолаелар...",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0261",
+      "story": "Оле-Лукойе",
+      "page": 33,
+      "ing": "Гик-гак, гик-гак,— аьнна, боабашкаша а мухьарч техар...",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0262",
+      "story": "Оле-Лукойе",
+      "page": 33,
+      "ing": "хетар.— Ялмар, бу йолча ваха ни!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0263",
+      "story": "Оле-Лукойе",
+      "page": 33,
+      "ing": "хьа а йийла, гТараг!Гурага кхайкача, гГ[араг!ура из волча кема ийча араиккхар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0264",
+      "story": "Оле-Лукойе",
+      "page": 33,
+      "ing": "Х!анз дика сала!аьдар цо, Ялмара хеташ баркал оалаш корта а лостабир цо.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0265",
+      "story": "Оле-Лукойе",
+      "page": 33,
+      "ing": "Таккха гараг!ура, ший шера ткъамаш а доаржадаь, г!етта б1айхача мехка д!аяхар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0266",
+      "story": "Оле-Лукойе",
+      "page": 33,
+      "ing": "Котамаша: кудах-кудах,— йоахар, боабашкаша: ква-ква— йоахар, сийнъелар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0267",
+      "story": "Оле-Лукойе",
+      "page": 33,
+      "ing": "Кхоана шох, кхехка а яь, суп ергья вай,— аьлар Ялмара...",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0268",
+      "story": "Оле-Лукойе",
+      "page": 33,
+      "ing": "Из оаллашехь а ший менге та сома а ваьлар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0269",
+      "story": "Оле-Лукойе",
+      "page": 33,
+      "ing": "Хоза сакъердам бир цунна цу бус Оле Лукойе!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0270",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 34,
+      "ing": "ПАЧЧАХЬА ЩЕНА БАРЗКЪАШ.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0271",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 34,
+      "ing": "Моцаг!-моцаг!а вахаш цхьа паччахь хиннав.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0272",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 34,
+      "ing": "Сов ч!оаг!1а щена барзкъаш дезаш ший мёл дола ахча дохкаш хиннад цо дикаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0273",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 34,
+      "ing": "Из ваьхача городе ч1оаг!а сакъердаме а хиннай, ден-денна кхыча къамех дукха нах а ухаш хиннаб цига.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0274",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 34,
+      "ing": "Басари сурати дика хиларал совг!, цох даь барзкъа цхьа тамашийна дакъЪа доаллаш да, фу-д аьлча, цох даь барзкъа тГадийхача, из б!арга дов Йиш яц, ше леладеча г!1уллакха пайданна воацача е геттара Говдал волча сага.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0275",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 34,
+      "ing": "„Ма тамашийна барзкъа да из!—-яхаш уйла ешщ хиннав паччахь.— Цу тайпара барзкъа са хилча, йиш яр хьона са сай паччахьалкхе ший г1улакха та мегаргвар-мегаргвоацар а хьаькъал дар-доацар а къоаставе.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0276",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 34,
+      "ing": "Харцлувча наха задаткана дуккха ахча а денна, цу сахьате болх бе д1аоттабаьб цо уж.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0277",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 35,
+      "ing": "Бокъонца маша бувзаш дола ши гандалма а оттадаь, шоаш болх беш санна а моттийташ, баьхкаб уж,‚—-деш хГама доаццашехь а.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0278",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 35,
+      "ing": "Болх д!аболабаьча минуте толашаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0279",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 35,
+      "ing": "дола дощуви эш аьннад цар, бакъда, даьрии дошуви шоай кисашка лочкъа а даь, даьссача г1андалг!аш та ах бийса яллалца болх баьб.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0280",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 35,
+      "ing": "яхаш уйла яьй паччахьа; бакъда, ший гулакха та мегаргвоацача е Товдал волча сага маша б1аргаго йиш Ййоацилга дагадехача, дега цискаша м!араш хьекхаш санна хийттад цунна.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0281",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 35,
+      "ing": "Шийх кхера ца} везилгах сецца тешаш хиннав из, х1аьта а кхы вар }вахийтача дикаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0282",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 35,
+      "ing": "хийттад цунна, г1улакх мишта лёел хьажа.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0283",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 35,
+      "ing": "Гораде массанена а ховш хиннад мишта тамашийна дакъа долаш ба маша, цудухьа харанена хар дийзад, мел Говдал е мегаргволаш ва цун гаргара саг.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0284",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 35,
+      "ing": "Сай къаьна, тещшамег!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0285",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 35,
+      "ing": "вола министр вохийторгва аз маша беш болча нахага хьажа,—аьнна, тоадаьд паччахьа.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0286",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 35,
+      "ing": "Ваха д!аэттав къаБна министр шаккхе а тийша 34",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0287",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 36,
+      "ing": "болх боалла саг шоай даьссача г!андалг!аш та болх беш боахкача зала чу.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0288",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 36,
+      "ing": "аьнна, цецваьннав министр.—Сона-м х1ама б!арга мича гу.“—Бакъда, шийна хийттар хозаш гучадаьккхадац цо.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0289",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 36,
+      "ing": "Иштта хаттараш деш даьссача гГандалг1ашка хьажийтав цар из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0290",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 36,
+      "ing": "В Ший хурдаьд хьежаш, б1аргаш хьекхадеш мискача министра, хГаьта а хГ[ама къоасталуш",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0291",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 36,
+      "ing": "„Фудола ер?—-хийттад цунна.—Товдала вола со?",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0292",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 36,
+      "ing": "Х1, фу ях 1а?— хаьттад цунга г1андалг1ана юххе ваьг!ача цхьанне.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0293",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 36,
+      "ing": "Ма дика хетт тхона из хозаш!—-оалаш хиннад маша бераша, сихбенна басарий щераш а Йоахаш, шоаш дехкача говзача суратех а кхетавеш.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0294",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 36,
+      "ing": "Къаьна министр цар дувцачунга ший хурдеш ладувг1аш хиннав, дайнар х!ама деце а цар деш дола къамаьл паччахьага д'адувца.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0295",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 36,
+      "ing": "Шийга дийцар лаччахьага д!адийцад цо.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0296",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 36,
+      "ing": "Маша бувза беза тхона яхаш, кхы а дукхаг!| ахча, кхы а дукхаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0297",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 37,
+      "ing": "тай ца тоссаш, хьалха мо болх беш хиннаб цар даьссача гГандалг1ашца.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0298",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 37,
+      "ing": "Дукха ха ялалехь цхьаькха доккхача дагара воаца чиновник лехав лаччахьа.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0299",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 37,
+      "ing": "Ший ма хулла хьийжав из; даьсса г1андалМаш мара хьалхашка ца хилча, цунна а х1ама бГаргаго мегаьдац.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0300",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 37,
+      "ing": "Беций нах цецбаргболаш хоза маша?—хийттад харцлувраша, хоза сурат а басар а хьахьувкхаш уж довзийташ цхьаккха х!ама доаццашехьа.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0301",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 37,
+      "ing": "хийттад чиновника.—-Иштта хинна доацала из, е сай Пулакха т!а мегаргвоацав, ма тамаш я ер.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0302",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 38,
+      "ing": "Иззамо тамашийна хГама дайнадац сона,—аьннад цо паччахьага.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0303",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 38,
+      "ing": "Юххера а паччахьана шийна дийзад, беш латтача хана маша б!1аргагор.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0304",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 38,
+      "ing": "БГарчча ординг т1ехьа а яьккха хержа толашаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0305",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 38,
+      "ing": "бола ший хьакимаш а царна юкъе тхьовра хьалха маьшага хьийжаь доккхача дагара боаца чиновникаш а болаш, вахав из, шоай даггар болх беш боахкаш харцлувш бола нах болча: беш болх хиннаб,—доацаш тайи банза машеи.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0306",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 38,
+      "ing": "Беций тамашийна маша?—яьхад` цхьалха дог долча чиновникаша.--ДГахьажалахь, сий дола паччахь, сураташ миштад; из яхаш дГахьувкхаш хиннад цар даьсса г[андалг1аш, х1ана аьлча, царна хеташ хиннад кхы барашта маша гуш санна.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0307",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 38,
+      "ing": "„Фуд ер?—хийттад паччахьана.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0308",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 38,
+      "ing": "10Вдал вола со, е паччахь хила мегаргвоацаш ва со?",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0309",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 38,
+      "ing": "Из да хьона, сона т!акхоачарг мел долча хГамал халаг!“.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0310",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 38,
+      "ing": "Раьза волаш санна корта а лестабеш хьежаш хиннав из даьссача г[андалг1ашка.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0311",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 38,
+      "ing": "Цунна т1ехьа мел хинна ординг .б1аргаш тГаухийташ хьежаш хиннай, бакъда, массанена бГаргагур а кхычарна гучул кхы дукхаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0312",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 38,
+      "ing": "хиннадац, х!аьта а яхаш хиннад паччахьана т1ехьа: „О, ма хоза ба!\" Цу тамашийна болча маьшах даь барзкъа тГадувха деза [а, кастта хулча доккхача дезача дийнахь аравоалаш, яхаш хьехар деш хиннад цар цунна.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0313",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 39,
+      "ing": "Тамаш йолаш ба!—багарабага эцаш чакхдаьннад, массава а г1озваьнна хиннав цох.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0314",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 39,
+      "ing": "Паччахьа харцлувча шинна а сага цхьацца орден а деннад, шиннех а паччахьа коа та къайлаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0315",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 39,
+      "ing": "Массанена го йиш хиннай уж мишта мукъа боацаш ба, паччахьана керда барзкъа деш боахкаш.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0316",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 39,
+      "ing": "Харцлувргаша кулгаш лакха хьал а ийдеш, цхьа хГама хьакхувсаш санна, дувцаш хиннад:",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0317",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 39,
+      "ing": "Хьажалаш ер чухь ювхо хачи я, ер мундир я, ер паччахьа кхоллар да иштта кхы дараш а.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0318",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 39,
+      "ing": "Цхьабарашта хеталургда дег!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0319",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 39,
+      "ing": "яьхад раьза хиннача паччахьа хьакимаша, бакъда хГама къоасталуш хиннадац царна, 38",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0320",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 40,
+      "ing": "х!ана аьлча, царна хьалхашка цхьаккха хГама ца хиннадаь.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0321",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 40,
+      "ing": "Сий долаш вола веза паччахь, мукъа ба хьайна т!адувха паччахьа деза барзкъаш 1Годаха,",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0322",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 40,
+      "ing": "аьннад харцлувргаша.—Оаха щена барзкъаш тГадувхаргда хьона доккхача кизганна хьалхашка.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0323",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 40,
+      "ing": "Паччахьа ший барзкъаш дГадаьхад, харцлувргаша шоаш даь щ1ена барзкъаш цхьац-цхьацца т!адувхаш санна моттийтад.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0324",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 40,
+      "ing": "Паччахьа т1ехкарах цхьа хГама д1аехкаш санна ка а етташ, кхоллар Гюоллаш боахк моттийтад цар, паччахь кизга хьалхашка масса а оаг[орахь дГа-юха хьувзаш хиннав.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0325",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 40,
+      "ing": "Ма дика т1адижад из!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0326",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 40,
+      "ing": "Ма дика нийсденнад из!—яьхад массане а.—Цун сурат, цун басар!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0327",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 40,
+      "ing": "Цу барзкъан мах баь саг варгвац!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0328",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 40,
+      "ing": "аьннад` керттерча хьакимо.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0329",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 40,
+      "ing": "Х!а, нийсденнадий массанахьара а?—хаьттад паччахьа.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0330",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 40,
+      "ing": "Харц ма алалаш, дика таций?—из дувцаш кхы а кизгана хьалхашка кхийстав из, х1ана аьлча, ше щенача барзкъашка хьеж, аьнна, наха моттийта.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0331",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 40,
+      "ing": "Паччахьа т1акхелла кхоллар кхахьа дезаш хинна камергераш, шоаш кхоллар айду моттийташ, уй та кхаччалца Гоберзаш хиннаб.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0332",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 40,
+      "ing": "Кулгаш шоашта хьалхашка д!ахьекха лоаттадеш хиннад цар, шоашта х(ама ца гулга д!ахайта бухкаш хиннабац уж.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0333",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 40,
+      "ing": "‚ Тоам болаш йолча кхоаллена к[ал а этта, сийле лоарх1аш дуккха арабаьннача нахаца водаш паччахь хиннав, го баьккха улицашка а корашка а кхайкаш нах хиннаб:",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0334",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 40,
+      "ing": "Эйяхь, ма куц долаш товш да паччахьа щ1ена барзкъаш, ма тоам болаш я цун кхоллара шлепор, ма дика тов цунга долла х1ама!—-Цхьаннена а шийна хама ца гулга д1ахайта лайнадац.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0335",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 41,
+      "ing": "ше из гучадаьккхача, е ший г1улакха та ше мегарг ца хилар е 1овдал гажал хилар цох ларх!ар кхераш хиннав массава а.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0336",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 41,
+      "ing": "хьалха хиннача барзкъех паччахь сел айвеш хиннадац.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0337",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 41,
+      "ing": "Эй, верзан ма вий из, цхьаккха х!ама а т1адоацаш!—аьнна, щаьхха щог!а техад зГамигача беро.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0338",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 41,
+      "ing": "Хозий шоана щенача бера г!ар?—аьннад цун дас.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0339",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 41,
+      "ing": "Т1аккха беррига нах болабеннаб, в1аший лерге а ухаш, беро аьнна дещшаш дувца.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0340",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 41,
+      "ing": "Цунна та х!1ама дувхац.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0341",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 41,
+      "ing": "Е з1амига бер да-кх цунна та цхьаккъа х1ама дац яхар!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0342",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 41,
+      "ing": "Эй, цхьаккха х!ама мичад цунна т!а!—аьнна, юххера а беррига нах кхайкаб.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0343",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 41,
+      "ing": "Паччахь веха хьайзав, х[ана аьлча, цунна шийна а хеталуш хиннад наха дувцар бакъдолаш санна.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0344",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 41,
+      "ing": "ТЧаккха уйла яьй цо: „Ханз цхьа х1ама мара дисадац—воха ца вохаш",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0345",
+      "story": "Паччахьа щена барзкъаш (Свинопас)",
+      "page": 41,
+      "ing": "а нийсдаь волавеннав из, цунна т1ехьа болабеннаб камергераш а шлейфа щ1ог лаьца болхаш санна, бакъда, е кхоллар а е цхьаккха барзкъа а доацаш-м хиннад.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0346",
+      "story": "Корсам",
+      "page": 42,
+      "ing": "Хьунаг1а яг/аш хозал яла йоаллаш корсам хиннай.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0347",
+      "story": "Корсам",
+      "page": 42,
+      "ing": "Маьлха з!анараш а шортта керда фо а т1акхоача аттача моттиге яьг1ай из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0348",
+      "story": "Корсам",
+      "page": 42,
+      "ing": "Цунна гонахьа тГаяьнна цул боккхаг!а болча новкостех йоОла дихкеи корсамийихьу хиннай.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0349",
+      "story": "Корсам",
+      "page": 42,
+      "ing": "Цо зувш хиннабац б1айха малх а, керда фо а, цун безам хиннабац хьуна юкъе гГолла къамаьлаш деш, лаьттареи гаьн т[ареи комараш лехьаеш лелача ахархой берашца.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0350",
+      "story": "Корсам",
+      "page": 42,
+      "ing": "Цу хена юхе сайца а сайце, оалаш хиннад: „О, ма з1амига, хоза корсамилг я ер!\" Цу къамаьлага хенилга ладувг1а а догдоаг!1аш хиннадац.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0351",
+      "story": "Корсам",
+      "page": 42,
+      "ing": "Шу доаллаш цхьан долцца йГаьхъелар из, цхьаькха шу даьлча, кхы а лакхъелар: хГара керда ткъЪовронаш тГаяларца ха йиш я масса шу да корсама.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0352",
+      "story": "Корсам",
+      "page": 42,
+      "ing": "Кхы хенаш санна со Ййоккха яларе,—яхаш, доккха са доахар корсама,—сай гаьнаш шерра д1а-са а йоаржаяь, лакхача бухьигаца кТайча дуненга хьежа йиш яр са!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0353",
+      "story": "Корсам",
+      "page": 42,
+      "ing": "Оалхазараша ткъовронаш та б1енаш дергдар, ду!1а долча -хана кхы хенаш санна сетташ со а латтаргьяр!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0354",
+      "story": "Корсам",
+      "page": 42,
+      "ing": "Из Мозъяккхацар маьлха сердалоно, оалхазараша, Гура а сарахь а т1ехъювлача, тов бесса йолча морхаша.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0355",
+      "story": "Корсам",
+      "page": 43,
+      "ing": "[а та а дена, гобаьккха к!ай лоа диллар, моллаг1а едда Йодаш Йола пхьагилг а т1ехкхоссалора цу хенах,— ма хала хулар-кх из а!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0356",
+      "story": "Корсам",
+      "page": 43,
+      "ing": "Ши 1а д1адаьлар, кхоалаг!а Та хьаэттача— лакхъеннача корсамилга улув г1олла т1ехъювла Ййийзар пхьагалии.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0357",
+      "story": "Корсам",
+      "page": 43,
+      "ing": "х!ама хила йиш мичай!“—яхаш уйла йора хенилга.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0358",
+      "story": "Корсам",
+      "page": 43,
+      "ing": "цудухьа хГанз тоъал дег!аена з1амига корсамилг кхераш эгар, даьржа доккхий хенаш лелхаш, таташ деш лаьтта Голегаш.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0359",
+      "story": "Корсам",
+      "page": 43,
+      "ing": "Т1ера гаьнаш шаьрйийя д1а а Йоахаш, дерзан даьхача, д!1аьхлора уж, диткъ а лора; довза йиш йоацача доалар уж; цул т!ехьаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0360",
+      "story": "Корсам",
+      "page": 43,
+      "ing": "чархаш та а дахке, говраша хьунаг!ара аракхухьар уж.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0361",
+      "story": "Корсам",
+      "page": 43,
+      "ing": "чкъаьрийдуаргаши кхаьчача, корсамо хаьттар царга:",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0362",
+      "story": "Корсам",
+      "page": 43,
+      "ing": "ЧТагаргашта хама хацар; чкъаьрийдуарга уйла‘а яь, корта а лостабаь, аьлар: 42 а",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0363",
+      "story": "Корсам",
+      "page": 44,
+      "ing": "Египтера доаг1аш дукха щена кемаш а кема та даГ1аш лакха доккхий хенаш (мачташ) а дайра сона.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0364",
+      "story": "Корсам",
+      "page": 44,
+      "ing": "Сона хетачох уж дар уж, з!еви хьаж а ЙоагПаш: царгара салам моаршал лу аз хьога.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0365",
+      "story": "Корсам",
+      "page": 44,
+      "ing": "Из дукха дувца дезаргда!—аьнна чкъаьрийдуарг даяхар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0366",
+      "story": "Корсам",
+      "page": 44,
+      "ing": "Хье къона хиларах доккхал делахь!—-Поахар маьлха зГанараша.—Хье унахщена йолаш дег!аярах, хьай къонача дег!ах доккхал делахы!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0367",
+      "story": "Корсам",
+      "page": 44,
+      "ing": "барташ доахар цу хена, тхиро а ший хий легадора цунна т!а, бакъда, хено кхетадацар уж пулакхаш.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0368",
+      "story": "Корсам",
+      "page": 44,
+      "ing": "Корсамаш йЙог![а эрсий щ!ай хьаэттар, геттара з1амига хенаш теда эттар нах.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0369",
+      "story": "Корсам",
+      "page": 44,
+      "ing": "Е дег!а а е ханна а ше багГача баг!а ца кхетача укх хенаца нийсдала йЙнш йоацаш дар цар тийдараш.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0370",
+      "story": "Корсам",
+      "page": 44,
+      "ing": "Цу эггара хозаг!| хиннача къонача хенилгий гаьнаш теда ца тедаш а Йита, соалоза та а дехка, говрашца токхадаь хьунаг!ара арадаьхар уж.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0371",
+      "story": "Корсам",
+      "page": 44,
+      "ing": "Мича хьо уж?—хеттар корсамо.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0372",
+      "story": "Корсам",
+      "page": 45,
+      "ing": "яц уж, х!аьта д1ара ца!-м сол гаьнна з!амаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0373",
+      "story": "Корсам",
+      "page": 45,
+      "ing": "Из тхона хов!—яхаш [ехар хьазилгаш.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0374",
+      "story": "Корсам",
+      "page": 45,
+      "ing": "Городе хиннад тхо, корех чухьийжад 7тхо, тхона хов уж мича йолх!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0375",
+      "story": "Корсам",
+      "page": 45,
+      "ing": "Корех чухьежаш тхона гора— д1айхача щ!ен юкъе уж дошо Тажашца, оалгашца, б1аьннешца лоарх!ам болча к[ерамашца кийчъеш, тоаеш д1аоттаеш!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0376",
+      "story": "Корсам",
+      "page": 45,
+      "ing": "Таккха?—хаьттар корсамо, массайолча гаьнашца оагаенна.—ТТаккха?",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0377",
+      "story": "Корсам",
+      "page": 45,
+      "ing": "Кхы тхона х1ама довнзар; бакъда, дувца Йиш йоацаш доккха х!ама дар иЗ.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0378",
+      "story": "Корсам",
+      "page": 45,
+      "ing": "Цу наькъаца йохо йита хила мег со а!—яхаш г1озъювлар корсам.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0379",
+      "story": "Корсам",
+      "page": 45,
+      "ing": "да, форда т!а г1олла наьк дечул!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0380",
+      "story": "Корсам",
+      "page": 45,
+      "ing": "Х1анз со, соахка Йихьаьраш санна лакхъеннаяр, нийсъеннаяр.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0381",
+      "story": "Корсам",
+      "page": 45,
+      "ing": "Цу д!айхача, массайолча хГаманца дика кийчдаьча щаг!а мишта нийслургьяр-кх!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0382",
+      "story": "Корсам",
+      "page": 45,
+      "ing": "\"Паккха кхы а дикаг!, кхы а хозаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0383",
+      "story": "Корсам",
+      "page": 45,
+      "ing": "Сайна а хац сона, сайца фу хулаш доаг!а!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0384",
+      "story": "Корсам",
+      "page": 46,
+      "ing": "Мозъювла!—-йоахар михои маьлха сердалонои.—Хьай къоналла, кердалла, парг!атона гГозъювла!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0385",
+      "story": "Корсам",
+      "page": 46,
+      "ing": "Бакъда, корсам г1адъяха яцар: даиман дег!аухаш яр из, Тай а аьхки а сийна латтар из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0386",
+      "story": "Корсам",
+      "page": 46,
+      "ing": "Из б!1аргаяйнача наха оалар: „Эйяхь, ма куц долаш хи ба из!“ Цудухьа вокхарел хьалхаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0387",
+      "story": "Корсам",
+      "page": 46,
+      "ing": "Ше яьгпача меттигацара къаста хала дар цунна, хГана аьлча, из дег!аена цун ща дар из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0388",
+      "story": "Корсам",
+      "page": 46,
+      "ing": "Корсам ховш яр—щаккха а шийна кхы б!Таргагургбоацилга ` безаме къона новкостий— цунна гонахь хинна зизаш, кГотаргаш; оалхазараш а кхы б1арга ца го мег.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0389",
+      "story": "Корсам",
+      "page": 46,
+      "ing": "Цхьан саго, вокх хенашца` Хьа а баьста, „Сов дика ба, вайна беза а безац кхы бар“, аьлча мара са метта а данзар цун.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0390",
+      "story": "Корсам",
+      "page": 46,
+      "ing": "‚ Корсам г1омарах йизза йолча йоккхача бешка чу оттайир, бакъда, цхьанна а сага хацар из бешка йолга, х1ана аьлча, баьццара маша та а теха боккхача къоарзача к!увса та Гооттайир из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0391",
+      "story": "Корсам",
+      "page": 46,
+      "ing": "Ткъовронех хьалъэхкар цар бес-бесарча каьхатех даь т[ормеш; х[ара т1орми мерзача хГамаех биззаь бар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0392",
+      "story": "Корсам",
+      "page": 46,
+      "ing": "Цар цох хьалъихка дошув даьккха Гажаши б1араши цу корсам та хьахилча санна хетар, цул совг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0393",
+      "story": "Корсам",
+      "page": 48,
+      "ing": "т[а б1аьннешца лоарх1ам болаш щ!еи кГайи сийнеи к[ерамаш а чГоагдир цар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0394",
+      "story": "Корсам",
+      "page": 48,
+      "ing": "Цу сийнача хена т/а эгаш теникаш ядар, дийнача наха ‘тара а йолаш,—корсамана щаккха а б1аргайовнза яр уж, эггара лакхе, бухьига т[а ч1оаг!баь баг1аш боккха седкъа бар, дошох бича санна а болаш.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0395",
+      "story": "Корсам",
+      "page": 48,
+      "ing": "Тховсара саррахь,—-йоахар цар,—тховсар саррахь укхаза сийрда хургья!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0396",
+      "story": "Корсам",
+      "page": 48,
+      "ing": "лотабубалар-кх кТерам,— яхаш - уйла йора ‘корсамо.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0397",
+      "story": "Корсам",
+      "page": 48,
+      "ing": "фу хургда хьог!?",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0398",
+      "story": "Корсам",
+      "page": 48,
+      "ing": "Сога хьажа *ьунаг1ара хенаш доаг!аргдац-хьог!?",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0399",
+      "story": "Корсам",
+      "page": 48,
+      "ing": "Корашка хьазилгаш доагГаргдацхьог!?— Се латтача Галотаяь [ай а, эхки а кийчъяь йита а мег со-м!“ Хацар_ корсамана шийна фу хургда.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0400",
+      "story": "Корсам",
+      "page": 48,
+      "ing": "К1ерамаш лотаделар: Сийрдали хозали кхы дикаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0401",
+      "story": "Корсам",
+      "page": 48,
+      "ing": "Гарра, аьнна, оагаелар корсам цхьан кГерамо йоагаеш.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0402",
+      "story": "Корсам",
+      "page": 48,
+      "ing": "Х!анз корсам оагаяла яхьацар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0403",
+      "story": "Корсам",
+      "page": 48,
+      "ing": "Ч1оаг!а кхерар из ший г!ирсех х1ама Йовр; духхьал корзаг!ъяьннаяр из шийна мел леладечох...",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0404",
+      "story": "Корсам",
+      "page": 48,
+      "ing": "` Щаьхха на!араш хьа а еллаенна, б1арчча берий ординг чуиккхар щаг!а, хи кТал-та кхоссарах.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0405",
+      "story": "Корсам",
+      "page": 48,
+      "ing": "царна т1ехьа.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0406",
+      "story": "Корсам",
+      "page": 48,
+      "ing": "Геттара кагий бараша таккхала латтаи цхьа минут яьккхар; цул тГехьаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0407",
+      "story": "Корсам",
+      "page": 48,
+      "ing": "цар йолаяльча гГарех гонахь хГама хаза йиш яцар; тГаккха гобаьккха халхар а деш, цунах хьалъэхка х[амаш, цхьац-цхьацца Йоаккхаш, хьаяха доладелар уж.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0408",
+      "story": "Корсам",
+      "page": 48,
+      "ing": "„Х1анз фу леладола акхар?—хетар корсама.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0410",
+      "story": "Корсам",
+      "page": 48,
+      "ing": "х1анз?“ К!ерамаш' гаьнаш та кхаччалца даьгар, цул т1ехьаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0411",
+      "story": "Корсам",
+      "page": 49,
+      "ing": "Ма т!адеттаделар уж цу хена!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0412",
+      "story": "Корсам",
+      "page": 49,
+      "ing": "Цунна та мел йола га соттаяь Гойожайора цар, из дошо седкъаца тховнах хьалйийхка хиннаецаре.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0413",
+      "story": "Корсам",
+      "page": 49,
+      "ing": "Бераш гонахь г1олла халха дувлар шоай ловзаргашца, цхьаккха саг хена кхы бТарахьожаш а вацар, цхьан чулелача",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0414",
+      "story": "Корсам",
+      "page": 49,
+      "ing": "йоккхача сагагара дГаяьккхар, из гонахь г1олла гаьнашка хьожаш яр,—-хГама дисадацхьог!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0415",
+      "story": "Корсам",
+      "page": 49,
+      "ing": "хена т1а—!аж бале а комар яле яхаш, из ха г[ерташ.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0416",
+      "story": "Корсам",
+      "page": 49,
+      "ing": "Фаьлг, фаьлг!—аьнна Щог!арч а теха, бераша итоккхаваь сома сагилг т1авигар хена.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0417",
+      "story": "Корсам",
+      "page": 49,
+      "ing": "Иштта баьца юкъе даг1аргда вай,—аьлар цо,",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0418",
+      "story": "Корсам",
+      "page": 49,
+      "ing": "корсама а йишя вайга ладувг!а!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0419",
+      "story": "Корсам",
+      "page": 49,
+      "ing": "Бакъда, аз цхьа фаьлг мара бувцаргбац.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0420",
+      "story": "Иведе-Аведе",
+      "page": 49,
+      "ing": "Иведе-Аведе!—-йоахар цхьабараша.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0421",
+      "story": "Клумпе-Думпе",
+      "page": 49,
+      "ing": "Клумпе-Думпе!—йоахар вокхар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0422",
+      "story": "Клумпе-Думпе",
+      "page": 49,
+      "ing": "ЩШог!арчи г[ари айделар, цхьа хи сатийна шешийца уйла еш бар:, Со хургбац-хьог!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0423",
+      "story": "Клумпе-Думпе",
+      "page": 49,
+      "ing": "Бакъда, цхьаккха а дакъа а лацанзар, хиланза дарг доацар цунна хила а хилар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0424",
+      "story": "Клумпе-Думпе",
+      "page": 49,
+      "ing": "Бераша, т[оараш а детташ, щ1ог!арч хьекхар:",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0425",
+      "story": "Корсам",
+      "page": 49,
+      "ing": "Корсам сатийна уйла еш латтар,—цу тайпара х!ама дувцацар оалхазараша хьунага.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0426",
+      "story": "Корсам",
+      "page": 49,
+      "ing": "„Кхоана егаргьяц со,—аьнна хетар цунна.—ЁЕ лийчъяра безам буаргба аз; кхоана юха а хаза мег 48",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0427",
+      "story": "Корсам",
+      "page": 50,
+      "ing": "Иштта сагота уйла еш б!арчча бийса д1аяхар цун.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0428",
+      "story": "Корсам",
+      "page": 50,
+      "ing": "Гурра болхлои ' чулела саги щ1аг1а чубаьхкар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0429",
+      "story": "Корсам",
+      "page": 50,
+      "ing": "„ХМа, юха а кийчъе боахк со,“—аьнна хийтар корсама, бакъда, цар токкхаяь щагТара араяьккхар из, лоаме т!а г1олла айяь бада та а йихьаъь, цига ден сердало чу ца Йоаг!ача цхьан баьдеча саьнга д/аоттайир из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0430",
+      "story": "Корсам",
+      "page": 50,
+      "ing": "„Ер фу дола?—аьнна хийтар цунна.—Укхаз фу дергдола аз?",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0431",
+      "story": "Корсам",
+      "page": 50,
+      "ing": "Бада т1а цхьаккха саг вагГацар, цкъа нах баьхкар саьнга дуккха т!оаргацаш д[аоттаде.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0432",
+      "story": "Корсам",
+      "page": 50,
+      "ing": "Цар хи геттара къайлабаьккхар; хеталургдолаш дар корсам геттара йицъеннай, аьнна.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0433",
+      "story": "Корсам",
+      "page": 50,
+      "ing": "„ХГанз ара [а да,—хетар корсама,—лаьтта",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0434",
+      "story": "Корсам",
+      "page": 50,
+      "ing": "Наха магац со лаьттах дГайог!а, цудухьа бГаьсти яллалца лораю со цар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0435",
+      "story": "Корсам",
+      "page": 50,
+      "ing": "Иштта укхаза сов баьде а са б!арздаллал сагота а ецаре-м хГама дацар!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0436",
+      "story": "Корсам",
+      "page": 50,
+      "ing": "Кхыметтел пхьагилг а яц!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0437",
+      "story": "Корсам",
+      "page": 50,
+      "ing": "Ма безаме яр хьунага гобаьккха лоа а уллаш, улув гГолла пхьагилгаш а.удаш, кхыметтел сона т1ех уж кхувсалуш а.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0438",
+      "story": "Корсам",
+      "page": 50,
+      "ing": "Пи-пи-пи!--аьнна баьдеча сангарчура цхьа зГамига дахка арабаьлар, цунна т1ехь иштта З!амига цхьаькха дахка а баьлар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0439",
+      "story": "Корсам",
+      "page": 50,
+      "ing": "Ма ч1юаг1а шелал я ер!--йоахар дахкаша.— Х!аьта а хоза да дуне!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0440",
+      "story": "Корсам",
+      "page": 50,
+      "ing": "Алал, къаьНа корсам!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0441",
+      "story": "Корсам",
+      "page": 50,
+      "ing": "Со-м яц вГалла къаьна!—-аьлар корсамо.—ДуКха я сол гаьнна йоккхаг| йолаш а.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0442",
+      "story": "Корсам",
+      "page": 51,
+      "ing": "Мичара яьннай хьо,—Хеттар дахкаша,—ховр а фуд хьона?—ХГама хара Галаьмате т[ера дар уж.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0443",
+      "story": "Корсам",
+      "page": 51,
+      "ing": "йолча моттигах цхьа хГама, хиннайий хьо цига?",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0444",
+      "story": "Корсам",
+      "page": 51,
+      "ing": "Тархеш та нахчаш ядача, тховнах думеш дадача щ!алга чу в1алла хиннайий хьо, даьттерча кТерамаш та халхаювлаш, чуйодош зГар мо екъа йолаш, арайоалаш ерста хулча щ!алга чу хиннайий.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0445",
+      "story": "Корсам",
+      "page": 51,
+      "ing": "Из сона хац,—аьлар корсамо,—бакъда, сона йовз хьу, цига малх а хьеж, оалхазараша иллеш а доах.—Ше къона йолаш мел леладаьр д1адийцар цо.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0446",
+      "story": "Корсам",
+      "page": 51,
+      "ing": "Цу тайпара х1ама хазанза дар дахкий щаккха а, ч1оаг1а цунга ла а дийг1а, аьлар цар:",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0447",
+      "story": "Корсам",
+      "page": 51,
+      "ing": "аьлар корсамо,—ше дийцачун уйла а еш.—Бакъдар аьлча, из дика ха яр!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0448",
+      "story": "Корсам",
+      "page": 51,
+      "ing": "Цул т1ехьаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0449",
+      "story": "Корсам",
+      "page": 51,
+      "ing": "Со-м яц вГалла къаьна а— юха а аьлар корсамо.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0450",
+      "story": "Корсам",
+      "page": 51,
+      "ing": "аьхки мара яьннаяц хьунаг1ара ара.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0451",
+      "story": "Корсам",
+      "page": 51,
+      "ing": "Со-м х!анз мара бакъонца дег!а я а Йолаеннаяц.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0452",
+      "story": "Корсам",
+      "page": 51,
+      "ing": "Ма дика къамаьлаш ду [а!—тоадир дахкаша, шоллаг!ча бус даьхкар уж, шоашца биъ дахка а боалабеш— цар а безам бар корсамо дувцачунга ладувгГа.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0453",
+      "story": "Корсам",
+      "page": 51,
+      "ing": "дагаухар цунна ший д1аяха ха: ма ираз долаш денош хиннад уж!— хеталора цунна.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0454",
+      "story": "Корсам",
+      "page": 51,
+      "ing": "Корсамо д!абийцар царна беррига фаьлг: цунна дагабоаг1ар из юххьера денз юххе кхаччалца.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0455",
+      "story": "Корсам",
+      "page": 51,
+      "ing": "Тайоаг!1ача бус кхы а дукхаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0456",
+      "story": "Корсам",
+      "page": 52,
+      "ing": "цул т1ехьаг!, кхыметтел ши цицголг а ера.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0457",
+      "story": "Корсам",
+      "page": 52,
+      "ing": "Цхьа фаьлг мара хой хьона?—хаьттар цицг!Голгаша.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0458",
+      "story": "Корсам",
+      "page": 52,
+      "ing": "мара хац,—аьлар корсамо,",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0459",
+      "story": "Корсам",
+      "page": 52,
+      "ing": "из сона хезаб эггара са ираз ч[оаг1аг] хиннача сайранна; бакъда, цу хана со кхетацар сай ираз мел да.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0460",
+      "story": "Корсам",
+      "page": 52,
+      "ing": "Хац,—аьлар корсамо.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0461",
+      "story": "Корсам",
+      "page": 52,
+      "ing": "Х1аьта баркал хилда хьона,—аьнна, йолаенна Д1аяхар цицгТолгаш.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0462",
+      "story": "Корсам",
+      "page": 52,
+      "ing": "Ма хоза ха яр, уж дика дахкий сона гонахь а даг!1аш, царна аз фаьлгаш дийцар!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0463",
+      "story": "Корсам",
+      "page": 52,
+      "ing": "ХГанз дГадаьннад из!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0464",
+      "story": "Корсам",
+      "page": 52,
+      "ing": "Цхьа сахьат эттар, Гурра бада та баьхка а баьхка нах кулгаш хьекха баьлча.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0465",
+      "story": "Корсам",
+      "page": 52,
+      "ing": "ТПоаргацаш арадаьхача, укхох ка техар; дукха ца лоарх1аш Тотехар из, цхьабакъда, цу сахьате болхлочо лоаме та токхайир из--сийрдадаьнна ди хинначахьа.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0466",
+      "story": "Корсам",
+      "page": 52,
+      "ing": "„Юха доладала доал-хьог!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0467",
+      "story": "Корсам",
+      "page": 52,
+      "ing": "ер,“—хетар корсама керда кхийттача фена, сийрда хьежача маьлха з1анарий безам буар цо,—-юххера коа кхаьчар из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0468",
+      "story": "Корсам",
+      "page": 52,
+      "ing": "Из йицъенна д[аюха хьажа кхелехь, хилар из ше дар, го баьккха хьажарна дукха х1амаш а дар!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0469",
+      "story": "Корсам",
+      "page": 52,
+      "ing": "Ков зиза теха латтача беша т!аотташ дар; керда хоза хьаж йоаг1а зизаш даг1ар муг!араг!, хьеха зиза техадар, беша г[олла ткъамашца лелаш чГагарг а дар, цар йоахар: „Квррре-вкрре-вит, са мар ва из удаш воаг!Гар!“ 51",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0470",
+      "story": "Корсам",
+      "page": 53,
+      "ing": "Ханз яха йолалургья, хьона, со!—-аьнна хетар цунна г1юзъяьнна, ший гаьнаш йоаржае а г1ерташ.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0471",
+      "story": "Корсам",
+      "page": 53,
+      "ing": "Ой, йокъаенна Гажаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0472",
+      "story": "Корсам",
+      "page": 53,
+      "ing": "Из уллар хГанз цхьан саьнгга нитташтеи б1ехача баьцаи юкъе.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0473",
+      "story": "Корсам",
+      "page": 53,
+      "ing": "Дошаца каьхатах баь сенкъа; баг1ар цун бухьига т1а, маьлхо сийрда а баьккха.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0474",
+      "story": "Корсам",
+      "page": 53,
+      "ing": "ОЫ Одаониао Ь О еч АА ^ аНАНа НО Ка сло оо 1В ВОМЕЛАДЕЯ ОЧЬ ЛОН ао о да ЖВЬ НАЫа Беша ловзаш, ай укханна гонахь г[аддахХа халха лелхаш хьийза ши бер доаллар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0475",
+      "story": "Корсам",
+      "page": 53,
+      "ing": "Царех зГамаг!чо, та а вена, дошо сенкъа д1абаьккхар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0476",
+      "story": "Корсам",
+      "page": 53,
+      "ing": "Хьажал, фу дисад къаьнача, б1ехача корсамах,",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0477",
+      "story": "Корсам",
+      "page": 53,
+      "ing": "аьлар цо, гаьнашта, уж кагъеш ког т1а а лайза.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0478",
+      "story": "Корсам",
+      "page": 53,
+      "ing": "Гобаьккха латтача зиза техача хознена а бешарча кердача баьцана а б1ара а хьежаш, шийга хьежаш шийх къахеташ дехке яьннаяр корсам ше баьдеча бада саьнга ца йисарах.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0479",
+      "story": "Корсам",
+      "page": 54,
+      "ing": "хьу а, дезача ден хинна сайре а, селла безаме Клумпе-Думпех ше бийцача фаьлгаца ладийг!а",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0480",
+      "story": "Корсам",
+      "page": 54,
+      "ing": "кагий дахкий а— из массада а дагадера цунна:",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0481",
+      "story": "Корсам",
+      "page": 54,
+      "ing": "Хаьдад, хаьдад!—-Йоахар мискача корсамо.— Ма г1адъухар со, х1анз д1адаьннад!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0482",
+      "story": "Корсам",
+      "page": 54,
+      "ing": "ДТадаьннад!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0483",
+      "story": "Корсам",
+      "page": 54,
+      "ing": "Ва а вена, болхлочо тийда кагий лачараш даьхар цох; б1арчча ала баьнна лотаделар уж ноанал деча щагГ[а, яьна кГал!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0484",
+      "story": "Корсам",
+      "page": 54,
+      "ing": "Коа ловзаш даьхкача бераша, дайдда чу а даьхка, щШера хьалхашка а д1а а эйтта, цунна б1ара а хьежаш, хГара тата массаз эккха щ1огГарч тохар „пиф-паф!“— аьле.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0485",
+      "story": "Корсам",
+      "page": 54,
+      "ing": "Корсамо уйла йора хьунагТа хулча ахкан ден, къегаш седкъий а долаш, Тай хулча бийсан; цо уйла йора Клумпе-Думпе, ца!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0486",
+      "story": "Корсам",
+      "page": 54,
+      "ing": "мара ца ховча фаьлга,— шийна хаза а хазаь, бувца ховча...",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0487",
+      "story": "Корсам",
+      "page": 54,
+      "ing": "З1амаг1а волчоа наькха та боаллар дошо седкъа, корсама эггара ираз долча сайранна цун бухьиге тГабаьг[а.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0488",
+      "story": "Корсам",
+      "page": 54,
+      "ing": "Х1анз из массада а хаьдад, хена ха а кхоачаеннай, фаьлг а Ййистебаьннаб.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0489",
+      "story": "Корсам",
+      "page": 55,
+      "ing": "Воккха саг городе водаш хиннав цунца, лоалахоша лелае кхувлаш хиннай, цхьацца г1улакхаца шоашта даь г1улакх юха а деш, х1аьта а боккхача наха пайданаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0490",
+      "story": "Корсам",
+      "page": 55,
+      "ing": "Хьона дикаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0491",
+      "story": "Корсам",
+      "page": 55,
+      "ing": "ховргда, воккха саг!—аьннад сесаго.— Тахан городе базара ди.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0492",
+      "story": "Корсам",
+      "page": 55,
+      "ing": "Г10 а г[ойя, цига говрах е ахча эца е цХьан хТамах хувца.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0493",
+      "story": "Корсам",
+      "page": 55,
+      "ing": "Та фуннаг!а дойя а дика хургда!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0494",
+      "story": "Корсам",
+      "page": 55,
+      "ing": "Базар та г1ойя вола!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0495",
+      "story": "Корсам",
+      "page": 55,
+      "ing": "Дом баьнна никъ хиннаб, базар та сихбенна ухаш дукха нах хиннаб: цхьабараш говрашца, цхьабаряш вордашца, цхьабараш г1аш, шоай шин когаца.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0496",
+      "story": "Корсам",
+      "page": 55,
+      "ing": "Чоаг!а Й!айха хиннай, наькъа та цхьаккха кГотарг а е 1ы а доацаш.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0497",
+      "story": "Корсам",
+      "page": 56,
+      "ing": "„Дика шура луш хила мег из етт!“— аьнна уйла яьй ахархочо.—Цох хувца мегаргьяр говр!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0498",
+      "story": "Корсам",
+      "page": 56,
+      "ing": "Эй, етт лехкаш водар!—аьнна кхайкав из.— Сабардел!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0499",
+      "story": "Корсам",
+      "page": 56,
+      "ing": "Къамаьл де вай!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0500",
+      "story": "Корсам",
+      "page": 56,
+      "ing": "болга ма хой хьона, х1аьта а хГама дац, сона етт эшаш ба.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0501",
+      "story": "Корсам",
+      "page": 56,
+      "ing": "Г1улакх йисте а даьнна, ахархо щ!енгахь верза йиш Ййолаш хиннад.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0502",
+      "story": "Корсам",
+      "page": 56,
+      "ing": "Цкъа базар т!а ваха ше араваьннадаь дага дехад цунна, ший безам кхоачашбе базарах б1аргтоха.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0503",
+      "story": "Корсам",
+      "page": 56,
+      "ing": "Сихха водаш хиннав из, етт дика боаг1аш хиннаб, дукха ха ялалехь наькъа та устаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0504",
+      "story": "Корсам",
+      "page": 56,
+      "ing": "хилча, днка ма дар!— аьнна дагаденад ахархочоа.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0505",
+      "story": "Корсам",
+      "page": 56,
+      "ing": "Ор чура буц тоъаргйолга б!1ара ца хьежача а ха ма дезий, х[аьта Га т!адеча щ!аг1а чубаккха а Йиш я из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0506",
+      "story": "Корсам",
+      "page": 56,
+      "ing": "Боккъал дар аьлча, тхона лелош устаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0507",
+      "story": "Корсам",
+      "page": 57,
+      "ing": "ТТаь та кхаьчача цхьа саг вайнав цунна, т1аьн к1ал г!аж а йоаллаш.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0508",
+      "story": "Корсам",
+      "page": 57,
+      "ing": "Ма ерста я’из п1аж!— аьннад ахархочо.— Шортта мухь а, бедараш а хургьяр цох!' Ч[оаг!а атта лелаелга дар из тхХа хина Йисте.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0509",
+      "story": "Корсам",
+      "page": 57,
+      "ing": "Иоккхача сага юхейЙиса х[амаш гулъе х!ама хургьяр!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0510",
+      "story": "Корсам",
+      "page": 57,
+      "ing": "Дуккхаз оалар цо: „Ма хьаштдоацар да гаж йоацаш!...“ ХГанз хила, йиш ма ярий из—хургья-кх из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0511",
+      "story": "Корсам",
+      "page": 57,
+      "ing": "Аз г!ажах устаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0512",
+      "story": "Корсам",
+      "page": 57,
+      "ing": "лургба хьона, цу та баркал а аргда!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0513",
+      "story": "Корсам",
+      "page": 57,
+      "ing": "Наькъа та нах дукхаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0514",
+      "story": "Корсам",
+      "page": 57,
+      "ing": "Наькъа йисте г1олла додача ор чу, коартолий харша лелаш, кхераелча, д1а ца .ядийта Ййийхкаь котам хиннай.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0515",
+      "story": "Корсам",
+      "page": 57,
+      "ing": "Котам тенна хиннай цхьа б1арг а теГабеш, меца а йоацаш.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0516",
+      "story": "Корсам",
+      "page": 57,
+      "ing": "„Клук-клук,“—яхаш лелаш хиннай из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0517",
+      "story": "Корсам",
+      "page": 57,
+      "ing": "я из; из тха хила мегарг ма яр: котама массаз а кхалла фийг корабоаг!аргбар, цо ше а кхоабаргьяр ше!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0518",
+      "story": "Корсам",
+      "page": 57,
+      "ing": "Хийцача фу дар-хьог!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0519",
+      "story": "Корсам",
+      "page": 57,
+      "ing": "вай?—хаьттад цо.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0520",
+      "story": "Корсам",
+      "page": 58,
+      "ing": "Иштта дукха г1улакхаш даьд наькъа та городе водача воккхача саго; цул совг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0521",
+      "story": "Корсам",
+      "page": 58,
+      "ing": "Фуд хьа гале чу?— хаьттад ахархочо.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0522",
+      "story": "Корсам",
+      "page": 58,
+      "ing": "Бохкабенна Тажаш ба,—аьннад вокхо.— БТарчча гали.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0523",
+      "story": "Корсам",
+      "page": 58,
+      "ing": "Дахача шера тха къабеннача ажа т!а алхха цхьа аж мара латанзар.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0524",
+      "story": "Корсам",
+      "page": 58,
+      "ing": "„Т1ажаш доккха беркат да!“— оалар са йоккхача саго.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0525",
+      "story": "Корсам",
+      "page": 58,
+      "ing": "Ма г1озъювлаш хьежаргьяр из царга!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0526",
+      "story": "Корсам",
+      "page": 58,
+      "ing": "Фу лургда Та?—хаьттад вокхо.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0527",
+      "story": "Корсам",
+      "page": 58,
+      "ing": "Котам д1а а енна, Тажаш хьа а ийца, духхьал харшене чувахав из.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0528",
+      "story": "Корсам",
+      "page": 58,
+      "ing": "Щаг!а ваг1аш ши англичанин хиннав.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0529",
+      "story": "Корсам",
+      "page": 59,
+      "ing": "1ажаш батта болабеннаб!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0530",
+      "story": "Корсам",
+      "page": 59,
+      "ing": "Ер фуд?—хаьттад англичанаша.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0531",
+      "story": "Корсам",
+      "page": 59,
+      "ing": "ЩЦ!акхаьчача йоккхача саго хьайна дергдар,",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0532",
+      "story": "Корсам",
+      "page": 59,
+      "ing": "хьайна ховргда-кх хьона,—аьннад англичанаша.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0533",
+      "story": "Корсам",
+      "page": 59,
+      "ing": "Ма бани ергья хьона цо!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0534",
+      "story": "Корсам",
+      "page": 59,
+      "ing": "Барт боаккхаргба, цхьаккха бани а хургьяц!— аьннад ахархочо.— Иоккхача саго аргда: воккхача саго даьр дика да!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0535",
+      "story": "Корсам",
+      "page": 59,
+      "ing": "Б1аь туман ланаш дохкий [а?— аьннад англичанаша.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0536",
+      "story": "Корсам",
+      "page": 59,
+      "ing": "арабаьннаб, араваьннав ахархо а арабенаб Тажаш а.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0537",
+      "story": "Корсам",
+      "page": 59,
+      "ing": "Сайра дика хийла хьа, Йоккха саг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0538",
+      "story": "Корсам",
+      "page": 59,
+      "ing": "Цу пулакха говза ма вий хьо!—-аьнна марх1а кхийттай Ййоккха саг,",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0539",
+      "story": "Корсам",
+      "page": 60,
+      "ing": "Из дика да, х1анз шура хургья вайга яа!—аьннад йоккхача саго.—-Х1анз шури даар хургда вайга: шура, нахча.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0540",
+      "story": "Корсам",
+      "page": 60,
+      "ing": "Етт устаг1ах хийцар аз!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0541",
+      "story": "Корсам",
+      "page": 60,
+      "ing": "Дика да, геттара дика да!—аьннад Ййоккхача саго; ма дика х1ама дагадохаш ва са вар; устаг1ана дукха буц ма йий вайга!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0542",
+      "story": "Корсам",
+      "page": 60,
+      "ing": "ХГанз вайга устаг1ан шура а нахча а хургья, цу та тхан пазаташ а; хьанна хов тхан фуфайка хулий а?",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0543",
+      "story": "Корсам",
+      "page": 60,
+      "ing": "Ма дика хьаькъал долаш ва хьо!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0544",
+      "story": "Корсам",
+      "page": 60,
+      "ing": "Бакъда устаг!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0545",
+      "story": "Корсам",
+      "page": 60,
+      "ing": "Со мишта г1адъюгаргья яхаш уйлаш ю-кх 1а!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0546",
+      "story": "Корсам",
+      "page": 60,
+      "ing": "Д1айийхка латташехь а 1а та кхачалехь ярстаргья из!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0547",
+      "story": "Корсам",
+      "page": 60,
+      "ing": "Г1аж-м котамах хийцар аз!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0548",
+      "story": "Корсам",
+      "page": 60,
+      "ing": "Котамах?--Из ма говза даьд Та!—аьнна, г[адъяхай",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0549",
+      "story": "Корсам",
+      "page": 60,
+      "ing": "Котамо фуаш а даь, таьлми а даьккха к!оригаш Ййоахаргья, б1арчча ков дизза котамаш хургья.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0550",
+      "story": "Корсам",
+      "page": 60,
+      "ing": "Ма чГоаг!а дезаш яр со из!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0551",
+      "story": "Корсам",
+      "page": 60,
+      "ing": "Бакъда котам гали дизза болча бохкабеннача [ажех хийцар аз!..",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0552",
+      "story": "Корсам",
+      "page": 60,
+      "ing": "Х!1а, х!анз барт боаккхаргба аз хьа!—-аьннад йоккхача саго.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0553",
+      "story": "Корсам",
+      "page": 60,
+      "ing": "Баркал хилда, са мар, хьона!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0554",
+      "story": "Корсам",
+      "page": 60,
+      "ing": "Х!анз.аз _ дувцаргда хьона хабараш.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0555",
+      "story": "Корсам",
+      "page": 60,
+      "ing": "Хьо ма вахха а хьона дика обед де дагадехар сона: хох а буц а теха фуаш кийчде.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0556",
+      "story": "Корсам",
+      "page": 61,
+      "ing": "на юхалург итт а бала йИШ я са; хьаштдале біарчча гали а!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0557",
+      "story": "Корсам",
+      "page": 61,
+      "ing": "Мухале чудода деррига а, х1аьта а г1адъяхай!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0558",
+      "story": "Корсам",
+      "page": 61,
+      "ing": "З1амига волаш сона хезадар из, х1анз хьона а хезад из: фухха дой а воккхача саго даьр дика да!",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0559",
+      "story": "Корсам",
+      "page": 61,
+      "ing": "Гооо —Аа Ответредактор М.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    },
+    {
+      "id": "andersen-0560",
+      "story": "Корсам",
+      "page": 61,
+      "ing": "11172 Типография Чечинггосиздата, г.",
+      "ru": "",
+      "inDatabase": false,
+      "existingSource": null,
+      "status": "needs_ru"
+    }
+  ]
+}

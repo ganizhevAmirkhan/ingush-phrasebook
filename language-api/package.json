@@ -4,10 +4,15 @@
   "description": "Backend for the Ingush language platform.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node scripts/run-compose-tests.js",
     "start": "node server.js",
     "digitize:textbook": "node scripts/digitize-textbook-pdf.js",
     "import-morphemika-2020": "node scripts/import-morphemika-2020.js",
+    "import:pedagogy": "node scripts/import-pedagogy-books.js",
+    "import:pedagogy:check": "node scripts/import-pedagogy-books.js --check",
+    "import:downloads-pipeline": "node scripts/import-downloads-pipeline.js",
+    "package:pedagogy-deploy": "node scripts/package-pedagogy-deploy.js",
+    "deploy:pedagogy-vps": "powershell -ExecutionPolicy Bypass -File scripts/deploy-pedagogy-vps.ps1",
     "import:gramatika5": "node scripts/import-gramatika-5.js",
     "textbooks:download": "node scripts/download-textbooks-external.js",
     "textbooks:extract-classes": "node scripts/extract-noun-class-knowledge.js"

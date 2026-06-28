@@ -1,0 +1,28 @@
+{
+  "schema": "iomabara_praktikum-phrases/v1",
+  "source": "iomabara_praktikum",
+  "itemCount": 3,
+  "items": [
+    {
+      "id": "iomabara_praktikum_1",
+      "ru": "парти",
+      "ing": "Ih",
+      "kind": "gloss",
+      "category": "iomabara_praktikum"
+    },
+    {
+      "id": "iomabara_praktikum_2",
+      "ru": "тол",
+      "ing": "К ima",
+      "kind": "gloss",
+      "category": "iomabara_praktikum"
+    },
+    {
+      "id": "iomabara_praktikum_3",
+      "ru": "институте",
+      "ing": "HI II ICC",
+      "kind": "gloss",
+      "category": "iomabara_praktikum"
+    }
+  ]
+}

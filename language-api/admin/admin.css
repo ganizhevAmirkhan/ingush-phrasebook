@@ -617,6 +617,84 @@ body {
 
 .list-item small { color: var(--text-muted); display: block; margin-top: 3px; font-size: 12px; }
 
+.quick-add {
+  background: var(--success-soft);
+  border: 1px solid #a7f3d0;
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin-bottom: 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+.quick-add h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  color: var(--success);
+}
+
+.quick-add-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 12px;
+  align-items: end;
+  margin-top: 10px;
+}
+
+.quick-add-form label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.quick-add-form input {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+}
+
+.quick-add-form button {
+  padding: 10px 18px;
+  background: var(--success);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.quick-add-form button:hover { filter: brightness(0.95); }
+
+.editor-advanced {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.editor-advanced > summary {
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  user-select: none;
+}
+
+.editor-advanced[open] > summary {
+  margin-bottom: 14px;
+  color: var(--primary);
+}
+
+@media (max-width: 900px) {
+  .quick-add-form {
+    grid-template-columns: 1fr;
+  }
+}
+
 .editor {
   background: var(--surface);
   border: 1px solid var(--border);

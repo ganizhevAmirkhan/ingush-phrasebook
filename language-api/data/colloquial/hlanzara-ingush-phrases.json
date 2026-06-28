@@ -1,0 +1,21 @@
+{
+  "schema": "hlanzara_ingush-phrases/v1",
+  "source": "hlanzara_ingush",
+  "itemCount": 2,
+  "items": [
+    {
+      "id": "hlanzara_ingush_1",
+      "ru": "со- цам",
+      "ing": "ealad",
+      "kind": "gloss",
+      "category": "hlanzara_ingush"
+    },
+    {
+      "id": "hlanzara_ingush_2",
+      "ru": "лцлуа",
+      "ing": "Л О",
+      "kind": "gloss",
+      "category": "hlanzara_ingush"
+    }
+  ]
+}

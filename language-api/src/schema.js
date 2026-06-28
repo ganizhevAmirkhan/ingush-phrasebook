@@ -9,7 +9,11 @@ const SOURCE = {
   TARIEV_2009: "tariev_2009",
   UROKI_2009: "uroki_2009",
   SULTYGOVA_RAZGOVORNIK: "sultygova_razgovornik",
-  LLM: "llm"
+  OZDOEV_1970: "ozdoev_1970",
+  IOMBARA_PRAKTIKUM: "iomabara_praktikum",
+  HLANZARA_INGUSH: "hlanzara_ingush",
+  LLM: "llm",
+  LLM_COMPOSE: "llm_compose"
 };
 
 function normalizeText(value) {

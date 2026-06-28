@@ -281,3 +281,18 @@
 {"id":"mod_1782500126454","createdAt":"2026-06-26T18:55:26.454Z","ru":"я не могу поднять","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
 {"id":"mod_1782502500085","createdAt":"2026-06-26T19:35:00.085Z","ru":"[object Object]","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
 {"id":"mod_1782502500086","createdAt":"2026-06-26T19:35:00.086Z","ru":"[object Object]","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1782606453716","createdAt":"2026-06-28T00:27:33.716Z","ru":"передай","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1782606453844","createdAt":"2026-06-28T00:27:33.844Z","ru":"ему","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1782606454052","createdAt":"2026-06-28T00:27:34.052Z","ru":"передай ему","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1782607247328","createdAt":"2026-06-28T00:40:47.328Z","ru":"скажи мне кто ты","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1782607247478","createdAt":"2026-06-28T00:40:47.478Z","ru":"скажи мне кто ты?","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1782607273666","createdAt":"2026-06-28T00:41:13.666Z","ru":"скажи","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1782607722398","createdAt":"2026-06-28T00:48:42.398Z","ru":"я пойду в школу","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1782607722428","createdAt":"2026-06-28T00:48:42.428Z","ru":"школу","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1782607734031","createdAt":"2026-06-28T00:48:54.031Z","ru":"я пойду в школу","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1782608083415","createdAt":"2026-06-28T00:54:43.415Z","ru":"я пойду в школу","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1782608897544","createdAt":"2026-06-28T01:08:17.544Z","ru":"перевел","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1782608897690","createdAt":"2026-06-28T01:08:17.690Z","ru":"перевёл","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1782640271691","createdAt":"2026-06-28T09:51:11.691Z","ru":"ноги","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1782663027325","createdAt":"2026-06-28T16:10:27.325Z","ru":"болят","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}
+{"id":"mod_1782663027353","createdAt":"2026-06-28T16:10:27.353Z","ru":"болит","proposedIng":"","reason":"missing_llm_key","usedSource":"llm"}

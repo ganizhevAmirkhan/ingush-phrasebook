@@ -9,7 +9,7 @@
   <link rel="icon" href="/assets/brand/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/admin/admin.css?v=20260530">
+  <link rel="stylesheet" href="/admin/admin.css?v=20260628">
 </head>
 <body>
 
@@ -98,6 +98,19 @@
     </section>
 
     <section id="panel-patterns" class="panel hidden">
+      <div class="quick-add">
+        <h3>Быстрое добавление</h3>
+        <p class="panel-hint">Только русская фраза и перевод — ID, JSON и приоритет создаются сами.</p>
+        <form id="pattern-quick-form" class="quick-add-form">
+          <label>Русская фраза
+            <input id="quick-ru" type="text" placeholder="я уйду" required>
+          </label>
+          <label>Ингушский перевод
+            <input id="quick-ing" type="text" placeholder="Со дагӀогва" required>
+          </label>
+          <button type="submit" id="pattern-quick-save">Добавить фразу</button>
+        </form>
+      </div>
       <div class="toolbar">
         <input id="patterns-search" type="search" placeholder="Поиск шаблона…">
         <button type="button" id="patterns-new">+ Новый шаблон</button>
@@ -114,6 +127,8 @@
       <div class="split">
         <div id="patterns-list" class="list"></div>
         <form id="pattern-form" class="editor">
+          <details class="editor-advanced">
+            <summary>Подробные настройки (ID, JSON…)</summary>
           <h3>Шаблон грамматики</h3>
           <label>ID <input name="id" required></label>
           <label>RU шаблон <input name="ruPattern" placeholder="мне нужно {X}" required></label>
@@ -130,6 +145,7 @@
             <button type="submit">Сохранить</button>
             <button type="button" id="pattern-delete" class="danger">Удалить</button>
           </div>
+          </details>
         </form>
       </div>
     </section>
@@ -238,6 +254,6 @@
   <div id="toast" class="toast hidden"></div>
 </div>
 
-<script src="/admin/admin.js?v=20260530"></script>
+<script src="/admin/admin.js?v=20260628"></script>
 </body>
 </html>

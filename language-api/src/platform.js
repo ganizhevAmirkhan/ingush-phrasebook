@@ -22,6 +22,10 @@ const {
 } = require("./llm");
 
 const { loadNounClassKnowledge } = require("./noun-classes");
+const {
+  sanitizeLlmOutput,
+  normalizeIngDisplay
+} = require("./ing-display");
 
 const ROOT = path.resolve(__dirname, "..");
 const WORKSPACE_ROOT = path.resolve(ROOT, "..");
@@ -32,6 +36,11 @@ const GITHUB_CATEGORIES_API =
   "https://api.github.com/repos/ganizhevAmirkhan/ingush-phrasebook/contents/categories?ref=main";
 const PAYDADOSH_PHRASES_FILE = path.join(ROOT, "data", "colloquial", "paydadosh-phrases.json");
 const SULTYGOVA_PHRASES_FILE = path.join(ROOT, "data", "colloquial", "sultygova-razgovornik-phrases.json");
+const PEDAGOGY_PHRASE_FILES = [
+  { file: path.join(ROOT, "data", "colloquial", "ozdoev-1970-phrases.json"), source: SOURCE.OZDOEV_1970 },
+  { file: path.join(ROOT, "data", "colloquial", "iomabara-praktikum-phrases.json"), source: SOURCE.IOMBARA_PRAKTIKUM },
+  { file: path.join(ROOT, "data", "colloquial", "hlanzara-ingush-phrases.json"), source: SOURCE.HLANZARA_INGUSH }
+];
 const ING_TERM_FILE = path.join(ROOT, "data", "dictionary", "ing-term-2016.json");
 const MED_KODZOEV_FILE = path.join(ROOT, "data", "dictionary", "med-kodzoev-2019.json");
 const {
@@ -50,6 +59,7 @@ const {
   lookupUroki: lookupUrokiEntries
 } = require("./uroki-ingush");
 const { splitRuIngPairs } = require("./phrase-split");
+const { loadComposeRules, createSentenceComposer } = require("./sentence-composer");
 const CORPUS_STORIES_DIR = path.join(ROOT, "data", "corpus", "stories");
 const CORPUS_NOVELLAS_DIR = path.join(ROOT, "data", "corpus", "novellas");
 const BLACKLIST_FILE = path.join(ROOT, "data", "blacklist.json");
@@ -100,6 +110,7 @@ const state = {
     lookupsTariev: 0,
     lookupsUroki: 0,
     translateFromLLM: 0,
+    translateFromLLMCompose: 0,
     translateRejected: 0,
     nounClassAgreementFixes: 0
   },
@@ -112,8 +123,16 @@ const state = {
   uroki: {
     lessons: [],
     indexes: { byLesson: new Map(), ruIndex: new Map(), ingIndex: new Map() }
-  }
+  },
+  sentenceComposer: null
 };
+
+const sentenceComposer = createSentenceComposer({
+  normalizeText,
+  lookupTariev: (opts) => lookupTarievEntries(state.tariev.indexes, opts),
+  pickIngForm
+});
+state.sentenceComposer = sentenceComposer;
 
 function nowIso() {
   return new Date().toISOString();
@@ -316,6 +335,23 @@ async function loadSultygovaPhrases() {
   }
 }
 
+async function loadPedagogyPhrases() {
+  const out = [];
+  for (const { file, source } of PEDAGOGY_PHRASE_FILES) {
+    try {
+      const json = await readJson(file);
+      const items = Array.isArray(json?.items) ? json.items : [];
+      for (const item of items) {
+        const rec = toColloquialPhraseRecord(item, source, item?.category || source);
+        if (rec.ruNorm && rec.ing) out.push(rec);
+      }
+    } catch {
+      // optional file
+    }
+  }
+  return out;
+}
+
 async function loadLessonColloquialPhrases() {
   const storyFiles = await safeListJsonFiles(CORPUS_STORIES_DIR);
   const out = [];
@@ -323,7 +359,7 @@ async function loadLessonColloquialPhrases() {
     try {
       const json = await readJson(filePath);
       const genre = (json?.genre || "").toString();
-      if (genre !== "lesson" && genre !== "dialogue") continue;
+      if (genre !== "lesson" && genre !== "dialogue" && genre !== "pedagogy") continue;
       const category = path.basename(filePath, ".json");
       const paragraphs = Array.isArray(json?.paragraphs) ? json.paragraphs : [];
       paragraphs.forEach((paragraph, index) => {
@@ -452,6 +488,9 @@ const PHRASE_SOURCE_PRIORITY = {
   [SOURCE.UROKI_2009]: 3.12,
   [SOURCE.TARIEV_2009]: 3.15,
   [SOURCE.SULTYGOVA_RAZGOVORNIK]: 3.05,
+  [SOURCE.OZDOEV_1970]: 2.95,
+  [SOURCE.IOMBARA_PRAKTIKUM]: 2.94,
+  [SOURCE.HLANZARA_INGUSH]: 2.93,
   [SOURCE.CORPUS]: 2,
   [SOURCE.GRAMMAR]: 1
 };
@@ -532,11 +571,12 @@ function rebuildPhraseIndex() {
 }
 
 async function loadPhrases() {
-  const [habar, paydadosh, sultygova, lessons, parallel, termItems, medItems, tarievItems, urokiLessons] =
+  const [habar, paydadosh, sultygova, pedagogy, lessons, parallel, termItems, medItems, tarievItems, urokiLessons] =
     await Promise.all([
     loadHabarPhrases(),
     loadPaydaDoshPhrases(),
     loadSultygovaPhrases(),
+    loadPedagogyPhrases(),
     loadLessonColloquialPhrases(),
     loadParallelCorpusPhrases(),
     loadTermEntries(),
@@ -560,6 +600,7 @@ async function loadPhrases() {
     paydadoshEverydayRaw: paydadosh.filter((p) => p.category === "everyday_phrase").length,
     paydadoshLessonRaw: paydadosh.filter((p) => p.category === "lesson_phrase").length,
     sultygovaRaw: sultygova.length,
+    pedagogyRaw: pedagogy.length,
     corpusPhrasesRaw: lessons.length,
     parallelCorpusPhrasesRaw: parallel.length,
     ingTermRaw: termItems.length,
@@ -582,7 +623,8 @@ async function loadPhrases() {
     ...lessons,
     ...parallel,
     ...paydadosh,
-    ...sultygova
+    ...sultygova,
+    ...pedagogy
   ]);
 }
 
@@ -1265,7 +1307,204 @@ const RU_GLUE_STOPWORDS = new Set([
   "и", "а", "но", "что", "как", "это", "то", "не", "ни"
 ]);
 
+const RECIPIENT_PRONOUNS_RU = new Set(["мне", "тебе", "ему", "ей", "нам", "вам", "им"]);
+
+const RECIPIENT_PRONOUN_ING = {
+  мне: "сун",
+  тебе: "хьона",
+  ему: "цунга",
+  ей: "цунга",
+  нам: "вайна",
+  вам: "шуна",
+  им: "цара"
+};
+
+function pickLexemeCompositionForm(lexeme, role = "default") {
+  const forms = lexeme?.forms || {};
+  const pos = (lexeme?.pos || "").toString().toLowerCase();
+  if (role === "recipient") {
+    return (forms.dat || forms.allative || forms.direction || forms.base || "").toString().trim();
+  }
+  if (role === "ergative") {
+    return (forms.ergative || forms.erg || forms.base || "").toString().trim();
+  }
+  if (role === "past") {
+    return (forms.past || forms.base || "").toString().trim();
+  }
+  if (role === "imperative" || pos === "verb") {
+    return (forms.imperative || forms.base || forms.dat || "").toString().trim();
+  }
+  return (forms.base || forms.imperative || forms.dat || "").toString().trim();
+}
+
+function resolveImperativeFromTariev(token) {
+  const entries = lookupTariev({ ru: token, limit: 12 });
+  for (const entry of entries) {
+    if ((entry?.pos || "").toLowerCase() !== "verb" || !entry?.paradigm) continue;
+    const imp = (entry.paradigm.imperative || entry.paradigm.byTense?.imperative || "").toString().trim();
+    if (imp) {
+      return imp.replace(/-/g, "").replace(/\s+/g, " ").trim();
+    }
+  }
+  return "";
+}
+
+function resolveTokenForComposition(token, context = {}) {
+  if (!token) return "";
+
+  const lexeme = findGrammarLexeme(token);
+  if (lexeme?.forms) {
+    const picked = pickLexemeCompositionForm(lexeme, context.role || "default");
+    if (picked) return picked;
+  }
+
+  const word = findWordForToken(token, context);
+  const fromWord = pickBaseVariantFromWord(word);
+  if (fromWord) return fromWord;
+
+  if (context.role === "recipient" && RECIPIENT_PRONOUN_ING[token]) {
+    return RECIPIENT_PRONOUN_ING[token];
+  }
+
+  if (context.role === "imperative" || context.preferImperative) {
+    return resolveImperativeFromTariev(token);
+  }
+
+  return "";
+}
+
+function tryComposeImperativeRecipient(ruText) {
+  const tokens = normalizeText(ruText).split(" ").filter(Boolean);
+  if (tokens.length !== 2 || !RECIPIENT_PRONOUNS_RU.has(tokens[1])) {
+    return { ok: false, translation: "" };
+  }
+
+  const verbIng = resolveTokenForComposition(tokens[0], {
+    preferImperative: true,
+    role: "imperative",
+    allTokens: tokens,
+    tokenIndex: 0
+  });
+  const recipientIng = resolveTokenForComposition(tokens[1], {
+    role: "recipient",
+    allTokens: tokens,
+    tokenIndex: 1
+  });
+
+  if (!verbIng || !recipientIng) {
+    return { ok: false, translation: "" };
+  }
+
+  return {
+    ok: true,
+    translation: `${verbIng} ${recipientIng}`.replace(/\s+/g, " ").trim()
+  };
+}
+
+function tryComposeErgativeObjectVerb(ruText) {
+  const tokens = normalizeText(ruText).split(" ").filter(Boolean);
+  if (tokens.length !== 2) {
+    return { ok: false, translation: "" };
+  }
+
+  const [objectTok, verbTok] = tokens;
+  const objectLex = findGrammarLexeme(objectTok);
+  const verbLex = findGrammarLexeme(verbTok);
+  if (!objectLex || !verbLex || (verbLex?.pos || "").toLowerCase() !== "verb") {
+    return { ok: false, translation: "" };
+  }
+
+  const objectIng = pickLexemeCompositionForm(objectLex, "ergative");
+  const verbIng = pickLexemeCompositionForm(verbLex, "past");
+  if (!objectIng || !verbIng) {
+    return { ok: false, translation: "" };
+  }
+
+  return {
+    ok: true,
+    translation: `${objectIng} ${verbIng}`.replace(/\s+/g, " ").trim()
+  };
+}
+
+function resolveSubphraseTranslation(ruText) {
+  const raw = (ruText || "").toString().trim();
+  if (!raw) return "";
+
+  const variants = [raw, fixCommonRuTypos(raw), normalizeSpacedCompounds(raw)].filter(
+    (v, i, arr) => v && arr.indexOf(v) === i
+  );
+
+  for (const variant of variants) {
+    const composed = sentenceComposer.compose(variant);
+    if (composed.ok && composed.translation) {
+      return composed.translation.trim();
+    }
+  }
+
+  for (const variant of variants) {
+    const phrase = findPhraseExact(variant);
+    if (phrase?.ing) {
+      return phrase.ing.trim();
+    }
+  }
+
+  const imperativePair = tryComposeImperativeRecipient(raw);
+  if (imperativePair.ok) {
+    return imperativePair.translation;
+  }
+
+  return "";
+}
+
+function tryComposeImperativeRecipientTail(ruText) {
+  const tokens = normalizeText(ruText).split(" ").filter(Boolean);
+  if (tokens.length < 3 || tokens.length > 8 || !RECIPIENT_PRONOUNS_RU.has(tokens[1])) {
+    return { ok: false, translation: "" };
+  }
+
+  const verbIng = resolveTokenForComposition(tokens[0], {
+    preferImperative: true,
+    role: "imperative",
+    allTokens: tokens,
+    tokenIndex: 0
+  });
+  const recipientIng = resolveTokenForComposition(tokens[1], {
+    role: "recipient",
+    allTokens: tokens,
+    tokenIndex: 1
+  });
+  if (!verbIng || !recipientIng) {
+    return { ok: false, translation: "" };
+  }
+
+  const tailRu = tokens.slice(2).join(" ");
+  const tailIng = resolveSubphraseTranslation(tailRu);
+  if (!tailIng) {
+    return { ok: false, translation: "" };
+  }
+
+  return {
+    ok: true,
+    translation: `${verbIng} ${recipientIng} ${tailIng}`.replace(/\s+/g, " ").trim()
+  };
+}
+
 function composeFromDictionaryTokens(ruText) {
+  const ergativeOv = tryComposeErgativeObjectVerb(ruText);
+  if (ergativeOv.ok) {
+    return ergativeOv;
+  }
+
+  const imperativeTail = tryComposeImperativeRecipientTail(ruText);
+  if (imperativeTail.ok) {
+    return imperativeTail;
+  }
+
+  const imperativeRecipient = tryComposeImperativeRecipient(ruText);
+  if (imperativeRecipient.ok) {
+    return imperativeRecipient;
+  }
+
   const atHome = tryComposeAtHomePhrase(ruText);
   if (atHome.ok) {
     return atHome;
@@ -1305,11 +1544,21 @@ function composeFromDictionaryTokens(ruText) {
   let covered = 0;
   for (let i = 0; i < tokens.length; i += 1) {
     const token = tokens[i];
-    const word = findWordForToken(token, { allTokens: tokens, tokenIndex: i });
-    const firstVariant = pickBaseVariantFromWord(word);
-    if (!firstVariant) continue;
+    const role =
+      tokens.length === 2 && i === 1 && RECIPIENT_PRONOUNS_RU.has(token)
+        ? "recipient"
+        : i === 0 && tokens.length === 2 && RECIPIENT_PRONOUNS_RU.has(tokens[1])
+          ? "imperative"
+          : "default";
+    const ing = resolveTokenForComposition(token, {
+      allTokens: tokens,
+      tokenIndex: i,
+      role,
+      preferImperative: role === "imperative"
+    });
+    if (!ing) continue;
     covered += 1;
-    ingTokens.push(firstVariant);
+    ingTokens.push(ing);
   }
 
   if (!ingTokens.length) {
@@ -1441,10 +1690,136 @@ function buildDictionaryHints(ruText, limit = 12) {
     if (!word.ruTokens.length) continue;
     const intersects = word.ruTokens.some((t) => tokens.includes(t));
     if (!intersects) continue;
-    hints.push(`${word.ru} -> ${word.ingVariants.join(" / ")}`);
+    const paradigm = word.tariev?.paradigm;
+    if (paradigm) {
+      const forms = [paradigm.imperative, paradigm.present, paradigm.past, paradigm.future]
+        .filter(Boolean)
+        .join(" / ");
+      hints.push(`${word.ru} -> ${forms || word.ingVariants.join(" / ")}`);
+    } else {
+      hints.push(`${word.ru} -> ${word.ingVariants.join(" / ")}`);
+    }
     if (hints.length >= limit) break;
   }
+  const grammarHints = sentenceComposer.getGrammarHints?.() || [];
+  for (const line of grammarHints) {
+    if (hints.length >= limit + 4) break;
+    hints.push(`[грамматика] ${line}`);
+  }
   return hints;
+}
+
+function analyzeCompositionReadiness(ruText) {
+  const tokens = normalizeText(ruText).split(" ").filter(Boolean);
+  if (tokens.length < 2) {
+    return { tokens, tokenInfos: [], coverage: 0, subphrases: [], composeCandidate: false };
+  }
+
+  const tokenInfos = tokens.map((token, i) => {
+    const lexeme = findGrammarLexeme(token);
+    const word = findWordForToken(token, { allTokens: tokens, tokenIndex: i });
+    const ing = resolveTokenForComposition(token, { allTokens: tokens, tokenIndex: i });
+    const lexForms = lexeme?.forms
+      ? Object.entries(lexeme.forms)
+          .filter(([, v]) => (v || "").toString().trim())
+          .map(([k, v]) => `${k}: ${v}`)
+          .join(", ")
+      : "";
+    return {
+      token,
+      ing: ing || "",
+      source: lexeme ? "lexeme" : word ? "dictionary" : ing ? "other" : "",
+      detail: lexForms || (word?.ru ? word.ingVariants?.slice(0, 2).join(" / ") : "")
+    };
+  });
+
+  const covered = tokenInfos.filter((t) => t.ing).length;
+  const coverage = tokens.length ? covered / tokens.length : 0;
+
+  const subphrases = [];
+  const seenSeg = new Set();
+  const maxLen = Math.min(5, tokens.length);
+  for (let len = maxLen; len >= 2; len -= 1) {
+    for (let i = 0; i <= tokens.length - len; i += 1) {
+      const seg = tokens.slice(i, i + len).join(" ");
+      if (seenSeg.has(seg)) continue;
+      const ing = resolveSubphraseTranslation(seg);
+      if (!ing) continue;
+      seenSeg.add(seg);
+      subphrases.push({ ru: seg, ing });
+      if (subphrases.length >= 10) break;
+    }
+    if (subphrases.length >= 10) break;
+  }
+
+  const composeCandidate =
+    (coverage >= 0.5 && covered >= 2)
+    || subphrases.length >= 2
+    || (coverage >= 0.34 && subphrases.length >= 1 && tokens.length >= 3);
+
+  return { tokens, tokenInfos, coverage, subphrases, composeCandidate };
+}
+
+function buildLlmComposePrompt(ruText, report) {
+  const grammarHints = sentenceComposer.getGrammarHints?.() || [];
+  const dictHints = buildDictionaryHints(ruText, 16);
+
+  const tokenLines = report.tokenInfos
+    .filter((t) => t.ing || t.detail)
+    .map((t) => {
+      if (t.ing && t.detail) return `- ${t.token} → ${t.ing} (${t.detail})`;
+      if (t.ing) return `- ${t.token} → ${t.ing}`;
+      return `- ${t.token} → ${t.detail}`;
+    });
+
+  const chunkLines = report.subphrases.map((s) => `- «${s.ru}» → ${s.ing}`);
+
+  return [
+    "Ты составитель ингушских фраз для учебного API.",
+    "Слова и куски фразы уже переведены по словарю и грамматике, но движок не смог склеить предложение.",
+    "Твоя задача — СОБРАТЬ готовый перевод, используя ТОЛЬКО формы из списков ниже.",
+    "Не придумывай новых слов и не используй чеченские формы.",
+    "Порядок слов — ингушский (SOV/эргатив), не калькой с русского.",
+    grammarHints.length ? `Грамматические правила:\n${grammarHints.map((h) => `- ${h}`).join("\n")}` : "",
+    dictHints.length ? `Словарные подсказки:\n${dictHints.map((h) => `- ${h}`).join("\n")}` : "",
+    tokenLines.length ? `Известные слова:\n${tokenLines.join("\n")}` : "",
+    chunkLines.length ? `Уже переведённые части (можно комбинировать):\n${chunkLines.join("\n")}` : "",
+    `Собери перевод для:\n${ruText}`,
+    "Верни одну строку — только ингушский текст, без пояснений и кавычек."
+  ].filter(Boolean).join("\n\n");
+}
+
+async function tryLlmComposeFromRules(ruText, report) {
+  if (!report?.composeCandidate) {
+    return { ok: false, error: "not_compose_candidate" };
+  }
+
+  const prompt = buildLlmComposePrompt(ruText, report);
+  const llm = await callLlm(prompt);
+  if (!llm.ok) {
+    return { ok: false, error: llm.error, detail: llm.detail || "" };
+  }
+
+  const llmText = sanitizeLlmOutput(llm.text);
+  const validation = validateIngText(llmText, ruText);
+  if (!validation.ok) {
+    return { ok: false, error: validation.blockedReason, text: llmText };
+  }
+
+  await appendModeration({
+    id: `learn_${Date.now()}`,
+    kind: "llm_compose_candidate",
+    createdAt: nowIso(),
+    ru: ruText,
+    proposedIng: llmText,
+    tokenCoverage: report.coverage,
+    tokens: report.tokenInfos.map((t) => ({ ru: t.token, ing: t.ing, source: t.source })),
+    subphrases: report.subphrases,
+    reason: "learn_queue",
+    usedSource: SOURCE.LLM_COMPOSE
+  });
+
+  return { ok: true, translation: llmText };
 }
 
 function findPhrasePronByIng(ingText) {
@@ -1522,7 +1897,8 @@ const COMMON_RU_TYPOS = {
   чпать: "спать",
   спаь: "спать",
   пит: "пить",
-  кушаь: "кушать"
+  кушаь: "кушать",
+  уедишь: "уедешь"
 };
 
 function fixCommonRuTypos(ruText) {
@@ -1540,6 +1916,7 @@ function normalizeSpacedCompounds(ruText) {
   const replacements = [
     ["от сюда", "отсюда"],
     ["от туда", "оттуда"],
+    ["от куда", "откуда"],
     ["до сюда", "досюда"],
     ["до туда", "дотуда"]
   ];
@@ -1648,7 +2025,8 @@ function findPhraseBagNearTypo(ruText, options = {}) {
 }
 
 function validateIngText(ingText, ruText) {
-  const ingNorm = normalizeText(ingText);
+  const cleaned = sanitizeLlmOutput(ingText);
+  const ingNorm = normalizeText(cleaned);
   if (!ingNorm) {
     return { ok: false, blockedReason: "empty_translation" };
   }
@@ -1706,7 +2084,7 @@ async function appendModeration(item) {
   await fs.appendFile(MODERATION_LOG, `${JSON.stringify(item)}\n`, "utf8").catch(() => {});
 }
 
-async function translate(ruText, options = {}) {
+async function runTranslate(ruText, options = {}) {
   state.metrics.translateTotal += 1;
   let ru = (ruText || "").toString().trim();
   if (!ru) {
@@ -1730,6 +2108,18 @@ async function translate(ruText, options = {}) {
   const ruTry = [ru, fixCommonRuTypos(ru), normalizeSpacedCompounds(ruText)].filter(
     (v, i, arr) => v && arr.indexOf(v) === i
   );
+
+  // 0) Проверенные правила составителя — выше Habar и LLM
+  for (const variant of ruTry) {
+    const composedEarly = sentenceComposer.compose(variant);
+    if (composedEarly.ok) {
+      return grammarTranslateResult(composedEarly.translation, ru, {
+        confidence: composedEarly.confidence,
+        patternId: composedEarly.ruleId || composedEarly.method
+      });
+    }
+  }
+
   let exactPhrase = null;
   for (const variant of ruTry) {
     exactPhrase =
@@ -1815,7 +2205,43 @@ async function translate(ruText, options = {}) {
     }
   }
 
-  if (ruWordsEarly.length >= 2 && ruWordsEarly.length <= 4) {
+  if (ruWordsEarly.length >= 2 && ruWordsEarly.length <= 8) {
+    const ergativeOvEarly = tryComposeErgativeObjectVerb(ru);
+    if (ergativeOvEarly.ok) {
+      state.metrics.translateFromGrammar += 1;
+      return {
+        ok: true,
+        translation: ergativeOvEarly.translation,
+        usedSource: SOURCE.GRAMMAR,
+        confidence: 0.92,
+        fallbackUsed: false
+      };
+    }
+
+    const imperativeTailEarly = tryComposeImperativeRecipientTail(ru);
+    if (imperativeTailEarly.ok) {
+      state.metrics.translateFromGrammar += 1;
+      return {
+        ok: true,
+        translation: imperativeTailEarly.translation,
+        usedSource: SOURCE.GRAMMAR,
+        confidence: 0.86,
+        fallbackUsed: false
+      };
+    }
+
+    const imperativeRecipientEarly = tryComposeImperativeRecipient(ru);
+    if (imperativeRecipientEarly.ok) {
+      state.metrics.translateFromGrammar += 1;
+      return {
+        ok: true,
+        translation: imperativeRecipientEarly.translation,
+        usedSource: SOURCE.GRAMMAR,
+        confidence: 0.88,
+        fallbackUsed: false
+      };
+    }
+
     const composedEarly = composeFromDictionaryTokens(ru);
     if (composedEarly.ok) {
       state.metrics.translateFromDosh += 1;
@@ -1926,10 +2352,28 @@ async function translate(ruText, options = {}) {
     };
   }
 
+  const compositionReport = analyzeCompositionReadiness(ru);
+  if (compositionReport.composeCandidate) {
+    const llmComposed = await tryLlmComposeFromRules(ru, compositionReport);
+    if (llmComposed.ok) {
+      state.metrics.translateFromLLMCompose += 1;
+      return {
+        ok: true,
+        translation: llmComposed.translation,
+        usedSource: SOURCE.LLM_COMPOSE,
+        confidence: 0.62,
+        fallbackUsed: true,
+        composeMode: true,
+        learnCandidate: true
+      };
+    }
+  }
+
   const hints = buildDictionaryHints(ru).join("\n");
   const prompt = [
     "Ты переводчик на ингушский язык.",
     "Используй только проверенные формы, не используй чеченские формы.",
+    "Пиши ингушский текст кириллицей (орфография гӀалгӀай), не латинской транскрипцией.",
     hints ? `Словарный контекст:\n${hints}` : "",
     `Текст:\n${ru}`,
     "Верни только перевод, без пояснений."
@@ -1950,14 +2394,15 @@ async function translate(ruText, options = {}) {
     return { ok: false, status: 503, error: llm.error, detail: llm.detail || "" };
   }
 
-  const validation = validateIngText(llm.text, ru);
+  const llmText = sanitizeLlmOutput(llm.text);
+  const validation = validateIngText(llmText, ru);
   if (!validation.ok) {
     state.metrics.translateRejected += 1;
     const event = {
       id: `mod_${Date.now()}`,
       createdAt: nowIso(),
       ru,
-      proposedIng: llm.text,
+      proposedIng: llmText,
       reason: validation.blockedReason,
       usedSource: SOURCE.LLM
     };
@@ -1968,7 +2413,7 @@ async function translate(ruText, options = {}) {
   state.metrics.translateFromLLM += 1;
   return {
     ok: true,
-    translation: llm.text,
+    translation: llmText,
     usedSource: SOURCE.LLM,
     confidence: 0.55,
     fallbackUsed: true
@@ -2161,16 +2606,18 @@ async function refreshAllSources({ pullCategories = false } = {}) {
     }
   }
 
-  const [words, phrases, corpus, blacklist, grammar, nounClasses] = await Promise.all([
+  const [words, phrases, corpus, blacklist, grammar, nounClasses, composeRules] = await Promise.all([
     loadAllWords(),
     loadPhrases(),
     loadCorpus(),
     loadBlacklist(),
     loadGrammarData(),
-    loadNounClassKnowledge()
+    loadNounClassKnowledge(),
+    loadComposeRules()
   ]);
   state.words = words;
   state.grammar = grammar;
+  sentenceComposer.loadRules(composeRules);
   state.nounClasses = nounClasses;
   state.phrases = mergePhraseRecords([...phrases, ...phrasesFromGrammarPatterns(grammar.patterns)]);
   state.corpus = corpus;
@@ -2186,6 +2633,14 @@ function lookupNounClass(query, { by = "auto" } = {}) {
   if (by === "ru") return nc.getMarkerFor(q, { preferRu: true });
   if (by === "ing") return nc.getMarkerFor(q, { preferRu: false, ingForm: q });
   return nc.getMarkerFor(q, { preferRu: true, ingForm: q }) || nc.getMarkerFor(q);
+}
+
+async function translate(ruText, options = {}) {
+  const result = await runTranslate(ruText, options);
+  if (result?.ok && result.translation) {
+    result.translation = normalizeIngDisplay(result.translation);
+  }
+  return result;
 }
 
 module.exports = {

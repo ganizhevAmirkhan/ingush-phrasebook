@@ -406,6 +406,22 @@ async function adminApiRoute(req, res, apiPath, url) {
     }
   }
 
+  const pedagogyBookMatch = apiPath.match(/^\/grammar\/(ozdoev-1970|iomabara-praktikum|ozdoev-ortography-2003|hlanzara-ingush)$/);
+  if (pedagogyBookMatch && req.method === "GET") {
+    const bookId = pedagogyBookMatch[1];
+    const sectionId = q("section");
+    if (sectionId) {
+      const section = await adminStore.getPedagogyKnowledgeSection(bookId, decodeURIComponent(sectionId));
+      return section
+        ? sendJson(res, 200, { ok: true, section })
+        : sendJson(res, 404, { ok: false, error: "section_not_found" });
+    }
+    const data = await adminStore.getPedagogyKnowledgeMeta(bookId);
+    return data
+      ? sendJson(res, 200, { ok: true, ...data })
+      : sendJson(res, 404, { ok: false, error: "book_not_found" });
+  }
+
   if (apiPath === "/corpus") {
     if (req.method === "GET") {
       const data = await adminStore.listCorpus(listOpts());
@@ -582,6 +598,28 @@ async function route(req, res) {
     return sendJson(res, 200, { ok: true, ...data });
   }
 
+  const pedagogyPublicBooks = [
+    "ozdoev-1970",
+    "iomabara-praktikum",
+    "ozdoev-ortography-2003",
+    "hlanzara-ingush"
+  ];
+  for (const bookId of pedagogyPublicBooks) {
+    if (req.method === "GET" && path === `/grammar/${bookId}`) {
+      const sectionId = url.searchParams.get("section");
+      if (sectionId) {
+        const section = await adminStore.getPedagogyKnowledgeSection(bookId, decodeURIComponent(sectionId));
+        return section
+          ? sendJson(res, 200, { ok: true, section })
+          : sendJson(res, 404, { ok: false, error: "section_not_found" });
+      }
+      const data = await adminStore.getPedagogyKnowledgeMeta(bookId);
+      return data
+        ? sendJson(res, 200, { ok: true, ...data })
+        : sendJson(res, 404, { ok: false, error: "book_not_found" });
+    }
+  }
+
   if (req.method === "GET" && path === "/metrics") {
     return sendJson(res, 200, { ok: true, metrics: getMetrics() });
   }
@@ -603,6 +641,10 @@ async function route(req, res) {
         { method: "GET", path: "/lookup/uroki", desc: "Учебник Хайрова — уроки, фразы, словарь" },
         { method: "GET", path: "/lookup/tariev", desc: "Словарь Тариевой 2009 (ING/RU, парадигма)" },
         { method: "GET", path: "/grammar/morphemika-2020", desc: "Барахоева 2020 — морфемика, 103 §" },
+        { method: "GET", path: "/grammar/ozdoev-1970", desc: "Оздоев 1970 — педпособие, §1–122" },
+        { method: "GET", path: "/grammar/iomabara-praktikum", desc: "Практикум Ӏомабара" },
+        { method: "GET", path: "/grammar/ozdoev-ortography-2003", desc: "Орфография 2003" },
+        { method: "GET", path: "/grammar/hlanzara-ingush", desc: "Хlанзара — курс ИнгГУ" },
         { method: "GET", path: "/metrics", desc: "Метрики загрузки" },
         { method: "GET", path: "/health", desc: "Статус сервиса" },
         { method: "POST", path: "/ai/assist", desc: "LLM-задачи" }
@@ -632,7 +674,8 @@ async function route(req, res) {
         uroki2009KnowledgeSections: inventory.uroki2009KnowledgeSections,
         morphemika2020Sections: inventory.morphemika2020Sections,
         morphemika2020Affixes: inventory.morphemika2020Affixes,
-        morphemika2020Stats: inventory.morphemika2020Stats
+        morphemika2020Stats: inventory.morphemika2020Stats,
+        pedagogyBooks: inventory.pedagogyBooks
       },
       links: { home: "/", admin: "/admin/", manifest: "/site.webmanifest" }
     });

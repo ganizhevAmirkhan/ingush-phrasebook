@@ -5196,9 +5196,10 @@
       "pos": "noun",
       "forms": {
         "base": "Акхча",
+        "ergative": "Акхач",
         "dat": "ахча"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync"
+      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21; Habar sync; ergative Акхач for past transitive"
     },
     {
       "ru": "ехать",
@@ -5684,7 +5685,25 @@
         "base": "юкъаргӀа",
         "dat": "юкъаргӀа"
       },
-      "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+      "notes": "GHALGHAY: болт (крепёж); НЕ путать с болят — см. lexeme болят"
+    },
+    {
+      "ru": "болят",
+      "pos": "verb",
+      "forms": {
+        "base": "лаз",
+        "present": "лаз"
+      },
+      "notes": "болят; ноги болят → когаш лаз; razgovornik Са лаз"
+    },
+    {
+      "ru": "болит",
+      "pos": "verb",
+      "forms": {
+        "base": "лаз",
+        "present": "лаз"
+      },
+      "notes": "болит; ноги болит → когаш лаз"
     },
     {
       "ru": "боль",
@@ -7368,6 +7387,16 @@
         "dat": "ког"
       },
       "notes": "GHALGHAY package 1 (KUR05/KOD21, phrasebook batch); source=ghalghay:kod21"
+    },
+    {
+      "ru": "ноги",
+      "pos": "noun",
+      "forms": {
+        "base": "когаш",
+        "plural": "когаш",
+        "dat": "когаш"
+      },
+      "notes": "мн.ч. от ког; pron настараж"
     },
     {
       "ru": "ноговица",
@@ -9708,6 +9737,100 @@
         "dat": "дезац"
       },
       "notes": "negative need/want; corpus: чай дезац сона"
+    },
+    {
+      "ru": "ему",
+      "pos": "pronoun",
+      "forms": {
+        "base": "цунг",
+        "dat": "цунга",
+        "allative": "цунга"
+      },
+      "notes": "dative 3sg; razgovornik / declensions allative цунга"
+    },
+    {
+      "ru": "тебе",
+      "pos": "pronoun",
+      "forms": {
+        "base": "хьо",
+        "dat": "хьона",
+        "allative": "хьога"
+      }
+    },
+    {
+      "ru": "ей",
+      "pos": "pronoun",
+      "forms": {
+        "base": "цунг",
+        "dat": "цунга",
+        "allative": "цунга"
+      }
+    },
+    {
+      "ru": "им",
+      "pos": "pronoun",
+      "forms": {
+        "base": "цар",
+        "dat": "цара",
+        "allative": "царга"
+      }
+    },
+    {
+      "ru": "передай",
+      "pos": "verb",
+      "forms": {
+        "base": "д1але",
+        "imperative": "д1але",
+        "dat": "д1але"
+      },
+      "notes": "imperative give/pass; razgovornik Дале"
+    },
+    {
+      "ru": "передайте",
+      "pos": "verb",
+      "forms": {
+        "base": "д1але",
+        "imperative": "д1але",
+        "dat": "д1але"
+      },
+      "notes": "imperative plural/formal"
+    },
+    {
+      "ru": "скажи",
+      "pos": "verb",
+      "forms": {
+        "base": "Хьала",
+        "imperative": "Хьала",
+        "dat": "Хьала"
+      },
+      "notes": "imperative tell/say; razgovornik Ала"
+    },
+    {
+      "ru": "скажите",
+      "pos": "verb",
+      "forms": {
+        "base": "Хьала",
+        "imperative": "Хьала",
+        "dat": "Хьала"
+      }
+    },
+    {
+      "ru": "перевёл",
+      "pos": "verb",
+      "forms": {
+        "base": "да1дехьтад",
+        "past": "да1дехьтад"
+      },
+      "notes": "перевёл (деньги и т.п.), прош. врем.; user verified"
+    },
+    {
+      "ru": "перевел",
+      "pos": "verb",
+      "forms": {
+        "base": "да1дехьтад",
+        "past": "да1дехьтад"
+      },
+      "notes": "перевел без ё"
     }
   ]
 }

@@ -1,0 +1,120 @@
+{
+  "description": "Регрессия для sentence-composer (составление по грамматике, без LLM)",
+  "items": [
+    {
+      "ru": "я уйду",
+      "expectedIng": "Со дагӀогва",
+      "minConfidence": 0.9
+    },
+    {
+      "ru": "я не пойду",
+      "expectedIng": "Со водац",
+      "minConfidence": 0.9
+    },
+    {
+      "ru": "я не скажу",
+      "expectedIng": "Со алац",
+      "minConfidence": 0.9
+    },
+    {
+      "ru": "я приду позже",
+      "expectedIng": "Со тӀехьа хьа воагӀагва",
+      "minConfidence": 0.9
+    },
+    {
+      "ru": "я пойду",
+      "expectedIng": "Со гӀоргья",
+      "minConfidence": 0.85
+    },
+    {
+      "ru": "я приду",
+      "expectedIng": "Со воагӀагва",
+      "minConfidence": 0.85
+    },
+    {
+      "ru": "ты уйдешь",
+      "expectedIng": "Хьо дагӀогва",
+      "minConfidence": 0.85
+    },
+    {
+      "ru": "я не уйду",
+      "expectedIng": "Со дагӀогвац",
+      "minConfidence": 0.85
+    },
+    {
+      "ru": "когда ты уедешь",
+      "expectedIng": "Маца вугаргва хьо?",
+      "minConfidence": 0.9
+    },
+    {
+      "ru": "когда ты уедишь",
+      "expectedIng": "Маца вугаргва хьо?",
+      "minConfidence": 0.9
+    },
+    {
+      "ru": "когда уезжаешь",
+      "expectedIng": "Хьо да мас вуда?",
+      "minConfidence": 0.9
+    },
+    {
+      "ru": "кто ты",
+      "expectedIng": "Малу хьо?",
+      "minConfidence": 0.9
+    },
+    {
+      "ru": "от куда ты идешь",
+      "expectedIng": "Мичахьар ва хьо?",
+      "minConfidence": 0.9
+    },
+    {
+      "ru": "я встречу тебя",
+      "expectedIng": "Со духьл воагӀагва хьуна",
+      "minConfidence": 0.9
+    },
+    {
+      "ru": "я буду здесь ждать",
+      "expectedIng": "Со укхаз хьежагва",
+      "minConfidence": 0.9
+    },
+    {
+      "ru": "почему ты плачешь",
+      "expectedIng": "Санна велха хьо?",
+      "minConfidence": 0.9
+    },
+    {
+      "ru": "я и мой друг",
+      "expectedIng": "Со е са новкъаст е",
+      "minConfidence": 0.9
+    },
+    {
+      "ru": "мы и ихние друзья",
+      "expectedIng": "Тхо е цар новкъасте е",
+      "minConfidence": 0.9
+    },
+    {
+      "ru": "я нашёл клад",
+      "expectedIng": "Сун ганз коряй",
+      "minConfidence": 0.9
+    },
+    {
+      "ru": "я зашёл в магазин",
+      "expectedIng": "Со тикатӀ дачвахав",
+      "minConfidence": 0.9
+    },
+    {
+      "ru": "деньги перевёл",
+      "expectedIng": "Акхач да1дехьтад",
+      "minConfidence": 0.9
+    },
+    {
+      "ru": "перевёл",
+      "expectedIng": "да1дехьтад",
+      "minConfidence": 0.9
+    },
+    {
+      "ru": "ноги болят",
+      "expectedIng": "когаш лаз",
+      "minConfidence": 0.9
+    }
+  ]
+}

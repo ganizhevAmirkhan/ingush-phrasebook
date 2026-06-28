@@ -405,6 +405,65 @@ function newPattern() {
   f.priority.value = 50;
   f.slots.value = '[{"name":"X","pos":"noun","requiredCase":"base"}]';
   f.examples.value = '[{"ru":"","ing_expected":""}]';
+  document.getElementById("quick-ru")?.focus();
+  loadPatterns();
+}
+
+const CYR_TO_LAT = {
+  а: "a", б: "b", в: "v", г: "g", д: "d", е: "e", ё: "yo", ж: "zh", з: "z", и: "i", й: "y",
+  к: "k", л: "l", м: "m", н: "n", о: "o", п: "p", р: "r", с: "s", т: "t", у: "u", ф: "f",
+  х: "h", ц: "ts", ч: "ch", ш: "sh", щ: "sch", ъ: "", ы: "y", ь: "", э: "e", ю: "yu", я: "ya"
+};
+
+function slugFromRu(ru) {
+  let out = "";
+  for (const ch of ru.toLowerCase().replace(/ё/g, "e").trim()) {
+    if (CYR_TO_LAT[ch] !== undefined) out += CYR_TO_LAT[ch];
+    else if (/[a-z0-9]/.test(ch)) out += ch;
+    else if (/\s|[-–—]/.test(ch)) out += "_";
+  }
+  out = out.replace(/_+/g, "_").replace(/^_|_$/g, "").slice(0, 48);
+  return out || "phrase";
+}
+
+function buildQuickPattern(ru, ing) {
+  const ruTrim = ru.trim();
+  const ingTrim = ing.trim();
+  const slug = slugFromRu(ruTrim);
+  return {
+    id: `user_${slug}`,
+    ruPattern: ruTrim,
+    ingTemplate: ingTrim,
+    description: `Verified phrase: ${ruTrim}`,
+    priority: 100,
+    slots: [],
+    examples: [{ ru: ruTrim, ing_expected: ingTrim }]
+  };
+}
+
+async function quickSavePattern(ev) {
+  ev.preventDefault();
+  const ru = document.getElementById("quick-ru")?.value.trim() || "";
+  const ing = document.getElementById("quick-ing")?.value.trim() || "";
+  if (!ru || !ing) return toast("Заполните оба поля", false);
+
+  let body = buildQuickPattern(ru, ing);
+  const { json, ok } = await api("/grammar/patterns", { method: "POST", body });
+  toast(ok ? "Фраза добавлена ✓" : (json.message || json.error || "Ошибка"), ok);
+  if (!ok) return;
+
+  patternsActive = body.id;
+  document.getElementById("pattern-quick-form")?.reset();
+  const f = document.getElementById("pattern-form");
+  if (f) {
+    f.id.value = body.id;
+    f.ruPattern.value = body.ruPattern;
+    f.ingTemplate.value = body.ingTemplate;
+    f.description.value = body.description;
+    f.priority.value = body.priority;
+    f.slots.value = "[]";
+    f.examples.value = JSON.stringify(body.examples, null, 2);
+  }
   loadPatterns();
 }
 
@@ -710,6 +769,7 @@ function bindEvents() {
     loadPatterns();
   });
   document.getElementById("patterns-new")?.addEventListener("click", newPattern);
+  document.getElementById("pattern-quick-form")?.addEventListener("submit", quickSavePattern);
   document.getElementById("pattern-form")?.addEventListener("submit", savePattern);
   document.getElementById("pattern-delete")?.addEventListener("click", deletePattern);
 

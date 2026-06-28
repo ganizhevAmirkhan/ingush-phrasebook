@@ -1,0 +1,28 @@
+{
+  "schema": "ozdoev_1970-phrases/v1",
+  "source": "ozdoev_1970",
+  "itemCount": 3,
+  "items": [
+    {
+      "id": "ozdoev_1970_1",
+      "ru": "- Хь.",
+      "ing": "Ю. Ч.",
+      "kind": "phrase",
+      "category": "ozdoev_1970"
+    },
+    {
+      "id": "ozdoev_1970_2",
+      "ru": "Булгучев",
+      "ing": "С.-Г.",
+      "kind": "phrase",
+      "category": "ozdoev_1970"
+    },
+    {
+      "id": "ozdoev_1970_3",
+      "ru": "на ингушском языке",
+      "ing": "ЯЗЫКА",
+      "kind": "gloss",
+      "category": "ozdoev_1970"
+    }
+  ]
+}

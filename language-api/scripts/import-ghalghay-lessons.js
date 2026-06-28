@@ -3,11 +3,11 @@
  * Source: https://ghalghay.com/category/ингушский-язык/
  * Skips lessons already present in language-api/data/corpus/stories/.
  *
- * Usage: node scripts/import-ghalghay-lessons.js [--dry-run] [--from=1] [--to=37]
+ * Usage: node scripts/import-ghalghay-lessons.js [--dry-run] [--force] [--from=1] [--to=37]
  */
 const fs = require("node:fs/promises");
 const path = require("node:path");
-const { splitRuIngPairs, isUsableShortRu } = require("../src/phrase-split");
+const { splitRuIngPairs, isUsableShortRu, isUsableRu } = require("../src/phrase-split");
 
 const ROOT = path.join(__dirname, "..", "..");
 const CATEGORIES_DIR = path.join(ROOT, "categories");
@@ -77,10 +77,183 @@ async function discoverLessonLinks(fromLesson, toLesson) {
   return found;
 }
 
-function extractPairsFromText(text) {
+function stripSpeakerPrefix(ru) {
+  return (ru || "").replace(/^[А-ЯЁ][а-яё]+:\s*/, "").trim();
+}
+
+function isLikelyIngushBlock(s) {
+  const t = (s || "").trim();
+  if (!t || t.length < 3) return false;
+  const upper = (t.match(/[A-ZА-ЯЁI1ӏӀ]/g) || []).length;
+  if (upper / t.length < 0.28) return false;
+  if (/[а-яё]{10,}/.test(t) && !/[I1ӏӀ]/.test(t)) return false;
+  return /[A-ZА-ЯЁ]/.test(t);
+}
+
+function splitRuIngLine(text) {
+  const candidates = [];
+  for (const match of text.matchAll(/\s+(?:—|–)\s+/g)) {
+    const ing = text.slice(match.index + match[0].length);
+    if (isLikelyIngushBlock(ing)) {
+      candidates.push({
+        ru: stripSpeakerPrefix(text.slice(0, match.index).trim()),
+        ing: ing.trim()
+      });
+    }
+  }
+  for (const match of text.matchAll(/[.!?)]-\s*(?=[A-ZА-ЯЁ])/g)) {
+    const ing = text.slice(match.index + match[0].length);
+    if (isLikelyIngushBlock(ing)) {
+      candidates.push({
+        ru: stripSpeakerPrefix(text.slice(0, match.index + 1).trim()),
+        ing: ing.trim()
+      });
+    }
+  }
+  for (const match of text.matchAll(/\s+-\s*(?=[A-ZА-ЯЁ])/g)) {
+    const ing = text.slice(match.index + match[0].length);
+    if (isLikelyIngushBlock(ing)) {
+      candidates.push({
+        ru: stripSpeakerPrefix(text.slice(0, match.index).trim()),
+        ing: ing.trim()
+      });
+    }
+  }
+  return candidates.length ? candidates[candidates.length - 1] : null;
+}
+
+function cleanGrammarRu(ru) {
+  return stripSpeakerPrefix((ru || "").replace(/\s+/g, " ").replace(/^[-–—]\s*/, "").trim());
+}
+
+function extractGrammarPairsFromText(text) {
   const pairs = [];
   const seen = new Set();
 
+  function tryPush(ru, ing) {
+    ru = cleanGrammarRu(ru);
+    ing = (ing || "").replace(/\s+/g, " ").trim();
+    if (!ru || !ing) return;
+    const subpairs = splitRuIngPairs(ru, ing, { maxRuLen: 180, maxRuWords: 24 });
+    const chunks = subpairs.length ? subpairs : [{ ru, ing }];
+    for (const chunk of chunks) {
+      const r = (chunk.ru || "").trim();
+      const i = (chunk.ing || "").trim();
+      if (!isUsableRu(r, { maxRuLen: 180, maxRuWords: 24 }) || !i) continue;
+      if (!/[A-ZА-ЯI1ӘӏӀ]/.test(i)) continue;
+      const key = norm(r);
+      if (!key || seen.has(key)) continue;
+      seen.add(key);
+      pairs.push({ ru: r, ing: i });
+    }
+  }
+
+  const dashRe =
+    /([^—–]{3,140}?)\s*(?:—|–)\s*([^—–]{3,140}?)(?=\s+[А-ЯЁA-ZI1ӏ]|$|[.;])/g;
+  let m;
+  while ((m = dashRe.exec(text))) {
+    const a = m[1].trim();
+    const b = m[2].trim();
+    if (isLikelyIngushBlock(b) && /[а-яё]{3,}/i.test(a) && !isLikelyIngushBlock(a)) {
+      tryPush(a, b);
+    } else if (isLikelyIngushBlock(a) && /[а-яё]{3,}/i.test(b) && !isLikelyIngushBlock(b)) {
+      tryPush(b, a);
+    } else if (!isLikelyIngushBlock(a) && isLikelyIngushBlock(b)) {
+      tryPush(a, b);
+    }
+  }
+
+  const hyphenRe =
+    /([A-ZА-ЯЁI1ӏ][A-ZА-ЯЁI1ӏa-zа-яё\s,?]{2,90}\?)\s*-\s*([А-ЯЁ][^.!?]{4,140})/g;
+  while ((m = hyphenRe.exec(text))) {
+    tryPush(m[2], m[1]);
+  }
+
+  const answerRe =
+    /([А-ЯЁ][^.!?]{4,120})\s*\.-\s*([A-ZА-ЯЁI1ӏ][^.!?]{4,140})/g;
+  while ((m = answerRe.exec(text))) {
+    tryPush(m[1], m[2]);
+  }
+
+  return pairs;
+}
+  return decodeEntities(html)
+    .replace(/<br\s*\/?>/gi, " ")
+    .replace(/<[^>]+>/g, "")
+    .replace(/&nbsp;/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function extractPairsFromText(text, seen, pairs, pushPair) {
+  const dashRe = /([^.!?\n]{4,120}?)\s*[—–-]\s*([A-ZА-ЯI1][^.!?\n]{2,180})/g;
+  let m;
+  while ((m = dashRe.exec(text))) {
+    pushPair(m[1], m[2]);
+  }
+  const vocabRe =
+    /(?:^|[\n.])\s*([A-Za-zА-Яа-яЁё][A-Za-zА-Яа-яЁё\s]{1,40}?)\s*[—–-]\s*([A-ZА-ЯI1][A-ZА-ЯI1a-zа-яё\s]{1,50})/g;
+  while ((m = vocabRe.exec(text))) {
+    pushPair(m[1], m[2]);
+  }
+}
+
+function extractPairsFromLessonHtml(html) {
+  const pairs = [];
+  const seen = new Set();
+
+  function pushPair(ru, ing) {
+    ru = stripSpeakerPrefix((ru || "").replace(/\s+/g, " ").trim());
+    ing = (ing || "").replace(/\s+/g, " ").trim();
+    if (!ing || ing.length > 320) return;
+
+    const subpairs = splitRuIngPairs(ru, ing, { maxRuLen: 180, maxRuWords: 24 });
+    const chunks = subpairs.length ? subpairs : [{ ru, ing }];
+
+    for (const chunk of chunks) {
+      const r = (chunk.ru || "").trim();
+      const i = (chunk.ing || "").trim();
+      if (!isUsableRu(r, { maxRuLen: 180, maxRuWords: 24 }) || !i) continue;
+      if (!/[A-ZА-ЯI1ӘӏӀ]/.test(i)) continue;
+      const key = norm(r);
+      if (!key || seen.has(key)) continue;
+      seen.add(key);
+      pairs.push({ ru: r, ing: i });
+    }
+  }
+
+  const bodyMatch =
+    html.match(/<div class="storycontent"[^>]*>([\s\S]*?)<\/div>/i) ||
+    html.match(/<div class="entry-content"[^>]*>([\s\S]*?)<\/div>/i);
+
+  if (bodyMatch) {
+    const pRe = /<p[^>]*>([\s\S]*?)<\/p>/gi;
+    let m;
+    while ((m = pRe.exec(bodyMatch[1]))) {
+      const text = paragraphToPlain(m[1]);
+      if (!text || /filed under|tags:/i.test(text)) continue;
+      const split = splitRuIngLine(text);
+      if (split) {
+        pushPair(split.ru, split.ing);
+      } else if (text.length > 180) {
+        for (const gp of extractGrammarPairsFromText(text)) {
+          pushPair(gp.ru, gp.ing);
+        }
+      } else if (!/<strong/i.test(m[1])) {
+        extractPairsFromText(text, seen, pairs, pushPair);
+      }
+    }
+    if (pairs.length) return pairs;
+  }
+
+  const bodyText = stripHtml(decodeEntities(bodyMatch?.[1] || html));
+  extractPairsFromText(bodyText, seen, pairs, pushPair);
+  return pairs;
+}
+
+function extractPairsFromTextLegacy(text) {
+  const pairs = [];
+  const seen = new Set();
   function push(ru, ing) {
     ru = (ru || "").replace(/\s+/g, " ").trim();
     ing = (ing || "").replace(/\s+/g, " ").trim();
@@ -91,20 +264,7 @@ function extractPairsFromText(text) {
     seen.add(key);
     pairs.push({ ru, ing });
   }
-
-  // RU — ING (em dash, en dash, hyphen with spaces)
-  const dashRe = /([^.!?\n]{4,120}?)\s*[—–-]\s*([A-ZА-ЯI1][^.!?\n]{2,180})/g;
-  let m;
-  while ((m = dashRe.exec(text))) {
-    push(m[1], m[2]);
-  }
-
-  // Vocabulary: Word-WORD or Word — WORD at line starts
-  const vocabRe = /(?:^|[\n.])\s*([A-Za-zА-Яа-яЁё][A-Za-zА-Яа-яЁё\s]{1,40}?)\s*[—–-]\s*([A-ZА-ЯI1][A-ZА-ЯI1a-zа-яё\s]{1,50})/g;
-  while ((m = vocabRe.exec(text))) {
-    push(m[1], m[2]);
-  }
-
+  extractPairsFromText(text, seen, pairs, push);
   return pairs;
 }
 
@@ -153,11 +313,16 @@ function capitalizeRu(ru) {
 async function main() {
   const args = process.argv.slice(2);
   const dryRun = args.includes("--dry-run");
+  const force = args.includes("--force");
   const fromLesson = Number(args.find((a) => a.startsWith("--from="))?.slice(7) || 1);
   const toLesson = Number(args.find((a) => a.startsWith("--to="))?.slice(5) || 37);
 
-  const have = await existingLessonNumbers();
-  process.stdout.write(`Corpus lessons already: ${[...have].sort((a, b) => a - b).join(", ")}\n`);
+  const have = force ? new Set() : await existingLessonNumbers();
+  if (force) {
+    process.stdout.write(`--force: re-import lessons ${fromLesson}–${toLesson}\n`);
+  } else {
+    process.stdout.write(`Corpus lessons already: ${[...have].sort((a, b) => a - b).join(", ")}\n`);
+  }
 
   process.stdout.write(`Discovering lesson links ${fromLesson}–${toLesson}…\n`);
   const links = await discoverLessonLinks(fromLesson, toLesson);
@@ -170,9 +335,19 @@ async function main() {
   let corpusAdded = 0;
 
   for (let n = fromLesson; n <= toLesson; n += 1) {
-    if (have.has(n)) {
+    if (!force && have.has(n)) {
       process.stdout.write(`Skip lesson ${n} — corpus exists\n`);
       continue;
+    }
+    if (force) {
+      const stale = (await fs.readdir(CORPUS_DIR)).filter((f) => {
+        const m = f.match(/lesson_(\d+)/i);
+        return m && Number(m[1]) === n && f.endsWith(".json");
+      });
+      for (const f of stale) {
+        if (!dryRun) await fs.unlink(path.join(CORPUS_DIR, f));
+        process.stdout.write(`Removed stale corpus file: ${f}\n`);
+      }
     }
     const url = links.get(n);
     if (!url) {
@@ -185,10 +360,7 @@ async function main() {
     const titleMatch = html.match(/<title>([^<]+)<\/title>/i);
     const title = stripHtml(titleMatch?.[1] || `Урок ${n}`);
     const ingTitleMatch = title.match(/\(([A-ZА-ЯI1][^)]+)\)/);
-    const bodyMatch = html.match(/<div class="entry-content"[^>]*>([\s\S]*?)<\/div>/i)
-      || html.match(/<article[^>]*>([\s\S]*?)<\/article>/i);
-    const bodyText = stripHtml(decodeEntities(bodyMatch?.[1] || html));
-    const pairs = extractPairsFromText(bodyText);
+    const pairs = extractPairsFromLessonHtml(html);
 
     if (!pairs.length) {
       process.stdout.write(`Lesson ${n}: no pairs parsed from ${url}\n`);

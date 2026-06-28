@@ -162,7 +162,12 @@ async function runTranslate() {
     return;
   }
   out.textContent = json.translation || "—";
-  meta.textContent = `слой: ${json.usedSource || "?"} · confidence: ${json.confidence ?? "—"}${json.fallbackUsed ? " · LLM augment" : ""}`;
+  const layerNote = json.composeMode
+    ? " · LLM compose (учится)"
+    : json.fallbackUsed
+      ? " · LLM augment"
+      : "";
+  meta.textContent = `слой: ${json.usedSource || "?"} · confidence: ${json.confidence ?? "—"}${layerNote}`;
 }
 
 async function runLookup() {
