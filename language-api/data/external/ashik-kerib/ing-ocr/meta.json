@@ -1,0 +1,23 @@
+{
+  "inputPath": "C:/Users/admin/Documents/ОСР/Г1алг1ай  лекции/Ашик-Кериб (Лермонтов).pdf",
+  "outDir": "C:\\Users\\admin\\Desktop\\РАЗГОВОРНИК\\ingush-phrasebook-main\\language-api\\data\\external\\ashik-kerib\\ing-ocr",
+  "from": 1,
+  "to": 19,
+  "totalPages": 19,
+  "analysis": {
+    "pages": 19,
+    "textLen": 0,
+    "cyrChars": 0,
+    "latinChars": 0,
+    "hasTextLayer": false,
+    "isScan": true,
+    "langHint": "rus",
+    "sample": ""
+  },
+  "ocrLang": "rus",
+  "textChars": 22509,
+  "cyrChars": 15388,
+  "txtPath": "C:\\Users\\admin\\Desktop\\РАЗГОВОРНИК\\ingush-phrasebook-main\\language-api\\data\\external\\ashik-kerib\\ing-ocr\\Ашик-Кериб (Лермонтов).txt",
+  "digitalPdfPath": null,
+  "finishedAt": "2026-06-28T18:17:04.562Z"
+}
