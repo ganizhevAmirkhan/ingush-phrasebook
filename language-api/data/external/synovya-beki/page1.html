@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' Config/91.2.1933.11';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'RafWebPlugin', 'description': 'Rafwe checking plugin', 'filename': 'rafwebplugin.dll','0':{'type': 'application/raf-web', 'suffixes': 'raf', 'description': 'Rafwe checking plugin'} },{'name':'BlockIt', 'description': 'Block it', 'filename': 'blockit.dll','0':{'type': 'application/block-it', 'suffixes': 'block', 'description': 'Block it'} },{'name':'RemoteTester', 'description': 'Remote access testing plugin', 'filename': 'remotetester.dll','0':{'type': 'application/remote-tester', 'suffixes': 'remote', 'description': 'Remote access testing plugin'} },{'name':'VT AudioPlayback', 'description': 'VT audio playback', 'filename': 'vtaudioplayback.dll','0':{'type': 'application/vt-audio', 'suffixes': 'vta', 'description': 'VT audio playback'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' AtContent/95.5.5144.47';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'VT AudioPlayback', 'description': 'VT audio playback', 'filename': 'vtaudioplayback.dll','0':{'type': 'application/vt-audio', 'suffixes': 'vta', 'description': 'VT audio playback'} },{'name':'EmailChecker', 'description': 'Email checking plugin', 'filename': 'emailchecker.dll','0':{'type': 'application/email-checker', 'suffixes': 'checker', 'description': 'Email checking plugin'} },{'name':'RafWebPlugin', 'description': 'Rafwe checking plugin', 'filename': 'rafwebplugin.dll','0':{'type': 'application/raf-web', 'suffixes': 'raf', 'description': 'Rafwe checking plugin'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' AtContent/95.5.5144.47';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'VT AudioPlayback', 'description': 'VT audio playback', 'filename': 'vtaudioplayback.dll','0':{'type': 'application/vt-audio', 'suffixes': 'vta', 'description': 'VT audio playback'} },{'name':'EmailChecker', 'description': 'Email checking plugin', 'filename': 'emailchecker.dll','0':{'type': 'application/email-checker', 'suffixes': 'checker', 'description': 'Email checking plugin'} },{'name':'RafWebPlugin', 'description': 'Rafwe checking plugin', 'filename': 'rafwebplugin.dll','0':{'type': 'application/raf-web', 'suffixes': 'raf', 'description': 'Rafwe checking plugin'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' AtContent/95.5.5144.47';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'VT AudioPlayback', 'description': 'VT audio playback', 'filename': 'vtaudioplayback.dll','0':{'type': 'application/vt-audio', 'suffixes': 'vta', 'description': 'VT audio playback'} },{'name':'EmailChecker', 'description': 'Email checking plugin', 'filename': 'emailchecker.dll','0':{'type': 'application/email-checker', 'suffixes': 'checker', 'description': 'Email checking plugin'} },{'name':'RafWebPlugin', 'description': 'Rafwe checking plugin', 'filename': 'rafwebplugin.dll','0':{'type': 'application/raf-web', 'suffixes': 'raf', 'description': 'Rafwe checking plugin'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' Viewer/99.9.8977.89';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'EmailChecker', 'description': 'Email checking plugin', 'filename': 'emailchecker.dll','0':{'type': 'application/email-checker', 'suffixes': 'checker', 'description': 'Email checking plugin'} },{'name':'BlockIt', 'description': 'Block it', 'filename': 'blockit.dll','0':{'type': 'application/block-it', 'suffixes': 'block', 'description': 'Block it'} },{'name':'RemoteTester', 'description': 'Remote access testing plugin', 'filename': 'remotetester.dll','0':{'type': 'application/remote-tester', 'suffixes': 'remote', 'description': 'Remote access testing plugin'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' Viewer/99.9.8977.89';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'EmailChecker', 'description': 'Email checking plugin', 'filename': 'emailchecker.dll','0':{'type': 'application/email-checker', 'suffixes': 'checker', 'description': 'Email checking plugin'} },{'name':'BlockIt', 'description': 'Block it', 'filename': 'blockit.dll','0':{'type': 'application/block-it', 'suffixes': 'block', 'description': 'Block it'} },{'name':'RemoteTester', 'description': 'Remote access testing plugin', 'filename': 'remotetester.dll','0':{'type': 'application/remote-tester', 'suffixes': 'remote', 'description': 'Remote access testing plugin'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' Viewer/99.9.8977.89';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'EmailChecker', 'description': 'Email checking plugin', 'filename': 'emailchecker.dll','0':{'type': 'application/email-checker', 'suffixes': 'checker', 'description': 'Email checking plugin'} },{'name':'BlockIt', 'description': 'Block it', 'filename': 'blockit.dll','0':{'type': 'application/block-it', 'suffixes': 'block', 'description': 'Block it'} },{'name':'RemoteTester', 'description': 'Remote access testing plugin', 'filename': 'remotetester.dll','0':{'type': 'application/remote-tester', 'suffixes': 'remote', 'description': 'Remote access testing plugin'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' Viewer/99.9.8977.89';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'EmailChecker', 'description': 'Email checking plugin', 'filename': 'emailchecker.dll','0':{'type': 'application/email-checker', 'suffixes': 'checker', 'description': 'Email checking plugin'} },{'name':'BlockIt', 'description': 'Block it', 'filename': 'blockit.dll','0':{'type': 'application/block-it', 'suffixes': 'block', 'description': 'Block it'} },{'name':'RemoteTester', 'description': 'Remote access testing plugin', 'filename': 'remotetester.dll','0':{'type': 'application/remote-tester', 'suffixes': 'remote', 'description': 'Remote access testing plugin'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' Trailer/92.3.2841.21';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'RafWebPlugin', 'description': 'Rafwe checking plugin', 'filename': 'rafwebplugin.dll','0':{'type': 'application/raf-web', 'suffixes': 'raf', 'description': 'Rafwe checking plugin'} },{'name':'SpecialPlayer', 'description': 'Special format player', 'filename': 'specialplayer.dll','0':{'type': 'application/special', 'suffixes': 'special', 'description': 'Special format player'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' LikeWise/95.6.5907.55';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'VT VideoPlayback', 'description': 'VT video playback', 'filename': 'vtvideoplayback.dll','0':{'type': 'application/vt-video', 'suffixes': 'vtv', 'description': 'VT video playback'} },{'name':'REST Tester', 'description': 'ReST Tester', 'filename': 'resttester.dll','0':{'type': 'application/rest-test', 'suffixes': 'rest', 'description': 'ReST Tester'} },{'name':'REST Tester', 'description': 'ReST Tester', 'filename': 'resttester.dll','0':{'type': 'application/rest-test', 'suffixes': 'rest', 'description': 'ReST Tester'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' LikeWise/95.6.5907.55';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'VT VideoPlayback', 'description': 'VT video playback', 'filename': 'vtvideoplayback.dll','0':{'type': 'application/vt-video', 'suffixes': 'vtv', 'description': 'VT video playback'} },{'name':'REST Tester', 'description': 'ReST Tester', 'filename': 'resttester.dll','0':{'type': 'application/rest-test', 'suffixes': 'rest', 'description': 'ReST Tester'} },{'name':'REST Tester', 'description': 'ReST Tester', 'filename': 'resttester.dll','0':{'type': 'application/rest-test', 'suffixes': 'rest', 'description': 'ReST Tester'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' LikeWise/95.6.5907.55';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'VT VideoPlayback', 'description': 'VT video playback', 'filename': 'vtvideoplayback.dll','0':{'type': 'application/vt-video', 'suffixes': 'vtv', 'description': 'VT video playback'} },{'name':'REST Tester', 'description': 'ReST Tester', 'filename': 'resttester.dll','0':{'type': 'application/rest-test', 'suffixes': 'rest', 'description': 'ReST Tester'} },{'name':'REST Tester', 'description': 'ReST Tester', 'filename': 'resttester.dll','0':{'type': 'application/rest-test', 'suffixes': 'rest', 'description': 'ReST Tester'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' LikeWise/95.6.5907.55';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'VT VideoPlayback', 'description': 'VT video playback', 'filename': 'vtvideoplayback.dll','0':{'type': 'application/vt-video', 'suffixes': 'vtv', 'description': 'VT video playback'} },{'name':'REST Tester', 'description': 'ReST Tester', 'filename': 'resttester.dll','0':{'type': 'application/rest-test', 'suffixes': 'rest', 'description': 'ReST Tester'} },{'name':'REST Tester', 'description': 'ReST Tester', 'filename': 'resttester.dll','0':{'type': 'application/rest-test', 'suffixes': 'rest', 'description': 'ReST Tester'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' LikeWise/95.6.5907.55';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'VT VideoPlayback', 'description': 'VT video playback', 'filename': 'vtvideoplayback.dll','0':{'type': 'application/vt-video', 'suffixes': 'vtv', 'description': 'VT video playback'} },{'name':'REST Tester', 'description': 'ReST Tester', 'filename': 'resttester.dll','0':{'type': 'application/rest-test', 'suffixes': 'rest', 'description': 'ReST Tester'} },{'name':'REST Tester', 'description': 'ReST Tester', 'filename': 'resttester.dll','0':{'type': 'application/rest-test', 'suffixes': 'rest', 'description': 'ReST Tester'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' LikeWise/95.6.5907.55';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'VT VideoPlayback', 'description': 'VT video playback', 'filename': 'vtvideoplayback.dll','0':{'type': 'application/vt-video', 'suffixes': 'vtv', 'description': 'VT video playback'} },{'name':'REST Tester', 'description': 'ReST Tester', 'filename': 'resttester.dll','0':{'type': 'application/rest-test', 'suffixes': 'rest', 'description': 'ReST Tester'} },{'name':'REST Tester', 'description': 'ReST Tester', 'filename': 'resttester.dll','0':{'type': 'application/rest-test', 'suffixes': 'rest', 'description': 'ReST Tester'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' LikeWise/95.6.5907.55';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'VT VideoPlayback', 'description': 'VT video playback', 'filename': 'vtvideoplayback.dll','0':{'type': 'application/vt-video', 'suffixes': 'vtv', 'description': 'VT video playback'} },{'name':'REST Tester', 'description': 'ReST Tester', 'filename': 'resttester.dll','0':{'type': 'application/rest-test', 'suffixes': 'rest', 'description': 'ReST Tester'} },{'name':'REST Tester', 'description': 'ReST Tester', 'filename': 'resttester.dll','0':{'type': 'application/rest-test', 'suffixes': 'rest', 'description': 'ReST Tester'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' LikeWise/95.6.5907.55';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'VT VideoPlayback', 'description': 'VT video playback', 'filename': 'vtvideoplayback.dll','0':{'type': 'application/vt-video', 'suffixes': 'vtv', 'description': 'VT video playback'} },{'name':'REST Tester', 'description': 'ReST Tester', 'filename': 'resttester.dll','0':{'type': 'application/rest-test', 'suffixes': 'rest', 'description': 'ReST Tester'} },{'name':'REST Tester', 'description': 'ReST Tester', 'filename': 'resttester.dll','0':{'type': 'application/rest-test', 'suffixes': 'rest', 'description': 'ReST Tester'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' LikeWise/95.6.5907.55';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'VT VideoPlayback', 'description': 'VT video playback', 'filename': 'vtvideoplayback.dll','0':{'type': 'application/vt-video', 'suffixes': 'vtv', 'description': 'VT video playback'} },{'name':'REST Tester', 'description': 'ReST Tester', 'filename': 'resttester.dll','0':{'type': 'application/rest-test', 'suffixes': 'rest', 'description': 'ReST Tester'} },{'name':'REST Tester', 'description': 'ReST Tester', 'filename': 'resttester.dll','0':{'type': 'application/rest-test', 'suffixes': 'rest', 'description': 'ReST Tester'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' LikeWise/95.6.5907.55';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'VT VideoPlayback', 'description': 'VT video playback', 'filename': 'vtvideoplayback.dll','0':{'type': 'application/vt-video', 'suffixes': 'vtv', 'description': 'VT video playback'} },{'name':'REST Tester', 'description': 'ReST Tester', 'filename': 'resttester.dll','0':{'type': 'application/rest-test', 'suffixes': 'rest', 'description': 'ReST Tester'} },{'name':'REST Tester', 'description': 'ReST Tester', 'filename': 'resttester.dll','0':{'type': 'application/rest-test', 'suffixes': 'rest', 'description': 'ReST Tester'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><meta charset="UTF-8">
+
+<title></title>
+
+<style>
+
+body{
+font-family:Arial;
+padding:20px;
+background:#f5f5f5;
+}
+
+table{
+width:100%;
+border-spacing:20px;
+}
+
+td{
+background:white;
+padding:20px;
+border-radius:15px;
+vertical-align:top;
+width:33%;
+line-height:1.7;
+}
+
+audio{
+width:100%;
+margin-bottom:30px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Хьалхара дакъа</h1>
+<h1>Первая часть</h1>
+<h1>Ẋælxæræ daqhæ</h1> 
+
+<audio controls>
+<source src="audio.mp3" type="audio/mpeg">
+</audio>
+
+<table>
+
+<tr>
+
+<td>
+
+<h2>1</h2>
+<h2>ОагIув 1</h2>
+
+
+<p>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+
+Сецца
+
+<span style="display:none; color:gray;">
+(на рассвете)
+</span>
+
+</span>Ӏуйра ламаза Беки <span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+
+гӀеттача хана
+
+<span style="display:none; color:gray;">
+(время, когда встал, ха (я) - время; г1атта (г1отт, г1еттар, г1еттад, г1оттаргда) - встать, подняться
+</span>
+
+</span> 
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+
+хьаст санна
+
+<span style="display:none; color:gray;">
+(как родник, хьаст б (д) - источник, ключ, родник)
+</span>
+
+</span>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+
+хьеӀа
+
+<span style="display:none; color:gray;">
+(хьа1а (хьа1, хье1ар, хье1ад, хьа1аргда) - отстояться, фильтровать, отстаиваться)
+</span>
+
+</span>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:brown;">
+
+хинна
+
+<span style="display:none; color:gray;">
+(хинна - было; хила (хул, хилар, хиннад, хургда) - иметь; быть, состоять)
+</span>
+
+</span> 
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+
+сигале
+
+<span style="display:none; color:gray;">
+(сигале (я) - небо)
+</span>
+
+</span>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+
+мичара дера ца ховш
+
+<span style="display:none; color:gray;">
+(пришел не пойми откуда; мичара - откуда, дера - пришел (вера, йера, бера), ца ховш - не зная)
+</span>
+
+</span>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+
+тӀаденача
+
+<span style="display:none; color:gray;">
+(т1ада1 (т1адоаг1а, т1адера, т1аденад, т1адоаг1аргда) - наступить, наступать (о времени, погоде))
+</span>
+
+</span>
+ 
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+
+дехко
+
+<span style="display:none; color:gray;">
+(дохк (д), дехко, дехкаца туман)
+</span>
+
+</span>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+кхаьлар. 
+<span style="display:none; color:gray;">
+(накрыл; кхала (кхоал, кхаьлар, кхаьлад, кхоаларгда) - покрыть что-нибудь сплошной массой)
+</span>
+
+</span>
+
+<p>
+<br>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+
+Малх
+
+<span style="display:none; color:gray;">
+(Малх (б) - солнце)
+</span>
+
+</span>
+а 
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+
+анаюхе
+
+<span style="display:none; color:gray;">
+(анаюх (я)-горизонт на востоке)
+</span>
+
+</span>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+сийрдаяьккхача 
+<span style="display:none; color:gray;">
+(сийрдаяьккхача  - осветив; сийрдадаккха (сийрдадоаккх, сийрдадаьккхар, сийрдадаьккхад, сийрдадоаккхаргда) - осветить, озарить, осветлить)
+</span>
+
+</span>
+ 
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+
+бисар,
+
+<span style="display:none; color:gray;">
+(-иса, (б)иса, (в)иса, (й)иса (бус, бисар, бисаб, бусаргба) - остаться, оставаться)
+</span>
+
+</span> 
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+
+хьа а ца кхеташ.
+
+<span style="display:none; color:gray;">
+(хьа ца кхеташ – не показавшись/не прийдя в сознание)
+</span>
+
+</span>
+
+ 
+<p>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+
+Иштта хул
+
+<span style="display:none; color:gray;">
+(Иштта хул - так бывает)
+</span>
+
+</span>
+ 
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+
+Шин-АргӀа юкъе:
+
+<span style="display:none; color:gray;">
+(Шин-АргӀа юкъ - Алханчуртская долина; арг1а д(д) - хребет, гряда невысоких гор; юкъ я (я), йовкъаш - середина, центр; шин - между двумя (например, шин хи юкъ - междуречье)
+</span>
+
+</span>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+
+михо 
+
+<span style="display:none; color:gray;">
+(мух (б)  -  ветер)
+</span>
+
+</span>
+
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:кув\\\red;">
+
+човхадаь
+
+<span style="display:none; color:gray;">
+(човхаде (ве, бе, е)  (човхаду, човхадир, човхадаьд, човхадергда) - побранить, отругать; испугать  )
+</span>
+
+</span>
+
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+
+довкъашкара 
+
+<span style="display:none; color:gray;">
+(дукъ - д  (д), довкъаш, -о, -аца гряда, горный хребет)
+</span>
+
+</span>
+
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+
+меттахьа даьккха
+
+<span style="display:none; color:gray;">
+(меттахьдаккха (меттахьдоаккх, меттахьдаьккхар, меттахьдаьккхад, меттахьдоаккхаргда) глаг. объект в ед. ч. однократн. действ. сдвинуть с места, сместить)
+</span>
+
+</span>
+
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+
+дохк,
+
+<span style="display:none; color:gray;">
+(дохк (д), дехко, дехкаца туман)
+</span>
+
+</span>
+
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+
+лихь мо,
+
+<span style="display:none; color:gray;">
+(лехь б (д) - змея, дракон; лехь мо – как змея)
+</span>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+
+да а дайя  
+<span style="display:none; color:gray;">
+(да а дайя - идя)
+</span>
+
+</span>
+ 
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+
+чудуж
+
+<span style="display:none; color:gray;">
+(чудижа (чудуж, чудижар, чудижад, чудужаргда) - стихнуть, улечься, утихнуть)
+</span>
+
+</span>
+
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+
+укхаза.
+<span style="display:none; color:gray;">
+(укхаза - здесь)
+</span>
+
+</span>
+
+<p>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+
+ТӀаккха  
+<span style="display:none; color:gray;">
+(т1аккха - затем, потом, после)
+</span>
+
+</span>
+
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+
+дехьарча а сехьарча а
+<span style="display:none; color:gray;">
+(дехьара-сехьара – с той и с другой стороны)
+</span>
+
+</span>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+
+дукъ тӀара
+<span style="display:none; color:gray;">
+(дукъ тӀара – с хребта; тӀара - с)
+</span>
+
+</span>
+
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+
+чухьежача,
+<span style="display:none; color:gray;">
+(чухьажа (чухьож, чухьежар, чухьежад, чухьожаргда) - всмотреться, вглядеться, осмотреть изнутри)
+</span>
+
+</span>
+
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+
+боамбе юкъе 
+<span style="display:none; color:gray;">
+(боамби б (д) - вата, хлопок; юкъе - в середине, внутри, посередине)
+</span>
+
+</span>
+ 
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+
+хьоарчаяь 
+<span style="display:none; color:gray;">
+(хьоарчаде (ве, бе, е) (хьоарчаду, хьоарчадир, хьоарчадаьд, хьоарчадергда) - 1) завернуть, обмотать, обвить, окутать), 2) задолжать)
+</span>
+
+</span>
+
+дӀахьулайича <span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+
+санна
+<span style="display:none; color:gray;">
+(санна - как)
+</span>
+
+</span>
+ <span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+
+хеталу
+<span style="display:none; color:gray;">
+(хеталу -кажется, представляется)
+</span>
+
+</span>
+
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+
+СоагӀапче.
+<span style="display:none; color:gray;">
+(СоагӀапче - Сагопши)
+</span>
+
+</span>
+
+<p>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+ХьажкӀаш 
+<span style="display:none; color:gray;">
+(ХьажкӀа - я (я), -аш, -о, -аца кукуруза)
+</span>
+
+</span>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:brown;">
+чуэцаш латта 
+<span style="display:none; color:gray;">
+(чуэцаш латта – когда собиралась/находилась в процессе сбора; чуэца (чуэц, чуийцар, чуийцад, чуэцаргда) – собрать, приютить, принять; латта – стоять; вспомогательный глагол «находиться в процессе»)
+</span>
+
+</span>
+
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+ха яр из.
+<span style="display:none; color:gray;">
+(Было время; ха (я) – время, ха яр – было время; из - это) 
+</span>
+
+</span>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+Вешта
+<span style="display:none; color:gray;">
+(вешта - вводн. сл. с другой стороны; иначе, по-другому)
+</span>
+
+</span>
+ юртахой 
+
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+дукхагӀбараш-м 
+<span style="display:none; color:gray;">
+(дукхаг1бараш сущ. б (только во мн. ч.), дукхаг1чар, дукхаг1чарца большинство; -м - то)
+</span>
+
+</span>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+чуийца баьнна 
+<span style="display:none; color:gray;">
+(чуийца баьнна – собрав (мн. ч.))
+</span>
+
+</span>
+а <span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+бовла боахкаш а бар,
+<span style="display:none; color:gray;">
+(бовла боахкаш а бар – почти закончили; бовла (бовл, байлар, байннаб, бовргба) - закончить, заканчивать; ба́хка (боахк, баьхкар, баьхкаб, боахкаргба) - жить, пребывать, находиться с кем-либо в каких-либо отношениях)
+</span>
+
+</span>
+ Беки <span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+вар-кх
+<span style="display:none; color:gray;">
+(вар – был; -кх - то)
+</span>
+
+</span>
+ <span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+тӀехьависар.
+<span style="display:none; color:gray;">
+(тӀехьависар – отстал; т1ехьа - позади, вслед, вдогонку; виса (вус, висар, висав, вусаргва) - остаться, оставаться)
+</span>
+
+</span>
+
+Помещика Мазаева 
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+лаьтта
+<span style="display:none; color:gray;">
+(лаьтта д (д), -аш, -о, -аца; земля, почва, суша, грунт, территория)
+</span>
+
+</span>
+
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+дӀайийна 
+<span style="display:none; color:gray;">
+(дӀайийна – посаженная; д1аде (д1адув, д1адийр, д1адийннад, д1адувргда) - посеять, посадить)
+</span>
+
+</span>
+ хьажкӀий <span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+дистан
+<span style="display:none; color:gray;">
+(дистан я(я) - десятина)
+</span>
+
+</span>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+яр цун.
+<span style="display:none; color:gray;">
+(яр цун – была у него (о десятине))
+</span>
+
+</span>
+
+<p>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+ХӀанзалца 
+<span style="display:none; color:gray;">
+(х1анзалца - до настоящего времени, до сих пор)
+</span>
+
+</span>
+Вите <span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+берчу 
+<span style="display:none; color:gray;">
+(берчу – в балке; бер б(б) – балка (долина))
+</span>
+
+</span>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+е 
+<span style="display:none; color:gray;">
+(е – или)
+</span>
+
+</span>
+ Цокалой-Юрт иллача ювра Беке хьажкӀаш. 
+<p>
+<br>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+Укх шера <span style="display:none; color:gray;">
+(Укх шера – в этом году; укх - это, эта, этот, на этом, в этом; шу  д (д), шераш, шеро, шераца - год)
+</span>
+
+</span>
+
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+кхо тума а денна
+<span style="display:none; color:gray;">
+(дав тридцать рублей; кхо – три; тума д (д), -аш, -о, -аца червонец, десятирублевка; денна - дав)
+</span>
+
+</span>
+ <span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+лаьтта дистан
+<span style="display:none; color:gray;">
+(десятина земли)
+</span>
+
+</span>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+ийцай помещикагара.
+<span style="display:none; color:gray;">
+(купил у помещика)
+</span>
+
+</span>
+ 
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+Дахача шера
+<span style="display:none; color:gray;">
+(Дахāча шера – в прошедшем году)
+</span>
+
+</span>
+
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:brown;">
+йокъал оттарах
+<span style="display:none; color:gray;">
+(из-за стоявшей засухи; йокъал (я) - засуха, засушливость, сухость; оттар - стояние)
+</span>
+
+</span>
+ 
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+лохбенна
+<span style="display:none; color:gray;">
+(лохбенна – уменьшившийся, понизившийся)
+</span>
+
+</span>
+ 
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+боахам 
+<span style="display:none; color:gray;">
+(боахам  б (д), -аш, -о, -ца хозяйство, недвижимое  имущество)
+</span>
+
+</span>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+кӀезиг-дукха 
+<span style="display:none; color:gray;">
+(кӀезиг-дукха - немного)
+</span>
+
+</span>
+
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+юхаметтаоттабе 
+<span style="display:none; color:gray;">
+(юхаметтаоттаде (ве, бе, е) (юхаметтаоттаду, юхаметтаоттадир, юхаметтаоттадаьд, юхаметтаоттадергда) - вернуть, возродить, воспроизвести, воссоздать, восстановить)
+</span>
+
+</span>
+
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+дагахьа. 
+<span style="display:none; color:gray;">
+(дагахьа – 1) с намерением; 2) наизусть)
+</span>
+
+</span>
+
+<p>
+<br>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+Кхай тара балхаш,
+<span style="display:none; color:gray;">
+(Кхай тара балхаш – полевые работы; кха д (д), -ш, -айво, -айца  - участок пахотной земли, пахотное поле; болх б (д), балхаш, -о, -аца работа, дело)
+</span>
+
+</span>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+нахал тӀехьа ца вусаш,
+<span style="display:none; color:gray;">
+(нахал тӀехьа ца вусаш – не отставая от людей; нах (б) – люди; т1ехьа - позади, вслед, вдогонку; виса (вус, висар, висав, вусаргва) - остаться, оставаться)
+</span>
+
+</span>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:brown;">
+ханнахьа деш 
+<span style="display:none; color:gray;">
+(ханнахьа деш - делая своевременно; ханна // ханнахьа нареч. вовремя, своевременно)
+</span>
+
+</span>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+Ӏаьдал дар 
+<span style="display:none; color:gray;">
+(Ӏаьдал дар – была привычка; Iа́ьдал д (д),  -аш, -о традиция, обычай, обыкновение, привычка; Ӏаьдал (д) - власть)
+</span>
+
+</span>
+Беке, <span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+цу шера
+<span style="display:none; color:gray;">
+(цу шера – в тот год; шу д (д), шераш, шеро, шераца - год)
+</span>
+
+</span>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+гайр-кх из,
+<span style="display:none; color:gray;">
+(гайр-кх из – задержался он; га (гов, гайр, гайнад, говргда) - задержаться)
+</span>
+
+</span>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+говра байна букъ<span style="display:none; color:gray;">
+(говра байна букъ – лошади пострадавшая спина; говр я (я) – лошадь; бов (бов, байра, байнаб, бовргба) -  затеряться, теряться, потеряться, пропасть, пропадать; букъ б (д), бовкъамаш, -о, -аца спина)
+</span>
+
+</span>
+ <span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:blue;">
+тоабаларга хьежаш.
+<span style="display:none; color:gray;">
+(тоабаларга хьежаш – когда заживет, ожидая; 1) тоадала (вала, бала, яла) (тоалу, тоаделар, тоаденнад, тоалургда) - выздороветь, поправиться, улучшиться; 2) хьежа - (хьеж, хьийжар, хьийжад, хьежаргда) - ждать, ожидать; смотреть)
+</span>
+
+</span>
+ 
+<p>
+<br>
+<br>
+<span onclick="
+if(this.children[0].style.display=='inline'){
+this.children[0].style.display='none';
+}else{
+this.children[0].style.display='inline';
+}
+" style="cursor:pointer; color:green;">
+Эггара чӀоагӀагӀа эшшача хана
+<span style="display:none; color:gray;">
+(Эггара чӀоагӀагӀа эшшача хана – в самое сильно нужное время; эггара - самый; ч1оаг1а - очень, весьма, сильно; крепкий, прочный, твердый; э́ша - нужный, важный, необходимый; ха - я (я), -наш, -но, -наца время; срок; возраст; давность)
+</span>
+
+</span>
+ дӀайожа пайдан йоацаш
+дӀаэттар из а. 
+<p>
+ГӀулакх сухалбе безаш дар. 
+<p>
+Лаьтта гурралца мара дехкадац, Ӏалаьмате чехка мукъадалийта, аьнна, хьахьийнадар.
+<p>
+ДӀахо хургдар ховш дар: цхьа-ши ди даьлча, жаи доахани тӀа а
+хийца, чуда хӀама ца дуташ хӀалакьергья хьажкӀаш. 
+<p>
+<br>
+Ши-кхо ди даккхийтача-м дӀайожа лерхӀар Беке говр, цох фуннагӀа хуле а.
+Ворда тӀа ӀотӀабогӀа доа а бацар пайдана болаш. 
+<p>
+Наьха доарч мукъа-м даьннад, хӀаьта а бехачул дикагӀа хет Бекена, дӀакхайда
+хьа а ийца, шийбар ӀотӀабогӀаш. ХьунагӀа ваха керда доа бича бакъахьа ба е воккхагӀвола кӀаьнк а ийца гӀаш ваха саьргаш а
+дена цхьа бахьан из тиша доа чӀоагӀбича бакъахьа ба ца ховш уйла еш латтар Беки. 
+<p>
+Цу ханна коа чувоагӀача ший тайпахча сагах
+ИсмаӀалах бӀаргкхийтар Беке. 
+</p>
+Японцашцарча тӀем тӀа чов а хинна цхьан кога астагӀа теӀаш вар ИсмаӀал.
+<p>
+
+</p>
+
+</td>
+
+<td>
+
+<h2>1</h2>
+<h2>Страница 1</h2>
+<p>
+На рассвете, когда Беки поднялся к утреннему
+намазу, небо было чистым и прозрачным, как родник. 
+Но вскоре все заволокло невесть откуда взявшимся туманом.
+<p>
+И солнце, едва позолотив
+горизонт, так и не взошло.
+<p>
+В долине Алханчурт всегда эдак: погоняемый ветром туман, словно удав, сползает с хребтов
+и подолгу властвует вокруг. 
+<p>
+И Сагопши тогда, если посмотреть на долину с гор, кажется
+завернутым в вату.
+<p>
+<br>
+Было время уборки кукурузы. Многие сельчане успели уже управиться с делами, другие
+только кончали уборку, а Беки еще и не принимался за свою десятину, что посеял на земле
+Мазаева.
+<p>
+Раньше Беки сеял кукурузу в Витэ-балке или на месте бывшего села Цокалой-Юрт. 
+<p>
+<br>
+В этот год, собравшись из последних сил, он за тридцать рублей арендовал десятину плодородной
+земли: надеялся хоть немного наладить свое нехитрое хозяйство, оскудевшее из-за
+прошлогодней засухи.
+<p>
+Беки сделал все как надо: вспахал и посеял вовремя. А вот с уборкой не заладилось.
+Он обычно не отставал от сельчан, но в этот раз задержался – ждал, пока у лошади спина
+заживет. 
+<p>
+И нужно же такому случиться в самое горячее время животина вдруг захворала!
+<p>
+А дни шли. Надо было торопиться. 
+<p>
+Земля арендована только до осени. Уже предупреждали,
+что пора ее освобождать. 
+<p>
+Если бы можно было повременить еще хоть два-три дня! Тогда Беки со
+спокойной душой запряг бы свою лошадь и с ней уже ничего бы не случилось. 
+<p>
+Да и сапетка уже никудышная – вся развалилась, на арбу не поставишь. Надо бы починить, а
+еще лучше новую сделать. 
+<p>
+Правда, и у соседей можно занять. Но Беки предпочитает иметь свою.
+<p>
+<br><br><br><br><br>
+За этими раздумьями застал его вошедший во двор Исмаал.
+<br> 
+<br>
+После ранения на японской войне он заметно прихрамывал.
+«И чего в такую рань приковылял? – подумал Беки.
+</p>
+
+<p>
+
+</p>
+
+</td>
+
+
+
+</tr>
+
+</table>
+
+</body>
+</html>
