@@ -30,6 +30,9 @@ function loadEnvFile(filePath) {
 loadEnvFile(path.join(__dirname, ".env"));
 loadEnvFile(path.join(__dirname, "..", ".env"));
 
+const llmSettings = require("./src/llm-settings");
+llmSettings.loadRuntimeLlmSettings();
+
 const {
   refreshAllSources,
   lookupWord,
@@ -163,6 +166,23 @@ async function adminApiRoute(req, res, apiPath, url) {
   if (req.method === "POST" && apiPath === "/reload") {
     await refreshAllSources();
     return sendJson(res, 200, { ok: true, refreshed: true });
+  }
+
+  if (apiPath === "/llm-settings") {
+    if (req.method === "GET") {
+      const data = await llmSettings.getPublicLlmSettings();
+      return sendJson(res, 200, { ...data, llm: getLlmConfig() });
+    }
+    if (req.method === "PUT" || req.method === "POST") {
+      const body = await readBody(req);
+      const data = await llmSettings.saveLlmSettings(body || {});
+      return sendJson(res, 200, { ...data, llm: getLlmConfig() });
+    }
+  }
+
+  if (req.method === "POST" && apiPath === "/llm-test") {
+    const result = await testLlmConnection();
+    return sendJson(res, result.ok ? 200 : 503, result);
   }
 
   if (apiPath === "/grammar/patterns") {
@@ -520,9 +540,12 @@ async function route(req, res) {
       ok: true,
       service: "language-api",
       llmPrimary: llm.primary || null,
+      llmOrder: llm.order || [],
       openrouterConfigured: llm.openrouterConfigured,
       geminiConfigured: llm.geminiConfigured,
-      openrouterModel: llm.openrouterConfigured ? llm.openrouterModel : null
+      gigachatConfigured: llm.gigachatConfigured,
+      openrouterModel: llm.openrouterConfigured ? llm.openrouterModel : null,
+      gigachatModel: llm.gigachatConfigured ? llm.gigachatModel : null
     });
   }
 
@@ -737,11 +760,12 @@ async function route(req, res) {
     const isPublicAsset =
       path === "/"
       || path === "/index.html"
-      ||       path === "/site.webmanifest"
+      || path === "/site.webmanifest"
       || path === "/favicon.ico"
       || path === "/favicon.svg"
       || path === "/apple-touch-icon.png"
-      || path.startsWith("/assets/");
+      || path.startsWith("/assets/")
+      || path.startsWith("/tools/");
     if (isPublicAsset) {
       return sendPublicStatic(req, res, path);
     }

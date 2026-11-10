@@ -1,3 +1,7 @@
+const https = require("node:https");
+const { randomUUID } = require("node:crypto");
+const { URL } = require("node:url");
+
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -14,8 +18,72 @@ function getGeminiKey() {
   return (process.env.GEMINI_API_KEY || "").trim();
 }
 
+function getGigaChatCredentials() {
+  return (process.env.GIGACHAT_CREDENTIALS || process.env.GIGACHAT_AUTH_KEY || "").trim();
+}
+
+function getGigaChatScope() {
+  return (process.env.GIGACHAT_SCOPE || "GIGACHAT_API_PERS").trim();
+}
+
+function getGigaChatModel() {
+  return (process.env.GIGACHAT_MODEL || "GigaChat").trim();
+}
+
+function getGigaChatBaseUrl() {
+  return (process.env.GIGACHAT_BASE_URL || "https://gigachat.devices.sberbank.ru/api/v1").trim().replace(/\/$/, "");
+}
+
+function getGigaChatOauthUrl() {
+  return (process.env.GIGACHAT_OAUTH_URL || "https://ngw.devices.sberbank.ru:9443/api/v2/oauth").trim();
+}
+
+function gigaChatTlsInsecure() {
+  return !/^(0|false|no)$/i.test(String(process.env.GIGACHAT_TLS_INSECURE ?? "true").trim());
+}
+
 function getOpenRouterModel() {
   return (process.env.OPENROUTER_MODEL || "openrouter/free").trim();
+}
+
+let gigaTokenCache = { accessToken: "", expiresAtMs: 0 };
+
+function httpsJsonRequest(urlString, { method = "GET", headers = {}, body = null, insecure = false } = {}) {
+  return new Promise((resolve, reject) => {
+    let url;
+    try {
+      url = new URL(urlString);
+    } catch (err) {
+      reject(err);
+      return;
+    }
+    const payload = body == null ? null : Buffer.from(body, "utf8");
+    const req = https.request(
+      {
+        protocol: url.protocol,
+        hostname: url.hostname,
+        port: url.port || 443,
+        path: `${url.pathname}${url.search}`,
+        method,
+        headers: {
+          ...headers,
+          ...(payload ? { "Content-Length": String(payload.length) } : {})
+        },
+        rejectUnauthorized: !insecure
+      },
+      (res) => {
+        const chunks = [];
+        res.on("data", (c) => chunks.push(c));
+        res.on("end", () => {
+          const text = Buffer.concat(chunks).toString("utf8");
+          resolve({ status: res.statusCode || 0, text, headers: res.headers });
+        });
+      }
+    );
+    req.on("error", reject);
+    if (payload) req.write(payload);
+    req.end();
+  });
 }
 
 function openRouterFallbackModels() {
@@ -42,20 +110,46 @@ function geminiFallbackEnabled() {
   return /^(1|true|yes)$/i.test(String(process.env.LLM_GEMINI_FALLBACK || "").trim());
 }
 
+function llmProviderOrder() {
+  const raw = (process.env.LLM_ORDER || "gigachat,openrouter,gemini").trim();
+  const wanted = raw
+    .split(/[,;\s]+/)
+    .map((x) => x.trim().toLowerCase())
+    .filter(Boolean);
+  const allowed = new Set(["gigachat", "openrouter", "gemini"]);
+  const ordered = wanted.filter((x) => allowed.has(x));
+  for (const name of ["gigachat", "openrouter", "gemini"]) {
+    if (!ordered.includes(name)) ordered.push(name);
+  }
+  return ordered;
+}
+
 function getLlmConfig() {
   const openrouterKey = getOpenRouterKey();
   const geminiKey = getGeminiKey();
+  const gigaCredentials = getGigaChatCredentials();
   const openrouterConfigured = openrouterKey.length > 10 && !isPlaceholderKey(openrouterKey);
   const geminiConfigured = geminiKey.length > 10 && !isPlaceholderKey(geminiKey);
-  const primary = openrouterConfigured ? "openrouter" : geminiConfigured ? "gemini" : "";
+  const gigachatConfigured = gigaCredentials.length > 10 && !isPlaceholderKey(gigaCredentials);
+  const order = llmProviderOrder().filter((name) => {
+    if (name === "gigachat") return gigachatConfigured;
+    if (name === "openrouter") return openrouterConfigured;
+    if (name === "gemini") return geminiConfigured;
+    return false;
+  });
+  const primary = order[0] || "";
 
   return {
     primary,
+    order,
     openrouterConfigured,
     geminiConfigured,
+    gigachatConfigured,
     openrouterModel: getOpenRouterModel(),
+    gigachatModel: getGigaChatModel(),
     openrouterKeyLength: openrouterKey.length,
-    geminiKeyLength: geminiKey.length
+    geminiKeyLength: geminiKey.length,
+    gigachatKeyLength: gigaCredentials.length
   };
 }
 
@@ -317,22 +411,153 @@ async function callOpenRouter(prompt) {
   };
 }
 
+async function getGigaChatAccessToken() {
+  const credentials = getGigaChatCredentials();
+  if (isPlaceholderKey(credentials)) {
+    return { ok: false, error: "missing_gigachat_key", detail: "Set GIGACHAT_CREDENTIALS" };
+  }
+
+  const now = Date.now();
+  if (gigaTokenCache.accessToken && gigaTokenCache.expiresAtMs > now + 60_000) {
+    return { ok: true, accessToken: gigaTokenCache.accessToken };
+  }
+
+  const authValue = /^Basic\s+/i.test(credentials) ? credentials : `Basic ${credentials}`;
+  const oauthUrl = getGigaChatOauthUrl();
+  try {
+    const res = await httpsJsonRequest(oauthUrl, {
+      method: "POST",
+      insecure: gigaChatTlsInsecure(),
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        Accept: "application/json",
+        RqUID: randomUUID(),
+        Authorization: authValue
+      },
+      body: `scope=${encodeURIComponent(getGigaChatScope())}`
+    });
+
+    if (res.status < 200 || res.status >= 300) {
+      let detail = res.text.slice(0, 300);
+      try {
+        const json = JSON.parse(res.text);
+        detail = json?.message || json?.error_description || json?.error || detail;
+      } catch {
+        // keep
+      }
+      if (res.status === 401 || res.status === 403) {
+        return { ok: false, error: "invalid_gigachat_key", detail };
+      }
+      return { ok: false, error: `gigachat_oauth_${res.status}`, detail };
+    }
+
+    const json = JSON.parse(res.text);
+    const accessToken = (json?.access_token || "").toString();
+    if (!accessToken) {
+      return { ok: false, error: "gigachat_oauth_empty", detail: "No access_token" };
+    }
+    const expiresAt = Number(json?.expires_at) || 0;
+    gigaTokenCache = {
+      accessToken,
+      expiresAtMs: expiresAt > 1e12 ? expiresAt : expiresAt * 1000 || now + 25 * 60_000
+    };
+    return { ok: true, accessToken };
+  } catch (err) {
+    return { ok: false, error: "gigachat_oauth_failed", detail: err?.message || "Network error" };
+  }
+}
+
+async function callGigaChat(prompt) {
+  const credentials = getGigaChatCredentials();
+  if (isPlaceholderKey(credentials)) {
+    return { ok: false, text: "", error: "missing_gigachat_key", detail: "", provider: "gigachat" };
+  }
+
+  const token = await getGigaChatAccessToken();
+  if (!token.ok) {
+    return { ok: false, text: "", error: token.error, detail: token.detail || "", provider: "gigachat" };
+  }
+
+  const model = getGigaChatModel();
+  const url = `${getGigaChatBaseUrl()}/chat/completions`;
+  try {
+    const res = await httpsJsonRequest(url, {
+      method: "POST",
+      insecure: gigaChatTlsInsecure(),
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        Authorization: `Bearer ${token.accessToken}`
+      },
+      body: JSON.stringify({
+        model,
+        messages: [{ role: "user", content: prompt }],
+        temperature: 0.2,
+        max_tokens: 512
+      })
+    });
+
+    if (res.status < 200 || res.status >= 300) {
+      let detail = res.text.slice(0, 400);
+      try {
+        const json = JSON.parse(res.text);
+        detail = json?.message || json?.error?.message || json?.error || detail;
+      } catch {
+        // keep
+      }
+      if (res.status === 401) {
+        gigaTokenCache = { accessToken: "", expiresAtMs: 0 };
+        return { ok: false, text: "", error: "gigachat_unauthorized", detail, provider: "gigachat" };
+      }
+      return { ok: false, text: "", error: `gigachat_http_${res.status}`, detail, provider: "gigachat" };
+    }
+
+    const json = JSON.parse(res.text);
+    const text = (json?.choices?.[0]?.message?.content || "").toString().trim();
+    if (!text) {
+      return { ok: false, text: "", error: "llm_empty", detail: "Empty GigaChat response", provider: "gigachat" };
+    }
+    return { ok: true, text, error: "", detail: model, provider: "gigachat" };
+  } catch (err) {
+    return {
+      ok: false,
+      text: "",
+      error: "gigachat_fetch_failed",
+      detail: err?.message || "Network error",
+      provider: "gigachat"
+    };
+  }
+}
+
+async function callProvider(provider, prompt) {
+  if (provider === "gigachat") return callGigaChat(prompt);
+  if (provider === "openrouter") return callOpenRouter(prompt);
+  if (provider === "gemini") return callGemini(prompt);
+  return { ok: false, text: "", error: "unknown_provider", detail: provider, provider: "" };
+}
+
 async function callLlm(prompt) {
   const config = getLlmConfig();
-  const providers = [];
+  let providers = [...(config.order || [])];
 
-  if (config.openrouterConfigured) providers.push("openrouter");
-  if (config.geminiConfigured && (!config.openrouterConfigured || geminiFallbackEnabled())) {
-    providers.push("gemini");
+  // Старый флаг: Gemini только если явно разрешён fallback, когда OpenRouter уже в списке
+  if (!geminiFallbackEnabled() && config.openrouterConfigured) {
+    providers = providers.filter((p) => p !== "gemini");
   }
 
   if (!providers.length) {
-    return { ok: false, text: "", error: "missing_llm_key", detail: "Set OPENROUTER_API_KEY or GEMINI_API_KEY", provider: "" };
+    return {
+      ok: false,
+      text: "",
+      error: "missing_llm_key",
+      detail: "Set GIGACHAT_CREDENTIALS, OPENROUTER_API_KEY or GEMINI_API_KEY",
+      provider: ""
+    };
   }
 
   let last = { ok: false, text: "", error: "llm_failed", detail: "", provider: "" };
   for (const provider of providers) {
-    const result = provider === "openrouter" ? await callOpenRouter(prompt) : await callGemini(prompt);
+    const result = await callProvider(provider, prompt);
     if (result.ok) return result;
     last = result;
   }
@@ -347,56 +572,41 @@ async function testLlmConnection() {
       ok: false,
       ...config,
       error: "missing_llm_key",
-      detail: "Set OPENROUTER_API_KEY (recommended on RU VPS) or GEMINI_API_KEY"
+      detail: "Задайте GigaChat / OpenRouter / Gemini в админке (шестерёнка) или в .env"
     };
   }
 
-  if (config.openrouterConfigured) {
-    const or = await callOpenRouter("Ответь одним словом: тест");
-    if (or.ok) {
+  const attempts = [];
+  for (const provider of config.order || []) {
+    const result = await callProvider(provider, "Ответь одним словом: тест");
+    attempts.push({
+      provider,
+      ok: !!result.ok,
+      error: result.error || "",
+      detail: result.detail || ""
+    });
+    if (result.ok) {
       return {
         ok: true,
         ...config,
-        provider: "openrouter",
-        model: or.detail || "",
+        provider,
+        model: result.detail || "",
         error: "",
-        detail: or.detail || ""
+        detail: result.detail || "",
+        attempts
       };
     }
-
-    const out = {
-      ok: false,
-      ...config,
-      provider: "openrouter",
-      model: "",
-      error: or.error || "openrouter_failed",
-      detail: or.detail || "",
-      openrouterAttempts: or.attempts || []
-    };
-
-    if (config.geminiConfigured && geminiFallbackEnabled()) {
-      const gem = await callGemini("Ответь одним словом: тест");
-      out.geminiFallback = {
-        ok: gem.ok,
-        error: gem.error || "",
-        detail: gem.detail || ""
-      };
-      if (gem.ok) {
-        return { ok: true, ...config, provider: "gemini", model: "", error: "", detail: "via gemini fallback" };
-      }
-    }
-
-    return out;
   }
 
-  const llm = await callGemini("Ответь одним словом: тест");
+  const last = attempts[attempts.length - 1] || {};
   return {
-    ok: llm.ok,
+    ok: false,
     ...config,
-    provider: "gemini",
-    model: llm.detail || "",
-    error: llm.error || "",
-    detail: llm.detail || ""
+    provider: last.provider || config.primary,
+    model: "",
+    error: last.error || "llm_failed",
+    detail: last.detail || "",
+    attempts
   };
 }
 
@@ -427,6 +637,7 @@ module.exports = {
   callLlm,
   callGemini,
   callOpenRouter,
+  callGigaChat,
   testLlmConnection,
   testGeminiConnection
 };

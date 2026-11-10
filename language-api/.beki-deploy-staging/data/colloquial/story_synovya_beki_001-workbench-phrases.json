@@ -1,0 +1,685 @@
+{
+  "version": 1,
+  "exportedAt": "2026-11-09T16:09:34.396Z",
+  "source": "workbench",
+  "direction": "ing→ru",
+  "storyId": "story_synovya_beki_001",
+  "count": 75,
+  "items": [
+    {
+      "id": "beki_001_sent",
+      "ru": "На рассвете, когда Беки поднялся к утреннему намазу, небо было чистым и прозрачным, как родник. Но вскоре все заволокло невесть откуда взявшимся туманом.",
+      "ing": "Сецца Ӏуйра ламаза Беки гӀеттача хана хьаст санна хьеӀа хинна сигале мичара дера ца ховш тӀаденача дехко кхаьлар.",
+      "category": "lesson_phrase",
+      "kind": "sentence",
+      "unitId": "beki_001",
+      "confidence": 0.97
+    },
+    {
+      "id": "beki_001_ph_0",
+      "ru": "на рассвете",
+      "ing": "Сецца",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_001",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_001_ph_1",
+      "ru": "к утреннему намазу",
+      "ing": "Ӏуйра ламаза",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_001",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_001_ph_2",
+      "ru": "когда Беки поднялся",
+      "ing": "Беки гӀеттача хана",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_001",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_001_ph_3",
+      "ru": "как родник",
+      "ing": "хьаст санна",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_001",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_001_ph_4",
+      "ru": "туман",
+      "ing": "дехко",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_001",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_002_sent",
+      "ru": "И солнце, едва позолотив горизонт, так и не взошло.",
+      "ing": "Малх а анаюхе сийрдаяьккхача бисар, хьа а ца кхеташ.",
+      "category": "lesson_phrase",
+      "kind": "sentence",
+      "unitId": "beki_002",
+      "confidence": 0.97
+    },
+    {
+      "id": "beki_002_ph_0",
+      "ru": "так и не взошло",
+      "ing": "хьа а ца кхеташ.",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_002",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_003_1_sent",
+      "ru": "В долине Алханчурт всегда так:",
+      "ing": "Иштта хул Шин-АргӀа юкъе:",
+      "category": "lesson_phrase",
+      "kind": "sentence",
+      "unitId": "beki_003_1",
+      "confidence": 0.85
+    },
+    {
+      "id": "beki_003_2_sent",
+      "ru": "ветром погоняемый с хребтов туман,",
+      "ing": "михо човхадаь довкъашкара меттахьа даьккха дохк,",
+      "category": "lesson_phrase",
+      "kind": "sentence",
+      "unitId": "beki_003_2",
+      "confidence": 0.85
+    },
+    {
+      "id": "beki_003_2_ph_0",
+      "ru": "подвинутый туман",
+      "ing": "меттахьа даьккха дохк",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_003_2",
+      "confidence": 0.84
+    },
+    {
+      "id": "beki_003_2_ph_1",
+      "ru": "ветер погнал",
+      "ing": "михо човхадаь",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_003_2",
+      "confidence": 0.84
+    },
+    {
+      "id": "beki_003_2_ph_2",
+      "ru": "с мечом пришёл",
+      "ing": "тур даьккха винув",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_003_2",
+      "confidence": 0.84
+    },
+    {
+      "id": "beki_003_2_ph_3",
+      "ru": "сделал пламя",
+      "ing": "оал баькха",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_003_2",
+      "confidence": 0.84
+    },
+    {
+      "id": "beki_003_2_ph_4",
+      "ru": "напылить",
+      "ing": "дом баькха",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_003_2",
+      "confidence": 0.84
+    },
+    {
+      "id": "beki_003_2_ph_5",
+      "ru": "поссорил",
+      "ing": "дов даьккха",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_003_2",
+      "confidence": 0.84
+    },
+    {
+      "id": "beki_003_2_ph_6",
+      "ru": "переместил с место",
+      "ing": "меттахьа даьккха",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_003_2",
+      "confidence": 0.84
+    },
+    {
+      "id": "beki_003_3_sent",
+      "ru": "словно удав,",
+      "ing": "лихь мо,",
+      "category": "lesson_phrase",
+      "kind": "sentence",
+      "unitId": "beki_003_3",
+      "confidence": 0.85
+    },
+    {
+      "id": "beki_003_4_sent",
+      "ru": "сползает с хребтов и подолгу властвует вокруг.",
+      "ing": "да а дайя чудуж укхаза.",
+      "category": "lesson_phrase",
+      "kind": "sentence",
+      "unitId": "beki_003_4",
+      "confidence": 0.85
+    },
+    {
+      "id": "beki_003_4_ph_0",
+      "ru": "приходя",
+      "ing": "да а дайя",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_003_4",
+      "confidence": 0.84
+    },
+    {
+      "id": "beki_003_4_ph_1",
+      "ru": "ложится  здесь",
+      "ing": "чудуж укхаза",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_003_4",
+      "confidence": 0.84
+    },
+    {
+      "id": "beki_004_sent",
+      "ru": "И Сагопши тогда, если посмотреть на долину с гор, кажется завернутым в вату.",
+      "ing": "ТӀаккха дехьарча а сехьарча а дукъ тӀара чухьежача, боамбе юкъе хьоарчаяь дӀахьулайича санна  хеталу СоагӀапче.",
+      "category": "lesson_phrase",
+      "kind": "sentence",
+      "unitId": "beki_004",
+      "confidence": 0.97
+    },
+    {
+      "id": "beki_004_ph_0",
+      "ru": "с той с другой",
+      "ing": "дехьарча а сехьарча а",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_004",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_004_ph_1",
+      "ru": "с хребта посмотреть",
+      "ing": "дукъ тӀара чухьежача",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_004",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_004_ph_2",
+      "ru": "среди ваты завёрнутый",
+      "ing": "боамбе юкъе хьоарчаяь дӀахьулайича",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_004",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_004_ph_3",
+      "ru": "кажется",
+      "ing": "санна  хеталу",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_004",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_005_sent",
+      "ru": "Было время уборки кукурузы. Многие сельчане успели уже управиться с делами, другие только кончали уборку, а Беки еще и не принимался за свою десятину, что посеял на земле Мазаева.",
+      "ing": "ХьажкӀаш чуэцаш латта ха яр из. Вешта юртахой дукхагӀбараш-м чуийца баьнна а бовла боахкаш а бар, Беки вар-кх тӀехьависар. Помещика Мазаева лаьтта дӀайийна хьажкӀий дистан яр цун.",
+      "category": "lesson_phrase",
+      "kind": "sentence",
+      "unitId": "beki_005",
+      "confidence": 0.97
+    },
+    {
+      "id": "beki_005_ph_0",
+      "ru": "был из опоздавших",
+      "ing": "вар-кх тӀехьависар",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_005",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_005_ph_1",
+      "ru": "уборка кукурузы",
+      "ing": "ХьажкӀаш чуэцаш латта",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_005",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_005_ph_2",
+      "ru": "десетина кукурузы",
+      "ing": "хьажкӀий дистан",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_005",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_006_sent",
+      "ru": "Раньше Беки сеял кукурузу в Витэ-балке или на месте бывшего села Цокалой-Юрт.",
+      "ing": "ХӀанзалца Вите берчу е Цокалой-Юрт иллача юврта Беке хьажкӀаш.",
+      "category": "lesson_phrase",
+      "kind": "sentence",
+      "unitId": "beki_006",
+      "confidence": 0.97
+    },
+    {
+      "id": "beki_007_sent",
+      "ru": "В этот год, собравшись из последних сил, он за тридцать рублей арендовал десятину плодородной земли: надеялся хоть немного наладить свое нехитрое хозяйство, оскудевшее из-за прошлогодней засухи.",
+      "ing": "Укх шера кхо тума а денна лаьтта дистан ийцай помещикагара. Дахача шера йокъал оттарах лохбенна боахам кӀезиг-дукха юхаметтаоттабе дагахьа.",
+      "category": "lesson_phrase",
+      "kind": "sentence",
+      "unitId": "beki_007",
+      "confidence": 0.97
+    },
+    {
+      "id": "beki_007_ph_0",
+      "ru": "в этот год",
+      "ing": "Укх шера",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_007",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_007_ph_1",
+      "ru": "из-за прошлогодней засух",
+      "ing": "Дахача шера йокъал оттарах",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_007",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_007_ph_2",
+      "ru": "надеялся хоть немного наладить свое нехитрое хозяйство",
+      "ing": "лохбенна боахам кӀезиг-дукха юхаметтаоттабе дагахьа",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_007",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_008_sent",
+      "ru": "Беки сделал все как надо: вспахал и посеял вовремя. А вот с уборкой не заладилось. Он обычно не отставал от сельчан, но в этот раз задержался – ждал, пока у лошади спина заживет.",
+      "ing": "Кхай тара балхаш, нахал тӀехьа ца вусаш, ханнахьа деш Ӏаьдал дар Беке, цу шера гайр-кх из, говра байна букъ тоабаларга хьежаш.",
+      "category": "lesson_phrase",
+      "kind": "sentence",
+      "unitId": "beki_008",
+      "confidence": 0.97
+    },
+    {
+      "id": "beki_008_ph_0",
+      "ru": "полевые работы",
+      "ing": "Кхай тара балхаш",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_008",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_008_ph_1",
+      "ru": "не опаздывая",
+      "ing": "тӀехьа ца вусаш",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_008",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_008_ph_2",
+      "ru": "всрахал и посеял",
+      "ing": "деш Ӏаьдал дар",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_008",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_009_sent",
+      "ru": "И нужно же такому случиться в самое горячее время животина вдруг захворала!",
+      "ing": "Эггара чӀоагӀагӀа эшшача хана дӀайожа пайдан йоацаш дӀаэттар из а.",
+      "category": "lesson_phrase",
+      "kind": "sentence",
+      "unitId": "beki_009",
+      "confidence": 0.97
+    },
+    {
+      "id": "beki_009_ph_0",
+      "ru": "самый нужный",
+      "ing": "Эггара чӀоагӀагӀа эшшача",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_009",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_009_ph_1",
+      "ru": "не годен для упряжки",
+      "ing": "дӀайожа пайдан йоацаш",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_009",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_009_ph_2",
+      "ru": "стало это",
+      "ing": "дӀаэттар из",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_009",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_010_sent",
+      "ru": "А дни шли. Надо было торопиться.",
+      "ing": "ГӀулакх сухалбе безаш дар.",
+      "category": "lesson_phrase",
+      "kind": "sentence",
+      "unitId": "beki_010",
+      "confidence": 0.97
+    },
+    {
+      "id": "beki_010_ph_0",
+      "ru": "дела надо было быстрее делать",
+      "ing": "ГӀулакх сухалбе безаш дар",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_010",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_011_sent",
+      "ru": "Земля арендована только до осени. Уже предупреждали, что пора ее освобождать.",
+      "ing": "Лаьтта гурралца мара дехкадац, Ӏалаьмате чехка мукъадалийта, аьнна, хьахьийнадар. ДӀахо хургдар ховш дар: цхьа-ши ди даьлча, жаи доахани тӀа а хийца, чуда хӀама ца дуташ хӀалакьергья хьажкӀаш.",
+      "category": "lesson_phrase",
+      "kind": "sentence",
+      "unitId": "beki_011",
+      "confidence": 0.97
+    },
+    {
+      "id": "beki_011_ph_0",
+      "ru": "земля арендоанно до осени",
+      "ing": "Лаьтта гурралца мара дехкадац",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_011",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_011_ph_1",
+      "ru": "что будет",
+      "ing": "ДӀахо хургдар",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_011",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_011_ph_2",
+      "ru": "дальше что буде не было известно",
+      "ing": "ДӀахо хургдар ховш дар",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_011",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_011_ph_3",
+      "ru": "сью минуту (очень быстро)",
+      "ing": "Ӏалаьмате чехк",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_011",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_011_ph_4",
+      "ru": "один два дня",
+      "ing": "цхьа-ши ди даьлча",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_011",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_011_ph_5",
+      "ru": "овцы и скот будут пастись",
+      "ing": "жаи доахани тӀа а хийца",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_011",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_012_sent",
+      "ru": "Если бы можно было повременить еще хоть два-три дня! Тогда Беки со спокойной душой запряг бы свою лошадь и с ней уже ничего бы не случилось.",
+      "ing": "Ши-кхо ди даккхийтача-м дӀайожа лерхӀар Беке говр, цох фуннагӀа хуле а.",
+      "category": "lesson_phrase",
+      "kind": "sentence",
+      "unitId": "beki_012",
+      "confidence": 0.97
+    },
+    {
+      "id": "beki_012_ph_0",
+      "ru": "чтобы не случилось",
+      "ing": "фуннагӀа хуле а",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_012",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_012_ph_1",
+      "ru": "два три-дня",
+      "ing": "Ши-кхо ди",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_012",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_013_sent",
+      "ru": "Да и сапетка уже никудышная – вся развалилась, на арбу не поставишь. Надо бы починить, а ещё лучше новую сделать.",
+      "ing": "Ворда тӀа ӀотӀабогӀа доа а бацар пайдана болаш. Хьатоабе безар, цул дикаг1 худар ц1анбар хьабеч.",
+      "category": "lesson_phrase",
+      "kind": "sentence",
+      "unitId": "beki_013",
+      "confidence": 0.97
+    },
+    {
+      "id": "beki_013_ph_0",
+      "ru": "новую сделать.",
+      "ing": "ц1анбар хьабеч",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_013",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_013_ph_1",
+      "ru": "ещё лучше",
+      "ing": "цул дикаг1",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_013",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_013_ph_2",
+      "ru": "Надо бы поченить",
+      "ing": "Хьатоабе безар",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_013",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_014_sent",
+      "ru": "Правда, и у соседей можно занять. Но Беки предпочитает иметь свою. Пойду ка я  пешком в лес с старшим сыном как то принесу прутья из леса стоял и разуздумывал Беки.",
+      "ing": "Наьха доарч мукъа-м даьннад, хӀаьта а бехачул дикагӀа хет Бекена, дӀакхайда хьа а ийца, шийбар ӀотӀабогӀаш. ХьунагӀа ваха керда доа бича бакъахьа ба е воккхагӀвола кӀаьнк а ийца гӀаш ваха саьргаш а дена цхьа бахьан из тиша доа чӀоагӀбича бакъахьа ба ца ховш уйла еш латтар Беки.",
+      "category": "lesson_phrase",
+      "kind": "sentence",
+      "unitId": "beki_014",
+      "confidence": 0.97
+    },
+    {
+      "id": "beki_014_ph_0",
+      "ru": "кажется лучше",
+      "ing": "дикагӀа хет",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_014",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_014_ph_1",
+      "ru": "старший сын",
+      "ing": "воккхагӀвола кӀаьнк",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_014",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_014_ph_2",
+      "ru": "сделать новую сапетку",
+      "ing": "керда доа бича",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_014",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_014_ph_3",
+      "ru": "пойти в лес",
+      "ing": "ХьунагӀа ваха",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_014",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_014_ph_4",
+      "ru": "стоял думал",
+      "ing": "уйла еш латтар",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_014",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_014_ph_5",
+      "ru": "протянулся взял",
+      "ing": "дӀакхайда хьа а ийца",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_014",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_014_ph_6",
+      "ru": "кое как",
+      "ing": "цхьа бахьан",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_014",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_014_ph_7",
+      "ru": "считаю лучше укрепить",
+      "ing": "чӀоагӀбича бакъахьа ба",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_014",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_015_sent",
+      "ru": "За этими раздумьями застал его вошедший во двор Исмаал. После ранения на японской войне он заметно прихрамывал. «И чего в такую рань приковылял? – подумал Беки.",
+      "ing": "Цу ханна коа чувоагӀача ший тайпахча сагах ИсмаӀалах бӀаргкхийтар Беке. Японцашцарча тӀем тӀа чов а хинна цхьан кога астагӀа теӀаш вар ИсмаӀал.",
+      "category": "lesson_phrase",
+      "kind": "sentence",
+      "unitId": "beki_015",
+      "confidence": 0.97
+    },
+    {
+      "id": "beki_015_ph_0",
+      "ru": "то время",
+      "ing": "Цу ханна",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_015",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_015_ph_1",
+      "ru": "заходящий",
+      "ing": "чувоагӀача",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_015",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_015_ph_2",
+      "ru": "человека из своего рода",
+      "ing": "ший тайпахча сагах",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_015",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_015_ph_3",
+      "ru": "на войне",
+      "ing": "тӀем тӀа",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_015",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_015_ph_4",
+      "ru": "раненый",
+      "ing": "чов а хинна",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_015",
+      "confidence": 0.96
+    },
+    {
+      "id": "beki_015_ph_5",
+      "ru": "одной ногой был хромой",
+      "ing": "цхьан кога астагӀа теӀаш вар",
+      "category": "lesson_phrase",
+      "kind": "phrase",
+      "unitId": "beki_015",
+      "confidence": 0.96
+    }
+  ]
+}

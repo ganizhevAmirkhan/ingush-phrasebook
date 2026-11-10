@@ -41,6 +41,7 @@ const PEDAGOGY_PHRASE_FILES = [
   { file: path.join(ROOT, "data", "colloquial", "iomabara-praktikum-phrases.json"), source: SOURCE.IOMBARA_PRAKTIKUM },
   { file: path.join(ROOT, "data", "colloquial", "hlanzara-ingush-phrases.json"), source: SOURCE.HLANZARA_INGUSH }
 ];
+const COLLOQUIAL_DIR = path.join(ROOT, "data", "colloquial");
 const ING_TERM_FILE = path.join(ROOT, "data", "dictionary", "ing-term-2016.json");
 const MED_KODZOEV_FILE = path.join(ROOT, "data", "dictionary", "med-kodzoev-2019.json");
 const {
@@ -352,6 +353,36 @@ async function loadPedagogyPhrases() {
   return out;
 }
 
+/** Manual RU→ING workbench exports: data/colloquial/*-workbench-phrases.json */
+async function loadWorkbenchPhrases() {
+  const out = [];
+  let files = [];
+  try {
+    files = (await fs.readdir(COLLOQUIAL_DIR))
+      .filter((name) => name.endsWith("-workbench-phrases.json"))
+      .map((name) => path.join(COLLOQUIAL_DIR, name));
+  } catch {
+    return out;
+  }
+  for (const file of files) {
+    try {
+      const json = await readJson(file);
+      const items = Array.isArray(json?.items) ? json.items : [];
+      for (const item of items) {
+        const rec = toColloquialPhraseRecord(
+          item,
+          SOURCE.WORKBENCH,
+          item?.category || "lesson_phrase"
+        );
+        if (rec.ruNorm && rec.ing) out.push(rec);
+      }
+    } catch {
+      // optional file
+    }
+  }
+  return out;
+}
+
 async function loadLessonColloquialPhrases() {
   const storyFiles = await safeListJsonFiles(CORPUS_STORIES_DIR);
   const out = [];
@@ -491,6 +522,7 @@ const PHRASE_SOURCE_PRIORITY = {
   [SOURCE.OZDOEV_1970]: 2.95,
   [SOURCE.IOMBARA_PRAKTIKUM]: 2.94,
   [SOURCE.HLANZARA_INGUSH]: 2.93,
+  [SOURCE.WORKBENCH]: 3.4,
   [SOURCE.CORPUS]: 2,
   [SOURCE.GRAMMAR]: 1
 };
@@ -571,12 +603,13 @@ function rebuildPhraseIndex() {
 }
 
 async function loadPhrases() {
-  const [habar, paydadosh, sultygova, pedagogy, lessons, parallel, termItems, medItems, tarievItems, urokiLessons] =
+  const [habar, paydadosh, sultygova, pedagogy, workbench, lessons, parallel, termItems, medItems, tarievItems, urokiLessons] =
     await Promise.all([
     loadHabarPhrases(),
     loadPaydaDoshPhrases(),
     loadSultygovaPhrases(),
     loadPedagogyPhrases(),
+    loadWorkbenchPhrases(),
     loadLessonColloquialPhrases(),
     loadParallelCorpusPhrases(),
     loadTermEntries(),
@@ -601,6 +634,7 @@ async function loadPhrases() {
     paydadoshLessonRaw: paydadosh.filter((p) => p.category === "lesson_phrase").length,
     sultygovaRaw: sultygova.length,
     pedagogyRaw: pedagogy.length,
+    workbenchRaw: workbench.length,
     corpusPhrasesRaw: lessons.length,
     parallelCorpusPhrasesRaw: parallel.length,
     ingTermRaw: termItems.length,
@@ -620,6 +654,7 @@ async function loadPhrases() {
     ...medPhrases,
     ...urokiPhrases,
     ...tarievPhrases,
+    ...workbench,
     ...lessons,
     ...parallel,
     ...paydadosh,
@@ -1629,7 +1664,9 @@ function findPhraseBest(ruText, options = {}) {
       best = pickBetterPhrase(best, phrase);
     }
   }
-  if (bestScore >= 0.75) return best;
+  // 1–2 слова: только полный набор токенов (Jaccard 0.75 ловит чужой корпус)
+  const minScore = target.size <= 2 ? 1 : 0.75;
+  if (bestScore >= minScore) return best;
 
   // Короткие фразы: те же слова, другой порядок / лишний «!»
   if (target.size <= 6) {
@@ -1969,7 +2006,10 @@ function findPhraseNearTypo(ruText, options = {}) {
       best = phrase;
     }
   }
-  return bestEdits <= 2 ? best : null;
+  // Короткие запросы: максимум 1 правка целиком («чпать»→«спать»),
+  // иначе «кто я» ≈ «что ж» (2 правки) → мусор из корпуса.
+  const maxEdits = words.length <= 3 ? 1 : 2;
+  return bestEdits <= maxEdits ? best : null;
 }
 
 function findPhraseBagMatch(ruText, options = {}) {
@@ -2371,9 +2411,10 @@ async function runTranslate(ruText, options = {}) {
 
   const hints = buildDictionaryHints(ru).join("\n");
   const prompt = [
-    "Ты переводчик на ингушский язык.",
-    "Используй только проверенные формы, не используй чеченские формы.",
-    "Пиши ингушский текст кириллицей (орфография гӀалгӀай), не латинской транскрипцией.",
+    "Ты переводчик RU→ING (ингушский / гӀалгӀай мотт).",
+    "Переводи как носитель разговорника: сначала точные фразы и словарь, без выдуманных чеченских форм.",
+    "Пиши только кириллицей (орфография гӀалгӀай), не латиницей.",
+    "Стиль: «кто я»→«Малув со»; «кто ты»→«Малу хьо?»; «почему не так»→«ХӀана из ишта сан дац?»; «почему»→«хӀана».",
     hints ? `Словарный контекст:\n${hints}` : "",
     `Текст:\n${ru}`,
     "Верни только перевод, без пояснений."

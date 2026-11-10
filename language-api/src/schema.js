@@ -12,6 +12,7 @@ const SOURCE = {
   OZDOEV_1970: "ozdoev_1970",
   IOMBARA_PRAKTIKUM: "iomabara_praktikum",
   HLANZARA_INGUSH: "hlanzara_ingush",
+  WORKBENCH: "workbench",
   LLM: "llm",
   LLM_COMPOSE: "llm_compose"
 };

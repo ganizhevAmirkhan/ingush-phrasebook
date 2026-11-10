@@ -266,7 +266,7 @@ async function loadOverview() {
         ${sourceStep("3g", "<b>uroki_2009</b> — уроки + грамматика учебника", `${inv.uroki2009KnowledgeSections ?? 0} уроков · ${inv.uroki2009Phrases ?? 0} фраз`)}
         ${sourceStep("3h", "<b>morphemika_2020</b> — морфемика + словообразование", `${inv.morphemika2020Sections ?? 0} § · ${inv.morphemika2020Affixes ?? 0} аффиксов`)}
         ${sourceStep("4", "<b>dosh</b> — словарь + сборка из слов", `${c.wordsLoaded ?? 0} слов`)}
-        ${sourceStep("5", "<b>LLM</b> — OpenRouter / Gemini", "fallback, если ничего не найдено")}
+        ${sourceStep("5", "<b>LLM</b> — GigaChat / OpenRouter / Gemini", "fallback, если ничего не найдено · ключи в ⚙")}
       </div>
       <div class="info-footnote">
         Формат «N → M в индексе»: N — фраз в файлах, M — после слияния (дубликаты отбрасываются).<br>
@@ -280,7 +280,8 @@ async function loadOverview() {
       const res = await fetch(`${location.origin}/health/llm`, { cache: "no-store" });
       const g = await res.json();
       if (g.ok) {
-        const provider = g.provider === "openrouter" ? "OpenRouter" : "Gemini";
+        const names = { openrouter: "OpenRouter", gemini: "Gemini", gigachat: "GigaChat" };
+        const provider = names[g.provider] || g.provider || "LLM";
         const model = g.model ? g.model : "";
         geminiBox.innerHTML = `
           <div class="llm-status">
@@ -292,10 +293,11 @@ async function loadOverview() {
           </div>`;
       } else {
         const parts = [];
+        if (g.gigachatConfigured) parts.push("GigaChat настроен, но не отвечает");
         if (g.openrouterConfigured) parts.push("OpenRouter настроен, но не отвечает");
         if (g.geminiConfigured) parts.push("Gemini настроен, но не отвечает");
-        if (!g.openrouterConfigured && !g.geminiConfigured) {
-          parts.push("Нет OPENROUTER_API_KEY / GEMINI_API_KEY в .env");
+        if (!g.openrouterConfigured && !g.geminiConfigured && !g.gigachatConfigured) {
+          parts.push("Нет ключей — откройте ⚙ и впишите GigaChat / OpenRouter / Gemini");
         }
         geminiBox.innerHTML = `
           <div class="llm-status">
@@ -739,6 +741,113 @@ async function reloadData() {
   loadOverview();
 }
 
+const CLEAR_MARKERS = {
+  GIGACHAT_CREDENTIALS: false,
+  OPENROUTER_API_KEY: false,
+  GEMINI_API_KEY: false
+};
+
+function openSettingsModal() {
+  const modal = document.getElementById("settings-modal");
+  if (!modal) return;
+  modal.classList.remove("hidden");
+  loadSettingsForm();
+}
+
+function closeSettingsModal() {
+  document.getElementById("settings-modal")?.classList.add("hidden");
+}
+
+async function loadSettingsForm() {
+  const { ok, json } = await api("/llm-settings");
+  if (!ok) {
+    toast(json?.error || "Не удалось загрузить настройки", false);
+    return;
+  }
+  const s = json.settings || {};
+  const d = json.defaults || {};
+  CLEAR_MARKERS.GIGACHAT_CREDENTIALS = false;
+  CLEAR_MARKERS.OPENROUTER_API_KEY = false;
+  CLEAR_MARKERS.GEMINI_API_KEY = false;
+
+  const orderEl = document.getElementById("set-LLM_ORDER");
+  if (orderEl) orderEl.value = s.LLM_ORDER || d.LLM_ORDER || "gigachat,openrouter,gemini";
+
+  const scopeEl = document.getElementById("set-GIGACHAT_SCOPE");
+  if (scopeEl) scopeEl.value = s.GIGACHAT_SCOPE || d.GIGACHAT_SCOPE || "GIGACHAT_API_PERS";
+  const modelEl = document.getElementById("set-GIGACHAT_MODEL");
+  if (modelEl) modelEl.value = s.GIGACHAT_MODEL || d.GIGACHAT_MODEL || "GigaChat";
+  const baseEl = document.getElementById("set-GIGACHAT_BASE_URL");
+  if (baseEl) baseEl.value = s.GIGACHAT_BASE_URL || d.GIGACHAT_BASE_URL || "";
+  const tlsEl = document.getElementById("set-GIGACHAT_TLS_INSECURE");
+  if (tlsEl) {
+    const v = (s.GIGACHAT_TLS_INSECURE || d.GIGACHAT_TLS_INSECURE || "true").toString();
+    tlsEl.checked = !/^(0|false|no)$/i.test(v);
+  }
+  const orModel = document.getElementById("set-OPENROUTER_MODEL");
+  if (orModel) orModel.value = s.OPENROUTER_MODEL || d.OPENROUTER_MODEL || "openrouter/free";
+
+  for (const key of ["GIGACHAT_CREDENTIALS", "OPENROUTER_API_KEY", "GEMINI_API_KEY"]) {
+    const input = document.getElementById(`set-${key}`);
+    if (input) input.value = "";
+    const mask = document.getElementById(`mask-${key}`);
+    const info = s[key] || {};
+    if (mask) {
+      mask.textContent = info.configured
+        ? `Сейчас: ${info.masked}`
+        : "Сейчас: не задан";
+    }
+  }
+
+  const testOut = document.getElementById("settings-test-result");
+  if (testOut) {
+    const llm = json.llm || {};
+    testOut.textContent = `primary: ${llm.primary || "—"} · order: ${(llm.order || []).join(" → ") || "—"}`;
+  }
+}
+
+async function saveSettingsForm(ev) {
+  ev?.preventDefault?.();
+  const body = {
+    LLM_ORDER: document.getElementById("set-LLM_ORDER")?.value.trim() || "",
+    GIGACHAT_SCOPE: document.getElementById("set-GIGACHAT_SCOPE")?.value.trim() || "",
+    GIGACHAT_MODEL: document.getElementById("set-GIGACHAT_MODEL")?.value.trim() || "",
+    GIGACHAT_BASE_URL: document.getElementById("set-GIGACHAT_BASE_URL")?.value.trim() || "",
+    GIGACHAT_TLS_INSECURE: document.getElementById("set-GIGACHAT_TLS_INSECURE")?.checked ? "true" : "false",
+    OPENROUTER_MODEL: document.getElementById("set-OPENROUTER_MODEL")?.value.trim() || ""
+  };
+
+  for (const key of ["GIGACHAT_CREDENTIALS", "OPENROUTER_API_KEY", "GEMINI_API_KEY"]) {
+    if (CLEAR_MARKERS[key]) {
+      body[key] = "__CLEAR__";
+      continue;
+    }
+    const val = document.getElementById(`set-${key}`)?.value.trim() || "";
+    if (val) body[key] = val;
+  }
+
+  const { ok, json } = await api("/llm-settings", { method: "PUT", body });
+  toast(ok ? "Настройки сохранены ✓" : (json?.error || "Ошибка"), ok);
+  if (ok) {
+    await loadSettingsForm();
+    loadOverview();
+  }
+}
+
+async function testLlmFromSettings() {
+  const out = document.getElementById("settings-test-result");
+  if (out) out.textContent = "Проверка…";
+  const { ok, json } = await api("/llm-test", { method: "POST" });
+  if (!out) return;
+  if (ok) {
+    out.textContent = `✓ ${json.provider || "llm"} работает${json.model ? ` · ${json.model}` : ""}`;
+  } else {
+    out.textContent = `✗ ${json.error || "ошибка"}\n${json.detail || ""}\n${JSON.stringify(json.attempts || [], null, 2)}`;
+  }
+  toast(ok ? "LLM OK" : "LLM не отвечает", ok);
+  loadOverview();
+}
+
 function bindEvents() {
   document.getElementById("btn-login")?.addEventListener("click", login);
   document.getElementById("admin-token")?.addEventListener("keydown", (e) => {
@@ -749,6 +858,33 @@ function bindEvents() {
     showLogin();
   });
   document.getElementById("btn-reload")?.addEventListener("click", reloadData);
+  document.getElementById("btn-settings")?.addEventListener("click", openSettingsModal);
+  document.querySelectorAll("[data-close-settings]").forEach((el) => {
+    el.addEventListener("click", closeSettingsModal);
+  });
+  document.getElementById("settings-form")?.addEventListener("submit", saveSettingsForm);
+  document.getElementById("btn-test-llm")?.addEventListener("click", testLlmFromSettings);
+  document.getElementById("btn-clear-gigachat")?.addEventListener("click", () => {
+    CLEAR_MARKERS.GIGACHAT_CREDENTIALS = true;
+    const input = document.getElementById("set-GIGACHAT_CREDENTIALS");
+    if (input) input.value = "";
+    toast("GigaChat будет очищен после «Сохранить»");
+  });
+  document.getElementById("btn-clear-openrouter")?.addEventListener("click", () => {
+    CLEAR_MARKERS.OPENROUTER_API_KEY = true;
+    const input = document.getElementById("set-OPENROUTER_API_KEY");
+    if (input) input.value = "";
+    toast("OpenRouter будет очищен после «Сохранить»");
+  });
+  document.getElementById("btn-clear-gemini")?.addEventListener("click", () => {
+    CLEAR_MARKERS.GEMINI_API_KEY = true;
+    const input = document.getElementById("set-GEMINI_API_KEY");
+    if (input) input.value = "";
+    toast("Gemini будет очищен после «Сохранить»");
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeSettingsModal();
+  });
 
   document.querySelectorAll(".tab").forEach((btn) => {
     btn.addEventListener("click", () => switchTab(btn.dataset.tab));

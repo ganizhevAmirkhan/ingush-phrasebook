@@ -9,7 +9,7 @@
   <link rel="icon" href="/assets/brand/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/admin/admin.css?v=20260628">
+  <link rel="stylesheet" href="/admin/admin.css?v=20261111">
 </head>
 <body>
 
@@ -50,6 +50,9 @@
     </div>
     <div class="top-actions">
       <a class="btn-link" href="/" title="Публичная страница API">Сайт</a>
+      <button type="button" id="btn-settings" class="ghost" title="Настройки LLM / API ключи" aria-label="Настройки">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </button>
       <button type="button" id="btn-reload">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
         Перезагрузить данные
@@ -60,6 +63,67 @@
       </button>
     </div>
   </header>
+
+  <div id="settings-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="settings-title">
+    <div class="modal-backdrop" data-close-settings></div>
+    <div class="modal-card">
+      <div class="modal-head">
+        <h2 id="settings-title">Настройки LLM</h2>
+        <button type="button" class="ghost icon-btn" data-close-settings aria-label="Закрыть">✕</button>
+      </div>
+      <p class="panel-hint">Ключи хранятся на VPS в <code>data/runtime/llm-settings.json</code>. Пустое поле секрета = не менять.</p>
+      <form id="settings-form" class="settings-form">
+        <label>Порядок провайдеров
+          <input id="set-LLM_ORDER" type="text" placeholder="gigachat,openrouter,gemini">
+        </label>
+        <fieldset>
+          <legend>GigaChat</legend>
+          <label>Ключ авторизации (Authorization Key)
+            <input id="set-GIGACHAT_CREDENTIALS" type="password" autocomplete="off" placeholder="оставьте пустым, чтобы не менять">
+          </label>
+          <p id="mask-GIGACHAT_CREDENTIALS" class="muted settings-mask"></p>
+          <label>Scope
+            <input id="set-GIGACHAT_SCOPE" type="text" placeholder="GIGACHAT_API_PERS">
+          </label>
+          <label>Модель
+            <input id="set-GIGACHAT_MODEL" type="text" placeholder="GigaChat">
+          </label>
+          <label>Base URL
+            <input id="set-GIGACHAT_BASE_URL" type="text" placeholder="https://gigachat.devices.sberbank.ru/api/v1">
+          </label>
+          <label class="check-row">
+            <input id="set-GIGACHAT_TLS_INSECURE" type="checkbox">
+            TLS insecure (если нет сертификата НУЦ Минцифры)
+          </label>
+          <button type="button" id="btn-clear-gigachat" class="ghost danger-text">Очистить ключ GigaChat</button>
+        </fieldset>
+        <fieldset>
+          <legend>OpenRouter</legend>
+          <label>API key
+            <input id="set-OPENROUTER_API_KEY" type="password" autocomplete="off" placeholder="оставьте пустым, чтобы не менять">
+          </label>
+          <p id="mask-OPENROUTER_API_KEY" class="muted settings-mask"></p>
+          <label>Модель
+            <input id="set-OPENROUTER_MODEL" type="text" placeholder="openrouter/free">
+          </label>
+          <button type="button" id="btn-clear-openrouter" class="ghost danger-text">Очистить ключ OpenRouter</button>
+        </fieldset>
+        <fieldset>
+          <legend>Gemini</legend>
+          <label>API key
+            <input id="set-GEMINI_API_KEY" type="password" autocomplete="off" placeholder="оставьте пустым, чтобы не менять">
+          </label>
+          <p id="mask-GEMINI_API_KEY" class="muted settings-mask"></p>
+          <button type="button" id="btn-clear-gemini" class="ghost danger-text">Очистить ключ Gemini</button>
+        </fieldset>
+        <div class="modal-actions">
+          <button type="button" id="btn-test-llm" class="ghost">Проверить LLM</button>
+          <button type="submit" id="btn-save-settings">Сохранить</button>
+        </div>
+        <pre id="settings-test-result" class="test-result settings-test"></pre>
+      </form>
+    </div>
+  </div>
 
   <nav class="tabs">
     <button type="button" class="tab active" data-tab="overview">
@@ -254,6 +318,6 @@
   <div id="toast" class="toast hidden"></div>
 </div>
 
-<script src="/admin/admin.js?v=20260628"></script>
+<script src="/admin/admin.js?v=20261111"></script>
 </body>
 </html>

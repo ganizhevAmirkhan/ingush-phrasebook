@@ -806,3 +806,118 @@ body {
 }
 
 .toast.error { background: var(--danger); }
+
+.icon-btn {
+  min-width: 40px;
+  padding: 8px 10px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 48px 16px;
+  overflow: auto;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+}
+
+.modal-card {
+  position: relative;
+  width: min(640px, 100%);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow-lg);
+  padding: 20px 22px 24px;
+  z-index: 1;
+}
+
+.modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.modal-head h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.settings-form {
+  display: grid;
+  gap: 12px;
+}
+
+.settings-form fieldset {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px 14px;
+  margin: 0;
+  background: var(--surface-2);
+}
+
+.settings-form legend {
+  padding: 0 6px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.settings-form label {
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.settings-form input[type="text"],
+.settings-form input[type="password"] {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font: inherit;
+  color: var(--text);
+  background: #fff;
+}
+
+.settings-form .check-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.settings-mask {
+  margin: 4px 0 0;
+  font-size: 12px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.danger-text {
+  color: var(--danger) !important;
+  justify-self: start;
+  margin-top: 8px;
+}
+
+.settings-test {
+  min-height: 0;
+  margin-top: 8px;
+}

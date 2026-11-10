@@ -15,7 +15,8 @@
     "deploy:pedagogy-vps": "powershell -ExecutionPolicy Bypass -File scripts/deploy-pedagogy-vps.ps1",
     "import:gramatika5": "node scripts/import-gramatika-5.js",
     "textbooks:download": "node scripts/download-textbooks-external.js",
-    "textbooks:extract-classes": "node scripts/extract-noun-class-knowledge.js"
+    "textbooks:extract-classes": "node scripts/extract-noun-class-knowledge.js",
+    "workbench:export": "node scripts/export-workbench-to-corpus.js --all"
   },
   "keywords": [],
   "author": "",
